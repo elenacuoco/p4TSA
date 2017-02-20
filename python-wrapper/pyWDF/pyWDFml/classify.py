@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 
 def gaussian_mixture(matrix, upper_bound):
     '''
-    This function clusters the input matrix using the GMM algorithm (gaussian mixture model)
+    This function clusters the input matrix using the GaussianMixture algorithm (gaussian mixture model)
     The number of clusters is found by running the algorithm for n_components = 2 to upper_bound
     and chosing the model which minimized the BIC.
 
@@ -24,7 +24,7 @@ def gaussian_mixture(matrix, upper_bound):
     :type matrix: numpy matrix
     '''
     if (len(matrix) < upper_bound + 1):
-        print( "\n\tWARNING: Not enough samples (less than the minimum %i) to run GMM." % (upper_bound))
+        print ("\n\tWARNING: Not enough samples (less than the minimum %i) to run GaussianMixture." % (upper_bound))
         print ("\t Only one cluster is returned.\n")
         return [0] * len(matrix)
 
@@ -35,15 +35,15 @@ def gaussian_mixture(matrix, upper_bound):
     cv_types = ['spherical', 'tied', 'diag', 'full']
     for cv_type in cv_types:
         for n in n_components_range:
-            gmm = mix.GMM(n_components=n, covariance_type=cv_type)
-            gmm.fit(matrix)
-            bic.append(gmm.bic(matrix))
+            GaussianMixture = mix.GaussianMixture(n_components=n, covariance_type=cv_type,random_state=1,max_iter=1000, n_init=1)
+            GaussianMixture.fit(matrix)
+            bic.append(GaussianMixture.bic(matrix))
             if bic[-1] < lowest_bic:
                 lowest_bic = bic[-1]
-                best_gmm = gmm
+                best_GaussianMixture = GaussianMixture
 
-    best_gmm.fit(matrix)
-    res = best_gmm.predict(matrix)
+    best_GaussianMixture.fit(matrix)
+    res = best_GaussianMixture.predict(matrix)
 
     return res
 
@@ -117,6 +117,28 @@ class WDFMLClassify(object):
                                                     gamma=None, random_state=11,
                                                     n_neighbors=self.N_neighbors)
 
+
+        self.X_pca = self.pca.fit_transform(self.Waves_Coefficients)
+        self.X_red = self.Embedding.fit_transform(self.X_pca)
+        return self.X_red
+
+    def PreprocessingICA(self, PCA_coefficients, MNE_coefficients, N_neighbors, whiten=True):
+        """
+        :type MNE_coefficients: int
+        :type PCA_coefficients: int
+        :param MNE_coefficients: number of coefficnents for mns projection
+        :param PCA_coefficients: number of n_coefficients for PCA transform
+        :param N_neighbors: number of neighbors for embedding
+        """
+        self.MNE_coefficients = MNE_coefficients
+        self.PCA_coefficients = PCA_coefficients
+        self.N_neighbors = N_neighbors
+        self.pca = decomposition.FastICA(n_components=self.PCA_coefficients, algorithm='parallel', whiten=whiten, fun='logcosh', fun_args=None, max_iter=200, tol=0.0001, w_init=None, random_state=0)
+
+        self.Embedding = manifold.SpectralEmbedding(n_components=self.MNE_coefficients,
+                                                    affinity='nearest_neighbors',
+                                                    gamma=None, random_state=11,
+                                                    n_neighbors=self.N_neighbors)
 
         self.X_pca = self.pca.fit_transform(self.Waves_Coefficients)
         self.X_red = self.Embedding.fit_transform(self.X_pca)
@@ -219,8 +241,8 @@ class WDFMLClassify(object):
         self.X_red = self.Embedding.fit_transform(self.X_rbm)
         return self.X_red
 
-    def Classify(self):
-        self.labels = gaussian_mixture(self.X_red, 10)
+    def Classify(self,num_clusters):
+        self.labels = gaussian_mixture(self.X_red, num_clusters)
         n_c = len(np.unique(self.labels))
         logger.info('number of clusters: %s' % n_c)
         return self.labels
@@ -236,5 +258,5 @@ class WDFMLClassify(object):
         plt.ylabel('Coeff2', fontsize=20)
         for i in range(self.X_red.shape[0]):
             plt.text(self.X_red[i, 0], self.X_red[i, 1], str(self.labels[i]),
-                     color=plt.cm.spectral(self.labels[i] / 10.),
+                     color=plt.cm.spectral(self.labels[i] / 5.0),
                      fontdict={'weight': 'bold', 'size': 12})
