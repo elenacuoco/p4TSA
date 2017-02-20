@@ -1,4 +1,5 @@
 languace: cpp
 compiler: gcc
-install: make 
+cmake CMakelist
+install: make
 
