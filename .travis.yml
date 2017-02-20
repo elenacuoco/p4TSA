@@ -1,0 +1,4 @@
+languace: cpp
+compiler: gcc
+install: make 
+
