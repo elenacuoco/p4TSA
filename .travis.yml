@@ -31,12 +31,13 @@ install:
   - ./configure --prefix=${DEPS_DIR}
   - make VERBOSE=0
   - make install
-  # Go to the Root directory  
-  - cd ..
+ 
   - export PATH=${DEPS_DIR}/bin:${PATH}
 
 # Build steps
 script:
+# Go to the Root directory  
+  - cd ${TRAVIS_BUILD_DIR}
   - ${DEPS_DIR}/bin/cmake CMakeLists.txt  
   - make 
   - make install
