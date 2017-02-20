@@ -1,6 +1,6 @@
 sudo: required
 before_install:
-  - sudo apt-get install gsl boost fftw3 
+  - sudo apt-get install fftw3 gsl boost boost-devel
  
   
 # Enable C++ support
