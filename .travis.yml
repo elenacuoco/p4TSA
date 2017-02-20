@@ -22,14 +22,14 @@ install:
   - tar xvfz cmake-3.8.0-rc1.tar.gz                         
   - pushd cmake-3.8.0-rc1                                   
   - ./configure --prefix=${ENV_ROOT}                        
-  - make -j8 install                      
+  - make -j8 VERBOSE=0  install                     
   - export PATH=${DEPS_DIR}/cmake/bin:${PATH}
   - cd ..
   - wget http://lappweb.in2p3.fr/virgo/FrameL/libframe-8.30.tar.gz
   - tar xfz libframe-8.30.tar.gz
   - cd  libframe-8.30
   - ./configure --prefix=${DEPS_DIR}
-  - make
+  - make VERBOSE=0
   - make install
   # Go to the Root directory  
   - cd ..
