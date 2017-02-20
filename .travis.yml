@@ -34,8 +34,6 @@ install:
 
 # Build steps
 script:
-  - mkdir build
-  - cd build
-  - ${DEPS_DIR}/cmake/bin/cmake CMakeLists.txt.. && make
+  - ${DEPS_DIR}/cmake/bin/cmake CMakeLists.txt  && make
 
  
