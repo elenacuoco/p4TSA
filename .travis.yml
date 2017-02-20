@@ -1,5 +1,92 @@
-languace: cpp
-compiler: gcc
-cmake CMakelist
-install: make
+sudo: required
+before_install:
+  - sudo apt-get install gsl boost fftw3 
+ 
+  
+# Enable C++ support
+language: cpp
+
+# Compiler selection
+compiler:
+  - gcc
+  
+install:
+  - DEPS_DIR="${TRAVIS_BUILD_DIR}/deps"
+    ENV_ROOT=DEPS_DIR
+  - mkdir ${DEPS_DIR} && cd ${DEPS_DIR}
+  
+  - |
+    if [[ "${TRAVIS_OS_NAME}" == "linux" ]]; then
+      CMAKE_URL="https://cmake.org/files/v3.8/cmake-3.8.0-rc1.tar.gz"
+      mkdir cmake && travis_retry wget --no-check-certificate --quiet -O - ${CMAKE_URL} | tar --strip-components=1 -xz -C cmake
+      export PATH=${DEPS_DIR}/cmake/bin:${PATH}
+    fi
+   -
+    if [[ "${TRAVIS_OS_NAME}" == "linux" ]]; then
+      wget http://sqlite.org/2017/sqlite-autoconf-3160200.tar.gz
+      tar xfz sqlite-autoconf-3160200.tar.gz
+      pushd sqlite-autoconf-3160200
+      ./configure --prefix=${DEPS_DIR} --disable-static   CFLAGS="-g -O2 -DSQLITE_ENABLE_FTS3=1  -DSQLITE_ENABLE_COLUMN_METADATA=1  -DSQLITE_ENABLE_UNLOCK_NOTIFY=1  -DSQLITE_SECURE_DELETE=1 -DSQLITE_ENABLE_DBSTAT_VTAB=1" 
+      make -j8
+      make install
+    fi
+   -
+    if [[ "${TRAVIS_OS_NAME}" == "linux" ]]; then
+      export LD_LIBRARY_PATH=${ENV_ROOT}/lib:${LD_LIBRARY_PATH}
+      wget https://www.python.org/ftp/python/3.6.0/Python-3.6.0.tar.xz
+      unxz Python-3.6.0.tar.xz
+      tar xf Python-3.6.0.tar
+      pushd Python-3.6.0
+      ./configure --prefix=${DEPS_DIR}  --enable-shared --with-ensurepip --enable-loadable-sqlite-extensions --enable-optimization
+      make -j8
+      make install
+      popd
+    fi
+   
+    
+   - 
+    ln -s $ENV_ROOT/lib $ENV_ROOT/lib64
+    ln -s $ENV_ROOT/bin/python3 $ENV_ROOT/bin/python  
+    ln -s $ENV_ROOT/bin/pip3 $ENV_ROOT/bin/pip
+   - 
+    echo export ENV_ROOT=$ENV_ROOT > $ENV_ROOT/environment
+    echo setenv ENV_ROOT $ENV_ROOT > $ENV_ROOT/environment.csh
+    echo export CMAKE_ROOT=${ENV_ROOT}/share/cmake-3.8 >> $ENV_ROOT/environment
+    echo setenv CMAKE_ROOT ${ENV_ROOT}/share/cmake-3.8 >> $ENV_ROOT/environment.csh
+    echo export PYTHONPATH=${ENV_ROOT}/lib/python3.6:${ENV_ROOT}/lib/python3.6/site-packages >> $ENV_ROOT/environment
+    echo setenv PYTHONPATH ${ENV_ROOT}/lib/python3.6:${ENV_ROOT}/lib/python3.6/site-packages >> $ENV_ROOT/environment.csh
+
+    cat environment >> $ENV_ROOT/environment
+    cat environment.csh >> $ENV_ROOT/environment.csh
+
+    source ${ENV_ROOT}/environment
+    $ENV_ROOT/bin/pip install -U pip
+    $ENV_ROOT/bin/pip install numpy --upgrade
+   -
+    git clone https://github.com/pybind/pybind11.git
+    pushd  pybind11
+    $ENV_ROOT/bin/python setup.py install  
+    cp -fr ./include/pybind11/ ${ENV_ROOT}/include/python3.6m
+   -  
+     source ${ENV_ROOT}/environment  
+   -
+   
+    if [[ "${TRAVIS_OS_NAME}" == "linux" ]]; then
+      wget http://lappweb.in2p3.fr/virgo/FrameL/libframe-8.30.tar.gz
+      tar xfz libframe-8.30.tar.gz
+      pushd  libframe-8.30
+      ./configure --prefix=${DEPS_DIR}
+      make
+      make install
+    fi
+     
+     
+    # Go to the Root directory  
+  - cd ..
+
+# Build steps
+script:
+  - mkdir build
+  - cd build
+  - ${DEPS_DIR}/cmake/bin/cmake CMakeLists.txt.. && make
 
