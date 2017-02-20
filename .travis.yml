@@ -7,7 +7,7 @@ os:
 
 sudo: required
 before_install:
-  - sudo apt-get install fftw3 libgsl libgsl-dev libboost-all-dev
+  - sudo apt-get install libfftw3-3 libgsl libgsl-dev libboost-all-dev
 # Enable C++ support
 language: cpp
 # Compiler selection
