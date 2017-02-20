@@ -34,7 +34,7 @@ install:
 
 # Build steps
 script:
-  - ${DEPS_DIR}/cmake/bin/cmake CMakeLists.txt  && make && make install
+  - cmake CMakeLists.txt  && make && make install
   - cd python-wrapper && python setup.py install
 
  
