@@ -17,9 +17,7 @@ compiler:
 install: 
   - DEPS_DIR="${TRAVIS_BUILD_DIR}/deps"
   - ./install-dependencies.sh
- 
 # Build steps
-script:
 # Go to the Root directory
   - source ${DEPS_DIR}/environment   
   - cd ${TRAVIS_BUILD_DIR}
