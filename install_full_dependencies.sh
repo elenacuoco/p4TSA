@@ -100,7 +100,19 @@ cd fftw-3.3.6-pl1
 ./configure --prefix=${ENV_ROOT} --libdir=${ENV_ROOT}/lib --enable-long-double --enable-shared;make; make install;make clean
 cd ..
 
-
+##########boost
+pushd $ENV_TMP
+wget http://sourceforge.net/projects/boost/files/boost_1_63_0.tar.bz2
+tar -jxf boost_1_63_0.tar.bz2
+cd boost_1_63_0
+./bootstrap.sh --prefix=${ENV_ROOT} --with-libraries=serialization,python,signals,container,exception,thread
+./b2 stage threading=multi link=shared -j4 --prefix=${ENV_ROOT}
+cp bjam %${ENV_ROOT}/bin
+tools/build
+./bootstrap.sh
+./b2 install --prefix=${ENV_ROOT}
+cd ${ENV_ROOT}/boost_1_63_0
+cp -fr boost/${ENV_ROOT}/include
 #################gsl
 pushd $ENV_TMP
 
