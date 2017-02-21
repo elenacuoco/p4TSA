@@ -16,7 +16,9 @@ compiler:
   
 before_install:
   - DEPS_DIR="${TRAVIS_BUILD_DIR}/deps"
-  - ./install-dependencies.sh
+  - ENV_ROOT="${TRAVIS_BUILD_DIR}/deps"
+  - cd ${TRAVIS_BUILD_DIR}
+  - bash ./install-dependencies.sh
 # Build steps
 install:
 # Go to the Root directory
