@@ -1,16 +1,16 @@
 # Travis CI  
 # (C) 2017 Elena Cuoco
 
- 
 os:
  - linux
 
 sudo: required
+
 before_install:
-   - sudo apt-get install libboost libboost-dev
-   - DEPS_DIR="${TRAVIS_BUILD_DIR}/deps"
-   - ENV_ROOT="${TRAVIS_BUILD_DIR}/deps"
-   - cd ${TRAVIS_BUILD_DIR}
+  - sudo apt-get install libboost libboost-dev
+  - DEPS_DIR="${TRAVIS_BUILD_DIR}/deps"
+  - ENV_ROOT="${TRAVIS_BUILD_DIR}/deps"
+  - cd ${TRAVIS_BUILD_DIR}
   - ./install_dependencies.sh
 # Enable C++ support
 language: cpp
