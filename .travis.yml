@@ -5,19 +5,20 @@
 os:
  - linux
 
-sudo: required
-before_install:
-  - sudo apt-get install libfftw3-3 libgsl0ldbl libboost-all-dev
+#sudo: required
+#before_install:
+#  - sudo apt-get install libfftw3-3 libgsl0ldbl libboost-all-dev
 # Enable C++ support
 language: cpp
 # Compiler selection
 compiler:
   - gcc
   
-install: 
+before_install:
   - DEPS_DIR="${TRAVIS_BUILD_DIR}/deps"
   - ./install-dependencies.sh
 # Build steps
+install:
 # Go to the Root directory
   - source ${DEPS_DIR}/environment   
   - cd ${TRAVIS_BUILD_DIR}

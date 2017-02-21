@@ -90,6 +90,40 @@ touch pybind11.install
 #
 shopt -s nullglob
 
+########fftw3
+pushd $ENV_TMP
+wget http://www.fftw.org/fftw-3.3.6-pl1.tar.gz
+tar xfz fftw-3.3.6-pl1.tar.gz
+cd fftw-3.3.6-pl1
+./configure --prefix=${ENV_ROOT} --libdir=${ENV_ROOT}/lib --enable-float --enable-shared; make; make install;make clean
+./configure --prefix=${ENV_ROOT} --libdir=${ENV_ROOT}/lib --enable-shared ;make; make install;make clean
+./configure --prefix=${ENV_ROOT} --libdir=${ENV_ROOT}/lib --enable-long-double --enable-shared;make; make install;make clean
+cd ..
+
+##########boost
+pushd $ENV_TMP
+wget http://sourceforge.net/projects/boost/files/boost_1_63_0.tar.bz2
+tar -jxf boost_1_63_0.tar.bz2
+cd boost_1_63_0
+./bootstrap.sh --prefix=${ENV_ROOT} --with-libraries=serialization,python,signals,container,exception,thread
+./b2 stage threading=multi link=shared -j4 --prefix=${ENV_ROOT}
+cp bjam %${ENV_ROOT}/bin
+tools/build
+./bootstrap.sh
+./b2 install --prefix=${ENV_ROOT}
+cd ${ENV_ROOT}/boost_1_63_0
+cp -fr boost/${ENV_ROOT}/include
+#################gsl
+pushd $ENV_TMP
+
+wget ftp://ftp.gnu.org/gnu/gsl/gsl-2.3.tar.gz
+tar xzf gsl-2.3.tar.gz
+cd gsl-2.3
+./configure --prefix=${ENV_ROOT}
+make -j7
+make install
+
+#########Frame
 pushd $ENV_TMP
 wget http://lappweb.in2p3.fr/virgo/FrameL/libframe-8.30.tar.gz
 tar xfz libframe-8.30.tar.gz
