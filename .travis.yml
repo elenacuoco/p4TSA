@@ -32,6 +32,6 @@ script:
   - python setup.py install
   - python setup.py test
   - cd pyWDF
-  - python setup.pyt install
+  - python setup.py install
 
  
