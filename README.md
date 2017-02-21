@@ -41,4 +41,6 @@ It includes
 
 * Repo owner or admin (info@elenacuoco.com)
 * Other community or team contact (elena.cuoco@ego-gw.it, giancarlo.cella@pi.infn.it)
+
+[![Foo](https://img.shields.io/badge/docs-latest-brightgreen.svg?style=flat)](http://p4tsa.readthedocs.io/en/latest/?badge=latest)
  
