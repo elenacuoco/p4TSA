@@ -29,9 +29,9 @@ script:
   - make 
   - make install
   - cd python-wrapper
-  - python setup.py install
-  - python setup.py test
+  - python3 setup.py build
+  - python3 setup.py test
   - cd pyWDF
-  - python setup.py install
+  - python3 setup.py build
 
  
