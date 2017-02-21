@@ -39,7 +39,4 @@ It includes
 
 * Repo owner or admin (info@elenacuoco.com)
 * Other community or team contact (elena.cuoco@ego-gw.it, giancarlo.cella@pi.infn.it)
-
-### License ###
-
-EGO
+ 

@@ -77,11 +77,6 @@ Who do I talk to?
 -  Other community or team contact (elena.cuoco@ego-gw.it,
    giancarlo.cella@pi.infn.it)
 
-License
-~~~~~~~
-
-EGO
-
 
 
 Documentation for pyTSA
