@@ -1,7 +1,7 @@
 P4TSA (package for Time Series Analysis)
 ========================================
 
-|build-status| |docs|
+
 
 by Elena Cuoco (info@elenacuoco.com) https://www.elenacuoco.com
 
