@@ -20,36 +20,6 @@ rm -rf $ENV_TMP/*
 
 # ----------------------------------------------------------
 #
-# Python installation
-#
-pushd $ENV_TMP
-wget http://sqlite.org/2017/sqlite-autoconf-3160200.tar.gz
-tar xfz sqlite-autoconf-3160200.tar.gz
-pushd sqlite-autoconf-3160200
-./configure --prefix=${ENV_ROOT} --disable-static   CFLAGS="-g -O2 -DSQLITE_ENABLE_FTS3=1  -DSQLITE_ENABLE_COLUMN_METADATA=1  -DSQLITE_ENABLE_UNLOCK_NOTIFY=1  -DSQLITE_SECURE_DELETE=1 -DSQLITE_ENABLE_DBSTAT_VTAB=1" 
-make -j8
-make install
-popd 
-popd
-export LD_LIBRARY_PATH=${ENV_ROOT}/lib:${LD_LIBRARY_PATH}
-pushd $ENV_TMP
-wget https://www.python.org/ftp/python/3.6.0/Python-3.6.0.tar.xz
-unxz Python-3.6.0.tar.xz
-tar xf Python-3.6.0.tar
-pushd Python-3.6.0
-./configure --prefix=${ENV_ROOT}  --enable-shared --with-ensurepip --enable-loadable-sqlite-extensions --enable-optimization
-make -j8
-make install
-popd
-rm Python-3.6.0.tar
-popd
-ln -s $ENV_ROOT/lib $ENV_ROOT/lib64
-ln -s $ENV_ROOT/bin/python3 $ENV_ROOT/bin/python
-ln -s $ENV_ROOT/bin/pip3 $ENV_ROOT/bin/pip
-
-
-# ----------------------------------------------------------
-#
 # cmake installation
 #
 
@@ -90,26 +60,6 @@ popd
 #
 shopt -s nullglob
 
-########fftw3
-pushd $ENV_TMP
-wget http://www.fftw.org/fftw-3.3.6-pl1.tar.gz
-tar xfz fftw-3.3.6-pl1.tar.gz
-cd fftw-3.3.6-pl1
-./configure --prefix=${ENV_ROOT} --libdir=${ENV_ROOT}/lib --enable-float --enable-shared; make; make install;make clean
-./configure --prefix=${ENV_ROOT} --libdir=${ENV_ROOT}/lib --enable-shared ;make; make install;make clean
-./configure --prefix=${ENV_ROOT} --libdir=${ENV_ROOT}/lib --enable-long-double --enable-shared;make; make install;make clean
-cd ..
-
-
-#################gsl
-pushd $ENV_TMP
-
-wget ftp://ftp.gnu.org/gnu/gsl/gsl-2.3.tar.gz
-tar xzf gsl-2.3.tar.gz
-cd gsl-2.3
-./configure --prefix=${ENV_ROOT}
-make -j7
-make install
 
 #########Frame
 pushd $ENV_TMP

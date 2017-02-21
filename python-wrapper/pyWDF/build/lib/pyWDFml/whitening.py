@@ -4,9 +4,9 @@
 
 """
 __author__ ='Elena Cuoco'
-__project__ ='pynap'
+__project__ ='pytsa'
 
-import pynap
+import pytsa
 
 
 class Whitening(object):
@@ -18,15 +18,15 @@ class Whitening(object):
          
         """
         self.ARorder = ARorder
-        self.ADE = pynap.ArBurgEstimator(self.ARorder)
-        self.LV = pynap.LatticeView(self.ARorder)
-        self.LF = pynap.LatticeFilter(self.LV)
+        self.ADE = pytsa.ArBurgEstimator(self.ARorder)
+        self.LV = pytsa.LatticeView(self.ARorder)
+        self.LF = pytsa.LatticeFilter(self.LV)
 
 
     def ParameterEstimate(self, data):
         """
 
-        :type data: pynap.SeqViewDouble
+        :type data: pytsa.SeqViewDouble
         """
         self.ADE(data)
         self.ADE.GetLatticeView(self.LV)
