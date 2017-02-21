@@ -90,16 +90,6 @@ touch pybind11.install
 #
 shopt -s nullglob
 
-########fftw3
-pushd $ENV_TMP
-wget http://www.fftw.org/fftw-3.3.6-pl1.tar.gz
-tar xfz fftw-3.3.6-pl1.tar.gz
-cd fftw-3.3.6-pl1
-./configure --prefix=${ENV_ROOT} --libdir=${ENV_ROOT}/lib --enable-float --enable-shared; make; make install;make clean
-./configure --prefix=${ENV_ROOT} --libdir=${ENV_ROOT}/lib --enable-shared ;make; make install;make clean
-./configure --prefix=${ENV_ROOT} --libdir=${ENV_ROOT}/lib --enable-long-double --enable-shared;make; make install;make clean
-cd ..
-
 
 #################gsl
 pushd $ENV_TMP
