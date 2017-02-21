@@ -29,6 +29,7 @@
     <script type="text/javascript" src="_static/bizstyle.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="1. pywdfml" href="modules.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
     <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
@@ -44,6 +45,9 @@
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
+        <li class="right" >
+          <a href="modules.html" title="1. pywdfml"
+             accesskey="N">next</a> |</li>
         <li class="nav-item nav-item-0"><a href="#">p4TSA 0 documentation</a> &#187;</li> 
       </ul>
     </div>
@@ -51,17 +55,32 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="#">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Welcome to p4TSA and pyTSA documentation</a><ul>
+<li><a class="reference internal" href="#">Welcome to p4TSA and pyTSA documentation</a></li>
+<li><a class="reference internal" href="#p4tsa-package-for-time-series-analysis">P4TSA (package for Time Series Analysis)</a><ul>
+<li><a class="reference internal" href="#what-is-this-repository-for">What is this repository for?</a><ul>
 <li><a class="reference internal" href="#features">Features</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#how-do-i-get-set-up">How do I get set up?</a><ul>
 <li><a class="reference internal" href="#installation">Installation</a></li>
 <li><a class="reference internal" href="#contribute">Contribute</a></li>
 <li><a class="reference internal" href="#support">Support</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#contribution-guidelines">Contribution guidelines</a></li>
+<li><a class="reference internal" href="#who-do-i-talk-to">Who do I talk to?</a></li>
 <li><a class="reference internal" href="#license">License</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+<li><a class="reference internal" href="#documentation-for-pytsa">Documentation for pyTSA</a></li>
+<li><a class="reference internal" href="#documentation-for-pywdf">Documentation for pyWDF</a><ul>
+</ul>
+</li>
 </ul>
 
+  <h4>Next topic</h4>
+  <p class="topless"><a href="modules.html"
+                        title="next chapter">1. pywdfml</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -92,53 +111,42 @@
 <p>p4TSA is a C++ and python package for Time Series Analysis</p>
 <p>pyTSA is the python wrapper</p>
 <p>pyWDFml is a python package to perform Machine Learning with WDF pipeline</p>
-<p># P4TSA (package for Time Series Analysis) #
-by Elena Cuoco (<a class="reference external" href="mailto:info&#37;&#52;&#48;elenacuoco&#46;com">info<span>&#64;</span>elenacuoco<span>&#46;</span>com</a>) <a class="reference external" href="https://www.elenacuoco.com">https://www.elenacuoco.com</a></p>
-<p>This library is a &#8216;spin-off&#8217; of C++ Noise Analysis Package (NAP) written together
-with Giancarlo Cella (<a class="reference external" href="mailto:giancarlo&#46;cella&#37;&#52;&#48;pi&#46;infn&#46;it">giancarlo<span>&#46;</span>cella<span>&#64;</span>pi<span>&#46;</span>infn<span>&#46;</span>it</a>)</p>
-<p>The core library is writte in C++ and should be compiled before using the python interface.</p>
+</div>
+<div class="section" id="p4tsa-package-for-time-series-analysis">
+<h1>P4TSA (package for Time Series Analysis)<a class="headerlink" href="#p4tsa-package-for-time-series-analysis" title="Permalink to this headline">¶</a></h1>
+<p>by Elena Cuoco (<a class="reference external" href="mailto:info&#37;&#52;&#48;elenacuoco&#46;com">info<span>&#64;</span>elenacuoco<span>&#46;</span>com</a>) <a class="reference external" href="https://www.elenacuoco.com">https://www.elenacuoco.com</a></p>
+<p>This library is a &#8216;spin-off&#8217; of C++ Noise Analysis Package (NAP) written
+together with Giancarlo Cella (<a class="reference external" href="mailto:giancarlo&#46;cella&#37;&#52;&#48;pi&#46;infn&#46;it">giancarlo<span>&#46;</span>cella<span>&#64;</span>pi<span>&#46;</span>infn<span>&#46;</span>it</a>)</p>
+<p>The core library is written in C++ and should be compiled before using
+the python interface.</p>
 <p>The Python interface to the library is pyTSA (you can call it pi&#8217;za)</p>
-<p>### What is this repository for? ###
-p4TSA is a minimal package containing ad hoc function to work with time series.</p>
-<blockquote>
-<div>It includes
-* Whitening in time domain
-* Wavelet decomposition
-* Wavelet Detection Filter</div></blockquote>
-<p>### How do I get set up? ###</p>
-<ul class="simple">
-<li>You need to have a python environment setup and some extralibrary (boost, FramLib,gsl,fftw3 installed)</li>
-<li>You should run cmake CMakeList.txt</li>
-<li>Dependencies: gsl, fftw3, gslcblas, Framelib</li>
-<li>Python Binding: it depends on binder and pybind11 which should be installed</li>
-<li>Database configuration: none</li>
-<li>How to run tests: under dir test run</li>
-</ul>
-<p>&lt;code&gt;python test.py&lt;/code&gt;
-* Deployment instructions: under python-wrapper directory run
-&lt;code&gt;python setup.py install&lt;/code&gt;</p>
-<p>### Contribution guidelines ###</p>
-<ul class="simple">
-<li>Writing tests</li>
-<li>Code review</li>
-<li>Other guidelines</li>
-</ul>
-<p>### Who do I talk to? ###</p>
-<ul class="simple">
-<li>Repo owner or admin (<a class="reference external" href="mailto:info&#37;&#52;&#48;elenacuoco&#46;com">info<span>&#64;</span>elenacuoco<span>&#46;</span>com</a>)</li>
-<li>Other community or team contact (<a class="reference external" href="mailto:elena&#46;cuoco&#37;&#52;&#48;ego-gw&#46;it">elena<span>&#46;</span>cuoco<span>&#64;</span>ego-gw<span>&#46;</span>it</a>, <a class="reference external" href="mailto:giancarlo&#46;cella&#37;&#52;&#48;pi&#46;infn&#46;it">giancarlo<span>&#46;</span>cella<span>&#64;</span>pi<span>&#46;</span>infn<span>&#46;</span>it</a>)</li>
-</ul>
-<p>### License ###</p>
-<p>EGO</p>
+<div class="section" id="what-is-this-repository-for">
+<h2>What is this repository for?<a class="headerlink" href="#what-is-this-repository-for" title="Permalink to this headline">¶</a></h2>
+<p>p4TSA is a minimal package containing ad hoc function to work with time
+series. It includes
+- Whitening in time domain
+- Wavelet decomposition
+- Wavelet Detection Filter</p>
 <div class="section" id="features">
-<h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
+<h3>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Contains Whitening in Time domain</li>
 <li>Contais Wavelet Detection Filter (WDF)</li>
 </ul>
 </div>
+</div>
+<div class="section" id="how-do-i-get-set-up">
+<h2>How do I get set up?<a class="headerlink" href="#how-do-i-get-set-up" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<h3>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>You need to have a python environment setup and some extra library
+(boost, FramLib,gsl,fftw3 installed)</li>
+<li>You should run cmake CMakeList.txt</li>
+<li>Dependencies: gsl, fftw3, gslcblas, Framelib</li>
+<li>Python Binding: it depends on binder and pybind11 which should be
+installed</li>
+</ul>
 <ul>
 <li><p class="first">Prepare the enviroment</p>
 <blockquote>
@@ -163,40 +171,46 @@ p4TSA is a minimal package containing ad hoc function to work with time series.<
 </ul>
 </div>
 <div class="section" id="contribute">
-<h2>Contribute<a class="headerlink" href="#contribute" title="Permalink to this headline">¶</a></h2>
+<h3>Contribute<a class="headerlink" href="#contribute" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Issue Tracker: github.com/elenacuoco/p4TSA/issues</li>
 <li>Source Code: github.com/elenacuoco/p4TSA</li>
 </ul>
 </div>
 <div class="section" id="support">
-<h2>Support<a class="headerlink" href="#support" title="Permalink to this headline">¶</a></h2>
+<h3>Support<a class="headerlink" href="#support" title="Permalink to this headline">¶</a></h3>
 <p>If you are having issues, please let us know.
 We have a mailing list located at: <a class="reference external" href="mailto:elena&#46;cuoco&#37;&#52;&#48;ego-gw&#46;it">elena<span>&#46;</span>cuoco<span>&#64;</span>ego-gw<span>&#46;</span>it</a></p>
+</div>
+</div>
+<div class="section" id="contribution-guidelines">
+<h2>Contribution guidelines<a class="headerlink" href="#contribution-guidelines" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Writing tests</li>
+<li>Code review</li>
+<li>Other guidelines</li>
+</ul>
+</div>
+<div class="section" id="who-do-i-talk-to">
+<h2>Who do I talk to?<a class="headerlink" href="#who-do-i-talk-to" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Repo owner or admin (<a class="reference external" href="mailto:info&#37;&#52;&#48;elenacuoco&#46;com">info<span>&#64;</span>elenacuoco<span>&#46;</span>com</a>)</li>
+<li>Other community or team contact (<a class="reference external" href="mailto:elena&#46;cuoco&#37;&#52;&#48;ego-gw&#46;it">elena<span>&#46;</span>cuoco<span>&#64;</span>ego-gw<span>&#46;</span>it</a>,
+<a class="reference external" href="mailto:giancarlo&#46;cella&#37;&#52;&#48;pi&#46;infn&#46;it">giancarlo<span>&#46;</span>cella<span>&#64;</span>pi<span>&#46;</span>infn<span>&#46;</span>it</a>)</li>
+</ul>
 </div>
 <div class="section" id="license">
 <h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
 <p>EGO</p>
+</div>
+</div>
+<div class="section" id="documentation-for-pytsa">
+<h1>Documentation for pyTSA<a class="headerlink" href="#documentation-for-pytsa" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="documentation-for-pywdf">
+<h1>Documentation for pyWDF<a class="headerlink" href="#documentation-for-pywdf" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">maxdepth:</th><td class="field-body"><p class="first">2
-:numbered:
-:titlesonly:
-:glob:
-:hidden:</p>
-<p class="last">modules.rst</p>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
 <li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
 <li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
@@ -221,6 +235,9 @@ We have a mailing list located at: <a class="reference external" href="mailto:el
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
+        <li class="right" >
+          <a href="modules.html" title="1. pywdfml"
+             >next</a> |</li>
         <li class="nav-item nav-item-0"><a href="#">p4TSA 0 documentation</a> &#187;</li> 
       </ul>
     </div>

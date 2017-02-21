@@ -20,7 +20,7 @@ compiler:
   - gcc
 
 # Build steps
-install:
+script:
 # Go to the Root directory
   - source ${DEPS_DIR}/environment   
   - cd ${TRAVIS_BUILD_DIR}
@@ -30,6 +30,7 @@ install:
   - make install
   - cd python-wrapper
   - python setup.py install
+  - python setup.py test
   - cd pyWDF
   - python setup.pyt install
 
