@@ -28,10 +28,10 @@ script:
   - ${ENV_ROOT}/bin/cmake CMakeLists.txt
   - make 
   - make install
-  - cd python-wrapper
-  - python3 setup.py build
-  - python3 setup.py test
-  - cd pyWDF
-  - python3 setup.py build
+  #- cd python-wrapper
+  #- python3 setup.py build
+  #- python3 setup.py test
+  #- cd pyWDF
+  #- python3 setup.py build
 
  
