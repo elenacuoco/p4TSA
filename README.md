@@ -1,5 +1,6 @@
 # P4TSA (package for Time Series Analysis) #
- 
+
+https://readthedocs.org/projects/pip/badge/?version=latest
 
 by Elena Cuoco (info@elenacuoco.com) https://www.elenacuoco.com
 
@@ -44,3 +45,6 @@ It includes
 
 [![Foo](https://img.shields.io/badge/docs-latest-brightgreen.svg?style=flat)](http://p4tsa.readthedocs.io/en/latest/?badge=latest)
  
+
+[![Build Status](https://travis-ci.org/elenacuoco/p4TSA.png)](https://travis-ci.org/elenacuoco/p4TSA)
+                                                               
