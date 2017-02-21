@@ -7,7 +7,7 @@ os:
 sudo: required
 
 before_install:
-  - sudo apt-get install libboost-dev
+  - sudo apt-get install libboost1.63-all-dev
   - DEPS_DIR="${TRAVIS_BUILD_DIR}/deps"
   - ENV_ROOT="${TRAVIS_BUILD_DIR}/deps"
   - cd ${TRAVIS_BUILD_DIR}
