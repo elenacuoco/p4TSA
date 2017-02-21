@@ -10,7 +10,7 @@ The Python interface to the library is pyTSA (you can call it pi'za)
  
 ### What is this repository for? ###
 p4TSA is a minimal package containing ad hoc function to work with time series. 
- It includes
+It includes
  * Whitening in time domain
  * Wavelet decomposition
  * Wavelet Detection Filter
@@ -23,9 +23,11 @@ p4TSA is a minimal package containing ad hoc function to work with time series.
 * Python Binding: it depends on binder and pybind11 which should be installed 
 * Database configuration: none
 * How to run tests: under dir test run 
-<code>python test.py</code>
+
+    <code>python test.py</code>
 * Deployment instructions: under python-wrapper directory run
-<code>python setup.py install</code>
+
+    <code>python setup.py install</code>
 
 ### Contribution guidelines ###
 

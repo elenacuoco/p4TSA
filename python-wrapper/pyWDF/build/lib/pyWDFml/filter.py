@@ -20,7 +20,7 @@ def downsampling(data, factor, numtaps):
 
 
 def decimate(x, q, n=None, ftype='iir', axis=-1):
-    '''
+    """
     This wdf_code is copied from scipy.signal
 
     Downsample the signal by using a filter.
@@ -46,7 +46,7 @@ def decimate(x, q, n=None, ftype='iir', axis=-1):
         See also
         --------
     scipy.resample
-    '''
+    """
 
     if not isinstance(q, int):
         raise TypeError("q must be an integer")

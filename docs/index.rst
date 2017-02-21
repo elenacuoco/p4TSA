@@ -13,6 +13,7 @@ pyTSA is the python wrapper
 
 pyWDFml is a python package to perform Machine Learning with WDF pipeline
 
+.. include:: ../README.md
 Features
 --------
 
@@ -53,9 +54,17 @@ License
 
 EGO
 
+
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+:maxdepth: 2
+        :numbered:
+        :titlesonly:
+        :glob:
+        :hidden:
+
+
+        modules.rst
+
 
 
 
@@ -65,3 +74,9 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+

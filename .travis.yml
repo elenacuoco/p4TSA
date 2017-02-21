@@ -12,6 +12,7 @@ before_install:
   - ENV_ROOT="${TRAVIS_BUILD_DIR}/deps"
   - cd ${TRAVIS_BUILD_DIR}
   - ./install_dependencies.sh
+
 # Enable C++ support
 language: cpp
 # Compiler selection
@@ -27,6 +28,9 @@ install:
   - ${ENV_ROOT}/bin/cmake CMakeLists.txt
   - make 
   - make install
-   
+  - cd python-wrapper
+  - python setup.py install
+  - cd pyWDF
+  - python setup.pyt install
 
  

@@ -41,6 +41,9 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
         <li class="nav-item nav-item-0"><a href="#">p4TSA 0 documentation</a> &#187;</li> 
       </ul>
     </div>
@@ -89,6 +92,44 @@
 <p>p4TSA is a C++ and python package for Time Series Analysis</p>
 <p>pyTSA is the python wrapper</p>
 <p>pyWDFml is a python package to perform Machine Learning with WDF pipeline</p>
+<p># P4TSA (package for Time Series Analysis) #
+by Elena Cuoco (<a class="reference external" href="mailto:info&#37;&#52;&#48;elenacuoco&#46;com">info<span>&#64;</span>elenacuoco<span>&#46;</span>com</a>) <a class="reference external" href="https://www.elenacuoco.com">https://www.elenacuoco.com</a></p>
+<p>This library is a &#8216;spin-off&#8217; of C++ Noise Analysis Package (NAP) written together
+with Giancarlo Cella (<a class="reference external" href="mailto:giancarlo&#46;cella&#37;&#52;&#48;pi&#46;infn&#46;it">giancarlo<span>&#46;</span>cella<span>&#64;</span>pi<span>&#46;</span>infn<span>&#46;</span>it</a>)</p>
+<p>The core library is writte in C++ and should be compiled before using the python interface.</p>
+<p>The Python interface to the library is pyTSA (you can call it pi&#8217;za)</p>
+<p>### What is this repository for? ###
+p4TSA is a minimal package containing ad hoc function to work with time series.</p>
+<blockquote>
+<div>It includes
+* Whitening in time domain
+* Wavelet decomposition
+* Wavelet Detection Filter</div></blockquote>
+<p>### How do I get set up? ###</p>
+<ul class="simple">
+<li>You need to have a python environment setup and some extralibrary (boost, FramLib,gsl,fftw3 installed)</li>
+<li>You should run cmake CMakeList.txt</li>
+<li>Dependencies: gsl, fftw3, gslcblas, Framelib</li>
+<li>Python Binding: it depends on binder and pybind11 which should be installed</li>
+<li>Database configuration: none</li>
+<li>How to run tests: under dir test run</li>
+</ul>
+<p>&lt;code&gt;python test.py&lt;/code&gt;
+* Deployment instructions: under python-wrapper directory run
+&lt;code&gt;python setup.py install&lt;/code&gt;</p>
+<p>### Contribution guidelines ###</p>
+<ul class="simple">
+<li>Writing tests</li>
+<li>Code review</li>
+<li>Other guidelines</li>
+</ul>
+<p>### Who do I talk to? ###</p>
+<ul class="simple">
+<li>Repo owner or admin (<a class="reference external" href="mailto:info&#37;&#52;&#48;elenacuoco&#46;com">info<span>&#64;</span>elenacuoco<span>&#46;</span>com</a>)</li>
+<li>Other community or team contact (<a class="reference external" href="mailto:elena&#46;cuoco&#37;&#52;&#48;ego-gw&#46;it">elena<span>&#46;</span>cuoco<span>&#64;</span>ego-gw<span>&#46;</span>it</a>, <a class="reference external" href="mailto:giancarlo&#46;cella&#37;&#52;&#48;pi&#46;infn&#46;it">giancarlo<span>&#46;</span>cella<span>&#64;</span>pi<span>&#46;</span>infn<span>&#46;</span>it</a>)</li>
+</ul>
+<p>### License ###</p>
+<p>EGO</p>
 <div class="section" id="features">
 <h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -138,6 +179,20 @@ We have a mailing list located at: <a class="reference external" href="mailto:el
 <p>EGO</p>
 <div class="toctree-wrapper compound">
 </div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">maxdepth:</th><td class="field-body"><p class="first">2
+:numbered:
+:titlesonly:
+:glob:
+:hidden:</p>
+<p class="last">modules.rst</p>
+</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div class="section" id="indices-and-tables">
@@ -147,6 +202,8 @@ We have a mailing list located at: <a class="reference external" href="mailto:el
 <li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
 <li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
 </ul>
+<div class="toctree-wrapper compound">
+</div>
 </div>
 
 
@@ -161,6 +218,9 @@ We have a mailing list located at: <a class="reference external" href="mailto:el
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
         <li class="nav-item nav-item-0"><a href="#">p4TSA 0 documentation</a> &#187;</li> 
       </ul>
     </div>
