@@ -35,7 +35,7 @@ rm -rf $ENV_TMP/*
 pushd $ENV_ROOT
 git clone https://github.com/pybind/pybind11.git
 pushd  pybind11
-python setup.py install --single-version-externally-managed
+python setup.py install --single-version-externally-managed --root=~/virtualenv/python3.6
 #cp -fr ./include/pybind11 $ENV_ROOT/include/
 #cp -fr ./include/pybind11~/virtualenv/python3.6/include/python3.6m
 #cp -fr ./include/pybind11 $PYTHONPATH/include/python3.6m
