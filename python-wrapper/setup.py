@@ -7,14 +7,13 @@ import os
 __version__ = '0.0.1'
 
 ENV_INCLUDE=os.environ['ENV_ROOT']+'/include'
-
+PY_INCLUDE=os.environ['ENV_ROOT']+'/include/pybind11'
 ext_modules = [
     Extension(
         'pytsa',
         ['pytsa.cpp'],
         include_dirs=['../include',ENV_INCLUDE,
-
-        ],
+        PY_INCLUDE],
         libraries=[ 'gsl', 'Frame', 'fftw3','fftw3f', 'fftw3l', 'gslcblas','p4TSA'],
         language='c++'
     ),
@@ -32,6 +31,5 @@ setup(
     install_requires=['pybind11>=1.7'],
     setup_requires=['pytest-runner'],
     tests_require=['pytest'],
-
     zip_safe=False,
 )
