@@ -13,14 +13,7 @@ the python interface.
 
 The Python interface to the library is pyTSA (you can call it pi'za)
 
-What is this repository for?
-----------------------------
 
-p4TSA is a minimal package containing ad hoc function to work with time
-series. It includes
-- Whitening in time domain
-- Wavelet decomposition
-- Wavelet Detection Filter
 
 
 

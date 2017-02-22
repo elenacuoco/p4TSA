@@ -27,7 +27,7 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="1. pyWDFml package" href="pyWDFml.html" /> 
+    <link rel="next" title="pyTSA package" href="pyTSA.html" /> 
   </head>
   <body role="document">
     <div class="related" role="navigation" aria-label="related navigation">
@@ -40,7 +40,7 @@
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="pyWDFml.html" title="1. pyWDFml package"
+          <a href="pyTSA.html" title="pyTSA package"
              accesskey="N">next</a> |</li>
         <li class="nav-item nav-item-0"><a href="#">p4TSA 0 documentation</a> &#187;</li> 
       </ul>
@@ -55,9 +55,9 @@
 <h1>Welcome to p4TSA and pyTSA documentation<a class="headerlink" href="#welcome-to-p4tsa-and-pytsa-documentation" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="the-documentation-is-still-under-construction">
 <h2>The documentation is still Under Construction<a class="headerlink" href="#the-documentation-is-still-under-construction" title="Permalink to this headline">¶</a></h2>
-<p>p4TSA is a C++ and python package for Time Series Analysis</p>
-<p>pyTSA is the python wrapper</p>
-<p>pyWDFml is a python package to perform Machine Learning with WDF pipeline</p>
+<p><em>p4TSA</em> is a C++ and python package for Time Series Analysis</p>
+<p><em>pyTSA</em> is the python wrapper</p>
+<p><em>pyWDFml</em> is a python package to perform Machine Learning with WDF pipeline</p>
 </div>
 </div>
 <div class="section" id="p4tsa-package-for-time-series-analysis">
@@ -68,23 +68,16 @@ together with Giancarlo Cella (<a class="reference external" href="mailto:gianca
 <p>The core library is written in C++ and should be compiled before using
 the python interface.</p>
 <p>The Python interface to the library is pyTSA (you can call it pi&#8217;za)</p>
-<div class="section" id="what-is-this-repository-for">
-<h2>What is this repository for?<a class="headerlink" href="#what-is-this-repository-for" title="Permalink to this headline">¶</a></h2>
-<p>p4TSA is a minimal package containing ad hoc function to work with time
-series. It includes
-- Whitening in time domain
-- Wavelet decomposition
-- Wavelet Detection Filter</p>
-</div>
 <div class="section" id="features">
 <h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
+<p>p4TSA is a minimal package containing ad hoc function to work with time
+series. It contains</p>
 <ul class="simple">
-<li>Contains Whitening in Time domain</li>
-<li>Contais Wavelet Detection Filter (WDF)</li>
+<li>Modern Spectral Analysis Estimators</li>
+<li>Whitening in Time domain</li>
+<li>Wavelet Decomposition</li>
+<li>Wavelet Detection Filter (WDF)</li>
 </ul>
-<div class="section" id="how-do-i-get-set-up">
-<h3>How do I get set up?<a class="headerlink" href="#how-do-i-get-set-up" title="Permalink to this headline">¶</a></h3>
-</div>
 </div>
 <div class="section" id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
@@ -122,8 +115,8 @@ installed</li>
 <div class="section" id="contribute">
 <h2>Contribute<a class="headerlink" href="#contribute" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Issue Tracker: github.com/elenacuoco/p4TSA/issues</li>
-<li>Source Code: github.com/elenacuoco/p4TSA</li>
+<li>Issue Tracker: <a class="reference external" href="https://github.com/elenacuoco/p4TSA/issues">https://github.com/elenacuoco/p4TSA/issues</a></li>
+<li>Source Code: <a class="reference external" href="https://github.com/elenacuoco/p4TSA">https://github.com/elenacuoco/p4TSA</a></li>
 </ul>
 </div>
 <div class="section" id="support">
@@ -148,22 +141,30 @@ We have a mailing list located at: <a class="reference external" href="mailto:el
 </div>
 </div>
 </div>
-<div class="section" id="documentation-for-pytsa">
-<h1>Documentation for pyTSA<a class="headerlink" href="#documentation-for-pytsa" title="Permalink to this headline">¶</a></h1>
-</div>
-<div class="section" id="documentation-for-pywdf">
-<h1>Documentation for pyWDF<a class="headerlink" href="#documentation-for-pywdf" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="documentation">
+<h1>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
-</div>
-<div class="section" id="indices-and-tables">
-<h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
-<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
-<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pyTSA.html">pyTSA package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pyTSA.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyTSA.html#module-contents">Module contents</a></li>
 </ul>
-<div class="toctree-wrapper compound">
-</div>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pyWDFml.html">1. pyWDFml package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pyWDFml.html#submodules">1.1. Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyWDFml.html#module-pyWDFml.filter">1.2. pyWDFml.filter module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyWDFml.html#module-pyWDFml.whitening">1.3. pyWDFml.whitening module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyWDFml.html#module-pyWDFml.wdf">1.4. pyWDFml.wdf module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyWDFml.html#module-pyWDFml.clustering">1.5. pyWDFml.Clustering module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyWDFml.html#module-pyWDFml.classify">1.6. pyWDFml.mlClassify module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyWDFml.html#module-pyWDFml">1.7. Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">2. pyWDFml</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pyWDFml.html">1. pyWDFml package</a></li>
+</ul>
+</li>
+</ul>
 </div>
 </div>
 
@@ -180,11 +181,7 @@ We have a mailing list located at: <a class="reference external" href="mailto:el
 </ul>
 </li>
 <li><a class="reference internal" href="#p4tsa-package-for-time-series-analysis">p4TSA (package for Time Series Analysis)</a><ul>
-<li><a class="reference internal" href="#what-is-this-repository-for">What is this repository for?</a></li>
-<li><a class="reference internal" href="#features">Features</a><ul>
-<li><a class="reference internal" href="#how-do-i-get-set-up">How do I get set up?</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#features">Features</a></li>
 <li><a class="reference internal" href="#installation">Installation</a></li>
 <li><a class="reference internal" href="#contribute">Contribute</a></li>
 <li><a class="reference internal" href="#support">Support</a><ul>
@@ -194,16 +191,12 @@ We have a mailing list located at: <a class="reference external" href="mailto:el
 </li>
 </ul>
 </li>
-<li><a class="reference internal" href="#documentation-for-pytsa">Documentation for pyTSA</a></li>
-<li><a class="reference internal" href="#documentation-for-pywdf">Documentation for pyWDF</a><ul>
-<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#documentation">Documentation</a></li>
 </ul>
 
   <h4>Next topic</h4>
-  <p class="topless"><a href="pyWDFml.html"
-                        title="next chapter">1. pyWDFml package</a></p>
+  <p class="topless"><a href="pyTSA.html"
+                        title="next chapter">pyTSA package</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -235,7 +228,7 @@ We have a mailing list located at: <a class="reference external" href="mailto:el
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="pyWDFml.html" title="1. pyWDFml package"
+          <a href="pyTSA.html" title="pyTSA package"
              >next</a> |</li>
         <li class="nav-item nav-item-0"><a href="#">p4TSA 0 documentation</a> &#187;</li> 
       </ul>

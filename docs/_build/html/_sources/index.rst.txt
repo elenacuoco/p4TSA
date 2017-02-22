@@ -9,21 +9,23 @@ Welcome to p4TSA and pyTSA documentation
 The documentation is still Under Construction
 ---------------------------------------------
 
-p4TSA is a C++ and python package for Time Series Analysis
+*p4TSA* is a C++ and python package for Time Series Analysis
 
-pyTSA is the python wrapper
+*pyTSA* is the python wrapper
 
-pyWDFml is a python package to perform Machine Learning with WDF pipeline
+*pyWDFml* is a python package to perform Machine Learning with WDF pipeline
 
 .. include:: ../README.rst
 Features
 --------
+p4TSA is a minimal package containing ad hoc function to work with time
+series. It contains
 
-- Contains Whitening in Time domain
-- Contais Wavelet Detection Filter (WDF)
+- Modern Spectral Analysis Estimators
+- Whitening in Time domain
+- Wavelet Decomposition
+- Wavelet Detection Filter (WDF)
 
-How do I get set up?
-~~~~~~~~~~~~~~~~~~~~
 
 Installation
 ------------
@@ -54,8 +56,8 @@ Installation
 Contribute
 ----------
 
-- Issue Tracker: github.com/elenacuoco/p4TSA/issues
-- Source Code: github.com/elenacuoco/p4TSA
+- Issue Tracker: https://github.com/elenacuoco/p4TSA/issues
+- Source Code: https://github.com/elenacuoco/p4TSA
 
 Support
 -------
@@ -77,45 +79,11 @@ Who do I talk to?
 -  Other community or team contact (elena.cuoco@ego-gw.it,
    giancarlo.cella@pi.infn.it)
 
-
-
-Documentation for pyTSA
-=======================
-
-.. toctree::
-        :maxdepth: 2
-        :numbered:
-        :titlesonly:
-        :glob:
-        :hidden:
-         pyTSA.rst
-
-
-Documentation for pyWDF
-=======================
-
-.. toctree::
-        :maxdepth: 2
-        :numbered:
-        :titlesonly:
-        :glob:
-        :hidden:
-
-        pyWDFml.rst
-        modules.rst
-
-
-
-
-Indices and tables
-------------------
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
+Documentation
+=============
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
 
-
+   pyTSA
+   pyWDFml
+   modules
