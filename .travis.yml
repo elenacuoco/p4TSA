@@ -11,14 +11,6 @@ env:
 
 
 sudo: required
-
-before_install:
-  - export ENV_ROOT="${TRAVIS_BUILD_DIR}/NewEnv"
-  - export ENV_TMP="${TRAVIS_BUILD_DIR}/tmp"
-  - sudo apt-get install libboost-dev libfftw3-dev
-  - cd ${TRAVIS_BUILD_DIR}
-  - ./install_dependencies.sh
-
 # Enable C++ support
 compiler:
   - gcc-5
@@ -37,6 +29,19 @@ addons:
     - gcc-5
     - g++-5
     - clang-3.6
+
+before_install:
+  - export ENV_ROOT="${TRAVIS_BUILD_DIR}/NewEnv"
+  - export ENV_TMP="${TRAVIS_BUILD_DIR}/tmp"
+  - sudo apt-get install libboost-dev libfftw3-dev
+  - if [ "$TRAVIS_OS_NAME" == "linux" ]; then sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-5 60 --slave /usr/bin/g++ g++ /usr/bin/g++-5; fi
+  - if [ "$TRAVIS_OS_NAME" == "linux" ]; then sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 40 --slave /usr/bin/g++ g++ /usr/bin/g++-4.8; fi
+  - if [ "$TRAVIS_OS_NAME" == "linux" ]; then export PATH=`echo $PATH | sed -e 's/\/usr\/local\/clang-3.5.0\/bin://'`; fi
+  - if [ "$TRAVIS_OS_NAME" == "linux" ]; then sudo update-alternatives --install /usr/bin/clang clang /usr/lib/llvm-3.6/bin/clang 60 --slave /usr/bin/clang++ clang++ /usr/lib/llvm-3.6/bin/clang++; fi
+  - if [ "$TRAVIS_OS_NAME" == "linux" ]; then sudo update-alternatives --install /usr/bin/clang clang /usr/local/clang-3.5.0/bin/clang 40 --slave /usr/bin/clang++ clang++ /usr/local/clang-3.5.0/bin/clang++; fi
+  - cd ${TRAVIS_BUILD_DIR}
+  - ./install_dependencies.sh
+
 # Build steps
 script:
 # Go to the Root directory
