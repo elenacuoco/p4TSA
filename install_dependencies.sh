@@ -1,6 +1,4 @@
 #!/bin/bash
-export ENV_ROOT="${TRAVIS_BUILD_DIR}/deps"
-export ENV_TMP="${TRAVIS_BUILD_DIR}/tmp"
 
 if [ -z "$ENV_ROOT" ]; then
     export ENV_ROOT=`realpath ..`/root
@@ -44,12 +42,10 @@ pushd cmake-3.8.0-rc1
 make && make install
 popd
 popd
-export PATH=${ENV_ROOT}/bin:{PATH}
-echo export ENV_ROOT=$ENV_ROOT > $ENV_ROOT/environment
+echo export PATH=${ENV_ROOT}/bin:{PATH} > $ENV_ROOT/environment
+echo export ENV_ROOT=$ENV_ROOT >> $ENV_ROOT/environment
 echo export CMAKE_ROOT=${ENV_ROOT}/share/cmake-3.8 >> $ENV_ROOT/environment
 echo export PYTHONPATH=${ENV_ROOT}/lib/python$PYTHON_VERSION:${ENV_ROOT}/lib/python$PYTHON_VERSION/site-packages >> $ENV_ROOT/environment
-
-cat environment >> $ENV_ROOT/environment
 
 source ${ENV_ROOT}/environment
 # ----------------------------------------------------------
@@ -79,6 +75,5 @@ make install
 cp -fr ./src/Fr*.h ${ENV_ROOT}/include 
 export PATH=${ENV_ROOT}/bin:{PATH}
 export LD_LIBRARY_PATH=${ENV_ROOT}/lib:${LD_LIBRARY_PATH}        
-
 
 source ${ENV_ROOT}/environment

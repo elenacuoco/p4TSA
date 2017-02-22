@@ -4,21 +4,23 @@
 os:
  - linux
 language: generic
-env: PYTHON=3.6.0
+ 
 env:
   global:
+    - PYTHON=3.6.0
     - CI_NODE_TOTAL=7
     - MAKEFLAGS="-j 7"
-
-
+    - ENV_ROOT="${TRAVIS_BUILD_DIR}/NewEnv"
+    - ENV_TMP="${TRAVIS_BUILD_DIR}/tmp"
+    - export ENV_ROOT="${TRAVIS_BUILD_DIR}/NewEnv"
+    - export ENV_TMP="${TRAVIS_BUILD_DIR}/tmp"
 
 
 sudo: required
 
 before_install:
   - sudo apt-get install libboost-dev libfftw3-dev
-  - DEPS_DIR="${TRAVIS_BUILD_DIR}/deps"
-  - ENV_ROOT="${TRAVIS_BUILD_DIR}/deps"
+ 
   - cd ${TRAVIS_BUILD_DIR}
   - ./install_dependencies.sh
 
@@ -42,9 +44,8 @@ addons:
 script:
 # Go to the Root directory
   - export PYTHON_VERSION=export PYTHON_VERSION=`python -c 'import sys; version=sys.version_info[:3]; print("{0}.{1}".format(*version))'`
-  - source ${DEPS_DIR}/environment   
+  - source ${ENV_ROOT}/environment   
   - cd ${TRAVIS_BUILD_DIR}
-  - ENV_ROOT="${TRAVIS_BUILD_DIR}/deps"
   - ${ENV_ROOT}/bin/cmake CMakeLists.txt
   - make 
   - make install
