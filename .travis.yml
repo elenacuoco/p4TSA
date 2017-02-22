@@ -45,6 +45,7 @@ script:
   - make 
   - make install
 ### install python package
+install:
   - cd python-wrapper
   - python setup.py install
   - python setup.py test
