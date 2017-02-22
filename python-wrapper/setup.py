@@ -3,7 +3,7 @@ from setuptools.command.build_ext import build_ext
 import sys
 import setuptools
 import os
-import locations
+
 
 __version__ = '0.0.1'
 
