@@ -37,6 +37,8 @@ git clone https://github.com/pybind/pybind11.git
 pushd  pybind11
 python setup.py install
 cp -fr ./include/pybind11 $ENV_ROOT/include/
+cp -fr ./include/pybind11~/virtualenv/python3.6/include/python3.6m
+cp -fr ./include/pybind11 $PYTHONPATH/include/python3.6m
 sudo cp -fr ./include/pybind11 $PYTHONPATH/include/python3.6m
 sudo cp -fr ./include/pybind11 /opt/python/3.6.0/include/python3.6m
 popd
