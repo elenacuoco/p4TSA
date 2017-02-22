@@ -3,11 +3,12 @@ from setuptools.command.build_ext import build_ext
 import sys
 import setuptools
 import os
+import locations
 
 __version__ = '0.0.1'
 
 ENV_INCLUDE=os.environ['ENV_ROOT']+'/include'
-PYBIND11_INCLUDE=os.environ['ENV_ROOT']+'/pybind11/include/pybind11'
+PYBIND11_INCLUDE=os.path.dirname(locations.distutils_scheme('pybind11', *args, **kwargs)['headers'])
 ext_modules = [
     Extension(
         'pytsa',
