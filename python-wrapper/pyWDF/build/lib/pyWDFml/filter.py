@@ -21,31 +21,12 @@ def downsampling(data, factor, numtaps):
 
 def decimate(x, q, n=None, ftype='iir', axis=-1):
     """
-
-    This wdf_code is copied from scipy.signal
-    Downsample the signal by using a filter.
-    By default, an order 8 Chebyshev type I filter is used.  A 30 point FIR
-    filter with hamming window is used if `ftype` is 'fir'.
-
-        Parameters
-    ----------
-    x : ndarray
-        The signal to be downsampled, as an N-dimensional array.
-    q : int
-        The downsampling factor.
-    n : int, optional
-        The order of the filter (1 less than the length for 'fir').
-    ftype : str {'iir', 'fir'}, optional
-        The type of the lowpass filter.
-    axis : int, optional
-        The axis along which to decimate.
-        Returns
-    -------
-    y : ndarray
-        The down-sampled signal.
-        See also
-        --------
-    scipy.resample
+    :type x : ndarray cd ..The signal to be downsampled, as an N-dimensional array.
+    :type q : int The downsampling factor.
+    :type n : int, optional The order of the filter (1 less than the length for 'fir').
+    :type ftype : str {'iir', 'fir'}, optional The type of the lowpass filter.
+    :type axis : int, optional The axis along which to decimate.
+    :return y : ndarray
     """
 
     if not isinstance(q, int):

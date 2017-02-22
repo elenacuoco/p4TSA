@@ -21,20 +21,12 @@ def downsampling(data, factor, numtaps):
 
 def decimate(x, q, n=None, ftype='iir', axis=-1):
     """
-    :type x : ndarray
-        The signal to be downsampled, as an N-dimensional array.
-    :type q : int
-        The downsampling factor.
-    :type n : int, optional
-        The order of the filter (1 less than the length for 'fir').
-    :type ftype : str {'iir', 'fir'}, optional
-        The type of the lowpass filter.
-    :type axis : int, optional
-        The axis along which to decimate.
-        Returns
-    -------
+    :type x : ndarray cd ..The signal to be downsampled, as an N-dimensional array.
+    :type q : int The downsampling factor.
+    :type n : int, optional The order of the filter (1 less than the length for 'fir').
+    :type ftype : str {'iir', 'fir'}, optional The type of the lowpass filter.
+    :type axis : int, optional The axis along which to decimate.
     :return y : ndarray
-
     """
 
     if not isinstance(q, int):

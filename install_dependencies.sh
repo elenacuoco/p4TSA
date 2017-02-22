@@ -23,9 +23,6 @@ echo export ENV_ROOT=$ENV_ROOT > $ENV_ROOT/environment
 cat environment >> $ENV_ROOT/environment
 
 source ${ENV_ROOT}/environment
-sudo pip$PYTHON_VERSION install -U pip
-sudo pip$PYTHON_VERSION install numpy
-sudo pip$PYTHON_VERSION install -r requirements.txt
 
 pushd $ENV_TMP
 git clone https://github.com/pybind/pybind11.git
