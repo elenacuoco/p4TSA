@@ -18,17 +18,49 @@ rm -rf $ENV_TMP/*
 
 
 
-export PYTHON_VERSION=export PYTHON_VERSION=`python -c 'import sys; version=sys.version_info[:3]; print("{0}.{1}".format(*version))'`
+# ----------------------------------------------------------
+#
+# Python installation
+#
+pushd $ENV_TMP
+wget http://sqlite.org/2017/sqlite-autoconf-3160200.tar.gz
+tar xfz sqlite-autoconf-3160200.tar.gz
+pushd sqlite-autoconf-3160200
+./configure --prefix=${ENV_ROOT} --disable-static   CFLAGS="-g -O2 -DSQLITE_ENABLE_FTS3=1  -DSQLITE_ENABLE_COLUMN_METADATA=1  -DSQLITE_ENABLE_UNLOCK_NOTIFY=1  -DSQLITE_SECURE_DELETE=1 -DSQLITE_ENABLE_DBSTAT_VTAB=1"
+make -j8
+make install
+popd
+popd
+export LD_LIBRARY_PATH=${ENV_ROOT}/lib:${LD_LIBRARY_PATH}
+pushd $ENV_TMP
+wget https://www.python.org/ftp/python/3.6.0/Python-3.6.0.tar.xz
+unxz Python-3.6.0.tar.xz
+tar xf Python-3.6.0.tar
+pushd Python-3.6.0
+./configure --prefix=${ENV_ROOT}  --enable-shared --with-ensurepip --enable-loadable-sqlite-extensions --enable-optimization
+make -j8
+make install
+popd
+rm Python-3.6.0.tar
+popd
+ln -s ${ENV_ROOT}/lib $ENV_ROOT/lib64
+ln -s ${ENV_ROOT}/bin/python3.6 $ENV_ROOT/bin/python
+ln -s ${ENV_ROOT}/bin/pip3 $ENV_ROOT/bin/pip
 echo export ENV_ROOT=$ENV_ROOT > $ENV_ROOT/environment
+echo export PATH=$ENV_ROOT/bin:$PATH >> $ENV_ROOT/environment
 cat environment >> $ENV_ROOT/environment
-
 source ${ENV_ROOT}/environment
+export PYTHON_VERSION=export PYTHON_VERSION=`python -c 'import sys; version=sys.version_info[:3]; print("{0}.{1}".format(*version))'`
+
+pip$PYTHON_VERSION install -U pip
+pip$PYTHON_VERSION install numpy
+pip$PYTHON_VERSION install -r requirements.txt
 
 pushd $ENV_TMP
 git clone https://github.com/pybind/pybind11.git
 pushd  pybind11
-sudo python$PYTHON_VERSION setup.py install
-sudo cp -fr ./include/pybind11/ /usr/include/python$PYTHON_VERSION
+python$PYTHON_VERSION setup.py install
+cp -fr ./include/pybind11/ /usr/include/python$PYTHON_VERSION
 popd 
 popd 
 
