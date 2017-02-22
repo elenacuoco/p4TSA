@@ -27,17 +27,6 @@ before_install:
 compiler:
   - gcc
   - clang
-install:
-- if [ "$CXX" = "g++" ]; then export CXX="g++-5.3" CC="gcc-5.3"; fi
-
-addons:
-  apt:
-    sources:
-    - ubuntu-toolchain-r-test
-    packages:
-    - gcc-5.3
-    - g++-5.3
-    - clang
 
 # Build steps
 script:
