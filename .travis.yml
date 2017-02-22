@@ -31,20 +31,21 @@ script:
   - make
   - make install
 ### install python package
-language: python
-python:
+after_success:
+  language: python
+  python:
    - "3.6"
 
-# command to install dependencies
-install:
-  - pip install --user -r requirements.txt
-  - cd python-wrapper
-  - python setup.py install --user
-# command to run tests
-script: python setup.py test
+#  # command to install dependencies
+#  install:
+#    - pip install --user -r requirements.txt
+#    - cd python-wrapper
+#    - python setup.py install --user
+  # command to run tests
+#  script: python setup.py test
   #
-  #- cd pyWDF
-  #- python setup.py install --user
+#  - cd ../pyWDF
+#  - python setup.py install --user
 
 
 
