@@ -32,15 +32,11 @@ make  install
 popd
 popd
 
-pushd $ENV_ROOT
+pushd $ENV_TMP
 git clone https://github.com/pybind/pybind11.git
 pushd  pybind11
-python setup.py install --single-version-externally-managed --root=~/virtualenv/python3.6
-#cp -fr ./include/pybind11 $ENV_ROOT/include/
-#cp -fr ./include/pybind11~/virtualenv/python3.6/include/python3.6m
-#cp -fr ./include/pybind11 $PYTHONPATH/include/python3.6m
-#sudo cp -fr ./include/pybind11 $PYTHONPATH/include/python3.6m
-sudo cp -fr ./include/pybind11 /opt/python/3.6.0/include/python3.6m
+sudo python setup.py install
+sudo cp -fr ./include/pybind11/ ~/virtualenv/python3.6/include/
 popd
 popd
 
@@ -50,7 +46,7 @@ popd
 #
 # Installing basic environment
 #
-
+shopt -s nullglob
 
 #################gsl
 pushd $ENV_TMP
@@ -71,3 +67,5 @@ cd libframe-8.30
 make VERBOSE=0
 make install
 cp -fr ./src/Fr*.h ${ENV_ROOT}/include
+export PATH=${ENV_ROOT}/bin:{PATH}
+export LD_LIBRARY_PATH=${ENV_ROOT}/lib:${LD_LIBRARY_PATH}

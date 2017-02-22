@@ -1,4 +1,4 @@
-# Travis CI  
+# Travis CI
 # (C) 2017 Elena Cuoco
 
 
@@ -6,7 +6,7 @@ env:
   global:
     - CI_NODE_TOTAL=7
     - MAKEFLAGS="-j 7"
-    - GCC_VERSION=5 CPP=14 LIBCXX=On
+
 
 
 sudo: required
@@ -20,8 +20,8 @@ before_install:
 
 # Enable C++ support
 compiler:
-  - gcc: 5.3
-  - clang: 3.7
+  - gcc
+  - clang
 
 # Build steps
 script:
@@ -30,22 +30,20 @@ script:
   - ${TRAVIS_BUILD_DIR}/NewEnv/bin/cmake CMakeLists.txt
   - make
   - make install
-
-
 ### install python package
-language: python
-python:
-  - "3.6"
-install:
-  - pip install -r requirements.txt
-  - cd python-wrapper
-  - export ENV_ROOT="${TRAVIS_BUILD_DIR}/NewEnv"
-  - python setup.py install
-# command to run tests
-  - python setup.py test
-  - cd pyWDF
-  - python setup.py install
+after_success:
+  language: python
+  python:
+   - "3.6"
 
-
-
+#  # command to install dependencies
+#  install:
+#    - pip install --user -r requirements.txt
+#    - cd python-wrapper
+#    - python setup.py install --user
+  # command to run tests
+#  script: python setup.py test
+  #
+#  - cd ../pyWDF
+#  - python setup.py install --user
 
