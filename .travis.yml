@@ -6,8 +6,8 @@ env:
   global:
     - CI_NODE_TOTAL=7
     - MAKEFLAGS="-j 7"
-    - GCC_VERSION=5 CPP=11 LIBCXX=On
-    - CLANG_VERSION=3.6
+#    - GCC_VERSION=5 CPP=11 LIBCXX=On
+#    - CLANG_VERSION=3.6
 
 
 sudo: required
@@ -19,19 +19,19 @@ before_install:
   - cd ${TRAVIS_BUILD_DIR}
   - ./install_dependencies.sh
 
-#
+env: GCC_VERSION=5 CPP=14 LIBCXX=On
+      os: linux
+      addons: &gcc5
+        apt:
+          packages:
+            - g++-5
+            - gcc-5
+            - clang-3.6
+          sources:
+            - ubuntu-toolchain-r-test
+            - llvm-toolchain-precise-3.6
 
-addons:
-  apt:
-    sources:
-    # add PPAs with more up-to-date toolchains
-    - ubuntu-toolchain-r-test
-    - llvm-toolchain-precise-3.6
-    packages:
-    # install toolchains
-    - gcc-5
-    - g++-5
-    - clang-3.6
+
 
 # Build steps
 script:
