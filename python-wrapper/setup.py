@@ -31,6 +31,7 @@ setup(
     long_description='',
     ext_modules=ext_modules,
     install_requires=['pybind11>=1.7'],
+    extra_compile_args=['-std=c++0'],
     setup_requires=['pytest-runner'],
     tests_require=['pytest'],
     zip_safe=False,
