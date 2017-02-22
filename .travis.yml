@@ -50,7 +50,7 @@ script:
 language: python
 python:
   - "3.6"
-after_success:
+install:
   - pip install -r requirements.txt
   - cd python-wrapper
   - export ENV_ROOT="${TRAVIS_BUILD_DIR}/NewEnv"
