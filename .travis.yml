@@ -14,7 +14,7 @@ sudo: required
 before_install:
   - export ENV_ROOT="${TRAVIS_BUILD_DIR}/NewEnv"
   - export ENV_TMP="${TRAVIS_BUILD_DIR}/tmp"
-  - sudo apt-get install libboost-dev libfftw3-dev  build-essential libssl-dev libffi-dev python3 python3-dev python3-setuptools
+  - sudo apt-get install libboost-dev libfftw3-dev
   - cd ${TRAVIS_BUILD_DIR}
   - ./install_dependencies.sh
 
