@@ -39,7 +39,7 @@ extensions = ['sphinx.ext.autodoc',
     'sphinx.ext.mathjax',
     'sphinx.ext.ifconfig',
     'sphinx.ext.viewcode']
-extensions = [ "breathe" ]
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
@@ -172,3 +172,4 @@ read_the_docs_build = os.environ.get('READTHEDOCS', None) == 'True'
 if read_the_docs_build:
 
     subprocess.call('doxygen ./Doxyfile', shell=True)
+html_extra_path = ['./html']
