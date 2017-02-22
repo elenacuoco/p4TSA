@@ -8,8 +8,8 @@ import os
 __version__ = '0.0.1'
 
 ENV_INCLUDE=os.environ['ENV_ROOT']+'/include'
-os.environ["CC"] = "gcc-5.3"
-os.environ["CXX"] = "g++-5.3"
+os.environ["CC"] = "gcc-5"
+os.environ["CXX"] = "g++-5"
 os.environ["CLANG"] = "clang-3.8"
 ext_modules = [
     Extension(
@@ -31,7 +31,7 @@ setup(
     long_description='',
     ext_modules=ext_modules,
     install_requires=['pybind11>=1.7'],
-    extra_compile_args=['-std=c++0'],
+    extra_compile_args=['-std=c++11'],
     setup_requires=['pytest-runner'],
     tests_require=['pytest'],
     zip_safe=False,
