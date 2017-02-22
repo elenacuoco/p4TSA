@@ -1,9 +1,8 @@
 pyTSA package
-===============
+=============
 
-Submodules
-----------
 
-Module contents
----------------
+pytsa.tsa module
+---------------------
+
 

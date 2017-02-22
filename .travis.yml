@@ -29,8 +29,8 @@ script:
   - ${ENV_ROOT}/bin/cmake CMakeLists.txt
   - make 
   - make install
- # - cd python-wrapper
- # - sudo python$PYTHON_VERSION setup.py install
+  - cd python-wrapper
+  - sudo python$PYTHON_VERSION setup.py install
  # - python$PYTHON_VERSION setup.py test
  # - cd pyWDF
  # - sudo python$PYTHON_VERSION setup.py install

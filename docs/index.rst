@@ -9,11 +9,11 @@ Welcome to p4TSA and pyTSA documentation
 The documentation is still Under Construction
 ---------------------------------------------
 
-*p4TSA* is a C++ and python package for Time Series Analysis
+**p4TSA** is a C++ and python package for Time Series Analysis
 
-*pyTSA* is the python wrapper
+**pyTSA** is the python wrapper
 
-*pyWDFml* is a python package to perform Machine Learning with WDF pipeline
+**pyWDFml** is a python package to perform Machine Learning with WDF pipeline
 
 .. include:: ../README.rst
 Features
@@ -82,8 +82,7 @@ Who do I talk to?
 Documentation
 =============
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 4
 
    pyTSA
    pyWDFml
-   modules

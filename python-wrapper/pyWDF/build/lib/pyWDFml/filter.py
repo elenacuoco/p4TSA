@@ -21,8 +21,8 @@ def downsampling(data, factor, numtaps):
 
 def decimate(x, q, n=None, ftype='iir', axis=-1):
     """
-    This wdf_code is copied from scipy.signal
 
+    This wdf_code is copied from scipy.signal
     Downsample the signal by using a filter.
     By default, an order 8 Chebyshev type I filter is used.  A 30 point FIR
     filter with hamming window is used if `ftype` is 'fir'.
@@ -71,9 +71,9 @@ def decimate(x, q, n=None, ftype='iir', axis=-1):
 
 def downsampling_cheby1(s, r, n=8, fir=False):
     """
+
     Downsample the signal by using a filter.
     By default, an order 8 Chebyshev type I filter is used.
-
     :rtype y: numpy array
     :type s: numpy array
     :param s: the orginal data
