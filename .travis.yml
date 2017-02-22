@@ -53,6 +53,7 @@ python:
 script:
   - pip install -r requirements.txt
   - cd python-wrapper
+  - export ENV_ROOT="${TRAVIS_BUILD_DIR}/NewEnv"
   - python setup.py install
 # command to run tests
   - python setup.py test
