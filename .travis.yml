@@ -31,31 +31,20 @@ script:
   - make
   - make install
 
-#  # command to install dependencies
-#  install:
-#    - pip install --user -r requirements.txt
-#    - cd python-wrapper
-#    - python setup.py install --user
-  # command to run tests
-#  script: python setup.py test
-  #
-#  - cd ../pyWDF
-#  - python setup.py install --user
-
 
 ### install python package
-#language: python
-#python:
-#  - "3.6"
-#install:
-#  - pip install -r requirements.txt
-#  - cd python-wrapper
-#  - export ENV_ROOT="${TRAVIS_BUILD_DIR}/NewEnv"
-#  - python setup.py install
+language: python
+python:
+  - "3.6"
+install:
+  - pip install -r requirements.txt
+  - cd python-wrapper
+  - export ENV_ROOT="${TRAVIS_BUILD_DIR}/NewEnv"
+  - python setup.py install
 # command to run tests
-#  - python setup.py test
-#  - cd pyWDF
-#  - python setup.py install
+  - python setup.py test
+  - cd pyWDF
+  - python setup.py install
 
 
 
