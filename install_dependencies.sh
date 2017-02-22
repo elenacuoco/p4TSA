@@ -17,9 +17,10 @@ rm -rf $ENV_TMP/*
 
  
 
-pip3.6install -U pip
-pip3.6install numpy
-pip3.6install -r requirements.txt
+pip3.6 install -U pip
+pip3.6 install numpy
+pip3.6 install -r requirements.txt
+pip3.6 install pybind11
 
 pushd $ENV_TMP
 git clone https://github.com/pybind/pybind11.git
