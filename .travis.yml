@@ -6,7 +6,7 @@ env:
   global:
     - CI_NODE_TOTAL=7
     - MAKEFLAGS="-j 7"
-
+    - GCC_VERSION=5 CPP=11
 
 
 sudo: required
@@ -20,8 +20,9 @@ before_install:
 
 # Enable C++ support
 compiler:
-  - gcc
-  - clang
+  - gcc: 5.3
+  - clang: 3.8
+   - cmake: 3.8
 
 # Build steps
 script:
@@ -46,4 +47,9 @@ after_success:
   #
 #  - cd ../pyWDF
 #  - python setup.py install --user
+
+
+
+
+
 

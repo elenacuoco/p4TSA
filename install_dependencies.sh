@@ -1,3 +1,6 @@
+
+
+
 #!/bin/bash
 export ENV_ROOT="${TRAVIS_BUILD_DIR}/NewEnv"
 export ENV_TMP="${TRAVIS_BUILD_DIR}/tmp"
@@ -32,13 +35,18 @@ make  install
 popd
 popd
 
-pushd $ENV_TMP
+pushd $ENV_ROOT
 git clone https://github.com/pybind/pybind11.git
 pushd  pybind11
-sudo python setup.py install
-sudo cp -fr ./include/pybind11/ ~/virtualenv/python3.6/include/
+python setup.py install --single-version-externally-managed --root=~/virtualenv/python3.6
+#cp -fr ./include/pybind11 $ENV_ROOT/include/
+#cp -fr ./include/pybind11~/virtualenv/python3.6/include/python3.6m
+#cp -fr ./include/pybind11 $PYTHONPATH/include/python3.6m
+#sudo cp -fr ./include/pybind11 $PYTHONPATH/include/python3.6m
+sudo cp -fr ./include/pybind11 /opt/python/3.6.0/include/python3.6m
 popd
 popd
+
 
 
 
@@ -69,3 +77,15 @@ make install
 cp -fr ./src/Fr*.h ${ENV_ROOT}/include
 export PATH=${ENV_ROOT}/bin:{PATH}
 export LD_LIBRARY_PATH=${ENV_ROOT}/lib:${LD_LIBRARY_PATH}
+
+
+
+
+
+
+
+
+
+
+
+
