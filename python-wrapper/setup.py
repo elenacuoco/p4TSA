@@ -15,7 +15,7 @@ ext_modules = [
         ['pytsa.cpp'],
         include_dirs=['../include', ENV_INCLUDE],
         libraries=[ 'gsl', 'Frame', 'fftw3','fftw3f', 'fftw3l', 'gslcblas','p4TSA'],
-        language='c++0'
+        language='c++'
     ),
 ]
 

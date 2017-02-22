@@ -20,8 +20,11 @@ before_install:
 
 # Enable C++ support
 compiler:
-  - gcc
-  - clang
+  - gcc-5
+  - g++-5
+  - clang-3.6
+  - c++0
+
 addons:
   apt:
     sources:
