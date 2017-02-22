@@ -50,7 +50,7 @@ popd
 #
 # Installing basic environment
 #
-shopt -s nullglob
+
 
 #################gsl
 pushd $ENV_TMP
@@ -71,5 +71,3 @@ cd libframe-8.30
 make VERBOSE=0
 make install
 cp -fr ./src/Fr*.h ${ENV_ROOT}/include
-export PATH=${ENV_ROOT}/bin:{PATH}
-export LD_LIBRARY_PATH=${ENV_ROOT}/lib:${LD_LIBRARY_PATH}
