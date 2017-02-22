@@ -34,21 +34,18 @@ popd
 
 
 echo export ENV_ROOT=$ENV_ROOT > $ENV_ROOT/environment
-echo export CMAKE_ROOT=${ENV_ROOT}/share/cmake-3.8 >> $ENV_ROOT/environment
-echo export PYTHONPATH=${ENV_ROOT}/lib/python3.6:${ENV_ROOT}/lib/python3.6/site-packages >> $ENV_ROOT/environment
-
 cat environment >> $ENV_ROOT/environment
 
 source ${ENV_ROOT}/environment
-$ENV_ROOT/bin/pip install -U pip
-$ENV_ROOT/bin/pip install numpy 
-$ENV_ROOT/bin/pip install -r requirements.txt
+sudo pip3 install -U pip
+sudo pip3 install numpy
+sudo pip3 install -r requirements.txt
 
 pushd $ENV_TMP
 git clone https://github.com/pybind/pybind11.git
 pushd  pybind11
 sudo python3 setup.py install
-sudo cp -fr ./include/pybind11/ ${ENV_ROOT}/include/python3
+sudo cp -fr ./include/pybind11/ /usr/include/python3.5
 popd 
 popd 
 
