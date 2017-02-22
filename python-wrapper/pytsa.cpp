@@ -6,7 +6,7 @@
 #include <sstream> // __str__
 #include <string>
 
-#include <pybind11/pybind11.h>
+#include <pybind11.h>
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
 	#define BINDER_PYBIND11_TYPE_CASTER
@@ -52,7 +52,7 @@ void bind_eternity_persist(std::function< pybind11::module &(std::string const &
 #include <string>
 #include <utility>
 
-#include <pybind11/pybind11.h>
+#include <pybind11.h>
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
 	#define BINDER_PYBIND11_TYPE_CASTER
@@ -93,7 +93,7 @@ void bind_eternity_persist_xml(std::function< pybind11::module &(std::string con
 #include <tsaUtilityFunctions.hpp>
 #include <utility>
 
-#include <pybind11/pybind11.h>
+#include <pybind11.h>
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
 	#define BINDER_PYBIND11_TYPE_CASTER
@@ -270,7 +270,7 @@ void bind_tsaUtilityFunctions(std::function< pybind11::module &(std::string cons
 #include <string>
 #include <utility>
 
-#include <pybind11/pybind11.h>
+#include <pybind11.h>
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
 	#define BINDER_PYBIND11_TYPE_CASTER
@@ -315,7 +315,7 @@ void bind_LatticeView(std::function< pybind11::module &(std::string const &names
 #include <libio.h>
 #include <sstream> // __str__
 
-#include <pybind11/pybind11.h>
+#include <pybind11.h>
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
 	#define BINDER_PYBIND11_TYPE_CASTER
@@ -468,7 +468,7 @@ void bind_FrameL(std::function< pybind11::module &(std::string const &namespace_
 #include <sstream> // __str__
 #include <string>
 
-#include <pybind11/pybind11.h>
+#include <pybind11.h>
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
 	#define BINDER_PYBIND11_TYPE_CASTER
@@ -694,7 +694,7 @@ void bind_SeqView(std::function< pybind11::module &(std::string const &namespace
 #include <utility>
 #include <vector>
 
-#include <pybind11/pybind11.h>
+#include <pybind11.h>
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
 	#define BINDER_PYBIND11_TYPE_CASTER
@@ -1000,7 +1000,7 @@ void bind_Parcor2AR(std::function< pybind11::module &(std::string const &namespa
 #include <sstream> // __str__
 #include <string>
 
-#include <pybind11/pybind11.h>
+#include <pybind11.h>
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
 	#define BINDER_PYBIND11_TYPE_CASTER
@@ -1178,7 +1178,7 @@ void bind_BaseFFT(std::function< pybind11::module &(std::string const &namespace
 #include <string>
 #include <utility>
 
-#include <pybind11/pybind11.h>
+#include <pybind11.h>
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
 	#define BINDER_PYBIND11_TYPE_CASTER
@@ -1514,7 +1514,7 @@ void bind_BLInterpolation(std::function< pybind11::module &(std::string const &n
 #include <string>
 #include <utility>
 
-#include <pybind11/pybind11.h>
+#include <pybind11.h>
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
 	#define BINDER_PYBIND11_TYPE_CASTER
@@ -1821,7 +1821,7 @@ void bind_EventDescription(std::function< pybind11::module &(std::string const &
 #include <string>
 #include <utility>
 
-#include <pybind11/pybind11.h>
+#include <pybind11.h>
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
 	#define BINDER_PYBIND11_TYPE_CASTER
@@ -2055,7 +2055,7 @@ void bind_LeastSquaresLattice(std::function< pybind11::module &(std::string cons
 #include <sstream> // __str__
 #include <string>
 
-#include <pybind11/pybind11.h>
+#include <pybind11.h>
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
 	#define BINDER_PYBIND11_TYPE_CASTER
@@ -2174,7 +2174,7 @@ void bind_TukeyHannWindow(std::function< pybind11::module &(std::string const &n
 #include <string>
 #include <vector>
 
-#include <pybind11/pybind11.h>
+#include <pybind11.h>
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
 	#define BINDER_PYBIND11_TYPE_CASTER
@@ -2402,7 +2402,7 @@ void bind_WaveletThreshold(std::function< pybind11::module &(std::string const &
 #include <string>
 #include <vector>
 
-#include <pybind11/pybind11.h>
+#include <pybind11.h>
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
 	#define BINDER_PYBIND11_TYPE_CASTER
@@ -3050,7 +3050,7 @@ void bind_FrameIStream(std::function< pybind11::module &(std::string const &name
 #include <sstream> // __str__
 #include <string>
 
-#include <pybind11/pybind11.h>
+#include <pybind11.h>
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
 	#define BINDER_PYBIND11_TYPE_CASTER
@@ -3086,7 +3086,7 @@ void bind_FrameIChannel(std::function< pybind11::module &(std::string const &nam
 #include <stdexcept>
 #include <functional>
 
-#include <pybind11/pybind11.h>
+#include <pybind11.h>
 
 typedef std::function< pybind11::module & (std::string const &) > ModuleGetter;
 
