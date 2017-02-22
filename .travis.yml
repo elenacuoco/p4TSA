@@ -12,36 +12,28 @@ env:
 
 sudo: required
 # Enable C++ support
+
 compiler:
-  - gcc-5
-  - g++-5
-  - clang-3.6
-std:
-  - c++0x
-  - gnu++0x
-  - c++03
-  - c++11
-  - c++14
-  - c++17
-  - c++-latest
+  clang:
+    - 3.8
+
+  gcc:
+    - 5.3
 
 
-addons:
-  apt:
-    sources:
-    # add PPAs with more up-to-date toolchains
-    - ubuntu-toolchain-r-test
-    - llvm-toolchain-precise-3.6
-    packages:
-    # install toolchains
-    - gcc-5
-    - g++-5
-    - clang-3.6
+stdlib:
+  - libc++
+  - stdlibc++
+
+boost:
+  - 1.63.0
+
+
 
 before_install:
   - export ENV_ROOT="${TRAVIS_BUILD_DIR}/NewEnv"
   - export ENV_TMP="${TRAVIS_BUILD_DIR}/tmp"
-  - sudo apt-get install libboost-dev libfftw3-dev
+  - sudo apt-get install libfftw3-dev
   - cd ${TRAVIS_BUILD_DIR}
   - ./install_dependencies.sh
 
