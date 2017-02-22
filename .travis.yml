@@ -20,7 +20,6 @@ sudo: required
 
 before_install:
   - sudo apt-get install libboost-dev libfftw3-dev
- 
   - cd ${TRAVIS_BUILD_DIR}
   - ./install_dependencies.sh
 
@@ -29,30 +28,29 @@ compiler:
   - gcc
   - clang
 install:
-- if [ "$CXX" = "g++" ]; then export CXX="g++-4.8" CC="gcc-4.8"; fi
+- if [ "$CXX" = "g++" ]; then export CXX="g++-5.3" CC="gcc-5.3"; fi
 
 addons:
   apt:
     sources:
     - ubuntu-toolchain-r-test
     packages:
-    - gcc-4.8
-    - g++-4.8
+    - gcc-5.3
+    - g++-5.3
     - clang
 
 # Build steps
 script:
 # Go to the Root directory
-  - export PYTHON_VERSION=export PYTHON_VERSION=`python -c 'import sys; version=sys.version_info[:3]; print("{0}.{1}".format(*version))'`
-  - source ${ENV_ROOT}/environment   
   - cd ${TRAVIS_BUILD_DIR}
-  - ${ENV_ROOT}/bin/cmake CMakeLists.txt
+  - ${TRAVIS_BUILD_DIR}/NewEnv/bin/cmake CMakeLists.txt
   - make 
   - make install
+### install python package
   - cd python-wrapper
-  - python$PYTHON_VERSION setup.py install
-  - python$PYTHON_VERSION setup.py test
+  - python3.6 setup.py install
+  - python3.6 setup.py test
   - cd pyWDF
-  - python$PYTHON_VERSION setup.py install
+  - python3.6 setup.py install
 
  

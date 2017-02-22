@@ -15,18 +15,18 @@ fi
 rm -rf $ENV_TMP/*
 
 
-export PYTHON_VERSION=export PYTHON_VERSION=`python -c 'import sys; version=sys.version_info[:3]; print("{0}.{1}".format(*version))'`
+ 
 
-pip$PYTHON_VERSION install -U pip
-pip$PYTHON_VERSION install numpy
-pip$PYTHON_VERSION install -r requirements.txt
+pip3.6install -U pip
+pip3.6install numpy
+pip3.6install -r requirements.txt
 
 pushd $ENV_TMP
 git clone https://github.com/pybind/pybind11.git
 pushd  pybind11
-python$PYTHON_VERSION setup.py install
-cp -fr ./include/pybind11/ ${ENV_ROOT}/include/python$PYTHON_VERSION
-popd 
+python3.6 setup.py install
+cp -fr ./include/pybind11/ ${ENV_ROOT}/include/
+popd
 popd 
 
 # ----------------------------------------------------------
@@ -36,18 +36,16 @@ popd
 
 pushd $ENV_TMP
 wget https://cmake.org/files/v3.8/cmake-3.8.0-rc1.tar.gz
-tar xvfz cmake-3.8.0-rc1.tar.gz
+tar xfz cmake-3.8.0-rc1.tar.gz
 pushd cmake-3.8.0-rc1
 ./configure --prefix=${ENV_ROOT}
-make && make install
+make VERBOSE=0 && make install
 popd
 popd
-echo export PATH=${ENV_ROOT}/bin:{PATH} > $ENV_ROOT/environment
-echo export ENV_ROOT=$ENV_ROOT >> $ENV_ROOT/environment
-echo export CMAKE_ROOT=${ENV_ROOT}/share/cmake-3.8 >> $ENV_ROOT/environment
-echo export PYTHONPATH=${ENV_ROOT}/lib/python$PYTHON_VERSION:${ENV_ROOT}/lib/python$PYTHON_VERSION/site-packages >> $ENV_ROOT/environment
+export PATH=${ENV_ROOT}/bin:{PATH}
+export ENV_ROOT=$ENV_ROOT
+export CMAKE_ROOT=${ENV_ROOT}/share/cmake-3.8
 
-source ${ENV_ROOT}/environment
 # ----------------------------------------------------------
 #
 # Installing basic environment
@@ -76,4 +74,3 @@ cp -fr ./src/Fr*.h ${ENV_ROOT}/include
 export PATH=${ENV_ROOT}/bin:{PATH}
 export LD_LIBRARY_PATH=${ENV_ROOT}/lib:${LD_LIBRARY_PATH}        
 
-source ${ENV_ROOT}/environment
