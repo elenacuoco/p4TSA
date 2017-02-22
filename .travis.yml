@@ -1,23 +1,12 @@
 # Travis CI  
 # (C) 2017 Elena Cuoco
+
 language: cpp
 sudo: false
 env:
   global:
     - CI_NODE_TOTAL=7
     - MAKEFLAGS="-j 7"
-
-
-
-
-matrix:
-  include:
-  - os: linux
-    env: PYTHON=3.5 CPP=11 GCC=4.8
-    addons:
-      apt:
-        sources: [ubuntu-toolchain-r-test, kubuntu-backports, deadsnakes]
-        packages: [g++-4.8, cmake, python3.5-dev]
 
 before_install:
   - ENV_ROOT="${TRAVIS_BUILD_DIR}/NewEnv"
