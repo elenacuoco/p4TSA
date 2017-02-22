@@ -46,19 +46,7 @@ script:
   - cmake CMakeLists.txt
   - make
   - make install
-### install python package
-language: python
-python:
-  - "3.6"
-install:
-  - pip install -r requirements.txt
-  - cd python-wrapper
-  - export ENV_ROOT="${TRAVIS_BUILD_DIR}/NewEnv"
-  - python setup.py install
-# command to run tests
-  - python setup.py test
-  - cd pyWDF
-  - python setup.py install
+
 
 
 
