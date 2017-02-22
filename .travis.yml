@@ -13,11 +13,11 @@ env:
 matrix:
   include:
   - os: linux
-    env: PYTHON=3.6 CPP=11 GCC=4.8
+    env: PYTHON=3.5 CPP=11 GCC=4.8
     addons:
       apt:
         sources: [ubuntu-toolchain-r-test, kubuntu-backports, deadsnakes]
-        packages: [g++-4.8, cmake, python3.6-dev]
+        packages: [g++-4.8, cmake, python3.5-dev]
 
 before_install:
   - ENV_ROOT="${TRAVIS_BUILD_DIR}/NewEnv"
