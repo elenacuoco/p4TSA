@@ -24,7 +24,7 @@ addons:
     - gcc-4.8
     - g++-4.8
     - clang
-    - cmake-3.6
+
 
 
 sudo: required
@@ -49,7 +49,7 @@ script:
   - source ${DEPS_DIR}/environment   
   - cd ${TRAVIS_BUILD_DIR}
   - ENV_ROOT="${TRAVIS_BUILD_DIR}/deps"
-  - cmake CMakeLists.txt
+  - ${ENV_ROOT}/bin/cmake CMakeLists.txt
   - make 
   - make install
   - cd python-wrapper
