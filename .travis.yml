@@ -10,17 +10,14 @@ env:
 
 
 sudo: required
-
-matrix:
-     include:
-         - os: osx
-         - language: cpp
+os: linux
+language: cpp
  # Perform the manual steps on osx to install python3 and activate venv
 before_install:
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update          ; fi
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install python3; fi
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then virtualenv venv -p python3; fi
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then source venv/bin/activate; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then brew update          ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then brew install python3; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then virtualenv venv -p python3; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then source venv/bin/activate; fi
   - ENV_ROOT="${TRAVIS_BUILD_DIR}/NewEnv"
   - cd ${TRAVIS_BUILD_DIR}
   - ./install_dependencies.sh
