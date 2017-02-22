@@ -32,11 +32,9 @@ rm -rf $ENV_TMP/*
 #popd
 #popd
 
-pushd $ENV_TMP
+pushd $ENV_ROOT
 git clone https://github.com/pybind/pybind11.git
 pushd  pybind11
-sudo python setup.py install
-sudo cp -fr ./include/pybind11 ~/virtualenv/python3.6/include/python3.6m
 popd
 popd
 
