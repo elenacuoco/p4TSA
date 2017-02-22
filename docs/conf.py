@@ -165,7 +165,7 @@ texinfo_documents = [
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {'https://docs.python.org/': None}
 
-import subprocess, os
+import subprocess
 
 read_the_docs_build = os.environ.get('READTHEDOCS', None) == 'True'
 
