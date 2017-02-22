@@ -7,7 +7,7 @@ language: generic
  
 env:
   global:
-    - PYTHON=3.6.0
+    - PYTHON=.0
     - CI_NODE_TOTAL=7
     - MAKEFLAGS="-j 7"
     - ENV_ROOT="${TRAVIS_BUILD_DIR}/NewEnv"
@@ -37,9 +37,9 @@ script:
   - make install
 ### install python package
   - cd python-wrapper
-  - python3.6 setup.py install
-  - python3.6 setup.py test
+  - python setup.py install
+  - python setup.py test
   - cd pyWDF
-  - python3.6 setup.py install
+  - python setup.py install
 
  

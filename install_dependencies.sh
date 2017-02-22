@@ -17,15 +17,15 @@ rm -rf $ENV_TMP/*
 
  
 
-pip3.6 install -U pip
-pip3.6 install numpy
-pip3.6 install -r requirements.txt
-pip3.6 install pybind11
+pip install -U pip
+pip install numpy
+pip install -r requirements.txt
+pip install pybind11
 
 pushd $ENV_TMP
 git clone https://github.com/pybind/pybind11.git
 pushd  pybind11
-python3.6 setup.py install
+python setup.py install
 cp -fr ./include/pybind11/ ${ENV_ROOT}/include/
 popd
 popd 
@@ -72,6 +72,6 @@ cd libframe-8.30
 make VERBOSE=0
 make install
 cp -fr ./src/Fr*.h ${ENV_ROOT}/include 
-export PATH=${ENV_ROOT}/bin:{PATH}
+export PATH=${ENV_ROOT}/bin:${ENV_ROOT}/include:{PATH}
 export LD_LIBRARY_PATH=${ENV_ROOT}/lib:${LD_LIBRARY_PATH}        
 
