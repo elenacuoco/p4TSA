@@ -8,9 +8,7 @@ import os
 __version__ = '0.0.1'
 
 ENV_INCLUDE=os.environ['ENV_ROOT']+'/include'
-os.environ["CC"] = "gcc-5"
-os.environ["CXX"] = "g++-5"
-os.environ["CLANG"] = "clang-3.8"
+
 ext_modules = [
     Extension(
         'pytsa',
