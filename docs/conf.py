@@ -38,7 +38,7 @@ extensions = ['sphinx.ext.autodoc',
     'sphinx.ext.coverage',
     'sphinx.ext.mathjax',
     'sphinx.ext.ifconfig',
-    'sphinx.ext.viewcode']
+    'sphinx.ext.viewcode',"breathe"]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -164,6 +164,12 @@ texinfo_documents = [
 
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {'https://docs.python.org/': None}
+breathe_projects = {
+    "project":"./xml/",
+}
+
+breathe_default_project = "p4TSA"
+
 import subprocess, os
 
 read_the_docs_build = os.environ.get('READTHEDOCS', None) == 'True'
