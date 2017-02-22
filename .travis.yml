@@ -42,7 +42,7 @@ script:
 #  - cd ../pyWDF
 #  - python setup.py install --user
 
-s
+
 ### install python package
 #language: python
 #python:
