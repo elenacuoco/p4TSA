@@ -32,15 +32,13 @@ make  install
 popd
 popd
 
-pip install -r requirements.txt
-
-pushd $ENV_TMP
-git clone https://github.com/pybind/pybind11.git
-pushd  pybind11
-sudo python3 setup.py install
-sudo cp -fr ./include/pybind11/ ${ENV_ROOT}/include/python3
-popd
-popd
+#pushd $ENV_TMP
+#git clone https://github.com/pybind/pybind11.git
+#pushd  pybind11
+#sudo python3 setup.py install
+#sudo cp -fr ./include/pybind11/ ${ENV_ROOT}/include/python3
+#popd
+#popd
 
 
 
