@@ -8,12 +8,12 @@ import locations
 __version__ = '0.0.1'
 
 ENV_INCLUDE=os.environ['ENV_ROOT']+'/include'
-PYBIND11_INCLUDE=os.path.dirname(locations.distutils_scheme('pybind11', *args, **kwargs)['headers'])
+
 ext_modules = [
     Extension(
         'pytsa',
         ['pytsa.cpp'],
-        include_dirs=['../include', ENV_INCLUDE, PYBIND11_INCLUDE],
+        include_dirs=['../include', ENV_INCLUDE],
         libraries=[ 'gsl', 'Frame', 'fftw3','fftw3f', 'fftw3l', 'gslcblas','p4TSA'],
         language='c++'
     ),
