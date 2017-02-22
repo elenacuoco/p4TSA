@@ -30,3 +30,14 @@ script:
   - ${TRAVIS_BUILD_DIR}/NewEnv/bin/cmake CMakeLists.txt
   - make
   - make install
+### install python package
+language: python
+python:
+  - "3.6"
+
+
+
+
+
+
+
