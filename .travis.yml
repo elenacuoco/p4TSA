@@ -1,15 +1,15 @@
 # Travis CI  
 # (C) 2017 Elena Cuoco
-
+language: cpp
+sudo: false
 env:
   global:
     - CI_NODE_TOTAL=7
     - MAKEFLAGS="-j 7"
-    - ENV_ROOT="${TRAVIS_BUILD_DIR}/NewEnv"
-    - ENV_TMP="${TRAVIS_BUILD_DIR}/tmp"
 
-language: cpp
-sudo: false
+
+
+
 matrix:
   include:
   - os: linux
@@ -18,8 +18,10 @@ matrix:
       apt:
         sources: [ubuntu-toolchain-r-test, kubuntu-backports, deadsnakes]
         packages: [g++-4.8, cmake, python3.6-dev]
- before_install:
+
+before_install:
   - ENV_ROOT="${TRAVIS_BUILD_DIR}/NewEnv"
+  - ENV_TMP="${TRAVIS_BUILD_DIR}/tmp"
   - cd ${TRAVIS_BUILD_DIR}
   - ./install_dependencies.sh
 
