@@ -28,7 +28,7 @@ compiler:
 script:
 # Go to the Root directory
   - cd ${TRAVIS_BUILD_DIR}
-  - ${TRAVIS_BUILD_DIR}/NewEnv/bin/cmake CMakeLists.txt
+  - cmake CMakeLists.txt
   - make
   - make install
 ### install python package
