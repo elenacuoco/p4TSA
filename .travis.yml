@@ -29,9 +29,7 @@ stdlib:
 
 boost:
   - 1.63.0
-language: python
-python:
-  - "3.6"
+
 
 
 before_install:
@@ -48,6 +46,11 @@ script:
   - cmake CMakeLists.txt
   - make
   - make install
+### install python package
+language: python
+python:
+  - "3.6"
+after_success:
   - pip install -r requirements.txt
   - cd python-wrapper
   - export ENV_ROOT="${TRAVIS_BUILD_DIR}/NewEnv"
