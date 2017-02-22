@@ -6,7 +6,7 @@ import os
 
 
 __version__ = '0.0.1'
-
+ENV_ROOT="${TRAVIS_BUILD_DIR}/NewEnv"
 ENV_INCLUDE=os.environ['ENV_ROOT']+'/include'
 
 ext_modules = [
