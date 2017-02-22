@@ -47,8 +47,8 @@ $ENV_ROOT/bin/pip install -r requirements.txt
 pushd $ENV_TMP
 git clone https://github.com/pybind/pybind11.git
 pushd  pybind11
-$ENV_ROOT/bin/python setup.py install  
-cp -fr ./include/pybind11/ ${ENV_ROOT}/include/python3.6m
+sudo python3 setup.py install
+sudo cp -fr ./include/pybind11/ ${ENV_ROOT}/include/python3
 popd 
 popd 
 
