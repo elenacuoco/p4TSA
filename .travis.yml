@@ -9,28 +9,7 @@ env:
     - GCC_VERSION=5 CPP=14 LIBCXX=On
 
 
-
 sudo: required
-# Enable C++ support
-
-compiler:
-  clang:
-    - 3.8
-
-  gcc:
-    - 5.3
-  g++:
-    - 5.3
-
-
-stdlib:
-  - libc++
-  - stdlibc++
-
-boost:
-  - 1.63.0
-
-
 
 before_install:
   - export ENV_ROOT="${TRAVIS_BUILD_DIR}/NewEnv"
@@ -39,14 +18,44 @@ before_install:
   - cd ${TRAVIS_BUILD_DIR}
   - ./install_dependencies.sh
 
+# Enable C++ support
+compiler:
+  - gcc: 5.3
+  - clang: 3.7
+
 # Build steps
 script:
 # Go to the Root directory
   - cd ${TRAVIS_BUILD_DIR}
-  - cmake CMakeLists.txt
+  - ${TRAVIS_BUILD_DIR}/NewEnv/bin/cmake CMakeLists.txt
   - make
   - make install
 
+#  # command to install dependencies
+#  install:
+#    - pip install --user -r requirements.txt
+#    - cd python-wrapper
+#    - python setup.py install --user
+  # command to run tests
+#  script: python setup.py test
+  #
+#  - cd ../pyWDF
+#  - python setup.py install --user
+
+s
+### install python package
+#language: python
+#python:
+#  - "3.6"
+#install:
+#  - pip install -r requirements.txt
+#  - cd python-wrapper
+#  - export ENV_ROOT="${TRAVIS_BUILD_DIR}/NewEnv"
+#  - python setup.py install
+# command to run tests
+#  - python setup.py test
+#  - cd pyWDF
+#  - python setup.py install
 
 
 
