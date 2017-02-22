@@ -3,11 +3,20 @@
 
 os:
  - linux
-language: generic
- 
+language: cpp, python
+python:
+ - "3.6"
+
+addons:
+   apt:
+     sources:
+       - ubuntu-toolchain-r-test
+     packages:
+       #
+       - g++-4.8
+       - clang
 env:
   global:
-    - PYTHON=.0
     - CI_NODE_TOTAL=7
     - MAKEFLAGS="-j 7"
     - ENV_ROOT="${TRAVIS_BUILD_DIR}/NewEnv"
@@ -20,6 +29,11 @@ sudo: required
 
 before_install:
   - sudo apt-get install libboost-dev libfftw3-dev
+  - sudo apt-get -y install python3-pip python-dev
+  - sudo pip3 install -U setuptools
+  - sudo pip3 install -U virtualenvwrapper
+  - python3 -V
+  - pip3 -V
   - cd ${TRAVIS_BUILD_DIR}
   - ./install_dependencies.sh
 
