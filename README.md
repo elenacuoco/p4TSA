@@ -1,5 +1,7 @@
 # P4TSA (package for Time Series Analysis) #
 
+[![Foo](https://img.shields.io/badge/docs-latest-brightgreen.svg?style=flat)](http://p4tsa.readthedocs.io/en/latest/?badge=latest) [![Build Status](https://travis-ci.org/elenacuoco/p4TSA.png)](https://travis-ci.org/elenacuoco/p4TSA)
+
  (info@elenacuoco.com) https://www.elenacuoco.com
 
 This library is a 'spin-off' of C++ Noise Analysis Package (NAP) written together 
@@ -40,6 +42,4 @@ It includes
 
 * Repo owner or admin (info@elenacuoco.com)
 * Other community or team contact (elena.cuoco@ego-gw.it, giancarlo.cella@pi.infn.it)
-
-[![Foo](https://img.shields.io/badge/docs-latest-brightgreen.svg?style=flat)](http://p4tsa.readthedocs.io/en/latest/?badge=latest) [![Build Status](https://travis-ci.org/elenacuoco/p4TSA.png)](https://travis-ci.org/elenacuoco/p4TSA)
                                                                
