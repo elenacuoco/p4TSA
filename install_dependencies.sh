@@ -36,7 +36,7 @@ pushd $ENV_TMP
 git clone https://github.com/pybind/pybind11.git
 pushd  pybind11
 sudo python setup.py install
-sudo cp -fr ./include/pybind11/ ~/virtualenv/python3.6/include/
+sudo cp -fr ./include/pybind11/ ~/virtualenv/python3.6.0/include/python3.6.0
 popd
 popd
 
