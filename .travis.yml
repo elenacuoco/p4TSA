@@ -6,7 +6,7 @@ env:
   global:
     - CI_NODE_TOTAL=7
     - MAKEFLAGS="-j 7"
-    - GCC_VERSION=5 CPP=11 LIBCXX=Off
+    - GCC_VERSION=5 CPP=14 LIBCXX=On
 
 
 
@@ -18,6 +18,8 @@ compiler:
     - 3.8
 
   gcc:
+    - 5.3
+  g++:
     - 5.3
 
 
@@ -33,7 +35,7 @@ boost:
 before_install:
   - export ENV_ROOT="${TRAVIS_BUILD_DIR}/NewEnv"
   - export ENV_TMP="${TRAVIS_BUILD_DIR}/tmp"
-  - sudo apt-get install libfftw3-dev
+  - sudo apt-get install libboost-dev libfftw3-dev
   - cd ${TRAVIS_BUILD_DIR}
   - ./install_dependencies.sh
 
