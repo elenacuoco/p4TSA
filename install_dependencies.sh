@@ -1,4 +1,6 @@
 #!/bin/bash
+export ENV_ROOT="${TRAVIS_BUILD_DIR}/NewEnv"
+export ENV_TMP="${TRAVIS_BUILD_DIR}/tmp"
 
 if [ -z "$ENV_ROOT" ]; then
     export ENV_ROOT=`realpath ..`/root
@@ -15,20 +17,6 @@ fi
 rm -rf $ENV_TMP/*
 
 
- 
-
-pip install -U pip
-pip install numpy
-pip install -r requirements.txt
-pip install pybind11
-
-pushd $ENV_TMP
-git clone https://github.com/pybind/pybind11.git
-pushd  pybind11
-python setup.py install
-cp -fr ./include/pybind11/ ${ENV_ROOT}/include/
-popd
-popd 
 
 # ----------------------------------------------------------
 #
@@ -37,15 +25,24 @@ popd
 
 pushd $ENV_TMP
 wget https://cmake.org/files/v3.8/cmake-3.8.0-rc1.tar.gz
-tar xfz cmake-3.8.0-rc1.tar.gz
+tar xvfz cmake-3.8.0-rc1.tar.gz
 pushd cmake-3.8.0-rc1
 ./configure --prefix=${ENV_ROOT}
-make VERBOSE=0 && make install
+make  install
 popd
 popd
-export PATH=${ENV_ROOT}/bin:{PATH}
-export ENV_ROOT=$ENV_ROOT
-export CMAKE_ROOT=${ENV_ROOT}/share/cmake-3.8
+
+pip install -r requirements.txt
+
+pushd $ENV_TMP
+git clone https://github.com/pybind/pybind11.git
+pushd  pybind11
+sudo python3 setup.py install
+sudo cp -fr ./include/pybind11/ ${ENV_ROOT}/include/python3
+popd
+popd
+
+
 
 # ----------------------------------------------------------
 #
@@ -71,7 +68,6 @@ cd libframe-8.30
 ./configure --prefix=${ENV_ROOT}
 make VERBOSE=0
 make install
-cp -fr ./src/Fr*.h ${ENV_ROOT}/include 
-export PATH=${ENV_ROOT}/bin:${ENV_ROOT}/include:{PATH}
-export LD_LIBRARY_PATH=${ENV_ROOT}/lib:${LD_LIBRARY_PATH}        
-
+cp -fr ./src/Fr*.h ${ENV_ROOT}/include
+export PATH=${ENV_ROOT}/bin:{PATH}
+export LD_LIBRARY_PATH=${ENV_ROOT}/lib:${LD_LIBRARY_PATH}
