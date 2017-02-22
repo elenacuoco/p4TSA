@@ -40,7 +40,7 @@ python setup.py install --single-version-externally-managed
 #cp -fr ./include/pybind11~/virtualenv/python3.6/include/python3.6m
 #cp -fr ./include/pybind11 $PYTHONPATH/include/python3.6m
 #sudo cp -fr ./include/pybind11 $PYTHONPATH/include/python3.6m
-#sudo cp -fr ./include/pybind11 /opt/python/3.6.0/include/python3.6m
+sudo cp -fr ./include/pybind11 /opt/python/3.6.0/include/python3.6m
 popd
 popd
 
