@@ -66,7 +66,7 @@ touch cmake.install
 echo export ENV_ROOT=$ENV_ROOT > $ENV_ROOT/environment
 echo export CMAKE_ROOT=${ENV_ROOT}/share/cmake-3.8 >> $ENV_ROOT/environment
 echo export PYTHONPATH=${ENV_ROOT}/lib/python3.6:${ENV_ROOT}/lib/python3.6/site-packages >> $ENV_ROOT/environment
-
+export PATH=${ENV_ROOT}/bin:{PATH}
 cat environment >> $ENV_ROOT/environment
 
 source ${ENV_ROOT}/environment
