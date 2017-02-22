@@ -1,4 +1,4 @@
-P4TSA (package for Time Series Analysis)
+p4TSA (package for Time Series Analysis)
 ========================================
 
 
@@ -14,7 +14,7 @@ the python interface.
 The Python interface to the library is pyTSA (you can call it pi'za)
 
 What is this repository for?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------
 
 p4TSA is a minimal package containing ad hoc function to work with time
 series. It includes

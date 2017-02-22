@@ -6,6 +6,8 @@
 Welcome to p4TSA and pyTSA documentation
 ==========================================
 
+The documentation is still Under Construction
+---------------------------------------------
 
 p4TSA is a C++ and python package for Time Series Analysis
 
@@ -75,10 +77,7 @@ Who do I talk to?
 -  Other community or team contact (elena.cuoco@ego-gw.it,
    giancarlo.cella@pi.infn.it)
 
-License
-~~~~~~~
 
-EGO
 
 Documentation for pyTSA
 =======================
@@ -102,7 +101,7 @@ Documentation for pyWDF
         :glob:
         :hidden:
 
-
+        pyWDFml.rst
         modules.rst
 
 

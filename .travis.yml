@@ -22,6 +22,7 @@ compiler:
 # Build steps
 script:
 # Go to the Root directory
+  - export PYTHON_VERSION=export PYTHON_VERSION=`python -c 'import sys; version=sys.version_info[:3]; print("{0}.{1}".format(*version))'`
   - source ${DEPS_DIR}/environment   
   - cd ${TRAVIS_BUILD_DIR}
   - ENV_ROOT="${TRAVIS_BUILD_DIR}/deps"
@@ -29,9 +30,9 @@ script:
   - make 
   - make install
   - cd python-wrapper
-  - sudo python3 setup.py install
-  - python3 setup.py test
+  - sudo python$PYTHON_VERSION setup.py install
+  - python$PYTHON_VERSION setup.py test
   - cd pyWDF
-  - sudo python3 setup.py install
+  - sudo python$PYTHON_VERSION setup.py install
 
  

@@ -32,20 +32,20 @@ make -j8 install
 popd 
 popd
 
-
+export PYTHON_VERSION=export PYTHON_VERSION=`python -c 'import sys; version=sys.version_info[:3]; print("{0}.{1}".format(*version))'`
 echo export ENV_ROOT=$ENV_ROOT > $ENV_ROOT/environment
 cat environment >> $ENV_ROOT/environment
 
 source ${ENV_ROOT}/environment
-sudo pip3 install -U pip
-sudo pip3 install numpy
-sudo pip3 install -r requirements.txt
+sudo pip$PYTHON_VERSION install -U pip
+sudo pip$PYTHON_VERSION install numpy
+sudo pip$PYTHON_VERSION install -r requirements.txt
 
 pushd $ENV_TMP
 git clone https://github.com/pybind/pybind11.git
 pushd  pybind11
-sudo python3 setup.py install
-sudo cp -fr ./include/pybind11/ /usr/include/python3.5
+sudo python$PYTHON_VERSION setup.py install
+sudo cp -fr ./include/pybind11/ /usr/include/python$PYTHON_VERSION
 popd 
 popd 
 

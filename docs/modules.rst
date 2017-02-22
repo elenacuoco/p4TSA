@@ -1,9 +1,8 @@
-pywdfml
+pyWDFml
 =======
 
 .. toctree::
    :maxdepth: 4
 
    pyWDFml
-   pyTSA
-   setup
+
