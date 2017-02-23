@@ -6,15 +6,16 @@ import os
 
 
 __version__ = '0.0.1'
-#ENV_ROOT="${TRAVIS_BUILD_DIR}/NewEnv"
+ENV_ROOT="${TRAVIS_BUILD_DIR}/NewEnv"
 ENV_INCLUDE=os.environ['ENV_ROOT']+'/include'
-ENV_INCLUDE="${TRAVIS_BUILD_DIR}/NewEnv/include"
+ENV_LIB="${TRAVIS_BUILD_DIR}/NewEnv/lib"
 
 ext_modules = [
     Extension(
         'pytsa',
         ['pytsa.cpp'],
         include_dirs=['../include', ENV_INCLUDE],
+        library_dirs=['../', ENV_LIB],
         libraries=[ 'gsl', 'Frame', 'fftw3','fftw3f', 'fftw3l', 'gslcblas','p4TSA'],
         language='c++'
     ),
