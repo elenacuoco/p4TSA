@@ -26,23 +26,23 @@ compiler:
 # Build steps
 script:
 # Go to the Root directory
-  env:
-    language: cpp
+  - env:
+      - language: cpp
   - cd ${TRAVIS_BUILD_DIR}
   - ${TRAVIS_BUILD_DIR}/NewEnv/bin/cmake CMakeLists.txt
   - make
   - make install
 ### install python package
-  env:
-    language: python
-    python:
-     - "3.6"
+  - env:
+    - language: python
+      - python:
+        - "3.6"
   - pip install -r requirements.txt
   - cd python-wrapper
   - python setup.py install  
     # command to run tests
   - python setup.py test
    #
-  - cd ../pyWDF
+  - cd pyWDF
   - python setup.py install  
 
