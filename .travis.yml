@@ -23,7 +23,7 @@ before_install:
 # Enable C++ support
 compiler:
   - gcc: 5.3
-  - clang: 3.7
+  - clang: 3.6
 
 addons:
   apt:
@@ -35,7 +35,7 @@ addons:
     # install toolchains
     - gcc-5
     - g++-5
-    - clang-3.7
+    - clang-3.6
 # Build steps
 script:
 # Go to the Root directory
