@@ -6,7 +6,7 @@ env:
   global:
     - CI_NODE_TOTAL=7
     - MAKEFLAGS="-j 7"
-  language: generic
+
 
 
 sudo: required
@@ -24,25 +24,25 @@ compiler:
   - clang
 
 # Build steps
-install:
+script:
 # Go to the Root directory
+  env:
+    language: cpp
   - cd ${TRAVIS_BUILD_DIR}
   - ${TRAVIS_BUILD_DIR}/NewEnv/bin/cmake CMakeLists.txt
   - make
   - make install
 ### install python package
-after_success:
-  language: python
-  python:
-    - "3.6"
-
-  script:
-    - pip install -r requirements.txt
-    - cd python-wrapper
-    - python setup.py install  
+  env:
+    language: python
+    python:
+     - "3.6"
+  - pip install -r requirements.txt
+  - cd python-wrapper
+  - python setup.py install  
     # command to run tests
-    - python setup.py test
+  - python setup.py test
    #
-    - cd ../pyWDF
-    - python setup.py install  
+  - cd ../pyWDF
+  - python setup.py install  
 
