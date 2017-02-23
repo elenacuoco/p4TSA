@@ -24,7 +24,7 @@ compiler:
   - clang
 
 # Build steps
-script:
+install:
 # Go to the Root directory
   - cd ${TRAVIS_BUILD_DIR}
   - ${TRAVIS_BUILD_DIR}/NewEnv/bin/cmake CMakeLists.txt
@@ -34,16 +34,15 @@ script:
 after_success:
   language: python
   python:
-   - "3.6"
+    - "3.6"
 
-#  # command to install dependencies
-script:
-  - pip install -r requirements.txt
-  - cd python-wrapper
-  - python setup.py install  
-  # command to run tests
-  - python setup.py test
-  #
-  - cd ../pyWDF
-  - python setup.py install  
+  script:
+    - pip install -r requirements.txt
+    - cd python-wrapper
+    - python setup.py install  
+    # command to run tests
+    - python setup.py test
+   #
+    - cd ../pyWDF
+    - python setup.py install  
 
