@@ -6,6 +6,7 @@ env:
   global:
     - CI_NODE_TOTAL=7
     - MAKEFLAGS="-j 7"
+    - language: generic
 
 
 
@@ -34,10 +35,10 @@ script:
   - make install
 ### install python package
  
-language: python
-python:
-  - "3.6"    
-script:    
+
+    
+script:
+  - python:"3.6"
   - pip install -r requirements.txt
   - cd python-wrapper
   - python setup.py install  
