@@ -37,13 +37,13 @@ after_success:
    - "3.6"
 
 #  # command to install dependencies
-#  install:
-#    - pip install --user -r requirements.txt
-#    - cd python-wrapper
-#    - python setup.py install --user
+script:
+  - pip install -r requirements.txt
+  - cd python-wrapper
+  - python setup.py install  
   # command to run tests
-#  script: python setup.py test
+  - python setup.py test
   #
-#  - cd ../pyWDF
-#  - python setup.py install --user
+  - cd ../pyWDF
+  - python setup.py install  
 
