@@ -33,9 +33,10 @@ script:
   - make
   - make install
 ### install python package
-  - env:
-      - language: python
-          - "3.6"
+language: python
+  - python:       
+    - "3.6"
+script:    
   - pip install -r requirements.txt
   - cd python-wrapper
   - python setup.py install  
