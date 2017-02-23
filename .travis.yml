@@ -6,7 +6,7 @@ env:
   global:
     - CI_NODE_TOTAL=7
     - MAKEFLAGS="-j 7"
-
+  language: generic
 
 
 sudo: required
