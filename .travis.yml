@@ -35,7 +35,6 @@ script:
 ### install python package
   - env:
       - language: python
-        - python:
           - "3.6"
   - pip install -r requirements.txt
   - cd python-wrapper
