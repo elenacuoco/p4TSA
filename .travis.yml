@@ -34,6 +34,4 @@ script:
   - make
   - make install
 ### install python package
- 
-
-    
+  
