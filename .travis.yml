@@ -27,8 +27,6 @@ compiler:
 # Build steps
 script:
 # Go to the Root directory
-  - env:
-      - language: cpp
   - cd ${TRAVIS_BUILD_DIR}
   - ${TRAVIS_BUILD_DIR}/NewEnv/bin/cmake CMakeLists.txt
   - make
