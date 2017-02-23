@@ -40,7 +40,7 @@ addons:
 script:
 # Go to the Root directory
   - cd ${TRAVIS_BUILD_DIR}
-  - cmake CMakeLists.txt
+  - ${ENV_ROOT}/bin/cmake CMakeLists.txt
   - make
   - make install
 ### install python package
