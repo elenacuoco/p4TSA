@@ -6,9 +6,7 @@ env:
   global:
     - CI_NODE_TOTAL=7
     - MAKEFLAGS="-j 7"
-    - GCC_VERSION=5 CPP=11
-  python:
-    - "3.6"
+
 
 
 sudo: required
@@ -22,39 +20,30 @@ before_install:
 
 # Enable C++ support
 compiler:
-  - gcc: 5.3
-  - clang: 3.6
+  - gcc
+  - clang
 
-addons:
-  apt:
-    sources:
-    # add PPAs with more up-to-date toolchains
-    - ubuntu-toolchain-r-test
-    - llvm-toolchain-precise-3.6
-    packages:
-    # install toolchains
-    - gcc-5
-    - g++-5
-    - clang-3.6
 # Build steps
 script:
 # Go to the Root directory
   - cd ${TRAVIS_BUILD_DIR}
-  - ${ENV_ROOT}/bin/cmake CMakeLists.txt
+  - ${TRAVIS_BUILD_DIR}/NewEnv/bin/cmake CMakeLists.txt
   - make
   - make install
 ### install python package
-#  - pip install -r requirements.txt
-#  - cd python-wrapper
-#  - python setup.py install
+after_success:
+  language: python
+  python:
+   - "3.6"
+
+#  # command to install dependencies
+#  install:
+#    - pip install --user -r requirements.txt
+#    - cd python-wrapper
+#    - python setup.py install --user
   # command to run tests
-#  - python setup.py test
+#  script: python setup.py test
   #
 #  - cd ../pyWDF
 #  - python setup.py install --user
-
-
-
-
-
 
