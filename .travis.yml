@@ -37,14 +37,3 @@ script:
  
 
     
-script:
-  - python:"3.6"
-  - pip install -r requirements.txt
-  - cd python-wrapper
-  - python setup.py install  
-    # command to run tests
-  - python setup.py test
-   #
-  - cd pyWDF
-  - python setup.py install  
-
