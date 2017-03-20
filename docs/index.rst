@@ -13,7 +13,6 @@ The documentation is still Under Construction
 
 **pyTSA** is the python wrapper
 
-**pyWDFml** is a python package to perform Machine Learning with WDF pipeline
 
 .. include:: ../README.rst
 Features
