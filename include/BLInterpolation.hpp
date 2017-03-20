@@ -137,7 +137,7 @@ namespace tsa {
          * @pre the number of rows in indata must be equal to the number of channels 
          * 
          */
-        BLInterpolation& operator<<(SeqViewDouble& indata);
+
         BLInterpolation& Input(SeqViewDouble& indata);
         /** 
          * Get resampled data. If there are enough resampled data available
@@ -154,7 +154,7 @@ namespace tsa {
          * of channels and a number of columns equal to the number of returned data
          *
          */
-        BLInterpolation& operator>>(SeqViewDouble& indata);
+
         BLInterpolation& Output(SeqViewDouble& outdata);
 
 

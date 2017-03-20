@@ -62,43 +62,8 @@ namespace tsa {
         return *this;
     }
 
-    BLInterpolation& BLInterpolation::operator<<(SeqViewDouble& indata) {
-        Dmatrix* data_in = indata.GetData();
 
-        if (mFirstData) {
-            mStartTime = indata.GetStart();
-            mSampling = indata.GetSampling();
-            mFirstData = false;
-        }
 
-        SetData(*data_in, indata.GetScale());
-
-        return *this;
-    }
-
-    BLInterpolation& BLInterpolation::operator>>(SeqViewDouble& outdata) {
-        Dmatrix* data_out = outdata.GetData();
-        if ((data_out->size1() != mChannels) || (data_out->size2() != mOutData)) {
-            LogWarning("Resizing output data");
-            data_out->resize(mChannels, mOutData);
-        }
-
-        unsigned int ret = GetData(*data_out);
-
-        if (ret == 0) {
-            LogWarning("No resampled data available");
-            throw no_data_available("BLInterpolation::operator>>");
-        }
-
-        outdata.SetStart(mStartTime);
-        outdata.SetSampling((mSampling * mInputRate) / mOutputRate);
-        outdata.SetScale(1.0);
-
-        mStartTime += (ret * mSampling * mInputRate) / mOutputRate;
-
-        return *this;
-
-    }
     BLInterpolation& BLInterpolation::Input(SeqViewDouble& indata) {
         Dmatrix* data_in = indata.GetData();
 

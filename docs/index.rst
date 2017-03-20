@@ -42,15 +42,14 @@ Installation
 
     - Use install_full_dependencies.sh in the root package dir
 
-* Install p4TSA, pyTSA and pyWDFml by running:
+* Install p4TSA, pyTSA  by running:
 
     - cmake CmakeList.txt
     - make
     - make install
     - cd python-wrapper
     - python setup.py install
-    - cd pyWDF
-    - python setup.py install
+
 
 
 Contribute
@@ -85,5 +84,5 @@ Documentation
    :maxdepth: 4
 
    pyTSA
-   pyWDFml
+
 
