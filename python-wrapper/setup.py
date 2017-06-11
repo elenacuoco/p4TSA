@@ -6,7 +6,7 @@ import os
 
 __version__ = '0.0.1'
 
-ENV_INCLUDE=os.environ['ENV_ROOT']+'/include'
+#ENV_INCLUDE=os.environ['ENV_ROOT']+'/include'
 class get_pybind_include(object):
     """Helper class to determine the pybind11 include path
 
@@ -26,7 +26,7 @@ ext_modules = [
     Extension(
         'pytsa',
         ['pytsa.cpp'],
-        include_dirs=['../include',ENV_INCLUDE,
+        include_dirs=['../include',
             # Path to pybind11 headers
             get_pybind_include(),
             get_pybind_include(user=True)

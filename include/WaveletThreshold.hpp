@@ -79,7 +79,7 @@ namespace tsa {
 
         enum WaveletThresholding {
             highest,
-            dohonojohnston,
+            n,
             cuoco
         };
 

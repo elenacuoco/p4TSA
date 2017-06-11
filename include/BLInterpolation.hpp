@@ -210,7 +210,7 @@ namespace tsa {
          * @param indata a matrix which contains input data
          * @param scale a scale parameter for input data
          */
-        void SetData(Dmatrix& indata, double scale);
+       void SetData(Dmatrix& indata, double scale);
 
 
 
