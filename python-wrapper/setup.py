@@ -7,6 +7,7 @@ import os
 __version__ = '0.0.1'
 
 ENV_INCLUDE=os.environ['ENV_ROOT']+'/include'
+ENV_LIB=os.environ['ENV_ROOT']+'/lib'
 class get_pybind_include(object):
     """Helper class to determine the pybind11 include path
 
@@ -32,6 +33,7 @@ ext_modules = [
             get_pybind_include(user=True)
         ],
         libraries=[ 'gsl', 'Frame', 'fftw3','fftw3f', 'fftw3l', 'gslcblas','p4TSA'],
+        library_dirs = [ENV_LIB],
         language='c++'
     ),
 ]
