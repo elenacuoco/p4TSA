@@ -36,6 +36,8 @@ namespace tsa {
     mSigmaBsC307(sigma),
     mSigmaBsC309(sigma),
     mSigmaDCT(sigma),
+    mDct(mWindow),
+    mBuffDct(1, mWindow),
     mBuffer(1),
     mBuff(1, mWindow),
     mWtH(WaveletTransform::Haar),
@@ -62,8 +64,7 @@ namespace tsa {
     // mT( WaveletThreshold::dohonojohnston ),
     mT(WTh),
     mWavThres(mWindow, mWindow, sigma),
-    mDct(mWindow),
-    mBuffDct(1, mWindow),
+
     mWindowing(mWindow),
     mEvFF(mNCoeff) {
     }
@@ -385,7 +386,7 @@ namespace tsa {
         //
         //
        for (unsigned int i = 0; i < mWindow; i++) {
-            mBuffDct(0, i) = mBuffer(0, i);
+           mBuffDct(0, i) = mBuffer(0, i);
         }
 
         mWindowing.execute(mBuffDct);
@@ -445,19 +446,7 @@ namespace tsa {
         }
 
         }
-        if (mT==WaveletThreshold::cuoco )
-        {
-        varH = sqrt(varH) / (mSigmaH);
-        var4 = sqrt(var4) / (mSigma4);
-        varC8 = sqrt(varC8) / (mSigmaC8);
-        var10 = sqrt(var10) / (mSigma10);
-        var12 = sqrt(var12) / (mSigma12);
-        varC16 = sqrt(varC16) / (mSigmaC16);
-        var20 = sqrt(var20) / (mSigma20);
-        varC20 = sqrt(varC20) / (mSigmaC20);
-        varBsC307 = sqrt(varBsC307) / (mSigmaBsC307);
-        varDCT = sqrt(varDCT) / (mSigmaDCT);
-        }*/
+         */
 
         varH = sqrt(varH) / (mSigmaH);
         var4 = sqrt(var4) / (mSigma4);
@@ -485,7 +474,7 @@ namespace tsa {
             }
 
             level = level4;
-            Wave = "Db4";
+            Wave = "Daub4";
         }
 
         if (varC8 >= varmax) {
@@ -494,7 +483,7 @@ namespace tsa {
                 cmax[i] = cC8[i];
             }
             level = levelC8;
-            Wave = "DbC8";
+            Wave = "DaubC8";
         }
         if (var10 >= varmax) {
             varmax = var10;
@@ -503,7 +492,7 @@ namespace tsa {
             }
 
             level = level10;
-            Wave = "Db10";
+            Wave = "Daub10";
         }
         if (var12 >= varmax) {
             varmax = var12;
@@ -512,7 +501,7 @@ namespace tsa {
             }
 
             level = level12;
-            Wave = "Db12";
+            Wave = "Daub12";
         }
 
         if (varC16 >= varmax) {
@@ -522,7 +511,7 @@ namespace tsa {
             }
 
             level = levelC16;
-            Wave = "DbC16";
+            Wave = "DaubC16";
         }
         if (var20 >= varmax) {
             varmax = var20;
@@ -531,7 +520,7 @@ namespace tsa {
             }
 
             level = level20;
-            Wave = "Db20";
+            Wave = "Daub20";
         }
         if (varC20 >= varmax) {
             varmax = varC20;
@@ -540,7 +529,7 @@ namespace tsa {
             }
 
             level = levelC20;
-            Wave = "DbC20";
+            Wave = "DaubC20";
         }
         if (varBsC307 >= varmax) {
             varmax = varBsC307;
@@ -549,7 +538,7 @@ namespace tsa {
             }
 
             level = levelBsC307;
-            Wave = "BsC307";
+            Wave = "BsplineC307";
         }
         if (varBsC309 >= varmax) {
             varmax = varBsC309;
@@ -558,7 +547,7 @@ namespace tsa {
             }
 
             level = levelBsC309;
-            Wave = "BsC309";
+            Wave = "BsplineC309";
         }
         if (varDCT >= varmax) {
             varmax = varDCT;

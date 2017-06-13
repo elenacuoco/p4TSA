@@ -31,6 +31,7 @@
 #include <Cs2HammingWindow.hpp>
 #include <Cs2HannWindow.hpp>
 #include <DCT.hpp>
+#include <IDCT.hpp>
 #include <DST.hpp>
 #include <DoubleWhitening.hpp>
 #include <EventDescription.hpp>

@@ -39,6 +39,7 @@ set(SOURCE_FILES
         src/FrameIChannel.cpp
         src/eternity.cpp
         src/FifoBuffer.cpp
+        src/IDCT.cpp
         src/InverseRealFFT.cpp
         src/LatticeFilter.cpp
         src/LeastSquaresLattice.cpp

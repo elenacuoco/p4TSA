@@ -706,7 +706,7 @@ void bind_SeqView(std::function< pybind11::module &(std::string const &namespace
 struct PyCallBack_BaseWindow : public tsa::BaseWindow {
 	using tsa::BaseWindow::BaseWindow;
 
-	void operator()(class tsa::SeqView<double> & a0) override { 
+	void operator()(class tsa::SeqView<double> & a0) override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::BaseWindow *>(this), "__call__");
 		if (overload) {
@@ -719,7 +719,7 @@ struct PyCallBack_BaseWindow : public tsa::BaseWindow {
 		}
 		return BaseWindow::operator()(a0);
 	}
-	void operator()(class tsa::SeqView<double> & a0, class tsa::SeqView<double> & a1) override { 
+	void operator()(class tsa::SeqView<double> & a0, class tsa::SeqView<double> & a1) override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::BaseWindow *>(this), "__call__");
 		if (overload) {
@@ -732,7 +732,7 @@ struct PyCallBack_BaseWindow : public tsa::BaseWindow {
 		}
 		return BaseWindow::operator()(a0, a1);
 	}
-	void Resize(unsigned int a0) override { 
+	void Resize(unsigned int a0) override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::BaseWindow *>(this), "Resize");
 		if (overload) {
@@ -745,7 +745,7 @@ struct PyCallBack_BaseWindow : public tsa::BaseWindow {
 		}
 		return BaseWindow::Resize(a0);
 	}
-	void Normalize() override { 
+	void Normalize() override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::BaseWindow *>(this), "Normalize");
 		if (overload) {
@@ -758,7 +758,7 @@ struct PyCallBack_BaseWindow : public tsa::BaseWindow {
 		}
 		return BaseWindow::Normalize();
 	}
-	void FillWindow() override { 
+	void FillWindow() override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::BaseWindow *>(this), "FillWindow");
 		if (overload) {
@@ -777,7 +777,7 @@ struct PyCallBack_BaseWindow : public tsa::BaseWindow {
 struct PyCallBack_BartlettWindow : public tsa::BartlettWindow {
 	using tsa::BartlettWindow::BartlettWindow;
 
-	void operator()(class tsa::SeqView<double> & a0) override { 
+	void operator()(class tsa::SeqView<double> & a0) override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::BartlettWindow *>(this), "__call__");
 		if (overload) {
@@ -790,7 +790,7 @@ struct PyCallBack_BartlettWindow : public tsa::BartlettWindow {
 		}
 		return BartlettWindow::operator()(a0);
 	}
-	void operator()(class tsa::SeqView<double> & a0, class tsa::SeqView<double> & a1) override { 
+	void operator()(class tsa::SeqView<double> & a0, class tsa::SeqView<double> & a1) override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::BartlettWindow *>(this), "__call__");
 		if (overload) {
@@ -803,7 +803,7 @@ struct PyCallBack_BartlettWindow : public tsa::BartlettWindow {
 		}
 		return BartlettWindow::operator()(a0, a1);
 	}
-	void Resize(unsigned int a0) override { 
+	void Resize(unsigned int a0) override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::BartlettWindow *>(this), "Resize");
 		if (overload) {
@@ -816,7 +816,7 @@ struct PyCallBack_BartlettWindow : public tsa::BartlettWindow {
 		}
 		return BartlettWindow::Resize(a0);
 	}
-	void Normalize() override { 
+	void Normalize() override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::BartlettWindow *>(this), "Normalize");
 		if (overload) {
@@ -829,7 +829,7 @@ struct PyCallBack_BartlettWindow : public tsa::BartlettWindow {
 		}
 		return BaseWindow::Normalize();
 	}
-	void FillWindow() override { 
+	void FillWindow() override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::BartlettWindow *>(this), "FillWindow");
 		if (overload) {
@@ -1012,7 +1012,7 @@ void bind_Parcor2AR(std::function< pybind11::module &(std::string const &namespa
 struct PyCallBack_BaseFFT : public tsa::BaseFFT {
 	using tsa::BaseFFT::BaseFFT;
 
-	void MakePlan() override { 
+	void MakePlan() override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::BaseFFT *>(this), "MakePlan");
 		if (overload) {
@@ -1031,7 +1031,7 @@ struct PyCallBack_BaseFFT : public tsa::BaseFFT {
 struct PyCallBack_BisquareWindow : public tsa::BisquareWindow {
 	using tsa::BisquareWindow::BisquareWindow;
 
-	void operator()(class tsa::SeqView<double> & a0) override { 
+	void operator()(class tsa::SeqView<double> & a0) override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::BisquareWindow *>(this), "__call__");
 		if (overload) {
@@ -1044,7 +1044,7 @@ struct PyCallBack_BisquareWindow : public tsa::BisquareWindow {
 		}
 		return BisquareWindow::operator()(a0);
 	}
-	void operator()(class tsa::SeqView<double> & a0, class tsa::SeqView<double> & a1) override { 
+	void operator()(class tsa::SeqView<double> & a0, class tsa::SeqView<double> & a1) override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::BisquareWindow *>(this), "__call__");
 		if (overload) {
@@ -1057,7 +1057,7 @@ struct PyCallBack_BisquareWindow : public tsa::BisquareWindow {
 		}
 		return BisquareWindow::operator()(a0, a1);
 	}
-	void Resize(unsigned int a0) override { 
+	void Resize(unsigned int a0) override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::BisquareWindow *>(this), "Resize");
 		if (overload) {
@@ -1070,7 +1070,7 @@ struct PyCallBack_BisquareWindow : public tsa::BisquareWindow {
 		}
 		return BisquareWindow::Resize(a0);
 	}
-	void Normalize() override { 
+	void Normalize() override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::BisquareWindow *>(this), "Normalize");
 		if (overload) {
@@ -1083,7 +1083,7 @@ struct PyCallBack_BisquareWindow : public tsa::BisquareWindow {
 		}
 		return BaseWindow::Normalize();
 	}
-	void FillWindow() override { 
+	void FillWindow() override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::BisquareWindow *>(this), "FillWindow");
 		if (overload) {
@@ -1158,6 +1158,7 @@ void bind_BaseFFT(std::function< pybind11::module &(std::string const &namespace
 #include <Cs2HammingWindow.hpp>
 #include <Cs2HannWindow.hpp>
 #include <DCT.hpp>
+#include <IDCT.hpp>
 #include <DST.hpp>
 #include <DoubleWhitening.hpp>
 #include <FifoBuffer.hpp>
@@ -1190,7 +1191,7 @@ void bind_BaseFFT(std::function< pybind11::module &(std::string const &namespace
 struct PyCallBack_Cs2HammingWindow : public tsa::Cs2HammingWindow {
 	using tsa::Cs2HammingWindow::Cs2HammingWindow;
 
-	void operator()(class tsa::SeqView<double> & a0) override { 
+	void operator()(class tsa::SeqView<double> & a0) override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::Cs2HammingWindow *>(this), "__call__");
 		if (overload) {
@@ -1203,7 +1204,7 @@ struct PyCallBack_Cs2HammingWindow : public tsa::Cs2HammingWindow {
 		}
 		return Cs2HammingWindow::operator()(a0);
 	}
-	void operator()(class tsa::SeqView<double> & a0, class tsa::SeqView<double> & a1) override { 
+	void operator()(class tsa::SeqView<double> & a0, class tsa::SeqView<double> & a1) override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::Cs2HammingWindow *>(this), "__call__");
 		if (overload) {
@@ -1216,7 +1217,7 @@ struct PyCallBack_Cs2HammingWindow : public tsa::Cs2HammingWindow {
 		}
 		return Cs2HammingWindow::operator()(a0, a1);
 	}
-	void Resize(unsigned int a0) override { 
+	void Resize(unsigned int a0) override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::Cs2HammingWindow *>(this), "Resize");
 		if (overload) {
@@ -1229,7 +1230,7 @@ struct PyCallBack_Cs2HammingWindow : public tsa::Cs2HammingWindow {
 		}
 		return Cs2HammingWindow::Resize(a0);
 	}
-	void Normalize() override { 
+	void Normalize() override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::Cs2HammingWindow *>(this), "Normalize");
 		if (overload) {
@@ -1242,7 +1243,7 @@ struct PyCallBack_Cs2HammingWindow : public tsa::Cs2HammingWindow {
 		}
 		return BaseWindow::Normalize();
 	}
-	void FillWindow() override { 
+	void FillWindow() override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::Cs2HammingWindow *>(this), "FillWindow");
 		if (overload) {
@@ -1261,7 +1262,7 @@ struct PyCallBack_Cs2HammingWindow : public tsa::Cs2HammingWindow {
 struct PyCallBack_Cs2HannWindow : public tsa::Cs2HannWindow {
 	using tsa::Cs2HannWindow::Cs2HannWindow;
 
-	void operator()(class tsa::SeqView<double> & a0) override { 
+	void operator()(class tsa::SeqView<double> & a0) override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::Cs2HannWindow *>(this), "__call__");
 		if (overload) {
@@ -1274,7 +1275,7 @@ struct PyCallBack_Cs2HannWindow : public tsa::Cs2HannWindow {
 		}
 		return Cs2HannWindow::operator()(a0);
 	}
-	void operator()(class tsa::SeqView<double> & a0, class tsa::SeqView<double> & a1) override { 
+	void operator()(class tsa::SeqView<double> & a0, class tsa::SeqView<double> & a1) override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::Cs2HannWindow *>(this), "__call__");
 		if (overload) {
@@ -1287,7 +1288,7 @@ struct PyCallBack_Cs2HannWindow : public tsa::Cs2HannWindow {
 		}
 		return Cs2HannWindow::operator()(a0, a1);
 	}
-	void Resize(unsigned int a0) override { 
+	void Resize(unsigned int a0) override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::Cs2HannWindow *>(this), "Resize");
 		if (overload) {
@@ -1300,7 +1301,7 @@ struct PyCallBack_Cs2HannWindow : public tsa::Cs2HannWindow {
 		}
 		return Cs2HannWindow::Resize(a0);
 	}
-	void Normalize() override { 
+	void Normalize() override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::Cs2HannWindow *>(this), "Normalize");
 		if (overload) {
@@ -1313,7 +1314,7 @@ struct PyCallBack_Cs2HannWindow : public tsa::Cs2HannWindow {
 		}
 		return BaseWindow::Normalize();
 	}
-	void FillWindow() override { 
+	void FillWindow() override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::Cs2HannWindow *>(this), "FillWindow");
 		if (overload) {
@@ -1332,7 +1333,7 @@ struct PyCallBack_Cs2HannWindow : public tsa::Cs2HannWindow {
 struct PyCallBack_DCT : public tsa::DCT {
 	using tsa::DCT::DCT;
 
-	void MakePlan() throw() override { 
+	void MakePlan() throw() override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::DCT *>(this), "MakePlan");
 		if (overload) {
@@ -1347,11 +1348,30 @@ struct PyCallBack_DCT : public tsa::DCT {
 	}
 };
 
+// tsa::IDCT file:IDCT.hpp line:73
+struct PyCallBack_IDCT : public tsa::IDCT {
+    using tsa::IDCT::IDCT;
+
+    void MakePlan() throw() override {
+        pybind11::gil_scoped_acquire gil;
+        pybind11::function overload = pybind11::get_overload(static_cast<const tsa::IDCT *>(this), "MakePlan");
+        if (overload) {
+            auto o = overload.operator()<pybind11::return_value_policy::reference>();
+            if (pybind11::detail::cast_is_temporary_value_reference<void>::value) {
+                static pybind11::detail::overload_caster_t<void> caster;
+                return pybind11::detail::cast_ref<void>(std::move(o), caster);
+            }
+            else return pybind11::detail::cast_safe<void>(std::move(o));
+        }
+        return IDCT::MakePlan();
+    }
+};
+
 // tsa::DST file:DST.hpp line:73
 struct PyCallBack_DST : public tsa::DST {
 	using tsa::DST::DST;
 
-	void MakePlan() throw() override { 
+	void MakePlan() throw() override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::DST *>(this), "MakePlan");
 		if (overload) {
@@ -1431,6 +1451,20 @@ void bind_BLInterpolation(std::function< pybind11::module &(std::string const &n
 		cl.def("MakePlan", (void (tsa::DCT::*)()) &tsa::DCT::MakePlan, "Make a new plan, with the current parameters.\n\n \n std::runtime_error The new plan cannot be created\n\nC++: tsa::DCT::MakePlan() --> void");
 		cl.def("assign", (class tsa::DCT & (tsa::DCT::*)(const class tsa::DCT &)) &tsa::DCT::operator=, "C++: tsa::DCT::operator=(const class tsa::DCT &) --> class tsa::DCT &", pybind11::return_value_policy::automatic, pybind11::arg(""));
 	}
+{ // tsa::IDCT file:IDCT.hpp line:73
+pybind11::class_<tsa::IDCT, std::shared_ptr<tsa::IDCT>, PyCallBack_IDCT, tsa::BaseFFT> cl(M("tsa"), "IDCT", "Multichannel Discrete Cosine Transform.");
+pybind11::handle cl_type = cl;
+
+cl.def("__init__", [cl_type](pybind11::handle self_) { if (self_.get_type() == cl_type) new (self_.cast<tsa::IDCT *>()) tsa::IDCT(); else new (self_.cast<PyCallBack_IDCT *>()) PyCallBack_IDCT(); }, "doc");
+cl.def("__init__", [cl_type](pybind11::handle self_, int  const &a0) { if (self_.get_type() == cl_type) new (self_.cast<tsa::IDCT *>()) tsa::IDCT(a0); else new (self_.cast<PyCallBack_IDCT *>()) PyCallBack_IDCT(a0); }, "doc");
+cl.def("__init__", [cl_type](pybind11::handle self_, int  const &a0, enum tsa::FFTPlanningMode  const &a1) { if (self_.get_type() == cl_type) new (self_.cast<tsa::IDCT *>()) tsa::IDCT(a0, a1); else new (self_.cast<PyCallBack_IDCT *>()) PyCallBack_IDCT(a0, a1); }, "doc");
+cl.def(pybind11::init<int, enum tsa::FFTPlanningMode, bool>(), pybind11::arg("size"), pybind11::arg("mode"), pybind11::arg("PreserveInput"));
+
+cl.def(pybind11::init<PyCallBack_IDCT const &>());
+cl.def("__call__", (void (tsa::IDCT::*)(class tsa::SeqView<double> &, class tsa::SeqView<double> &)) &tsa::IDCT::operator(), "Apply the transformation on the data\n\n \n a reference to the buffer containing the input data\n \n\n a reference to the buffer containing the input data\n\n \n a reference to this instance of the class\n\nC++: tsa::IDCT::operator()(class tsa::SeqView<double> &, class tsa::SeqView<double> &) --> void", pybind11::arg("in"), pybind11::arg("out"));
+cl.def("MakePlan", (void (tsa::IDCT::*)()) &tsa::IDCT::MakePlan, "Make a new plan, with the current parameters.\n\n \n std::runtime_error The new plan cannot be created\n\nC++: tsa::IDCT::MakePlan() --> void");
+cl.def("assign", (class tsa::IDCT & (tsa::IDCT::*)(const class tsa::IDCT &)) &tsa::IDCT::operator=, "C++: tsa::IDCT::operator=(const class tsa::IDCT &) --> class tsa::IDCT &", pybind11::return_value_policy::automatic, pybind11::arg(""));
+}
 	{ // tsa::DST file:DST.hpp line:73
 		pybind11::class_<tsa::DST, std::shared_ptr<tsa::DST>, PyCallBack_DST, tsa::BaseFFT> cl(M("tsa"), "DST", "Multichannel Discrete Sine Transform.");
 		pybind11::handle cl_type = cl;
@@ -1526,7 +1560,7 @@ void bind_BLInterpolation(std::function< pybind11::module &(std::string const &n
 struct PyCallBack_InverseRealFFT : public tsa::InverseRealFFT {
 	using tsa::InverseRealFFT::InverseRealFFT;
 
-	void MakePlan() throw() override { 
+	void MakePlan() throw() override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::InverseRealFFT *>(this), "MakePlan");
 		if (overload) {
@@ -1545,7 +1579,7 @@ struct PyCallBack_InverseRealFFT : public tsa::InverseRealFFT {
 struct PyCallBack_KaiserWindow : public tsa::KaiserWindow {
 	using tsa::KaiserWindow::KaiserWindow;
 
-	void operator()(class tsa::SeqView<double> & a0) override { 
+	void operator()(class tsa::SeqView<double> & a0) override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::KaiserWindow *>(this), "__call__");
 		if (overload) {
@@ -1558,7 +1592,7 @@ struct PyCallBack_KaiserWindow : public tsa::KaiserWindow {
 		}
 		return KaiserWindow::operator()(a0);
 	}
-	void operator()(class tsa::SeqView<double> & a0, class tsa::SeqView<double> & a1) override { 
+	void operator()(class tsa::SeqView<double> & a0, class tsa::SeqView<double> & a1) override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::KaiserWindow *>(this), "__call__");
 		if (overload) {
@@ -1571,7 +1605,7 @@ struct PyCallBack_KaiserWindow : public tsa::KaiserWindow {
 		}
 		return KaiserWindow::operator()(a0, a1);
 	}
-	void Resize(unsigned int a0) override { 
+	void Resize(unsigned int a0) override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::KaiserWindow *>(this), "Resize");
 		if (overload) {
@@ -1584,7 +1618,7 @@ struct PyCallBack_KaiserWindow : public tsa::KaiserWindow {
 		}
 		return KaiserWindow::Resize(a0);
 	}
-	void Normalize() override { 
+	void Normalize() override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::KaiserWindow *>(this), "Normalize");
 		if (overload) {
@@ -1597,7 +1631,7 @@ struct PyCallBack_KaiserWindow : public tsa::KaiserWindow {
 		}
 		return BaseWindow::Normalize();
 	}
-	void FillWindow() override { 
+	void FillWindow() override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::KaiserWindow *>(this), "FillWindow");
 		if (overload) {
@@ -1833,7 +1867,7 @@ void bind_EventDescription(std::function< pybind11::module &(std::string const &
 struct PyCallBack_RealFFT : public tsa::RealFFT {
 	using tsa::RealFFT::RealFFT;
 
-	void MakePlan() throw() override { 
+	void MakePlan() throw() override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::RealFFT *>(this), "MakePlan");
 		if (overload) {
@@ -1852,7 +1886,7 @@ struct PyCallBack_RealFFT : public tsa::RealFFT {
 struct PyCallBack_TukeyWindow : public tsa::TukeyWindow {
 	using tsa::TukeyWindow::TukeyWindow;
 
-	void operator()(class tsa::SeqView<double> & a0) override { 
+	void operator()(class tsa::SeqView<double> & a0) override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::TukeyWindow *>(this), "__call__");
 		if (overload) {
@@ -1865,7 +1899,7 @@ struct PyCallBack_TukeyWindow : public tsa::TukeyWindow {
 		}
 		return TukeyWindow::operator()(a0);
 	}
-	void operator()(class tsa::SeqView<double> & a0, class tsa::SeqView<double> & a1) override { 
+	void operator()(class tsa::SeqView<double> & a0, class tsa::SeqView<double> & a1) override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::TukeyWindow *>(this), "__call__");
 		if (overload) {
@@ -1878,7 +1912,7 @@ struct PyCallBack_TukeyWindow : public tsa::TukeyWindow {
 		}
 		return TukeyWindow::operator()(a0, a1);
 	}
-	void Resize(unsigned int a0) override { 
+	void Resize(unsigned int a0) override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::TukeyWindow *>(this), "Resize");
 		if (overload) {
@@ -1891,7 +1925,7 @@ struct PyCallBack_TukeyWindow : public tsa::TukeyWindow {
 		}
 		return TukeyWindow::Resize(a0);
 	}
-	void Normalize() override { 
+	void Normalize() override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::TukeyWindow *>(this), "Normalize");
 		if (overload) {
@@ -1904,7 +1938,7 @@ struct PyCallBack_TukeyWindow : public tsa::TukeyWindow {
 		}
 		return BaseWindow::Normalize();
 	}
-	void FillWindow() override { 
+	void FillWindow() override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::TukeyWindow *>(this), "FillWindow");
 		if (overload) {
@@ -2067,7 +2101,7 @@ void bind_LeastSquaresLattice(std::function< pybind11::module &(std::string cons
 struct PyCallBack_TukeyHannWindow : public tsa::TukeyHannWindow {
 	using tsa::TukeyHannWindow::TukeyHannWindow;
 
-	void operator()(class tsa::SeqView<double> & a0) override { 
+	void operator()(class tsa::SeqView<double> & a0) override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::TukeyHannWindow *>(this), "__call__");
 		if (overload) {
@@ -2080,7 +2114,7 @@ struct PyCallBack_TukeyHannWindow : public tsa::TukeyHannWindow {
 		}
 		return TukeyHannWindow::operator()(a0);
 	}
-	void operator()(class tsa::SeqView<double> & a0, class tsa::SeqView<double> & a1) override { 
+	void operator()(class tsa::SeqView<double> & a0, class tsa::SeqView<double> & a1) override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::TukeyHannWindow *>(this), "__call__");
 		if (overload) {
@@ -2093,7 +2127,7 @@ struct PyCallBack_TukeyHannWindow : public tsa::TukeyHannWindow {
 		}
 		return TukeyHannWindow::operator()(a0, a1);
 	}
-	void Resize(unsigned int a0) override { 
+	void Resize(unsigned int a0) override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::TukeyHannWindow *>(this), "Resize");
 		if (overload) {
@@ -2106,7 +2140,7 @@ struct PyCallBack_TukeyHannWindow : public tsa::TukeyHannWindow {
 		}
 		return TukeyHannWindow::Resize(a0);
 	}
-	void Normalize() override { 
+	void Normalize() override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::TukeyHannWindow *>(this), "Normalize");
 		if (overload) {
@@ -2119,7 +2153,7 @@ struct PyCallBack_TukeyHannWindow : public tsa::TukeyHannWindow {
 		}
 		return BaseWindow::Normalize();
 	}
-	void FillWindow() override { 
+	void FillWindow() override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::TukeyHannWindow *>(this), "FillWindow");
 		if (overload) {
@@ -2186,7 +2220,7 @@ void bind_TukeyHannWindow(std::function< pybind11::module &(std::string const &n
 struct PyCallBack_WelchWindow : public tsa::WelchWindow {
 	using tsa::WelchWindow::WelchWindow;
 
-	void operator()(class tsa::SeqView<double> & a0) override { 
+	void operator()(class tsa::SeqView<double> & a0) override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::WelchWindow *>(this), "__call__");
 		if (overload) {
@@ -2199,7 +2233,7 @@ struct PyCallBack_WelchWindow : public tsa::WelchWindow {
 		}
 		return WelchWindow::operator()(a0);
 	}
-	void operator()(class tsa::SeqView<double> & a0, class tsa::SeqView<double> & a1) override { 
+	void operator()(class tsa::SeqView<double> & a0, class tsa::SeqView<double> & a1) override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::WelchWindow *>(this), "__call__");
 		if (overload) {
@@ -2212,7 +2246,7 @@ struct PyCallBack_WelchWindow : public tsa::WelchWindow {
 		}
 		return WelchWindow::operator()(a0, a1);
 	}
-	void Resize(unsigned int a0) override { 
+	void Resize(unsigned int a0) override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::WelchWindow *>(this), "Resize");
 		if (overload) {
@@ -2225,7 +2259,7 @@ struct PyCallBack_WelchWindow : public tsa::WelchWindow {
 		}
 		return WelchWindow::Resize(a0);
 	}
-	void Normalize() override { 
+	void Normalize() override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::WelchWindow *>(this), "Normalize");
 		if (overload) {
@@ -2238,7 +2272,7 @@ struct PyCallBack_WelchWindow : public tsa::WelchWindow {
 		}
 		return BaseWindow::Normalize();
 	}
-	void FillWindow() override { 
+	void FillWindow() override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::WelchWindow *>(this), "FillWindow");
 		if (overload) {
@@ -2414,7 +2448,7 @@ void bind_WaveletThreshold(std::function< pybind11::module &(std::string const &
 struct PyCallBack_ChannelDescriptor : public tsa::ChannelDescriptor {
 	using tsa::ChannelDescriptor::ChannelDescriptor;
 
-	void AddData() override { 
+	void AddData() override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::ChannelDescriptor *>(this), "AddData");
 		if (overload) {
@@ -2427,7 +2461,7 @@ struct PyCallBack_ChannelDescriptor : public tsa::ChannelDescriptor {
 		}
 		return ChannelDescriptor::AddData();
 	}
-	double GetLength() override { 
+	double GetLength() override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::ChannelDescriptor *>(this), "GetLength");
 		if (overload) {
@@ -2440,7 +2474,7 @@ struct PyCallBack_ChannelDescriptor : public tsa::ChannelDescriptor {
 		}
 		return ChannelDescriptor::GetLength();
 	}
-	double GetRate() override { 
+	double GetRate() override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::ChannelDescriptor *>(this), "GetRate");
 		if (overload) {
@@ -2453,7 +2487,7 @@ struct PyCallBack_ChannelDescriptor : public tsa::ChannelDescriptor {
 		}
 		return ChannelDescriptor::GetRate();
 	}
-	void WriteView(class tsa::SeqView<double> & a0) override { 
+	void WriteView(class tsa::SeqView<double> & a0) override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::ChannelDescriptor *>(this), "WriteView");
 		if (overload) {
@@ -2466,7 +2500,7 @@ struct PyCallBack_ChannelDescriptor : public tsa::ChannelDescriptor {
 		}
 		return ChannelDescriptor::WriteView(a0);
 	}
-	void FillView(class tsa::SeqView<double> & a0, double a1, double a2) override { 
+	void FillView(class tsa::SeqView<double> & a0, double a1, double a2) override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::ChannelDescriptor *>(this), "FillView");
 		if (overload) {
@@ -2479,7 +2513,7 @@ struct PyCallBack_ChannelDescriptor : public tsa::ChannelDescriptor {
 		}
 		return ChannelDescriptor::FillView(a0, a1, a2);
 	}
-	void WriteView(class tsa::SeqView<double> & a0, class tsa::SeqView<double> & a1) override { 
+	void WriteView(class tsa::SeqView<double> & a0, class tsa::SeqView<double> & a1) override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::ChannelDescriptor *>(this), "WriteView");
 		if (overload) {
@@ -2498,7 +2532,7 @@ struct PyCallBack_ChannelDescriptor : public tsa::ChannelDescriptor {
 struct PyCallBack_ADC_Channel : public tsa::ADC_Channel {
 	using tsa::ADC_Channel::ADC_Channel;
 
-	void AddData() override { 
+	void AddData() override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::ADC_Channel *>(this), "AddData");
 		if (overload) {
@@ -2511,7 +2545,7 @@ struct PyCallBack_ADC_Channel : public tsa::ADC_Channel {
 		}
 		return ADC_Channel::AddData();
 	}
-	double GetLength() override { 
+	double GetLength() override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::ADC_Channel *>(this), "GetLength");
 		if (overload) {
@@ -2524,7 +2558,7 @@ struct PyCallBack_ADC_Channel : public tsa::ADC_Channel {
 		}
 		return ADC_Channel::GetLength();
 	}
-	double GetRate() override { 
+	double GetRate() override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::ADC_Channel *>(this), "GetRate");
 		if (overload) {
@@ -2537,7 +2571,7 @@ struct PyCallBack_ADC_Channel : public tsa::ADC_Channel {
 		}
 		return ChannelDescriptor::GetRate();
 	}
-	void WriteView(class tsa::SeqView<double> & a0) override { 
+	void WriteView(class tsa::SeqView<double> & a0) override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::ADC_Channel *>(this), "WriteView");
 		if (overload) {
@@ -2550,7 +2584,7 @@ struct PyCallBack_ADC_Channel : public tsa::ADC_Channel {
 		}
 		return ChannelDescriptor::WriteView(a0);
 	}
-	void FillView(class tsa::SeqView<double> & a0, double a1, double a2) override { 
+	void FillView(class tsa::SeqView<double> & a0, double a1, double a2) override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::ADC_Channel *>(this), "FillView");
 		if (overload) {
@@ -2563,7 +2597,7 @@ struct PyCallBack_ADC_Channel : public tsa::ADC_Channel {
 		}
 		return ChannelDescriptor::FillView(a0, a1, a2);
 	}
-	void WriteView(class tsa::SeqView<double> & a0, class tsa::SeqView<double> & a1) override { 
+	void WriteView(class tsa::SeqView<double> & a0, class tsa::SeqView<double> & a1) override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::ADC_Channel *>(this), "WriteView");
 		if (overload) {
@@ -2582,7 +2616,7 @@ struct PyCallBack_ADC_Channel : public tsa::ADC_Channel {
 struct PyCallBack_PROC_Channel : public tsa::PROC_Channel {
 	using tsa::PROC_Channel::PROC_Channel;
 
-	void AddData() override { 
+	void AddData() override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::PROC_Channel *>(this), "AddData");
 		if (overload) {
@@ -2595,7 +2629,7 @@ struct PyCallBack_PROC_Channel : public tsa::PROC_Channel {
 		}
 		return PROC_Channel::AddData();
 	}
-	double GetLength() override { 
+	double GetLength() override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::PROC_Channel *>(this), "GetLength");
 		if (overload) {
@@ -2608,7 +2642,7 @@ struct PyCallBack_PROC_Channel : public tsa::PROC_Channel {
 		}
 		return PROC_Channel::GetLength();
 	}
-	void FillView(class tsa::SeqView<double> & a0, double a1, double a2) override { 
+	void FillView(class tsa::SeqView<double> & a0, double a1, double a2) override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::PROC_Channel *>(this), "FillView");
 		if (overload) {
@@ -2621,7 +2655,7 @@ struct PyCallBack_PROC_Channel : public tsa::PROC_Channel {
 		}
 		return PROC_Channel::FillView(a0, a1, a2);
 	}
-	double GetRate() override { 
+	double GetRate() override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::PROC_Channel *>(this), "GetRate");
 		if (overload) {
@@ -2634,7 +2668,7 @@ struct PyCallBack_PROC_Channel : public tsa::PROC_Channel {
 		}
 		return ChannelDescriptor::GetRate();
 	}
-	void WriteView(class tsa::SeqView<double> & a0) override { 
+	void WriteView(class tsa::SeqView<double> & a0) override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::PROC_Channel *>(this), "WriteView");
 		if (overload) {
@@ -2647,7 +2681,7 @@ struct PyCallBack_PROC_Channel : public tsa::PROC_Channel {
 		}
 		return ChannelDescriptor::WriteView(a0);
 	}
-	void WriteView(class tsa::SeqView<double> & a0, class tsa::SeqView<double> & a1) override { 
+	void WriteView(class tsa::SeqView<double> & a0, class tsa::SeqView<double> & a1) override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::PROC_Channel *>(this), "WriteView");
 		if (overload) {
@@ -2666,7 +2700,7 @@ struct PyCallBack_PROC_Channel : public tsa::PROC_Channel {
 struct PyCallBack_SIM_Channel : public tsa::SIM_Channel {
 	using tsa::SIM_Channel::SIM_Channel;
 
-	void AddData() override { 
+	void AddData() override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::SIM_Channel *>(this), "AddData");
 		if (overload) {
@@ -2679,7 +2713,7 @@ struct PyCallBack_SIM_Channel : public tsa::SIM_Channel {
 		}
 		return SIM_Channel::AddData();
 	}
-	double GetLength() override { 
+	double GetLength() override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::SIM_Channel *>(this), "GetLength");
 		if (overload) {
@@ -2692,7 +2726,7 @@ struct PyCallBack_SIM_Channel : public tsa::SIM_Channel {
 		}
 		return SIM_Channel::GetLength();
 	}
-	double GetRate() override { 
+	double GetRate() override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::SIM_Channel *>(this), "GetRate");
 		if (overload) {
@@ -2705,7 +2739,7 @@ struct PyCallBack_SIM_Channel : public tsa::SIM_Channel {
 		}
 		return ChannelDescriptor::GetRate();
 	}
-	void WriteView(class tsa::SeqView<double> & a0) override { 
+	void WriteView(class tsa::SeqView<double> & a0) override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::SIM_Channel *>(this), "WriteView");
 		if (overload) {
@@ -2718,7 +2752,7 @@ struct PyCallBack_SIM_Channel : public tsa::SIM_Channel {
 		}
 		return ChannelDescriptor::WriteView(a0);
 	}
-	void FillView(class tsa::SeqView<double> & a0, double a1, double a2) override { 
+	void FillView(class tsa::SeqView<double> & a0, double a1, double a2) override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::SIM_Channel *>(this), "FillView");
 		if (overload) {
@@ -2731,7 +2765,7 @@ struct PyCallBack_SIM_Channel : public tsa::SIM_Channel {
 		}
 		return ChannelDescriptor::FillView(a0, a1, a2);
 	}
-	void WriteView(class tsa::SeqView<double> & a0, class tsa::SeqView<double> & a1) override { 
+	void WriteView(class tsa::SeqView<double> & a0, class tsa::SeqView<double> & a1) override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::SIM_Channel *>(this), "WriteView");
 		if (overload) {
@@ -2750,7 +2784,7 @@ struct PyCallBack_SIM_Channel : public tsa::SIM_Channel {
 struct PyCallBack_SER_Channel : public tsa::SER_Channel {
 	using tsa::SER_Channel::SER_Channel;
 
-	void AddData() override { 
+	void AddData() override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::SER_Channel *>(this), "AddData");
 		if (overload) {
@@ -2763,7 +2797,7 @@ struct PyCallBack_SER_Channel : public tsa::SER_Channel {
 		}
 		return SER_Channel::AddData();
 	}
-	double GetLength() override { 
+	double GetLength() override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::SER_Channel *>(this), "GetLength");
 		if (overload) {
@@ -2776,7 +2810,7 @@ struct PyCallBack_SER_Channel : public tsa::SER_Channel {
 		}
 		return SER_Channel::GetLength();
 	}
-	double GetRate() override { 
+	double GetRate() override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::SER_Channel *>(this), "GetRate");
 		if (overload) {
@@ -2789,7 +2823,7 @@ struct PyCallBack_SER_Channel : public tsa::SER_Channel {
 		}
 		return ChannelDescriptor::GetRate();
 	}
-	void WriteView(class tsa::SeqView<double> & a0) override { 
+	void WriteView(class tsa::SeqView<double> & a0) override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::SER_Channel *>(this), "WriteView");
 		if (overload) {
@@ -2802,7 +2836,7 @@ struct PyCallBack_SER_Channel : public tsa::SER_Channel {
 		}
 		return ChannelDescriptor::WriteView(a0);
 	}
-	void FillView(class tsa::SeqView<double> & a0, double a1, double a2) override { 
+	void FillView(class tsa::SeqView<double> & a0, double a1, double a2) override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::SER_Channel *>(this), "FillView");
 		if (overload) {
@@ -2815,7 +2849,7 @@ struct PyCallBack_SER_Channel : public tsa::SER_Channel {
 		}
 		return ChannelDescriptor::FillView(a0, a1, a2);
 	}
-	void WriteView(class tsa::SeqView<double> & a0, class tsa::SeqView<double> & a1) override { 
+	void WriteView(class tsa::SeqView<double> & a0, class tsa::SeqView<double> & a1) override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::SER_Channel *>(this), "WriteView");
 		if (overload) {
@@ -2834,7 +2868,7 @@ struct PyCallBack_SER_Channel : public tsa::SER_Channel {
 struct PyCallBack_FRAMEH_Channel : public tsa::FRAMEH_Channel {
 	using tsa::FRAMEH_Channel::FRAMEH_Channel;
 
-	void AddData() override { 
+	void AddData() override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::FRAMEH_Channel *>(this), "AddData");
 		if (overload) {
@@ -2847,7 +2881,7 @@ struct PyCallBack_FRAMEH_Channel : public tsa::FRAMEH_Channel {
 		}
 		return FRAMEH_Channel::AddData();
 	}
-	double GetLength() override { 
+	double GetLength() override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::FRAMEH_Channel *>(this), "GetLength");
 		if (overload) {
@@ -2860,7 +2894,7 @@ struct PyCallBack_FRAMEH_Channel : public tsa::FRAMEH_Channel {
 		}
 		return FRAMEH_Channel::GetLength();
 	}
-	double GetRate() override { 
+	double GetRate() override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::FRAMEH_Channel *>(this), "GetRate");
 		if (overload) {
@@ -2873,7 +2907,7 @@ struct PyCallBack_FRAMEH_Channel : public tsa::FRAMEH_Channel {
 		}
 		return ChannelDescriptor::GetRate();
 	}
-	void WriteView(class tsa::SeqView<double> & a0) override { 
+	void WriteView(class tsa::SeqView<double> & a0) override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::FRAMEH_Channel *>(this), "WriteView");
 		if (overload) {
@@ -2886,7 +2920,7 @@ struct PyCallBack_FRAMEH_Channel : public tsa::FRAMEH_Channel {
 		}
 		return ChannelDescriptor::WriteView(a0);
 	}
-	void FillView(class tsa::SeqView<double> & a0, double a1, double a2) override { 
+	void FillView(class tsa::SeqView<double> & a0, double a1, double a2) override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::FRAMEH_Channel *>(this), "FillView");
 		if (overload) {
@@ -2899,7 +2933,7 @@ struct PyCallBack_FRAMEH_Channel : public tsa::FRAMEH_Channel {
 		}
 		return ChannelDescriptor::FillView(a0, a1, a2);
 	}
-	void WriteView(class tsa::SeqView<double> & a0, class tsa::SeqView<double> & a1) override { 
+	void WriteView(class tsa::SeqView<double> & a0, class tsa::SeqView<double> & a1) override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::FRAMEH_Channel *>(this), "WriteView");
 		if (overload) {
