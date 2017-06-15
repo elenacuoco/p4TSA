@@ -559,7 +559,6 @@ namespace tsa {
             Wave = "DCT";
         }
 
-
         mBuffer.DelPoints(mStep);
 
 
