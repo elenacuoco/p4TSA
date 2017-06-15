@@ -260,6 +260,7 @@ namespace tsa {
         DCT mDct;
         Dmatrix mBuffDct;
         Cs2HammingWindow mWindowing;
+
     };
 
     ///
