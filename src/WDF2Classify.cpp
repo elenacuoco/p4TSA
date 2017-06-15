@@ -418,35 +418,7 @@ namespace tsa {
 
         //
         //
-       /* if (mT==WaveletThreshold::dohonojohnston )
-        {
 
-        varH =  sqrt(varH ) / (sqrt(2.0 * log(mWindow))*mSigmaH);
-        var4 =  sqrt(var4 ) / ( sqrt(2.0 * log(mWindow))*mSigma4);
-        varC8 =  sqrt(varC8 ) / (sqrt(2.0 * log(mWindow))*mSigmaC8);
-        var10 =  sqrt(var10 ) / (sqrt(2.0 * log(mWindow))*mSigma10);
-        var12 =  sqrt(var12 ) / (sqrt(2.0 * log(mWindow))*mSigma12);
-        varC16 =  sqrt(varC16 ) / (sqrt(2.0 * log(mWindow))*mSigmaC16);
-        var20 =  sqrt(var20 ) / (sqrt(2.0 * log(mWindow))*mSigma20);
-        varC20 =  sqrt(varC20 ) / (sqrt(2.0 * log(mWindow))*mSigmaC20);
-        varBsC307 =  sqrt(varBsC307 ) / (sqrt(2.0 * log(mWindow))*mSigmaBsC307);
-        varDCT =  sqrt(2.0*varDCT/mWindow) / (sqrt(2.0 * log(mWindow))*mSigmaDCT);*/
-        /*if(varDCT>mThresh)
-        {
-        printf("sigmaH:%e a: %e snr:%f \n",mSigmaH,sqrt(varH),varH);
-        printf("sigma4:%e  a: %e snr:%f \n",mSigma4,sqrt(var4),var4);
-        printf("sigmaC8:%e a: %e  snr:%f \n",mSigmaC8,sqrt(varC8),varC8);
-        printf("sigma10:%e a: %e  snr:%f \n",mSigma10,sqrt(var10),var10);
-        printf("sigma12:%e a: %e  snr:%f \n",mSigma12,sqrt(var12),var12);
-        printf("sigmaC16:%e a: %e snr:%f\n",mSigmaC16,sqrt(varC16),varC16);
-        printf("sigma20:%e a: %e snr:%f\n",mSigma20,sqrt(var20),var20);
-        printf("sigmaC20:%e a: %e snr:%f\n",mSigmaC20,sqrt(varC20),varC20);
-        printf("sigmaBsC307:%e a: %e snr:%f\n",mSigmaBsC307,sqrt(varBsC307),varBsC307);
-        printf("sigmaDCT:%e a: %e snr:%f\n",mSigmaDCT,sqrt(varDCT),varDCT);
-        }
-
-        }
-         */
 
         varH = sqrt(varH) / (mSigmaH);
         var4 = sqrt(var4) / (mSigma4);
