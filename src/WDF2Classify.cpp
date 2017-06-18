@@ -419,18 +419,86 @@ namespace tsa {
         //
         //
 
+        if (mSigmaH>0) {
+            varH = sqrt(varH) / (mSigmaH);
+        }
+        else
+        {
+            varH=0;
+        }
+        if (mSigma4>0) {
+            var4 = sqrt(var4) / (mSigma4);
+        }
+        else
+        {
+            var4=0;
+        }
+        if (mSigmaC8>0) {
+            varC8 = sqrt(varC8) / (mSigmaC8);
+        }
+        else
+        {
+            varC8=0;
+        }
 
-        varH = sqrt(varH) / (mSigmaH);
-        var4 = sqrt(var4) / (mSigma4);
-        varC8 = sqrt(varC8) / (mSigmaC8);
-        var10 = sqrt(var10) / (mSigma10);
-        var12 = sqrt(var12) / (mSigma12);
-        varC16 = sqrt(varC16) / (mSigmaC16);
-        var20 = sqrt(var20) / (mSigma20);
-        varC20 = sqrt(varC20) / (mSigmaC20);
-        varBsC307 = sqrt(varBsC307) / (mSigmaBsC307);
-        varBsC309 = sqrt(varBsC309) / (mSigmaBsC309);
-        varDCT = sqrt(varDCT) / (mSigmaDCT);
+        if (mSigma10>0) {
+            var10 = sqrt(var10) / (mSigma10);
+        }
+        else
+        {
+            var10=0;
+        }
+
+        if (mSigma12>0) {
+            var12 = sqrt(var12) / (mSigma12);
+        }
+        else
+        {
+            var12=0;
+        }
+
+        if (mSigmaC16>0) {
+            varC16 = sqrt(varC16) / (mSigmaC16);
+        }
+        else
+        {
+            varC16=0;
+        }
+        if (mSigma20>0) {
+            var20 = sqrt(var20) / (mSigma20);
+        }
+        else
+        {
+            var20=0;
+        }
+        if (mSigmaC20>0) {
+            varC20 = sqrt(varC20) / (mSigmaC20);
+        }
+        else
+        {
+            varC20=0;
+        }
+        if (mSigmaBsC307>0) {
+            varBsC307 = sqrt(varBsC307) / (mSigmaBsC307);
+        }
+        else
+        {
+            varBsC307=0;
+        }
+        if (mSigmaBsC309>0) {
+            varBsC309 = sqrt(varBsC309) / (mSigmaBsC309);
+        }
+        else
+        {
+            varBsC309=0;
+        }
+        if (mSigmaDCT>0) {
+            varDCT = sqrt(varDCT) / (mSigmaDCT);
+        }
+        else
+        {
+            varDCT=0;
+        }
 
         varmax = varH;
         for (unsigned int i = 0; i < mNCoeff; i++) {
