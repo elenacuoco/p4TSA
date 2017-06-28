@@ -142,11 +142,12 @@ namespace tsa {
             double abov;
             Dvector Cmax;
             int level;
-            //int k,j;
+            int k,j;
             std::string Wave;
-            double factorT;
+            //                //old way to find time of the event
+            //double factorT;
             unsigned int res = GetDataVector(abov, Cmax, level, Wave);
-            //factorT = (mSampling * mWindow);
+
 
             if (res == 1) {
 
@@ -159,7 +160,7 @@ namespace tsa {
                 //j= log2(level+1.0);
                 //k =  pow(2.0,j)-1.0;
                 //printf("level:%d  j:%d  k:%d \n",level,j,k);
-                mEvFF.mTime = mStartTime;//+mEvFF.mlevel*mSampling;//+factorT*(k+1.0/2.0)/pow(2.0,j);
+                mEvFF.mTime = mStartTime+mSampling*mEvFF.mlevel;//*(k+1.0/2.0)/pow(2.0,j);
                 mEvFF.mSNR = abov;
                 mEvFF.mWave = Wave;
                 Ev = mEvFF;
