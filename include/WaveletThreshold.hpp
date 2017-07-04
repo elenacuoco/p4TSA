@@ -85,8 +85,7 @@ namespace tsa {
 
         enum ThresholdingMode {
             hard,
-            soft,
-            local
+            soft
         };
         ///
         /// Constructor
@@ -116,8 +115,8 @@ namespace tsa {
         /// @return a returned value
         ///
         /// Declaration of execute operation
-        void operator()(SeqViewDouble& WT, enum WaveletThresholding t, enum ThresholdingMode m = local);
-        void operator()(Dmatrix& WT, enum WaveletThresholding t, enum ThresholdingMode m = local);
+        void operator()(SeqViewDouble& WT, enum WaveletThresholding t, enum ThresholdingMode m = hard);
+        void operator()(Dmatrix& WT, enum WaveletThresholding t, enum ThresholdingMode m = hard);
         //@}
 
         ///
@@ -164,8 +163,7 @@ namespace tsa {
         double mSigma;
         int mlevel;
         double mC;
-        int mMin;
-        int mMax;
+
 
     };
 

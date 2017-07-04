@@ -33,7 +33,8 @@ namespace tsa {
     mSigmaC16(sigma),
     mSigma20(sigma),
     mSigmaC20(sigma),
-    mSigmaBsC307(sigma),
+    //mSigmaBs202(sigma),
+    mSigmaBsC103(sigma),
     mSigmaBsC309(sigma),
     mSigmaDCT(sigma),
     mDct(mWindow),
@@ -56,12 +57,14 @@ namespace tsa {
     mWT20(mWindow, mWt20),
     mWtC20(WaveletTransform::DaubC20),
     mWTC20(mWindow, mWtC20),
-    mWtBsC307(WaveletTransform::BsplineC307),
-    mWTBsC307(mWindow, mWtBsC307),
+    mWtBsC103(WaveletTransform::BsplineC103),
+    mWTBsC103(mWindow, mWtBsC103),
+    //mWtBs202(WaveletTransform::Bspline202),
+    //mWTBs202(mWindow, mWtBs202),
     mWtBsC309(WaveletTransform::BsplineC309),
     mWTBsC309(mWindow, mWtBsC309),
 
-    // mT( WaveletThreshold::dohonojohnston ),
+    //mT( WaveletThreshold::dohonojohnston ),
     mT(WTh),
     mWavThres(mWindow, mWindow, sigma),
 
@@ -114,7 +117,8 @@ namespace tsa {
         double varC16;
         double var20;
         double varC20;
-        double varBsC307;
+        double varBs202;
+        double varBsC103;
         double varBsC309;
         double varDCT;
         int levelH;
@@ -125,7 +129,8 @@ namespace tsa {
         int levelC16;
         int level20;
         int levelC20;
-        int levelBsC307;
+       // int levelBs202;
+        int levelBsC103;
         int levelBsC309;
         int levelDCT;
         Dvector cH(mNCoeff);
@@ -136,7 +141,8 @@ namespace tsa {
         Dvector cC16(mNCoeff);
         Dvector c20(mNCoeff);
         Dvector cC20(mNCoeff);
-        Dvector cBsC307(mNCoeff);
+       // Dvector cBs202(mNCoeff);
+        Dvector cBsC103(mNCoeff);
         Dvector cBsC309(mNCoeff);
         Dvector cDCT(mNCoeff);
         Cmax.resize(mNCoeff);
@@ -338,26 +344,48 @@ namespace tsa {
 
         }
         //
+       /* for (unsigned int i = 0; i < mWindow; i++) {
+            mBuff(0, i) = mBuffer(0, i);
+        }
+
+        mWTBs202.Forward(mBuff);
+        mWavThres(mBuff, mT);
+
+        mSigmaBs202 = mWavThres.GetSigma();
+        levelBs202 = mWavThres.GetLevel();
+
+        varBs202 = 0.0;
+
+        for (unsigned int i = 0; i < mWindow; i++) {
+
+            varBs202 += (mBuff(0, i) * mBuff(0, i));
+        }
+        //mWTBs202.Inverse(mBuff);
+        for (unsigned int i = 0; i < mNCoeff; i++) {
+            cBs202[i] = mBuff(0, i);
+
+        }*/
+        //
         //
        for (unsigned int i = 0; i < mWindow; i++) {
             mBuff(0, i) = mBuffer(0, i);
         }
 
-        mWTBsC307.Forward(mBuff);
+        mWTBsC103.Forward(mBuff);
         mWavThres(mBuff, mT);
 
-        mSigmaBsC307 = mWavThres.GetSigma();
-        levelBsC307 = mWavThres.GetLevel();
+        mSigmaBsC103 = mWavThres.GetSigma();
+        levelBsC103 = mWavThres.GetLevel();
 
-        varBsC307 = 0.0;
+        varBsC103 = 0.0;
 
         for (unsigned int i = 0; i < mWindow; i++) {
 
-            varBsC307 += (mBuff(0, i) * mBuff(0, i));
+            varBsC103 += (mBuff(0, i) * mBuff(0, i));
         }
-        //mWTBsC307.Inverse(mBuff);
+        //mWTBsC103.Inverse(mBuff);
         for (unsigned int i = 0; i < mNCoeff; i++) {
-            cBsC307[i] = mBuff(0, i);
+            cBsC103[i] = mBuff(0, i);
 
         }
         //
@@ -420,21 +448,21 @@ namespace tsa {
         //
 
         if (mSigmaH>0) {
-            varH = sqrt(varH) / (mSigmaH);
+            varH = sqrt(varH) / (2.0*mSigmaH);
         }
         else
         {
             varH=0;
         }
         if (mSigma4>0) {
-            var4 = sqrt(var4) / (mSigma4);
+            var4 = sqrt(var4) / (2.0*mSigma4);
         }
         else
         {
             var4=0;
         }
         if (mSigmaC8>0) {
-            varC8 = sqrt(varC8) / (mSigmaC8);
+            varC8 = sqrt(varC8) / (2.0*mSigmaC8);
         }
         else
         {
@@ -442,7 +470,7 @@ namespace tsa {
         }
 
         if (mSigma10>0) {
-            var10 = sqrt(var10) / (mSigma10);
+            var10 = sqrt(var10) / (2.0*mSigma10);
         }
         else
         {
@@ -450,7 +478,7 @@ namespace tsa {
         }
 
         if (mSigma12>0) {
-            var12 = sqrt(var12) / (mSigma12);
+            var12 = sqrt(var12) / (2.0*mSigma12);
         }
         else
         {
@@ -458,42 +486,50 @@ namespace tsa {
         }
 
         if (mSigmaC16>0) {
-            varC16 = sqrt(varC16) / (mSigmaC16);
+            varC16 = sqrt(varC16) / (2.0*mSigmaC16);
         }
         else
         {
             varC16=0;
         }
         if (mSigma20>0) {
-            var20 = sqrt(var20) / (mSigma20);
+            var20 = sqrt(var20) / (2.0*mSigma20);
         }
         else
         {
             var20=0;
         }
         if (mSigmaC20>0) {
-            varC20 = sqrt(varC20) / (mSigmaC20);
+            varC20 = sqrt(varC20) / (2.0*mSigmaC20);
         }
         else
         {
             varC20=0;
         }
-        if (mSigmaBsC307>0) {
-            varBsC307 = sqrt(varBsC307) / (mSigmaBsC307);
+       /* if (mSigmaBs202>0) {
+            varBs202 = sqrt(varBs202) / (2.0*mSigmaBs202);
         }
         else
         {
-            varBsC307=0;
+            varBs202=0;
+        }*/
+
+        if (mSigmaBsC103>0) {
+            varBsC103 = sqrt(varBsC103) / (2.0*mSigmaBsC103);
+        }
+        else
+        {
+            varBsC103=0;
         }
         if (mSigmaBsC309>0) {
-            varBsC309 = sqrt(varBsC309) / (mSigmaBsC309);
+            varBsC309 = sqrt(varBsC309) / (2.0*mSigmaBsC309);
         }
         else
         {
             varBsC309=0;
         }
         if (mSigmaDCT>0) {
-            varDCT = sqrt(varDCT) / (mSigmaDCT);
+            varDCT = sqrt(varDCT) / (2.0*mSigmaDCT);
         }
         else
         {
@@ -571,14 +607,23 @@ namespace tsa {
             level = levelC20;
             Wave = "DaubC20";
         }
-        if (varBsC307 >= varmax) {
-            varmax = varBsC307;
+      /*  if (varBs202 >= varmax) {
+            varmax = varBs202;
             for (unsigned int i = 0; i < mNCoeff; i++) {
-                cmax[i] = cBsC307[i];
+                cmax[i] = cBs202[i];
             }
 
-            level = levelBsC307;
-            Wave = "BsplineC307";
+            level = levelBs202;
+            Wave = "Bspline202";
+        }*/
+        if (varBsC103 >= varmax) {
+            varmax = varBsC103;
+            for (unsigned int i = 0; i < mNCoeff; i++) {
+                cmax[i] = cBsC103[i];
+            }
+
+            level = levelBsC103;
+            Wave = "BsplineC103";
         }
         if (varBsC309 >= varmax) {
             varmax = varBsC309;
@@ -611,7 +656,6 @@ namespace tsa {
             }
             return 1;
         }
-
 
         return 0;
 

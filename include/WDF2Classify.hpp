@@ -88,7 +88,8 @@ namespace tsa {
         ///
         /// Constructor
         ///
-        WDF2Classify(unsigned int window, unsigned int overlap, double thresh, double sigma, unsigned int ncoeff, enum WaveletThreshold::WaveletThresholding WTh = WaveletThreshold::cuoco);
+        WDF2Classify(unsigned int window, unsigned int overlap, double thresh, double sigma,
+                     unsigned int ncoeff, enum WaveletThreshold::WaveletThresholding WTh = WaveletThreshold::cuoco);
 
         ///
         /// Destructor
@@ -142,12 +143,8 @@ namespace tsa {
             double abov;
             Dvector Cmax;
             int level;
-            int k,j;
             std::string Wave;
-            //                //old way to find time of the event
-            //double factorT;
             unsigned int res = GetDataVector(abov, Cmax, level, Wave);
-
 
             if (res == 1) {
 
@@ -156,11 +153,7 @@ namespace tsa {
                 for (unsigned int i = 0; i < mNCoeff; i++) {
                     mEvFF.mCoeff[i] = Cmax[i];
                 }
-                //old way to find time of the event
-                //j= log2(level+1.0);
-                //k =  pow(2.0,j)-1.0;
-                //printf("level:%d  j:%d  k:%d \n",level,j,k);
-                mEvFF.mTime = mStartTime+mSampling*mEvFF.mlevel;//*(k+1.0/2.0)/pow(2.0,j);
+                mEvFF.mTime = mStartTime;
                 mEvFF.mSNR = abov;
                 mEvFF.mWave = Wave;
                 Ev = mEvFF;
@@ -226,7 +219,8 @@ namespace tsa {
         double mSigmaC16;
         double mSigma20;
         double mSigmaC20;
-        double mSigmaBsC307;
+        //double mSigmaBs202;
+        double mSigmaBsC103;
         double mSigmaBsC309;
         double mSigmaDCT;
         FifoBuffer mBuffer;
@@ -252,8 +246,10 @@ namespace tsa {
         WaveletTransform mWT20;
         enum WaveletTransform::WaveletType mWtC20;
         WaveletTransform mWTC20;
-        enum WaveletTransform::WaveletType mWtBsC307;
-        WaveletTransform mWTBsC307;
+       // enum WaveletTransform::WaveletType mWtBs202;
+        // WaveletTransform mWTBs202;
+        enum WaveletTransform::WaveletType mWtBsC103;
+        WaveletTransform mWTBsC103;
         enum WaveletTransform::WaveletType mWtBsC309;
         WaveletTransform mWTBsC309;
         enum WaveletThreshold::WaveletThresholding mT;

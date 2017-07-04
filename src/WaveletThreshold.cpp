@@ -16,19 +16,10 @@
 
 namespace tsa {
 
-    inline unsigned int Min(unsigned int d1, unsigned int d2) {
-        return d1 < d2 ? d1 : d2;
-    }
-
-    inline unsigned int Max(unsigned int d1, unsigned int d2) {
-        return d1 > d2 ? d1 : d2;
-    }
 
     WaveletThreshold::WaveletThreshold(unsigned int N, unsigned int ncoeff, double sigma)
             :
             mN(N),
-            mMin(0),
-            mMax(0),
             mMedian(0.0),
             mThresh(0.0),
             mNcoeff(ncoeff),
@@ -55,17 +46,8 @@ namespace tsa {
         }
         gsl_sort_index(mP, mAbsCoeff, 1, mN);
         gsl_sort_largest_index(mPAC, 1, mAbsCoeff, 1, mN);
-
         mlevel = mPAC[0];
-        unsigned int a;
-        unsigned int b;
-        unsigned int nc=32;
-        a = (mlevel + nc);
-        b = (mlevel - nc);
-        mMin = Min(a, mN);
-        mMax = Max(b, 0);
         mC = fabs(WT(0, mlevel));
-
         switch (t) {
             case dohonojohnston: {
                 for (unsigned int i = 0; i < mN; i++)
@@ -81,27 +63,7 @@ namespace tsa {
                         }
                     }
                         break;
-                    case local: {
-                        for (unsigned int i = 0; i < mN; i++) {
-                            if (fabs(WT(0, i)) < mThresh)
-                                WT(0, i) = 0.0;
-                            else {
-                                if (WT(0, i) >= mThresh)
-                                    WT(0, i) = WT(0, i) - mThresh;
-                                if (WT(0, i) <= -mThresh)
-                                    WT(0, i) = WT(0, i) + mThresh;
-                            }
-                        }
-                        for (unsigned int i = mMin; i < mN; i++) {
-                            WT(0, i) = 0.0;
-                        }
-                        for (unsigned int i = mMax; i < mlevel; i++) {
-                            WT(0, i) = 0.0;
-                        }
-                    }
-                        break;
                     default: {
-
                         for (unsigned int i = 0; i < mN; i++) {
                             if (fabs(WT(0, i)) < mThresh)
                                 WT(0, i) = 0.0;
@@ -123,22 +85,6 @@ namespace tsa {
                         for (unsigned int i = 0; i < mN; i++) {
                             if (fabs(WT(0, i)) <= mThresh)
                                 WT(0, i) = 0.0;
-                        }
-
-
-                    }
-                        break;
-                    case local: {
-                        for (unsigned int i = 0; i < mN; i++) {
-                            if (fabs(WT(0, i)) <= mThresh)
-                                WT(0, i) = 0.0;
-                        }
-
-                        for (unsigned int i = mlevel; i < mMin; i++) {
-                            WT(0, i) = 0.0;
-                        }
-                        for (unsigned int i = mMax; i < mlevel; i++) {
-                            WT(0, i) = 0.0;
                         }
 
                     }
@@ -179,13 +125,7 @@ namespace tsa {
         gsl_sort_largest_index(mPAC, 1, mAbsCoeff, 1, mN);
 
         mlevel = mPAC[0];
-        unsigned int a;
-        unsigned int b;
-        unsigned int nc=32;
-        a = (mlevel + nc);
-        b = (mlevel - nc);
-        mMin = Min(a, mN);
-        mMax = Max(b, 0);
+
         mC = fabs(WT(0, mlevel));
 
 
@@ -204,19 +144,8 @@ namespace tsa {
                         }
                     }
                         break;
-                    case local: {
-                        for (unsigned int i = 0; i < mN; i++) {
-                            if (fabs(WT(0, i)) <= mThresh)
-                                WT(0, i) = 0.0;
-                        }
-                        for (unsigned int i = mMin; i < mN; i++) {
-                            WT(0, i) = 0.0;
-                        }
-                        for (unsigned int i = mMax; i < mlevel; i++) {
-                            WT(0, i) = 0.0;
-                        }
-                    }
-                        break;
+
+
                     default: {
 
                         for (unsigned int i = 0; i < mN; i++) {
@@ -244,22 +173,7 @@ namespace tsa {
 
 
                     }
-                        break;
-                    case local: {
-                        for (unsigned int i = 0; i < mN; i++) {
-                            if (fabs(WT(0, i)) <= mThresh)
-                                WT(0, i) = 0.0;
-                        }
 
-                        for (unsigned int i = mlevel; i < mMin; i++) {
-                            WT(0, i) = 0.0;
-                        }
-                        for (unsigned int i = mMax; i < mlevel; i++) {
-                            WT(0, i) = 0.0;
-                        }
-
-
-                    }
                         break;
                     default: {
                         //soft threshold
