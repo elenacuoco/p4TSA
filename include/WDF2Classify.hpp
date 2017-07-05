@@ -219,7 +219,7 @@ namespace tsa {
         double mSigmaC16;
         double mSigma20;
         double mSigmaC20;
-        //double mSigmaBs202;
+        double mSigmaBsC206;
         double mSigmaBsC103;
         double mSigmaBsC309;
         double mSigmaDCT;
@@ -246,8 +246,8 @@ namespace tsa {
         WaveletTransform mWT20;
         enum WaveletTransform::WaveletType mWtC20;
         WaveletTransform mWTC20;
-       // enum WaveletTransform::WaveletType mWtBs202;
-        // WaveletTransform mWTBs202;
+        enum WaveletTransform::WaveletType mWtBsC206;
+        WaveletTransform mWTBsC206;
         enum WaveletTransform::WaveletType mWtBsC103;
         WaveletTransform mWTBsC103;
         enum WaveletTransform::WaveletType mWtBsC309;

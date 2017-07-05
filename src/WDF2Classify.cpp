@@ -33,7 +33,7 @@ namespace tsa {
     mSigmaC16(sigma),
     mSigma20(sigma),
     mSigmaC20(sigma),
-    //mSigmaBs202(sigma),
+    mSigmaBsC206(sigma),
     mSigmaBsC103(sigma),
     mSigmaBsC309(sigma),
     mSigmaDCT(sigma),
@@ -59,8 +59,8 @@ namespace tsa {
     mWTC20(mWindow, mWtC20),
     mWtBsC103(WaveletTransform::BsplineC103),
     mWTBsC103(mWindow, mWtBsC103),
-    //mWtBs202(WaveletTransform::Bspline202),
-    //mWTBs202(mWindow, mWtBs202),
+    mWtBsC206(WaveletTransform::BsplineC206),
+    mWTBsC206(mWindow, mWtBsC206),
     mWtBsC309(WaveletTransform::BsplineC309),
     mWTBsC309(mWindow, mWtBsC309),
 
@@ -117,7 +117,7 @@ namespace tsa {
         double varC16;
         double var20;
         double varC20;
-        double varBs202;
+        double varBsC206;
         double varBsC103;
         double varBsC309;
         double varDCT;
@@ -129,7 +129,7 @@ namespace tsa {
         int levelC16;
         int level20;
         int levelC20;
-       // int levelBs202;
+        int levelBsC206;
         int levelBsC103;
         int levelBsC309;
         int levelDCT;
@@ -141,7 +141,7 @@ namespace tsa {
         Dvector cC16(mNCoeff);
         Dvector c20(mNCoeff);
         Dvector cC20(mNCoeff);
-       // Dvector cBs202(mNCoeff);
+        Dvector cBsC206(mNCoeff);
         Dvector cBsC103(mNCoeff);
         Dvector cBsC309(mNCoeff);
         Dvector cDCT(mNCoeff);
@@ -165,7 +165,7 @@ namespace tsa {
         for (unsigned int i = 0; i < mWindow; i++) {
             varH += (mBuff(0, i) * mBuff(0, i));
         }
-        //mWTH.Inverse( mBuff );
+
         for (unsigned int i = 0; i < mNCoeff; i++) {
             cH[i] = mBuff(0, i);
 
@@ -189,7 +189,7 @@ namespace tsa {
 
             var4 += (mBuff(0, i) * mBuff(0, i));
         }
-        //mWT4.Inverse( mBuff );
+
         for (unsigned int i = 0; i < mNCoeff; i++) {
             c4[i] = mBuff(0, i);
 
@@ -216,7 +216,7 @@ namespace tsa {
 
             varC8 += (mBuff(0, i) * mBuff(0, i));
             }
-        //mWTC8.Inverse( mBuff );
+
             for (unsigned int i = 0; i < mNCoeff; i++) {
                 cC8[i] = mBuff(0, i);
 
@@ -241,7 +241,7 @@ namespace tsa {
 
             var10 += (mBuff(0, i) * mBuff(0, i));
         }
-        //mWT10.Inverse( mBuff );
+
         for (unsigned int i = 0; i < mNCoeff; i++) {
             c10[i] = mBuff(0, i);
 
@@ -265,7 +265,7 @@ namespace tsa {
 
             var12 += (mBuff(0, i) * mBuff(0, i));
         }
-        //mWT12.Inverse( mBuff );
+
         for (unsigned int i = 0; i < mNCoeff; i++) {
             c12[i] = mBuff(0, i);
 
@@ -289,7 +289,7 @@ namespace tsa {
 
             varC16 += (mBuff(0, i) * mBuff(0, i));
         }
-        //mWTC16.Inverse( mBuff );
+
         for (unsigned int i = 0; i < mNCoeff; i++) {
             cC16[i] = mBuff(0, i);
 
@@ -314,7 +314,7 @@ namespace tsa {
 
             var20 += (mBuff(0, i) * mBuff(0, i));
         }
-        //mWT20.Inverse( mBuff );
+
         for (unsigned int i = 0; i < mNCoeff; i++) {
             c20[i] = mBuff(0, i);
 
@@ -338,33 +338,33 @@ namespace tsa {
 
             varC20 += (mBuff(0, i) * mBuff(0, i));
         }
-        //mWTC20.Inverse( mBuff );
+
         for (unsigned int i = 0; i < mNCoeff; i++) {
             cC20[i] = mBuff(0, i);
 
         }
         //
-       /* for (unsigned int i = 0; i < mWindow; i++) {
+        for (unsigned int i = 0; i < mWindow; i++) {
             mBuff(0, i) = mBuffer(0, i);
         }
 
-        mWTBs202.Forward(mBuff);
+        mWTBsC206.Forward(mBuff);
         mWavThres(mBuff, mT);
 
-        mSigmaBs202 = mWavThres.GetSigma();
-        levelBs202 = mWavThres.GetLevel();
+        mSigmaBsC206 = mWavThres.GetSigma();
+        levelBsC206 = mWavThres.GetLevel();
 
-        varBs202 = 0.0;
+        varBsC206 = 0.0;
 
         for (unsigned int i = 0; i < mWindow; i++) {
 
-            varBs202 += (mBuff(0, i) * mBuff(0, i));
+            varBsC206 += (mBuff(0, i) * mBuff(0, i));
         }
-        //mWTBs202.Inverse(mBuff);
-        for (unsigned int i = 0; i < mNCoeff; i++) {
-            cBs202[i] = mBuff(0, i);
 
-        }*/
+        for (unsigned int i = 0; i < mNCoeff; i++) {
+            cBsC206[i] = mBuff(0, i);
+
+        }
         //
         //
        for (unsigned int i = 0; i < mWindow; i++) {
@@ -383,7 +383,7 @@ namespace tsa {
 
             varBsC103 += (mBuff(0, i) * mBuff(0, i));
         }
-        //mWTBsC103.Inverse(mBuff);
+
         for (unsigned int i = 0; i < mNCoeff; i++) {
             cBsC103[i] = mBuff(0, i);
 
@@ -406,7 +406,7 @@ namespace tsa {
 
             varBsC309 += (mBuff(0, i) * mBuff(0, i));
         }
-        //mWTBsC309.Inverse(mBuff);
+
         for (unsigned int i = 0; i < mNCoeff; i++) {
             cBsC309[i] = mBuff(0, i);
 
@@ -438,7 +438,7 @@ namespace tsa {
         for (unsigned int i = 0; i < mWindow; i++) {
             varDCT += (mBuff(0, i) * mBuff(0, i));
         }
-        //mDct.Inverse(mBuff)
+
         for (unsigned int i = 0; i < mNCoeff; i++) {
             cDCT[i] = mBuff(0, i);
 
@@ -506,13 +506,13 @@ namespace tsa {
         {
             varC20=0;
         }
-       /* if (mSigmaBs202>0) {
-            varBs202 = sqrt(varBs202) / (2.0*mSigmaBs202);
+        if (mSigmaBsC206>0) {
+            varBsC206 = sqrt(varBsC206) / (2.0*mSigmaBsC206);
         }
         else
         {
-            varBs202=0;
-        }*/
+            varBsC206=0;
+        }
 
         if (mSigmaBsC103>0) {
             varBsC103 = sqrt(varBsC103) / (2.0*mSigmaBsC103);
@@ -607,15 +607,15 @@ namespace tsa {
             level = levelC20;
             Wave = "DaubC20";
         }
-      /*  if (varBs202 >= varmax) {
-            varmax = varBs202;
+       if (varBsC206 >= varmax) {
+            varmax = varBsC206;
             for (unsigned int i = 0; i < mNCoeff; i++) {
-                cmax[i] = cBs202[i];
+                cmax[i] = cBsC206[i];
             }
 
-            level = levelBs202;
-            Wave = "Bspline202";
-        }*/
+            level = levelBsC206;
+            Wave = "BsplineC206";
+        }
         if (varBsC103 >= varmax) {
             varmax = varBsC103;
             for (unsigned int i = 0; i < mNCoeff; i++) {
