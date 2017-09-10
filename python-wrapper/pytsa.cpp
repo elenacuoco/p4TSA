@@ -1514,7 +1514,11 @@ cl.def("assign", (class tsa::IDCT & (tsa::IDCT::*)(const class tsa::IDCT &)) &ts
 		cl.def("Save", (void (tsa::DoubleWhitening::*)(const char *, const char *)) &tsa::DoubleWhitening::Save, "C++: tsa::DoubleWhitening::Save(const char *, const char *) --> void", pybind11::arg("filename"), pybind11::arg("fmt"));
 		cl.def("xml_serialize", (void (tsa::DoubleWhitening::*)(class eternity::xml_archive &, const char *)) &tsa::DoubleWhitening::xml_serialize, "C++: tsa::DoubleWhitening::xml_serialize(class eternity::xml_archive &, const char *) --> void", pybind11::arg("xml"), pybind11::arg("p"));
 		cl.def("assign", (class tsa::DoubleWhitening & (tsa::DoubleWhitening::*)(const class tsa::DoubleWhitening &)) &tsa::DoubleWhitening::operator=, "C++: tsa::DoubleWhitening::operator=(const class tsa::DoubleWhitening &) --> class tsa::DoubleWhitening &", pybind11::return_value_policy::automatic, pybind11::arg(""));
-	}
+        cl.def("Input", (class tsa::DoubleWhitening & (tsa::DoubleWhitening::*)(class tsa::SeqView<double> &)) &tsa::DoubleWhitening::Input, "C++: tsa::DoubleWhitening::Input(class tsa::SeqView<double> &) --> class tsa::DoubleWhitening &", pybind11::return_value_policy::automatic, pybind11::arg("indata"));
+        cl.def("Output", (class tsa::DoubleWhitening & (tsa::DoubleWhitening::*)(class tsa::SeqView<double> &)) &tsa::DoubleWhitening::Output, "C++: tsa::DoubleWhitening::Output(class tsa::SeqView<double> &) --> class tsa::DoubleWhitening &", pybind11::return_value_policy::automatic, pybind11::arg("outdata"));
+
+
+}
 }
 
 
@@ -1793,7 +1797,7 @@ void bind_EventDescription(std::function< pybind11::module &(std::string const &
 		cl.def("assign", (class tsa::LatticeFilter & (tsa::LatticeFilter::*)(const class tsa::LatticeFilter &)) &tsa::LatticeFilter::operator=, "C++: tsa::LatticeFilter::operator=(const class tsa::LatticeFilter &) --> class tsa::LatticeFilter &", pybind11::return_value_policy::automatic, pybind11::arg(""));
 	}
 	{ // tsa::LSLLearning file:LSLLearning.hpp line:74
-		pybind11::class_<tsa::LSLLearning, std::shared_ptr<tsa::LSLLearning>, tsa::AlgoBase> cl(M("tsa"), "LSLLearning", "rithm for the learning phase of the Adaptive Least Squares Lattice");
+		pybind11::class_<tsa::LSLLearning, std::shared_ptr<tsa::LSLLearning>, tsa::AlgoBase> cl(M("tsa"), "LSLLearning", "algorithm for the learning phase of the Adaptive Least Squares Lattice");
 		pybind11::handle cl_type = cl;
 
 		cl.def("__init__", [](tsa::LSLLearning *self_, unsigned int  const &a0, double  const &a1) { new (self_) tsa::LSLLearning(a0, a1); }, "doc");

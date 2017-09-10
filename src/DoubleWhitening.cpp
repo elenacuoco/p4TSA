@@ -16,41 +16,42 @@
 
 namespace tsa {
 
-    DoubleWhitening::DoubleWhitening(Dvector& ParcorF, Dvector& ParcorB, Dmatrix& ErrF, Dmatrix& ErrB, unsigned int OutputSize, unsigned int ExtraSize)
-    :
-    mBuffer(1),
-    mFirstCall(true),
-    mOutputSize(OutputSize),
-    mTotSize(ExtraSize + OutputSize),
-    mOrder(ParcorF.size()),
-    mParcorF(ParcorF),
-    mParcorB(ParcorB),
-    mErrF(ErrF),
-    mErrB(ErrB),
-    mStatus(0),
-    mEf(2, mOrder),
-    mEb(2, mOrder),
-    mWhitened(1, mTotSize) {
+    DoubleWhitening::DoubleWhitening(Dvector &ParcorF, Dvector &ParcorB, Dmatrix &ErrF, Dmatrix &ErrB,
+                                     unsigned int OutputSize, unsigned int ExtraSize)
+            :
+            mBuffer(1),
+            mFirstCall(true),
+            mOutputSize(OutputSize),
+            mTotSize(ExtraSize + OutputSize),
+            mOrder(ParcorF.size()),
+            mParcorF(ParcorF),
+            mParcorB(ParcorB),
+            mErrF(ErrF),
+            mErrB(ErrB),
+            mStatus(0),
+            mEf(2, mOrder),
+            mEb(2, mOrder),
+            mWhitened(1, mTotSize) {
     }
 
-    DoubleWhitening::DoubleWhitening(LatticeView& LV, unsigned int OutputSize, unsigned int ExtraSize)
-    :
-    mBuffer(1),
-    mFirstCall(true),
-    mOutputSize(OutputSize),
-    mTotSize(ExtraSize + OutputSize),
-    mOrder(LV.GetParcorF()->size()),
-    mParcorF(*LV.GetParcorF()),
-    mParcorB(*LV.GetParcorB()),
-    mErrF(*LV.GetErrorForward()),
-    mErrB(*LV.GetErrorBackward()),
-    mStatus(0),
-    mEf(2, mOrder),
-    mEb(2, mOrder),
-    mWhitened(1, mTotSize) {
+    DoubleWhitening::DoubleWhitening(LatticeView &LV, unsigned int OutputSize, unsigned int ExtraSize)
+            :
+            mBuffer(1),
+            mFirstCall(true),
+            mOutputSize(OutputSize),
+            mTotSize(ExtraSize + OutputSize),
+            mOrder(LV.GetParcorF()->size()),
+            mParcorF(*LV.GetParcorF()),
+            mParcorB(*LV.GetParcorB()),
+            mErrF(*LV.GetErrorForward()),
+            mErrB(*LV.GetErrorBackward()),
+            mStatus(0),
+            mEf(2, mOrder),
+            mEb(2, mOrder),
+            mWhitened(1, mTotSize) {
     }
 
-    void DoubleWhitening::init(LatticeView& LV) {
+    void DoubleWhitening::init(LatticeView &LV) {
         mOrder = LV.GetParcorF()->size();
         mParcorF = *LV.GetParcorF();
         mParcorB = *LV.GetParcorB();
@@ -63,11 +64,11 @@ namespace tsa {
 
     }
 
-    void DoubleWhitening::SetData(Dmatrix& Data, double scale) {
+    void DoubleWhitening::SetData(Dmatrix &Data, double scale) {
         mBuffer.AddPoints(Data, scale);
     }
 
-    void DoubleWhitening::GetData(Dmatrix& DWOutput) {
+    void DoubleWhitening::GetData(Dmatrix &DWOutput) {
         int F0 = mStatus;
         int F1 = 1 - mStatus;
         unsigned int t;
@@ -163,5 +164,37 @@ namespace tsa {
 
         mBuffer.DelPoints(mOutputSize);
     }
+
+    DoubleWhitening& DoubleWhitening::Input(SeqViewDouble &Data) {
+        Dmatrix *in = Data.GetData();
+
+        if (in->size1() != 1) {
+            LogSevere("DoubleWhitening: multichannels not implemented resize");
+            throw bad_matrix_size("Wrong Matrix size");
+        }
+
+        SetData(*in, Data.GetScale());
+
+        if (mFirstCall) {
+            mFirstCall = false;
+            mStartTime = Data.GetStart();
+            mSampling = Data.GetSampling();
+        }
+        return *this;
+
+    }
+
+    DoubleWhitening& DoubleWhitening::Output(SeqViewDouble &outdata) {
+        Dmatrix *out = outdata.GetData();
+        out->resize(1, mOutputSize);
+        GetData(*out);
+        outdata.SetStart(mStartTime);
+        outdata.SetSampling(mSampling);
+        outdata.SetScale(1.0);
+        mStartTime += mSampling * mOutputSize;
+
+        return *this;
+    }
+
 
 }

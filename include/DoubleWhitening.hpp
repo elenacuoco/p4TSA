@@ -85,12 +85,14 @@ namespace tsa {
         /// Constructor
         ///@param LV is the view containg the parameters for the Lattice Filter
 
-        DoubleWhitening(LatticeView& LV, unsigned int OutputSize, unsigned int ExtraSize);
+        DoubleWhitening(LatticeView &LV, unsigned int OutputSize, unsigned int ExtraSize);
 
-        DoubleWhitening(Dvector& ParcorF, Dvector& ParcorB, Dmatrix& ErrF, Dmatrix& ErrB, unsigned int OutputSize, unsigned int ExtraSize);
+        DoubleWhitening(Dvector &ParcorF, Dvector &ParcorB, Dmatrix &ErrF, Dmatrix &ErrB, unsigned int OutputSize,
+                        unsigned int ExtraSize);
 
 
-        void init(LatticeView& LV);
+        void init(LatticeView &LV);
+
         ///
         /// Destructor
         ///
@@ -104,8 +106,8 @@ namespace tsa {
          * @param InputData Matrix containing Time Series
          * @param WhitenedData Matrix containing the WhitenedData
          */
-        void operator<<(SeqViewDouble& Data) {
-            Dmatrix* in = Data.GetData();
+        void operator<<(SeqViewDouble &Data) {
+            Dmatrix *in = Data.GetData();
 
             if (in->size1() != 1) {
                 LogSevere("DoubleWhitening: multichannels not implemented resize");
@@ -121,15 +123,20 @@ namespace tsa {
             }
         }
 
-        void operator>>(SeqViewDouble& outdata) {
+        void operator>>(SeqViewDouble &outdata) {
             Dmatrix *out = outdata.GetData();
             out->resize(1, mOutputSize);
             GetData(*out);
             outdata.SetStart(mStartTime);
             outdata.SetSampling(mSampling);
             outdata.SetScale(1.0);
-            mStartTime += mSampling*mOutputSize;
+            mStartTime += mSampling * mOutputSize;
         }
+
+        DoubleWhitening& Input(SeqViewDouble &Data);
+
+        DoubleWhitening& Output(SeqViewDouble &outdata);
+
 
         void Load(const char *filename, const char *fmt = "txt") {
             eternity::xml_archive fa;
@@ -145,7 +152,7 @@ namespace tsa {
             fa.close();
         }
 
-        void xml_serialize(eternity::xml_archive& xml, const char *p) {
+        void xml_serialize(eternity::xml_archive &xml, const char *p) {
             char buffer[1024];
 
             if (xml.is_loading()) {
@@ -227,7 +234,7 @@ namespace tsa {
         /// @name Getters
         ///
         //@{
-        void GetData(Dmatrix& DWOutput);
+        void GetData(Dmatrix &DWOutput);
 
         ///
         ///@return the whitened buffer
@@ -242,7 +249,7 @@ namespace tsa {
         /// @name Setters
         ///
         //@{
-        void SetData(Dmatrix& Data, double scale);
+        void SetData(Dmatrix &Data, double scale);
         //@}
 
 
