@@ -1,3 +1,4 @@
+
 //
 // C++ Implementation: WavTransientDetection.cpp
 //
@@ -18,58 +19,58 @@
 namespace tsa {
 
     WDF2Classify::WDF2Classify(unsigned int window, unsigned int overlap, double thresh, double sigma, unsigned int ncoeff, enum WaveletThreshold::WaveletThresholding WTh)
-    :
-    mWindow(window),
-    mNCoeff(ncoeff),
-    mOverlap(overlap),
-    mStep(mWindow - mOverlap),
-    mThresh(thresh),
-    mSigma(sigma),
-    mSigmaH(sigma),
-    mSigma4(sigma),
-    mSigmaC8(sigma),
-    mSigma10(sigma),
-    mSigma12(sigma),
-    mSigmaC16(sigma),
-    mSigma20(sigma),
-    mSigmaC20(sigma),
-    mSigmaBsC206(sigma),
-    mSigmaBsC103(sigma),
-    mSigmaBsC309(sigma),
-    mSigmaDCT(sigma),
-    mDct(mWindow),
-    mBuffDct(1, mWindow),
-    mBuffer(1),
-    mBuff(1, mWindow),
-    mWtH(WaveletTransform::Haar),
-    mWTH(mWindow, mWtH),
-    mWt4(WaveletTransform::Daub4),
-    mWT4(mWindow, mWt4),
-    mWtC8(WaveletTransform::DaubC8),
-    mWTC8(mWindow, mWtC8),
-    mWt10(WaveletTransform::Daub10),
-    mWT10(mWindow, mWt10),
-    mWt12(WaveletTransform::Daub12),
-    mWT12(mWindow, mWt12),
-    mWtC16(WaveletTransform::DaubC16),
-    mWTC16(mWindow, mWtC16),
-    mWt20(WaveletTransform::Daub20),
-    mWT20(mWindow, mWt20),
-    mWtC20(WaveletTransform::DaubC20),
-    mWTC20(mWindow, mWtC20),
-    mWtBsC103(WaveletTransform::BsplineC103),
-    mWTBsC103(mWindow, mWtBsC103),
-    mWtBsC206(WaveletTransform::BsplineC206),
-    mWTBsC206(mWindow, mWtBsC206),
-    mWtBsC309(WaveletTransform::BsplineC309),
-    mWTBsC309(mWindow, mWtBsC309),
+            :
+            mWindow(window),
+            mNCoeff(ncoeff),
+            mOverlap(overlap),
+            mStep(mWindow - mOverlap),
+            mThresh(thresh),
+            mSigma(sigma),
+            mSigmaH(sigma),
+            mSigma4(sigma),
+            mSigmaC8(sigma),
+            mSigma10(sigma),
+            mSigma12(sigma),
+            mSigmaC16(sigma),
+            mSigma20(sigma),
+            mSigmaC20(sigma),
+            mSigmaBsC206(sigma),
+            mSigmaBsC103(sigma),
+            mSigmaBsC309(sigma),
+            mSigmaDCT(sigma),
+            mDct(mWindow),
+            mBuffDct(1, mWindow),
+            mBuffer(1),
+            mBuff(1, mWindow),
+            mWtH(WaveletTransform::Haar),
+            mWTH(mWindow, mWtH),
+            mWt4(WaveletTransform::Daub4),
+            mWT4(mWindow, mWt4),
+            mWtC8(WaveletTransform::DaubC8),
+            mWTC8(mWindow, mWtC8),
+            mWt10(WaveletTransform::Daub10),
+            mWT10(mWindow, mWt10),
+            mWt12(WaveletTransform::Daub12),
+            mWT12(mWindow, mWt12),
+            mWtC16(WaveletTransform::DaubC16),
+            mWTC16(mWindow, mWtC16),
+            mWt20(WaveletTransform::Daub20),
+            mWT20(mWindow, mWt20),
+            mWtC20(WaveletTransform::DaubC20),
+            mWTC20(mWindow, mWtC20),
+            mWtBsC103(WaveletTransform::BsplineC103),
+            mWTBsC103(mWindow, mWtBsC103),
+            mWtBsC206(WaveletTransform::BsplineC206),
+            mWTBsC206(mWindow, mWtBsC206),
+            mWtBsC309(WaveletTransform::BsplineC309),
+            mWTBsC309(mWindow, mWtBsC309),
 
-    //mT( WaveletThreshold::dohonojohnston ),
-    mT(WTh),
-    mWavThres(mWindow, mWindow, sigma),
+            //mT( WaveletThreshold::dohonojohnston ),
+            mT(WTh),
+            mWavThres(mWindow, mWindow, sigma),
 
-    mWindowing(mWindow),
-    mEvFF(mNCoeff) {
+            mWindowing(mWindow),
+            mEvFF(mNCoeff) {
     }
 
 
@@ -215,12 +216,12 @@ namespace tsa {
         for (unsigned int i = 0; i < mWindow; i++) {
 
             varC8 += (mBuff(0, i) * mBuff(0, i));
-            }
+        }
 
-            for (unsigned int i = 0; i < mNCoeff; i++) {
-                cC8[i] = mBuff(0, i);
+        for (unsigned int i = 0; i < mNCoeff; i++) {
+            cC8[i] = mBuff(0, i);
 
-            }
+        }
 
         //
         //
@@ -367,7 +368,7 @@ namespace tsa {
         }
         //
         //
-       for (unsigned int i = 0; i < mWindow; i++) {
+        for (unsigned int i = 0; i < mWindow; i++) {
             mBuff(0, i) = mBuffer(0, i);
         }
 
@@ -413,8 +414,8 @@ namespace tsa {
         }
         //
         //
-       for (unsigned int i = 0; i < mWindow; i++) {
-           mBuffDct(0, i) = mBuffer(0, i);
+        for (unsigned int i = 0; i < mWindow; i++) {
+            mBuffDct(0, i) = mBuffer(0, i);
         }
 
         mWindowing.execute(mBuffDct);
@@ -607,7 +608,7 @@ namespace tsa {
             level = levelC20;
             Wave = "DaubC20";
         }
-       if (varBsC206 >= varmax) {
+        if (varBsC206 >= varmax) {
             varmax = varBsC206;
             for (unsigned int i = 0; i < mNCoeff; i++) {
                 cmax[i] = cBsC206[i];
@@ -662,3 +663,4 @@ namespace tsa {
     }
 
 }
+
