@@ -32,6 +32,7 @@ namespace tsa {
     mTime(0.0),
     mSNR(0.0),
     mlevel(0.0),
+    mWave("Haar"),
     mCoeff(NumCoeff) {
 
 

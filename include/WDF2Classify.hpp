@@ -119,6 +119,7 @@ namespace tsa {
             SetData(*in, Data.GetScale());
             mStartTime = Data.GetStart();
             mSampling = Data.GetSampling();
+            mStartTime -= mSampling * static_cast<double> (WDF2Classify::GetDataNeeded());
         }
 
         void operator()(SeqViewDouble& Data, double sigma) {
@@ -133,13 +134,14 @@ namespace tsa {
             mStartTime = Data.GetStart();
             mSampling = Data.GetSampling();
             mWavThres.SetSigma(sigma);
+            mStartTime -= mSampling * static_cast<double> (WDF2Classify::GetDataNeeded());
         }
 
 
 
 
 
-        void operator()(EventFullFeatured& Ev) {
+        int operator()(EventFullFeatured& Ev) {
             double abov;
             Dvector Cmax;
             int level;
@@ -158,7 +160,9 @@ namespace tsa {
                 mEvFF.mWave = Wave;
                 Ev = mEvFF;
             }
+
             mStartTime += mSampling * static_cast<double> (mStep);
+            return res;
         }
 
 

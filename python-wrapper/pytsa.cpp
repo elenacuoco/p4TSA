@@ -2398,7 +2398,7 @@ void bind_WaveletThreshold(std::function< pybind11::module &(std::string const &
 		cl.def(pybind11::init<const class tsa::WDF2Classify &>(), pybind11::arg(""));
 
 		cl.def("__call__", (void (tsa::WDF2Classify::*)(class tsa::SeqView<double> &, double)) &tsa::WDF2Classify::operator(), "C++: tsa::WDF2Classify::operator()(class tsa::SeqView<double> &, double) --> void", pybind11::arg("Data"), pybind11::arg("sigma"));
-		cl.def("__call__", (void (tsa::WDF2Classify::*)(class tsa::EventFullFeatured &)) &tsa::WDF2Classify::operator(), "C++: tsa::WDF2Classify::operator()(class tsa::EventFullFeatured &) --> void", pybind11::arg("Ev"));
+		cl.def("__call__", (int (tsa::WDF2Classify::*)(class tsa::EventFullFeatured &)) &tsa::WDF2Classify::operator(), "C++: tsa::WDF2Classify::operator()(class tsa::EventFullFeatured &) --> void", pybind11::arg("Ev"));
 		cl.def("GetEvent", (void (tsa::WDF2Classify::*)(class tsa::EventFullFeatured &)) &tsa::WDF2Classify::GetEvent, "C++: tsa::WDF2Classify::GetEvent(class tsa::EventFullFeatured &) --> void", pybind11::arg("Ev"));
 		cl.def("GetDataNeeded", (int (tsa::WDF2Classify::*)()) &tsa::WDF2Classify::GetDataNeeded, "Get the number of data needed in order to be able to \n call GetData successfully. If the returned value is less or \n equal than zero no data are needed.\n\n \n the needed data\n\nC++: tsa::WDF2Classify::GetDataNeeded() --> int");
 		cl.def("assign", (class tsa::WDF2Classify & (tsa::WDF2Classify::*)(const class tsa::WDF2Classify &)) &tsa::WDF2Classify::operator=, "C++: tsa::WDF2Classify::operator=(const class tsa::WDF2Classify &) --> class tsa::WDF2Classify &", pybind11::return_value_policy::automatic, pybind11::arg(""));
