@@ -115,8 +115,8 @@ namespace tsa {
         /// @return a returned value
         ///
         /// Declaration of execute operation
-        void operator()(SeqViewDouble& WT, enum WaveletThresholding t, enum ThresholdingMode m = hard);
-        void operator()(Dmatrix& WT, enum WaveletThresholding t, enum ThresholdingMode m = hard);
+        void operator()(SeqViewDouble& WT, enum WaveletThresholding t, enum ThresholdingMode m = soft);
+        void operator()(Dmatrix& WT, enum WaveletThresholding t, enum ThresholdingMode m = soft);
         //@}
 
         ///

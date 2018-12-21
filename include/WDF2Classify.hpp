@@ -119,7 +119,7 @@ namespace tsa {
             SetData(*in, Data.GetScale());
             mStartTime = Data.GetStart();
             mSampling = Data.GetSampling();
-            mStartTime -= mSampling * static_cast<double> (WDF2Classify::GetDataNeeded());
+            //mStartTime -= mSampling * static_cast<double> (WDF2Classify::GetDataNeeded());
         }
 
         void operator()(SeqViewDouble& Data, double sigma) {
@@ -134,7 +134,7 @@ namespace tsa {
             mStartTime = Data.GetStart();
             mSampling = Data.GetSampling();
             mWavThres.SetSigma(sigma);
-            mStartTime -= mSampling * static_cast<double> (WDF2Classify::GetDataNeeded());
+
         }
 
 
