@@ -53,6 +53,13 @@ namespace tsa {
         mAutoIncrement = true;
     }
 
+    FrameIChannel::FrameIChannel(FrVect *frv, const std::string& channelName, double dLength, double tStart) {
+        mChannelName = channelName;
+        mDataLength = dLength;
+        mStartTime = tStart;
+        mFrameVect = frv;
+        mAutoIncrement = true;
+    }
     FrameIChannel::~FrameIChannel() {
         if (mFrameVect != NULL) {
             FrVectFree(mFrameVect);
