@@ -3105,7 +3105,6 @@ void bind_FrameIChannel(std::function< pybind11::module &(std::string const &nam
 		cl.def("__init__", [](tsa::FrameIChannel *self_, const class std::basic_string<char> & a0, const class std::basic_string<char> & a1) { new (self_) tsa::FrameIChannel(a0, a1); }, "doc");
 		cl.def("__init__", [](tsa::FrameIChannel *self_, const class std::basic_string<char> & a0, const class std::basic_string<char> & a1, double  const &a2) { new (self_) tsa::FrameIChannel(a0, a1, a2); }, "doc");
 		cl.def(pybind11::init<const class std::basic_string<char> &, const class std::basic_string<char> &, double, double>(), pybind11::arg("fileName"), pybind11::arg("channelName"), pybind11::arg("dLength"), pybind11::arg("tStart"));
-		cl.def(pybind11::init<FrVect *frv, const class std::basic_string<char> &, double, double>(), pybind11::arg("fileName"), pybind11::arg("channelName"), pybind11::arg("dLength"), pybind11::arg("tStart"));
 		cl.def(pybind11::init<const class tsa::FrameIChannel &>(), pybind11::arg(""));
 
 		cl.def("NextSlice", (double (tsa::FrameIChannel::*)()) &tsa::FrameIChannel::NextSlice, "C++: tsa::FrameIChannel::NextSlice() --> double");

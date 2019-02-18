@@ -93,8 +93,6 @@ namespace tsa {
         ///
         FrameIChannel(const std::string& fileName, const std::string& channelName,
                 double dLength = 1.0, double tStart = 0.0);
-        FrameIChannel(FrVect *frv, const std::string& channelName,
-                double dLength=1.0, double tStart=0.0);
 
 
         ///
