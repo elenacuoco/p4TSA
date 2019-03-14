@@ -48,7 +48,12 @@ namespace tsa {
 
         mChannelName = channelName;
         mDataLength = dLength;
-        mStartTime = tStart;
+        if (tStart == 0.0) {
+            mStartTime = FrFileITStart(miFile);
+        }
+        else {
+            mStartTime = tStart;
+        }
         mFrameVect = NULL;
         mAutoIncrement = true;
     }
