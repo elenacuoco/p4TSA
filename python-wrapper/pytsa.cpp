@@ -2196,6 +2196,7 @@ void bind_TukeyHannWindow(std::function< pybind11::module &(std::string const &n
 #include <SeqView.hpp>
 #include <Util.hpp>
 #include <WDF2Classify.hpp>
+#include <WDF2Reconstruct.hpp>
 #include <WavReconstruction.hpp>
 #include <WaveletThreshold.hpp>
 #include <WaveletTransform.hpp>
@@ -2402,6 +2403,21 @@ void bind_WaveletThreshold(std::function< pybind11::module &(std::string const &
 		cl.def("GetEvent", (void (tsa::WDF2Classify::*)(class tsa::EventFullFeatured &)) &tsa::WDF2Classify::GetEvent, "C++: tsa::WDF2Classify::GetEvent(class tsa::EventFullFeatured &) --> void", pybind11::arg("Ev"));
 		cl.def("GetDataNeeded", (int (tsa::WDF2Classify::*)()) &tsa::WDF2Classify::GetDataNeeded, "Get the number of data needed in order to be able to \n call GetData successfully. If the returned value is less or \n equal than zero no data are needed.\n\n \n the needed data\n\nC++: tsa::WDF2Classify::GetDataNeeded() --> int");
 		cl.def("assign", (class tsa::WDF2Classify & (tsa::WDF2Classify::*)(const class tsa::WDF2Classify &)) &tsa::WDF2Classify::operator=, "C++: tsa::WDF2Classify::operator=(const class tsa::WDF2Classify &) --> class tsa::WDF2Classify &", pybind11::return_value_policy::automatic, pybind11::arg(""));
+	}
+	{ // tsa::WDF2Reconstruct file:WDF2Reconstruct.hpp line:85
+					pybind11::class_<tsa::WDF2Reconstruct, std::shared_ptr<tsa::WDF2Reconstruct>, tsa::AlgoBase> cl(M("tsa"), "WDF2Reconstruct", "Time domain detection of transients based on wavelet transform");
+					pybind11::handle cl_type = cl;
+
+					cl.def("__init__", [](tsa::WDF2Reconstruct *self_, unsigned int  const &a0, unsigned int  const &a1, double  const &a2, double  const &a3, unsigned int  const &a4) { new (self_) tsa::WDF2Reconstruct(a0, a1, a2, a3, a4); }, "doc");
+					cl.def(pybind11::init<unsigned int, unsigned int, double, double, unsigned int, enum tsa::WaveletThreshold::WaveletThresholding>(), pybind11::arg("window"), pybind11::arg("overlap"), pybind11::arg("thresh"), pybind11::arg("sigma"), pybind11::arg("ncoeff"), pybind11::arg("WTh"));
+
+					cl.def(pybind11::init<const class tsa::WDF2Reconstruct &>(), pybind11::arg(""));
+
+					cl.def("__call__", (void (tsa::WDF2Reconstruct::*)(class tsa::SeqView<double> &, double)) &tsa::WDF2Reconstruct::operator(), "C++: tsa::WDF2Reconstruct::operator()(class tsa::SeqView<double> &, double) --> void", pybind11::arg("Data"), pybind11::arg("sigma"));
+					cl.def("__call__", (int (tsa::WDF2Reconstruct::*)(class tsa::EventFullFeatured &)) &tsa::WDF2Reconstruct::operator(), "C++: tsa::WDF2Reconstruct::operator()(class tsa::EventFullFeatured &) --> void", pybind11::arg("Ev"));
+					cl.def("GetEvent", (void (tsa::WDF2Reconstruct::*)(class tsa::EventFullFeatured &)) &tsa::WDF2Reconstruct::GetEvent, "C++: tsa::WDF2Reconstruct::GetEvent(class tsa::EventFullFeatured &) --> void", pybind11::arg("Ev"));
+					cl.def("GetDataNeeded", (int (tsa::WDF2Reconstruct::*)()) &tsa::WDF2Reconstruct::GetDataNeeded, "Get the number of data needed in order to be able to \n call GetData successfully. If the returned value is less or \n equal than zero no data are needed.\n\n \n the needed data\n\nC++: tsa::WDF2Classify::GetDataNeeded() --> int");
+					cl.def("assign", (class tsa::WDF2Reconstruct & (tsa::WDF2Reconstruct::*)(const class tsa::WDF2Reconstruct &)) &tsa::WDF2Reconstruct::operator=, "C++: tsa::WDF2Reconstruct::operator=(const class tsa::WDF2Reconstruct &) --> class tsa::WDF2Reconstruct &", pybind11::return_value_policy::automatic, pybind11::arg(""));
 	}
 	{ // tsa::WelchWindow file:WelchWindow.hpp line:69
 		pybind11::class_<tsa::WelchWindow, std::shared_ptr<tsa::WelchWindow>, PyCallBack_WelchWindow, tsa::BaseWindow> cl(M("tsa"), "WelchWindow", "Welch windowing algorithm\n\n ");
@@ -3198,4 +3214,4 @@ PYBIND11_PLUGIN(pytsa) {
 // FrameIChannel.cpp
 
 // Modules list file: ./python-wrapper/pytsa.modules
-// eternity tsa 
+// eternity tsa

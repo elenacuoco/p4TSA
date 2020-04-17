@@ -60,6 +60,7 @@ set(SOURCE_FILES
         src/WaveletTransform.cpp
         src/WavReconstruction.cpp
         src/WDF2Classify.cpp
+        src/WDF2Reconstruct.cpp
         src/WindowFactory.cpp)
 include_directories(include include/eternity $ENV{ENV_ROOT}/include $ENV{ENV_ROOT}/include/gsl $ENV{ENV_ROOT}/include/boost)
 

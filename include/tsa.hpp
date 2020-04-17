@@ -56,6 +56,7 @@
 #include <WaveletTransform.hpp>
 #include <WavReconstruction.hpp>
 #include <WDF2Classify.hpp>
+#include <WDF2Reconstruct.hpp>
 #include <WelchWindow.hpp>
 #include <WindowFactory.hpp>
 // Interfaces
