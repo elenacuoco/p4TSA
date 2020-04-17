@@ -1,0 +1,13 @@
+.. _exhale_define_fpconfig_8hpp_1a0950df179ac5b6f5945f00e565619943:
+
+Define EVAL_MAX_REC_LEVEL
+=========================
+
+- Defined in :ref:`file_include_fpconfig.hpp`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: EVAL_MAX_REC_LEVEL

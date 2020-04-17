@@ -1,0 +1,13 @@
+.. _exhale_define_tsaLog_8hpp_1ad89190533829c21d411a8d833c199727:
+
+Define LOG_DEBUG_LEVEL_3
+========================
+
+- Defined in :ref:`file_include_tsaLog.hpp`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: LOG_DEBUG_LEVEL_3

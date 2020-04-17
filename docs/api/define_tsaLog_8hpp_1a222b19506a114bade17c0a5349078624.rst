@@ -1,0 +1,13 @@
+.. _exhale_define_tsaLog_8hpp_1a222b19506a114bade17c0a5349078624:
+
+Define LOGH1
+============
+
+- Defined in :ref:`file_include_tsaLog.hpp`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: LOGH1
