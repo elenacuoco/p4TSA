@@ -1,0 +1,457 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_b_l_interpolation_8hpp" kind="file" language="C++">
+    <compoundname>BLInterpolation.hpp</compoundname>
+    <includes local="no">queue</includes>
+    <includes local="no">deque</includes>
+    <includes local="no">gsl/gsl_sf.h</includes>
+    <includes refid="_algo_base_8hpp" local="no">AlgoBase.hpp</includes>
+    <includes refid="_seq_view_8hpp" local="no">SeqView.hpp</includes>
+    <includedby refid="_b_l_interpolation_8cpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/src/BLInterpolation.cpp</includedby>
+    <includedby refid="tsa_8hpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/include/tsa.hpp</includedby>
+    <incdepgraph>
+      <node id="925">
+        <label>queue</label>
+      </node>
+      <node id="955">
+        <label>tsaTraits.hpp</label>
+        <link refid="tsa_traits_8hpp"/>
+        <childnode refid="956" relation="include">
+        </childnode>
+      </node>
+      <node id="936">
+        <label>eternity.hpp</label>
+        <link refid="eternity_8hpp"/>
+        <childnode refid="937" relation="include">
+        </childnode>
+        <childnode refid="940" relation="include">
+        </childnode>
+        <childnode refid="945" relation="include">
+        </childnode>
+        <childnode refid="948" relation="include">
+        </childnode>
+      </node>
+      <node id="942">
+        <label>stdlib.h</label>
+      </node>
+      <node id="929">
+        <label>stdexcept</label>
+      </node>
+      <node id="950">
+        <label>tsaTypes.hpp</label>
+        <link refid="tsa_types_8hpp"/>
+        <childnode refid="931" relation="include">
+        </childnode>
+        <childnode refid="932" relation="include">
+        </childnode>
+        <childnode refid="951" relation="include">
+        </childnode>
+        <childnode refid="933" relation="include">
+        </childnode>
+        <childnode refid="936" relation="include">
+        </childnode>
+      </node>
+      <node id="934">
+        <label>string</label>
+      </node>
+      <node id="937">
+        <label>eternity/dynamic.hpp</label>
+        <link refid="dynamic_8hpp"/>
+        <childnode refid="938" relation="include">
+        </childnode>
+        <childnode refid="939" relation="include">
+        </childnode>
+        <childnode refid="934" relation="include">
+        </childnode>
+      </node>
+      <node id="947">
+        <label>map</label>
+      </node>
+      <node id="952">
+        <label>tsaLog.hpp</label>
+        <link refid="tsa_log_8hpp"/>
+        <childnode refid="930" relation="include">
+        </childnode>
+        <childnode refid="931" relation="include">
+        </childnode>
+        <childnode refid="953" relation="include">
+        </childnode>
+      </node>
+      <node id="931">
+        <label>fstream</label>
+      </node>
+      <node id="946">
+        <label>xmlscanner.hpp</label>
+        <link refid="xmlscanner_8hpp"/>
+        <childnode refid="941" relation="include">
+        </childnode>
+        <childnode refid="942" relation="include">
+        </childnode>
+        <childnode refid="943" relation="include">
+        </childnode>
+        <childnode refid="947" relation="include">
+        </childnode>
+        <childnode refid="944" relation="include">
+        </childnode>
+        <childnode refid="931" relation="include">
+        </childnode>
+        <childnode refid="934" relation="include">
+        </childnode>
+        <childnode refid="930" relation="include">
+        </childnode>
+      </node>
+      <node id="935">
+        <label>tsaSerialize.hpp</label>
+        <link refid="tsa_serialize_8hpp"/>
+        <childnode refid="929" relation="include">
+        </childnode>
+        <childnode refid="930" relation="include">
+        </childnode>
+        <childnode refid="931" relation="include">
+        </childnode>
+        <childnode refid="936" relation="include">
+        </childnode>
+        <childnode refid="950" relation="include">
+        </childnode>
+      </node>
+      <node id="959">
+        <label>fparser.hpp</label>
+        <link refid="fparser_8hpp"/>
+        <childnode refid="934" relation="include">
+        </childnode>
+        <childnode refid="947" relation="include">
+        </childnode>
+        <childnode refid="943" relation="include">
+        </childnode>
+      </node>
+      <node id="924">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/BLInterpolation.hpp</label>
+        <link refid="_b_l_interpolation_8hpp"/>
+        <childnode refid="925" relation="include">
+        </childnode>
+        <childnode refid="926" relation="include">
+        </childnode>
+        <childnode refid="927" relation="include">
+        </childnode>
+        <childnode refid="928" relation="include">
+        </childnode>
+        <childnode refid="960" relation="include">
+        </childnode>
+      </node>
+      <node id="928">
+        <label>AlgoBase.hpp</label>
+        <link refid="_algo_base_8hpp"/>
+        <childnode refid="929" relation="include">
+        </childnode>
+        <childnode refid="930" relation="include">
+        </childnode>
+        <childnode refid="931" relation="include">
+        </childnode>
+        <childnode refid="932" relation="include">
+        </childnode>
+        <childnode refid="933" relation="include">
+        </childnode>
+        <childnode refid="934" relation="include">
+        </childnode>
+        <childnode refid="935" relation="include">
+        </childnode>
+        <childnode refid="950" relation="include">
+        </childnode>
+        <childnode refid="952" relation="include">
+        </childnode>
+        <childnode refid="954" relation="include">
+        </childnode>
+        <childnode refid="960" relation="include">
+        </childnode>
+        <childnode refid="962" relation="include">
+        </childnode>
+      </node>
+      <node id="940">
+        <label>eternity/persist.hpp</label>
+        <link refid="persist_8hpp"/>
+        <childnode refid="937" relation="include">
+        </childnode>
+        <childnode refid="941" relation="include">
+        </childnode>
+        <childnode refid="942" relation="include">
+        </childnode>
+        <childnode refid="943" relation="include">
+        </childnode>
+        <childnode refid="944" relation="include">
+        </childnode>
+        <childnode refid="931" relation="include">
+        </childnode>
+      </node>
+      <node id="958">
+        <label>string.h</label>
+      </node>
+      <node id="939">
+        <label>typeinfo</label>
+      </node>
+      <node id="933">
+        <label>boost/numeric/ublas/io.hpp</label>
+      </node>
+      <node id="953">
+        <label>unistd.h</label>
+      </node>
+      <node id="957">
+        <label>tsaUtilityFunctions.hpp</label>
+        <link refid="tsa_utility_functions_8hpp"/>
+        <childnode refid="958" relation="include">
+        </childnode>
+        <childnode refid="959" relation="include">
+        </childnode>
+        <childnode refid="956" relation="include">
+        </childnode>
+        <childnode refid="931" relation="include">
+        </childnode>
+      </node>
+      <node id="943">
+        <label>vector</label>
+      </node>
+      <node id="954">
+        <label>BaseView.hpp</label>
+        <link refid="_base_view_8hpp"/>
+        <childnode refid="947" relation="include">
+        </childnode>
+        <childnode refid="934" relation="include">
+        </childnode>
+        <childnode refid="950" relation="include">
+        </childnode>
+        <childnode refid="955" relation="include">
+        </childnode>
+        <childnode refid="957" relation="include">
+        </childnode>
+        <childnode refid="935" relation="include">
+        </childnode>
+        <childnode refid="952" relation="include">
+        </childnode>
+      </node>
+      <node id="951">
+        <label>boost/numeric/ublas/matrix_proxy.hpp</label>
+      </node>
+      <node id="949">
+        <label>sstream</label>
+      </node>
+      <node id="961">
+        <label>FrameL.h</label>
+      </node>
+      <node id="962">
+        <label>AlgoExceptions.hpp</label>
+        <link refid="_algo_exceptions_8hpp"/>
+        <childnode refid="929" relation="include">
+        </childnode>
+        <childnode refid="934" relation="include">
+        </childnode>
+      </node>
+      <node id="960">
+        <label>SeqView.hpp</label>
+        <link refid="_seq_view_8hpp"/>
+        <childnode refid="932" relation="include">
+        </childnode>
+        <childnode refid="951" relation="include">
+        </childnode>
+        <childnode refid="933" relation="include">
+        </childnode>
+        <childnode refid="954" relation="include">
+        </childnode>
+        <childnode refid="961" relation="include">
+        </childnode>
+      </node>
+      <node id="941">
+        <label>math.h</label>
+      </node>
+      <node id="932">
+        <label>boost/numeric/ublas/matrix.hpp</label>
+      </node>
+      <node id="930">
+        <label>iostream</label>
+      </node>
+      <node id="926">
+        <label>deque</label>
+      </node>
+      <node id="945">
+        <label>eternity/persist_xml.hpp</label>
+        <link refid="persist__xml_8hpp"/>
+        <childnode refid="940" relation="include">
+        </childnode>
+        <childnode refid="946" relation="include">
+        </childnode>
+        <childnode refid="926" relation="include">
+        </childnode>
+      </node>
+      <node id="956">
+        <label>complex</label>
+      </node>
+      <node id="948">
+        <label>eternity/algorithms.hpp</label>
+        <link refid="algorithms_8hpp"/>
+        <childnode refid="940" relation="include">
+        </childnode>
+        <childnode refid="945" relation="include">
+        </childnode>
+        <childnode refid="946" relation="include">
+        </childnode>
+        <childnode refid="949" relation="include">
+        </childnode>
+      </node>
+      <node id="944">
+        <label>algorithm</label>
+      </node>
+      <node id="927">
+        <label>gsl/gsl_sf.h</label>
+      </node>
+      <node id="938">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="964">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/BLInterpolation.cpp</label>
+        <link refid="_b_l_interpolation_8cpp"/>
+      </node>
+      <node id="963">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/BLInterpolation.hpp</label>
+        <link refid="_b_l_interpolation_8hpp"/>
+        <childnode refid="964" relation="include">
+        </childnode>
+        <childnode refid="965" relation="include">
+        </childnode>
+      </node>
+      <node id="965">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/tsa.hpp</label>
+        <link refid="tsa_8hpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classtsa_1_1_b_l_interpolation" prot="public">tsa::BLInterpolation</innerclass>
+    <innernamespace refid="namespacetsa">tsa</innernamespace>
+    <briefdescription>
+<para>Band limited interpolation. </para>    </briefdescription>
+    <detaileddescription>
+<para>Copyright (C) 2004 by Giancarlo Cella <ulink url="mailto:giancarlo.cella@pi.infn.it">giancarlo.cella@pi.infn.it</ulink></para><para>This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</para><para>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</para><para>You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.</para><para><simplesect kind="author"><para>Giancarlo Cella <ulink url="mailto:giancarlo.cella@pi.infn.it">giancarlo.cella@pi.infn.it</ulink> </para></simplesect>
+<simplesect kind="date"><para>Sat Nov 13 17:21:06 2004 </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="28"><highlight class="preprocessor">#ifndef<sp/>__BLINTERPOLATION_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__BLINTERPOLATION_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="preprocessor">#include<sp/>&lt;queue&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;deque&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gsl/gsl_sf.h&gt;</highlight></codeline>
+<codeline lineno="39"></codeline>
+<codeline lineno="44"><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_algo_base_8hpp" kindref="compound">AlgoBase.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_seq_view_8hpp" kindref="compound">SeqView.hpp</ref>&gt;</highlight></codeline>
+<codeline lineno="47"></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"></codeline>
+<codeline lineno="67"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetsa" kindref="compound">tsa</ref><sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="classtsa_1_1_b_l_interpolation" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classtsa_1_1_b_l_interpolation" kindref="compound">BLInterpolation</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_algo_base" kindref="compound">AlgoBase</ref><sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="classtsa_1_1_b_l_interpolation_1ae11719d30e353da11f076289b87c7b1d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_b_l_interpolation_1ae11719d30e353da11f076289b87c7b1d" kindref="member">NormalizationType</ref><sp/>{</highlight></codeline>
+<codeline lineno="78" refid="classtsa_1_1_b_l_interpolation_1ae11719d30e353da11f076289b87c7b1da2eb150e3b7e6ed1aff3dadd9dae02b5b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_b_l_interpolation_1ae11719d30e353da11f076289b87c7b1da2eb150e3b7e6ed1aff3dadd9dae02b5b" kindref="member">NONormalization</ref>,</highlight></codeline>
+<codeline lineno="79" refid="classtsa_1_1_b_l_interpolation_1ae11719d30e353da11f076289b87c7b1da203bdef13ad529ea833b62c762c1a395" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_b_l_interpolation_1ae11719d30e353da11f076289b87c7b1da203bdef13ad529ea833b62c762c1a395" kindref="member">DCNormalization</ref></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_b_l_interpolation_1aef84f84620a59efee8d1e2bb1cffd46d" kindref="member">BLInterpolation</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>channels,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>outdata,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>irate,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>orate,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>order,</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>alpha<sp/>=<sp/>1.0,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_b_l_interpolation_1ae11719d30e353da11f076289b87c7b1d" kindref="member">NormalizationType</ref><sp/>nt<sp/>=<sp/><ref refid="classtsa_1_1_b_l_interpolation_1ae11719d30e353da11f076289b87c7b1da2eb150e3b7e6ed1aff3dadd9dae02b5b" kindref="member">NONormalization</ref></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_b_l_interpolation_1aef84f84620a59efee8d1e2bb1cffd46d" kindref="member">BLInterpolation</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_b_l_interpolation" kindref="compound">BLInterpolation</ref>&amp;<sp/>from);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_b_l_interpolation_1a67cd882b93c7643cd0fdce08b7fa876f" kindref="member">~BLInterpolation</ref>();</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_b_l_interpolation" kindref="compound">BLInterpolation</ref>&amp;<sp/><ref refid="classtsa_1_1_b_l_interpolation_1a71b2bc1e0a68abe528d5c753b4a5c1c1" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_b_l_interpolation" kindref="compound">BLInterpolation</ref>&amp;<sp/>from);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_b_l_interpolation" kindref="compound">BLInterpolation</ref>&amp;<sp/><ref refid="classtsa_1_1_b_l_interpolation_1ad4ce3e5cb5bc89e8de11a0dc1d54121e" kindref="member">Input</ref>(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>indata);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_b_l_interpolation" kindref="compound">BLInterpolation</ref>&amp;<sp/><ref refid="classtsa_1_1_b_l_interpolation_1aa67c8de249d447dea6bb6b9d353139bc" kindref="member">Output</ref>(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>outdata);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178" refid="classtsa_1_1_b_l_interpolation_1a10f95a5ac0e7cc6981d30ed420404a3d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_b_l_interpolation_1a10f95a5ac0e7cc6981d30ed420404a3d" kindref="member">GetDataAvailable</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_b_l_interpolation_1adfb54e2b5bd52c05c3caaf062f97d9b6" kindref="member">resampled_available</ref>();</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_b_l_interpolation_1a30ed4268c0691edf852ddb3c2ce541c7" kindref="member">GetData</ref>(<ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref>&amp;<sp/>outdata);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_b_l_interpolation_1a4fa7c4bfb9e12a3eb6767fc6b128093c" kindref="member">GetStartTime</ref>();</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"></codeline>
+<codeline lineno="206"></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_b_l_interpolation_1ac8a67161f8c0aeb39ced9d36664860ba" kindref="member">SetData</ref>(<ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref>&amp;<sp/>indata,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>scale);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_b_l_interpolation_1aff26a1c884d2733cebf280a556987e51" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_b_l_interpolation_1a7b429b2867b887e3fec9d44c584f026c" kindref="member">NORenormalization</ref>();</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_b_l_interpolation_1a5d7f3b437e0aa09df7831c2b72a39f62" kindref="member">DCRenormalization</ref>();</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_b_l_interpolation_1a8eeac8a3a0439f46764cf1455bd2febe" kindref="member">Kaiser</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244" refid="classtsa_1_1_b_l_interpolation_1a1299ee71922f13c989b9961a0adcd14f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_b_l_interpolation_1a1299ee71922f13c989b9961a0adcd14f" kindref="member">mChannels</ref>;<sp/></highlight></codeline>
+<codeline lineno="245" refid="classtsa_1_1_b_l_interpolation_1ab8ea8e129045096ccb53d1b5e6d27329" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_b_l_interpolation_1ab8ea8e129045096ccb53d1b5e6d27329" kindref="member">mOutData</ref>;<sp/></highlight></codeline>
+<codeline lineno="246" refid="classtsa_1_1_b_l_interpolation_1a3fc5200b462e9fbd87644f2d5bfa4381" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_b_l_interpolation_1a3fc5200b462e9fbd87644f2d5bfa4381" kindref="member">mInputRate</ref>;<sp/></highlight></codeline>
+<codeline lineno="247" refid="classtsa_1_1_b_l_interpolation_1a4511cbb0d6e97a901e8d52cffad670a1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_b_l_interpolation_1a4511cbb0d6e97a901e8d52cffad670a1" kindref="member">mOutputRate</ref>;<sp/></highlight></codeline>
+<codeline lineno="248" refid="classtsa_1_1_b_l_interpolation_1aa8c5e5637c561ed9b3eabe6b8027e5da" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_b_l_interpolation_1aa8c5e5637c561ed9b3eabe6b8027e5da" kindref="member">mOrder</ref>;<sp/></highlight></codeline>
+<codeline lineno="249" refid="classtsa_1_1_b_l_interpolation_1a768c64c85e393f975e2caaaba7bc5f90" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_b_l_interpolation_1a768c64c85e393f975e2caaaba7bc5f90" kindref="member">mAlpha</ref>;<sp/></highlight></codeline>
+<codeline lineno="251" refid="classtsa_1_1_b_l_interpolation_1ab7b685a2b64f9139ca4ea3907f6b0a07" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::queue&lt;Dvector*&gt;<sp/><ref refid="classtsa_1_1_b_l_interpolation_1ab7b685a2b64f9139ca4ea3907f6b0a07" kindref="member">mRepository</ref>;<sp/></highlight></codeline>
+<codeline lineno="252" refid="classtsa_1_1_b_l_interpolation_1ad40701a7e17ce4a2368605c0e77ec6a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::deque&lt;Dvector*&gt;<sp/><ref refid="classtsa_1_1_b_l_interpolation_1ad40701a7e17ce4a2368605c0e77ec6a7" kindref="member">mBuffer</ref>;<sp/></highlight></codeline>
+<codeline lineno="253" refid="classtsa_1_1_b_l_interpolation_1a7e179ad859cffc61384efe0bc841255b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_b_l_interpolation_1a7e179ad859cffc61384efe0bc841255b" kindref="member">mBufferBase</ref>;<sp/></highlight></codeline>
+<codeline lineno="256" refid="classtsa_1_1_b_l_interpolation_1a21a038009c7323c00263367ca678f767" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_b_l_interpolation_1a21a038009c7323c00263367ca678f767" kindref="member">mRho</ref>;<sp/></highlight></codeline>
+<codeline lineno="257" refid="classtsa_1_1_b_l_interpolation_1ab0b2cee3d403a0ae8d3cc3d5c0618f02" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref><sp/>*<ref refid="classtsa_1_1_b_l_interpolation_1ab0b2cee3d403a0ae8d3cc3d5c0618f02" kindref="member">mFilter</ref>;<sp/></highlight></codeline>
+<codeline lineno="258" refid="classtsa_1_1_b_l_interpolation_1ac7684f2b6ae85030eac7992412df45aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_b_l_interpolation_1ac7684f2b6ae85030eac7992412df45aa" kindref="member">mFilterCenter</ref>;<sp/></highlight></codeline>
+<codeline lineno="260" refid="classtsa_1_1_b_l_interpolation_1a5390ed81fda1345890543a95ab91a6e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref><sp/><ref refid="classtsa_1_1_b_l_interpolation_1a5390ed81fda1345890543a95ab91a6e2" kindref="member">mNormalization</ref>;</highlight></codeline>
+<codeline lineno="261" refid="classtsa_1_1_b_l_interpolation_1aa41a64576f7c0df22870378780d8f73d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_b_l_interpolation_1ae11719d30e353da11f076289b87c7b1d" kindref="member">NormalizationType</ref><sp/><ref refid="classtsa_1_1_b_l_interpolation_1aa41a64576f7c0df22870378780d8f73d" kindref="member">mNormalizationType</ref>;</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263" refid="classtsa_1_1_b_l_interpolation_1adf29f91edc45fbbf8127732fa4b971f0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_b_l_interpolation_1adf29f91edc45fbbf8127732fa4b971f0" kindref="member">mFirstData</ref>;<sp/></highlight></codeline>
+<codeline lineno="264" refid="classtsa_1_1_b_l_interpolation_1afed34dd05a75cc0eb6ce313a584aa9ef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_b_l_interpolation_1afed34dd05a75cc0eb6ce313a584aa9ef" kindref="member">mStartTime</ref>;<sp/></highlight></codeline>
+<codeline lineno="265" refid="classtsa_1_1_b_l_interpolation_1a76258e5da0c92a792af987a3f2cf972d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_b_l_interpolation_1a76258e5da0c92a792af987a3f2cf972d" kindref="member">mSampling</ref>;<sp/></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_b_l_interpolation_1a23d1958ad6c23572e21c39ad421bf2a2" kindref="member">add_back_point</ref>();</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_b_l_interpolation_1ac9f1957097458403fd2919445d3323db" kindref="member">del_front_point</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n);</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_b_l_interpolation_1adfb54e2b5bd52c05c3caaf062f97d9b6" kindref="member">resampled_available</ref>();</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>end<sp/>namespace<sp/>tsa</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>__BLINTERPOLATION_HPP</highlight></codeline>
+    </programlisting>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/BLInterpolation.hpp"/>
+  </compounddef>
+</doxygen>

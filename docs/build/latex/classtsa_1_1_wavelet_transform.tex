@@ -1,0 +1,491 @@
+\hypertarget{classtsa_1_1_wavelet_transform}{}\section{tsa\+:\+:Wavelet\+Transform Class Reference}
+\label{classtsa_1_1_wavelet_transform}\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}
+
+
+{\ttfamily \#include $<$Wavelet\+Transform.\+hpp$>$}
+
+Inheritance diagram for tsa\+:\+:Wavelet\+Transform\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classtsa_1_1_wavelet_transform}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7}{Wavelet\+Type} \{ \newline
+\hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a580e35e8152e9f9c38cc59e7e6f95f63}{Daub4}, 
+\hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7abbc8f42079b9b16b86dd0eea6773b556}{Daub6}, 
+\hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7af3f57bf73ec38c12f412e32f3fefc945}{Daub8}, 
+\hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7ae5443b626f94846ef15550c90361bcff}{Daub10}, 
+\newline
+\hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a758b6e0e0b2ee02e693c63a53a1f9333}{Daub12}, 
+\hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7aabd73c4462dcb2666c54abc4db830759}{Daub14}, 
+\hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7ab5fc531e10550919c9d84df86836d59e}{Daub16}, 
+\hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7aac9879db72a48b70a3452a92a4442c34}{Daub18}, 
+\newline
+\hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7ab186f455c9555915f9c39f5333735867}{Daub20}, 
+\hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a28aea448a107b358379cc8516eb99d6a}{Daub\+C4}, 
+\hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7adf2d680bbb7bf0f870308547955994d9}{Daub\+C6}, 
+\hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a8160a2ef65c5221bd784011eea9aac89}{Daub\+C8}, 
+\newline
+\hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a917e6a76e69601d05a444303fcf789a6}{Daub\+C10}, 
+\hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a82e9e7944ed5e3ff49bc00dd116b8b65}{Daub\+C12}, 
+\hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a5764140d65198d6c2f993c697172e487}{Daub\+C14}, 
+\hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7aba6e06ba03e008d3b64144194210ca3d}{Daub\+C16}, 
+\newline
+\hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a84aa39411df82b12534b156a39d4bd52}{Daub\+C18}, 
+\hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7afd26c797b74ea4704f53aaa4f12b3906}{Daub\+C20}, 
+\hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a4a6a48aa7201c6e1a777bb02cbb4535e}{Haar}, 
+\hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a12473aee3dcbf06605e96ce368ccae47}{HaarC}, 
+\newline
+\hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a1d6c5ac4b418a6577ae3ec9f1e7bcbe8}{Bspline103}, 
+\hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a3922eacdee7535beb5f72e06813eacec}{Bspline105}, 
+\hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a0d29cf9c751238c382de92a03fd1bafc}{Bspline202}, 
+\hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a58c8fc8b63dce89e8782c0e0f48213e4}{Bspline204}, 
+\newline
+\hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a30aadd3a24a27f4f2c7a2eb428ebd377}{Bspline206}, 
+\hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a1e6e70960647c10e6fb1aacdc7c308fa}{Bspline208}, 
+\hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7aa949ba486b87f3e95b7a9475f834ea5b}{Bspline301}, 
+\hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7ae10c4856932c326e229342b505bc718e}{Bspline303}, 
+\newline
+\hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a1c0c6499b40407f852737e79905ff9e0}{Bspline305}, 
+\hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7aceab407628fb381713fd7019b3bcdd9c}{Bspline307}, 
+\hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a42869721bee4963cd4e6bdac3beb1154}{Bspline309}, 
+\hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a967bf6ee049e0ff4a25b8f741effa1c2}{Bspline\+C103}, 
+\newline
+\hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a345a7862067a2952ffae4ab9b60963c4}{Bspline\+C105}, 
+\hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a1f278be1e05d3fa527c7d3679850b612}{Bspline\+C202}, 
+\hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7aa6ee016a8728feb7a5dc2c62ee99e6aa}{Bspline\+C204}, 
+\hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7ab740399eea9e95054be8ccf94711a38d}{Bspline\+C206}, 
+\newline
+\hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7ae0b40952d704854be0279927da7897d3}{Bspline\+C208}, 
+\hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a2f0be8161937b31fe3b7b582d2e6ed91}{Bspline\+C301}, 
+\hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7adb63b1c011f7c2ef23754f3e96ca84bf}{Bspline\+C303}, 
+\hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a1ee63e7ef3a0df171210967f760e4c31}{Bspline\+C305}, 
+\newline
+\hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7ac2317657fd83bd6231f453c31b18403e}{Bspline\+C307}, 
+\hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a41edf59d2f019badd954f24250146ea4}{Bspline\+C309}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtsa_1_1_wavelet_transform_a311a12f22747485e6e3ecb0ede6143a7}{Wavelet\+Transform} (unsigned int N, enum \hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7}{Wavelet\+Type} wt)
+\item 
+\hyperlink{classtsa_1_1_wavelet_transform_a1ce7211ad9ce11058575e94c15ca2c6e}{Wavelet\+Transform} (const \hyperlink{classtsa_1_1_wavelet_transform}{Wavelet\+Transform} \&from)
+\item 
+\hyperlink{classtsa_1_1_wavelet_transform_a119186776e4cc28d80d5d8d72cf12a5a}{$\sim$\+Wavelet\+Transform} ()
+\item 
+\hyperlink{classtsa_1_1_wavelet_transform}{Wavelet\+Transform} \& \hyperlink{classtsa_1_1_wavelet_transform_af8ca4e2e5be0413ef4ed484d27e2ff8b}{operator=} (const \hyperlink{classtsa_1_1_wavelet_transform}{Wavelet\+Transform} \&from)
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Operations}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtsa_1_1_wavelet_transform_afb63ce4986e8e123c7a35f5a39bb7600}{Forward} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&In)
+\begin{DoxyCompactList}\small\item\em Brief documentation for the execute method. \end{DoxyCompactList}\item 
+void \hyperlink{classtsa_1_1_wavelet_transform_a0e85c6c3970435147e5db3075a437b9f}{Inverse} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&In)
+\item 
+void \hyperlink{classtsa_1_1_wavelet_transform_a058f02f4ff2348d1899fda867badc71f}{Forward} (\hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&In)
+\item 
+void \hyperlink{classtsa_1_1_wavelet_transform_a7bdfd9a5e262f4441bd95bd6d6892e7c}{Inverse} (\hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&In)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Getters}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtsa_1_1_wavelet_transform_ae18b8342c7cfd37728a40691ec12f6f5}{Wavelet\+Print} ()
+\item 
+void \hyperlink{classtsa_1_1_wavelet_transform_ae5d5c1a1fc9b787a4d74c643b8fce1fb}{Wavelet\+Waveform} (\hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} \&V)
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+gsl\+\_\+wavelet $\ast$ \hyperlink{classtsa_1_1_wavelet_transform_a5ee4ab685e354aafa0a1f617f0b624b4}{mW}
+\item 
+gsl\+\_\+wavelet\+\_\+workspace $\ast$ \hyperlink{classtsa_1_1_wavelet_transform_a0629db488589d2b7451746747456cee2}{m\+Work}
+\item 
+unsigned int \hyperlink{classtsa_1_1_wavelet_transform_a8497adc5f0a85650a880992b3765f75a}{mN}
+\begin{DoxyCompactList}\small\item\em Lenght of input data. It must be a power of 2. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Compute the wavelet transform 
+
+Definition at line 75 of file Wavelet\+Transform.\+hpp.
+
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7}\label{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7}} 
+\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Wavelet\+Type@{Wavelet\+Type}}
+\index{Wavelet\+Type@{Wavelet\+Type}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}
+\subsubsection{\texorpdfstring{Wavelet\+Type}{WaveletType}}
+{\footnotesize\ttfamily enum \hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7}{tsa\+::\+Wavelet\+Transform\+::\+Wavelet\+Type}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Daub4@{Daub4}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Daub4@{Daub4}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a580e35e8152e9f9c38cc59e7e6f95f63}\label{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a580e35e8152e9f9c38cc59e7e6f95f63}} 
+Daub4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Daub6@{Daub6}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Daub6@{Daub6}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7abbc8f42079b9b16b86dd0eea6773b556}\label{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7abbc8f42079b9b16b86dd0eea6773b556}} 
+Daub6&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Daub8@{Daub8}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Daub8@{Daub8}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7af3f57bf73ec38c12f412e32f3fefc945}\label{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7af3f57bf73ec38c12f412e32f3fefc945}} 
+Daub8&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Daub10@{Daub10}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Daub10@{Daub10}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7ae5443b626f94846ef15550c90361bcff}\label{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7ae5443b626f94846ef15550c90361bcff}} 
+Daub10&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Daub12@{Daub12}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Daub12@{Daub12}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a758b6e0e0b2ee02e693c63a53a1f9333}\label{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a758b6e0e0b2ee02e693c63a53a1f9333}} 
+Daub12&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Daub14@{Daub14}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Daub14@{Daub14}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7aabd73c4462dcb2666c54abc4db830759}\label{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7aabd73c4462dcb2666c54abc4db830759}} 
+Daub14&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Daub16@{Daub16}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Daub16@{Daub16}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7ab5fc531e10550919c9d84df86836d59e}\label{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7ab5fc531e10550919c9d84df86836d59e}} 
+Daub16&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Daub18@{Daub18}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Daub18@{Daub18}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7aac9879db72a48b70a3452a92a4442c34}\label{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7aac9879db72a48b70a3452a92a4442c34}} 
+Daub18&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Daub20@{Daub20}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Daub20@{Daub20}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7ab186f455c9555915f9c39f5333735867}\label{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7ab186f455c9555915f9c39f5333735867}} 
+Daub20&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Daub\+C4@{Daub\+C4}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Daub\+C4@{Daub\+C4}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a28aea448a107b358379cc8516eb99d6a}\label{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a28aea448a107b358379cc8516eb99d6a}} 
+Daub\+C4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Daub\+C6@{Daub\+C6}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Daub\+C6@{Daub\+C6}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7adf2d680bbb7bf0f870308547955994d9}\label{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7adf2d680bbb7bf0f870308547955994d9}} 
+Daub\+C6&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Daub\+C8@{Daub\+C8}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Daub\+C8@{Daub\+C8}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a8160a2ef65c5221bd784011eea9aac89}\label{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a8160a2ef65c5221bd784011eea9aac89}} 
+Daub\+C8&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Daub\+C10@{Daub\+C10}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Daub\+C10@{Daub\+C10}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a917e6a76e69601d05a444303fcf789a6}\label{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a917e6a76e69601d05a444303fcf789a6}} 
+Daub\+C10&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Daub\+C12@{Daub\+C12}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Daub\+C12@{Daub\+C12}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a82e9e7944ed5e3ff49bc00dd116b8b65}\label{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a82e9e7944ed5e3ff49bc00dd116b8b65}} 
+Daub\+C12&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Daub\+C14@{Daub\+C14}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Daub\+C14@{Daub\+C14}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a5764140d65198d6c2f993c697172e487}\label{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a5764140d65198d6c2f993c697172e487}} 
+Daub\+C14&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Daub\+C16@{Daub\+C16}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Daub\+C16@{Daub\+C16}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7aba6e06ba03e008d3b64144194210ca3d}\label{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7aba6e06ba03e008d3b64144194210ca3d}} 
+Daub\+C16&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Daub\+C18@{Daub\+C18}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Daub\+C18@{Daub\+C18}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a84aa39411df82b12534b156a39d4bd52}\label{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a84aa39411df82b12534b156a39d4bd52}} 
+Daub\+C18&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Daub\+C20@{Daub\+C20}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Daub\+C20@{Daub\+C20}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7afd26c797b74ea4704f53aaa4f12b3906}\label{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7afd26c797b74ea4704f53aaa4f12b3906}} 
+Daub\+C20&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Haar@{Haar}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Haar@{Haar}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a4a6a48aa7201c6e1a777bb02cbb4535e}\label{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a4a6a48aa7201c6e1a777bb02cbb4535e}} 
+Haar&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HaarC@{HaarC}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!HaarC@{HaarC}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a12473aee3dcbf06605e96ce368ccae47}\label{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a12473aee3dcbf06605e96ce368ccae47}} 
+HaarC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Bspline103@{Bspline103}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Bspline103@{Bspline103}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a1d6c5ac4b418a6577ae3ec9f1e7bcbe8}\label{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a1d6c5ac4b418a6577ae3ec9f1e7bcbe8}} 
+Bspline103&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Bspline105@{Bspline105}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Bspline105@{Bspline105}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a3922eacdee7535beb5f72e06813eacec}\label{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a3922eacdee7535beb5f72e06813eacec}} 
+Bspline105&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Bspline202@{Bspline202}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Bspline202@{Bspline202}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a0d29cf9c751238c382de92a03fd1bafc}\label{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a0d29cf9c751238c382de92a03fd1bafc}} 
+Bspline202&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Bspline204@{Bspline204}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Bspline204@{Bspline204}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a58c8fc8b63dce89e8782c0e0f48213e4}\label{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a58c8fc8b63dce89e8782c0e0f48213e4}} 
+Bspline204&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Bspline206@{Bspline206}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Bspline206@{Bspline206}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a30aadd3a24a27f4f2c7a2eb428ebd377}\label{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a30aadd3a24a27f4f2c7a2eb428ebd377}} 
+Bspline206&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Bspline208@{Bspline208}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Bspline208@{Bspline208}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a1e6e70960647c10e6fb1aacdc7c308fa}\label{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a1e6e70960647c10e6fb1aacdc7c308fa}} 
+Bspline208&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Bspline301@{Bspline301}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Bspline301@{Bspline301}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7aa949ba486b87f3e95b7a9475f834ea5b}\label{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7aa949ba486b87f3e95b7a9475f834ea5b}} 
+Bspline301&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Bspline303@{Bspline303}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Bspline303@{Bspline303}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7ae10c4856932c326e229342b505bc718e}\label{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7ae10c4856932c326e229342b505bc718e}} 
+Bspline303&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Bspline305@{Bspline305}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Bspline305@{Bspline305}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a1c0c6499b40407f852737e79905ff9e0}\label{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a1c0c6499b40407f852737e79905ff9e0}} 
+Bspline305&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Bspline307@{Bspline307}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Bspline307@{Bspline307}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7aceab407628fb381713fd7019b3bcdd9c}\label{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7aceab407628fb381713fd7019b3bcdd9c}} 
+Bspline307&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Bspline309@{Bspline309}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Bspline309@{Bspline309}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a42869721bee4963cd4e6bdac3beb1154}\label{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a42869721bee4963cd4e6bdac3beb1154}} 
+Bspline309&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Bspline\+C103@{Bspline\+C103}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Bspline\+C103@{Bspline\+C103}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a967bf6ee049e0ff4a25b8f741effa1c2}\label{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a967bf6ee049e0ff4a25b8f741effa1c2}} 
+Bspline\+C103&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Bspline\+C105@{Bspline\+C105}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Bspline\+C105@{Bspline\+C105}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a345a7862067a2952ffae4ab9b60963c4}\label{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a345a7862067a2952ffae4ab9b60963c4}} 
+Bspline\+C105&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Bspline\+C202@{Bspline\+C202}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Bspline\+C202@{Bspline\+C202}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a1f278be1e05d3fa527c7d3679850b612}\label{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a1f278be1e05d3fa527c7d3679850b612}} 
+Bspline\+C202&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Bspline\+C204@{Bspline\+C204}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Bspline\+C204@{Bspline\+C204}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7aa6ee016a8728feb7a5dc2c62ee99e6aa}\label{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7aa6ee016a8728feb7a5dc2c62ee99e6aa}} 
+Bspline\+C204&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Bspline\+C206@{Bspline\+C206}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Bspline\+C206@{Bspline\+C206}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7ab740399eea9e95054be8ccf94711a38d}\label{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7ab740399eea9e95054be8ccf94711a38d}} 
+Bspline\+C206&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Bspline\+C208@{Bspline\+C208}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Bspline\+C208@{Bspline\+C208}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7ae0b40952d704854be0279927da7897d3}\label{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7ae0b40952d704854be0279927da7897d3}} 
+Bspline\+C208&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Bspline\+C301@{Bspline\+C301}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Bspline\+C301@{Bspline\+C301}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a2f0be8161937b31fe3b7b582d2e6ed91}\label{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a2f0be8161937b31fe3b7b582d2e6ed91}} 
+Bspline\+C301&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Bspline\+C303@{Bspline\+C303}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Bspline\+C303@{Bspline\+C303}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7adb63b1c011f7c2ef23754f3e96ca84bf}\label{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7adb63b1c011f7c2ef23754f3e96ca84bf}} 
+Bspline\+C303&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Bspline\+C305@{Bspline\+C305}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Bspline\+C305@{Bspline\+C305}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a1ee63e7ef3a0df171210967f760e4c31}\label{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a1ee63e7ef3a0df171210967f760e4c31}} 
+Bspline\+C305&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Bspline\+C307@{Bspline\+C307}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Bspline\+C307@{Bspline\+C307}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7ac2317657fd83bd6231f453c31b18403e}\label{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7ac2317657fd83bd6231f453c31b18403e}} 
+Bspline\+C307&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Bspline\+C309@{Bspline\+C309}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Bspline\+C309@{Bspline\+C309}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a41edf59d2f019badd954f24250146ea4}\label{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7a41edf59d2f019badd954f24250146ea4}} 
+Bspline\+C309&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 78 of file Wavelet\+Transform.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a311a12f22747485e6e3ecb0ede6143a7}\label{classtsa_1_1_wavelet_transform_a311a12f22747485e6e3ecb0ede6143a7}} 
+\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Wavelet\+Transform@{Wavelet\+Transform}}
+\index{Wavelet\+Transform@{Wavelet\+Transform}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}
+\subsubsection{\texorpdfstring{Wavelet\+Transform()}{WaveletTransform()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily tsa\+::\+Wavelet\+Transform\+::\+Wavelet\+Transform (\begin{DoxyParamCaption}\item[{unsigned int}]{N,  }\item[{enum \hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7}{Wavelet\+Type}}]{wt }\end{DoxyParamCaption})}
+
+Constructor 
+
+Definition at line 19 of file Wavelet\+Transform.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a1ce7211ad9ce11058575e94c15ca2c6e}\label{classtsa_1_1_wavelet_transform_a1ce7211ad9ce11058575e94c15ca2c6e}} 
+\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Wavelet\+Transform@{Wavelet\+Transform}}
+\index{Wavelet\+Transform@{Wavelet\+Transform}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}
+\subsubsection{\texorpdfstring{Wavelet\+Transform()}{WaveletTransform()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily tsa\+::\+Wavelet\+Transform\+::\+Wavelet\+Transform (\begin{DoxyParamCaption}\item[{const \hyperlink{classtsa_1_1_wavelet_transform}{Wavelet\+Transform} \&}]{from }\end{DoxyParamCaption})}
+
+Copy constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & The instance that must be copied \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 221 of file Wavelet\+Transform.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a119186776e4cc28d80d5d8d72cf12a5a}\label{classtsa_1_1_wavelet_transform_a119186776e4cc28d80d5d8d72cf12a5a}} 
+\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!````~Wavelet\+Transform@{$\sim$\+Wavelet\+Transform}}
+\index{````~Wavelet\+Transform@{$\sim$\+Wavelet\+Transform}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}
+\subsubsection{\texorpdfstring{$\sim$\+Wavelet\+Transform()}{~WaveletTransform()}}
+{\footnotesize\ttfamily tsa\+::\+Wavelet\+Transform\+::$\sim$\+Wavelet\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor 
+
+Definition at line 158 of file Wavelet\+Transform.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_afb63ce4986e8e123c7a35f5a39bb7600}\label{classtsa_1_1_wavelet_transform_afb63ce4986e8e123c7a35f5a39bb7600}} 
+\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Forward@{Forward}}
+\index{Forward@{Forward}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}
+\subsubsection{\texorpdfstring{Forward()}{Forward()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void tsa\+::\+Wavelet\+Transform\+::\+Forward (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{In }\end{DoxyParamCaption})}
+
+
+
+Brief documentation for the execute method. 
+
+Start of the long documentation for execute method.
+
+\begin{DoxyPrecond}{Precondition}
+A precondition 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+A postcondition 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em An} & exception\\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}{Parameters}
+{\em a} & parameter\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a returned value
+\end{DoxyReturn}
+Declaration of execute operation 
+
+Definition at line 163 of file Wavelet\+Transform.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a058f02f4ff2348d1899fda867badc71f}\label{classtsa_1_1_wavelet_transform_a058f02f4ff2348d1899fda867badc71f}} 
+\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Forward@{Forward}}
+\index{Forward@{Forward}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}
+\subsubsection{\texorpdfstring{Forward()}{Forward()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void tsa\+::\+Wavelet\+Transform\+::\+Forward (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&}]{In }\end{DoxyParamCaption})}
+
+
+
+Definition at line 173 of file Wavelet\+Transform.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a0e85c6c3970435147e5db3075a437b9f}\label{classtsa_1_1_wavelet_transform_a0e85c6c3970435147e5db3075a437b9f}} 
+\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Inverse@{Inverse}}
+\index{Inverse@{Inverse}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}
+\subsubsection{\texorpdfstring{Inverse()}{Inverse()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void tsa\+::\+Wavelet\+Transform\+::\+Inverse (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{In }\end{DoxyParamCaption})}
+
+
+
+Definition at line 168 of file Wavelet\+Transform.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a7bdfd9a5e262f4441bd95bd6d6892e7c}\label{classtsa_1_1_wavelet_transform_a7bdfd9a5e262f4441bd95bd6d6892e7c}} 
+\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Inverse@{Inverse}}
+\index{Inverse@{Inverse}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}
+\subsubsection{\texorpdfstring{Inverse()}{Inverse()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void tsa\+::\+Wavelet\+Transform\+::\+Inverse (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&}]{In }\end{DoxyParamCaption})}
+
+
+
+Definition at line 194 of file Wavelet\+Transform.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_af8ca4e2e5be0413ef4ed484d27e2ff8b}\label{classtsa_1_1_wavelet_transform_af8ca4e2e5be0413ef4ed484d27e2ff8b}} 
+\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!operator=@{operator=}}
+\index{operator=@{operator=}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{classtsa_1_1_wavelet_transform}{Wavelet\+Transform} \& tsa\+::\+Wavelet\+Transform\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{classtsa_1_1_wavelet_transform}{Wavelet\+Transform} \&}]{from }\end{DoxyParamCaption})}
+
+Assignement operator
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & The instance to be assigned from\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a reference to a new object 
+\end{DoxyReturn}
+
+
+Definition at line 233 of file Wavelet\+Transform.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_ae18b8342c7cfd37728a40691ec12f6f5}\label{classtsa_1_1_wavelet_transform_ae18b8342c7cfd37728a40691ec12f6f5}} 
+\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Wavelet\+Print@{Wavelet\+Print}}
+\index{Wavelet\+Print@{Wavelet\+Print}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}
+\subsubsection{\texorpdfstring{Wavelet\+Print()}{WaveletPrint()}}
+{\footnotesize\ttfamily void tsa\+::\+Wavelet\+Transform\+::\+Wavelet\+Print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Getters 
+
+Definition at line 239 of file Wavelet\+Transform.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_ae5d5c1a1fc9b787a4d74c643b8fce1fb}\label{classtsa_1_1_wavelet_transform_ae5d5c1a1fc9b787a4d74c643b8fce1fb}} 
+\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!Wavelet\+Waveform@{Wavelet\+Waveform}}
+\index{Wavelet\+Waveform@{Wavelet\+Waveform}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}
+\subsubsection{\texorpdfstring{Wavelet\+Waveform()}{WaveletWaveform()}}
+{\footnotesize\ttfamily void tsa\+::\+Wavelet\+Transform\+::\+Wavelet\+Waveform (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} \&}]{V }\end{DoxyParamCaption})}
+
+
+
+Definition at line 262 of file Wavelet\+Transform.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a8497adc5f0a85650a880992b3765f75a}\label{classtsa_1_1_wavelet_transform_a8497adc5f0a85650a880992b3765f75a}} 
+\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!mN@{mN}}
+\index{mN@{mN}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}
+\subsubsection{\texorpdfstring{mN}{mN}}
+{\footnotesize\ttfamily unsigned int tsa\+::\+Wavelet\+Transform\+::mN\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Lenght of input data. It must be a power of 2. 
+
+
+
+Definition at line 195 of file Wavelet\+Transform.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a5ee4ab685e354aafa0a1f617f0b624b4}\label{classtsa_1_1_wavelet_transform_a5ee4ab685e354aafa0a1f617f0b624b4}} 
+\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!mW@{mW}}
+\index{mW@{mW}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}
+\subsubsection{\texorpdfstring{mW}{mW}}
+{\footnotesize\ttfamily gsl\+\_\+wavelet$\ast$ tsa\+::\+Wavelet\+Transform\+::mW\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 193 of file Wavelet\+Transform.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_wavelet_transform_a0629db488589d2b7451746747456cee2}\label{classtsa_1_1_wavelet_transform_a0629db488589d2b7451746747456cee2}} 
+\index{tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}!m\+Work@{m\+Work}}
+\index{m\+Work@{m\+Work}!tsa\+::\+Wavelet\+Transform@{tsa\+::\+Wavelet\+Transform}}
+\subsubsection{\texorpdfstring{m\+Work}{mWork}}
+{\footnotesize\ttfamily gsl\+\_\+wavelet\+\_\+workspace$\ast$ tsa\+::\+Wavelet\+Transform\+::m\+Work\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 194 of file Wavelet\+Transform.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/include/\hyperlink{_wavelet_transform_8hpp}{Wavelet\+Transform.\+hpp}\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/src/\hyperlink{_wavelet_transform_8cpp}{Wavelet\+Transform.\+cpp}\end{DoxyCompactItemize}

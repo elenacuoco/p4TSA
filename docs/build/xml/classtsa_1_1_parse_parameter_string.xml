@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classtsa_1_1_parse_parameter_string" kind="class" language="C++" prot="public">
+    <compoundname>tsa::ParseParameterString</compoundname>
+    <includes refid="tsa_utility_functions_8hpp" local="no">tsaUtilityFunctions.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtsa_1_1_parse_parameter_string_1ab2648c4056632b436348effef55e73e5" prot="private" static="no" mutable="no">
+        <type><ref refid="class_function_parser" kindref="compound">FunctionParser</ref></type>
+        <definition>FunctionParser tsa::ParseParameterString::fparser</definition>
+        <argsstring></argsstring>
+        <name>fparser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaUtilityFunctions.hpp" line="135" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaUtilityFunctions.hpp" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_parse_parameter_string_1aa90c11badf0c45d4efc7e2dd2c912100" prot="private" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* tsa::ParseParameterString::mParList</definition>
+        <argsstring></argsstring>
+        <name>mParList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaUtilityFunctions.hpp" line="136" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaUtilityFunctions.hpp" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_parse_parameter_string_1a3632dcdadae1f3578194c9ba14d4b7c8" prot="private" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* tsa::ParseParameterString::mTmp</definition>
+        <argsstring></argsstring>
+        <name>mTmp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaUtilityFunctions.hpp" line="137" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaUtilityFunctions.hpp" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtsa_1_1_parse_parameter_string_1a68e6d37bb098c062d0e4eba92847c4fe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>tsa::ParseParameterString::ParseParameterString</definition>
+        <argsstring>(const std::string &amp;parlist)</argsstring>
+        <name>ParseParameterString</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>parlist</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaUtilityFunctions.hpp" line="77" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaUtilityFunctions.hpp" bodystart="77" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_parse_parameter_string_1a67bcdd6d213f9dcc3a229a105e8ad319" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>tsa::ParseParameterString::~ParseParameterString</definition>
+        <argsstring>()</argsstring>
+        <name>~ParseParameterString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaUtilityFunctions.hpp" line="83" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaUtilityFunctions.hpp" bodystart="83" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_parse_parameter_string_1a36f54e156537db06f4aca02194cba5cf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double tsa::ParseParameterString::GetFloat</definition>
+        <argsstring>(int n)</argsstring>
+        <name>GetFloat</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaUtilityFunctions.hpp" line="87" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaUtilityFunctions.hpp" bodystart="87" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_parse_parameter_string_1ac4ebad66e2a7645e1c49ecb87a126003" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int tsa::ParseParameterString::GetInt</definition>
+        <argsstring>(int n)</argsstring>
+        <name>GetInt</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaUtilityFunctions.hpp" line="102" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaUtilityFunctions.hpp" bodystart="102" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_parse_parameter_string_1a37cb52222e539bd6a3cf56cbeec0b958" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string tsa::ParseParameterString::GetString</definition>
+        <argsstring>(int n)</argsstring>
+        <name>GetString</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaUtilityFunctions.hpp" line="117" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaUtilityFunctions.hpp" bodystart="117" bodyend="129"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="356">
+        <label>FunctionParser</label>
+        <link refid="class_function_parser"/>
+        <childnode refid="357" relation="usage">
+          <edgelabel>data</edgelabel>
+        </childnode>
+      </node>
+      <node id="357">
+        <label>FunctionParser::Data</label>
+        <link refid="struct_function_parser_1_1_data"/>
+      </node>
+      <node id="355">
+        <label>tsa::ParseParameterString</label>
+        <link refid="classtsa_1_1_parse_parameter_string"/>
+        <childnode refid="356" relation="usage">
+          <edgelabel>fparser</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaUtilityFunctions.hpp" line="74" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaUtilityFunctions.hpp" bodystart="74" bodyend="138"/>
+    <listofallmembers>
+      <member refid="classtsa_1_1_parse_parameter_string_1ab2648c4056632b436348effef55e73e5" prot="private" virt="non-virtual"><scope>tsa::ParseParameterString</scope><name>fparser</name></member>
+      <member refid="classtsa_1_1_parse_parameter_string_1a36f54e156537db06f4aca02194cba5cf" prot="public" virt="non-virtual"><scope>tsa::ParseParameterString</scope><name>GetFloat</name></member>
+      <member refid="classtsa_1_1_parse_parameter_string_1ac4ebad66e2a7645e1c49ecb87a126003" prot="public" virt="non-virtual"><scope>tsa::ParseParameterString</scope><name>GetInt</name></member>
+      <member refid="classtsa_1_1_parse_parameter_string_1a37cb52222e539bd6a3cf56cbeec0b958" prot="public" virt="non-virtual"><scope>tsa::ParseParameterString</scope><name>GetString</name></member>
+      <member refid="classtsa_1_1_parse_parameter_string_1aa90c11badf0c45d4efc7e2dd2c912100" prot="private" virt="non-virtual"><scope>tsa::ParseParameterString</scope><name>mParList</name></member>
+      <member refid="classtsa_1_1_parse_parameter_string_1a3632dcdadae1f3578194c9ba14d4b7c8" prot="private" virt="non-virtual"><scope>tsa::ParseParameterString</scope><name>mTmp</name></member>
+      <member refid="classtsa_1_1_parse_parameter_string_1a68e6d37bb098c062d0e4eba92847c4fe" prot="public" virt="non-virtual"><scope>tsa::ParseParameterString</scope><name>ParseParameterString</name></member>
+      <member refid="classtsa_1_1_parse_parameter_string_1a67bcdd6d213f9dcc3a229a105e8ad319" prot="public" virt="non-virtual"><scope>tsa::ParseParameterString</scope><name>~ParseParameterString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

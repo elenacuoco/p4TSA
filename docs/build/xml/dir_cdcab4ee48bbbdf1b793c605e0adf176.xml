@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_cdcab4ee48bbbdf1b793c605e0adf176" kind="dir">
+    <compoundname>/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity</compoundname>
+    <innerdir refid="dir_cb30e5c7b8226b54495f0a3ec9b8a067">/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/mfc</innerdir>
+    <innerfile refid="algorithms_8hpp">algorithms.hpp</innerfile>
+    <innerfile refid="dynamic_8cpp">dynamic.cpp</innerfile>
+    <innerfile refid="dynamic_8hpp">dynamic.hpp</innerfile>
+    <innerfile refid="include_2eternity_2eternity_8cpp">eternity.cpp</innerfile>
+    <innerfile refid="eternity_2eternity_8hpp">eternity.hpp</innerfile>
+    <innerfile refid="_m_f_c_archive_8h">MFCArchive.h</innerfile>
+    <innerfile refid="persist_8cpp">persist.cpp</innerfile>
+    <innerfile refid="persist_8hpp">persist.hpp</innerfile>
+    <innerfile refid="persist__xml_8cpp">persist_xml.cpp</innerfile>
+    <innerfile refid="persist__xml_8hpp">persist_xml.hpp</innerfile>
+    <innerfile refid="xmlscanner_8cpp">xmlscanner.cpp</innerfile>
+    <innerfile refid="xmlscanner_8hpp">xmlscanner.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/"/>
+  </compounddef>
+</doxygen>

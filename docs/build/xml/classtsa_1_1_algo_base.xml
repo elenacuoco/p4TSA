@@ -1,0 +1,351 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classtsa_1_1_algo_base" kind="class" language="C++" prot="public">
+    <compoundname>tsa::AlgoBase</compoundname>
+    <derivedcompoundref refid="classtsa_1_1_a_r2" prot="public" virt="non-virtual">tsa::AR2</derivedcompoundref>
+    <derivedcompoundref refid="classtsa_1_1_a_r2_parcor" prot="public" virt="non-virtual">tsa::AR2Parcor</derivedcompoundref>
+    <derivedcompoundref refid="classtsa_1_1_ar_burg_estimator" prot="public" virt="non-virtual">tsa::ArBurgEstimator</derivedcompoundref>
+    <derivedcompoundref refid="classtsa_1_1_ar_durbin_estimator" prot="public" virt="non-virtual">tsa::ArDurbinEstimator</derivedcompoundref>
+    <derivedcompoundref refid="classtsa_1_1_arma2_psd" prot="public" virt="non-virtual">tsa::Arma2Psd</derivedcompoundref>
+    <derivedcompoundref refid="classtsa_1_1_arma2_t_f" prot="public" virt="non-virtual">tsa::Arma2TF</derivedcompoundref>
+    <derivedcompoundref refid="classtsa_1_1_a_r_m_a_filter" prot="public" virt="non-virtual">tsa::ARMAFilter</derivedcompoundref>
+    <derivedcompoundref refid="classtsa_1_1_base_f_f_t" prot="public" virt="non-virtual">tsa::BaseFFT</derivedcompoundref>
+    <derivedcompoundref refid="classtsa_1_1_base_window" prot="public" virt="non-virtual">tsa::BaseWindow</derivedcompoundref>
+    <derivedcompoundref refid="classtsa_1_1_b_l_interpolation" prot="public" virt="non-virtual">tsa::BLInterpolation</derivedcompoundref>
+    <derivedcompoundref refid="classtsa_1_1_butterworth_filter" prot="public" virt="non-virtual">tsa::ButterworthFilter</derivedcompoundref>
+    <derivedcompoundref refid="classtsa_1_1_channel_descriptor" prot="public" virt="non-virtual">tsa::ChannelDescriptor</derivedcompoundref>
+    <derivedcompoundref refid="classtsa_1_1_double_whitening" prot="public" virt="non-virtual">tsa::DoubleWhitening</derivedcompoundref>
+    <derivedcompoundref refid="classtsa_1_1_frame_i_channel" prot="public" virt="non-virtual">tsa::FrameIChannel</derivedcompoundref>
+    <derivedcompoundref refid="classtsa_1_1_frame_i_stream" prot="public" virt="non-virtual">tsa::FrameIStream</derivedcompoundref>
+    <derivedcompoundref refid="classtsa_1_1_lattice_filter" prot="public" virt="non-virtual">tsa::LatticeFilter</derivedcompoundref>
+    <derivedcompoundref refid="classtsa_1_1_least_squares_lattice" prot="public" virt="non-virtual">tsa::LeastSquaresLattice</derivedcompoundref>
+    <derivedcompoundref refid="classtsa_1_1_l_s_lfilter" prot="public" virt="non-virtual">tsa::LSLfilter</derivedcompoundref>
+    <derivedcompoundref refid="classtsa_1_1_l_s_l_learning" prot="public" virt="non-virtual">tsa::LSLLearning</derivedcompoundref>
+    <derivedcompoundref refid="classtsa_1_1_notch_widrow" prot="public" virt="non-virtual">tsa::NotchWidrow</derivedcompoundref>
+    <derivedcompoundref refid="classtsa_1_1_parcor2_a_r" prot="public" virt="non-virtual">tsa::Parcor2AR</derivedcompoundref>
+    <derivedcompoundref refid="classtsa_1_1_r_l_s_canceler" prot="public" virt="non-virtual">tsa::RLSCanceler</derivedcompoundref>
+    <derivedcompoundref refid="classtsa_1_1_selection_order_criteria" prot="private" virt="non-virtual">tsa::SelectionOrderCriteria</derivedcompoundref>
+    <derivedcompoundref refid="classtsa_1_1_t_f2_p_s_d" prot="public" virt="non-virtual">tsa::TF2PSD</derivedcompoundref>
+    <derivedcompoundref refid="classtsa_1_1_util" prot="public" virt="non-virtual">tsa::Util</derivedcompoundref>
+    <derivedcompoundref refid="classtsa_1_1_v_arma2_t_f" prot="public" virt="non-virtual">tsa::VArma2TF</derivedcompoundref>
+    <derivedcompoundref refid="classtsa_1_1_view_util" prot="public" virt="non-virtual">tsa::ViewUtil</derivedcompoundref>
+    <derivedcompoundref refid="classtsa_1_1_wavelet_transform" prot="private" virt="non-virtual">tsa::WaveletTransform</derivedcompoundref>
+    <derivedcompoundref refid="classtsa_1_1_wav_reconstruction" prot="public" virt="non-virtual">tsa::WavReconstruction</derivedcompoundref>
+    <derivedcompoundref refid="classtsa_1_1_w_d_f2_classify" prot="public" virt="non-virtual">tsa::WDF2Classify</derivedcompoundref>
+    <derivedcompoundref refid="classtsa_1_1_w_d_f2_reconstruct" prot="public" virt="non-virtual">tsa::WDF2Reconstruct</derivedcompoundref>
+    <includes refid="_algo_base_8hpp" local="no">AlgoBase.hpp</includes>
+    <briefdescription>
+<para><ref refid="classtsa_1_1_algo_base" kindref="compound">AlgoBase</ref> is the abstract base class for all algorithm. </para>    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classtsa_1_1_algo_base" kindref="compound">AlgoBase</ref> is the abstract base class for all the algorithm classes. It contain the definition of the common methods. An algorithm is a class with one or more execute() methods, with a variable number of parameters. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="50">
+        <label>tsa::TF2PSD</label>
+        <link refid="classtsa_1_1_t_f2_p_s_d"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>tsa::DCT</label>
+        <link refid="classtsa_1_1_d_c_t"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>tsa::FrameIStream</label>
+        <link refid="classtsa_1_1_frame_i_stream"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>tsa::WelchWindow</label>
+        <link refid="classtsa_1_1_welch_window"/>
+        <childnode refid="22" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>tsa::BaseWindow</label>
+        <link refid="classtsa_1_1_base_window"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>tsa::ADC_Channel</label>
+        <link refid="classtsa_1_1_a_d_c___channel"/>
+        <childnode refid="33" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>tsa::TukeyWindow</label>
+        <link refid="classtsa_1_1_tukey_window"/>
+        <childnode refid="22" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>tsa::LSLLearning</label>
+        <link refid="classtsa_1_1_l_s_l_learning"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>tsa::RLSCanceler</label>
+        <link refid="classtsa_1_1_r_l_s_canceler"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>tsa::SelectionOrderCriteria</label>
+        <link refid="classtsa_1_1_selection_order_criteria"/>
+        <childnode refid="7" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>tsa::BisquareWindow</label>
+        <link refid="classtsa_1_1_bisquare_window"/>
+        <childnode refid="22" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="53">
+        <label>tsa::ViewUtil</label>
+        <link refid="classtsa_1_1_view_util"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>tsa::ArDurbinEstimator</label>
+        <link refid="classtsa_1_1_ar_durbin_estimator"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>tsa::InverseRealFFT</label>
+        <link refid="classtsa_1_1_inverse_real_f_f_t"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>tsa::LatticeFilter</label>
+        <link refid="classtsa_1_1_lattice_filter"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="57">
+        <label>tsa::WDF2Reconstruct</label>
+        <link refid="classtsa_1_1_w_d_f2_reconstruct"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>tsa::Cs2HannWindow</label>
+        <link refid="classtsa_1_1_cs2_hann_window"/>
+        <childnode refid="22" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>tsa::SER_Channel</label>
+        <link refid="classtsa_1_1_s_e_r___channel"/>
+        <childnode refid="33" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>tsa::Util</label>
+        <link refid="classtsa_1_1_util"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="52">
+        <label>tsa::VArma2TF</label>
+        <link refid="classtsa_1_1_v_arma2_t_f"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>tsa::Arma2Psd</label>
+        <link refid="classtsa_1_1_arma2_psd"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="55">
+        <label>tsa::WavReconstruction</label>
+        <link refid="classtsa_1_1_wav_reconstruction"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>tsa::NotchWidrow</label>
+        <link refid="classtsa_1_1_notch_widrow"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>tsa::ComplexFFT</label>
+        <link refid="classtsa_1_1_complex_f_f_t"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>tsa::ArBurgEstimator</label>
+        <link refid="classtsa_1_1_ar_burg_estimator"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>tsa::BartlettWindow</label>
+        <link refid="classtsa_1_1_bartlett_window"/>
+        <childnode refid="22" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>tsa::FrameIChannel</label>
+        <link refid="classtsa_1_1_frame_i_channel"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>tsa::Arma2TF</label>
+        <link refid="classtsa_1_1_arma2_t_f"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>tsa::SIM_Channel</label>
+        <link refid="classtsa_1_1_s_i_m___channel"/>
+        <childnode refid="33" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>tsa::BLInterpolation</label>
+        <link refid="classtsa_1_1_b_l_interpolation"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>tsa::ChannelDescriptor</label>
+        <link refid="classtsa_1_1_channel_descriptor"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>tsa::Parcor2AR</label>
+        <link refid="classtsa_1_1_parcor2_a_r"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>tsa::LSLfilter</label>
+        <link refid="classtsa_1_1_l_s_lfilter"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>tsa::TukeyHannWindow</label>
+        <link refid="classtsa_1_1_tukey_hann_window"/>
+        <childnode refid="22" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>tsa::AR2</label>
+        <link refid="classtsa_1_1_a_r2"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>tsa::LeastSquaresLattice</label>
+        <link refid="classtsa_1_1_least_squares_lattice"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>tsa::ButterworthFilter</label>
+        <link refid="classtsa_1_1_butterworth_filter"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>tsa::DoubleWhitening</label>
+        <link refid="classtsa_1_1_double_whitening"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>tsa::KaiserWindow</label>
+        <link refid="classtsa_1_1_kaiser_window"/>
+        <childnode refid="22" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="56">
+        <label>tsa::WDF2Classify</label>
+        <link refid="classtsa_1_1_w_d_f2_classify"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>tsa::DST</label>
+        <link refid="classtsa_1_1_d_s_t"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>tsa::BaseFFT</label>
+        <link refid="classtsa_1_1_base_f_f_t"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>tsa::AlgoBase</label>
+        <link refid="classtsa_1_1_algo_base"/>
+      </node>
+      <node id="36">
+        <label>tsa::PROC_Channel</label>
+        <link refid="classtsa_1_1_p_r_o_c___channel"/>
+        <childnode refid="33" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>tsa::IDCT</label>
+        <link refid="classtsa_1_1_i_d_c_t"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>tsa::RealFFT</label>
+        <link refid="classtsa_1_1_real_f_f_t"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>tsa::ARMAFilter</label>
+        <link refid="classtsa_1_1_a_r_m_a_filter"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="54">
+        <label>tsa::WaveletTransform</label>
+        <link refid="classtsa_1_1_wavelet_transform"/>
+        <childnode refid="7" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>tsa::AR2Parcor</label>
+        <link refid="classtsa_1_1_a_r2_parcor"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>tsa::FRAMEH_Channel</label>
+        <link refid="classtsa_1_1_f_r_a_m_e_h___channel"/>
+        <childnode refid="33" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>tsa::Cs2HammingWindow</label>
+        <link refid="classtsa_1_1_cs2_hamming_window"/>
+        <childnode refid="22" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/AlgoBase.hpp" line="64" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/AlgoBase.hpp" bodystart="64" bodyend="99"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,441 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_base_window_8cpp" kind="file" language="C++">
+    <compoundname>BaseWindow.cpp</compoundname>
+    <includes refid="_base_window_8hpp" local="no">BaseWindow.hpp</includes>
+    <incdepgraph>
+      <node id="4923">
+        <label>tsaTraits.hpp</label>
+        <link refid="tsa_traits_8hpp"/>
+        <childnode refid="4924" relation="include">
+        </childnode>
+      </node>
+      <node id="4905">
+        <label>eternity.hpp</label>
+        <link refid="eternity_8hpp"/>
+        <childnode refid="4906" relation="include">
+        </childnode>
+        <childnode refid="4908" relation="include">
+        </childnode>
+        <childnode refid="4913" relation="include">
+        </childnode>
+        <childnode refid="4916" relation="include">
+        </childnode>
+      </node>
+      <node id="4910">
+        <label>stdlib.h</label>
+      </node>
+      <node id="4899">
+        <label>stdexcept</label>
+      </node>
+      <node id="4918">
+        <label>tsaTypes.hpp</label>
+        <link refid="tsa_types_8hpp"/>
+        <childnode refid="4901" relation="include">
+        </childnode>
+        <childnode refid="4897" relation="include">
+        </childnode>
+        <childnode refid="4919" relation="include">
+        </childnode>
+        <childnode refid="4902" relation="include">
+        </childnode>
+        <childnode refid="4905" relation="include">
+        </childnode>
+      </node>
+      <node id="4903">
+        <label>string</label>
+      </node>
+      <node id="4906">
+        <label>eternity/dynamic.hpp</label>
+        <link refid="dynamic_8hpp"/>
+        <childnode refid="4896" relation="include">
+        </childnode>
+        <childnode refid="4907" relation="include">
+        </childnode>
+        <childnode refid="4903" relation="include">
+        </childnode>
+      </node>
+      <node id="4895">
+        <label>map</label>
+      </node>
+      <node id="4920">
+        <label>tsaLog.hpp</label>
+        <link refid="tsa_log_8hpp"/>
+        <childnode refid="4900" relation="include">
+        </childnode>
+        <childnode refid="4901" relation="include">
+        </childnode>
+        <childnode refid="4921" relation="include">
+        </childnode>
+      </node>
+      <node id="4901">
+        <label>fstream</label>
+      </node>
+      <node id="4914">
+        <label>xmlscanner.hpp</label>
+        <link refid="xmlscanner_8hpp"/>
+        <childnode refid="4909" relation="include">
+        </childnode>
+        <childnode refid="4910" relation="include">
+        </childnode>
+        <childnode refid="4911" relation="include">
+        </childnode>
+        <childnode refid="4895" relation="include">
+        </childnode>
+        <childnode refid="4912" relation="include">
+        </childnode>
+        <childnode refid="4901" relation="include">
+        </childnode>
+        <childnode refid="4903" relation="include">
+        </childnode>
+        <childnode refid="4900" relation="include">
+        </childnode>
+      </node>
+      <node id="4904">
+        <label>tsaSerialize.hpp</label>
+        <link refid="tsa_serialize_8hpp"/>
+        <childnode refid="4899" relation="include">
+        </childnode>
+        <childnode refid="4900" relation="include">
+        </childnode>
+        <childnode refid="4901" relation="include">
+        </childnode>
+        <childnode refid="4905" relation="include">
+        </childnode>
+        <childnode refid="4918" relation="include">
+        </childnode>
+      </node>
+      <node id="4927">
+        <label>fparser.hpp</label>
+        <link refid="fparser_8hpp"/>
+        <childnode refid="4903" relation="include">
+        </childnode>
+        <childnode refid="4895" relation="include">
+        </childnode>
+        <childnode refid="4911" relation="include">
+        </childnode>
+      </node>
+      <node id="4898">
+        <label>AlgoBase.hpp</label>
+        <link refid="_algo_base_8hpp"/>
+        <childnode refid="4899" relation="include">
+        </childnode>
+        <childnode refid="4900" relation="include">
+        </childnode>
+        <childnode refid="4901" relation="include">
+        </childnode>
+        <childnode refid="4897" relation="include">
+        </childnode>
+        <childnode refid="4902" relation="include">
+        </childnode>
+        <childnode refid="4903" relation="include">
+        </childnode>
+        <childnode refid="4904" relation="include">
+        </childnode>
+        <childnode refid="4918" relation="include">
+        </childnode>
+        <childnode refid="4920" relation="include">
+        </childnode>
+        <childnode refid="4922" relation="include">
+        </childnode>
+        <childnode refid="4928" relation="include">
+        </childnode>
+        <childnode refid="4930" relation="include">
+        </childnode>
+      </node>
+      <node id="4908">
+        <label>eternity/persist.hpp</label>
+        <link refid="persist_8hpp"/>
+        <childnode refid="4906" relation="include">
+        </childnode>
+        <childnode refid="4909" relation="include">
+        </childnode>
+        <childnode refid="4910" relation="include">
+        </childnode>
+        <childnode refid="4911" relation="include">
+        </childnode>
+        <childnode refid="4912" relation="include">
+        </childnode>
+        <childnode refid="4901" relation="include">
+        </childnode>
+      </node>
+      <node id="4926">
+        <label>string.h</label>
+      </node>
+      <node id="4907">
+        <label>typeinfo</label>
+      </node>
+      <node id="4902">
+        <label>boost/numeric/ublas/io.hpp</label>
+      </node>
+      <node id="4921">
+        <label>unistd.h</label>
+      </node>
+      <node id="4925">
+        <label>tsaUtilityFunctions.hpp</label>
+        <link refid="tsa_utility_functions_8hpp"/>
+        <childnode refid="4926" relation="include">
+        </childnode>
+        <childnode refid="4927" relation="include">
+        </childnode>
+        <childnode refid="4924" relation="include">
+        </childnode>
+        <childnode refid="4901" relation="include">
+        </childnode>
+      </node>
+      <node id="4911">
+        <label>vector</label>
+      </node>
+      <node id="4922">
+        <label>BaseView.hpp</label>
+        <link refid="_base_view_8hpp"/>
+        <childnode refid="4895" relation="include">
+        </childnode>
+        <childnode refid="4903" relation="include">
+        </childnode>
+        <childnode refid="4918" relation="include">
+        </childnode>
+        <childnode refid="4923" relation="include">
+        </childnode>
+        <childnode refid="4925" relation="include">
+        </childnode>
+        <childnode refid="4904" relation="include">
+        </childnode>
+        <childnode refid="4920" relation="include">
+        </childnode>
+      </node>
+      <node id="4919">
+        <label>boost/numeric/ublas/matrix_proxy.hpp</label>
+      </node>
+      <node id="4917">
+        <label>sstream</label>
+      </node>
+      <node id="4894">
+        <label>BaseWindow.hpp</label>
+        <link refid="_base_window_8hpp"/>
+        <childnode refid="4895" relation="include">
+        </childnode>
+        <childnode refid="4896" relation="include">
+        </childnode>
+        <childnode refid="4897" relation="include">
+        </childnode>
+        <childnode refid="4898" relation="include">
+        </childnode>
+      </node>
+      <node id="4929">
+        <label>FrameL.h</label>
+      </node>
+      <node id="4893">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/BaseWindow.cpp</label>
+        <link refid="_base_window_8cpp"/>
+        <childnode refid="4894" relation="include">
+        </childnode>
+      </node>
+      <node id="4930">
+        <label>AlgoExceptions.hpp</label>
+        <link refid="_algo_exceptions_8hpp"/>
+        <childnode refid="4899" relation="include">
+        </childnode>
+        <childnode refid="4903" relation="include">
+        </childnode>
+      </node>
+      <node id="4928">
+        <label>SeqView.hpp</label>
+        <link refid="_seq_view_8hpp"/>
+        <childnode refid="4897" relation="include">
+        </childnode>
+        <childnode refid="4919" relation="include">
+        </childnode>
+        <childnode refid="4902" relation="include">
+        </childnode>
+        <childnode refid="4922" relation="include">
+        </childnode>
+        <childnode refid="4929" relation="include">
+        </childnode>
+      </node>
+      <node id="4909">
+        <label>math.h</label>
+      </node>
+      <node id="4897">
+        <label>boost/numeric/ublas/matrix.hpp</label>
+      </node>
+      <node id="4900">
+        <label>iostream</label>
+      </node>
+      <node id="4915">
+        <label>deque</label>
+      </node>
+      <node id="4913">
+        <label>eternity/persist_xml.hpp</label>
+        <link refid="persist__xml_8hpp"/>
+        <childnode refid="4908" relation="include">
+        </childnode>
+        <childnode refid="4914" relation="include">
+        </childnode>
+        <childnode refid="4915" relation="include">
+        </childnode>
+      </node>
+      <node id="4924">
+        <label>complex</label>
+      </node>
+      <node id="4916">
+        <label>eternity/algorithms.hpp</label>
+        <link refid="algorithms_8hpp"/>
+        <childnode refid="4908" relation="include">
+        </childnode>
+        <childnode refid="4913" relation="include">
+        </childnode>
+        <childnode refid="4914" relation="include">
+        </childnode>
+        <childnode refid="4917" relation="include">
+        </childnode>
+      </node>
+      <node id="4912">
+        <label>algorithm</label>
+      </node>
+      <node id="4896">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacetsa">tsa</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_base_window_8hpp" kindref="compound">BaseWindow.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetsa" kindref="compound">tsa</ref><sp/>{</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="classtsa_1_1_base_window_1aea4dee45722299896913859d7b899d6f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_base_window_1aea4dee45722299896913859d7b899d6f" kindref="member">BaseWindow::BaseWindow</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size)<sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_base_window_1a182b397ac3f3c409bfcb3a39d9c1575a" kindref="member">mWindow</ref>.resize(size);</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_base_window_1a182b397ac3f3c409bfcb3a39d9c1575a" kindref="member">mWindow</ref>.clear();</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="classtsa_1_1_base_window_1a0e99ffa3d84e8c7a05f7de437bfd6241" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_base_window_1a0e99ffa3d84e8c7a05f7de437bfd6241" kindref="member">BaseWindow::~BaseWindow</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="classtsa_1_1_base_window_1a05d9edb95dc01840a1b2df78dfa3a8c1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_base_window_1a05d9edb95dc01840a1b2df78dfa3a8c1" kindref="member">BaseWindow::operator()</ref>(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>v1)<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="classtsa_1_1_base_window_1afda50daa943527e09792b06e5ba69bcb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_base_window_1a05d9edb95dc01840a1b2df78dfa3a8c1" kindref="member">BaseWindow::operator()</ref>(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>v1,<sp/><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>v2)<sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="classtsa_1_1_base_window_1a15647cb85344c7e82ecde50675b07efd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_base_window_1a15647cb85344c7e82ecde50675b07efd" kindref="member">BaseWindow::execute</ref>(<ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref>&amp;<sp/>in,<sp/><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref>&amp;<sp/>out)<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rows<sp/>=<sp/>in.size1();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ch<sp/>=<sp/>0;<sp/>ch<sp/>&lt;<sp/>rows;<sp/>ch++)<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classtsa_1_1_base_window_1a182b397ac3f3c409bfcb3a39d9c1575a" kindref="member">mWindow</ref>.size();<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out(ch,<sp/>i)<sp/>=<sp/>in(ch,<sp/>i)<sp/>*<sp/><ref refid="classtsa_1_1_base_window_1a182b397ac3f3c409bfcb3a39d9c1575a" kindref="member">mWindow</ref>(i);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="classtsa_1_1_base_window_1a7e4b5f7d87bbe397332b4e506b0681c2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_base_window_1a15647cb85344c7e82ecde50675b07efd" kindref="member">BaseWindow::execute</ref>(<ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref>&amp;<sp/>in,<sp/><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref>&amp;<sp/>out,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>offset)<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rows<sp/>=<sp/>in.size1();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ch<sp/>=<sp/>0;<sp/>ch<sp/>&lt;<sp/>rows;<sp/>ch++)<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classtsa_1_1_base_window_1a182b397ac3f3c409bfcb3a39d9c1575a" kindref="member">mWindow</ref>.size();<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out(ch,<sp/>i)<sp/>=<sp/>in(ch,<sp/>i<sp/>+<sp/>offset)<sp/>*<sp/><ref refid="classtsa_1_1_base_window_1a182b397ac3f3c409bfcb3a39d9c1575a" kindref="member">mWindow</ref>(i);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="classtsa_1_1_base_window_1a34b933da998ba8137d0e0def7514d2cb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_base_window_1a15647cb85344c7e82ecde50675b07efd" kindref="member">BaseWindow::execute</ref>(<ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref>&amp;<sp/>inout)<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rows<sp/>=<sp/>inout.size1();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ch<sp/>=<sp/>0;<sp/>ch<sp/>&lt;<sp/>rows;<sp/>ch++)<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classtsa_1_1_base_window_1a182b397ac3f3c409bfcb3a39d9c1575a" kindref="member">mWindow</ref>.size();<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>inout(ch,<sp/>i)<sp/>*=<sp/><ref refid="classtsa_1_1_base_window_1a182b397ac3f3c409bfcb3a39d9c1575a" kindref="member">mWindow</ref>(i);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="classtsa_1_1_base_window_1abadd3d1ef579310ab440a70d77e1d46d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_base_window_1a15647cb85344c7e82ecde50675b07efd" kindref="member">BaseWindow::execute</ref>(<ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref>&amp;<sp/>inout)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classtsa_1_1_base_window_1a182b397ac3f3c409bfcb3a39d9c1575a" kindref="member">mWindow</ref>.size();<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>inout(i)<sp/>*=<sp/><ref refid="classtsa_1_1_base_window_1a182b397ac3f3c409bfcb3a39d9c1575a" kindref="member">mWindow</ref>(i);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="classtsa_1_1_base_window_1ab9dc5e39e09701b60b9e160837f059df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_base_window_1a05d9edb95dc01840a1b2df78dfa3a8c1" kindref="member">BaseWindow::operator()</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i)<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_base_window_1a182b397ac3f3c409bfcb3a39d9c1575a" kindref="member">mWindow</ref>(i);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="classtsa_1_1_base_window_1a8a2a3425f2915762d50fa57dd0e04f22" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_base_window_1a8a2a3425f2915762d50fa57dd0e04f22" kindref="member">BaseWindow::Resize</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size)<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_base_window_1a182b397ac3f3c409bfcb3a39d9c1575a" kindref="member">mWindow</ref>.resize(size);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_base_window_1a182b397ac3f3c409bfcb3a39d9c1575a" kindref="member">mWindow</ref>.clear();</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="classtsa_1_1_base_window_1af3e45daf0401f06108c6634344532af8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_base_window_1af3e45daf0401f06108c6634344532af8" kindref="member">BaseWindow::GetSize</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_base_window_1a182b397ac3f3c409bfcb3a39d9c1575a" kindref="member">mWindow</ref>.size();</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="classtsa_1_1_base_window_1aa74b29105d94caa521d308198e8e6643" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_base_window_1aa74b29105d94caa521d308198e8e6643" kindref="member">BaseWindow::FillWindow</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="classtsa_1_1_base_window_1ad6681a5cb29414a97af6be1ea7805a81" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_base_window_1ad6681a5cb29414a97af6be1ea7805a81" kindref="member">BaseWindow::Normalize</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>wsize<sp/>=<sp/><ref refid="classtsa_1_1_base_window_1a182b397ac3f3c409bfcb3a39d9c1575a" kindref="member">mWindow</ref>.size();</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>norm<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>wsize;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>norm<sp/>+=<sp/><ref refid="classtsa_1_1_base_window_1a182b397ac3f3c409bfcb3a39d9c1575a" kindref="member">mWindow</ref>(i)<sp/>*<sp/><ref refid="classtsa_1_1_base_window_1a182b397ac3f3c409bfcb3a39d9c1575a" kindref="member">mWindow</ref>(i);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>norm<sp/>=<sp/>sqrt(wsize<sp/>/<sp/>norm);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>wsize;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_base_window_1a182b397ac3f3c409bfcb3a39d9c1575a" kindref="member">mWindow</ref>(i)<sp/>*=<sp/>norm;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="classtsa_1_1_base_window_1a4bd3edc44a56103ac3f9112a55a10420" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_base_window_1a4bd3edc44a56103ac3f9112a55a10420" kindref="member">BaseWindow::CrossAverage</ref>(<ref refid="classtsa_1_1_base_window" kindref="compound">BaseWindow</ref>&amp;<sp/>w1,<sp/><ref refid="classtsa_1_1_base_window" kindref="compound">BaseWindow</ref>&amp;<sp/>w2)<sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>wsize1<sp/>=<sp/>w1.<ref refid="classtsa_1_1_base_window_1af3e45daf0401f06108c6634344532af8" kindref="member">GetSize</ref>();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>wsize2<sp/>=<sp/>w2.<ref refid="classtsa_1_1_base_window_1af3e45daf0401f06108c6634344532af8" kindref="member">GetSize</ref>();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>wsize;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(wsize1<sp/>&gt;<sp/>wsize2)<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w2.<ref refid="classtsa_1_1_base_window_1a8a2a3425f2915762d50fa57dd0e04f22" kindref="member">Resize</ref>(wsize1);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wsize<sp/>=<sp/>wsize1;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w1.<ref refid="classtsa_1_1_base_window_1a8a2a3425f2915762d50fa57dd0e04f22" kindref="member">Resize</ref>(wsize2);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wsize<sp/>=<sp/>wsize2;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>W1W2<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>wsize;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>W1W2<sp/>+=<sp/>w1(i)<sp/>*<sp/>w2(i);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>W1W2<sp/>/=<sp/>wsize;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w1.<ref refid="classtsa_1_1_base_window_1a8a2a3425f2915762d50fa57dd0e04f22" kindref="member">Resize</ref>(wsize1);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w2.<ref refid="classtsa_1_1_base_window_1a8a2a3425f2915762d50fa57dd0e04f22" kindref="member">Resize</ref>(wsize2);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>W1W2;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="classtsa_1_1_base_window_1a31f86887f9ccbddd97bdca903c506606" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_base_window_1a31f86887f9ccbddd97bdca903c506606" kindref="member">BaseWindow::CrossSquareAverage</ref>(<ref refid="classtsa_1_1_base_window" kindref="compound">BaseWindow</ref>&amp;<sp/>w1,<sp/><ref refid="classtsa_1_1_base_window" kindref="compound">BaseWindow</ref>&amp;<sp/>w2)<sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>wsize1<sp/>=<sp/>w1.<ref refid="classtsa_1_1_base_window_1af3e45daf0401f06108c6634344532af8" kindref="member">GetSize</ref>();</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>wsize2<sp/>=<sp/>w2.<ref refid="classtsa_1_1_base_window_1af3e45daf0401f06108c6634344532af8" kindref="member">GetSize</ref>();</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>wsize;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(wsize1<sp/>&gt;<sp/>wsize2)<sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w2.<ref refid="classtsa_1_1_base_window_1a8a2a3425f2915762d50fa57dd0e04f22" kindref="member">Resize</ref>(wsize1);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wsize<sp/>=<sp/>wsize1;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w1.<ref refid="classtsa_1_1_base_window_1a8a2a3425f2915762d50fa57dd0e04f22" kindref="member">Resize</ref>(wsize2);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wsize<sp/>=<sp/>wsize2;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>W1W2<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>wsize;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>W1W2<sp/>+=<sp/>w1(i)<sp/>*<sp/>w1(i)<sp/>*<sp/>w2(i)<sp/>*<sp/>w2(i);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>W1W2<sp/>/=<sp/>wsize;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w1.<ref refid="classtsa_1_1_base_window_1a8a2a3425f2915762d50fa57dd0e04f22" kindref="member">Resize</ref>(wsize1);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w2.<ref refid="classtsa_1_1_base_window_1a8a2a3425f2915762d50fa57dd0e04f22" kindref="member">Resize</ref>(wsize2);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>W1W2;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/src/BaseWindow.cpp"/>
+  </compounddef>
+</doxygen>

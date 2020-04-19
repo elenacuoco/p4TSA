@@ -1,0 +1,1133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="xmlscanner_8hpp" kind="file" language="C++">
+    <compoundname>xmlscanner.hpp</compoundname>
+    <includes local="no">math.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">map</includes>
+    <includes local="no">algorithm</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">string</includes>
+    <includes local="no">iostream</includes>
+    <includedby refid="persist__xml_8hpp" local="yes">/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.hpp</includedby>
+    <includedby refid="algorithms_8hpp" local="yes">/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/algorithms.hpp</includedby>
+    <includedby refid="xmlscanner_8cpp" local="yes">/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/xmlscanner.cpp</includedby>
+    <incdepgraph>
+      <node id="2108">
+        <label>stdlib.h</label>
+      </node>
+      <node id="2113">
+        <label>string</label>
+      </node>
+      <node id="2110">
+        <label>map</label>
+      </node>
+      <node id="2112">
+        <label>fstream</label>
+      </node>
+      <node id="2106">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/xmlscanner.hpp</label>
+        <link refid="xmlscanner_8hpp"/>
+        <childnode refid="2107" relation="include">
+        </childnode>
+        <childnode refid="2108" relation="include">
+        </childnode>
+        <childnode refid="2109" relation="include">
+        </childnode>
+        <childnode refid="2110" relation="include">
+        </childnode>
+        <childnode refid="2111" relation="include">
+        </childnode>
+        <childnode refid="2112" relation="include">
+        </childnode>
+        <childnode refid="2113" relation="include">
+        </childnode>
+        <childnode refid="2114" relation="include">
+        </childnode>
+      </node>
+      <node id="2109">
+        <label>vector</label>
+      </node>
+      <node id="2107">
+        <label>math.h</label>
+      </node>
+      <node id="2114">
+        <label>iostream</label>
+      </node>
+      <node id="2111">
+        <label>algorithm</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2185">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/BLInterpolation.cpp</label>
+        <link refid="_b_l_interpolation_8cpp"/>
+      </node>
+      <node id="2151">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/Arma2Psd.hpp</label>
+        <link refid="_arma2_psd_8hpp"/>
+        <childnode refid="2152" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+      </node>
+      <node id="2131">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/WDF2Classify.hpp</label>
+        <link refid="_w_d_f2_classify_8hpp"/>
+        <childnode refid="2132" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+      </node>
+      <node id="2160">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/ComplexFFT.hpp</label>
+        <link refid="_complex_f_f_t_8hpp"/>
+        <childnode refid="2161" relation="include">
+        </childnode>
+      </node>
+      <node id="2206">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/NotchWidrow.hpp</label>
+        <link refid="_notch_widrow_8hpp"/>
+        <childnode refid="2207" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+      </node>
+      <node id="2178">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/Cs2HammingWindow.hpp</label>
+        <link refid="_cs2_hamming_window_8hpp"/>
+        <childnode refid="2124" relation="include">
+        </childnode>
+        <childnode refid="2131" relation="include">
+        </childnode>
+        <childnode refid="2133" relation="include">
+        </childnode>
+        <childnode refid="2175" relation="include">
+        </childnode>
+      </node>
+      <node id="2195">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/Parcor2AR.cpp</label>
+        <link refid="_parcor2_a_r_8cpp"/>
+      </node>
+      <node id="2149">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/ArDurbinEstimator.hpp</label>
+        <link refid="_ar_durbin_estimator_8hpp"/>
+        <childnode refid="2150" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+      </node>
+      <node id="2122">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/ArBurgEstimator.hpp</label>
+        <link refid="_ar_burg_estimator_8hpp"/>
+        <childnode refid="2123" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+      </node>
+      <node id="2120">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity.hpp</label>
+        <link refid="eternity_8hpp"/>
+        <childnode refid="2121" relation="include">
+        </childnode>
+        <childnode refid="2122" relation="include">
+        </childnode>
+        <childnode refid="2125" relation="include">
+        </childnode>
+        <childnode refid="2135" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+        <childnode refid="2142" relation="include">
+        </childnode>
+        <childnode refid="2227" relation="include">
+        </childnode>
+      </node>
+      <node id="2158">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/ARMAfit.cpp</label>
+        <link refid="_a_r_m_afit_8cpp"/>
+      </node>
+      <node id="2229">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.cpp</label>
+        <link refid="persist__xml_8cpp"/>
+        <childnode refid="2121" relation="include">
+        </childnode>
+        <childnode refid="2119" relation="include">
+        </childnode>
+      </node>
+      <node id="2180">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/KaiserWindow.hpp</label>
+        <link refid="_kaiser_window_8hpp"/>
+        <childnode refid="2124" relation="include">
+        </childnode>
+        <childnode refid="2175" relation="include">
+        </childnode>
+      </node>
+      <node id="2176">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/WindowFactory.cpp</label>
+        <link refid="_window_factory_8cpp"/>
+      </node>
+      <node id="2137">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/LatticeFilter.cpp</label>
+        <link refid="_lattice_filter_8cpp"/>
+      </node>
+      <node id="2193">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/CreateDvector.cpp</label>
+        <link refid="_create_dvector_8cpp"/>
+      </node>
+      <node id="2170">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/RealFFT.hpp</label>
+        <link refid="_real_f_f_t_8hpp"/>
+        <childnode refid="2171" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+      </node>
+      <node id="2121">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/eternity.cpp</label>
+        <link refid="src_2eternity_8cpp"/>
+      </node>
+      <node id="2129">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLfilter.hpp</label>
+        <link refid="_l_s_lfilter_8hpp"/>
+        <childnode refid="2130" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+      </node>
+      <node id="2127">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/DoubleWhitening.hpp</label>
+        <link refid="_double_whitening_8hpp"/>
+        <childnode refid="2128" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+      </node>
+      <node id="2128">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/DoubleWhitening.cpp</label>
+        <link refid="_double_whitening_8cpp"/>
+      </node>
+      <node id="2207">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/NotchWidrow.cpp</label>
+        <link refid="_notch_widrow_8cpp"/>
+      </node>
+      <node id="2182">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/TukeyWindow.hpp</label>
+        <link refid="_tukey_window_8hpp"/>
+        <childnode refid="2124" relation="include">
+        </childnode>
+        <childnode refid="2175" relation="include">
+        </childnode>
+      </node>
+      <node id="2174">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/BartlettWindow.hpp</label>
+        <link refid="_bartlett_window_8hpp"/>
+        <childnode refid="2124" relation="include">
+        </childnode>
+        <childnode refid="2175" relation="include">
+        </childnode>
+      </node>
+      <node id="2227">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTypes.hpp</label>
+        <link refid="tsa_types_8hpp"/>
+        <childnode refid="2228" relation="include">
+        </childnode>
+        <childnode refid="2144" relation="include">
+        </childnode>
+        <childnode refid="2223" relation="include">
+        </childnode>
+        <childnode refid="2125" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+        <childnode refid="2142" relation="include">
+        </childnode>
+      </node>
+      <node id="2181">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/TukeyHannWindow.hpp</label>
+        <link refid="_tukey_hann_window_8hpp"/>
+        <childnode refid="2124" relation="include">
+        </childnode>
+        <childnode refid="2175" relation="include">
+        </childnode>
+      </node>
+      <node id="2217">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletThreshold.hpp</label>
+        <link refid="_wavelet_threshold_8hpp"/>
+        <childnode refid="2218" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+        <childnode refid="2219" relation="include">
+        </childnode>
+        <childnode refid="2131" relation="include">
+        </childnode>
+        <childnode refid="2133" relation="include">
+        </childnode>
+      </node>
+      <node id="2220">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/WavReconstruction.cpp</label>
+        <link refid="_wav_reconstruction_8cpp"/>
+      </node>
+      <node id="2189">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/Cholesky.cpp</label>
+        <link refid="_cholesky_8cpp"/>
+      </node>
+      <node id="2183">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/WelchWindow.hpp</label>
+        <link refid="_welch_window_8hpp"/>
+        <childnode refid="2124" relation="include">
+        </childnode>
+        <childnode refid="2175" relation="include">
+        </childnode>
+      </node>
+      <node id="2141">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/LeastSquaresLattice.cpp</label>
+        <link refid="_least_squares_lattice_8cpp"/>
+      </node>
+      <node id="2209">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/RLSCanceler.cpp</label>
+        <link refid="_r_l_s_canceler_8cpp"/>
+      </node>
+      <node id="2155">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/ARMAFilter.hpp</label>
+        <link refid="_a_r_m_a_filter_8hpp"/>
+        <childnode refid="2156" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+      </node>
+      <node id="2146">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/AR2.cpp</label>
+        <link refid="_a_r2_8cpp"/>
+      </node>
+      <node id="2161">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/ComplexFFT.cpp</label>
+        <link refid="_complex_f_f_t_8cpp"/>
+      </node>
+      <node id="2148">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/AR2Parcor.cpp</label>
+        <link refid="_a_r2_parcor_8cpp"/>
+      </node>
+      <node id="2175">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/WindowFactory.hpp</label>
+        <link refid="_window_factory_8hpp"/>
+        <childnode refid="2176" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+      </node>
+      <node id="2115">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/xmlscanner.hpp</label>
+        <link refid="xmlscanner_8hpp"/>
+        <childnode refid="2116" relation="include">
+        </childnode>
+        <childnode refid="2117" relation="include">
+        </childnode>
+        <childnode refid="2230" relation="include">
+        </childnode>
+      </node>
+      <node id="2168">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/InverseRealFFT.hpp</label>
+        <link refid="_inverse_real_f_f_t_8hpp"/>
+        <childnode refid="2169" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+      </node>
+      <node id="2142">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaSerialize.hpp</label>
+        <link refid="tsa_serialize_8hpp"/>
+        <childnode refid="2143" relation="include">
+        </childnode>
+        <childnode refid="2144" relation="include">
+        </childnode>
+        <childnode refid="2223" relation="include">
+        </childnode>
+        <childnode refid="2125" relation="include">
+        </childnode>
+      </node>
+      <node id="2192">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/CreateDvector.hpp</label>
+        <link refid="_create_dvector_8hpp"/>
+        <childnode refid="2193" relation="include">
+        </childnode>
+        <childnode refid="2194" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+      </node>
+      <node id="2163">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/DCT.cpp</label>
+        <link refid="_d_c_t_8cpp"/>
+      </node>
+      <node id="2169">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/InverseRealFFT.cpp</label>
+        <link refid="_inverse_real_f_f_t_8cpp"/>
+      </node>
+      <node id="2164">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/DST.hpp</label>
+        <link refid="_d_s_t_8hpp"/>
+        <childnode refid="2165" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+      </node>
+      <node id="2118">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/eternity.hpp</label>
+        <link refid="eternity_2eternity_8hpp"/>
+        <childnode refid="2119" relation="include">
+        </childnode>
+      </node>
+      <node id="2132">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/WDF2Classify.cpp</label>
+        <link refid="_w_d_f2_classify_8cpp"/>
+      </node>
+      <node id="2166">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/IDCT.hpp</label>
+        <link refid="_i_d_c_t_8hpp"/>
+        <childnode refid="2167" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+      </node>
+      <node id="2126">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/FifoBuffer.cpp</label>
+        <link refid="_fifo_buffer_8cpp"/>
+      </node>
+      <node id="2204">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/MYWE.hpp</label>
+        <link refid="_m_y_w_e_8hpp"/>
+        <childnode refid="2205" relation="include">
+        </childnode>
+        <childnode refid="2157" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+      </node>
+      <node id="2202">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp</label>
+        <link refid="_frame_i_stream_8hpp"/>
+        <childnode refid="2203" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+      </node>
+      <node id="2205">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/MYWE.cpp</label>
+        <link refid="_m_y_w_e_8cpp"/>
+      </node>
+      <node id="2184">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/BLInterpolation.hpp</label>
+        <link refid="_b_l_interpolation_8hpp"/>
+        <childnode refid="2185" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+      </node>
+      <node id="2144">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/AlgoBase.hpp</label>
+        <link refid="_algo_base_8hpp"/>
+        <childnode refid="2145" relation="include">
+        </childnode>
+        <childnode refid="2147" relation="include">
+        </childnode>
+        <childnode refid="2122" relation="include">
+        </childnode>
+        <childnode refid="2149" relation="include">
+        </childnode>
+        <childnode refid="2151" relation="include">
+        </childnode>
+        <childnode refid="2153" relation="include">
+        </childnode>
+        <childnode refid="2155" relation="include">
+        </childnode>
+        <childnode refid="2157" relation="include">
+        </childnode>
+        <childnode refid="2159" relation="include">
+        </childnode>
+        <childnode refid="2172" relation="include">
+        </childnode>
+        <childnode refid="2184" relation="include">
+        </childnode>
+        <childnode refid="2186" relation="include">
+        </childnode>
+        <childnode refid="2188" relation="include">
+        </childnode>
+        <childnode refid="2190" relation="include">
+        </childnode>
+        <childnode refid="2192" relation="include">
+        </childnode>
+        <childnode refid="2127" relation="include">
+        </childnode>
+        <childnode refid="2196" relation="include">
+        </childnode>
+        <childnode refid="2198" relation="include">
+        </childnode>
+        <childnode refid="2200" relation="include">
+        </childnode>
+        <childnode refid="2202" relation="include">
+        </childnode>
+        <childnode refid="2136" relation="include">
+        </childnode>
+        <childnode refid="2140" relation="include">
+        </childnode>
+        <childnode refid="2129" relation="include">
+        </childnode>
+        <childnode refid="2138" relation="include">
+        </childnode>
+        <childnode refid="2204" relation="include">
+        </childnode>
+        <childnode refid="2206" relation="include">
+        </childnode>
+        <childnode refid="2194" relation="include">
+        </childnode>
+        <childnode refid="2208" relation="include">
+        </childnode>
+        <childnode refid="2210" relation="include">
+        </childnode>
+        <childnode refid="2212" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+        <childnode refid="2213" relation="include">
+        </childnode>
+        <childnode refid="2214" relation="include">
+        </childnode>
+        <childnode refid="2215" relation="include">
+        </childnode>
+        <childnode refid="2217" relation="include">
+        </childnode>
+        <childnode refid="2221" relation="include">
+        </childnode>
+        <childnode refid="2219" relation="include">
+        </childnode>
+        <childnode refid="2131" relation="include">
+        </childnode>
+        <childnode refid="2133" relation="include">
+        </childnode>
+      </node>
+      <node id="2219">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/WavReconstruction.hpp</label>
+        <link refid="_wav_reconstruction_8hpp"/>
+        <childnode refid="2220" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+      </node>
+      <node id="2208">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/RLSCanceler.hpp</label>
+        <link refid="_r_l_s_canceler_8hpp"/>
+        <childnode refid="2209" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+      </node>
+      <node id="2213">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/Util.hpp</label>
+        <link refid="_util_8hpp"/>
+        <childnode refid="2124" relation="include">
+        </childnode>
+      </node>
+      <node id="2147">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/AR2Parcor.hpp</label>
+        <link refid="_a_r2_parcor_8hpp"/>
+        <childnode refid="2148" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+      </node>
+      <node id="2124">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/tsa.hpp</label>
+        <link refid="tsa_8hpp"/>
+      </node>
+      <node id="2125">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/FifoBuffer.hpp</label>
+        <link refid="_fifo_buffer_8hpp"/>
+        <childnode refid="2126" relation="include">
+        </childnode>
+        <childnode refid="2127" relation="include">
+        </childnode>
+        <childnode refid="2129" relation="include">
+        </childnode>
+        <childnode refid="2131" relation="include">
+        </childnode>
+        <childnode refid="2133" relation="include">
+        </childnode>
+      </node>
+      <node id="2210">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/SelectionOrderCriteria.hpp</label>
+        <link refid="_selection_order_criteria_8hpp"/>
+        <childnode refid="2211" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+      </node>
+      <node id="2197">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/EventDescription.cpp</label>
+        <link refid="_event_description_8cpp"/>
+      </node>
+      <node id="2228">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/tsaUtilityFunctions.cpp</label>
+        <link refid="tsa_utility_functions_8cpp"/>
+      </node>
+      <node id="2157">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/ARMAfit.hpp</label>
+        <link refid="_a_r_m_afit_8hpp"/>
+        <childnode refid="2158" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+      </node>
+      <node id="2215">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/ViewUtil.hpp</label>
+        <link refid="_view_util_8hpp"/>
+        <childnode refid="2216" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+      </node>
+      <node id="2123">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/ArBurgEstimator.cpp</label>
+        <link refid="_ar_burg_estimator_8cpp"/>
+      </node>
+      <node id="2139">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/LSLLearning.cpp</label>
+        <link refid="_l_s_l_learning_8cpp"/>
+      </node>
+      <node id="2188">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/Cholesky.hpp</label>
+        <link refid="_cholesky_8hpp"/>
+        <childnode refid="2189" relation="include">
+        </childnode>
+      </node>
+      <node id="2199">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/EventFullFeatured.cpp</label>
+        <link refid="_event_full_featured_8cpp"/>
+      </node>
+      <node id="2187">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/ButterworthFilter.cpp</label>
+        <link refid="_butterworth_filter_8cpp"/>
+      </node>
+      <node id="2223">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/BaseView.hpp</label>
+        <link refid="_base_view_8hpp"/>
+        <childnode refid="2144" relation="include">
+        </childnode>
+        <childnode refid="2224" relation="include">
+        </childnode>
+        <childnode refid="2190" relation="include">
+        </childnode>
+        <childnode refid="2196" relation="include">
+        </childnode>
+        <childnode refid="2198" relation="include">
+        </childnode>
+        <childnode refid="2135" relation="include">
+        </childnode>
+        <childnode refid="2225" relation="include">
+        </childnode>
+        <childnode refid="2226" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+        <childnode refid="2131" relation="include">
+        </childnode>
+        <childnode refid="2133" relation="include">
+        </childnode>
+      </node>
+      <node id="2230">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/xmlscanner.cpp</label>
+        <link refid="xmlscanner_8cpp"/>
+        <childnode refid="2121" relation="include">
+        </childnode>
+        <childnode refid="2119" relation="include">
+        </childnode>
+      </node>
+      <node id="2218">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/WaveletThreshold.cpp</label>
+        <link refid="_wavelet_threshold_8cpp"/>
+      </node>
+      <node id="2221">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletTransform.hpp</label>
+        <link refid="_wavelet_transform_8hpp"/>
+        <childnode refid="2222" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+        <childnode refid="2219" relation="include">
+        </childnode>
+        <childnode refid="2131" relation="include">
+        </childnode>
+        <childnode refid="2133" relation="include">
+        </childnode>
+      </node>
+      <node id="2211">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/SelectionOrderCriteria.cpp</label>
+        <link refid="_selection_order_criteria_8cpp"/>
+      </node>
+      <node id="2226">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp</label>
+        <link refid="_t_f_view_8hpp"/>
+        <childnode refid="2124" relation="include">
+        </childnode>
+      </node>
+      <node id="2145">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/AR2.hpp</label>
+        <link refid="_a_r2_8hpp"/>
+        <childnode refid="2146" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+      </node>
+      <node id="2138">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp</label>
+        <link refid="_l_s_l_learning_8hpp"/>
+        <childnode refid="2139" relation="include">
+        </childnode>
+        <childnode refid="2140" relation="include">
+        </childnode>
+        <childnode refid="2129" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+      </node>
+      <node id="2203">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/FrameIStream.cpp</label>
+        <link refid="_frame_i_stream_8cpp"/>
+      </node>
+      <node id="2172">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/BaseWindow.hpp</label>
+        <link refid="_base_window_8hpp"/>
+        <childnode refid="2173" relation="include">
+        </childnode>
+        <childnode refid="2174" relation="include">
+        </childnode>
+        <childnode refid="2177" relation="include">
+        </childnode>
+        <childnode refid="2178" relation="include">
+        </childnode>
+        <childnode refid="2179" relation="include">
+        </childnode>
+        <childnode refid="2180" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+        <childnode refid="2181" relation="include">
+        </childnode>
+        <childnode refid="2182" relation="include">
+        </childnode>
+        <childnode refid="2183" relation="include">
+        </childnode>
+      </node>
+      <node id="2119">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/eternity.cpp</label>
+        <link refid="include_2eternity_2eternity_8cpp"/>
+      </node>
+      <node id="2173">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/BaseWindow.cpp</label>
+        <link refid="_base_window_8cpp"/>
+      </node>
+      <node id="2222">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/WaveletTransform.cpp</label>
+        <link refid="_wavelet_transform_8cpp"/>
+      </node>
+      <node id="2190">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/ClusterizedEventFullFeatured.hpp</label>
+        <link refid="_clusterized_event_full_featured_8hpp"/>
+        <childnode refid="2191" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+      </node>
+      <node id="2225">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/SeqView.hpp</label>
+        <link refid="_seq_view_8hpp"/>
+        <childnode refid="2144" relation="include">
+        </childnode>
+        <childnode refid="2122" relation="include">
+        </childnode>
+        <childnode refid="2151" relation="include">
+        </childnode>
+        <childnode refid="2153" relation="include">
+        </childnode>
+        <childnode refid="2184" relation="include">
+        </childnode>
+        <childnode refid="2162" relation="include">
+        </childnode>
+        <childnode refid="2127" relation="include">
+        </childnode>
+        <childnode refid="2164" relation="include">
+        </childnode>
+        <childnode refid="2200" relation="include">
+        </childnode>
+        <childnode refid="2202" relation="include">
+        </childnode>
+        <childnode refid="2166" relation="include">
+        </childnode>
+        <childnode refid="2136" relation="include">
+        </childnode>
+        <childnode refid="2129" relation="include">
+        </childnode>
+        <childnode refid="2138" relation="include">
+        </childnode>
+        <childnode refid="2206" relation="include">
+        </childnode>
+        <childnode refid="2170" relation="include">
+        </childnode>
+        <childnode refid="2210" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+        <childnode refid="2213" relation="include">
+        </childnode>
+        <childnode refid="2217" relation="include">
+        </childnode>
+        <childnode refid="2221" relation="include">
+        </childnode>
+        <childnode refid="2219" relation="include">
+        </childnode>
+        <childnode refid="2131" relation="include">
+        </childnode>
+        <childnode refid="2133" relation="include">
+        </childnode>
+      </node>
+      <node id="2152">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/Arma2Psd.cpp</label>
+        <link refid="_arma2_psd_8cpp"/>
+      </node>
+      <node id="2154">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/Arma2TF.cpp</label>
+        <link refid="_arma2_t_f_8cpp"/>
+      </node>
+      <node id="2198">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/EventFullFeatured.hpp</label>
+        <link refid="_event_full_featured_8hpp"/>
+        <childnode refid="2199" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+        <childnode refid="2131" relation="include">
+        </childnode>
+        <childnode refid="2133" relation="include">
+        </childnode>
+      </node>
+      <node id="2150">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/ArDurbinEstimator.cpp</label>
+        <link refid="_ar_durbin_estimator_8cpp"/>
+      </node>
+      <node id="2167">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/IDCT.cpp</label>
+        <link refid="_i_d_c_t_8cpp"/>
+      </node>
+      <node id="2133">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/WDF2Reconstruct.hpp</label>
+        <link refid="_w_d_f2_reconstruct_8hpp"/>
+        <childnode refid="2134" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+      </node>
+      <node id="2212">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/TF2Psd.hpp</label>
+        <link refid="_t_f2_psd_8hpp"/>
+        <childnode refid="2124" relation="include">
+        </childnode>
+      </node>
+      <node id="2171">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/RealFFT.cpp</label>
+        <link refid="_real_f_f_t_8cpp"/>
+      </node>
+      <node id="2224">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/ARMAView.hpp</label>
+        <link refid="_a_r_m_a_view_8hpp"/>
+        <childnode refid="2151" relation="include">
+        </childnode>
+        <childnode refid="2153" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+      </node>
+      <node id="2186">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/ButterworthFilter.hpp</label>
+        <link refid="_butterworth_filter_8hpp"/>
+        <childnode refid="2187" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+      </node>
+      <node id="2191">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/ClusterizedEventFullFeatured.cpp</label>
+        <link refid="_clusterized_event_full_featured_8cpp"/>
+      </node>
+      <node id="2159">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/BaseFFT.hpp</label>
+        <link refid="_base_f_f_t_8hpp"/>
+        <childnode refid="2160" relation="include">
+        </childnode>
+        <childnode refid="2162" relation="include">
+        </childnode>
+        <childnode refid="2164" relation="include">
+        </childnode>
+        <childnode refid="2166" relation="include">
+        </childnode>
+        <childnode refid="2168" relation="include">
+        </childnode>
+        <childnode refid="2170" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+      </node>
+      <node id="2177">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/BisquareWindow.hpp</label>
+        <link refid="_bisquare_window_8hpp"/>
+        <childnode refid="2124" relation="include">
+        </childnode>
+        <childnode refid="2175" relation="include">
+        </childnode>
+      </node>
+      <node id="2140">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/LeastSquaresLattice.hpp</label>
+        <link refid="_least_squares_lattice_8hpp"/>
+        <childnode refid="2141" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+      </node>
+      <node id="2136">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeFilter.hpp</label>
+        <link refid="_lattice_filter_8hpp"/>
+        <childnode refid="2137" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+      </node>
+      <node id="2135">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp</label>
+        <link refid="_lattice_view_8hpp"/>
+        <childnode refid="2122" relation="include">
+        </childnode>
+        <childnode refid="2127" relation="include">
+        </childnode>
+        <childnode refid="2136" relation="include">
+        </childnode>
+        <childnode refid="2129" relation="include">
+        </childnode>
+        <childnode refid="2138" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+      </node>
+      <node id="2116">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.hpp</label>
+        <link refid="persist__xml_8hpp"/>
+        <childnode refid="2117" relation="include">
+        </childnode>
+        <childnode refid="2118" relation="include">
+        </childnode>
+        <childnode refid="2229" relation="include">
+        </childnode>
+        <childnode refid="2120" relation="include">
+        </childnode>
+      </node>
+      <node id="2156">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/ARMAFilter.cpp</label>
+        <link refid="_a_r_m_a_filter_8cpp"/>
+      </node>
+      <node id="2134">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/WDF2Reconstruct.cpp</label>
+        <link refid="_w_d_f2_reconstruct_8cpp"/>
+      </node>
+      <node id="2201">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/FrameIChannel.cpp</label>
+        <link refid="_frame_i_channel_8cpp"/>
+      </node>
+      <node id="2153">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/Arma2TF.hpp</label>
+        <link refid="_arma2_t_f_8hpp"/>
+        <childnode refid="2154" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+      </node>
+      <node id="2117">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/algorithms.hpp</label>
+        <link refid="algorithms_8hpp"/>
+        <childnode refid="2118" relation="include">
+        </childnode>
+        <childnode refid="2120" relation="include">
+        </childnode>
+      </node>
+      <node id="2179">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/Cs2HannWindow.hpp</label>
+        <link refid="_cs2_hann_window_8hpp"/>
+        <childnode refid="2124" relation="include">
+        </childnode>
+        <childnode refid="2175" relation="include">
+        </childnode>
+      </node>
+      <node id="2216">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/ViewUtil.cpp</label>
+        <link refid="_view_util_8cpp"/>
+      </node>
+      <node id="2214">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/VArma2TF.hpp</label>
+        <link refid="_v_arma2_t_f_8hpp"/>
+      </node>
+      <node id="2130">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/LSLfilter.cpp</label>
+        <link refid="_l_s_lfilter_8cpp"/>
+      </node>
+      <node id="2165">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/DST.cpp</label>
+        <link refid="_d_s_t_8cpp"/>
+      </node>
+      <node id="2200">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIChannel.hpp</label>
+        <link refid="_frame_i_channel_8hpp"/>
+        <childnode refid="2201" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+      </node>
+      <node id="2162">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/DCT.hpp</label>
+        <link refid="_d_c_t_8hpp"/>
+        <childnode refid="2163" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+        <childnode refid="2131" relation="include">
+        </childnode>
+      </node>
+      <node id="2194">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/Parcor2AR.hpp</label>
+        <link refid="_parcor2_a_r_8hpp"/>
+        <childnode refid="2123" relation="include">
+        </childnode>
+        <childnode refid="2195" relation="include">
+        </childnode>
+        <childnode refid="2122" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+      </node>
+      <node id="2143">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/tsaSerialize.cpp</label>
+        <link refid="tsa_serialize_8cpp"/>
+      </node>
+      <node id="2196">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/EventDescription.hpp</label>
+        <link refid="_event_description_8hpp"/>
+        <childnode refid="2197" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classeternity_1_1node" prot="public">eternity::node</innerclass>
+    <innerclass refid="classeternity_1_1xml__scanner" prot="public">eternity::xml_scanner</innerclass>
+    <innernamespace refid="namespaceeternity">eternity</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Eternity<sp/>persistence<sp/>system</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>1999-2003<sp/>Nicola<sp/>Santi.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>software<sp/>is<sp/>released<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>Eternity<sp/>Artistic</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>License.<sp/>Please<sp/>read<sp/>the<sp/>file<sp/>eternity-licence<sp/>to<sp/>learn<sp/>details.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>THIS<sp/>PACKAGE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;<sp/>AND<sp/>WITHOUT<sp/>ANY<sp/>EXPRESS<sp/>OR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>WITHOUT<sp/>LIMITATION,<sp/>THE<sp/>IMPLIED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTIBILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Except<sp/>as<sp/>contained<sp/>in<sp/>this<sp/>notice,<sp/>the<sp/>name<sp/>of<sp/>Nicola<sp/>Santi</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>shall<sp/>not<sp/>be<sp/>used<sp/>in<sp/>advertising<sp/>or<sp/>otherwise<sp/>to<sp/>promote<sp/>the<sp/>sale,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>use<sp/>or<sp/>other<sp/>dealings<sp/>in<sp/>this<sp/>Software<sp/>without<sp/>prior<sp/>written</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>authorization<sp/>from<sp/>Nicola<sp/>Santi.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>XMLSCANNER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>XMLSCANNER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;math.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceeternity" kindref="compound">eternity</ref><sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="classeternity_1_1node" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classeternity_1_1node" kindref="compound">node</ref><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="39" refid="classeternity_1_1node_1aa58fec317429adb430f6d38b3660b69a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classeternity_1_1node_1aa58fec317429adb430f6d38b3660b69a" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="40" refid="classeternity_1_1node_1af12d6ec498fd30def4c6b4f21fa181c7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::map&lt;std::string,<sp/>std::string&gt;<sp/><ref refid="classeternity_1_1node_1af12d6ec498fd30def4c6b4f21fa181c7" kindref="member">attributes</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="classeternity_1_1node_1a8daefdb6d1fffd05b08a2f8e07c9ffb4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classeternity_1_1node_1a8daefdb6d1fffd05b08a2f8e07c9ffb4" kindref="member">value</ref>;</highlight></codeline>
+<codeline lineno="43" refid="classeternity_1_1node_1ac1d7dfa57dd7ad2c13f0d6e0594d7e7f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;node*&gt;<sp/><ref refid="classeternity_1_1node_1ac1d7dfa57dd7ad2c13f0d6e0594d7e7f" kindref="member">childs</ref>;</highlight></codeline>
+<codeline lineno="44" refid="classeternity_1_1node_1a11a3dc9c5a20a7cae619e7bf69e09131" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classeternity_1_1node" kindref="compound">node</ref>*<sp/><ref refid="classeternity_1_1node_1a11a3dc9c5a20a7cae619e7bf69e09131" kindref="member">parent</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classeternity_1_1node_1a05e3159af39079b860ecb1f79d436bb1" kindref="member">dump</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>indent);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classeternity_1_1node_1a35b42655fbf388f225c108f10bf46028" kindref="member">intent</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>pos);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classeternity_1_1node_1acab0e3d272545fa2f535d11416119eaf" kindref="member">done</ref>();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classeternity_1_1node" kindref="compound">node</ref>*<sp/><ref refid="classeternity_1_1node_1a17c2bb4c6bb9594076e91935bd970224" kindref="member">foundChild</ref>(std::string<sp/>tagName,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>pos);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classeternity_1_1node_1a8aab11da45324aff3018c80a3b489e47" kindref="member">node</ref>();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classeternity_1_1node_1a8aab11da45324aff3018c80a3b489e47" kindref="member">node</ref>(std::string<sp/>_name);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classeternity_1_1node_1a8aab11da45324aff3018c80a3b489e47" kindref="member">node</ref>(<ref refid="classeternity_1_1node" kindref="compound">node</ref>*<sp/>parentnode);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classeternity_1_1node_1a068bb1cebdb8ce5682040fe3ada60718" kindref="member">~node</ref>();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="classeternity_1_1xml__scanner" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classeternity_1_1xml__scanner" kindref="compound">xml_scanner</ref><sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="61" refid="classeternity_1_1xml__scanner_1aa2c16eaaca14155bfa84a9b3307b3afe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::fstream<sp/><ref refid="classeternity_1_1xml__scanner_1aa2c16eaaca14155bfa84a9b3307b3afe" kindref="member">stream</ref>;</highlight></codeline>
+<codeline lineno="62" refid="classeternity_1_1xml__scanner_1a5b233a950be70889f4db08d8fa713e66" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classeternity_1_1node" kindref="compound">node</ref><sp/><ref refid="classeternity_1_1xml__scanner_1a5b233a950be70889f4db08d8fa713e66" kindref="member">rootnode</ref>;</highlight></codeline>
+<codeline lineno="63" refid="classeternity_1_1xml__scanner_1ae40ec446a15f3ed7394d875473be3676" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classeternity_1_1node" kindref="compound">node</ref>*<sp/><ref refid="classeternity_1_1xml__scanner_1ae40ec446a15f3ed7394d875473be3676" kindref="member">currnode</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="classeternity_1_1xml__scanner_1afe2104df644a31c03e948a9f1e4203b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classeternity_1_1xml__scanner_1afe2104df644a31c03e948a9f1e4203b1" kindref="member">currAttribute</ref>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="classeternity_1_1xml__scanner_1a97fff18c2e2004f157a42001010b84cf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classeternity_1_1xml__scanner_1a97fff18c2e2004f157a42001010b84cf" kindref="member">context_mode</ref><sp/>{</highlight></codeline>
+<codeline lineno="68" refid="classeternity_1_1xml__scanner_1a97fff18c2e2004f157a42001010b84cfafa4eb63a1562f8403e6290141b483953" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classeternity_1_1xml__scanner_1a97fff18c2e2004f157a42001010b84cfafa4eb63a1562f8403e6290141b483953" kindref="member">value</ref>,<sp/>tagname,<sp/>comment,<sp/>doctype,<sp/>attr,<sp/>attrvalue,<sp/>closebracket,<sp/>closetag,<sp/>endfile</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>context;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classeternity_1_1xml__scanner" kindref="compound">xml_scanner</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>~<ref refid="classeternity_1_1xml__scanner" kindref="compound">xml_scanner</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>close();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classeternity_1_1node" kindref="compound">node</ref>*<sp/>scan_file(std::string<sp/>filePath);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>read_next_char(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>read_next_non_space_char(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>read_literal(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>read_word(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>read_value(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>read_tag_name(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>read_close_tag(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>read_attributes(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>read_attribute_value(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>close_bracket(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>read_comment(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>read_doc_type(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//XMLSCANNER_HPP</highlight></codeline>
+    </programlisting>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/xmlscanner.hpp"/>
+  </compounddef>
+</doxygen>

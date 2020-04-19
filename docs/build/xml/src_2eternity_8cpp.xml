@@ -1,0 +1,196 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="src_2eternity_8cpp" kind="file" language="C++">
+    <compoundname>eternity.cpp</compoundname>
+    <includes local="no">eternity.hpp</includes>
+    <includes refid="dynamic_8cpp" local="no">dynamic.cpp</includes>
+    <includes refid="persist_8cpp" local="no">persist.cpp</includes>
+    <includes refid="persist__xml_8cpp" local="no">persist_xml.cpp</includes>
+    <includes refid="xmlscanner_8cpp" local="no">xmlscanner.cpp</includes>
+    <incdepgraph>
+      <node id="5297">
+        <label>dynamic.cpp</label>
+        <link refid="dynamic_8cpp"/>
+        <childnode refid="5298" relation="include">
+        </childnode>
+      </node>
+      <node id="5309">
+        <label>persist_xml.cpp</label>
+        <link refid="persist__xml_8cpp"/>
+        <childnode refid="5310" relation="include">
+        </childnode>
+      </node>
+      <node id="5305">
+        <label>stdlib.h</label>
+      </node>
+      <node id="5302">
+        <label>persist.cpp</label>
+        <link refid="persist_8cpp"/>
+        <childnode refid="5303" relation="include">
+        </childnode>
+      </node>
+      <node id="5295">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/eternity.cpp</label>
+        <link refid="src_2eternity_8cpp"/>
+        <childnode refid="5296" relation="include">
+        </childnode>
+        <childnode refid="5297" relation="include">
+        </childnode>
+        <childnode refid="5302" relation="include">
+        </childnode>
+        <childnode refid="5309" relation="include">
+        </childnode>
+        <childnode refid="5315" relation="include">
+        </childnode>
+      </node>
+      <node id="5301">
+        <label>string</label>
+      </node>
+      <node id="5298">
+        <label>dynamic.hpp</label>
+        <link refid="dynamic_8hpp"/>
+        <childnode refid="5299" relation="include">
+        </childnode>
+        <childnode refid="5300" relation="include">
+        </childnode>
+        <childnode refid="5301" relation="include">
+        </childnode>
+      </node>
+      <node id="5312">
+        <label>map</label>
+      </node>
+      <node id="5308">
+        <label>fstream</label>
+      </node>
+      <node id="5311">
+        <label>xmlscanner.hpp</label>
+        <link refid="xmlscanner_8hpp"/>
+        <childnode refid="5304" relation="include">
+        </childnode>
+        <childnode refid="5305" relation="include">
+        </childnode>
+        <childnode refid="5306" relation="include">
+        </childnode>
+        <childnode refid="5312" relation="include">
+        </childnode>
+        <childnode refid="5307" relation="include">
+        </childnode>
+        <childnode refid="5308" relation="include">
+        </childnode>
+        <childnode refid="5301" relation="include">
+        </childnode>
+        <childnode refid="5313" relation="include">
+        </childnode>
+      </node>
+      <node id="5303">
+        <label>persist.hpp</label>
+        <link refid="persist_8hpp"/>
+        <childnode refid="5298" relation="include">
+        </childnode>
+        <childnode refid="5304" relation="include">
+        </childnode>
+        <childnode refid="5305" relation="include">
+        </childnode>
+        <childnode refid="5306" relation="include">
+        </childnode>
+        <childnode refid="5307" relation="include">
+        </childnode>
+        <childnode refid="5308" relation="include">
+        </childnode>
+      </node>
+      <node id="5300">
+        <label>typeinfo</label>
+      </node>
+      <node id="5306">
+        <label>vector</label>
+      </node>
+      <node id="5315">
+        <label>xmlscanner.cpp</label>
+        <link refid="xmlscanner_8cpp"/>
+        <childnode refid="5298" relation="include">
+        </childnode>
+        <childnode refid="5311" relation="include">
+        </childnode>
+      </node>
+      <node id="5304">
+        <label>math.h</label>
+      </node>
+      <node id="5313">
+        <label>iostream</label>
+      </node>
+      <node id="5314">
+        <label>deque</label>
+      </node>
+      <node id="5310">
+        <label>persist_xml.hpp</label>
+        <link refid="persist__xml_8hpp"/>
+        <childnode refid="5303" relation="include">
+        </childnode>
+        <childnode refid="5311" relation="include">
+        </childnode>
+        <childnode refid="5314" relation="include">
+        </childnode>
+      </node>
+      <node id="5296">
+        <label>eternity.hpp</label>
+      </node>
+      <node id="5307">
+        <label>algorithm</label>
+      </node>
+      <node id="5299">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="src_2eternity_8cpp_1a9da7cdb58f975e14bd3e415696161cbb" prot="public" static="no">
+        <name>ETERNITY_CPP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/src/eternity.cpp" line="24" column="9" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/eternity.cpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Eternity<sp/>persistence<sp/>system</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>1999-2003<sp/>Nicola<sp/>Santi.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>software<sp/>is<sp/>released<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>Eternity<sp/>Artistic</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>License.<sp/>Please<sp/>read<sp/>the<sp/>file<sp/>eternity-licence<sp/>to<sp/>learn<sp/>details.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>THIS<sp/>PACKAGE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;<sp/>AND<sp/>WITHOUT<sp/>ANY<sp/>EXPRESS<sp/>OR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>WITHOUT<sp/>LIMITATION,<sp/>THE<sp/>IMPLIED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTIBILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Except<sp/>as<sp/>contained<sp/>in<sp/>this<sp/>notice,<sp/>the<sp/>name<sp/>of<sp/>Nicola<sp/>Santi</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>shall<sp/>not<sp/>be<sp/>used<sp/>in<sp/>advertising<sp/>or<sp/>otherwise<sp/>to<sp/>promote<sp/>the<sp/>sale,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>use<sp/>or<sp/>other<sp/>dealings<sp/>in<sp/>this<sp/>Software<sp/>without<sp/>prior<sp/>written</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>authorization<sp/>from<sp/>Nicola<sp/>Santi.</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ETERNITY_CPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="src_2eternity_8cpp_1a9da7cdb58f975e14bd3e415696161cbb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ETERNITY_CPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;eternity.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="dynamic_8cpp" kindref="compound">dynamic.cpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="persist_8cpp" kindref="compound">persist.cpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="persist__xml_8cpp" kindref="compound">persist_xml.cpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="xmlscanner_8cpp" kindref="compound">xmlscanner.cpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>ETERNITY_CPP<sp/></highlight></codeline>
+    </programlisting>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/src/eternity.cpp"/>
+  </compounddef>
+</doxygen>

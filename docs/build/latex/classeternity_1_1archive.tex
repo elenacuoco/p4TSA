@@ -1,0 +1,182 @@
+\hypertarget{classeternity_1_1archive}{}\section{eternity\+:\+:archive Class Reference}
+\label{classeternity_1_1archive}\index{eternity\+::archive@{eternity\+::archive}}
+
+
+{\ttfamily \#include $<$persist.\+hpp$>$}
+
+Inheritance diagram for eternity\+:\+:archive\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classeternity_1_1archive}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classeternity_1_1archive_a8881f9ce8dbed2ee600c64b7925afef0}{opening\+\_\+mode} \{ \hyperlink{classeternity_1_1archive_a8881f9ce8dbed2ee600c64b7925afef0a5b952c27ebe4ca2612e939a1aa19baf5}{load}, 
+\hyperlink{classeternity_1_1archive_a8881f9ce8dbed2ee600c64b7925afef0a06c18c297779389cb1cb03a2a7590ca8}{store}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classeternity_1_1archive_adc5356f74fed2dd5daf230aa1ee6c58e}{archive} ()
+\begin{DoxyCompactList}\small\item\em Simply the default constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classeternity_1_1archive_a941c3b590afc929089706b92ce4d5e13}{init} ()
+\item 
+int \hyperlink{classeternity_1_1archive_a2c4ab8d0935b130b38bce44f600bee99}{put\+\_\+pointer} (void $\ast$object)
+\item 
+bool \hyperlink{classeternity_1_1archive_a759dd5567021290542de13d090aa0963}{set\+\_\+loading} (bool val)
+\begin{DoxyCompactList}\small\item\em Set the archive mode (loading or storing) \end{DoxyCompactList}\item 
+bool \hyperlink{classeternity_1_1archive_af1ced5c2f5cd028d88033c40ac98cc71}{is\+\_\+loading} ()
+\begin{DoxyCompactList}\small\item\em Verify the archive is in loading mode. \end{DoxyCompactList}\item 
+bool \hyperlink{classeternity_1_1archive_afbd7e1d21409eae43622049624277405}{is\+\_\+storing} ()
+\begin{DoxyCompactList}\small\item\em Verify the archive is in storing mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classeternity_1_1archive_a949b798deac030f2ab45ed54bf26dc4a}{m\+\_\+bloading}
+\item 
+std\+::vector$<$ void $\ast$ $>$ \hyperlink{classeternity_1_1archive_ae4a796ad260a0f581cf33be4f072d83a}{m\+\_\+v\+Pointerstored}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class supply common services for all kind of persistence archives. The major one is the ability to stored doubled pointers only one time and so avoid circularity, broken links and lost spaces on hard disks. 
+
+Definition at line 47 of file persist.\+hpp.
+
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classeternity_1_1archive_a8881f9ce8dbed2ee600c64b7925afef0}\label{classeternity_1_1archive_a8881f9ce8dbed2ee600c64b7925afef0}} 
+\index{eternity\+::archive@{eternity\+::archive}!opening\+\_\+mode@{opening\+\_\+mode}}
+\index{opening\+\_\+mode@{opening\+\_\+mode}!eternity\+::archive@{eternity\+::archive}}
+\subsubsection{\texorpdfstring{opening\+\_\+mode}{opening\_mode}}
+{\footnotesize\ttfamily enum \hyperlink{classeternity_1_1archive_a8881f9ce8dbed2ee600c64b7925afef0}{eternity\+::archive\+::opening\+\_\+mode}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{load@{load}!eternity\+::archive@{eternity\+::archive}}\index{eternity\+::archive@{eternity\+::archive}!load@{load}}}\mbox{\Hypertarget{classeternity_1_1archive_a8881f9ce8dbed2ee600c64b7925afef0a5b952c27ebe4ca2612e939a1aa19baf5}\label{classeternity_1_1archive_a8881f9ce8dbed2ee600c64b7925afef0a5b952c27ebe4ca2612e939a1aa19baf5}} 
+load&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{store@{store}!eternity\+::archive@{eternity\+::archive}}\index{eternity\+::archive@{eternity\+::archive}!store@{store}}}\mbox{\Hypertarget{classeternity_1_1archive_a8881f9ce8dbed2ee600c64b7925afef0a06c18c297779389cb1cb03a2a7590ca8}\label{classeternity_1_1archive_a8881f9ce8dbed2ee600c64b7925afef0a06c18c297779389cb1cb03a2a7590ca8}} 
+store&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 54 of file persist.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classeternity_1_1archive_adc5356f74fed2dd5daf230aa1ee6c58e}\label{classeternity_1_1archive_adc5356f74fed2dd5daf230aa1ee6c58e}} 
+\index{eternity\+::archive@{eternity\+::archive}!archive@{archive}}
+\index{archive@{archive}!eternity\+::archive@{eternity\+::archive}}
+\subsubsection{\texorpdfstring{archive()}{archive()}}
+{\footnotesize\ttfamily eternity\+::archive\+::archive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Simply the default constructor. 
+
+
+
+Definition at line 59 of file persist.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classeternity_1_1archive_a941c3b590afc929089706b92ce4d5e13}\label{classeternity_1_1archive_a941c3b590afc929089706b92ce4d5e13}} 
+\index{eternity\+::archive@{eternity\+::archive}!init@{init}}
+\index{init@{init}!eternity\+::archive@{eternity\+::archive}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void eternity\+::archive\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 62 of file persist.\+hpp.
+
+\mbox{\Hypertarget{classeternity_1_1archive_af1ced5c2f5cd028d88033c40ac98cc71}\label{classeternity_1_1archive_af1ced5c2f5cd028d88033c40ac98cc71}} 
+\index{eternity\+::archive@{eternity\+::archive}!is\+\_\+loading@{is\+\_\+loading}}
+\index{is\+\_\+loading@{is\+\_\+loading}!eternity\+::archive@{eternity\+::archive}}
+\subsubsection{\texorpdfstring{is\+\_\+loading()}{is\_loading()}}
+{\footnotesize\ttfamily bool eternity\+::archive\+::is\+\_\+loading (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verify the archive is in loading mode. 
+
+
+
+Definition at line 80 of file persist.\+hpp.
+
+\mbox{\Hypertarget{classeternity_1_1archive_afbd7e1d21409eae43622049624277405}\label{classeternity_1_1archive_afbd7e1d21409eae43622049624277405}} 
+\index{eternity\+::archive@{eternity\+::archive}!is\+\_\+storing@{is\+\_\+storing}}
+\index{is\+\_\+storing@{is\+\_\+storing}!eternity\+::archive@{eternity\+::archive}}
+\subsubsection{\texorpdfstring{is\+\_\+storing()}{is\_storing()}}
+{\footnotesize\ttfamily bool eternity\+::archive\+::is\+\_\+storing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verify the archive is in storing mode. 
+
+
+
+Definition at line 85 of file persist.\+hpp.
+
+\mbox{\Hypertarget{classeternity_1_1archive_a2c4ab8d0935b130b38bce44f600bee99}\label{classeternity_1_1archive_a2c4ab8d0935b130b38bce44f600bee99}} 
+\index{eternity\+::archive@{eternity\+::archive}!put\+\_\+pointer@{put\+\_\+pointer}}
+\index{put\+\_\+pointer@{put\+\_\+pointer}!eternity\+::archive@{eternity\+::archive}}
+\subsubsection{\texorpdfstring{put\+\_\+pointer()}{put\_pointer()}}
+{\footnotesize\ttfamily int eternity\+::archive\+::put\+\_\+pointer (\begin{DoxyParamCaption}\item[{void $\ast$}]{object }\end{DoxyParamCaption})}
+
+Verify that object is stored only once. 
+
+Definition at line 28 of file persist.\+cpp.
+
+\mbox{\Hypertarget{classeternity_1_1archive_a759dd5567021290542de13d090aa0963}\label{classeternity_1_1archive_a759dd5567021290542de13d090aa0963}} 
+\index{eternity\+::archive@{eternity\+::archive}!set\+\_\+loading@{set\+\_\+loading}}
+\index{set\+\_\+loading@{set\+\_\+loading}!eternity\+::archive@{eternity\+::archive}}
+\subsubsection{\texorpdfstring{set\+\_\+loading()}{set\_loading()}}
+{\footnotesize\ttfamily bool eternity\+::archive\+::set\+\_\+loading (\begin{DoxyParamCaption}\item[{bool}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the archive mode (loading or storing) 
+
+
+
+Definition at line 75 of file persist.\+hpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classeternity_1_1archive_a949b798deac030f2ab45ed54bf26dc4a}\label{classeternity_1_1archive_a949b798deac030f2ab45ed54bf26dc4a}} 
+\index{eternity\+::archive@{eternity\+::archive}!m\+\_\+bloading@{m\+\_\+bloading}}
+\index{m\+\_\+bloading@{m\+\_\+bloading}!eternity\+::archive@{eternity\+::archive}}
+\subsubsection{\texorpdfstring{m\+\_\+bloading}{m\_bloading}}
+{\footnotesize\ttfamily bool eternity\+::archive\+::m\+\_\+bloading\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 49 of file persist.\+hpp.
+
+\mbox{\Hypertarget{classeternity_1_1archive_ae4a796ad260a0f581cf33be4f072d83a}\label{classeternity_1_1archive_ae4a796ad260a0f581cf33be4f072d83a}} 
+\index{eternity\+::archive@{eternity\+::archive}!m\+\_\+v\+Pointerstored@{m\+\_\+v\+Pointerstored}}
+\index{m\+\_\+v\+Pointerstored@{m\+\_\+v\+Pointerstored}!eternity\+::archive@{eternity\+::archive}}
+\subsubsection{\texorpdfstring{m\+\_\+v\+Pointerstored}{m\_vPointerstored}}
+{\footnotesize\ttfamily std\+::vector$<$void$\ast$$>$ eternity\+::archive\+::m\+\_\+v\+Pointerstored\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 50 of file persist.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/include/eternity/\hyperlink{persist_8hpp}{persist.\+hpp}\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/include/eternity/\hyperlink{persist_8cpp}{persist.\+cpp}\end{DoxyCompactItemize}

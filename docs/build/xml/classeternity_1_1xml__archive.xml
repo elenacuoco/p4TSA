@@ -1,0 +1,612 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classeternity_1_1xml__archive" kind="class" language="C++" prot="public">
+    <compoundname>eternity::xml_archive</compoundname>
+    <basecompoundref refid="classeternity_1_1archive" prot="public" virt="non-virtual">eternity::archive</basecompoundref>
+    <includes refid="persist__xml_8hpp" local="no">persist_xml.hpp</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classeternity_1_1xml__archive_1a58de0ad659427698ef66be97b220b541" prot="protected" static="no" mutable="no">
+        <type><ref refid="classeternity_1_1xml__scanner" kindref="compound">xml_scanner</ref></type>
+        <definition>xml_scanner eternity::xml_archive::m_oParser</definition>
+        <argsstring></argsstring>
+        <name>m_oParser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.hpp" line="142" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.hpp" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classeternity_1_1xml__archive_1af41ae6859a9ff2e6ec10e3a5e283d463" prot="protected" static="no" mutable="no">
+        <type>std::ofstream</type>
+        <definition>std::ofstream eternity::xml_archive::m_oOut</definition>
+        <argsstring></argsstring>
+        <name>m_oOut</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.hpp" line="143" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.hpp" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classeternity_1_1xml__archive_1ad41bc7c410f309e3036987f6ff93d34f" prot="protected" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t eternity::xml_archive::m_nTab</definition>
+        <argsstring></argsstring>
+        <name>m_nTab</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.hpp" line="144" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.hpp" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classeternity_1_1xml__archive_1a5b0cb5a429e2b76d4b11bfccc7b91d8d" prot="protected" static="no" mutable="no">
+        <type><ref refid="classeternity_1_1node" kindref="compound">node</ref> *</type>
+        <definition>node* eternity::xml_archive::m_pCurElement</definition>
+        <argsstring></argsstring>
+        <name>m_pCurElement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.hpp" line="145" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.hpp" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classeternity_1_1xml__archive_1a6a1cf4a481b75dd3c3688e1c0ae6e2bb" prot="protected" static="no" mutable="no">
+        <type>deque&lt; <ref refid="classeternity_1_1node" kindref="compound">node</ref> * &gt;</type>
+        <definition>deque&lt;node*&gt; eternity::xml_archive::m_dBranches</definition>
+        <argsstring></argsstring>
+        <name>m_dBranches</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.hpp" line="146" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.hpp" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classeternity_1_1xml__archive_1a51f29738b694efdf35486b8d6146f7c8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>eternity::xml_archive::xml_archive</definition>
+        <argsstring>()</argsstring>
+        <name>xml_archive</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.hpp" line="42" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.hpp" bodystart="42" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classeternity_1_1xml__archive_1aed17710a8c15f35f9296d8805299f619" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>eternity::xml_archive::~xml_archive</definition>
+        <argsstring>()</argsstring>
+        <name>~xml_archive</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.hpp" line="46" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.hpp" bodystart="46" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classeternity_1_1xml__archive_1acd5ef97a7b6a113e64e735270634bea1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void eternity::xml_archive::open</definition>
+        <argsstring>(std::string file_name, opening_mode mode)</argsstring>
+        <name>open</name>
+        <param>
+          <type>std::string</type>
+          <declname>file_name</declname>
+        </param>
+        <param>
+          <type><ref refid="classeternity_1_1archive_1a8881f9ce8dbed2ee600c64b7925afef0" kindref="member">opening_mode</ref></type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>initialize and XML archive using the file named file_name. If mode is load create the file. Anyway init update archive to begin persistence operations. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.hpp" line="55" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.cpp" bodystart="32" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classeternity_1_1xml__archive_1a27ed416689f3c9da532fcb91eed88217" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void eternity::xml_archive::init</definition>
+        <argsstring>(std::string file_name, bool loading)</argsstring>
+        <name>init</name>
+        <param>
+          <type>std::string</type>
+          <declname>file_name</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>loading</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>initialize and XML archive using the file named file_name. If loading is true create the file. Anyway init update archive to begin persistence operations. Deprecated: use open instead </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.hpp" line="63" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.cpp" bodystart="42" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classeternity_1_1xml__archive_1a9f27feeac62aa0c3370ef9bcc60d86c6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void eternity::xml_archive::close</definition>
+        <argsstring>()</argsstring>
+        <name>close</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>End the persistence operation, release the file handle and clear all allocated buffers. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.hpp" line="68" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.hpp" bodystart="68" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classeternity_1_1xml__archive_1a946e60b3bd83fc8cf65d740b4ebf63e0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void eternity::xml_archive::done</definition>
+        <argsstring>()</argsstring>
+        <name>done</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>End the persistence operation, release the file handle and clear all allocated buffers. Deprecated: use close instead </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.hpp" line="76" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.hpp" bodystart="76" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classeternity_1_1xml__archive_1a53816e7723e949920db15981b91fc3c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void eternity::xml_archive::formatting</definition>
+        <argsstring>()</argsstring>
+        <name>formatting</name>
+        <briefdescription>
+<para>Indent XML output for nested class persistence. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.hpp" line="95" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.cpp" bodystart="66" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classeternity_1_1xml__archive_1a2e0b9a16f4b02b391967718f18175fc2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string eternity::xml_archive::read</definition>
+        <argsstring>(std::string key, int pos)</argsstring>
+        <name>read</name>
+        <param>
+          <type>std::string</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>read (and return) a string with label key at position pos </para>        </briefdescription>
+        <detaileddescription>
+<para>read (and return) a string with label key at position pos deprecated, use <ref refid="classeternity_1_1xml__archive_1ac8267a952c5c9a6caa8b434f80d1b9d2" kindref="member">read(std::string key, std::string &amp;value, int pos)</ref> instead </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.hpp" line="99" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.cpp" bodystart="72" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classeternity_1_1xml__archive_1ac8267a952c5c9a6caa8b434f80d1b9d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void eternity::xml_archive::read</definition>
+        <argsstring>(std::string key, std::string &amp;value, int pos)</argsstring>
+        <name>read</name>
+        <param>
+          <type>std::string</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>read (and put in value) a string with label key at position pos </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.hpp" line="102" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.cpp" bodystart="88" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classeternity_1_1xml__archive_1adbfbeeb5a86ecf4bfccdba1054d9c50a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void eternity::xml_archive::read</definition>
+        <argsstring>(std::string key, int &amp;value, int pos)</argsstring>
+        <name>read</name>
+        <param>
+          <type>std::string</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>read (and put in value) a int with label key at position pos </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.hpp" line="105" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.cpp" bodystart="94" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classeternity_1_1xml__archive_1ab38c114af01eaffade2ab426f73a5575" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void eternity::xml_archive::read</definition>
+        <argsstring>(std::string key, unsigned int &amp;value, int pos)</argsstring>
+        <name>read</name>
+        <param>
+          <type>std::string</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>unsigned int &amp;</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>read (and put in value) a int with label key at position pos </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.hpp" line="108" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.cpp" bodystart="101" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classeternity_1_1xml__archive_1a7b72b8361778f9a98bed64e9d23a760d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void eternity::xml_archive::read</definition>
+        <argsstring>(std::string key, float &amp;value, int pos)</argsstring>
+        <name>read</name>
+        <param>
+          <type>std::string</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>float &amp;</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>read (and put in value) a float with label key at position pos </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.hpp" line="111" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.cpp" bodystart="108" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classeternity_1_1xml__archive_1a83705b3ef651a402e886d73f288800ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void eternity::xml_archive::read</definition>
+        <argsstring>(std::string key, double &amp;value, int pos)</argsstring>
+        <name>read</name>
+        <param>
+          <type>std::string</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>read (and put in value) a double with label key at position pos </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.hpp" line="114" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.cpp" bodystart="115" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classeternity_1_1xml__archive_1ab64fb09677fff76fb2935930f73365a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void eternity::xml_archive::write</definition>
+        <argsstring>(std::string key, T value)</argsstring>
+        <name>write</name>
+        <param>
+          <type>std::string</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>write the content of value </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.hpp" line="118" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.hpp" bodystart="151" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="classeternity_1_1xml__archive_1abc5b89e39007323cefb8855492795631" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class t</type>
+          </param>
+        </templateparamlist>
+        <type>t *</type>
+        <definition>t * eternity::xml_archive::get_object</definition>
+        <argsstring>(std::string key, t **ppObj, int pos)</argsstring>
+        <name>get_object</name>
+        <param>
+          <type>std::string</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>t **</type>
+          <declname>ppObj</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Retreive an object pointer from the XMLarchive. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.hpp" line="121" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.hpp" bodystart="162" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="function" id="classeternity_1_1xml__archive_1af471f4a154095b98cf33dacd984281df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class t</type>
+          </param>
+        </templateparamlist>
+        <type>t *</type>
+        <definition>t * eternity::xml_archive::put_object</definition>
+        <argsstring>(std::string key, t *pObj)</argsstring>
+        <name>put_object</name>
+        <param>
+          <type>std::string</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>t *</type>
+          <declname>pObj</declname>
+        </param>
+        <briefdescription>
+<para>Put an object pointer inside XMLarchive. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.hpp" line="124" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.hpp" bodystart="206" bodyend="249"/>
+      </memberdef>
+      <memberdef kind="function" id="classeternity_1_1xml__archive_1a8b43bda52a9429f6b4d6e4501f42fe60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class t</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void eternity::xml_archive::get_stack_object</definition>
+        <argsstring>(std::string key, t &amp;Obj, int pos)</argsstring>
+        <name>get_stack_object</name>
+        <param>
+          <type>std::string</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>t &amp;</type>
+          <declname>Obj</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Retreive an object allocated to the stack from the XMLarchive. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.hpp" line="127" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.hpp" bodystart="254" bodyend="267"/>
+      </memberdef>
+      <memberdef kind="function" id="classeternity_1_1xml__archive_1aac3817831029d6b510aead5978aac61e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class t</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void eternity::xml_archive::put_stack_object</definition>
+        <argsstring>(std::string key, t &amp;Obj)</argsstring>
+        <name>put_stack_object</name>
+        <param>
+          <type>std::string</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>t &amp;</type>
+          <declname>Obj</declname>
+        </param>
+        <briefdescription>
+<para>Put an object allocated in the stack inside XMLarchive. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.hpp" line="130" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.hpp" bodystart="272" bodyend="283"/>
+      </memberdef>
+      <memberdef kind="function" id="classeternity_1_1xml__archive_1afe1ed2f449872273acc2ca8753d4057d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void eternity::xml_archive::make_branch</definition>
+        <argsstring>(std::string name, std::map&lt; std::string, std::string &gt; attributes)</argsstring>
+        <name>make_branch</name>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>std::map&lt; std::string, std::string &gt;</type>
+          <declname>attributes</declname>
+        </param>
+        <briefdescription>
+<para>Create a node (e.g. &lt;name attributes&gt;=&quot;&quot;&gt;) and set it as current one (enter branch) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.hpp" line="133" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.cpp" bodystart="122" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="classeternity_1_1xml__archive_1a58b5909bfe2c5aba094633f5f38f850a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::map&lt; std::string, std::string &gt;</type>
+        <definition>std::map&lt; std::string, std::string &gt; eternity::xml_archive::enter_branch</definition>
+        <argsstring>(std::string name, size_t pos)</argsstring>
+        <name>enter_branch</name>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Enter in the node with tag equals to name and return its attributes. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.hpp" line="136" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.cpp" bodystart="143" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="classeternity_1_1xml__archive_1ae15514bf5e058364d30faac3553e201b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void eternity::xml_archive::leave_current_branch</definition>
+        <argsstring>()</argsstring>
+        <name>leave_current_branch</name>
+        <briefdescription>
+<para>Leaves current node and returns to its parent. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.hpp" line="139" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.cpp" bodystart="158" bodyend="171"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classeternity_1_1xml__archive" kindref="compound">xml_archive</ref> is the specialization of class archive able to manage XML persistence. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="496">
+        <label>eternity::archive</label>
+        <link refid="classeternity_1_1archive"/>
+      </node>
+      <node id="495">
+        <label>eternity::xml_archive</label>
+        <link refid="classeternity_1_1xml__archive"/>
+        <childnode refid="496" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="500">
+        <label>eternity::xml_scanner</label>
+        <link refid="classeternity_1_1xml__scanner"/>
+        <childnode refid="499" relation="usage">
+          <edgelabel>rootnode</edgelabel>
+          <edgelabel>currnode</edgelabel>
+        </childnode>
+      </node>
+      <node id="499">
+        <label>eternity::node</label>
+        <link refid="classeternity_1_1node"/>
+        <childnode refid="499" relation="usage">
+          <edgelabel>parent</edgelabel>
+        </childnode>
+      </node>
+      <node id="498">
+        <label>eternity::archive</label>
+        <link refid="classeternity_1_1archive"/>
+      </node>
+      <node id="497">
+        <label>eternity::xml_archive</label>
+        <link refid="classeternity_1_1xml__archive"/>
+        <childnode refid="498" relation="public-inheritance">
+        </childnode>
+        <childnode refid="499" relation="usage">
+          <edgelabel>m_pCurElement</edgelabel>
+        </childnode>
+        <childnode refid="500" relation="usage">
+          <edgelabel>m_oParser</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.hpp" line="39" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/persist_xml.hpp" bodystart="39" bodyend="148"/>
+    <listofallmembers>
+      <member refid="classeternity_1_1archive_1adc5356f74fed2dd5daf230aa1ee6c58e" prot="public" virt="non-virtual"><scope>eternity::xml_archive</scope><name>archive</name></member>
+      <member refid="classeternity_1_1xml__archive_1a9f27feeac62aa0c3370ef9bcc60d86c6" prot="public" virt="non-virtual"><scope>eternity::xml_archive</scope><name>close</name></member>
+      <member refid="classeternity_1_1xml__archive_1a946e60b3bd83fc8cf65d740b4ebf63e0" prot="public" virt="non-virtual"><scope>eternity::xml_archive</scope><name>done</name></member>
+      <member refid="classeternity_1_1xml__archive_1a58b5909bfe2c5aba094633f5f38f850a" prot="public" virt="non-virtual"><scope>eternity::xml_archive</scope><name>enter_branch</name></member>
+      <member refid="classeternity_1_1xml__archive_1a53816e7723e949920db15981b91fc3c1" prot="public" virt="non-virtual"><scope>eternity::xml_archive</scope><name>formatting</name></member>
+      <member refid="classeternity_1_1xml__archive_1abc5b89e39007323cefb8855492795631" prot="public" virt="non-virtual"><scope>eternity::xml_archive</scope><name>get_object</name></member>
+      <member refid="classeternity_1_1xml__archive_1a8b43bda52a9429f6b4d6e4501f42fe60" prot="public" virt="non-virtual"><scope>eternity::xml_archive</scope><name>get_stack_object</name></member>
+      <member refid="classeternity_1_1xml__archive_1a27ed416689f3c9da532fcb91eed88217" prot="public" virt="non-virtual"><scope>eternity::xml_archive</scope><name>init</name></member>
+      <member refid="classeternity_1_1archive_1a941c3b590afc929089706b92ce4d5e13" prot="public" virt="non-virtual" ambiguityscope="eternity::archive::"><scope>eternity::xml_archive</scope><name>init</name></member>
+      <member refid="classeternity_1_1archive_1af1ced5c2f5cd028d88033c40ac98cc71" prot="public" virt="non-virtual"><scope>eternity::xml_archive</scope><name>is_loading</name></member>
+      <member refid="classeternity_1_1archive_1afbd7e1d21409eae43622049624277405" prot="public" virt="non-virtual"><scope>eternity::xml_archive</scope><name>is_storing</name></member>
+      <member refid="classeternity_1_1xml__archive_1ae15514bf5e058364d30faac3553e201b" prot="public" virt="non-virtual"><scope>eternity::xml_archive</scope><name>leave_current_branch</name></member>
+      <member refid="classeternity_1_1archive_1a8881f9ce8dbed2ee600c64b7925afef0a5b952c27ebe4ca2612e939a1aa19baf5" prot="public" virt="non-virtual"><scope>eternity::xml_archive</scope><name>load</name></member>
+      <member refid="classeternity_1_1archive_1a949b798deac030f2ab45ed54bf26dc4a" prot="protected" virt="non-virtual"><scope>eternity::xml_archive</scope><name>m_bloading</name></member>
+      <member refid="classeternity_1_1xml__archive_1a6a1cf4a481b75dd3c3688e1c0ae6e2bb" prot="protected" virt="non-virtual"><scope>eternity::xml_archive</scope><name>m_dBranches</name></member>
+      <member refid="classeternity_1_1xml__archive_1ad41bc7c410f309e3036987f6ff93d34f" prot="protected" virt="non-virtual"><scope>eternity::xml_archive</scope><name>m_nTab</name></member>
+      <member refid="classeternity_1_1xml__archive_1af41ae6859a9ff2e6ec10e3a5e283d463" prot="protected" virt="non-virtual"><scope>eternity::xml_archive</scope><name>m_oOut</name></member>
+      <member refid="classeternity_1_1xml__archive_1a58de0ad659427698ef66be97b220b541" prot="protected" virt="non-virtual"><scope>eternity::xml_archive</scope><name>m_oParser</name></member>
+      <member refid="classeternity_1_1xml__archive_1a5b0cb5a429e2b76d4b11bfccc7b91d8d" prot="protected" virt="non-virtual"><scope>eternity::xml_archive</scope><name>m_pCurElement</name></member>
+      <member refid="classeternity_1_1archive_1ae4a796ad260a0f581cf33be4f072d83a" prot="protected" virt="non-virtual"><scope>eternity::xml_archive</scope><name>m_vPointerstored</name></member>
+      <member refid="classeternity_1_1xml__archive_1afe1ed2f449872273acc2ca8753d4057d" prot="public" virt="non-virtual"><scope>eternity::xml_archive</scope><name>make_branch</name></member>
+      <member refid="classeternity_1_1xml__archive_1acd5ef97a7b6a113e64e735270634bea1" prot="public" virt="non-virtual"><scope>eternity::xml_archive</scope><name>open</name></member>
+      <member refid="classeternity_1_1archive_1a8881f9ce8dbed2ee600c64b7925afef0" prot="public" virt="non-virtual"><scope>eternity::xml_archive</scope><name>opening_mode</name></member>
+      <member refid="classeternity_1_1xml__archive_1af471f4a154095b98cf33dacd984281df" prot="public" virt="non-virtual"><scope>eternity::xml_archive</scope><name>put_object</name></member>
+      <member refid="classeternity_1_1archive_1a2c4ab8d0935b130b38bce44f600bee99" prot="public" virt="non-virtual"><scope>eternity::xml_archive</scope><name>put_pointer</name></member>
+      <member refid="classeternity_1_1xml__archive_1aac3817831029d6b510aead5978aac61e" prot="public" virt="non-virtual"><scope>eternity::xml_archive</scope><name>put_stack_object</name></member>
+      <member refid="classeternity_1_1xml__archive_1a2e0b9a16f4b02b391967718f18175fc2" prot="public" virt="non-virtual"><scope>eternity::xml_archive</scope><name>read</name></member>
+      <member refid="classeternity_1_1xml__archive_1ac8267a952c5c9a6caa8b434f80d1b9d2" prot="public" virt="non-virtual"><scope>eternity::xml_archive</scope><name>read</name></member>
+      <member refid="classeternity_1_1xml__archive_1adbfbeeb5a86ecf4bfccdba1054d9c50a" prot="public" virt="non-virtual"><scope>eternity::xml_archive</scope><name>read</name></member>
+      <member refid="classeternity_1_1xml__archive_1ab38c114af01eaffade2ab426f73a5575" prot="public" virt="non-virtual"><scope>eternity::xml_archive</scope><name>read</name></member>
+      <member refid="classeternity_1_1xml__archive_1a7b72b8361778f9a98bed64e9d23a760d" prot="public" virt="non-virtual"><scope>eternity::xml_archive</scope><name>read</name></member>
+      <member refid="classeternity_1_1xml__archive_1a83705b3ef651a402e886d73f288800ef" prot="public" virt="non-virtual"><scope>eternity::xml_archive</scope><name>read</name></member>
+      <member refid="classeternity_1_1archive_1a759dd5567021290542de13d090aa0963" prot="public" virt="non-virtual"><scope>eternity::xml_archive</scope><name>set_loading</name></member>
+      <member refid="classeternity_1_1archive_1a8881f9ce8dbed2ee600c64b7925afef0a06c18c297779389cb1cb03a2a7590ca8" prot="public" virt="non-virtual"><scope>eternity::xml_archive</scope><name>store</name></member>
+      <member refid="classeternity_1_1xml__archive_1ab64fb09677fff76fb2935930f73365a6" prot="public" virt="non-virtual"><scope>eternity::xml_archive</scope><name>write</name></member>
+      <member refid="classeternity_1_1xml__archive_1a51f29738b694efdf35486b8d6146f7c8" prot="public" virt="non-virtual"><scope>eternity::xml_archive</scope><name>xml_archive</name></member>
+      <member refid="classeternity_1_1xml__archive_1aed17710a8c15f35f9296d8805299f619" prot="public" virt="non-virtual"><scope>eternity::xml_archive</scope><name>~xml_archive</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

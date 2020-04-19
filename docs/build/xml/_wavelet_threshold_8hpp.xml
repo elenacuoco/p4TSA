@@ -1,0 +1,475 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_wavelet_threshold_8hpp" kind="file" language="C++">
+    <compoundname>WaveletThreshold.hpp</compoundname>
+    <includes refid="_algo_base_8hpp" local="no">AlgoBase.hpp</includes>
+    <includes refid="_seq_view_8hpp" local="no">SeqView.hpp</includes>
+    <includes local="no">gsl/gsl_sort.h</includes>
+    <includes local="no">gsl/gsl_statistics.h</includes>
+    <includedby refid="_wavelet_threshold_8cpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/src/WaveletThreshold.cpp</includedby>
+    <includedby refid="tsa_8hpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/include/tsa.hpp</includedby>
+    <includedby refid="_wav_reconstruction_8hpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/include/WavReconstruction.hpp</includedby>
+    <includedby refid="_w_d_f2_classify_8hpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/include/WDF2Classify.hpp</includedby>
+    <includedby refid="_w_d_f2_reconstruct_8hpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/include/WDF2Reconstruct.hpp</includedby>
+    <incdepgraph>
+      <node id="4265">
+        <label>tsaTraits.hpp</label>
+        <link refid="tsa_traits_8hpp"/>
+        <childnode refid="4266" relation="include">
+        </childnode>
+      </node>
+      <node id="4245">
+        <label>eternity.hpp</label>
+        <link refid="eternity_8hpp"/>
+        <childnode refid="4246" relation="include">
+        </childnode>
+        <childnode refid="4249" relation="include">
+        </childnode>
+        <childnode refid="4254" relation="include">
+        </childnode>
+        <childnode refid="4258" relation="include">
+        </childnode>
+      </node>
+      <node id="4251">
+        <label>stdlib.h</label>
+      </node>
+      <node id="4238">
+        <label>stdexcept</label>
+      </node>
+      <node id="4260">
+        <label>tsaTypes.hpp</label>
+        <link refid="tsa_types_8hpp"/>
+        <childnode refid="4240" relation="include">
+        </childnode>
+        <childnode refid="4241" relation="include">
+        </childnode>
+        <childnode refid="4261" relation="include">
+        </childnode>
+        <childnode refid="4242" relation="include">
+        </childnode>
+        <childnode refid="4245" relation="include">
+        </childnode>
+      </node>
+      <node id="4243">
+        <label>string</label>
+      </node>
+      <node id="4236">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletThreshold.hpp</label>
+        <link refid="_wavelet_threshold_8hpp"/>
+        <childnode refid="4237" relation="include">
+        </childnode>
+        <childnode refid="4270" relation="include">
+        </childnode>
+        <childnode refid="4273" relation="include">
+        </childnode>
+        <childnode refid="4274" relation="include">
+        </childnode>
+      </node>
+      <node id="4246">
+        <label>eternity/dynamic.hpp</label>
+        <link refid="dynamic_8hpp"/>
+        <childnode refid="4247" relation="include">
+        </childnode>
+        <childnode refid="4248" relation="include">
+        </childnode>
+        <childnode refid="4243" relation="include">
+        </childnode>
+      </node>
+      <node id="4256">
+        <label>map</label>
+      </node>
+      <node id="4262">
+        <label>tsaLog.hpp</label>
+        <link refid="tsa_log_8hpp"/>
+        <childnode refid="4239" relation="include">
+        </childnode>
+        <childnode refid="4240" relation="include">
+        </childnode>
+        <childnode refid="4263" relation="include">
+        </childnode>
+      </node>
+      <node id="4240">
+        <label>fstream</label>
+      </node>
+      <node id="4255">
+        <label>xmlscanner.hpp</label>
+        <link refid="xmlscanner_8hpp"/>
+        <childnode refid="4250" relation="include">
+        </childnode>
+        <childnode refid="4251" relation="include">
+        </childnode>
+        <childnode refid="4252" relation="include">
+        </childnode>
+        <childnode refid="4256" relation="include">
+        </childnode>
+        <childnode refid="4253" relation="include">
+        </childnode>
+        <childnode refid="4240" relation="include">
+        </childnode>
+        <childnode refid="4243" relation="include">
+        </childnode>
+        <childnode refid="4239" relation="include">
+        </childnode>
+      </node>
+      <node id="4244">
+        <label>tsaSerialize.hpp</label>
+        <link refid="tsa_serialize_8hpp"/>
+        <childnode refid="4238" relation="include">
+        </childnode>
+        <childnode refid="4239" relation="include">
+        </childnode>
+        <childnode refid="4240" relation="include">
+        </childnode>
+        <childnode refid="4245" relation="include">
+        </childnode>
+        <childnode refid="4260" relation="include">
+        </childnode>
+      </node>
+      <node id="4273">
+        <label>gsl/gsl_sort.h</label>
+      </node>
+      <node id="4269">
+        <label>fparser.hpp</label>
+        <link refid="fparser_8hpp"/>
+        <childnode refid="4243" relation="include">
+        </childnode>
+        <childnode refid="4256" relation="include">
+        </childnode>
+        <childnode refid="4252" relation="include">
+        </childnode>
+      </node>
+      <node id="4237">
+        <label>AlgoBase.hpp</label>
+        <link refid="_algo_base_8hpp"/>
+        <childnode refid="4238" relation="include">
+        </childnode>
+        <childnode refid="4239" relation="include">
+        </childnode>
+        <childnode refid="4240" relation="include">
+        </childnode>
+        <childnode refid="4241" relation="include">
+        </childnode>
+        <childnode refid="4242" relation="include">
+        </childnode>
+        <childnode refid="4243" relation="include">
+        </childnode>
+        <childnode refid="4244" relation="include">
+        </childnode>
+        <childnode refid="4260" relation="include">
+        </childnode>
+        <childnode refid="4262" relation="include">
+        </childnode>
+        <childnode refid="4264" relation="include">
+        </childnode>
+        <childnode refid="4270" relation="include">
+        </childnode>
+        <childnode refid="4272" relation="include">
+        </childnode>
+      </node>
+      <node id="4249">
+        <label>eternity/persist.hpp</label>
+        <link refid="persist_8hpp"/>
+        <childnode refid="4246" relation="include">
+        </childnode>
+        <childnode refid="4250" relation="include">
+        </childnode>
+        <childnode refid="4251" relation="include">
+        </childnode>
+        <childnode refid="4252" relation="include">
+        </childnode>
+        <childnode refid="4253" relation="include">
+        </childnode>
+        <childnode refid="4240" relation="include">
+        </childnode>
+      </node>
+      <node id="4268">
+        <label>string.h</label>
+      </node>
+      <node id="4248">
+        <label>typeinfo</label>
+      </node>
+      <node id="4242">
+        <label>boost/numeric/ublas/io.hpp</label>
+      </node>
+      <node id="4274">
+        <label>gsl/gsl_statistics.h</label>
+      </node>
+      <node id="4263">
+        <label>unistd.h</label>
+      </node>
+      <node id="4267">
+        <label>tsaUtilityFunctions.hpp</label>
+        <link refid="tsa_utility_functions_8hpp"/>
+        <childnode refid="4268" relation="include">
+        </childnode>
+        <childnode refid="4269" relation="include">
+        </childnode>
+        <childnode refid="4266" relation="include">
+        </childnode>
+        <childnode refid="4240" relation="include">
+        </childnode>
+      </node>
+      <node id="4252">
+        <label>vector</label>
+      </node>
+      <node id="4264">
+        <label>BaseView.hpp</label>
+        <link refid="_base_view_8hpp"/>
+        <childnode refid="4256" relation="include">
+        </childnode>
+        <childnode refid="4243" relation="include">
+        </childnode>
+        <childnode refid="4260" relation="include">
+        </childnode>
+        <childnode refid="4265" relation="include">
+        </childnode>
+        <childnode refid="4267" relation="include">
+        </childnode>
+        <childnode refid="4244" relation="include">
+        </childnode>
+        <childnode refid="4262" relation="include">
+        </childnode>
+      </node>
+      <node id="4261">
+        <label>boost/numeric/ublas/matrix_proxy.hpp</label>
+      </node>
+      <node id="4259">
+        <label>sstream</label>
+      </node>
+      <node id="4271">
+        <label>FrameL.h</label>
+      </node>
+      <node id="4272">
+        <label>AlgoExceptions.hpp</label>
+        <link refid="_algo_exceptions_8hpp"/>
+        <childnode refid="4238" relation="include">
+        </childnode>
+        <childnode refid="4243" relation="include">
+        </childnode>
+      </node>
+      <node id="4270">
+        <label>SeqView.hpp</label>
+        <link refid="_seq_view_8hpp"/>
+        <childnode refid="4241" relation="include">
+        </childnode>
+        <childnode refid="4261" relation="include">
+        </childnode>
+        <childnode refid="4242" relation="include">
+        </childnode>
+        <childnode refid="4264" relation="include">
+        </childnode>
+        <childnode refid="4271" relation="include">
+        </childnode>
+      </node>
+      <node id="4250">
+        <label>math.h</label>
+      </node>
+      <node id="4241">
+        <label>boost/numeric/ublas/matrix.hpp</label>
+      </node>
+      <node id="4239">
+        <label>iostream</label>
+      </node>
+      <node id="4257">
+        <label>deque</label>
+      </node>
+      <node id="4254">
+        <label>eternity/persist_xml.hpp</label>
+        <link refid="persist__xml_8hpp"/>
+        <childnode refid="4249" relation="include">
+        </childnode>
+        <childnode refid="4255" relation="include">
+        </childnode>
+        <childnode refid="4257" relation="include">
+        </childnode>
+      </node>
+      <node id="4266">
+        <label>complex</label>
+      </node>
+      <node id="4258">
+        <label>eternity/algorithms.hpp</label>
+        <link refid="algorithms_8hpp"/>
+        <childnode refid="4249" relation="include">
+        </childnode>
+        <childnode refid="4254" relation="include">
+        </childnode>
+        <childnode refid="4255" relation="include">
+        </childnode>
+        <childnode refid="4259" relation="include">
+        </childnode>
+      </node>
+      <node id="4253">
+        <label>algorithm</label>
+      </node>
+      <node id="4247">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4280">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/WDF2Classify.hpp</label>
+        <link refid="_w_d_f2_classify_8hpp"/>
+        <childnode refid="4281" relation="include">
+        </childnode>
+        <childnode refid="4277" relation="include">
+        </childnode>
+      </node>
+      <node id="4275">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletThreshold.hpp</label>
+        <link refid="_wavelet_threshold_8hpp"/>
+        <childnode refid="4276" relation="include">
+        </childnode>
+        <childnode refid="4277" relation="include">
+        </childnode>
+        <childnode refid="4278" relation="include">
+        </childnode>
+        <childnode refid="4280" relation="include">
+        </childnode>
+        <childnode refid="4282" relation="include">
+        </childnode>
+      </node>
+      <node id="4279">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/WavReconstruction.cpp</label>
+        <link refid="_wav_reconstruction_8cpp"/>
+      </node>
+      <node id="4281">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/WDF2Classify.cpp</label>
+        <link refid="_w_d_f2_classify_8cpp"/>
+      </node>
+      <node id="4278">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/WavReconstruction.hpp</label>
+        <link refid="_wav_reconstruction_8hpp"/>
+        <childnode refid="4279" relation="include">
+        </childnode>
+        <childnode refid="4277" relation="include">
+        </childnode>
+      </node>
+      <node id="4277">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/tsa.hpp</label>
+        <link refid="tsa_8hpp"/>
+      </node>
+      <node id="4276">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/WaveletThreshold.cpp</label>
+        <link refid="_wavelet_threshold_8cpp"/>
+      </node>
+      <node id="4282">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/WDF2Reconstruct.hpp</label>
+        <link refid="_w_d_f2_reconstruct_8hpp"/>
+        <childnode refid="4283" relation="include">
+        </childnode>
+        <childnode refid="4277" relation="include">
+        </childnode>
+      </node>
+      <node id="4283">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/WDF2Reconstruct.cpp</label>
+        <link refid="_w_d_f2_reconstruct_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classtsa_1_1_wavelet_threshold" prot="public">tsa::WaveletThreshold</innerclass>
+    <innernamespace refid="namespacetsa">tsa</innernamespace>
+    <briefdescription>
+<para>Perform the hard and soft Wavelet Threshold. </para>    </briefdescription>
+    <detaileddescription>
+<para>Copyright (C) 2004 by Elena Cuoco <ulink url="mailto:elena.cuoco@ego-gw.it">elena.cuoco@ego-gw.it</ulink></para><para>This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</para><para>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</para><para>You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.</para><para><simplesect kind="author"><para>Elena Cuoco <ulink url="mailto:elena.cuoco@ego-gw.it">elena.cuoco@ego-gw.it</ulink> </para></simplesect>
+<simplesect kind="date"><para>2005 </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>__WAVELETTHRESHOLD_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__WAVELETTHRESHOLD_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"></codeline>
+<codeline lineno="41"></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_algo_base_8hpp" kindref="compound">AlgoBase.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_seq_view_8hpp" kindref="compound">SeqView.hpp</ref>&gt;</highlight></codeline>
+<codeline lineno="46"></codeline>
+<codeline lineno="50"></codeline>
+<codeline lineno="51"><highlight class="preprocessor">#include<sp/>&lt;gsl/gsl_sort.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gsl/gsl_statistics.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"></codeline>
+<codeline lineno="59"></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"></codeline>
+<codeline lineno="67"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetsa" kindref="compound">tsa</ref><sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="classtsa_1_1_wavelet_threshold" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classtsa_1_1_wavelet_threshold" kindref="compound">WaveletThreshold</ref><sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="classtsa_1_1_wavelet_threshold_1a50c42c95dae960986a985157ca038fae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_wavelet_threshold_1a50c42c95dae960986a985157ca038fae" kindref="member">WaveletThresholding</ref><sp/>{</highlight></codeline>
+<codeline lineno="81" refid="classtsa_1_1_wavelet_threshold_1a50c42c95dae960986a985157ca038faea9f61564af63af2a5259667285adc8404" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_threshold_1a50c42c95dae960986a985157ca038faea9f61564af63af2a5259667285adc8404" kindref="member">highest</ref>,</highlight></codeline>
+<codeline lineno="82" refid="classtsa_1_1_wavelet_threshold_1a50c42c95dae960986a985157ca038faea890fa411734e6128a3422faa61aff98b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_threshold_1a50c42c95dae960986a985157ca038faea890fa411734e6128a3422faa61aff98b" kindref="member">dohonojohnston</ref>,</highlight></codeline>
+<codeline lineno="83" refid="classtsa_1_1_wavelet_threshold_1a50c42c95dae960986a985157ca038faea849b2c33799f9de0e842f1d935ea3822" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_threshold_1a50c42c95dae960986a985157ca038faea849b2c33799f9de0e842f1d935ea3822" kindref="member">cuoco</ref></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="classtsa_1_1_wavelet_threshold_1a93d14df024bbc8c3da182bf5899f8f83" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_wavelet_threshold_1a93d14df024bbc8c3da182bf5899f8f83" kindref="member">ThresholdingMode</ref><sp/>{</highlight></codeline>
+<codeline lineno="87" refid="classtsa_1_1_wavelet_threshold_1a93d14df024bbc8c3da182bf5899f8f83adddc84c6cfd6dbd73d08352618545fb3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_threshold_1a93d14df024bbc8c3da182bf5899f8f83adddc84c6cfd6dbd73d08352618545fb3" kindref="member">hard</ref>,</highlight></codeline>
+<codeline lineno="88" refid="classtsa_1_1_wavelet_threshold_1a93d14df024bbc8c3da182bf5899f8f83a356244854a142af0e9f3db2cf4ad5192" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_threshold_1a93d14df024bbc8c3da182bf5899f8f83a356244854a142af0e9f3db2cf4ad5192" kindref="member">soft</ref></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_threshold_1a2815780145d4327729f21aa42eb08ddc" kindref="member">WaveletThreshold</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>N,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ncoeff<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sigma<sp/>=<sp/>1.0);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_threshold_1a7a3219da0f0f814157c7a7c3d41a17cc" kindref="member">~WaveletThreshold</ref>();</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_wavelet_threshold_1a124b4c13b828d8b85500f9c99d5f93ae" kindref="member">operator()</ref>(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>WT,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_wavelet_threshold_1a50c42c95dae960986a985157ca038fae" kindref="member">WaveletThresholding</ref><sp/>t,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_wavelet_threshold_1a93d14df024bbc8c3da182bf5899f8f83" kindref="member">ThresholdingMode</ref><sp/>m<sp/>=<sp/><ref refid="classtsa_1_1_wavelet_threshold_1a93d14df024bbc8c3da182bf5899f8f83a356244854a142af0e9f3db2cf4ad5192" kindref="member">soft</ref>);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_wavelet_threshold_1a124b4c13b828d8b85500f9c99d5f93ae" kindref="member">operator()</ref>(<ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref>&amp;<sp/>WT,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_wavelet_threshold_1a50c42c95dae960986a985157ca038fae" kindref="member">WaveletThresholding</ref><sp/>t,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_wavelet_threshold_1a93d14df024bbc8c3da182bf5899f8f83" kindref="member">ThresholdingMode</ref><sp/>m<sp/>=<sp/><ref refid="classtsa_1_1_wavelet_threshold_1a93d14df024bbc8c3da182bf5899f8f83a356244854a142af0e9f3db2cf4ad5192" kindref="member">soft</ref>);</highlight></codeline>
+<codeline lineno="121"></codeline>
+<codeline lineno="125"></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127" refid="classtsa_1_1_wavelet_threshold_1a219b1dbce4e92a84e8078a839b75c4c3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_wavelet_threshold_1a219b1dbce4e92a84e8078a839b75c4c3" kindref="member">GetSigma</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_wavelet_threshold_1a99b389ace8c9d6578e356b7a1c6855d9" kindref="member">mSigma</ref>;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="classtsa_1_1_wavelet_threshold_1a2b6e84938c13629e11a9f31b26c34eb9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_wavelet_threshold_1a2b6e84938c13629e11a9f31b26c34eb9" kindref="member">GetLevel</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_wavelet_threshold_1af3141e33035206b95835c279a39393eb" kindref="member">mlevel</ref>;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135" refid="classtsa_1_1_wavelet_threshold_1aa2a36e1131551abc41b02c4e6a4352c7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_wavelet_threshold_1aa2a36e1131551abc41b02c4e6a4352c7" kindref="member">GetCm</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_wavelet_threshold_1afb847894dc69de8339ceb444bc8e1dca" kindref="member">mC</ref>;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"></codeline>
+<codeline lineno="144"></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146" refid="classtsa_1_1_wavelet_threshold_1a828cc5dbb8c68647a28f72eb0945e2a4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_wavelet_threshold_1a828cc5dbb8c68647a28f72eb0945e2a4" kindref="member">SetSigma</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sigma)<sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_threshold_1a99b389ace8c9d6578e356b7a1c6855d9" kindref="member">mSigma</ref><sp/>=<sp/>sigma;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="155" refid="classtsa_1_1_wavelet_threshold_1a033b585f29f5e95f7e525e993569e781" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*<sp/><ref refid="classtsa_1_1_wavelet_threshold_1a033b585f29f5e95f7e525e993569e781" kindref="member">mAbsCoeff</ref>;</highlight></codeline>
+<codeline lineno="156" refid="classtsa_1_1_wavelet_threshold_1a937714dbfda90649e89c445837bf7bd3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*<sp/><ref refid="classtsa_1_1_wavelet_threshold_1a937714dbfda90649e89c445837bf7bd3" kindref="member">mP</ref>;</highlight></codeline>
+<codeline lineno="157" refid="classtsa_1_1_wavelet_threshold_1a8491f1b1b3679c964294a3b277513374" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*<sp/><ref refid="classtsa_1_1_wavelet_threshold_1a8491f1b1b3679c964294a3b277513374" kindref="member">mPAC</ref>;</highlight></codeline>
+<codeline lineno="158" refid="classtsa_1_1_wavelet_threshold_1a85ce0caeabe9ca87f46e6a87df776262" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*<sp/><ref refid="classtsa_1_1_wavelet_threshold_1a85ce0caeabe9ca87f46e6a87df776262" kindref="member">mOrd</ref>;</highlight></codeline>
+<codeline lineno="159" refid="classtsa_1_1_wavelet_threshold_1a5ee193a15408f941545c28a04cd3f71f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_wavelet_threshold_1a5ee193a15408f941545c28a04cd3f71f" kindref="member">mN</ref>;</highlight></codeline>
+<codeline lineno="160" refid="classtsa_1_1_wavelet_threshold_1a94759bf0bffb9f82c4544ace28d511ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_wavelet_threshold_1a94759bf0bffb9f82c4544ace28d511ff" kindref="member">mMedian</ref>;</highlight></codeline>
+<codeline lineno="161" refid="classtsa_1_1_wavelet_threshold_1abce83133feca77b08cfc7efdb017e8ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_wavelet_threshold_1abce83133feca77b08cfc7efdb017e8ca" kindref="member">mThresh</ref>;</highlight></codeline>
+<codeline lineno="162" refid="classtsa_1_1_wavelet_threshold_1a1cde32dc32105b805047c8f59fa96057" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_wavelet_threshold_1a1cde32dc32105b805047c8f59fa96057" kindref="member">mNcoeff</ref>;</highlight></codeline>
+<codeline lineno="163" refid="classtsa_1_1_wavelet_threshold_1a99b389ace8c9d6578e356b7a1c6855d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_wavelet_threshold_1a99b389ace8c9d6578e356b7a1c6855d9" kindref="member">mSigma</ref>;</highlight></codeline>
+<codeline lineno="164" refid="classtsa_1_1_wavelet_threshold_1af3141e33035206b95835c279a39393eb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_wavelet_threshold_1af3141e33035206b95835c279a39393eb" kindref="member">mlevel</ref>;</highlight></codeline>
+<codeline lineno="165" refid="classtsa_1_1_wavelet_threshold_1afb847894dc69de8339ceb444bc8e1dca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_wavelet_threshold_1afb847894dc69de8339ceb444bc8e1dca" kindref="member">mC</ref>;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"></codeline>
+<codeline lineno="174"></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"></codeline>
+<codeline lineno="182"></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal">}<sp/></highlight><highlight class="comment">//end<sp/>namespace</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>___WAVELETTHRESHOLD_HPP</highlight></codeline>
+    </programlisting>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletThreshold.hpp"/>
+  </compounddef>
+</doxygen>

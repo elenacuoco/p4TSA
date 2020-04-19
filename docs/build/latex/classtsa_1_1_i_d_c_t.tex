@@ -1,0 +1,215 @@
+\hypertarget{classtsa_1_1_i_d_c_t}{}\section{tsa\+:\+:I\+D\+CT Class Reference}
+\label{classtsa_1_1_i_d_c_t}\index{tsa\+::\+I\+D\+CT@{tsa\+::\+I\+D\+CT}}
+
+
+Multichannel Discrete Cosine Transform.  
+
+
+
+
+{\ttfamily \#include $<$I\+D\+C\+T.\+hpp$>$}
+
+Inheritance diagram for tsa\+:\+:I\+D\+CT\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classtsa_1_1_i_d_c_t}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtsa_1_1_i_d_c_t_abf50b114d212adc9d1c977db4eee9053}{I\+D\+CT} (int size=0, enum \hyperlink{namespacetsa_a217e07ef78939f88b22c8428ac96b1ae}{F\+F\+T\+Planning\+Mode} mode=\hyperlink{namespacetsa_a217e07ef78939f88b22c8428ac96b1aea2762be66fb6f3e4772c7f4cc162b9750}{E\+S\+T\+I\+M\+A\+TE}, bool Preserve\+Input=true)
+\item 
+\hyperlink{classtsa_1_1_i_d_c_t_a6747b5a2d41cdd4451e545ff129d5c13}{I\+D\+CT} (const \hyperlink{classtsa_1_1_i_d_c_t}{I\+D\+CT} \&from)
+\item 
+virtual \hyperlink{classtsa_1_1_i_d_c_t_ae7caa3512626cc407690fc0b9f7eaafb}{$\sim$\+I\+D\+CT} ()
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Operations}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtsa_1_1_i_d_c_t_a9c1f5bc33388179e85f00882022cf567}{operator()} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&in, \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&out)
+\item 
+void \hyperlink{classtsa_1_1_i_d_c_t_aef29c6eb84ce3367e90eb66b3e40c005}{execute} (\hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&in, \hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&out)  throw (bad\+\_\+matrix\+\_\+size)
+\item 
+void \hyperlink{classtsa_1_1_i_d_c_t_a8bb130d39013848471a191f45e93fb09}{execute} (\hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} \&in, \hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} \&out)  throw (bad\+\_\+vector\+\_\+size)
+\item 
+void \hyperlink{classtsa_1_1_i_d_c_t_a3add06359e79507105820496b324ad7a}{Make\+Plan} ()  throw (std\+::runtime\+\_\+error)
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Multichannel Discrete Cosine Transform. 
+
+Definition at line 73 of file I\+D\+C\+T.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtsa_1_1_i_d_c_t_abf50b114d212adc9d1c977db4eee9053}\label{classtsa_1_1_i_d_c_t_abf50b114d212adc9d1c977db4eee9053}} 
+\index{tsa\+::\+I\+D\+CT@{tsa\+::\+I\+D\+CT}!I\+D\+CT@{I\+D\+CT}}
+\index{I\+D\+CT@{I\+D\+CT}!tsa\+::\+I\+D\+CT@{tsa\+::\+I\+D\+CT}}
+\subsubsection{\texorpdfstring{I\+D\+C\+T()}{IDCT()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily tsa\+::\+I\+D\+C\+T\+::\+I\+D\+CT (\begin{DoxyParamCaption}\item[{int}]{size = {\ttfamily 0},  }\item[{enum \hyperlink{namespacetsa_a217e07ef78939f88b22c8428ac96b1ae}{F\+F\+T\+Planning\+Mode}}]{mode = {\ttfamily \hyperlink{namespacetsa_a217e07ef78939f88b22c8428ac96b1aea2762be66fb6f3e4772c7f4cc162b9750}{E\+S\+T\+I\+M\+A\+TE}},  }\item[{bool}]{Preserve\+Input = {\ttfamily true} }\end{DoxyParamCaption})}
+
+Constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & the size of the transform \\
+\hline
+{\em mode} & specify the way in which plans are calculated \\
+\hline
+{\em Preserve\+Input} & true if the input buffer must be preserved during the transform, false otherwise \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 5 of file I\+D\+C\+T.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_i_d_c_t_a6747b5a2d41cdd4451e545ff129d5c13}\label{classtsa_1_1_i_d_c_t_a6747b5a2d41cdd4451e545ff129d5c13}} 
+\index{tsa\+::\+I\+D\+CT@{tsa\+::\+I\+D\+CT}!I\+D\+CT@{I\+D\+CT}}
+\index{I\+D\+CT@{I\+D\+CT}!tsa\+::\+I\+D\+CT@{tsa\+::\+I\+D\+CT}}
+\subsubsection{\texorpdfstring{I\+D\+C\+T()}{IDCT()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily tsa\+::\+I\+D\+C\+T\+::\+I\+D\+CT (\begin{DoxyParamCaption}\item[{const \hyperlink{classtsa_1_1_i_d_c_t}{I\+D\+CT} \&}]{from }\end{DoxyParamCaption})}
+
+Copy constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & The instance that must be copied \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 11 of file I\+D\+C\+T.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_i_d_c_t_ae7caa3512626cc407690fc0b9f7eaafb}\label{classtsa_1_1_i_d_c_t_ae7caa3512626cc407690fc0b9f7eaafb}} 
+\index{tsa\+::\+I\+D\+CT@{tsa\+::\+I\+D\+CT}!````~I\+D\+CT@{$\sim$\+I\+D\+CT}}
+\index{````~I\+D\+CT@{$\sim$\+I\+D\+CT}!tsa\+::\+I\+D\+CT@{tsa\+::\+I\+D\+CT}}
+\subsubsection{\texorpdfstring{$\sim$\+I\+D\+C\+T()}{~IDCT()}}
+{\footnotesize\ttfamily tsa\+::\+I\+D\+C\+T\+::$\sim$\+I\+D\+CT (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destructor 
+
+Definition at line 17 of file I\+D\+C\+T.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classtsa_1_1_i_d_c_t_aef29c6eb84ce3367e90eb66b3e40c005}\label{classtsa_1_1_i_d_c_t_aef29c6eb84ce3367e90eb66b3e40c005}} 
+\index{tsa\+::\+I\+D\+CT@{tsa\+::\+I\+D\+CT}!execute@{execute}}
+\index{execute@{execute}!tsa\+::\+I\+D\+CT@{tsa\+::\+I\+D\+CT}}
+\subsubsection{\texorpdfstring{execute()}{execute()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void tsa\+::\+I\+D\+C\+T\+::execute (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&}]{in,  }\item[{\hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&}]{out }\end{DoxyParamCaption}) throw  \hyperlink{classtsa_1_1bad__matrix__size}{bad\+\_\+matrix\+\_\+size}) }
+
+Execution of the fft of a multichannel buffer of double. Input data are organized in a matrix. Each row is a different channel, and the number of data to transform is equal to the number of columns. Both the number of rows and the number of columns can change between each call to this method. If the number of rows changes nothing special will happen, if the number of cols changes the plan is reevaluated with the current flags.
+
+\begin{DoxyPrecond}{Precondition}
+The number of rows of input and output matrix must be the same. 
+
+The columns of the output matrix must be int(n/2)+1, where n is the number of columns of the input matrix.
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+the input buffer is unchanged, unless Set\+Preserve\+Input(false) was called 
+
+the output buffer contain the fft of the input data
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classtsa_1_1bad__matrix__size}{bad\+\_\+matrix\+\_\+size}} & the size of the output matrix is wrong \\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}{Parameters}
+{\em in} & reference to the input multichannel buffer \\
+\hline
+{\em out} & reference to the output multichannel buffer \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 42 of file I\+D\+C\+T.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_i_d_c_t_a8bb130d39013848471a191f45e93fb09}\label{classtsa_1_1_i_d_c_t_a8bb130d39013848471a191f45e93fb09}} 
+\index{tsa\+::\+I\+D\+CT@{tsa\+::\+I\+D\+CT}!execute@{execute}}
+\index{execute@{execute}!tsa\+::\+I\+D\+CT@{tsa\+::\+I\+D\+CT}}
+\subsubsection{\texorpdfstring{execute()}{execute()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void tsa\+::\+I\+D\+C\+T\+::execute (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} \&}]{in,  }\item[{\hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} \&}]{out }\end{DoxyParamCaption}) throw  \hyperlink{classtsa_1_1bad__vector__size}{bad\+\_\+vector\+\_\+size}) }
+
+Execution of the fft of a single channel buffer of double. If the number of the buffer changes the plan is reevaluated with the current flags.
+
+\begin{DoxyPrecond}{Precondition}
+The sized of the output vector must be int(n/2)+1, where n is the size of the input vector.
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+the input buffer is unchanged, unless Set\+Preserve\+Input(false) was called 
+
+the output buffer contain the fft of the input data
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classtsa_1_1bad__matrix__size}{bad\+\_\+matrix\+\_\+size}} & the size of the output matrix is wrong \\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}{Parameters}
+{\em in} & reference to the input buffer \\
+\hline
+{\em out} & reference to the output buffer \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 71 of file I\+D\+C\+T.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_i_d_c_t_a3add06359e79507105820496b324ad7a}\label{classtsa_1_1_i_d_c_t_a3add06359e79507105820496b324ad7a}} 
+\index{tsa\+::\+I\+D\+CT@{tsa\+::\+I\+D\+CT}!Make\+Plan@{Make\+Plan}}
+\index{Make\+Plan@{Make\+Plan}!tsa\+::\+I\+D\+CT@{tsa\+::\+I\+D\+CT}}
+\subsubsection{\texorpdfstring{Make\+Plan()}{MakePlan()}}
+{\footnotesize\ttfamily void tsa\+::\+I\+D\+C\+T\+::\+Make\+Plan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throw  std\+::runtime\+\_\+error) \hspace{0.3cm}{\ttfamily [virtual]}}
+
+Make a new plan, with the current parameters.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & The new plan cannot be created \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{classtsa_1_1_base_f_f_t_a9af0c36413173821cac8dbdce9cfe3b4}{tsa\+::\+Base\+F\+FT}.
+
+
+
+Definition at line 95 of file I\+D\+C\+T.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_i_d_c_t_a9c1f5bc33388179e85f00882022cf567}\label{classtsa_1_1_i_d_c_t_a9c1f5bc33388179e85f00882022cf567}} 
+\index{tsa\+::\+I\+D\+CT@{tsa\+::\+I\+D\+CT}!operator()@{operator()}}
+\index{operator()@{operator()}!tsa\+::\+I\+D\+CT@{tsa\+::\+I\+D\+CT}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily void tsa\+::\+I\+D\+C\+T\+::operator() (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{in,  }\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{out }\end{DoxyParamCaption})}
+
+Apply the transformation on the data
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & a reference to the buffer containing the input data \\
+\hline
+{\em out} & a reference to the buffer containing the input data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a reference to this instance of the class 
+\end{DoxyReturn}
+
+
+Definition at line 21 of file I\+D\+C\+T.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/include/\hyperlink{_i_d_c_t_8hpp}{I\+D\+C\+T.\+hpp}\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/src/\hyperlink{_i_d_c_t_8cpp}{I\+D\+C\+T.\+cpp}\end{DoxyCompactItemize}

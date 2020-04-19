@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_cb30e5c7b8226b54495f0a3ec9b8a067" kind="dir">
+    <compoundname>/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/mfc</compoundname>
+    <innerfile refid="_m_f_c_archive_8cpp">MFCArchive.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/mfc/"/>
+  </compounddef>
+</doxygen>

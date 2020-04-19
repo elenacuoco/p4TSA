@@ -1,0 +1,542 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classtsa_1_1_channel_descriptor" kind="class" language="C++" prot="public">
+    <compoundname>tsa::ChannelDescriptor</compoundname>
+    <basecompoundref refid="classtsa_1_1_algo_base" prot="public" virt="non-virtual">tsa::AlgoBase</basecompoundref>
+    <derivedcompoundref refid="classtsa_1_1_a_d_c___channel" prot="public" virt="non-virtual">tsa::ADC_Channel</derivedcompoundref>
+    <derivedcompoundref refid="classtsa_1_1_f_r_a_m_e_h___channel" prot="public" virt="non-virtual">tsa::FRAMEH_Channel</derivedcompoundref>
+    <derivedcompoundref refid="classtsa_1_1_p_r_o_c___channel" prot="public" virt="non-virtual">tsa::PROC_Channel</derivedcompoundref>
+    <derivedcompoundref refid="classtsa_1_1_s_e_r___channel" prot="public" virt="non-virtual">tsa::SER_Channel</derivedcompoundref>
+    <derivedcompoundref refid="classtsa_1_1_s_i_m___channel" prot="public" virt="non-virtual">tsa::SIM_Channel</derivedcompoundref>
+    <includes refid="_frame_i_stream_8hpp" local="no">FrameIStream.hpp</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classtsa_1_1_channel_descriptor_1a7767947e90a66d41bbd13bd4c54149a6" prot="protected" static="no" mutable="no">
+        <type><ref refid="classtsa_1_1_frame_i_stream" kindref="compound">FrameIStream</ref> *</type>
+        <definition>FrameIStream* tsa::ChannelDescriptor::mFIS</definition>
+        <argsstring></argsstring>
+        <name>mFIS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pointer to the <ref refid="classtsa_1_1_frame_i_stream" kindref="compound">FrameIStream</ref> class which contains this descriptor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" line="218" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" bodystart="218" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_channel_descriptor_1a49d1e3852cb22b0a56ebc03b3176c5b8" prot="protected" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int tsa::ChannelDescriptor::mId</definition>
+        <argsstring></argsstring>
+        <name>mId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The numerical id of the class </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" line="219" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" bodystart="219" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_channel_descriptor_1a142c7f60e14fa8036340b902529cf956" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double tsa::ChannelDescriptor::mRate</definition>
+        <argsstring></argsstring>
+        <name>mRate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The rate of the data </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" line="220" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" bodystart="220" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_channel_descriptor_1a6bad409238df7dff8b5265570adac8ff" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double tsa::ChannelDescriptor::mNextTime</definition>
+        <argsstring></argsstring>
+        <name>mNextTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The time at which the next data to push on the queue is expected </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" line="221" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" bodystart="221" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_channel_descriptor_1ad1568c18971efe9a5cb1d114e06f5050" prot="protected" static="no" mutable="no">
+        <type>std::deque&lt; double &gt;</type>
+        <definition>std::deque&lt;double&gt; tsa::ChannelDescriptor::mData</definition>
+        <argsstring></argsstring>
+        <name>mData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The data queue </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" line="222" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" bodystart="222" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_channel_descriptor_1ac4103a2793b7e507f8f982070ee27348" prot="protected" static="no" mutable="no">
+        <type>std::deque&lt; <ref refid="structtsa_1_1_data_exception" kindref="compound">DataException</ref> &gt;</type>
+        <definition>std::deque&lt;DataException&gt; tsa::ChannelDescriptor::mExceptions</definition>
+        <argsstring></argsstring>
+        <name>mExceptions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The set of data loss exceptions </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" line="223" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" bodystart="223" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtsa_1_1_channel_descriptor_1a320624e156e5d856077465474bc7154f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>tsa::ChannelDescriptor::ChannelDescriptor</definition>
+        <argsstring>(unsigned int id)</argsstring>
+        <name>ChannelDescriptor</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of data channel </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" line="110" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" bodystart="110" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_channel_descriptor_1aa1e001a5e712415cd4e9d66846914a56" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void tsa::ChannelDescriptor::AddData</definition>
+        <argsstring>()</argsstring>
+        <name>AddData</name>
+        <reimplementedby refid="classtsa_1_1_a_d_c___channel_1a23052bc47591e46246701ec0573c7902">AddData</reimplementedby>
+        <reimplementedby refid="classtsa_1_1_p_r_o_c___channel_1ab4f986f7829c52ca6c0d8c244be7c617">AddData</reimplementedby>
+        <reimplementedby refid="classtsa_1_1_s_i_m___channel_1ada133d83befff9b1bde7e13bb78df7e0">AddData</reimplementedby>
+        <reimplementedby refid="classtsa_1_1_s_e_r___channel_1a77efdde9aaa7bbd356088bb1c15e59bf">AddData</reimplementedby>
+        <reimplementedby refid="classtsa_1_1_f_r_a_m_e_h___channel_1af757e23c465da95ac0ed7b97876ead66">AddData</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function must be called when there are not enough data to fill the output view. In this base class does nothing. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" line="118" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" bodystart="118" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_channel_descriptor_1a456d14e6136c389fbd307fabab7d7b73" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>virtual double tsa::ChannelDescriptor::GetLength</definition>
+        <argsstring>()</argsstring>
+        <name>GetLength</name>
+        <reimplementedby refid="classtsa_1_1_a_d_c___channel_1ab5e23c219a7bf70866b05c9d3ad3da6f">GetLength</reimplementedby>
+        <reimplementedby refid="classtsa_1_1_p_r_o_c___channel_1ac29ae55cbededca3814b30e1186a4650">GetLength</reimplementedby>
+        <reimplementedby refid="classtsa_1_1_s_i_m___channel_1a99941fc8df0c8bbc32091e7e87d20de8">GetLength</reimplementedby>
+        <reimplementedby refid="classtsa_1_1_s_e_r___channel_1ac2cb2ded2f417590ed1da5c5e2315569">GetLength</reimplementedby>
+        <reimplementedby refid="classtsa_1_1_f_r_a_m_e_h___channel_1a022b134fb62d99e8cb00a6ce28b2d569">GetLength</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the maximul time length of data that can be currently filled without calling AddData.</para><para><simplesect kind="return"><para>the time length of the data available in seconds </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" line="127" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" bodystart="127" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_channel_descriptor_1a602c501d3fa47c0951ae45f78336a1a8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>virtual double tsa::ChannelDescriptor::GetRate</definition>
+        <argsstring>()</argsstring>
+        <name>GetRate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the channel time rate</para><para><simplesect kind="return"><para>the channel time rate </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" line="137" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" bodystart="137" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_channel_descriptor_1a5ebd9a8bf358666b2cd9ae00056d2728" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void tsa::ChannelDescriptor::WriteView</definition>
+        <argsstring>(SeqViewDouble &amp;v)</argsstring>
+        <name>WriteView</name>
+        <param>
+          <type><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref> &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A function to write the available data on an output view. Be careful that if there are not enough data available we get a data loss exception.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>output view where the available data are written </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" line="147" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/FrameIStream.cpp" bodystart="149" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_channel_descriptor_1a6553da04ba33471fc5465b6bd2b5275c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void tsa::ChannelDescriptor::FillView</definition>
+        <argsstring>(SeqViewDouble &amp;v, double tstart, double tend)</argsstring>
+        <name>FillView</name>
+        <reimplementedby refid="classtsa_1_1_p_r_o_c___channel_1a84f00b22077b0aa41dba95ac0aaf0478">FillView</reimplementedby>
+        <param>
+          <type><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref> &amp;</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>tstart</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>tend</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" line="149" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/FrameIStream.cpp" bodystart="176" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_channel_descriptor_1a51b2df6d09b5b0b07d2a9ecda6fffa2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void tsa::ChannelDescriptor::WriteView</definition>
+        <argsstring>(SeqViewDouble &amp;v, SeqViewDouble &amp;validation)</argsstring>
+        <name>WriteView</name>
+        <param>
+          <type><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref> &amp;</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref> &amp;</type>
+          <declname>validation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A function to write the available data on an output view. Be careful that if there are not enough data available we get a data loss exception. At the same time a second view is filled with ones which correspond to avaliable data, or zeros which correspond to unavailable data.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>output view where the available data are written </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>validation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>output view where the available data flags are written </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" line="161" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/FrameIStream.cpp" bodystart="180" bodyend="216"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_channel_descriptor_1a2b4f201421dcd2cc9d2c1705fe4bea61" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual tsa::ChannelDescriptor::~ChannelDescriptor</definition>
+        <argsstring>()</argsstring>
+        <name>~ChannelDescriptor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" line="167" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" bodystart="167" bodyend="168"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classtsa_1_1_channel_descriptor_1ae3da8cb574d6a43bcca33daca5394530" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::ChannelDescriptor::PushValue</definition>
+        <argsstring>(double value, double t, unsigned int n)</argsstring>
+        <name>PushValue</name>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Call <simplesect kind="see"><para><ref refid="classtsa_1_1_channel_descriptor_1ae38a3b6ca5d23123a61a421fe3612b86" kindref="member">Queue</ref> n times, passing the given value and the corresponding time.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value that must be added to the queue </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the time which correspond to the data </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of copies of the data that must be added </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" line="178" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/FrameIStream.cpp" bodystart="60" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_channel_descriptor_1a61cb9c3f50762989afc59c9e365f0927" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::ChannelDescriptor::PushFrVect</definition>
+        <argsstring>(FrVect *frv, double t, unsigned int off, double offset, double slope)</argsstring>
+        <name>PushFrVect</name>
+        <param>
+          <type>FrVect *</type>
+          <declname>frv</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>off</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>slope</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Call <simplesect kind="see"><para><ref refid="classtsa_1_1_channel_descriptor_1ae38a3b6ca5d23123a61a421fe3612b86" kindref="member">Queue</ref> for a sequence of numerical values. The values are contained inside a FrVect, starting from a given offset. The effective value which is passed to </para></simplesect>
+<simplesect kind="see"><para><ref refid="classtsa_1_1_channel_descriptor_1ae38a3b6ca5d23123a61a421fe3612b86" kindref="member">Queue</ref> is given by y=offset+slope*x, where x is the value contained in the FrVect.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>frv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the FrVect containing data </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>time corresponding to the first data contained in the FrVect (neglecting the offset) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>off</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>offset in the FrVect </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>an optional offset to correct the data </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>slope</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>an optional scaling factor to correct the data </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" line="192" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/FrameIStream.cpp" bodystart="66" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_channel_descriptor_1ae38a3b6ca5d23123a61a421fe3612b86" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::ChannelDescriptor::Queue</definition>
+        <argsstring>(double v, double t)</argsstring>
+        <name>Queue</name>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Push a given value v, at the given time t, in the output queue. The value is pushed only if its time is larger or equal that the current mNextTime. If it is larger that the current mNextTime value a data loss is registered.</para><para>The value of mNextTime is updated.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the time </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" line="204" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/FrameIStream.cpp" bodystart="34" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_channel_descriptor_1a73d060e190a75faa7ac64ee4a328a9d4" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tsa::ChannelDescriptor::data_available</definition>
+        <argsstring>(double t)</argsstring>
+        <name>data_available</name>
+        <param>
+          <type>double</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check the availability of a value at a given time, looking in the set of registered data losses. Remove from this set all the exceptions which correspond to times lower than t.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>requested time</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if a number is available at the given time, false otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" line="215" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/FrameIStream.cpp" bodystart="125" bodyend="147"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A base class for the descriptor of a data channel. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="170">
+        <label>tsa::ADC_Channel</label>
+        <link refid="classtsa_1_1_a_d_c___channel"/>
+        <childnode refid="168" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="173">
+        <label>tsa::SER_Channel</label>
+        <link refid="classtsa_1_1_s_e_r___channel"/>
+        <childnode refid="168" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="174">
+        <label>tsa::SIM_Channel</label>
+        <link refid="classtsa_1_1_s_i_m___channel"/>
+        <childnode refid="168" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="168">
+        <label>tsa::ChannelDescriptor</label>
+        <link refid="classtsa_1_1_channel_descriptor"/>
+        <childnode refid="169" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="169">
+        <label>tsa::AlgoBase</label>
+        <link refid="classtsa_1_1_algo_base"/>
+      </node>
+      <node id="172">
+        <label>tsa::PROC_Channel</label>
+        <link refid="classtsa_1_1_p_r_o_c___channel"/>
+        <childnode refid="168" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="171">
+        <label>tsa::FRAMEH_Channel</label>
+        <link refid="classtsa_1_1_f_r_a_m_e_h___channel"/>
+        <childnode refid="168" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="177">
+        <label>tsa::FrameIStream</label>
+        <link refid="classtsa_1_1_frame_i_stream"/>
+        <childnode refid="176" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="175">
+        <label>tsa::ChannelDescriptor</label>
+        <link refid="classtsa_1_1_channel_descriptor"/>
+        <childnode refid="176" relation="public-inheritance">
+        </childnode>
+        <childnode refid="177" relation="usage">
+          <edgelabel>mFIS</edgelabel>
+        </childnode>
+      </node>
+      <node id="176">
+        <label>tsa::AlgoBase</label>
+        <link refid="classtsa_1_1_algo_base"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" line="101" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" bodystart="101" bodyend="224"/>
+    <listofallmembers>
+      <member refid="classtsa_1_1_channel_descriptor_1aa1e001a5e712415cd4e9d66846914a56" prot="public" virt="virtual"><scope>tsa::ChannelDescriptor</scope><name>AddData</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a320624e156e5d856077465474bc7154f" prot="public" virt="non-virtual"><scope>tsa::ChannelDescriptor</scope><name>ChannelDescriptor</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a73d060e190a75faa7ac64ee4a328a9d4" prot="protected" virt="non-virtual"><scope>tsa::ChannelDescriptor</scope><name>data_available</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a6553da04ba33471fc5465b6bd2b5275c" prot="public" virt="virtual"><scope>tsa::ChannelDescriptor</scope><name>FillView</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a456d14e6136c389fbd307fabab7d7b73" prot="public" virt="virtual"><scope>tsa::ChannelDescriptor</scope><name>GetLength</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a602c501d3fa47c0951ae45f78336a1a8" prot="public" virt="virtual"><scope>tsa::ChannelDescriptor</scope><name>GetRate</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1ad1568c18971efe9a5cb1d114e06f5050" prot="protected" virt="non-virtual"><scope>tsa::ChannelDescriptor</scope><name>mData</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1ac4103a2793b7e507f8f982070ee27348" prot="protected" virt="non-virtual"><scope>tsa::ChannelDescriptor</scope><name>mExceptions</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a7767947e90a66d41bbd13bd4c54149a6" prot="protected" virt="non-virtual"><scope>tsa::ChannelDescriptor</scope><name>mFIS</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a49d1e3852cb22b0a56ebc03b3176c5b8" prot="protected" virt="non-virtual"><scope>tsa::ChannelDescriptor</scope><name>mId</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a6bad409238df7dff8b5265570adac8ff" prot="protected" virt="non-virtual"><scope>tsa::ChannelDescriptor</scope><name>mNextTime</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a142c7f60e14fa8036340b902529cf956" prot="protected" virt="non-virtual"><scope>tsa::ChannelDescriptor</scope><name>mRate</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a61cb9c3f50762989afc59c9e365f0927" prot="protected" virt="non-virtual"><scope>tsa::ChannelDescriptor</scope><name>PushFrVect</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1ae3da8cb574d6a43bcca33daca5394530" prot="protected" virt="non-virtual"><scope>tsa::ChannelDescriptor</scope><name>PushValue</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1ae38a3b6ca5d23123a61a421fe3612b86" prot="protected" virt="non-virtual"><scope>tsa::ChannelDescriptor</scope><name>Queue</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a5ebd9a8bf358666b2cd9ae00056d2728" prot="public" virt="virtual"><scope>tsa::ChannelDescriptor</scope><name>WriteView</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a51b2df6d09b5b0b07d2a9ecda6fffa2b" prot="public" virt="virtual"><scope>tsa::ChannelDescriptor</scope><name>WriteView</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a2b4f201421dcd2cc9d2c1705fe4bea61" prot="public" virt="virtual"><scope>tsa::ChannelDescriptor</scope><name>~ChannelDescriptor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_m_f_c_archive_8cpp" kind="file" language="C++">
+    <compoundname>MFCArchive.cpp</compoundname>
+    <includes local="yes">stdafx.h</includes>
+    <includes local="yes">eternity/mfc/MFCarchive.h</includes>
+    <incdepgraph>
+      <node id="1796">
+        <label>stdafx.h</label>
+      </node>
+      <node id="1797">
+        <label>eternity/mfc/MFCarchive.h</label>
+      </node>
+      <node id="1795">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/mfc/MFCArchive.cpp</label>
+        <link refid="_m_f_c_archive_8cpp"/>
+        <childnode refid="1796" relation="include">
+        </childnode>
+        <childnode refid="1797" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Eternity<sp/>persistence<sp/>system</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"></highlight><highlight class="comment">//<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>1999-2003<sp/>Nicola<sp/>Santi.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>software<sp/>is<sp/>released<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>Eternity<sp/>Artistic<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>License.<sp/>Please<sp/>read<sp/>the<sp/>file<sp/>eternity-licence<sp/>to<sp/>learn<sp/>details.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>THIS<sp/>PACKAGE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;<sp/>AND<sp/>WITHOUT<sp/>ANY<sp/>EXPRESS<sp/>OR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>WITHOUT<sp/>LIMITATION,<sp/>THE<sp/>IMPLIED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTIBILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Except<sp/>as<sp/>contained<sp/>in<sp/>this<sp/>notice,<sp/>the<sp/>name<sp/>of<sp/>Nicola<sp/>Santi</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>shall<sp/>not<sp/>be<sp/>used<sp/>in<sp/>advertising<sp/>or<sp/>otherwise<sp/>to<sp/>promote<sp/>the<sp/>sale,<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>use<sp/>or<sp/>other<sp/>dealings<sp/>in<sp/>this<sp/>Software<sp/>without<sp/>prior<sp/>written<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>authorization<sp/>from<sp/>Nicola<sp/>Santi.</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"></highlight><highlight class="comment">//<sp/>MFCarchive.cpp:<sp/>implementation<sp/>of<sp/>the<sp/>MFCarchive<sp/>class.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;stdafx.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;eternity/mfc/MFCarchive.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>THIS_FILE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>THIS_FILE[]<sp/>=<sp/>__FILE__;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>new<sp/>DEBUG_NEW</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="comment">//<sp/>Construction/Destruction</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="class_m_f_carchive_1adf62fabd21e51cf0f9e1a50fc0367201" refkind="member"><highlight class="normal"><ref refid="class_m_f_carchive_1adf62fabd21e51cf0f9e1a50fc0367201" kindref="member">MFCarchive::MFCarchive</ref>(Carchive&amp;<sp/>ar)<sp/>:<sp/>m_ar(ar)<sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>archive::init();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classeternity_1_1archive_1a949b798deac030f2ab45ed54bf26dc4a" kindref="member">m_bloading</ref><sp/>=<sp/>ar.is_loading()<sp/>?<sp/>true<sp/>:<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="class_m_f_carchive_1a8c5191701a84b9a4d2812887cfc28651" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="class_m_f_carchive_1a8c5191701a84b9a4d2812887cfc28651" kindref="member">MFCarchive::write</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*buffer,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>count)<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_m_f_carchive_1a57d8f21676284f6004ce3ca11b573c05" kindref="member">m_ar</ref>.write(buffer,<sp/>size);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>size;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="class_m_f_carchive_1a175a083e8f81fe490714be920539f7b9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="class_m_f_carchive_1a175a083e8f81fe490714be920539f7b9" kindref="member">MFCarchive::read</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*buffer,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>count)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_m_f_carchive_1a57d8f21676284f6004ce3ca11b573c05" kindref="member">m_ar</ref>.read(buffer,<sp/>size);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/mfc/MFCArchive.cpp"/>
+  </compounddef>
+</doxygen>

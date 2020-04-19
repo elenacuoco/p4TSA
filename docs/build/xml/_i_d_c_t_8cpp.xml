@@ -1,0 +1,437 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_i_d_c_t_8cpp" kind="file" language="C++">
+    <compoundname>IDCT.cpp</compoundname>
+    <includes refid="_i_d_c_t_8hpp" local="no">IDCT.hpp</includes>
+    <incdepgraph>
+      <node id="5576">
+        <label>tsaTraits.hpp</label>
+        <link refid="tsa_traits_8hpp"/>
+        <childnode refid="5577" relation="include">
+        </childnode>
+      </node>
+      <node id="5557">
+        <label>eternity.hpp</label>
+        <link refid="eternity_8hpp"/>
+        <childnode refid="5558" relation="include">
+        </childnode>
+        <childnode refid="5560" relation="include">
+        </childnode>
+        <childnode refid="5565" relation="include">
+        </childnode>
+        <childnode refid="5569" relation="include">
+        </childnode>
+      </node>
+      <node id="5562">
+        <label>stdlib.h</label>
+      </node>
+      <node id="5551">
+        <label>stdexcept</label>
+      </node>
+      <node id="5571">
+        <label>tsaTypes.hpp</label>
+        <link refid="tsa_types_8hpp"/>
+        <childnode refid="5553" relation="include">
+        </childnode>
+        <childnode refid="5548" relation="include">
+        </childnode>
+        <childnode refid="5572" relation="include">
+        </childnode>
+        <childnode refid="5554" relation="include">
+        </childnode>
+        <childnode refid="5557" relation="include">
+        </childnode>
+      </node>
+      <node id="5555">
+        <label>string</label>
+      </node>
+      <node id="5558">
+        <label>eternity/dynamic.hpp</label>
+        <link refid="dynamic_8hpp"/>
+        <childnode refid="5547" relation="include">
+        </childnode>
+        <childnode refid="5559" relation="include">
+        </childnode>
+        <childnode refid="5555" relation="include">
+        </childnode>
+      </node>
+      <node id="5567">
+        <label>map</label>
+      </node>
+      <node id="5573">
+        <label>tsaLog.hpp</label>
+        <link refid="tsa_log_8hpp"/>
+        <childnode refid="5552" relation="include">
+        </childnode>
+        <childnode refid="5553" relation="include">
+        </childnode>
+        <childnode refid="5574" relation="include">
+        </childnode>
+      </node>
+      <node id="5549">
+        <label>fftw3.h</label>
+      </node>
+      <node id="5553">
+        <label>fstream</label>
+      </node>
+      <node id="5566">
+        <label>xmlscanner.hpp</label>
+        <link refid="xmlscanner_8hpp"/>
+        <childnode refid="5561" relation="include">
+        </childnode>
+        <childnode refid="5562" relation="include">
+        </childnode>
+        <childnode refid="5563" relation="include">
+        </childnode>
+        <childnode refid="5567" relation="include">
+        </childnode>
+        <childnode refid="5564" relation="include">
+        </childnode>
+        <childnode refid="5553" relation="include">
+        </childnode>
+        <childnode refid="5555" relation="include">
+        </childnode>
+        <childnode refid="5552" relation="include">
+        </childnode>
+      </node>
+      <node id="5556">
+        <label>tsaSerialize.hpp</label>
+        <link refid="tsa_serialize_8hpp"/>
+        <childnode refid="5551" relation="include">
+        </childnode>
+        <childnode refid="5552" relation="include">
+        </childnode>
+        <childnode refid="5553" relation="include">
+        </childnode>
+        <childnode refid="5557" relation="include">
+        </childnode>
+        <childnode refid="5571" relation="include">
+        </childnode>
+      </node>
+      <node id="5545">
+        <label>IDCT.hpp</label>
+        <link refid="_i_d_c_t_8hpp"/>
+        <childnode refid="5546" relation="include">
+        </childnode>
+        <childnode refid="5581" relation="include">
+        </childnode>
+      </node>
+      <node id="5580">
+        <label>fparser.hpp</label>
+        <link refid="fparser_8hpp"/>
+        <childnode refid="5555" relation="include">
+        </childnode>
+        <childnode refid="5567" relation="include">
+        </childnode>
+        <childnode refid="5563" relation="include">
+        </childnode>
+      </node>
+      <node id="5550">
+        <label>AlgoBase.hpp</label>
+        <link refid="_algo_base_8hpp"/>
+        <childnode refid="5551" relation="include">
+        </childnode>
+        <childnode refid="5552" relation="include">
+        </childnode>
+        <childnode refid="5553" relation="include">
+        </childnode>
+        <childnode refid="5548" relation="include">
+        </childnode>
+        <childnode refid="5554" relation="include">
+        </childnode>
+        <childnode refid="5555" relation="include">
+        </childnode>
+        <childnode refid="5556" relation="include">
+        </childnode>
+        <childnode refid="5571" relation="include">
+        </childnode>
+        <childnode refid="5573" relation="include">
+        </childnode>
+        <childnode refid="5575" relation="include">
+        </childnode>
+        <childnode refid="5581" relation="include">
+        </childnode>
+        <childnode refid="5583" relation="include">
+        </childnode>
+      </node>
+      <node id="5560">
+        <label>eternity/persist.hpp</label>
+        <link refid="persist_8hpp"/>
+        <childnode refid="5558" relation="include">
+        </childnode>
+        <childnode refid="5561" relation="include">
+        </childnode>
+        <childnode refid="5562" relation="include">
+        </childnode>
+        <childnode refid="5563" relation="include">
+        </childnode>
+        <childnode refid="5564" relation="include">
+        </childnode>
+        <childnode refid="5553" relation="include">
+        </childnode>
+      </node>
+      <node id="5579">
+        <label>string.h</label>
+      </node>
+      <node id="5559">
+        <label>typeinfo</label>
+      </node>
+      <node id="5554">
+        <label>boost/numeric/ublas/io.hpp</label>
+      </node>
+      <node id="5574">
+        <label>unistd.h</label>
+      </node>
+      <node id="5578">
+        <label>tsaUtilityFunctions.hpp</label>
+        <link refid="tsa_utility_functions_8hpp"/>
+        <childnode refid="5579" relation="include">
+        </childnode>
+        <childnode refid="5580" relation="include">
+        </childnode>
+        <childnode refid="5577" relation="include">
+        </childnode>
+        <childnode refid="5553" relation="include">
+        </childnode>
+      </node>
+      <node id="5563">
+        <label>vector</label>
+      </node>
+      <node id="5575">
+        <label>BaseView.hpp</label>
+        <link refid="_base_view_8hpp"/>
+        <childnode refid="5567" relation="include">
+        </childnode>
+        <childnode refid="5555" relation="include">
+        </childnode>
+        <childnode refid="5571" relation="include">
+        </childnode>
+        <childnode refid="5576" relation="include">
+        </childnode>
+        <childnode refid="5578" relation="include">
+        </childnode>
+        <childnode refid="5556" relation="include">
+        </childnode>
+        <childnode refid="5573" relation="include">
+        </childnode>
+      </node>
+      <node id="5572">
+        <label>boost/numeric/ublas/matrix_proxy.hpp</label>
+      </node>
+      <node id="5570">
+        <label>sstream</label>
+      </node>
+      <node id="5582">
+        <label>FrameL.h</label>
+      </node>
+      <node id="5583">
+        <label>AlgoExceptions.hpp</label>
+        <link refid="_algo_exceptions_8hpp"/>
+        <childnode refid="5551" relation="include">
+        </childnode>
+        <childnode refid="5555" relation="include">
+        </childnode>
+      </node>
+      <node id="5581">
+        <label>SeqView.hpp</label>
+        <link refid="_seq_view_8hpp"/>
+        <childnode refid="5548" relation="include">
+        </childnode>
+        <childnode refid="5572" relation="include">
+        </childnode>
+        <childnode refid="5554" relation="include">
+        </childnode>
+        <childnode refid="5575" relation="include">
+        </childnode>
+        <childnode refid="5582" relation="include">
+        </childnode>
+      </node>
+      <node id="5561">
+        <label>math.h</label>
+      </node>
+      <node id="5548">
+        <label>boost/numeric/ublas/matrix.hpp</label>
+      </node>
+      <node id="5552">
+        <label>iostream</label>
+      </node>
+      <node id="5544">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/IDCT.cpp</label>
+        <link refid="_i_d_c_t_8cpp"/>
+        <childnode refid="5545" relation="include">
+        </childnode>
+      </node>
+      <node id="5568">
+        <label>deque</label>
+      </node>
+      <node id="5546">
+        <label>BaseFFT.hpp</label>
+        <link refid="_base_f_f_t_8hpp"/>
+        <childnode refid="5547" relation="include">
+        </childnode>
+        <childnode refid="5548" relation="include">
+        </childnode>
+        <childnode refid="5549" relation="include">
+        </childnode>
+        <childnode refid="5550" relation="include">
+        </childnode>
+      </node>
+      <node id="5565">
+        <label>eternity/persist_xml.hpp</label>
+        <link refid="persist__xml_8hpp"/>
+        <childnode refid="5560" relation="include">
+        </childnode>
+        <childnode refid="5566" relation="include">
+        </childnode>
+        <childnode refid="5568" relation="include">
+        </childnode>
+      </node>
+      <node id="5577">
+        <label>complex</label>
+      </node>
+      <node id="5569">
+        <label>eternity/algorithms.hpp</label>
+        <link refid="algorithms_8hpp"/>
+        <childnode refid="5560" relation="include">
+        </childnode>
+        <childnode refid="5565" relation="include">
+        </childnode>
+        <childnode refid="5566" relation="include">
+        </childnode>
+        <childnode refid="5570" relation="include">
+        </childnode>
+      </node>
+      <node id="5564">
+        <label>algorithm</label>
+      </node>
+      <node id="5547">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacetsa">tsa</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_i_d_c_t_8hpp" kindref="compound">IDCT.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetsa" kindref="compound">tsa</ref><sp/>{</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="classtsa_1_1_i_d_c_t_1abf50b114d212adc9d1c977db4eee9053" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_i_d_c_t_1abf50b114d212adc9d1c977db4eee9053" kindref="member">IDCT::IDCT</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="namespacetsa_1a217e07ef78939f88b22c8428ac96b1ae" kindref="member">FFTPlanningMode</ref><sp/>mode,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>PreserveInput)</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>:</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_base_f_f_t" kindref="compound">BaseFFT</ref>((2<sp/>*<sp/>size<sp/>-<sp/>1),<sp/>mode,<sp/>PreserveInput)<sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="classtsa_1_1_i_d_c_t_1a6747b5a2d41cdd4451e545ff129d5c13" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_i_d_c_t_1abf50b114d212adc9d1c977db4eee9053" kindref="member">IDCT::IDCT</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_i_d_c_t" kindref="compound">IDCT</ref>&amp;<sp/>from)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>:</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_base_f_f_t" kindref="compound">BaseFFT</ref>(from)<sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="classtsa_1_1_i_d_c_t_1ae7caa3512626cc407690fc0b9f7eaafb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_i_d_c_t_1ae7caa3512626cc407690fc0b9f7eaafb" kindref="member">IDCT::~IDCT</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="classtsa_1_1_i_d_c_t_1a9c1f5bc33388179e85f00882022cf567" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_i_d_c_t_1a9c1f5bc33388179e85f00882022cf567" kindref="member">IDCT::operator()</ref>(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>in,<sp/><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>out)<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref>*<sp/>data_in<sp/>=<sp/>in.GetData();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref>*<sp/>data_out<sp/>=<sp/>out.GetData();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>dimensions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((data_in-&gt;size1()<sp/>!=<sp/>data_out-&gt;size1())<sp/>||<sp/>(data_in-&gt;size2()<sp/>!=<sp/>data_out-&gt;size2()))<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data_out-&gt;resize(data_in-&gt;size1(),<sp/>data_in-&gt;size2());</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1a91d266348bcf69ab00c97a253b0ec790" kindref="member">LogWarning</ref>(</highlight><highlight class="stringliteral">&quot;IDCT:<sp/>resizing<sp/>output<sp/>array&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_i_d_c_t_1aef29c6eb84ce3367e90eb66b3e40c005" kindref="member">execute</ref>(*data_in,<sp/>*data_out);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Adjust<sp/>attributes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out.SetStart(0.0);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out.SetSampling(1.0<sp/>/<sp/>in.GetSlice());</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out.SetScale(in.GetScale()<sp/>*<sp/>in.GetSampling()<sp/>/<sp/>in.GetSize());</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="classtsa_1_1_i_d_c_t_1aef29c6eb84ce3367e90eb66b3e40c005" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_i_d_c_t_1aef29c6eb84ce3367e90eb66b3e40c005" kindref="member">IDCT::execute</ref>(<ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref>&amp;<sp/>indata,<sp/><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref>&amp;<sp/>outdata)<sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>(<ref refid="classtsa_1_1bad__matrix__size" kindref="compound">bad_matrix_size</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((indata.size1()<sp/>!=<sp/>outdata.size1())<sp/>||<sp/>(indata.size2()<sp/>!=<sp/>outdata.size2()))<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1a3bce10382fbb41b48aca0e5b8afeb896" kindref="member">LogSevere</ref>(</highlight><highlight class="stringliteral">&quot;IDCT::execute<sp/>-<sp/>bad<sp/>matrix<sp/>size&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1bad__matrix__size" kindref="compound">bad_matrix_size</ref>(</highlight><highlight class="stringliteral">&quot;IDCT::execute&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(indata.size2()<sp/>!=<sp/><ref refid="classtsa_1_1_base_f_f_t_1a171c71011fea314f23633b1816771d98" kindref="member">mLogicalSize</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_base_f_f_t_1aa89fef1777c6df148cdb8533265b6163" kindref="member">mPlanNeedsUpdate</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classtsa_1_1_base_f_f_t_1aa89fef1777c6df148cdb8533265b6163" kindref="member">mPlanNeedsUpdate</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_base_f_f_t_1a171c71011fea314f23633b1816771d98" kindref="member">mLogicalSize</ref><sp/>=<sp/>indata.size2();</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_i_d_c_t_1a3add06359e79507105820496b324ad7a" kindref="member">MakePlan</ref>();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>isize1<sp/>=<sp/>indata.size1();</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>isize1;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fftw_execute_r2r(</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_base_f_f_t_1a5c7dd6dee349547018d493be6d5874eb" kindref="member">mPlan</ref>,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*)<sp/>&amp;indata(i,<sp/>0),</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*)<sp/>&amp;outdata(i,<sp/>0)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="classtsa_1_1_i_d_c_t_1a8bb130d39013848471a191f45e93fb09" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_i_d_c_t_1aef29c6eb84ce3367e90eb66b3e40c005" kindref="member">IDCT::execute</ref>(<ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref>&amp;<sp/>indata,<sp/><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref>&amp;<sp/>outdata)<sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>(<ref refid="classtsa_1_1bad__vector__size" kindref="compound">bad_vector_size</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(indata.size()<sp/>!=<sp/>outdata.size())<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1a3bce10382fbb41b48aca0e5b8afeb896" kindref="member">LogSevere</ref>(</highlight><highlight class="stringliteral">&quot;IDCT::execute<sp/>-<sp/>bad<sp/>vector<sp/>size&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1bad__vector__size" kindref="compound">bad_vector_size</ref>(</highlight><highlight class="stringliteral">&quot;IDCT::execute&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(indata.size()<sp/>!=<sp/><ref refid="classtsa_1_1_base_f_f_t_1a171c71011fea314f23633b1816771d98" kindref="member">mLogicalSize</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_base_f_f_t_1aa89fef1777c6df148cdb8533265b6163" kindref="member">mPlanNeedsUpdate</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classtsa_1_1_base_f_f_t_1aa89fef1777c6df148cdb8533265b6163" kindref="member">mPlanNeedsUpdate</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_base_f_f_t_1a171c71011fea314f23633b1816771d98" kindref="member">mLogicalSize</ref><sp/>=<sp/>indata.size();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_i_d_c_t_1a3add06359e79507105820496b324ad7a" kindref="member">MakePlan</ref>();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fftw_execute_r2r(</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_base_f_f_t_1a5c7dd6dee349547018d493be6d5874eb" kindref="member">mPlan</ref>,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*)<sp/>&amp;indata(0),</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*)<sp/>&amp;outdata(0)</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="classtsa_1_1_i_d_c_t_1a3add06359e79507105820496b324ad7a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_i_d_c_t_1a3add06359e79507105820496b324ad7a" kindref="member">IDCT::MakePlan</ref>()<sp/>throw<sp/>(<ref refid="namespacestd" kindref="compound">std</ref>::runtime_error)<sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1a08952ac2e7ac6e538c83692501aed4e7" kindref="member">LogInfo</ref>(</highlight><highlight class="stringliteral">&quot;IDCT::MakePlan<sp/>start&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classtsa_1_1_base_f_f_t_1a5c7dd6dee349547018d493be6d5874eb" kindref="member">mPlan</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fftw_destroy_plan(<ref refid="classtsa_1_1_base_f_f_t_1a5c7dd6dee349547018d493be6d5874eb" kindref="member">mPlan</ref>);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*in<sp/>=<sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*)<sp/>fftw_malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">)*<ref refid="classtsa_1_1_base_f_f_t_1a171c71011fea314f23633b1816771d98" kindref="member">mLogicalSize</ref>);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*out<sp/>=<sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*)<sp/>fftw_malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">)*((<ref refid="classtsa_1_1_base_f_f_t_1a171c71011fea314f23633b1816771d98" kindref="member">mLogicalSize</ref><sp/>/<sp/>2)<sp/>+<sp/>1));</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_base_f_f_t_1a5c7dd6dee349547018d493be6d5874eb" kindref="member">mPlan</ref><sp/>=<sp/>fftw_plan_r2r_1d(<ref refid="classtsa_1_1_base_f_f_t_1a171c71011fea314f23633b1816771d98" kindref="member">mLogicalSize</ref>,<sp/>in,<sp/>out,<sp/>FFTW_REDFT01,<sp/>FFTW_UNALIGNED<sp/>|<sp/><ref refid="classtsa_1_1_base_f_f_t_1abbd656cda5a7cb6a88fc5d556d3269f7" kindref="member">mPlanningRigor</ref><sp/>|<sp/><ref refid="classtsa_1_1_base_f_f_t_1a2fe7f53db024bb408beeb5e22eaefbb9" kindref="member">mPlanningRestriction</ref>);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classtsa_1_1_base_f_f_t_1a5c7dd6dee349547018d493be6d5874eb" kindref="member">mPlan</ref><sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1a3bce10382fbb41b48aca0e5b8afeb896" kindref="member">LogSevere</ref>(</highlight><highlight class="stringliteral">&quot;IDCT::MakePlan<sp/>-<sp/>error&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;IDCT::MakePlan&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fftw_free(in);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fftw_free(out);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_base_f_f_t_1aa89fef1777c6df148cdb8533265b6163" kindref="member">mPlanNeedsUpdate</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1a08952ac2e7ac6e538c83692501aed4e7" kindref="member">LogInfo</ref>(</highlight><highlight class="stringliteral">&quot;IDCT::MakePlan<sp/>end&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>--<sp/>end<sp/>namespace<sp/>tsa</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/src/IDCT.cpp"/>
+  </compounddef>
+</doxygen>

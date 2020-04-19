@@ -1,0 +1,443 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_event_full_featured_8hpp" kind="file" language="C++">
+    <compoundname>EventFullFeatured.hpp</compoundname>
+    <includes local="no">string</includes>
+    <includes refid="_algo_base_8hpp" local="no">AlgoBase.hpp</includes>
+    <includes refid="_base_view_8hpp" local="no">BaseView.hpp</includes>
+    <includedby refid="_event_full_featured_8cpp" local="yes">/home/filip/PhD/WDFPipe_test/p4TSA/src/EventFullFeatured.cpp</includedby>
+    <includedby refid="tsa_8hpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/include/tsa.hpp</includedby>
+    <includedby refid="_w_d_f2_classify_8hpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/include/WDF2Classify.hpp</includedby>
+    <includedby refid="_w_d_f2_reconstruct_8hpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/include/WDF2Reconstruct.hpp</includedby>
+    <incdepgraph>
+      <node id="2300">
+        <label>tsaTraits.hpp</label>
+        <link refid="tsa_traits_8hpp"/>
+        <childnode refid="2301" relation="include">
+        </childnode>
+      </node>
+      <node id="2280">
+        <label>eternity.hpp</label>
+        <link refid="eternity_8hpp"/>
+        <childnode refid="2281" relation="include">
+        </childnode>
+        <childnode refid="2284" relation="include">
+        </childnode>
+        <childnode refid="2289" relation="include">
+        </childnode>
+        <childnode refid="2293" relation="include">
+        </childnode>
+      </node>
+      <node id="2286">
+        <label>stdlib.h</label>
+      </node>
+      <node id="2274">
+        <label>stdexcept</label>
+      </node>
+      <node id="2295">
+        <label>tsaTypes.hpp</label>
+        <link refid="tsa_types_8hpp"/>
+        <childnode refid="2276" relation="include">
+        </childnode>
+        <childnode refid="2277" relation="include">
+        </childnode>
+        <childnode refid="2296" relation="include">
+        </childnode>
+        <childnode refid="2278" relation="include">
+        </childnode>
+        <childnode refid="2280" relation="include">
+        </childnode>
+      </node>
+      <node id="2272">
+        <label>string</label>
+      </node>
+      <node id="2281">
+        <label>eternity/dynamic.hpp</label>
+        <link refid="dynamic_8hpp"/>
+        <childnode refid="2282" relation="include">
+        </childnode>
+        <childnode refid="2283" relation="include">
+        </childnode>
+        <childnode refid="2272" relation="include">
+        </childnode>
+      </node>
+      <node id="2291">
+        <label>map</label>
+      </node>
+      <node id="2297">
+        <label>tsaLog.hpp</label>
+        <link refid="tsa_log_8hpp"/>
+        <childnode refid="2275" relation="include">
+        </childnode>
+        <childnode refid="2276" relation="include">
+        </childnode>
+        <childnode refid="2298" relation="include">
+        </childnode>
+      </node>
+      <node id="2276">
+        <label>fstream</label>
+      </node>
+      <node id="2290">
+        <label>xmlscanner.hpp</label>
+        <link refid="xmlscanner_8hpp"/>
+        <childnode refid="2285" relation="include">
+        </childnode>
+        <childnode refid="2286" relation="include">
+        </childnode>
+        <childnode refid="2287" relation="include">
+        </childnode>
+        <childnode refid="2291" relation="include">
+        </childnode>
+        <childnode refid="2288" relation="include">
+        </childnode>
+        <childnode refid="2276" relation="include">
+        </childnode>
+        <childnode refid="2272" relation="include">
+        </childnode>
+        <childnode refid="2275" relation="include">
+        </childnode>
+      </node>
+      <node id="2279">
+        <label>tsaSerialize.hpp</label>
+        <link refid="tsa_serialize_8hpp"/>
+        <childnode refid="2274" relation="include">
+        </childnode>
+        <childnode refid="2275" relation="include">
+        </childnode>
+        <childnode refid="2276" relation="include">
+        </childnode>
+        <childnode refid="2280" relation="include">
+        </childnode>
+        <childnode refid="2295" relation="include">
+        </childnode>
+      </node>
+      <node id="2304">
+        <label>fparser.hpp</label>
+        <link refid="fparser_8hpp"/>
+        <childnode refid="2272" relation="include">
+        </childnode>
+        <childnode refid="2291" relation="include">
+        </childnode>
+        <childnode refid="2287" relation="include">
+        </childnode>
+      </node>
+      <node id="2273">
+        <label>AlgoBase.hpp</label>
+        <link refid="_algo_base_8hpp"/>
+        <childnode refid="2274" relation="include">
+        </childnode>
+        <childnode refid="2275" relation="include">
+        </childnode>
+        <childnode refid="2276" relation="include">
+        </childnode>
+        <childnode refid="2277" relation="include">
+        </childnode>
+        <childnode refid="2278" relation="include">
+        </childnode>
+        <childnode refid="2272" relation="include">
+        </childnode>
+        <childnode refid="2279" relation="include">
+        </childnode>
+        <childnode refid="2295" relation="include">
+        </childnode>
+        <childnode refid="2297" relation="include">
+        </childnode>
+        <childnode refid="2299" relation="include">
+        </childnode>
+        <childnode refid="2305" relation="include">
+        </childnode>
+        <childnode refid="2307" relation="include">
+        </childnode>
+      </node>
+      <node id="2284">
+        <label>eternity/persist.hpp</label>
+        <link refid="persist_8hpp"/>
+        <childnode refid="2281" relation="include">
+        </childnode>
+        <childnode refid="2285" relation="include">
+        </childnode>
+        <childnode refid="2286" relation="include">
+        </childnode>
+        <childnode refid="2287" relation="include">
+        </childnode>
+        <childnode refid="2288" relation="include">
+        </childnode>
+        <childnode refid="2276" relation="include">
+        </childnode>
+      </node>
+      <node id="2303">
+        <label>string.h</label>
+      </node>
+      <node id="2283">
+        <label>typeinfo</label>
+      </node>
+      <node id="2278">
+        <label>boost/numeric/ublas/io.hpp</label>
+      </node>
+      <node id="2298">
+        <label>unistd.h</label>
+      </node>
+      <node id="2302">
+        <label>tsaUtilityFunctions.hpp</label>
+        <link refid="tsa_utility_functions_8hpp"/>
+        <childnode refid="2303" relation="include">
+        </childnode>
+        <childnode refid="2304" relation="include">
+        </childnode>
+        <childnode refid="2301" relation="include">
+        </childnode>
+        <childnode refid="2276" relation="include">
+        </childnode>
+      </node>
+      <node id="2287">
+        <label>vector</label>
+      </node>
+      <node id="2299">
+        <label>BaseView.hpp</label>
+        <link refid="_base_view_8hpp"/>
+        <childnode refid="2291" relation="include">
+        </childnode>
+        <childnode refid="2272" relation="include">
+        </childnode>
+        <childnode refid="2295" relation="include">
+        </childnode>
+        <childnode refid="2300" relation="include">
+        </childnode>
+        <childnode refid="2302" relation="include">
+        </childnode>
+        <childnode refid="2279" relation="include">
+        </childnode>
+        <childnode refid="2297" relation="include">
+        </childnode>
+      </node>
+      <node id="2296">
+        <label>boost/numeric/ublas/matrix_proxy.hpp</label>
+      </node>
+      <node id="2294">
+        <label>sstream</label>
+      </node>
+      <node id="2306">
+        <label>FrameL.h</label>
+      </node>
+      <node id="2307">
+        <label>AlgoExceptions.hpp</label>
+        <link refid="_algo_exceptions_8hpp"/>
+        <childnode refid="2274" relation="include">
+        </childnode>
+        <childnode refid="2272" relation="include">
+        </childnode>
+      </node>
+      <node id="2305">
+        <label>SeqView.hpp</label>
+        <link refid="_seq_view_8hpp"/>
+        <childnode refid="2277" relation="include">
+        </childnode>
+        <childnode refid="2296" relation="include">
+        </childnode>
+        <childnode refid="2278" relation="include">
+        </childnode>
+        <childnode refid="2299" relation="include">
+        </childnode>
+        <childnode refid="2306" relation="include">
+        </childnode>
+      </node>
+      <node id="2285">
+        <label>math.h</label>
+      </node>
+      <node id="2277">
+        <label>boost/numeric/ublas/matrix.hpp</label>
+      </node>
+      <node id="2271">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/EventFullFeatured.hpp</label>
+        <link refid="_event_full_featured_8hpp"/>
+        <childnode refid="2272" relation="include">
+        </childnode>
+        <childnode refid="2273" relation="include">
+        </childnode>
+        <childnode refid="2299" relation="include">
+        </childnode>
+      </node>
+      <node id="2275">
+        <label>iostream</label>
+      </node>
+      <node id="2292">
+        <label>deque</label>
+      </node>
+      <node id="2289">
+        <label>eternity/persist_xml.hpp</label>
+        <link refid="persist__xml_8hpp"/>
+        <childnode refid="2284" relation="include">
+        </childnode>
+        <childnode refid="2290" relation="include">
+        </childnode>
+        <childnode refid="2292" relation="include">
+        </childnode>
+      </node>
+      <node id="2301">
+        <label>complex</label>
+      </node>
+      <node id="2293">
+        <label>eternity/algorithms.hpp</label>
+        <link refid="algorithms_8hpp"/>
+        <childnode refid="2284" relation="include">
+        </childnode>
+        <childnode refid="2289" relation="include">
+        </childnode>
+        <childnode refid="2290" relation="include">
+        </childnode>
+        <childnode refid="2294" relation="include">
+        </childnode>
+      </node>
+      <node id="2288">
+        <label>algorithm</label>
+      </node>
+      <node id="2282">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2311">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/WDF2Classify.hpp</label>
+        <link refid="_w_d_f2_classify_8hpp"/>
+        <childnode refid="2312" relation="include">
+        </childnode>
+        <childnode refid="2310" relation="include">
+        </childnode>
+      </node>
+      <node id="2312">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/WDF2Classify.cpp</label>
+        <link refid="_w_d_f2_classify_8cpp"/>
+      </node>
+      <node id="2310">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/tsa.hpp</label>
+        <link refid="tsa_8hpp"/>
+      </node>
+      <node id="2309">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/EventFullFeatured.cpp</label>
+        <link refid="_event_full_featured_8cpp"/>
+      </node>
+      <node id="2308">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/EventFullFeatured.hpp</label>
+        <link refid="_event_full_featured_8hpp"/>
+        <childnode refid="2309" relation="include">
+        </childnode>
+        <childnode refid="2310" relation="include">
+        </childnode>
+        <childnode refid="2311" relation="include">
+        </childnode>
+        <childnode refid="2313" relation="include">
+        </childnode>
+      </node>
+      <node id="2313">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/WDF2Reconstruct.hpp</label>
+        <link refid="_w_d_f2_reconstruct_8hpp"/>
+        <childnode refid="2314" relation="include">
+        </childnode>
+        <childnode refid="2310" relation="include">
+        </childnode>
+      </node>
+      <node id="2314">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/WDF2Reconstruct.cpp</label>
+        <link refid="_w_d_f2_reconstruct_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classtsa_1_1_event_full_featured" prot="public">tsa::EventFullFeatured</innerclass>
+    <innernamespace refid="namespacetsa">tsa</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>__EVENTFULLFEATURED_hpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__EVENTFULLFEATURED_hpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"></codeline>
+<codeline lineno="42"></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_algo_base_8hpp" kindref="compound">AlgoBase.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_base_view_8hpp" kindref="compound">BaseView.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"></codeline>
+<codeline lineno="52"></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"></codeline>
+<codeline lineno="60"></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetsa" kindref="compound">tsa</ref><sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>This<sp/>class<sp/>contain<sp/>the<sp/>event<sp/>found<sp/>by<sp/>WDF<sp/>plus<sp/>the<sp/>vector<sp/>of<sp/><sp/>wavelet<sp/>coefficients<sp/>up<sp/>to<sp/>@NumCoeff<sp/>coefficients.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="classtsa_1_1_event_full_featured" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classtsa_1_1_event_full_featured" kindref="compound">EventFullFeatured</ref><sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="84" refid="classtsa_1_1_event_full_featured_1a6488de4b125cea43e4528244e3300ace" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>boost::numeric::ublas::vector&lt;<sp/>double<sp/>&gt;<sp/><ref refid="classtsa_1_1_event_full_featured_1a6488de4b125cea43e4528244e3300ace" kindref="member">Dvector</ref>;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_event_full_featured_1a8bc28f8e2fcf53b5f82007e66fd7dcc7" kindref="member">EventFullFeatured</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>NumCoeff);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_event_full_featured_1a388415f631c395f5400fba612dd64fb7" kindref="member">~EventFullFeatured</ref>();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_event_full_featured_1af1e6685d67bfcb136997b1bf089a6daf" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_event_full_featured" kindref="compound">EventFullFeatured</ref>&amp;<sp/>from);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_event_full_featured_1a6b9088ed7c7a397564879061dbec220c" kindref="member">EVcopy</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_event_full_featured" kindref="compound">EventFullFeatured</ref>&amp;<sp/>from);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="classtsa_1_1_event_full_featured_1aeafc3b5782ce26ca5cb7e98ee5786f71" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_event_full_featured_1aeafc3b5782ce26ca5cb7e98ee5786f71" kindref="member">outprint</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Time&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="classtsa_1_1_event_full_featured_1aa7692d87294f90489dacf523851e3c27" kindref="member">mTime</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;SNR&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="classtsa_1_1_event_full_featured_1a49a72cabed27a5469df2f4bcaea6aa3f" kindref="member">mSNR</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;freq&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="classtsa_1_1_event_full_featured_1a80b882485bb57e529fdefabbb96d86e8" kindref="member">mlevel</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;wavelet<sp/>type&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="classtsa_1_1_event_full_featured_1ac7d44616083f5a5b2a403986b0c7bf6c" kindref="member">mWave</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;dimension&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="classtsa_1_1_event_full_featured_1a65ea47ec82b8f5a3c5ea505f9e7416c0" kindref="member">mCoeff</ref>.size()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classtsa_1_1_event_full_featured_1a65ea47ec82b8f5a3c5ea505f9e7416c0" kindref="member">mCoeff</ref>.size();<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;coeff&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;-&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>i<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="classtsa_1_1_event_full_featured_1a65ea47ec82b8f5a3c5ea505f9e7416c0" kindref="member">mCoeff</ref>[i]<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="classtsa_1_1_event_full_featured_1a36acadaf6ce17ac9dfe3d8cd2e13aa25" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_event_full_featured_1a36acadaf6ce17ac9dfe3d8cd2e13aa25" kindref="member">SetCoeff</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>v)<sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_event_full_featured_1a65ea47ec82b8f5a3c5ea505f9e7416c0" kindref="member">mCoeff</ref>(i)<sp/>=<sp/>v;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="classtsa_1_1_event_full_featured_1ac17118b2291d80c701a380cb82af7b66" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_event_full_featured_1ac17118b2291d80c701a380cb82af7b66" kindref="member">GetCoeff</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i)<sp/>{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_event_full_featured_1a65ea47ec82b8f5a3c5ea505f9e7416c0" kindref="member">mCoeff</ref>(i);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="classtsa_1_1_event_full_featured_1aa7692d87294f90489dacf523851e3c27" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_event_full_featured_1aa7692d87294f90489dacf523851e3c27" kindref="member">mTime</ref>;</highlight></codeline>
+<codeline lineno="121" refid="classtsa_1_1_event_full_featured_1a49a72cabed27a5469df2f4bcaea6aa3f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_event_full_featured_1a49a72cabed27a5469df2f4bcaea6aa3f" kindref="member">mSNR</ref>;</highlight></codeline>
+<codeline lineno="122" refid="classtsa_1_1_event_full_featured_1a65ea47ec82b8f5a3c5ea505f9e7416c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dvector<sp/><ref refid="classtsa_1_1_event_full_featured_1a65ea47ec82b8f5a3c5ea505f9e7416c0" kindref="member">mCoeff</ref>;</highlight></codeline>
+<codeline lineno="123" refid="classtsa_1_1_event_full_featured_1a80b882485bb57e529fdefabbb96d86e8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_event_full_featured_1a80b882485bb57e529fdefabbb96d86e8" kindref="member">mlevel</ref>;</highlight></codeline>
+<codeline lineno="124" refid="classtsa_1_1_event_full_featured_1ac7d44616083f5a5b2a403986b0c7bf6c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classtsa_1_1_event_full_featured_1ac7d44616083f5a5b2a403986b0c7bf6c" kindref="member">mWave</ref>;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal">}<sp/></highlight><highlight class="comment">//end<sp/>namespace</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>__EVENTFULLFEATURED_hpp</highlight></codeline>
+    </programlisting>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/EventFullFeatured.hpp"/>
+  </compounddef>
+</doxygen>

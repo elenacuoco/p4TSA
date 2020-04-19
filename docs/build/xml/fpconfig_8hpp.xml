@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="fpconfig_8hpp" kind="file" language="C++">
+    <compoundname>fpconfig.hpp</compoundname>
+    <includedby refid="fparser_8cpp" local="yes">/home/filip/PhD/WDFPipe_test/p4TSA/src/fparser.cpp</includedby>
+    <includedby refid="fpoptimizer_8cpp" local="yes">/home/filip/PhD/WDFPipe_test/p4TSA/src/fpoptimizer.cpp</includedby>
+    <includedby refid="tsa_8hpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/include/tsa.hpp</includedby>
+    <invincdepgraph>
+      <node id="2462">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/fparser.cpp</label>
+        <link refid="fparser_8cpp"/>
+      </node>
+      <node id="2464">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/tsa.hpp</label>
+        <link refid="tsa_8hpp"/>
+      </node>
+      <node id="2461">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/fpconfig.hpp</label>
+        <link refid="fpconfig_8hpp"/>
+        <childnode refid="2462" relation="include">
+        </childnode>
+        <childnode refid="2463" relation="include">
+        </childnode>
+        <childnode refid="2464" relation="include">
+        </childnode>
+      </node>
+      <node id="2463">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/fpoptimizer.cpp</label>
+        <link refid="fpoptimizer_8cpp"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="fpconfig_8hpp_1a051251903632e192e691a39badd584b0" prot="public" static="no">
+        <name>NO_ASINH</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fpconfig.hpp" line="18" column="9" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/fpconfig.hpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fpconfig_8hpp_1a0950df179ac5b6f5945f00e565619943" prot="public" static="no">
+        <name>EVAL_MAX_REC_LEVEL</name>
+        <initializer>1000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fpconfig.hpp" line="35" column="9" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/fpconfig.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fpconfig_8hpp_1a0dcba38f42be2feec396425cfd587a01" prot="public" static="no">
+        <name>SUPPORT_OPTIMIZER</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fpconfig.hpp" line="46" column="9" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/fpconfig.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fpconfig_8hpp_1aae3eae17200b095d27f66dc860c3f688" prot="public" static="no">
+        <name>FP_EPSILON</name>
+        <initializer>1e-14</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fpconfig.hpp" line="56" column="9" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/fpconfig.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//==============================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Function<sp/>parser<sp/>v2.8<sp/>by<sp/>Warp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//==============================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Configuration<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>NOTE:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>file<sp/>is<sp/>for<sp/>the<sp/>internal<sp/>use<sp/>of<sp/>the<sp/>function<sp/>parser<sp/>only.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>don&apos;t<sp/>need<sp/>to<sp/>include<sp/>this<sp/>file<sp/>in<sp/>your<sp/>source<sp/>files,<sp/>just</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>include<sp/>&quot;fparser.hh&quot;.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>Comment<sp/>out<sp/>the<sp/>following<sp/>line<sp/>if<sp/>your<sp/>compiler<sp/>supports<sp/>the<sp/>(non-standard)</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>asinh,<sp/>acosh<sp/>and<sp/>atanh<sp/>functions<sp/>and<sp/>you<sp/>want<sp/>them<sp/>to<sp/>be<sp/>supported.<sp/>If</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>you<sp/>are<sp/>not<sp/>sure,<sp/>just<sp/>leave<sp/>it<sp/>(those<sp/>function<sp/>will<sp/>then<sp/>not<sp/>be<sp/>supported).</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="fpconfig_8hpp_1a051251903632e192e691a39badd584b0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NO_ASINH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>Uncomment<sp/>the<sp/>following<sp/>line<sp/>to<sp/>disable<sp/>the<sp/>eval()<sp/>function<sp/>if<sp/>it<sp/>could</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>be<sp/>too<sp/>dangerous<sp/>in<sp/>the<sp/>target<sp/>application.</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>Note<sp/>that<sp/>even<sp/>though<sp/>the<sp/>maximum<sp/>recursion<sp/>level<sp/>of<sp/>eval()<sp/>is<sp/>limited,</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>it<sp/>is<sp/>still<sp/>possible<sp/>to<sp/>write<sp/>functions<sp/>using<sp/>it<sp/>which<sp/>take<sp/>enormous</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>amounts<sp/>of<sp/>time<sp/>to<sp/>evaluate<sp/>even<sp/>though<sp/>the<sp/>maximum<sp/>recursion<sp/>is<sp/>never</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>reached.<sp/>This<sp/>may<sp/>be<sp/>undesirable<sp/>in<sp/>some<sp/>applications.</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>DISABLE_EVAL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/>Maximum<sp/>recursion<sp/>level<sp/>for<sp/>eval()<sp/>calls:</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="fpconfig_8hpp_1a0950df179ac5b6f5945f00e565619943" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EVAL_MAX_REC_LEVEL<sp/>1000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/>Comment<sp/>out<sp/>the<sp/>following<sp/>lines<sp/>out<sp/>if<sp/>you<sp/>are<sp/>not<sp/>going<sp/>to<sp/>use<sp/>the</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/>optimizer<sp/>and<sp/>want<sp/>a<sp/>slightly<sp/>smaller<sp/>library.<sp/>The<sp/>Optimize()<sp/>method</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/>can<sp/>still<sp/>be<sp/>called,<sp/>but<sp/>it<sp/>will<sp/>not<sp/>do<sp/>anything.</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/>If<sp/>you<sp/>are<sp/>unsure,<sp/>just<sp/>leave<sp/>it.<sp/>It<sp/>won&apos;t<sp/>slow<sp/>down<sp/>the<sp/>other<sp/>parts<sp/>of</highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/>the<sp/>library.</highlight></codeline>
+<codeline lineno="44"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>NO_SUPPORT_OPTIMIZER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="fpconfig_8hpp_1a0dcba38f42be2feec396425cfd587a01" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SUPPORT_OPTIMIZER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="51"><highlight class="comment"><sp/>Epsilon<sp/>value<sp/>used<sp/>with<sp/>the<sp/>comparison<sp/>operators<sp/>(must<sp/>be<sp/>non-negative):</highlight></codeline>
+<codeline lineno="52"><highlight class="comment"><sp/>(Comment<sp/>it<sp/>out<sp/>if<sp/>you<sp/>don&apos;t<sp/>want<sp/>to<sp/>use<sp/>epsilon<sp/>in<sp/>comparisons.<sp/>Might</highlight></codeline>
+<codeline lineno="53"><highlight class="comment"><sp/>lead<sp/>to<sp/>marginally<sp/>faster<sp/>evaluation<sp/>of<sp/>the<sp/>comparison<sp/>operators,<sp/>but</highlight></codeline>
+<codeline lineno="54"><highlight class="comment"><sp/>can<sp/>introduce<sp/>inaccuracies<sp/>in<sp/>comparisons.)</highlight></codeline>
+<codeline lineno="55"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="fpconfig_8hpp_1aae3eae17200b095d27f66dc860c3f688" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FP_EPSILON<sp/>1e-14</highlight></codeline>
+    </programlisting>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fpconfig.hpp"/>
+  </compounddef>
+</doxygen>

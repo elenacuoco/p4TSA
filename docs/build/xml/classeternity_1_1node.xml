@@ -1,0 +1,233 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classeternity_1_1node" kind="class" language="C++" prot="public">
+    <compoundname>eternity::node</compoundname>
+    <includes refid="xmlscanner_8hpp" local="no">xmlscanner.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classeternity_1_1node_1aa58fec317429adb430f6d38b3660b69a" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string eternity::node::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/xmlscanner.hpp" line="39" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/xmlscanner.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classeternity_1_1node_1af12d6ec498fd30def4c6b4f21fa181c7" prot="public" static="no" mutable="no">
+        <type>std::map&lt; std::string, std::string &gt;</type>
+        <definition>std::map&lt;std::string, std::string&gt; eternity::node::attributes</definition>
+        <argsstring></argsstring>
+        <name>attributes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/xmlscanner.hpp" line="40" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/xmlscanner.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classeternity_1_1node_1a8daefdb6d1fffd05b08a2f8e07c9ffb4" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string eternity::node::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/xmlscanner.hpp" line="42" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/xmlscanner.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classeternity_1_1node_1ac1d7dfa57dd7ad2c13f0d6e0594d7e7f" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classeternity_1_1node" kindref="compound">node</ref> * &gt;</type>
+        <definition>std::vector&lt;node*&gt; eternity::node::childs</definition>
+        <argsstring></argsstring>
+        <name>childs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/xmlscanner.hpp" line="43" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/xmlscanner.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classeternity_1_1node_1a11a3dc9c5a20a7cae619e7bf69e09131" prot="public" static="no" mutable="no">
+        <type><ref refid="classeternity_1_1node" kindref="compound">node</ref> *</type>
+        <definition>node* eternity::node::parent</definition>
+        <argsstring></argsstring>
+        <name>parent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/xmlscanner.hpp" line="44" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/xmlscanner.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classeternity_1_1node_1a05e3159af39079b860ecb1f79d436bb1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void eternity::node::dump</definition>
+        <argsstring>(size_t indent)</argsstring>
+        <name>dump</name>
+        <param>
+          <type>size_t</type>
+          <declname>indent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/xmlscanner.hpp" line="46" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/xmlscanner.cpp" bodystart="49" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classeternity_1_1node_1a35b42655fbf388f225c108f10bf46028" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void eternity::node::intent</definition>
+        <argsstring>(size_t pos)</argsstring>
+        <name>intent</name>
+        <param>
+          <type>size_t</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/xmlscanner.hpp" line="47" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/xmlscanner.cpp" bodystart="65" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classeternity_1_1node_1acab0e3d272545fa2f535d11416119eaf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void eternity::node::done</definition>
+        <argsstring>()</argsstring>
+        <name>done</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/xmlscanner.hpp" line="48" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/xmlscanner.cpp" bodystart="69" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classeternity_1_1node_1a17c2bb4c6bb9594076e91935bd970224" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classeternity_1_1node" kindref="compound">node</ref> *</type>
+        <definition>node * eternity::node::foundChild</definition>
+        <argsstring>(std::string tagName, size_t pos)</argsstring>
+        <name>foundChild</name>
+        <param>
+          <type>std::string</type>
+          <declname>tagName</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/xmlscanner.hpp" line="49" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/xmlscanner.cpp" bodystart="77" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classeternity_1_1node_1a8aab11da45324aff3018c80a3b489e47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>eternity::node::node</definition>
+        <argsstring>()</argsstring>
+        <name>node</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/xmlscanner.hpp" line="51" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/xmlscanner.cpp" bodystart="34" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classeternity_1_1node_1ad95115f371bc4d91338735dd1c168b77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>eternity::node::node</definition>
+        <argsstring>(std::string _name)</argsstring>
+        <name>node</name>
+        <param>
+          <type>std::string</type>
+          <declname>_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/xmlscanner.hpp" line="52" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/xmlscanner.cpp" bodystart="37" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classeternity_1_1node_1aee2ebc23f893fed356c9c4c123842283" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>eternity::node::node</definition>
+        <argsstring>(node *parentnode)</argsstring>
+        <name>node</name>
+        <param>
+          <type><ref refid="classeternity_1_1node" kindref="compound">node</ref> *</type>
+          <declname>parentnode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/xmlscanner.hpp" line="53" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/xmlscanner.cpp" bodystart="40" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classeternity_1_1node_1a068bb1cebdb8ce5682040fe3ada60718" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>eternity::node::~node</definition>
+        <argsstring>()</argsstring>
+        <name>~node</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/xmlscanner.hpp" line="56" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/xmlscanner.cpp" bodystart="45" bodyend="47"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="343">
+        <label>eternity::node</label>
+        <link refid="classeternity_1_1node"/>
+        <childnode refid="343" relation="usage">
+          <edgelabel>parent</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/xmlscanner.hpp" line="37" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/xmlscanner.hpp" bodystart="37" bodyend="57"/>
+    <listofallmembers>
+      <member refid="classeternity_1_1node_1af12d6ec498fd30def4c6b4f21fa181c7" prot="public" virt="non-virtual"><scope>eternity::node</scope><name>attributes</name></member>
+      <member refid="classeternity_1_1node_1ac1d7dfa57dd7ad2c13f0d6e0594d7e7f" prot="public" virt="non-virtual"><scope>eternity::node</scope><name>childs</name></member>
+      <member refid="classeternity_1_1node_1acab0e3d272545fa2f535d11416119eaf" prot="public" virt="non-virtual"><scope>eternity::node</scope><name>done</name></member>
+      <member refid="classeternity_1_1node_1a05e3159af39079b860ecb1f79d436bb1" prot="public" virt="non-virtual"><scope>eternity::node</scope><name>dump</name></member>
+      <member refid="classeternity_1_1node_1a17c2bb4c6bb9594076e91935bd970224" prot="public" virt="non-virtual"><scope>eternity::node</scope><name>foundChild</name></member>
+      <member refid="classeternity_1_1node_1a35b42655fbf388f225c108f10bf46028" prot="public" virt="non-virtual"><scope>eternity::node</scope><name>intent</name></member>
+      <member refid="classeternity_1_1node_1aa58fec317429adb430f6d38b3660b69a" prot="public" virt="non-virtual"><scope>eternity::node</scope><name>name</name></member>
+      <member refid="classeternity_1_1node_1a8aab11da45324aff3018c80a3b489e47" prot="public" virt="non-virtual"><scope>eternity::node</scope><name>node</name></member>
+      <member refid="classeternity_1_1node_1ad95115f371bc4d91338735dd1c168b77" prot="public" virt="non-virtual"><scope>eternity::node</scope><name>node</name></member>
+      <member refid="classeternity_1_1node_1aee2ebc23f893fed356c9c4c123842283" prot="public" virt="non-virtual"><scope>eternity::node</scope><name>node</name></member>
+      <member refid="classeternity_1_1node_1a11a3dc9c5a20a7cae619e7bf69e09131" prot="public" virt="non-virtual"><scope>eternity::node</scope><name>parent</name></member>
+      <member refid="classeternity_1_1node_1a8daefdb6d1fffd05b08a2f8e07c9ffb4" prot="public" virt="non-virtual"><scope>eternity::node</scope><name>value</name></member>
+      <member refid="classeternity_1_1node_1a068bb1cebdb8ce5682040fe3ada60718" prot="public" virt="virtual"><scope>eternity::node</scope><name>~node</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

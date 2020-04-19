@@ -1,0 +1,238 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classtsa_1_1_s_i_m___channel" kind="class" language="C++" prot="public">
+    <compoundname>tsa::SIM_Channel</compoundname>
+    <basecompoundref refid="classtsa_1_1_channel_descriptor" prot="public" virt="non-virtual">tsa::ChannelDescriptor</basecompoundref>
+    <includes refid="_frame_i_stream_8hpp" local="no">FrameIStream.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtsa_1_1_s_i_m___channel_1a927b435b91632d523d59b89f75a01c66" prot="private" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* tsa::SIM_Channel::mName</definition>
+        <argsstring></argsstring>
+        <name>mName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The channel&apos;s name </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" line="391" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" bodystart="391" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtsa_1_1_s_i_m___channel_1ae75272a802bff2d5164d405021c5f720" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tsa::SIM_Channel::SIM_Channel</definition>
+        <argsstring>(FrameIStream *FIS, FrSimData *sim, unsigned int id)</argsstring>
+        <name>SIM_Channel</name>
+        <param>
+          <type><ref refid="classtsa_1_1_frame_i_stream" kindref="compound">FrameIStream</ref> *</type>
+          <declname>FIS</declname>
+        </param>
+        <param>
+          <type>FrSimData *</type>
+          <declname>sim</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FIS</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the <ref refid="classtsa_1_1_frame_i_stream" kindref="compound">FrameIStream</ref> class </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sim</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the first FrSimData structure </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>id of the channel </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" line="355" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/FrameIStream.cpp" bodystart="320" bodyend="330"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_s_i_m___channel_1a73d2a4e58efdc273a39486c35e7e1097" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>tsa::SIM_Channel::~SIM_Channel</definition>
+        <argsstring>()</argsstring>
+        <name>~SIM_Channel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" line="361" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/FrameIStream.cpp" bodystart="332" bodyend="334"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_s_i_m___channel_1ada133d83befff9b1bde7e13bb78df7e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void tsa::SIM_Channel::AddData</definition>
+        <argsstring>()</argsstring>
+        <name>AddData</name>
+        <reimplements refid="classtsa_1_1_channel_descriptor_1aa1e001a5e712415cd4e9d66846914a56">AddData</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function must be called when there are not enough data to fill the output view. It reads a chunk of data from the next FrSimData structure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" line="369" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/FrameIStream.cpp" bodystart="336" bodyend="343"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_s_i_m___channel_1a99941fc8df0c8bbc32091e7e87d20de8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double tsa::SIM_Channel::GetLength</definition>
+        <argsstring>()</argsstring>
+        <name>GetLength</name>
+        <reimplements refid="classtsa_1_1_channel_descriptor_1a456d14e6136c389fbd307fabab7d7b73">GetLength</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the maximul time length of data that can be currently filled without calling AddData.</para><para><simplesect kind="return"><para>the time length of the data available in seconds </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" line="377" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/FrameIStream.cpp" bodystart="345" bodyend="347"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classtsa_1_1_s_i_m___channel_1a5448e85710d2de326584711d01f27e72" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classtsa_1_1_s_i_m___channel" kindref="compound">SIM_Channel</ref> *</type>
+        <definition>SIM_Channel * tsa::SIM_Channel::Create</definition>
+        <argsstring>(FrameIStream *FIS, char *name, unsigned int id)</argsstring>
+        <name>Create</name>
+        <param>
+          <type><ref refid="classtsa_1_1_frame_i_stream" kindref="compound">FrameIStream</ref> *</type>
+          <declname>FIS</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create, if possible, an instance of the class</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FIS</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the <ref refid="classtsa_1_1_frame_i_stream" kindref="compound">FrameIStream</ref> class instance </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of the channel </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of the channel</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pointer to the created class instance or null </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" line="388" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/FrameIStream.cpp" bodystart="309" bodyend="318"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A descriptor for a SIM channel </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="400">
+        <label>tsa::SIM_Channel</label>
+        <link refid="classtsa_1_1_s_i_m___channel"/>
+        <childnode refid="401" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="401">
+        <label>tsa::ChannelDescriptor</label>
+        <link refid="classtsa_1_1_channel_descriptor"/>
+        <childnode refid="402" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="402">
+        <label>tsa::AlgoBase</label>
+        <link refid="classtsa_1_1_algo_base"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="406">
+        <label>tsa::FrameIStream</label>
+        <link refid="classtsa_1_1_frame_i_stream"/>
+        <childnode refid="405" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="403">
+        <label>tsa::SIM_Channel</label>
+        <link refid="classtsa_1_1_s_i_m___channel"/>
+        <childnode refid="404" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="404">
+        <label>tsa::ChannelDescriptor</label>
+        <link refid="classtsa_1_1_channel_descriptor"/>
+        <childnode refid="405" relation="public-inheritance">
+        </childnode>
+        <childnode refid="406" relation="usage">
+          <edgelabel>mFIS</edgelabel>
+        </childnode>
+      </node>
+      <node id="405">
+        <label>tsa::AlgoBase</label>
+        <link refid="classtsa_1_1_algo_base"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" line="344" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" bodystart="344" bodyend="393"/>
+    <listofallmembers>
+      <member refid="classtsa_1_1_s_i_m___channel_1ada133d83befff9b1bde7e13bb78df7e0" prot="public" virt="virtual"><scope>tsa::SIM_Channel</scope><name>AddData</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a320624e156e5d856077465474bc7154f" prot="public" virt="non-virtual"><scope>tsa::SIM_Channel</scope><name>ChannelDescriptor</name></member>
+      <member refid="classtsa_1_1_s_i_m___channel_1a5448e85710d2de326584711d01f27e72" prot="public" virt="non-virtual"><scope>tsa::SIM_Channel</scope><name>Create</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a73d060e190a75faa7ac64ee4a328a9d4" prot="protected" virt="non-virtual"><scope>tsa::SIM_Channel</scope><name>data_available</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a6553da04ba33471fc5465b6bd2b5275c" prot="public" virt="virtual"><scope>tsa::SIM_Channel</scope><name>FillView</name></member>
+      <member refid="classtsa_1_1_s_i_m___channel_1a99941fc8df0c8bbc32091e7e87d20de8" prot="public" virt="virtual"><scope>tsa::SIM_Channel</scope><name>GetLength</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a602c501d3fa47c0951ae45f78336a1a8" prot="public" virt="virtual"><scope>tsa::SIM_Channel</scope><name>GetRate</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1ad1568c18971efe9a5cb1d114e06f5050" prot="protected" virt="non-virtual"><scope>tsa::SIM_Channel</scope><name>mData</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1ac4103a2793b7e507f8f982070ee27348" prot="protected" virt="non-virtual"><scope>tsa::SIM_Channel</scope><name>mExceptions</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a7767947e90a66d41bbd13bd4c54149a6" prot="protected" virt="non-virtual"><scope>tsa::SIM_Channel</scope><name>mFIS</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a49d1e3852cb22b0a56ebc03b3176c5b8" prot="protected" virt="non-virtual"><scope>tsa::SIM_Channel</scope><name>mId</name></member>
+      <member refid="classtsa_1_1_s_i_m___channel_1a927b435b91632d523d59b89f75a01c66" prot="private" virt="non-virtual"><scope>tsa::SIM_Channel</scope><name>mName</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a6bad409238df7dff8b5265570adac8ff" prot="protected" virt="non-virtual"><scope>tsa::SIM_Channel</scope><name>mNextTime</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a142c7f60e14fa8036340b902529cf956" prot="protected" virt="non-virtual"><scope>tsa::SIM_Channel</scope><name>mRate</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a61cb9c3f50762989afc59c9e365f0927" prot="protected" virt="non-virtual"><scope>tsa::SIM_Channel</scope><name>PushFrVect</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1ae3da8cb574d6a43bcca33daca5394530" prot="protected" virt="non-virtual"><scope>tsa::SIM_Channel</scope><name>PushValue</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1ae38a3b6ca5d23123a61a421fe3612b86" prot="protected" virt="non-virtual"><scope>tsa::SIM_Channel</scope><name>Queue</name></member>
+      <member refid="classtsa_1_1_s_i_m___channel_1ae75272a802bff2d5164d405021c5f720" prot="public" virt="non-virtual"><scope>tsa::SIM_Channel</scope><name>SIM_Channel</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a5ebd9a8bf358666b2cd9ae00056d2728" prot="public" virt="virtual"><scope>tsa::SIM_Channel</scope><name>WriteView</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a51b2df6d09b5b0b07d2a9ecda6fffa2b" prot="public" virt="virtual"><scope>tsa::SIM_Channel</scope><name>WriteView</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a2b4f201421dcd2cc9d2c1705fe4bea61" prot="public" virt="virtual"><scope>tsa::SIM_Channel</scope><name>~ChannelDescriptor</name></member>
+      <member refid="classtsa_1_1_s_i_m___channel_1a73d2a4e58efdc273a39486c35e7e1097" prot="public" virt="virtual"><scope>tsa::SIM_Channel</scope><name>~SIM_Channel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

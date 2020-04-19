@@ -1,0 +1,540 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_base_window_8hpp" kind="file" language="C++">
+    <compoundname>BaseWindow.hpp</compoundname>
+    <includes local="no">map</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">boost/numeric/ublas/matrix.hpp</includes>
+    <includes refid="_algo_base_8hpp" local="no">AlgoBase.hpp</includes>
+    <includedby refid="_base_window_8cpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/src/BaseWindow.cpp</includedby>
+    <includedby refid="_bartlett_window_8hpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/include/BartlettWindow.hpp</includedby>
+    <includedby refid="_bisquare_window_8hpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/include/BisquareWindow.hpp</includedby>
+    <includedby refid="_cs2_hamming_window_8hpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/include/Cs2HammingWindow.hpp</includedby>
+    <includedby refid="_cs2_hann_window_8hpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/include/Cs2HannWindow.hpp</includedby>
+    <includedby refid="_kaiser_window_8hpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/include/KaiserWindow.hpp</includedby>
+    <includedby refid="tsa_8hpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/include/tsa.hpp</includedby>
+    <includedby refid="_tukey_hann_window_8hpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/include/TukeyHannWindow.hpp</includedby>
+    <includedby refid="_tukey_window_8hpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/include/TukeyWindow.hpp</includedby>
+    <includedby refid="_welch_window_8hpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/include/WelchWindow.hpp</includedby>
+    <incdepgraph>
+      <node id="857">
+        <label>tsaTraits.hpp</label>
+        <link refid="tsa_traits_8hpp"/>
+        <childnode refid="858" relation="include">
+        </childnode>
+      </node>
+      <node id="839">
+        <label>eternity.hpp</label>
+        <link refid="eternity_8hpp"/>
+        <childnode refid="840" relation="include">
+        </childnode>
+        <childnode refid="842" relation="include">
+        </childnode>
+        <childnode refid="847" relation="include">
+        </childnode>
+        <childnode refid="850" relation="include">
+        </childnode>
+      </node>
+      <node id="844">
+        <label>stdlib.h</label>
+      </node>
+      <node id="833">
+        <label>stdexcept</label>
+      </node>
+      <node id="852">
+        <label>tsaTypes.hpp</label>
+        <link refid="tsa_types_8hpp"/>
+        <childnode refid="835" relation="include">
+        </childnode>
+        <childnode refid="831" relation="include">
+        </childnode>
+        <childnode refid="853" relation="include">
+        </childnode>
+        <childnode refid="836" relation="include">
+        </childnode>
+        <childnode refid="839" relation="include">
+        </childnode>
+      </node>
+      <node id="837">
+        <label>string</label>
+      </node>
+      <node id="840">
+        <label>eternity/dynamic.hpp</label>
+        <link refid="dynamic_8hpp"/>
+        <childnode refid="830" relation="include">
+        </childnode>
+        <childnode refid="841" relation="include">
+        </childnode>
+        <childnode refid="837" relation="include">
+        </childnode>
+      </node>
+      <node id="829">
+        <label>map</label>
+      </node>
+      <node id="854">
+        <label>tsaLog.hpp</label>
+        <link refid="tsa_log_8hpp"/>
+        <childnode refid="834" relation="include">
+        </childnode>
+        <childnode refid="835" relation="include">
+        </childnode>
+        <childnode refid="855" relation="include">
+        </childnode>
+      </node>
+      <node id="835">
+        <label>fstream</label>
+      </node>
+      <node id="848">
+        <label>xmlscanner.hpp</label>
+        <link refid="xmlscanner_8hpp"/>
+        <childnode refid="843" relation="include">
+        </childnode>
+        <childnode refid="844" relation="include">
+        </childnode>
+        <childnode refid="845" relation="include">
+        </childnode>
+        <childnode refid="829" relation="include">
+        </childnode>
+        <childnode refid="846" relation="include">
+        </childnode>
+        <childnode refid="835" relation="include">
+        </childnode>
+        <childnode refid="837" relation="include">
+        </childnode>
+        <childnode refid="834" relation="include">
+        </childnode>
+      </node>
+      <node id="838">
+        <label>tsaSerialize.hpp</label>
+        <link refid="tsa_serialize_8hpp"/>
+        <childnode refid="833" relation="include">
+        </childnode>
+        <childnode refid="834" relation="include">
+        </childnode>
+        <childnode refid="835" relation="include">
+        </childnode>
+        <childnode refid="839" relation="include">
+        </childnode>
+        <childnode refid="852" relation="include">
+        </childnode>
+      </node>
+      <node id="861">
+        <label>fparser.hpp</label>
+        <link refid="fparser_8hpp"/>
+        <childnode refid="837" relation="include">
+        </childnode>
+        <childnode refid="829" relation="include">
+        </childnode>
+        <childnode refid="845" relation="include">
+        </childnode>
+      </node>
+      <node id="832">
+        <label>AlgoBase.hpp</label>
+        <link refid="_algo_base_8hpp"/>
+        <childnode refid="833" relation="include">
+        </childnode>
+        <childnode refid="834" relation="include">
+        </childnode>
+        <childnode refid="835" relation="include">
+        </childnode>
+        <childnode refid="831" relation="include">
+        </childnode>
+        <childnode refid="836" relation="include">
+        </childnode>
+        <childnode refid="837" relation="include">
+        </childnode>
+        <childnode refid="838" relation="include">
+        </childnode>
+        <childnode refid="852" relation="include">
+        </childnode>
+        <childnode refid="854" relation="include">
+        </childnode>
+        <childnode refid="856" relation="include">
+        </childnode>
+        <childnode refid="862" relation="include">
+        </childnode>
+        <childnode refid="864" relation="include">
+        </childnode>
+      </node>
+      <node id="842">
+        <label>eternity/persist.hpp</label>
+        <link refid="persist_8hpp"/>
+        <childnode refid="840" relation="include">
+        </childnode>
+        <childnode refid="843" relation="include">
+        </childnode>
+        <childnode refid="844" relation="include">
+        </childnode>
+        <childnode refid="845" relation="include">
+        </childnode>
+        <childnode refid="846" relation="include">
+        </childnode>
+        <childnode refid="835" relation="include">
+        </childnode>
+      </node>
+      <node id="860">
+        <label>string.h</label>
+      </node>
+      <node id="841">
+        <label>typeinfo</label>
+      </node>
+      <node id="836">
+        <label>boost/numeric/ublas/io.hpp</label>
+      </node>
+      <node id="855">
+        <label>unistd.h</label>
+      </node>
+      <node id="859">
+        <label>tsaUtilityFunctions.hpp</label>
+        <link refid="tsa_utility_functions_8hpp"/>
+        <childnode refid="860" relation="include">
+        </childnode>
+        <childnode refid="861" relation="include">
+        </childnode>
+        <childnode refid="858" relation="include">
+        </childnode>
+        <childnode refid="835" relation="include">
+        </childnode>
+      </node>
+      <node id="845">
+        <label>vector</label>
+      </node>
+      <node id="856">
+        <label>BaseView.hpp</label>
+        <link refid="_base_view_8hpp"/>
+        <childnode refid="829" relation="include">
+        </childnode>
+        <childnode refid="837" relation="include">
+        </childnode>
+        <childnode refid="852" relation="include">
+        </childnode>
+        <childnode refid="857" relation="include">
+        </childnode>
+        <childnode refid="859" relation="include">
+        </childnode>
+        <childnode refid="838" relation="include">
+        </childnode>
+        <childnode refid="854" relation="include">
+        </childnode>
+      </node>
+      <node id="853">
+        <label>boost/numeric/ublas/matrix_proxy.hpp</label>
+      </node>
+      <node id="851">
+        <label>sstream</label>
+      </node>
+      <node id="828">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/BaseWindow.hpp</label>
+        <link refid="_base_window_8hpp"/>
+        <childnode refid="829" relation="include">
+        </childnode>
+        <childnode refid="830" relation="include">
+        </childnode>
+        <childnode refid="831" relation="include">
+        </childnode>
+        <childnode refid="832" relation="include">
+        </childnode>
+      </node>
+      <node id="863">
+        <label>FrameL.h</label>
+      </node>
+      <node id="864">
+        <label>AlgoExceptions.hpp</label>
+        <link refid="_algo_exceptions_8hpp"/>
+        <childnode refid="833" relation="include">
+        </childnode>
+        <childnode refid="837" relation="include">
+        </childnode>
+      </node>
+      <node id="862">
+        <label>SeqView.hpp</label>
+        <link refid="_seq_view_8hpp"/>
+        <childnode refid="831" relation="include">
+        </childnode>
+        <childnode refid="853" relation="include">
+        </childnode>
+        <childnode refid="836" relation="include">
+        </childnode>
+        <childnode refid="856" relation="include">
+        </childnode>
+        <childnode refid="863" relation="include">
+        </childnode>
+      </node>
+      <node id="843">
+        <label>math.h</label>
+      </node>
+      <node id="831">
+        <label>boost/numeric/ublas/matrix.hpp</label>
+      </node>
+      <node id="834">
+        <label>iostream</label>
+      </node>
+      <node id="849">
+        <label>deque</label>
+      </node>
+      <node id="847">
+        <label>eternity/persist_xml.hpp</label>
+        <link refid="persist__xml_8hpp"/>
+        <childnode refid="842" relation="include">
+        </childnode>
+        <childnode refid="848" relation="include">
+        </childnode>
+        <childnode refid="849" relation="include">
+        </childnode>
+      </node>
+      <node id="858">
+        <label>complex</label>
+      </node>
+      <node id="850">
+        <label>eternity/algorithms.hpp</label>
+        <link refid="algorithms_8hpp"/>
+        <childnode refid="842" relation="include">
+        </childnode>
+        <childnode refid="847" relation="include">
+        </childnode>
+        <childnode refid="848" relation="include">
+        </childnode>
+        <childnode refid="851" relation="include">
+        </childnode>
+      </node>
+      <node id="846">
+        <label>algorithm</label>
+      </node>
+      <node id="830">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="873">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/WDF2Classify.hpp</label>
+        <link refid="_w_d_f2_classify_8hpp"/>
+        <childnode refid="874" relation="include">
+        </childnode>
+        <childnode refid="868" relation="include">
+        </childnode>
+      </node>
+      <node id="872">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/Cs2HammingWindow.hpp</label>
+        <link refid="_cs2_hamming_window_8hpp"/>
+        <childnode refid="868" relation="include">
+        </childnode>
+        <childnode refid="873" relation="include">
+        </childnode>
+        <childnode refid="875" relation="include">
+        </childnode>
+        <childnode refid="869" relation="include">
+        </childnode>
+      </node>
+      <node id="878">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/KaiserWindow.hpp</label>
+        <link refid="_kaiser_window_8hpp"/>
+        <childnode refid="868" relation="include">
+        </childnode>
+        <childnode refid="869" relation="include">
+        </childnode>
+      </node>
+      <node id="870">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/WindowFactory.cpp</label>
+        <link refid="_window_factory_8cpp"/>
+      </node>
+      <node id="880">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/TukeyWindow.hpp</label>
+        <link refid="_tukey_window_8hpp"/>
+        <childnode refid="868" relation="include">
+        </childnode>
+        <childnode refid="869" relation="include">
+        </childnode>
+      </node>
+      <node id="867">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/BartlettWindow.hpp</label>
+        <link refid="_bartlett_window_8hpp"/>
+        <childnode refid="868" relation="include">
+        </childnode>
+        <childnode refid="869" relation="include">
+        </childnode>
+      </node>
+      <node id="879">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/TukeyHannWindow.hpp</label>
+        <link refid="_tukey_hann_window_8hpp"/>
+        <childnode refid="868" relation="include">
+        </childnode>
+        <childnode refid="869" relation="include">
+        </childnode>
+      </node>
+      <node id="881">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/WelchWindow.hpp</label>
+        <link refid="_welch_window_8hpp"/>
+        <childnode refid="868" relation="include">
+        </childnode>
+        <childnode refid="869" relation="include">
+        </childnode>
+      </node>
+      <node id="869">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/WindowFactory.hpp</label>
+        <link refid="_window_factory_8hpp"/>
+        <childnode refid="870" relation="include">
+        </childnode>
+        <childnode refid="868" relation="include">
+        </childnode>
+      </node>
+      <node id="874">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/WDF2Classify.cpp</label>
+        <link refid="_w_d_f2_classify_8cpp"/>
+      </node>
+      <node id="868">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/tsa.hpp</label>
+        <link refid="tsa_8hpp"/>
+      </node>
+      <node id="865">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/BaseWindow.hpp</label>
+        <link refid="_base_window_8hpp"/>
+        <childnode refid="866" relation="include">
+        </childnode>
+        <childnode refid="867" relation="include">
+        </childnode>
+        <childnode refid="871" relation="include">
+        </childnode>
+        <childnode refid="872" relation="include">
+        </childnode>
+        <childnode refid="877" relation="include">
+        </childnode>
+        <childnode refid="878" relation="include">
+        </childnode>
+        <childnode refid="868" relation="include">
+        </childnode>
+        <childnode refid="879" relation="include">
+        </childnode>
+        <childnode refid="880" relation="include">
+        </childnode>
+        <childnode refid="881" relation="include">
+        </childnode>
+      </node>
+      <node id="866">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/BaseWindow.cpp</label>
+        <link refid="_base_window_8cpp"/>
+      </node>
+      <node id="875">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/WDF2Reconstruct.hpp</label>
+        <link refid="_w_d_f2_reconstruct_8hpp"/>
+        <childnode refid="876" relation="include">
+        </childnode>
+        <childnode refid="868" relation="include">
+        </childnode>
+      </node>
+      <node id="871">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/BisquareWindow.hpp</label>
+        <link refid="_bisquare_window_8hpp"/>
+        <childnode refid="868" relation="include">
+        </childnode>
+        <childnode refid="869" relation="include">
+        </childnode>
+      </node>
+      <node id="876">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/WDF2Reconstruct.cpp</label>
+        <link refid="_w_d_f2_reconstruct_8cpp"/>
+      </node>
+      <node id="877">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/Cs2HannWindow.hpp</label>
+        <link refid="_cs2_hann_window_8hpp"/>
+        <childnode refid="868" relation="include">
+        </childnode>
+        <childnode refid="869" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classtsa_1_1_base_window" prot="public">tsa::BaseWindow</innerclass>
+    <innernamespace refid="namespacetsa">tsa</innernamespace>
+    <briefdescription>
+<para>Base class for Windowing. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Giancarlo Cella <ulink url="mailto:giancarlo.cella@pi.infn.it">giancarlo.cella@pi.infn.it</ulink> </para></simplesect>
+<simplesect kind="date"><para>Sat Nov 13 17:21:06 2004</para></simplesect>
+Copyright (C) 2004 by Giancarlo Cella <ulink url="mailto:giancarlo.cella@pi.infn.it">giancarlo.cella@pi.infn.it</ulink></para><para>This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</para><para>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</para><para>You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="28"><highlight class="preprocessor">#ifndef<sp/>__BASEWINDOW_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__BASEWINDOW_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/numeric/ublas/matrix.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"></codeline>
+<codeline lineno="45"><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_algo_base_8hpp" kindref="compound">AlgoBase.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"></codeline>
+<codeline lineno="53"></codeline>
+<codeline lineno="55"></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceboost_1_1numeric_1_1ublas" kindref="compound">boost::numeric::ublas</ref>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetsa" kindref="compound">tsa</ref><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="classtsa_1_1_base_window" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classtsa_1_1_base_window" kindref="compound">BaseWindow</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_algo_base" kindref="compound">AlgoBase</ref><sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_base_window" kindref="compound">BaseWindow</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classtsa_1_1_base_window" kindref="compound">BaseWindow</ref>();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>CrossAverage(<ref refid="classtsa_1_1_base_window" kindref="compound">BaseWindow</ref>&amp;<sp/>w1,<sp/><ref refid="classtsa_1_1_base_window" kindref="compound">BaseWindow</ref>&amp;<sp/>w2);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>CrossSquareAverage(<ref refid="classtsa_1_1_base_window" kindref="compound">BaseWindow</ref>&amp;<sp/>w1,<sp/><ref refid="classtsa_1_1_base_window" kindref="compound">BaseWindow</ref>&amp;<sp/>w2);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>operator()(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>v1);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>operator()(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>v1,<sp/><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>v2);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>execute(<ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref>&amp;<sp/>in,<sp/><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref>&amp;<sp/>out);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>execute(<ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref>&amp;<sp/>in,<sp/><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref>&amp;<sp/>out,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>offset);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>execute(<ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref>&amp;<sp/>inout);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>execute(<ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref>&amp;<sp/>inout);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>operator()(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Resize(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"></codeline>
+<codeline lineno="145"></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>GetSize();</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Normalize();</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>FillWindow();</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179" refid="classtsa_1_1_base_window_1a182b397ac3f3c409bfcb3a39d9c1575a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref><sp/><ref refid="classtsa_1_1_base_window_1a182b397ac3f3c409bfcb3a39d9c1575a" kindref="member">mWindow</ref>;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"></codeline>
+<codeline lineno="200"></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>end<sp/>namespace<sp/>tsa</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>__BASEWINDOW_HPP</highlight></codeline>
+    </programlisting>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/BaseWindow.hpp"/>
+  </compounddef>
+</doxygen>

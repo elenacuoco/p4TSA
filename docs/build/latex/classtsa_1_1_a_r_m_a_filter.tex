@@ -1,0 +1,211 @@
+\hypertarget{classtsa_1_1_a_r_m_a_filter}{}\section{tsa\+:\+:A\+R\+M\+A\+Filter Class Reference}
+\label{classtsa_1_1_a_r_m_a_filter}\index{tsa\+::\+A\+R\+M\+A\+Filter@{tsa\+::\+A\+R\+M\+A\+Filter}}
+
+
+Implement the A\+R\+MA filtering.  
+
+
+
+
+{\ttfamily \#include $<$A\+R\+M\+A\+Filter.\+hpp$>$}
+
+Inheritance diagram for tsa\+:\+:A\+R\+M\+A\+Filter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classtsa_1_1_a_r_m_a_filter}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtsa_1_1_a_r_m_a_filter_acfa4406559bb327a4bfd5139db46f941}{A\+R\+M\+A\+Filter} (const std\+::vector$<$ double $>$ \&\hyperlink{classtsa_1_1_a_r_m_a_filter_abadc75a208b4e28e28e7341c6bbfbbce}{m\+AR}, const std\+::vector$<$ double $>$ \&\hyperlink{classtsa_1_1_a_r_m_a_filter_aa4b780d4db5a5c5326e92f1c766613fb}{m\+MA}, double gain)
+\item 
+virtual \hyperlink{classtsa_1_1_a_r_m_a_filter_affe37273b08f1c5f21a9d11170f1a119}{$\sim$\+A\+R\+M\+A\+Filter} ()
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Operations}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtsa_1_1_a_r_m_a_filter_af5ff08e872b2cbb13221c8e90158c3a3}{operator()} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&in, \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&out)
+\item 
+void \hyperlink{classtsa_1_1_a_r_m_a_filter_a9c0be1ce8ede64c97bc2845423d7380f}{execute} (\hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&in, \hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&out, double scale)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Setters}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtsa_1_1_a_r_m_a_filter_a4665d54649f2e971303429dea11a6ae5}{Set\+Filter} (const std\+::vector$<$ double $>$ \&\hyperlink{classtsa_1_1_a_r_m_a_filter_abadc75a208b4e28e28e7341c6bbfbbce}{m\+AR}, const std\+::vector$<$ double $>$ \&\hyperlink{classtsa_1_1_a_r_m_a_filter_aa4b780d4db5a5c5326e92f1c766613fb}{m\+MA}, double gain)
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacetsa_ad1e65e148c1b8be13ee4da5b246b5adf}{L\+Dvector} \hyperlink{classtsa_1_1_a_r_m_a_filter_abadc75a208b4e28e28e7341c6bbfbbce}{m\+AR}
+\item 
+\hyperlink{namespacetsa_ad1e65e148c1b8be13ee4da5b246b5adf}{L\+Dvector} \hyperlink{classtsa_1_1_a_r_m_a_filter_aa4b780d4db5a5c5326e92f1c766613fb}{m\+MA}
+\item 
+long double \hyperlink{classtsa_1_1_a_r_m_a_filter_abb62dc2fe30975bb49e0105915143169}{m\+Gain}
+\item 
+int \hyperlink{classtsa_1_1_a_r_m_a_filter_a12aaa04dea7ac6d48c99c66319286ae4}{m\+In\+Pointer}
+\item 
+int \hyperlink{classtsa_1_1_a_r_m_a_filter_a223497bf7eb2f652a8c776f67837e6e9}{m\+Out\+Pointer}
+\item 
+\hyperlink{namespacetsa_ad1e65e148c1b8be13ee4da5b246b5adf}{L\+Dvector} \hyperlink{classtsa_1_1_a_r_m_a_filter_aa8de4abbeb3ed3078a7e9f1440619ac1}{m\+In\+Buffer}
+\item 
+\hyperlink{namespacetsa_ad1e65e148c1b8be13ee4da5b246b5adf}{L\+Dvector} \hyperlink{classtsa_1_1_a_r_m_a_filter_a45a752b94a28a77c8269bee486d0c85c}{m\+Out\+Buffer}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implement the A\+R\+MA filtering. 
+
+This class implement a general A\+R\+MA filter. Given an input sequence x(n) and an output sequence y(n) an A\+R\+MA filter is defined by the relation (look at the signs definitions..)
+
+a(0) y(n) = a(1) y(n-\/1) + ... + a(\+N) y(n-\/N) + b(0) x(n) + b(1) x(n-\/1) + .... + b(\+M) x(n-\/M) 
+
+Definition at line 78 of file A\+R\+M\+A\+Filter.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtsa_1_1_a_r_m_a_filter_acfa4406559bb327a4bfd5139db46f941}\label{classtsa_1_1_a_r_m_a_filter_acfa4406559bb327a4bfd5139db46f941}} 
+\index{tsa\+::\+A\+R\+M\+A\+Filter@{tsa\+::\+A\+R\+M\+A\+Filter}!A\+R\+M\+A\+Filter@{A\+R\+M\+A\+Filter}}
+\index{A\+R\+M\+A\+Filter@{A\+R\+M\+A\+Filter}!tsa\+::\+A\+R\+M\+A\+Filter@{tsa\+::\+A\+R\+M\+A\+Filter}}
+\subsubsection{\texorpdfstring{A\+R\+M\+A\+Filter()}{ARMAFilter()}}
+{\footnotesize\ttfamily tsa\+::\+A\+R\+M\+A\+Filter\+::\+A\+R\+M\+A\+Filter (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{m\+AR,  }\item[{const std\+::vector$<$ double $>$ \&}]{m\+MA,  }\item[{double}]{gain }\end{DoxyParamCaption})}
+
+Constructor 
+
+Definition at line 5 of file A\+R\+M\+A\+Filter.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_a_r_m_a_filter_affe37273b08f1c5f21a9d11170f1a119}\label{classtsa_1_1_a_r_m_a_filter_affe37273b08f1c5f21a9d11170f1a119}} 
+\index{tsa\+::\+A\+R\+M\+A\+Filter@{tsa\+::\+A\+R\+M\+A\+Filter}!````~A\+R\+M\+A\+Filter@{$\sim$\+A\+R\+M\+A\+Filter}}
+\index{````~A\+R\+M\+A\+Filter@{$\sim$\+A\+R\+M\+A\+Filter}!tsa\+::\+A\+R\+M\+A\+Filter@{tsa\+::\+A\+R\+M\+A\+Filter}}
+\subsubsection{\texorpdfstring{$\sim$\+A\+R\+M\+A\+Filter()}{~ARMAFilter()}}
+{\footnotesize\ttfamily tsa\+::\+A\+R\+M\+A\+Filter\+::$\sim$\+A\+R\+M\+A\+Filter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destructor 
+
+Definition at line 27 of file A\+R\+M\+A\+Filter.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classtsa_1_1_a_r_m_a_filter_a9c0be1ce8ede64c97bc2845423d7380f}\label{classtsa_1_1_a_r_m_a_filter_a9c0be1ce8ede64c97bc2845423d7380f}} 
+\index{tsa\+::\+A\+R\+M\+A\+Filter@{tsa\+::\+A\+R\+M\+A\+Filter}!execute@{execute}}
+\index{execute@{execute}!tsa\+::\+A\+R\+M\+A\+Filter@{tsa\+::\+A\+R\+M\+A\+Filter}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void tsa\+::\+A\+R\+M\+A\+Filter\+::execute (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&}]{in,  }\item[{\hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&}]{out,  }\item[{double}]{scale }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Input Data \\
+\hline
+{\em out} & Filtered Data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 52 of file A\+R\+M\+A\+Filter.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_a_r_m_a_filter_af5ff08e872b2cbb13221c8e90158c3a3}\label{classtsa_1_1_a_r_m_a_filter_af5ff08e872b2cbb13221c8e90158c3a3}} 
+\index{tsa\+::\+A\+R\+M\+A\+Filter@{tsa\+::\+A\+R\+M\+A\+Filter}!operator()@{operator()}}
+\index{operator()@{operator()}!tsa\+::\+A\+R\+M\+A\+Filter@{tsa\+::\+A\+R\+M\+A\+Filter}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily void tsa\+::\+A\+R\+M\+A\+Filter\+::operator() (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{in,  }\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{out }\end{DoxyParamCaption})}
+
+
+
+Definition at line 31 of file A\+R\+M\+A\+Filter.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_a_r_m_a_filter_a4665d54649f2e971303429dea11a6ae5}\label{classtsa_1_1_a_r_m_a_filter_a4665d54649f2e971303429dea11a6ae5}} 
+\index{tsa\+::\+A\+R\+M\+A\+Filter@{tsa\+::\+A\+R\+M\+A\+Filter}!Set\+Filter@{Set\+Filter}}
+\index{Set\+Filter@{Set\+Filter}!tsa\+::\+A\+R\+M\+A\+Filter@{tsa\+::\+A\+R\+M\+A\+Filter}}
+\subsubsection{\texorpdfstring{Set\+Filter()}{SetFilter()}}
+{\footnotesize\ttfamily void tsa\+::\+A\+R\+M\+A\+Filter\+::\+Set\+Filter (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{m\+AR,  }\item[{const std\+::vector$<$ double $>$ \&}]{m\+MA,  }\item[{double}]{gain }\end{DoxyParamCaption})}
+
+
+
+Definition at line 70 of file A\+R\+M\+A\+Filter.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classtsa_1_1_a_r_m_a_filter_abadc75a208b4e28e28e7341c6bbfbbce}\label{classtsa_1_1_a_r_m_a_filter_abadc75a208b4e28e28e7341c6bbfbbce}} 
+\index{tsa\+::\+A\+R\+M\+A\+Filter@{tsa\+::\+A\+R\+M\+A\+Filter}!m\+AR@{m\+AR}}
+\index{m\+AR@{m\+AR}!tsa\+::\+A\+R\+M\+A\+Filter@{tsa\+::\+A\+R\+M\+A\+Filter}}
+\subsubsection{\texorpdfstring{m\+AR}{mAR}}
+{\footnotesize\ttfamily \hyperlink{namespacetsa_ad1e65e148c1b8be13ee4da5b246b5adf}{L\+Dvector} tsa\+::\+A\+R\+M\+A\+Filter\+::m\+AR\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 134 of file A\+R\+M\+A\+Filter.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_a_r_m_a_filter_abb62dc2fe30975bb49e0105915143169}\label{classtsa_1_1_a_r_m_a_filter_abb62dc2fe30975bb49e0105915143169}} 
+\index{tsa\+::\+A\+R\+M\+A\+Filter@{tsa\+::\+A\+R\+M\+A\+Filter}!m\+Gain@{m\+Gain}}
+\index{m\+Gain@{m\+Gain}!tsa\+::\+A\+R\+M\+A\+Filter@{tsa\+::\+A\+R\+M\+A\+Filter}}
+\subsubsection{\texorpdfstring{m\+Gain}{mGain}}
+{\footnotesize\ttfamily long double tsa\+::\+A\+R\+M\+A\+Filter\+::m\+Gain\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 136 of file A\+R\+M\+A\+Filter.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_a_r_m_a_filter_aa8de4abbeb3ed3078a7e9f1440619ac1}\label{classtsa_1_1_a_r_m_a_filter_aa8de4abbeb3ed3078a7e9f1440619ac1}} 
+\index{tsa\+::\+A\+R\+M\+A\+Filter@{tsa\+::\+A\+R\+M\+A\+Filter}!m\+In\+Buffer@{m\+In\+Buffer}}
+\index{m\+In\+Buffer@{m\+In\+Buffer}!tsa\+::\+A\+R\+M\+A\+Filter@{tsa\+::\+A\+R\+M\+A\+Filter}}
+\subsubsection{\texorpdfstring{m\+In\+Buffer}{mInBuffer}}
+{\footnotesize\ttfamily \hyperlink{namespacetsa_ad1e65e148c1b8be13ee4da5b246b5adf}{L\+Dvector} tsa\+::\+A\+R\+M\+A\+Filter\+::m\+In\+Buffer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 140 of file A\+R\+M\+A\+Filter.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_a_r_m_a_filter_a12aaa04dea7ac6d48c99c66319286ae4}\label{classtsa_1_1_a_r_m_a_filter_a12aaa04dea7ac6d48c99c66319286ae4}} 
+\index{tsa\+::\+A\+R\+M\+A\+Filter@{tsa\+::\+A\+R\+M\+A\+Filter}!m\+In\+Pointer@{m\+In\+Pointer}}
+\index{m\+In\+Pointer@{m\+In\+Pointer}!tsa\+::\+A\+R\+M\+A\+Filter@{tsa\+::\+A\+R\+M\+A\+Filter}}
+\subsubsection{\texorpdfstring{m\+In\+Pointer}{mInPointer}}
+{\footnotesize\ttfamily int tsa\+::\+A\+R\+M\+A\+Filter\+::m\+In\+Pointer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 138 of file A\+R\+M\+A\+Filter.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_a_r_m_a_filter_aa4b780d4db5a5c5326e92f1c766613fb}\label{classtsa_1_1_a_r_m_a_filter_aa4b780d4db5a5c5326e92f1c766613fb}} 
+\index{tsa\+::\+A\+R\+M\+A\+Filter@{tsa\+::\+A\+R\+M\+A\+Filter}!m\+MA@{m\+MA}}
+\index{m\+MA@{m\+MA}!tsa\+::\+A\+R\+M\+A\+Filter@{tsa\+::\+A\+R\+M\+A\+Filter}}
+\subsubsection{\texorpdfstring{m\+MA}{mMA}}
+{\footnotesize\ttfamily \hyperlink{namespacetsa_ad1e65e148c1b8be13ee4da5b246b5adf}{L\+Dvector} tsa\+::\+A\+R\+M\+A\+Filter\+::m\+MA\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 135 of file A\+R\+M\+A\+Filter.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_a_r_m_a_filter_a45a752b94a28a77c8269bee486d0c85c}\label{classtsa_1_1_a_r_m_a_filter_a45a752b94a28a77c8269bee486d0c85c}} 
+\index{tsa\+::\+A\+R\+M\+A\+Filter@{tsa\+::\+A\+R\+M\+A\+Filter}!m\+Out\+Buffer@{m\+Out\+Buffer}}
+\index{m\+Out\+Buffer@{m\+Out\+Buffer}!tsa\+::\+A\+R\+M\+A\+Filter@{tsa\+::\+A\+R\+M\+A\+Filter}}
+\subsubsection{\texorpdfstring{m\+Out\+Buffer}{mOutBuffer}}
+{\footnotesize\ttfamily \hyperlink{namespacetsa_ad1e65e148c1b8be13ee4da5b246b5adf}{L\+Dvector} tsa\+::\+A\+R\+M\+A\+Filter\+::m\+Out\+Buffer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 141 of file A\+R\+M\+A\+Filter.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_a_r_m_a_filter_a223497bf7eb2f652a8c776f67837e6e9}\label{classtsa_1_1_a_r_m_a_filter_a223497bf7eb2f652a8c776f67837e6e9}} 
+\index{tsa\+::\+A\+R\+M\+A\+Filter@{tsa\+::\+A\+R\+M\+A\+Filter}!m\+Out\+Pointer@{m\+Out\+Pointer}}
+\index{m\+Out\+Pointer@{m\+Out\+Pointer}!tsa\+::\+A\+R\+M\+A\+Filter@{tsa\+::\+A\+R\+M\+A\+Filter}}
+\subsubsection{\texorpdfstring{m\+Out\+Pointer}{mOutPointer}}
+{\footnotesize\ttfamily int tsa\+::\+A\+R\+M\+A\+Filter\+::m\+Out\+Pointer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 139 of file A\+R\+M\+A\+Filter.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/include/\hyperlink{_a_r_m_a_filter_8hpp}{A\+R\+M\+A\+Filter.\+hpp}\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/src/\hyperlink{_a_r_m_a_filter_8cpp}{A\+R\+M\+A\+Filter.\+cpp}\end{DoxyCompactItemize}

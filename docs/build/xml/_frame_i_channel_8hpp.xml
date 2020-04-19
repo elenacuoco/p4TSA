@@ -1,0 +1,437 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_frame_i_channel_8hpp" kind="file" language="C++">
+    <compoundname>FrameIChannel.hpp</compoundname>
+    <includes local="no">sys/types.h</includes>
+    <includes local="no">sys/stat.h</includes>
+    <includes local="no">unistd.h</includes>
+    <includes local="no">deque</includes>
+    <includes local="no">FrameL.h</includes>
+    <includes refid="_algo_base_8hpp" local="no">AlgoBase.hpp</includes>
+    <includes refid="_seq_view_8hpp" local="no">SeqView.hpp</includes>
+    <includedby refid="_frame_i_channel_8cpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/src/FrameIChannel.cpp</includedby>
+    <includedby refid="tsa_8hpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/include/tsa.hpp</includedby>
+    <incdepgraph>
+      <node id="2471">
+        <label>sys/stat.h</label>
+      </node>
+      <node id="2501">
+        <label>tsaTraits.hpp</label>
+        <link refid="tsa_traits_8hpp"/>
+        <childnode refid="2502" relation="include">
+        </childnode>
+      </node>
+      <node id="2483">
+        <label>eternity.hpp</label>
+        <link refid="eternity_8hpp"/>
+        <childnode refid="2484" relation="include">
+        </childnode>
+        <childnode refid="2487" relation="include">
+        </childnode>
+        <childnode refid="2492" relation="include">
+        </childnode>
+        <childnode refid="2495" relation="include">
+        </childnode>
+      </node>
+      <node id="2489">
+        <label>stdlib.h</label>
+      </node>
+      <node id="2476">
+        <label>stdexcept</label>
+      </node>
+      <node id="2497">
+        <label>tsaTypes.hpp</label>
+        <link refid="tsa_types_8hpp"/>
+        <childnode refid="2478" relation="include">
+        </childnode>
+        <childnode refid="2479" relation="include">
+        </childnode>
+        <childnode refid="2498" relation="include">
+        </childnode>
+        <childnode refid="2480" relation="include">
+        </childnode>
+        <childnode refid="2483" relation="include">
+        </childnode>
+      </node>
+      <node id="2481">
+        <label>string</label>
+      </node>
+      <node id="2484">
+        <label>eternity/dynamic.hpp</label>
+        <link refid="dynamic_8hpp"/>
+        <childnode refid="2485" relation="include">
+        </childnode>
+        <childnode refid="2486" relation="include">
+        </childnode>
+        <childnode refid="2481" relation="include">
+        </childnode>
+      </node>
+      <node id="2494">
+        <label>map</label>
+      </node>
+      <node id="2499">
+        <label>tsaLog.hpp</label>
+        <link refid="tsa_log_8hpp"/>
+        <childnode refid="2477" relation="include">
+        </childnode>
+        <childnode refid="2478" relation="include">
+        </childnode>
+        <childnode refid="2472" relation="include">
+        </childnode>
+      </node>
+      <node id="2478">
+        <label>fstream</label>
+      </node>
+      <node id="2493">
+        <label>xmlscanner.hpp</label>
+        <link refid="xmlscanner_8hpp"/>
+        <childnode refid="2488" relation="include">
+        </childnode>
+        <childnode refid="2489" relation="include">
+        </childnode>
+        <childnode refid="2490" relation="include">
+        </childnode>
+        <childnode refid="2494" relation="include">
+        </childnode>
+        <childnode refid="2491" relation="include">
+        </childnode>
+        <childnode refid="2478" relation="include">
+        </childnode>
+        <childnode refid="2481" relation="include">
+        </childnode>
+        <childnode refid="2477" relation="include">
+        </childnode>
+      </node>
+      <node id="2482">
+        <label>tsaSerialize.hpp</label>
+        <link refid="tsa_serialize_8hpp"/>
+        <childnode refid="2476" relation="include">
+        </childnode>
+        <childnode refid="2477" relation="include">
+        </childnode>
+        <childnode refid="2478" relation="include">
+        </childnode>
+        <childnode refid="2483" relation="include">
+        </childnode>
+        <childnode refid="2497" relation="include">
+        </childnode>
+      </node>
+      <node id="2505">
+        <label>fparser.hpp</label>
+        <link refid="fparser_8hpp"/>
+        <childnode refid="2481" relation="include">
+        </childnode>
+        <childnode refid="2494" relation="include">
+        </childnode>
+        <childnode refid="2490" relation="include">
+        </childnode>
+      </node>
+      <node id="2475">
+        <label>AlgoBase.hpp</label>
+        <link refid="_algo_base_8hpp"/>
+        <childnode refid="2476" relation="include">
+        </childnode>
+        <childnode refid="2477" relation="include">
+        </childnode>
+        <childnode refid="2478" relation="include">
+        </childnode>
+        <childnode refid="2479" relation="include">
+        </childnode>
+        <childnode refid="2480" relation="include">
+        </childnode>
+        <childnode refid="2481" relation="include">
+        </childnode>
+        <childnode refid="2482" relation="include">
+        </childnode>
+        <childnode refid="2497" relation="include">
+        </childnode>
+        <childnode refid="2499" relation="include">
+        </childnode>
+        <childnode refid="2500" relation="include">
+        </childnode>
+        <childnode refid="2506" relation="include">
+        </childnode>
+        <childnode refid="2507" relation="include">
+        </childnode>
+      </node>
+      <node id="2487">
+        <label>eternity/persist.hpp</label>
+        <link refid="persist_8hpp"/>
+        <childnode refid="2484" relation="include">
+        </childnode>
+        <childnode refid="2488" relation="include">
+        </childnode>
+        <childnode refid="2489" relation="include">
+        </childnode>
+        <childnode refid="2490" relation="include">
+        </childnode>
+        <childnode refid="2491" relation="include">
+        </childnode>
+        <childnode refid="2478" relation="include">
+        </childnode>
+      </node>
+      <node id="2470">
+        <label>sys/types.h</label>
+      </node>
+      <node id="2504">
+        <label>string.h</label>
+      </node>
+      <node id="2486">
+        <label>typeinfo</label>
+      </node>
+      <node id="2480">
+        <label>boost/numeric/ublas/io.hpp</label>
+      </node>
+      <node id="2472">
+        <label>unistd.h</label>
+      </node>
+      <node id="2503">
+        <label>tsaUtilityFunctions.hpp</label>
+        <link refid="tsa_utility_functions_8hpp"/>
+        <childnode refid="2504" relation="include">
+        </childnode>
+        <childnode refid="2505" relation="include">
+        </childnode>
+        <childnode refid="2502" relation="include">
+        </childnode>
+        <childnode refid="2478" relation="include">
+        </childnode>
+      </node>
+      <node id="2490">
+        <label>vector</label>
+      </node>
+      <node id="2500">
+        <label>BaseView.hpp</label>
+        <link refid="_base_view_8hpp"/>
+        <childnode refid="2494" relation="include">
+        </childnode>
+        <childnode refid="2481" relation="include">
+        </childnode>
+        <childnode refid="2497" relation="include">
+        </childnode>
+        <childnode refid="2501" relation="include">
+        </childnode>
+        <childnode refid="2503" relation="include">
+        </childnode>
+        <childnode refid="2482" relation="include">
+        </childnode>
+        <childnode refid="2499" relation="include">
+        </childnode>
+      </node>
+      <node id="2498">
+        <label>boost/numeric/ublas/matrix_proxy.hpp</label>
+      </node>
+      <node id="2496">
+        <label>sstream</label>
+      </node>
+      <node id="2474">
+        <label>FrameL.h</label>
+      </node>
+      <node id="2507">
+        <label>AlgoExceptions.hpp</label>
+        <link refid="_algo_exceptions_8hpp"/>
+        <childnode refid="2476" relation="include">
+        </childnode>
+        <childnode refid="2481" relation="include">
+        </childnode>
+      </node>
+      <node id="2506">
+        <label>SeqView.hpp</label>
+        <link refid="_seq_view_8hpp"/>
+        <childnode refid="2479" relation="include">
+        </childnode>
+        <childnode refid="2498" relation="include">
+        </childnode>
+        <childnode refid="2480" relation="include">
+        </childnode>
+        <childnode refid="2500" relation="include">
+        </childnode>
+        <childnode refid="2474" relation="include">
+        </childnode>
+      </node>
+      <node id="2488">
+        <label>math.h</label>
+      </node>
+      <node id="2479">
+        <label>boost/numeric/ublas/matrix.hpp</label>
+      </node>
+      <node id="2477">
+        <label>iostream</label>
+      </node>
+      <node id="2473">
+        <label>deque</label>
+      </node>
+      <node id="2492">
+        <label>eternity/persist_xml.hpp</label>
+        <link refid="persist__xml_8hpp"/>
+        <childnode refid="2487" relation="include">
+        </childnode>
+        <childnode refid="2493" relation="include">
+        </childnode>
+        <childnode refid="2473" relation="include">
+        </childnode>
+      </node>
+      <node id="2502">
+        <label>complex</label>
+      </node>
+      <node id="2495">
+        <label>eternity/algorithms.hpp</label>
+        <link refid="algorithms_8hpp"/>
+        <childnode refid="2487" relation="include">
+        </childnode>
+        <childnode refid="2492" relation="include">
+        </childnode>
+        <childnode refid="2493" relation="include">
+        </childnode>
+        <childnode refid="2496" relation="include">
+        </childnode>
+      </node>
+      <node id="2491">
+        <label>algorithm</label>
+      </node>
+      <node id="2485">
+        <label>stdio.h</label>
+      </node>
+      <node id="2469">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIChannel.hpp</label>
+        <link refid="_frame_i_channel_8hpp"/>
+        <childnode refid="2470" relation="include">
+        </childnode>
+        <childnode refid="2471" relation="include">
+        </childnode>
+        <childnode refid="2472" relation="include">
+        </childnode>
+        <childnode refid="2473" relation="include">
+        </childnode>
+        <childnode refid="2474" relation="include">
+        </childnode>
+        <childnode refid="2475" relation="include">
+        </childnode>
+        <childnode refid="2506" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2510">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/tsa.hpp</label>
+        <link refid="tsa_8hpp"/>
+      </node>
+      <node id="2509">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/FrameIChannel.cpp</label>
+        <link refid="_frame_i_channel_8cpp"/>
+      </node>
+      <node id="2508">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIChannel.hpp</label>
+        <link refid="_frame_i_channel_8hpp"/>
+        <childnode refid="2509" relation="include">
+        </childnode>
+        <childnode refid="2510" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classtsa_1_1_frame_i_channel" prot="public">tsa::FrameIChannel</innerclass>
+    <innernamespace refid="namespacetsa">tsa</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>__FRAMEICHANNEL_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__FRAMEICHANNEL_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/types.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/stat.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unistd.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;deque&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;FrameL.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"></codeline>
+<codeline lineno="49"></codeline>
+<codeline lineno="50"><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_algo_base_8hpp" kindref="compound">AlgoBase.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_seq_view_8hpp" kindref="compound">SeqView.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"></codeline>
+<codeline lineno="58"></codeline>
+<codeline lineno="59"></codeline>
+<codeline lineno="61"></codeline>
+<codeline lineno="65"></codeline>
+<codeline lineno="66"></codeline>
+<codeline lineno="68"></codeline>
+<codeline lineno="72"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetsa" kindref="compound">tsa</ref><sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="classtsa_1_1_frame_i_channel" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classtsa_1_1_frame_i_channel" kindref="compound">FrameIChannel</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_algo_base" kindref="compound">AlgoBase</ref><sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_frame_i_channel_1acc55687d86116d3cc2db6c4d2b2e7c1e" kindref="member">FrameIChannel</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>fileName,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>channelName,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dLength<sp/>=<sp/>1.0,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>tStart<sp/>=<sp/>0.0);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_frame_i_channel_1ab6f4fd4a65dee05ef58590ed6216408c" kindref="member">~FrameIChannel</ref>();</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_frame_i_channel_1a8caf984495dce2862909b0d7192c9fb4" kindref="member">NextSlice</ref>();</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"></codeline>
+<codeline lineno="116"></codeline>
+<codeline lineno="117"></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_frame_i_channel_1a9e8d07780eb81e8c4a373c3b49932df3" kindref="member">GetData</ref>(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>rSeqView,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>tStart,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dLength);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_frame_i_channel_1a9e8d07780eb81e8c4a373c3b49932df3" kindref="member">GetData</ref>(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>rSeqView);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classtsa_1_1_frame_i_channel_1aaab838f283b44ecf0d52842e99406146" kindref="member">GetChannelList</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>fileName,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>gtime<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"></codeline>
+<codeline lineno="143"></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_frame_i_channel_1ae637a0e659963fa2ef3e5ab057d17509" kindref="member">SetStartTime</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>tStart);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_frame_i_channel_1a9e2483d3942bf13922ee4afa065f4da1" kindref="member">SetDataLength</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dLength);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_frame_i_channel_1a7ef54c22707b58caa5d4174dfccffc26" kindref="member">SetAutoIncrement</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>status);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_frame_i_channel_1aaca5759288add902732cc640633f17d4" kindref="member">PushFrVect</ref>(FrVect<sp/>*frv,<sp/><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref>&amp;<sp/>data,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>row,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>offset,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>slope);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_frame_i_channel_1a8049d4e90ebecce30c7f60573da7fe87" kindref="member">ReopenIfModified</ref>();</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161" refid="classtsa_1_1_frame_i_channel_1a252988d4bbef0e293be14f3637edc7ef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classtsa_1_1_frame_i_channel_1a252988d4bbef0e293be14f3637edc7ef" kindref="member">mFileName</ref>;</highlight></codeline>
+<codeline lineno="162" refid="classtsa_1_1_frame_i_channel_1aa679a81dbcec2ca8c7126d092de59651" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FrFile<sp/>*<ref refid="classtsa_1_1_frame_i_channel_1aa679a81dbcec2ca8c7126d092de59651" kindref="member">miFile</ref>;</highlight></codeline>
+<codeline lineno="163" refid="classtsa_1_1_frame_i_channel_1a7cc80840311ef703c68393f95b077f9a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classtsa_1_1_frame_i_channel_1a7cc80840311ef703c68393f95b077f9a" kindref="member">mChannelName</ref>;</highlight></codeline>
+<codeline lineno="164" refid="classtsa_1_1_frame_i_channel_1affbd1b60487a643f2bdec4875f4d3643" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_frame_i_channel_1affbd1b60487a643f2bdec4875f4d3643" kindref="member">mStartTime</ref>;</highlight></codeline>
+<codeline lineno="165" refid="classtsa_1_1_frame_i_channel_1a32e512e479d9f8eb1de5b7a4cfd53254" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_frame_i_channel_1a32e512e479d9f8eb1de5b7a4cfd53254" kindref="member">mDataLength</ref>;</highlight></codeline>
+<codeline lineno="166" refid="classtsa_1_1_frame_i_channel_1a12a55e4ea728e58b37c811fe93a7d774" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FrVect<sp/>*<ref refid="classtsa_1_1_frame_i_channel_1a12a55e4ea728e58b37c811fe93a7d774" kindref="member">mFrameVect</ref>;</highlight></codeline>
+<codeline lineno="167" refid="classtsa_1_1_frame_i_channel_1a90c8009f4280dfee6a8f61b97f246a25" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_frame_i_channel_1a90c8009f4280dfee6a8f61b97f246a25" kindref="member">mAutoIncrement</ref>;</highlight></codeline>
+<codeline lineno="168" refid="classtsa_1_1_frame_i_channel_1a7a643eb00f14d0bbd02f1b04e4e3ccdc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>time_t<sp/><ref refid="classtsa_1_1_frame_i_channel_1a7a643eb00f14d0bbd02f1b04e4e3ccdc" kindref="member">mLastModification</ref>;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"></codeline>
+<codeline lineno="182"></codeline>
+<codeline lineno="183"></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>end<sp/>namespace<sp/>tsa</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>__FRAMEICHANNEL_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIChannel.hpp"/>
+  </compounddef>
+</doxygen>

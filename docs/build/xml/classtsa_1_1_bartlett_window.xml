@@ -1,0 +1,245 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classtsa_1_1_bartlett_window" kind="class" language="C++" prot="public">
+    <compoundname>tsa::BartlettWindow</compoundname>
+    <basecompoundref refid="classtsa_1_1_base_window" prot="public" virt="non-virtual">tsa::BaseWindow</basecompoundref>
+    <includes refid="_bartlett_window_8hpp" local="no">BartlettWindow.hpp</includes>
+      <sectiondef kind="user-defined">
+      <header>Operations</header>
+      <memberdef kind="function" id="classtsa_1_1_bartlett_window_1a9bad239fb8fbaa295713c904e3d9d92e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void tsa::BartlettWindow::operator()</definition>
+        <argsstring>(SeqViewDouble &amp;v1)</argsstring>
+        <name>operator()</name>
+        <reimplements refid="classtsa_1_1_base_window_1a05d9edb95dc01840a1b2df78dfa3a8c1">operator()</reimplements>
+        <param>
+          <type><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref> &amp;</type>
+          <declname>v1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Apply the window to a given time view.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the time view </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/BartlettWindow.hpp" line="106" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/BartlettWindow.hpp" bodystart="106" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_bartlett_window_1a44d722552ca5281e28a28eadbed2099e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void tsa::BartlettWindow::operator()</definition>
+        <argsstring>(SeqViewDouble &amp;v1, SeqViewDouble &amp;v2)</argsstring>
+        <name>operator()</name>
+        <reimplements refid="classtsa_1_1_base_window_1afda50daa943527e09792b06e5ba69bcb">operator()</reimplements>
+        <param>
+          <type><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref> &amp;</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref> &amp;</type>
+          <declname>v2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Apply a window to an input view and write the results on a output view.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the input view </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the output view </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/BartlettWindow.hpp" line="128" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/BartlettWindow.hpp" bodystart="128" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_bartlett_window_1af63f6fdd7e2a10d77db1c7363e9963f5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void tsa::BartlettWindow::Resize</definition>
+        <argsstring>(unsigned int size)</argsstring>
+        <name>Resize</name>
+        <reimplements refid="classtsa_1_1_base_window_1a8a2a3425f2915762d50fa57dd0e04f22">Resize</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Resize the window dimension.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new size for the window </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/BartlettWindow.hpp" line="157" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/BartlettWindow.hpp" bodystart="157" bodyend="160"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtsa_1_1_bartlett_window_1a9177fa400660b6bdecfcecbfbffeedbe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>tsa::BartlettWindow::BartlettWindow</definition>
+        <argsstring>(int size)</argsstring>
+        <name>BartlettWindow</name>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the size of the window </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cached</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if the window must be preevaluated in a buffer </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/BartlettWindow.hpp" line="77" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/BartlettWindow.hpp" bodystart="77" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_bartlett_window_1a9da0612e0081996ef30439403a8a9c87" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>tsa::BartlettWindow::BartlettWindow</definition>
+        <argsstring>(int size, const std::string &amp;)</argsstring>
+        <name>BartlettWindow</name>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/BartlettWindow.hpp" line="83" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/BartlettWindow.hpp" bodystart="83" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_bartlett_window_1a45ce87f449514520865841aa3ac0abac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual tsa::BartlettWindow::~BartlettWindow</definition>
+        <argsstring>()</argsstring>
+        <name>~BartlettWindow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/BartlettWindow.hpp" line="92" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/BartlettWindow.hpp" bodystart="92" bodyend="94"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classtsa_1_1_bartlett_window_1afb3c6c8aa249db673da8dd625ffbb8a5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void tsa::BartlettWindow::FillWindow</definition>
+        <argsstring>()</argsstring>
+        <name>FillWindow</name>
+        <reimplements refid="classtsa_1_1_base_window_1aa74b29105d94caa521d308198e8e6643">FillWindow</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialize the window with the correct values, given its actual size. This is a pure virtual function, which is redefined by each window class. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/BartlettWindow.hpp" line="195" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/BartlettWindow.hpp" bodystart="195" bodyend="211"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Bartlett windowing algorithm. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="115">
+        <label>tsa::BaseWindow</label>
+        <link refid="classtsa_1_1_base_window"/>
+        <childnode refid="116" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="114">
+        <label>tsa::BartlettWindow</label>
+        <link refid="classtsa_1_1_bartlett_window"/>
+        <childnode refid="115" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="116">
+        <label>tsa::AlgoBase</label>
+        <link refid="classtsa_1_1_algo_base"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="118">
+        <label>tsa::BaseWindow</label>
+        <link refid="classtsa_1_1_base_window"/>
+        <childnode refid="119" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="117">
+        <label>tsa::BartlettWindow</label>
+        <link refid="classtsa_1_1_bartlett_window"/>
+        <childnode refid="118" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="119">
+        <label>tsa::AlgoBase</label>
+        <link refid="classtsa_1_1_algo_base"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/BartlettWindow.hpp" line="68" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/BartlettWindow.hpp" bodystart="68" bodyend="214"/>
+    <listofallmembers>
+      <member refid="classtsa_1_1_bartlett_window_1a9177fa400660b6bdecfcecbfbffeedbe" prot="public" virt="non-virtual"><scope>tsa::BartlettWindow</scope><name>BartlettWindow</name></member>
+      <member refid="classtsa_1_1_bartlett_window_1a9da0612e0081996ef30439403a8a9c87" prot="public" virt="non-virtual"><scope>tsa::BartlettWindow</scope><name>BartlettWindow</name></member>
+      <member refid="classtsa_1_1_base_window_1aea4dee45722299896913859d7b899d6f" prot="public" virt="non-virtual"><scope>tsa::BartlettWindow</scope><name>BaseWindow</name></member>
+      <member refid="classtsa_1_1_base_window_1a4bd3edc44a56103ac3f9112a55a10420" prot="public" virt="non-virtual"><scope>tsa::BartlettWindow</scope><name>CrossAverage</name></member>
+      <member refid="classtsa_1_1_base_window_1a31f86887f9ccbddd97bdca903c506606" prot="public" virt="non-virtual"><scope>tsa::BartlettWindow</scope><name>CrossSquareAverage</name></member>
+      <member refid="classtsa_1_1_base_window_1a15647cb85344c7e82ecde50675b07efd" prot="public" virt="non-virtual"><scope>tsa::BartlettWindow</scope><name>execute</name></member>
+      <member refid="classtsa_1_1_base_window_1a7e4b5f7d87bbe397332b4e506b0681c2" prot="public" virt="non-virtual"><scope>tsa::BartlettWindow</scope><name>execute</name></member>
+      <member refid="classtsa_1_1_base_window_1a34b933da998ba8137d0e0def7514d2cb" prot="public" virt="non-virtual"><scope>tsa::BartlettWindow</scope><name>execute</name></member>
+      <member refid="classtsa_1_1_base_window_1abadd3d1ef579310ab440a70d77e1d46d" prot="public" virt="non-virtual"><scope>tsa::BartlettWindow</scope><name>execute</name></member>
+      <member refid="classtsa_1_1_bartlett_window_1afb3c6c8aa249db673da8dd625ffbb8a5" prot="private" virt="virtual"><scope>tsa::BartlettWindow</scope><name>FillWindow</name></member>
+      <member refid="classtsa_1_1_base_window_1af3e45daf0401f06108c6634344532af8" prot="public" virt="non-virtual"><scope>tsa::BartlettWindow</scope><name>GetSize</name></member>
+      <member refid="classtsa_1_1_base_window_1a182b397ac3f3c409bfcb3a39d9c1575a" prot="protected" virt="non-virtual"><scope>tsa::BartlettWindow</scope><name>mWindow</name></member>
+      <member refid="classtsa_1_1_base_window_1ad6681a5cb29414a97af6be1ea7805a81" prot="public" virt="virtual"><scope>tsa::BartlettWindow</scope><name>Normalize</name></member>
+      <member refid="classtsa_1_1_bartlett_window_1a9bad239fb8fbaa295713c904e3d9d92e" prot="public" virt="virtual"><scope>tsa::BartlettWindow</scope><name>operator()</name></member>
+      <member refid="classtsa_1_1_bartlett_window_1a44d722552ca5281e28a28eadbed2099e" prot="public" virt="virtual"><scope>tsa::BartlettWindow</scope><name>operator()</name></member>
+      <member refid="classtsa_1_1_base_window_1ab9dc5e39e09701b60b9e160837f059df" prot="public" virt="non-virtual" ambiguityscope="tsa::BaseWindow::"><scope>tsa::BartlettWindow</scope><name>operator()</name></member>
+      <member refid="classtsa_1_1_bartlett_window_1af63f6fdd7e2a10d77db1c7363e9963f5" prot="public" virt="virtual"><scope>tsa::BartlettWindow</scope><name>Resize</name></member>
+      <member refid="classtsa_1_1_bartlett_window_1a45ce87f449514520865841aa3ac0abac" prot="public" virt="virtual"><scope>tsa::BartlettWindow</scope><name>~BartlettWindow</name></member>
+      <member refid="classtsa_1_1_base_window_1a0e99ffa3d84e8c7a05f7de437bfd6241" prot="public" virt="virtual"><scope>tsa::BartlettWindow</scope><name>~BaseWindow</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

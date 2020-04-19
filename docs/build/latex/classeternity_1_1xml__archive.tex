@@ -1,0 +1,418 @@
+\hypertarget{classeternity_1_1xml__archive}{}\section{eternity\+:\+:xml\+\_\+archive Class Reference}
+\label{classeternity_1_1xml__archive}\index{eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}}
+
+
+{\ttfamily \#include $<$persist\+\_\+xml.\+hpp$>$}
+
+Inheritance diagram for eternity\+:\+:xml\+\_\+archive\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classeternity_1_1xml__archive}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classeternity_1_1xml__archive_a51f29738b694efdf35486b8d6146f7c8}{xml\+\_\+archive} ()
+\item 
+\hyperlink{classeternity_1_1xml__archive_aed17710a8c15f35f9296d8805299f619}{$\sim$xml\+\_\+archive} ()
+\item 
+void \hyperlink{classeternity_1_1xml__archive_acd5ef97a7b6a113e64e735270634bea1}{open} (std\+::string file\+\_\+name, \hyperlink{classeternity_1_1archive_a8881f9ce8dbed2ee600c64b7925afef0}{opening\+\_\+mode} mode)
+\item 
+void \hyperlink{classeternity_1_1xml__archive_a27ed416689f3c9da532fcb91eed88217}{init} (std\+::string file\+\_\+name, bool loading)
+\item 
+void \hyperlink{classeternity_1_1xml__archive_a9f27feeac62aa0c3370ef9bcc60d86c6}{close} ()
+\item 
+void \hyperlink{classeternity_1_1xml__archive_a946e60b3bd83fc8cf65d740b4ebf63e0}{done} ()
+\item 
+void \hyperlink{classeternity_1_1xml__archive_a53816e7723e949920db15981b91fc3c1}{formatting} ()
+\begin{DoxyCompactList}\small\item\em Indent X\+ML output for nested class persistence. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classeternity_1_1xml__archive_a2e0b9a16f4b02b391967718f18175fc2}{read} (std\+::string key, int pos)
+\begin{DoxyCompactList}\small\item\em read (and return) a string with label key at position pos \end{DoxyCompactList}\item 
+void \hyperlink{classeternity_1_1xml__archive_ac8267a952c5c9a6caa8b434f80d1b9d2}{read} (std\+::string key, std\+::string \&value, int pos)
+\begin{DoxyCompactList}\small\item\em read (and put in value) a string with label key at position pos \end{DoxyCompactList}\item 
+void \hyperlink{classeternity_1_1xml__archive_adbfbeeb5a86ecf4bfccdba1054d9c50a}{read} (std\+::string key, int \&value, int pos)
+\begin{DoxyCompactList}\small\item\em read (and put in value) a int with label key at position pos \end{DoxyCompactList}\item 
+void \hyperlink{classeternity_1_1xml__archive_ab38c114af01eaffade2ab426f73a5575}{read} (std\+::string key, unsigned int \&value, int pos)
+\begin{DoxyCompactList}\small\item\em read (and put in value) a int with label key at position pos \end{DoxyCompactList}\item 
+void \hyperlink{classeternity_1_1xml__archive_a7b72b8361778f9a98bed64e9d23a760d}{read} (std\+::string key, float \&value, int pos)
+\begin{DoxyCompactList}\small\item\em read (and put in value) a float with label key at position pos \end{DoxyCompactList}\item 
+void \hyperlink{classeternity_1_1xml__archive_a83705b3ef651a402e886d73f288800ef}{read} (std\+::string key, double \&value, int pos)
+\begin{DoxyCompactList}\small\item\em read (and put in value) a double with label key at position pos \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\void \hyperlink{classeternity_1_1xml__archive_ab64fb09677fff76fb2935930f73365a6}{write} (std\+::string key, T value)
+\begin{DoxyCompactList}\small\item\em write the content of value \end{DoxyCompactList}\item 
+{\footnotesize template$<$class t $>$ }\\t $\ast$ \hyperlink{classeternity_1_1xml__archive_abc5b89e39007323cefb8855492795631}{get\+\_\+object} (std\+::string key, t $\ast$$\ast$pp\+Obj, int pos)
+\begin{DoxyCompactList}\small\item\em Retreive an object pointer from the X\+M\+Larchive. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class t $>$ }\\t $\ast$ \hyperlink{classeternity_1_1xml__archive_af471f4a154095b98cf33dacd984281df}{put\+\_\+object} (std\+::string key, t $\ast$p\+Obj)
+\begin{DoxyCompactList}\small\item\em Put an object pointer inside X\+M\+Larchive. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class t $>$ }\\void \hyperlink{classeternity_1_1xml__archive_a8b43bda52a9429f6b4d6e4501f42fe60}{get\+\_\+stack\+\_\+object} (std\+::string key, t \&Obj, int pos)
+\begin{DoxyCompactList}\small\item\em Retreive an object allocated to the stack from the X\+M\+Larchive. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class t $>$ }\\void \hyperlink{classeternity_1_1xml__archive_aac3817831029d6b510aead5978aac61e}{put\+\_\+stack\+\_\+object} (std\+::string key, t \&Obj)
+\begin{DoxyCompactList}\small\item\em Put an object allocated in the stack inside X\+M\+Larchive. \end{DoxyCompactList}\item 
+void \hyperlink{classeternity_1_1xml__archive_afe1ed2f449872273acc2ca8753d4057d}{make\+\_\+branch} (std\+::string name, std\+::map$<$ std\+::string, std\+::string $>$ attributes)
+\begin{DoxyCompactList}\small\item\em Create a node (e.\+g. $<$name attributes$>$=\char`\"{}\char`\"{}$>$) and set it as current one (enter branch) \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::string, std\+::string $>$ \hyperlink{classeternity_1_1xml__archive_a58b5909bfe2c5aba094633f5f38f850a}{enter\+\_\+branch} (std\+::string name, size\+\_\+t pos)
+\begin{DoxyCompactList}\small\item\em Enter in the node with tag equals to name and return its attributes. \end{DoxyCompactList}\item 
+void \hyperlink{classeternity_1_1xml__archive_ae15514bf5e058364d30faac3553e201b}{leave\+\_\+current\+\_\+branch} ()
+\begin{DoxyCompactList}\small\item\em Leaves current node and returns to its parent. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classeternity_1_1xml__scanner}{xml\+\_\+scanner} \hyperlink{classeternity_1_1xml__archive_a58de0ad659427698ef66be97b220b541}{m\+\_\+o\+Parser}
+\item 
+std\+::ofstream \hyperlink{classeternity_1_1xml__archive_af41ae6859a9ff2e6ec10e3a5e283d463}{m\+\_\+o\+Out}
+\item 
+size\+\_\+t \hyperlink{classeternity_1_1xml__archive_ad41bc7c410f309e3036987f6ff93d34f}{m\+\_\+n\+Tab}
+\item 
+\hyperlink{classeternity_1_1node}{node} $\ast$ \hyperlink{classeternity_1_1xml__archive_a5b0cb5a429e2b76d4b11bfccc7b91d8d}{m\+\_\+p\+Cur\+Element}
+\item 
+deque$<$ \hyperlink{classeternity_1_1node}{node} $\ast$ $>$ \hyperlink{classeternity_1_1xml__archive_a6a1cf4a481b75dd3c3688e1c0ae6e2bb}{m\+\_\+d\+Branches}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{classeternity_1_1xml__archive}{xml\+\_\+archive} is the specialization of class archive able to manage X\+ML persistence. 
+
+Definition at line 39 of file persist\+\_\+xml.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classeternity_1_1xml__archive_a51f29738b694efdf35486b8d6146f7c8}\label{classeternity_1_1xml__archive_a51f29738b694efdf35486b8d6146f7c8}} 
+\index{eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}!xml\+\_\+archive@{xml\+\_\+archive}}
+\index{xml\+\_\+archive@{xml\+\_\+archive}!eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}}
+\subsubsection{\texorpdfstring{xml\+\_\+archive()}{xml\_archive()}}
+{\footnotesize\ttfamily eternity\+::xml\+\_\+archive\+::xml\+\_\+archive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 42 of file persist\+\_\+xml.\+hpp.
+
+\mbox{\Hypertarget{classeternity_1_1xml__archive_aed17710a8c15f35f9296d8805299f619}\label{classeternity_1_1xml__archive_aed17710a8c15f35f9296d8805299f619}} 
+\index{eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}!````~xml\+\_\+archive@{$\sim$xml\+\_\+archive}}
+\index{````~xml\+\_\+archive@{$\sim$xml\+\_\+archive}!eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}}
+\subsubsection{\texorpdfstring{$\sim$xml\+\_\+archive()}{~xml\_archive()}}
+{\footnotesize\ttfamily eternity\+::xml\+\_\+archive\+::$\sim$xml\+\_\+archive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 46 of file persist\+\_\+xml.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classeternity_1_1xml__archive_a9f27feeac62aa0c3370ef9bcc60d86c6}\label{classeternity_1_1xml__archive_a9f27feeac62aa0c3370ef9bcc60d86c6}} 
+\index{eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}!close@{close}}
+\index{close@{close}!eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void eternity\+::xml\+\_\+archive\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+End the persistence operation, release the file handle and clear all allocated buffers. 
+
+Definition at line 68 of file persist\+\_\+xml.\+hpp.
+
+\mbox{\Hypertarget{classeternity_1_1xml__archive_a946e60b3bd83fc8cf65d740b4ebf63e0}\label{classeternity_1_1xml__archive_a946e60b3bd83fc8cf65d740b4ebf63e0}} 
+\index{eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}!done@{done}}
+\index{done@{done}!eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}}
+\subsubsection{\texorpdfstring{done()}{done()}}
+{\footnotesize\ttfamily void eternity\+::xml\+\_\+archive\+::done (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+End the persistence operation, release the file handle and clear all allocated buffers. Deprecated\+: use close instead 
+
+Definition at line 76 of file persist\+\_\+xml.\+hpp.
+
+\mbox{\Hypertarget{classeternity_1_1xml__archive_a58b5909bfe2c5aba094633f5f38f850a}\label{classeternity_1_1xml__archive_a58b5909bfe2c5aba094633f5f38f850a}} 
+\index{eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}!enter\+\_\+branch@{enter\+\_\+branch}}
+\index{enter\+\_\+branch@{enter\+\_\+branch}!eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}}
+\subsubsection{\texorpdfstring{enter\+\_\+branch()}{enter\_branch()}}
+{\footnotesize\ttfamily std\+::map$<$ std\+::string, std\+::string $>$ eternity\+::xml\+\_\+archive\+::enter\+\_\+branch (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{size\+\_\+t}]{pos }\end{DoxyParamCaption})}
+
+
+
+Enter in the node with tag equals to name and return its attributes. 
+
+
+
+Definition at line 143 of file persist\+\_\+xml.\+cpp.
+
+\mbox{\Hypertarget{classeternity_1_1xml__archive_a53816e7723e949920db15981b91fc3c1}\label{classeternity_1_1xml__archive_a53816e7723e949920db15981b91fc3c1}} 
+\index{eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}!formatting@{formatting}}
+\index{formatting@{formatting}!eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}}
+\subsubsection{\texorpdfstring{formatting()}{formatting()}}
+{\footnotesize\ttfamily void eternity\+::xml\+\_\+archive\+::formatting (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Indent X\+ML output for nested class persistence. 
+
+
+
+Definition at line 66 of file persist\+\_\+xml.\+cpp.
+
+\mbox{\Hypertarget{classeternity_1_1xml__archive_abc5b89e39007323cefb8855492795631}\label{classeternity_1_1xml__archive_abc5b89e39007323cefb8855492795631}} 
+\index{eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}!get\+\_\+object@{get\+\_\+object}}
+\index{get\+\_\+object@{get\+\_\+object}!eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}}
+\subsubsection{\texorpdfstring{get\+\_\+object()}{get\_object()}}
+{\footnotesize\ttfamily template$<$class t $>$ \\
+t $\ast$ eternity\+::xml\+\_\+archive\+::get\+\_\+object (\begin{DoxyParamCaption}\item[{std\+::string}]{key,  }\item[{t $\ast$$\ast$}]{pp\+Obj,  }\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+Retreive an object pointer from the X\+M\+Larchive. 
+
+
+
+Definition at line 162 of file persist\+\_\+xml.\+hpp.
+
+\mbox{\Hypertarget{classeternity_1_1xml__archive_a8b43bda52a9429f6b4d6e4501f42fe60}\label{classeternity_1_1xml__archive_a8b43bda52a9429f6b4d6e4501f42fe60}} 
+\index{eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}!get\+\_\+stack\+\_\+object@{get\+\_\+stack\+\_\+object}}
+\index{get\+\_\+stack\+\_\+object@{get\+\_\+stack\+\_\+object}!eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}}
+\subsubsection{\texorpdfstring{get\+\_\+stack\+\_\+object()}{get\_stack\_object()}}
+{\footnotesize\ttfamily template$<$class t $>$ \\
+void eternity\+::xml\+\_\+archive\+::get\+\_\+stack\+\_\+object (\begin{DoxyParamCaption}\item[{std\+::string}]{key,  }\item[{t \&}]{Obj,  }\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+Retreive an object allocated to the stack from the X\+M\+Larchive. 
+
+
+
+Definition at line 254 of file persist\+\_\+xml.\+hpp.
+
+\mbox{\Hypertarget{classeternity_1_1xml__archive_a27ed416689f3c9da532fcb91eed88217}\label{classeternity_1_1xml__archive_a27ed416689f3c9da532fcb91eed88217}} 
+\index{eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}!init@{init}}
+\index{init@{init}!eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void eternity\+::xml\+\_\+archive\+::init (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+\_\+name,  }\item[{bool}]{loading }\end{DoxyParamCaption})}
+
+initialize and X\+ML archive using the file named file\+\_\+name. If loading is true create the file. Anyway init update archive to begin persistence operations. Deprecated\+: use open instead 
+
+Definition at line 42 of file persist\+\_\+xml.\+cpp.
+
+\mbox{\Hypertarget{classeternity_1_1xml__archive_ae15514bf5e058364d30faac3553e201b}\label{classeternity_1_1xml__archive_ae15514bf5e058364d30faac3553e201b}} 
+\index{eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}!leave\+\_\+current\+\_\+branch@{leave\+\_\+current\+\_\+branch}}
+\index{leave\+\_\+current\+\_\+branch@{leave\+\_\+current\+\_\+branch}!eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}}
+\subsubsection{\texorpdfstring{leave\+\_\+current\+\_\+branch()}{leave\_current\_branch()}}
+{\footnotesize\ttfamily void eternity\+::xml\+\_\+archive\+::leave\+\_\+current\+\_\+branch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Leaves current node and returns to its parent. 
+
+
+
+Definition at line 158 of file persist\+\_\+xml.\+cpp.
+
+\mbox{\Hypertarget{classeternity_1_1xml__archive_afe1ed2f449872273acc2ca8753d4057d}\label{classeternity_1_1xml__archive_afe1ed2f449872273acc2ca8753d4057d}} 
+\index{eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}!make\+\_\+branch@{make\+\_\+branch}}
+\index{make\+\_\+branch@{make\+\_\+branch}!eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}}
+\subsubsection{\texorpdfstring{make\+\_\+branch()}{make\_branch()}}
+{\footnotesize\ttfamily void eternity\+::xml\+\_\+archive\+::make\+\_\+branch (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{std\+::map$<$ std\+::string, std\+::string $>$}]{attributes }\end{DoxyParamCaption})}
+
+
+
+Create a node (e.\+g. $<$name attributes$>$=\char`\"{}\char`\"{}$>$) and set it as current one (enter branch) 
+
+
+
+Definition at line 122 of file persist\+\_\+xml.\+cpp.
+
+\mbox{\Hypertarget{classeternity_1_1xml__archive_acd5ef97a7b6a113e64e735270634bea1}\label{classeternity_1_1xml__archive_acd5ef97a7b6a113e64e735270634bea1}} 
+\index{eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}!open@{open}}
+\index{open@{open}!eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}}
+\subsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily void eternity\+::xml\+\_\+archive\+::open (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+\_\+name,  }\item[{\hyperlink{classeternity_1_1archive_a8881f9ce8dbed2ee600c64b7925afef0}{opening\+\_\+mode}}]{mode }\end{DoxyParamCaption})}
+
+initialize and X\+ML archive using the file named file\+\_\+name. If mode is load create the file. Anyway init update archive to begin persistence operations. 
+
+Definition at line 32 of file persist\+\_\+xml.\+cpp.
+
+\mbox{\Hypertarget{classeternity_1_1xml__archive_af471f4a154095b98cf33dacd984281df}\label{classeternity_1_1xml__archive_af471f4a154095b98cf33dacd984281df}} 
+\index{eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}!put\+\_\+object@{put\+\_\+object}}
+\index{put\+\_\+object@{put\+\_\+object}!eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}}
+\subsubsection{\texorpdfstring{put\+\_\+object()}{put\_object()}}
+{\footnotesize\ttfamily template$<$class t $>$ \\
+t $\ast$ eternity\+::xml\+\_\+archive\+::put\+\_\+object (\begin{DoxyParamCaption}\item[{std\+::string}]{key,  }\item[{t $\ast$}]{p\+Obj }\end{DoxyParamCaption})}
+
+
+
+Put an object pointer inside X\+M\+Larchive. 
+
+
+
+Definition at line 206 of file persist\+\_\+xml.\+hpp.
+
+\mbox{\Hypertarget{classeternity_1_1xml__archive_aac3817831029d6b510aead5978aac61e}\label{classeternity_1_1xml__archive_aac3817831029d6b510aead5978aac61e}} 
+\index{eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}!put\+\_\+stack\+\_\+object@{put\+\_\+stack\+\_\+object}}
+\index{put\+\_\+stack\+\_\+object@{put\+\_\+stack\+\_\+object}!eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}}
+\subsubsection{\texorpdfstring{put\+\_\+stack\+\_\+object()}{put\_stack\_object()}}
+{\footnotesize\ttfamily template$<$class t $>$ \\
+void eternity\+::xml\+\_\+archive\+::put\+\_\+stack\+\_\+object (\begin{DoxyParamCaption}\item[{std\+::string}]{key,  }\item[{t \&}]{Obj }\end{DoxyParamCaption})}
+
+
+
+Put an object allocated in the stack inside X\+M\+Larchive. 
+
+
+
+Definition at line 272 of file persist\+\_\+xml.\+hpp.
+
+\mbox{\Hypertarget{classeternity_1_1xml__archive_a2e0b9a16f4b02b391967718f18175fc2}\label{classeternity_1_1xml__archive_a2e0b9a16f4b02b391967718f18175fc2}} 
+\index{eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}!read@{read}}
+\index{read@{read}!eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}}
+\subsubsection{\texorpdfstring{read()}{read()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily std\+::string eternity\+::xml\+\_\+archive\+::read (\begin{DoxyParamCaption}\item[{std\+::string}]{key,  }\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+read (and return) a string with label key at position pos 
+
+read (and return) a string with label key at position pos deprecated, use \hyperlink{classeternity_1_1xml__archive_ac8267a952c5c9a6caa8b434f80d1b9d2}{read(std\+::string key, std\+::string \&value, int pos)} instead 
+
+Definition at line 72 of file persist\+\_\+xml.\+cpp.
+
+\mbox{\Hypertarget{classeternity_1_1xml__archive_ac8267a952c5c9a6caa8b434f80d1b9d2}\label{classeternity_1_1xml__archive_ac8267a952c5c9a6caa8b434f80d1b9d2}} 
+\index{eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}!read@{read}}
+\index{read@{read}!eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}}
+\subsubsection{\texorpdfstring{read()}{read()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily void eternity\+::xml\+\_\+archive\+::read (\begin{DoxyParamCaption}\item[{std\+::string}]{key,  }\item[{std\+::string \&}]{value,  }\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+read (and put in value) a string with label key at position pos 
+
+
+
+Definition at line 88 of file persist\+\_\+xml.\+cpp.
+
+\mbox{\Hypertarget{classeternity_1_1xml__archive_adbfbeeb5a86ecf4bfccdba1054d9c50a}\label{classeternity_1_1xml__archive_adbfbeeb5a86ecf4bfccdba1054d9c50a}} 
+\index{eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}!read@{read}}
+\index{read@{read}!eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}}
+\subsubsection{\texorpdfstring{read()}{read()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily void eternity\+::xml\+\_\+archive\+::read (\begin{DoxyParamCaption}\item[{std\+::string}]{key,  }\item[{int \&}]{value,  }\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+read (and put in value) a int with label key at position pos 
+
+
+
+Definition at line 94 of file persist\+\_\+xml.\+cpp.
+
+\mbox{\Hypertarget{classeternity_1_1xml__archive_ab38c114af01eaffade2ab426f73a5575}\label{classeternity_1_1xml__archive_ab38c114af01eaffade2ab426f73a5575}} 
+\index{eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}!read@{read}}
+\index{read@{read}!eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}}
+\subsubsection{\texorpdfstring{read()}{read()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily void eternity\+::xml\+\_\+archive\+::read (\begin{DoxyParamCaption}\item[{std\+::string}]{key,  }\item[{unsigned int \&}]{value,  }\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+read (and put in value) a int with label key at position pos 
+
+
+
+Definition at line 101 of file persist\+\_\+xml.\+cpp.
+
+\mbox{\Hypertarget{classeternity_1_1xml__archive_a7b72b8361778f9a98bed64e9d23a760d}\label{classeternity_1_1xml__archive_a7b72b8361778f9a98bed64e9d23a760d}} 
+\index{eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}!read@{read}}
+\index{read@{read}!eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}}
+\subsubsection{\texorpdfstring{read()}{read()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily void eternity\+::xml\+\_\+archive\+::read (\begin{DoxyParamCaption}\item[{std\+::string}]{key,  }\item[{float \&}]{value,  }\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+read (and put in value) a float with label key at position pos 
+
+
+
+Definition at line 108 of file persist\+\_\+xml.\+cpp.
+
+\mbox{\Hypertarget{classeternity_1_1xml__archive_a83705b3ef651a402e886d73f288800ef}\label{classeternity_1_1xml__archive_a83705b3ef651a402e886d73f288800ef}} 
+\index{eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}!read@{read}}
+\index{read@{read}!eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}}
+\subsubsection{\texorpdfstring{read()}{read()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily void eternity\+::xml\+\_\+archive\+::read (\begin{DoxyParamCaption}\item[{std\+::string}]{key,  }\item[{double \&}]{value,  }\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+read (and put in value) a double with label key at position pos 
+
+
+
+Definition at line 115 of file persist\+\_\+xml.\+cpp.
+
+\mbox{\Hypertarget{classeternity_1_1xml__archive_ab64fb09677fff76fb2935930f73365a6}\label{classeternity_1_1xml__archive_ab64fb09677fff76fb2935930f73365a6}} 
+\index{eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}!write@{write}}
+\index{write@{write}!eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void eternity\+::xml\+\_\+archive\+::write (\begin{DoxyParamCaption}\item[{std\+::string}]{key,  }\item[{T}]{value }\end{DoxyParamCaption})}
+
+
+
+write the content of value 
+
+
+
+Definition at line 151 of file persist\+\_\+xml.\+hpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classeternity_1_1xml__archive_a6a1cf4a481b75dd3c3688e1c0ae6e2bb}\label{classeternity_1_1xml__archive_a6a1cf4a481b75dd3c3688e1c0ae6e2bb}} 
+\index{eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}!m\+\_\+d\+Branches@{m\+\_\+d\+Branches}}
+\index{m\+\_\+d\+Branches@{m\+\_\+d\+Branches}!eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}}
+\subsubsection{\texorpdfstring{m\+\_\+d\+Branches}{m\_dBranches}}
+{\footnotesize\ttfamily deque$<$\hyperlink{classeternity_1_1node}{node}$\ast$$>$ eternity\+::xml\+\_\+archive\+::m\+\_\+d\+Branches\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 146 of file persist\+\_\+xml.\+hpp.
+
+\mbox{\Hypertarget{classeternity_1_1xml__archive_ad41bc7c410f309e3036987f6ff93d34f}\label{classeternity_1_1xml__archive_ad41bc7c410f309e3036987f6ff93d34f}} 
+\index{eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}!m\+\_\+n\+Tab@{m\+\_\+n\+Tab}}
+\index{m\+\_\+n\+Tab@{m\+\_\+n\+Tab}!eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}}
+\subsubsection{\texorpdfstring{m\+\_\+n\+Tab}{m\_nTab}}
+{\footnotesize\ttfamily size\+\_\+t eternity\+::xml\+\_\+archive\+::m\+\_\+n\+Tab\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 144 of file persist\+\_\+xml.\+hpp.
+
+\mbox{\Hypertarget{classeternity_1_1xml__archive_af41ae6859a9ff2e6ec10e3a5e283d463}\label{classeternity_1_1xml__archive_af41ae6859a9ff2e6ec10e3a5e283d463}} 
+\index{eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}!m\+\_\+o\+Out@{m\+\_\+o\+Out}}
+\index{m\+\_\+o\+Out@{m\+\_\+o\+Out}!eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}}
+\subsubsection{\texorpdfstring{m\+\_\+o\+Out}{m\_oOut}}
+{\footnotesize\ttfamily std\+::ofstream eternity\+::xml\+\_\+archive\+::m\+\_\+o\+Out\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 143 of file persist\+\_\+xml.\+hpp.
+
+\mbox{\Hypertarget{classeternity_1_1xml__archive_a58de0ad659427698ef66be97b220b541}\label{classeternity_1_1xml__archive_a58de0ad659427698ef66be97b220b541}} 
+\index{eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}!m\+\_\+o\+Parser@{m\+\_\+o\+Parser}}
+\index{m\+\_\+o\+Parser@{m\+\_\+o\+Parser}!eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}}
+\subsubsection{\texorpdfstring{m\+\_\+o\+Parser}{m\_oParser}}
+{\footnotesize\ttfamily \hyperlink{classeternity_1_1xml__scanner}{xml\+\_\+scanner} eternity\+::xml\+\_\+archive\+::m\+\_\+o\+Parser\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 142 of file persist\+\_\+xml.\+hpp.
+
+\mbox{\Hypertarget{classeternity_1_1xml__archive_a5b0cb5a429e2b76d4b11bfccc7b91d8d}\label{classeternity_1_1xml__archive_a5b0cb5a429e2b76d4b11bfccc7b91d8d}} 
+\index{eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}!m\+\_\+p\+Cur\+Element@{m\+\_\+p\+Cur\+Element}}
+\index{m\+\_\+p\+Cur\+Element@{m\+\_\+p\+Cur\+Element}!eternity\+::xml\+\_\+archive@{eternity\+::xml\+\_\+archive}}
+\subsubsection{\texorpdfstring{m\+\_\+p\+Cur\+Element}{m\_pCurElement}}
+{\footnotesize\ttfamily \hyperlink{classeternity_1_1node}{node}$\ast$ eternity\+::xml\+\_\+archive\+::m\+\_\+p\+Cur\+Element\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 145 of file persist\+\_\+xml.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/include/eternity/\hyperlink{persist__xml_8hpp}{persist\+\_\+xml.\+hpp}\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/include/eternity/\hyperlink{persist__xml_8cpp}{persist\+\_\+xml.\+cpp}\end{DoxyCompactItemize}

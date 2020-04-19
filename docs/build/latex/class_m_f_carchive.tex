@@ -1,0 +1,117 @@
+\hypertarget{class_m_f_carchive}{}\section{M\+F\+Carchive Class Reference}
+\label{class_m_f_carchive}\index{M\+F\+Carchive@{M\+F\+Carchive}}
+
+
+{\ttfamily \#include $<$M\+F\+C\+Archive.\+h$>$}
+
+Inheritance diagram for M\+F\+Carchive\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_m_f_carchive}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual size\+\_\+t \hyperlink{class_m_f_carchive_a8c5191701a84b9a4d2812887cfc28651}{write} (const void $\ast$buffer, size\+\_\+t size, size\+\_\+t count)
+\begin{DoxyCompactList}\small\item\em write a buffer of a certain legnth n time in the archive \end{DoxyCompactList}\item 
+virtual size\+\_\+t \hyperlink{class_m_f_carchive_a175a083e8f81fe490714be920539f7b9}{read} (void $\ast$buffer, size\+\_\+t size, size\+\_\+t count)
+\begin{DoxyCompactList}\small\item\em read a buffer of a certain legnth n time in the archive \end{DoxyCompactList}\item 
+\hyperlink{class_m_f_carchive_adf62fabd21e51cf0f9e1a50fc0367201}{M\+F\+Carchive} (Carchive \&ar)
+\item 
+virtual \hyperlink{class_m_f_carchive_aa328aff9303e279909cc3855019fdd73}{$\sim$\+M\+F\+Carchive} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Carchive \& \hyperlink{class_m_f_carchive_a57d8f21676284f6004ce3ca11b573c05}{m\+\_\+ar}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 36 of file M\+F\+C\+Archive.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_m_f_carchive_adf62fabd21e51cf0f9e1a50fc0367201}\label{class_m_f_carchive_adf62fabd21e51cf0f9e1a50fc0367201}} 
+\index{M\+F\+Carchive@{M\+F\+Carchive}!M\+F\+Carchive@{M\+F\+Carchive}}
+\index{M\+F\+Carchive@{M\+F\+Carchive}!M\+F\+Carchive@{M\+F\+Carchive}}
+\subsubsection{\texorpdfstring{M\+F\+Carchive()}{MFCarchive()}}
+{\footnotesize\ttfamily M\+F\+Carchive\+::\+M\+F\+Carchive (\begin{DoxyParamCaption}\item[{Carchive \&}]{ar }\end{DoxyParamCaption})}
+
+
+
+Definition at line 39 of file M\+F\+C\+Archive.\+cpp.
+
+\mbox{\Hypertarget{class_m_f_carchive_aa328aff9303e279909cc3855019fdd73}\label{class_m_f_carchive_aa328aff9303e279909cc3855019fdd73}} 
+\index{M\+F\+Carchive@{M\+F\+Carchive}!````~M\+F\+Carchive@{$\sim$\+M\+F\+Carchive}}
+\index{````~M\+F\+Carchive@{$\sim$\+M\+F\+Carchive}!M\+F\+Carchive@{M\+F\+Carchive}}
+\subsubsection{\texorpdfstring{$\sim$\+M\+F\+Carchive()}{~MFCarchive()}}
+{\footnotesize\ttfamily virtual M\+F\+Carchive\+::$\sim$\+M\+F\+Carchive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 43 of file M\+F\+C\+Archive.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_m_f_carchive_a175a083e8f81fe490714be920539f7b9}\label{class_m_f_carchive_a175a083e8f81fe490714be920539f7b9}} 
+\index{M\+F\+Carchive@{M\+F\+Carchive}!read@{read}}
+\index{read@{read}!M\+F\+Carchive@{M\+F\+Carchive}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily size\+\_\+t M\+F\+Carchive\+::read (\begin{DoxyParamCaption}\item[{void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size,  }\item[{size\+\_\+t}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+read a buffer of a certain legnth n time in the archive 
+
+
+
+Implements \hyperlink{classeternity_1_1bin__archive_a5d67b032541f5a1e104d2fcd0eaa7a55}{eternity\+::bin\+\_\+archive}.
+
+
+
+Definition at line 49 of file M\+F\+C\+Archive.\+cpp.
+
+\mbox{\Hypertarget{class_m_f_carchive_a8c5191701a84b9a4d2812887cfc28651}\label{class_m_f_carchive_a8c5191701a84b9a4d2812887cfc28651}} 
+\index{M\+F\+Carchive@{M\+F\+Carchive}!write@{write}}
+\index{write@{write}!M\+F\+Carchive@{M\+F\+Carchive}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily size\+\_\+t M\+F\+Carchive\+::write (\begin{DoxyParamCaption}\item[{const void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size,  }\item[{size\+\_\+t}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+write a buffer of a certain legnth n time in the archive 
+
+
+
+Implements \hyperlink{classeternity_1_1bin__archive_acbe041b0815f2721ee18ad042557b14e}{eternity\+::bin\+\_\+archive}.
+
+
+
+Definition at line 44 of file M\+F\+C\+Archive.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_m_f_carchive_a57d8f21676284f6004ce3ca11b573c05}\label{class_m_f_carchive_a57d8f21676284f6004ce3ca11b573c05}} 
+\index{M\+F\+Carchive@{M\+F\+Carchive}!m\+\_\+ar@{m\+\_\+ar}}
+\index{m\+\_\+ar@{m\+\_\+ar}!M\+F\+Carchive@{M\+F\+Carchive}}
+\subsubsection{\texorpdfstring{m\+\_\+ar}{m\_ar}}
+{\footnotesize\ttfamily Carchive\& M\+F\+Carchive\+::m\+\_\+ar\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 46 of file M\+F\+C\+Archive.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/include/eternity/\hyperlink{_m_f_c_archive_8h}{M\+F\+C\+Archive.\+h}\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/include/eternity/mfc/\hyperlink{_m_f_c_archive_8cpp}{M\+F\+C\+Archive.\+cpp}\end{DoxyCompactItemize}

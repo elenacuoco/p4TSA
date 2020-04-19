@@ -1,0 +1,283 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classtsa_1_1_kaiser_window" kind="class" language="C++" prot="public">
+    <compoundname>tsa::KaiserWindow</compoundname>
+    <basecompoundref refid="classtsa_1_1_base_window" prot="public" virt="non-virtual">tsa::BaseWindow</basecompoundref>
+    <includes refid="_kaiser_window_8hpp" local="no">KaiserWindow.hpp</includes>
+      <sectiondef kind="user-defined">
+      <header>Operations</header>
+      <memberdef kind="function" id="classtsa_1_1_kaiser_window_1a02d18a272d16d54fa4f7c9e8b227356e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void tsa::KaiserWindow::operator()</definition>
+        <argsstring>(SeqViewDouble &amp;v1)</argsstring>
+        <name>operator()</name>
+        <reimplements refid="classtsa_1_1_base_window_1a05d9edb95dc01840a1b2df78dfa3a8c1">operator()</reimplements>
+        <param>
+          <type><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref> &amp;</type>
+          <declname>v1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Apply the window to a given time view.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the time view </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/KaiserWindow.hpp" line="118" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/KaiserWindow.hpp" bodystart="118" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_kaiser_window_1a94b99f1c961eadad783e44ccce9629e7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void tsa::KaiserWindow::operator()</definition>
+        <argsstring>(SeqViewDouble &amp;v1, SeqViewDouble &amp;v2)</argsstring>
+        <name>operator()</name>
+        <reimplements refid="classtsa_1_1_base_window_1afda50daa943527e09792b06e5ba69bcb">operator()</reimplements>
+        <param>
+          <type><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref> &amp;</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref> &amp;</type>
+          <declname>v2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Apply a window to an input view and write the results on a output view.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the input view </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the output view </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/KaiserWindow.hpp" line="140" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/KaiserWindow.hpp" bodystart="140" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_kaiser_window_1ae573c5ab979c3292d10feddc5180b6b4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void tsa::KaiserWindow::Resize</definition>
+        <argsstring>(unsigned int size)</argsstring>
+        <name>Resize</name>
+        <reimplements refid="classtsa_1_1_base_window_1a8a2a3425f2915762d50fa57dd0e04f22">Resize</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Resize the window dimension.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new size for the window </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/KaiserWindow.hpp" line="169" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/KaiserWindow.hpp" bodystart="169" bodyend="172"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Getters</header>
+      <memberdef kind="function" id="classtsa_1_1_kaiser_window_1a12dbee6e0639e3f8b7bc1191c46d9798" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double tsa::KaiserWindow::operator()</definition>
+        <argsstring>(int i)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the value of the window at a given index.</para><para><simplesect kind="return"><para>the value of the window at the given plage </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/KaiserWindow.hpp" line="188" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/KaiserWindow.hpp" bodystart="188" bodyend="190"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtsa_1_1_kaiser_window_1a92c5708ea950eaf9845b13f2272cf43f" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double tsa::KaiserWindow::mAlpha</definition>
+        <argsstring></argsstring>
+        <name>mAlpha</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/KaiserWindow.hpp" line="209" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/KaiserWindow.hpp" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtsa_1_1_kaiser_window_1a1435f80a21b198c05d60be076fa152b1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>tsa::KaiserWindow::KaiserWindow</definition>
+        <argsstring>(int size)</argsstring>
+        <name>KaiserWindow</name>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the size of the window </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cached</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if the window must be preevaluated in a buffer </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/KaiserWindow.hpp" line="86" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/KaiserWindow.hpp" bodystart="86" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_kaiser_window_1ae1de2ef14d0c6b80161d0456502b4753" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>tsa::KaiserWindow::KaiserWindow</definition>
+        <argsstring>(int size, const std::string &amp;par)</argsstring>
+        <name>KaiserWindow</name>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>par</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/KaiserWindow.hpp" line="93" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/KaiserWindow.hpp" bodystart="93" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_kaiser_window_1a98965a07384b404238a53bf9d66e8c77" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual tsa::KaiserWindow::~KaiserWindow</definition>
+        <argsstring>()</argsstring>
+        <name>~KaiserWindow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/KaiserWindow.hpp" line="104" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/KaiserWindow.hpp" bodystart="104" bodyend="106"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classtsa_1_1_kaiser_window_1a4799ed39290a058eea9d44df73f764ea" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void tsa::KaiserWindow::FillWindow</definition>
+        <argsstring>()</argsstring>
+        <name>FillWindow</name>
+        <reimplements refid="classtsa_1_1_base_window_1aa74b29105d94caa521d308198e8e6643">FillWindow</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialize the window with the correct values, given its actual size. This is a pure virtual function, which is redefined by each window class. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/KaiserWindow.hpp" line="217" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/KaiserWindow.hpp" bodystart="217" bodyend="232"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Kaiser windowing algorithm Harris, F. J. &quot;On the Use of Windows for Harmonic Analysis with the Discrete Fourier Transform.&quot; Proceedings of the IEEE. Vol. 66 (January 1978). pp. 66-67. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="295">
+        <label>tsa::BaseWindow</label>
+        <link refid="classtsa_1_1_base_window"/>
+        <childnode refid="296" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="294">
+        <label>tsa::KaiserWindow</label>
+        <link refid="classtsa_1_1_kaiser_window"/>
+        <childnode refid="295" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="296">
+        <label>tsa::AlgoBase</label>
+        <link refid="classtsa_1_1_algo_base"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="298">
+        <label>tsa::BaseWindow</label>
+        <link refid="classtsa_1_1_base_window"/>
+        <childnode refid="299" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="297">
+        <label>tsa::KaiserWindow</label>
+        <link refid="classtsa_1_1_kaiser_window"/>
+        <childnode refid="298" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="299">
+        <label>tsa::AlgoBase</label>
+        <link refid="classtsa_1_1_algo_base"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/KaiserWindow.hpp" line="77" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/KaiserWindow.hpp" bodystart="77" bodyend="235"/>
+    <listofallmembers>
+      <member refid="classtsa_1_1_base_window_1aea4dee45722299896913859d7b899d6f" prot="public" virt="non-virtual"><scope>tsa::KaiserWindow</scope><name>BaseWindow</name></member>
+      <member refid="classtsa_1_1_base_window_1a4bd3edc44a56103ac3f9112a55a10420" prot="public" virt="non-virtual"><scope>tsa::KaiserWindow</scope><name>CrossAverage</name></member>
+      <member refid="classtsa_1_1_base_window_1a31f86887f9ccbddd97bdca903c506606" prot="public" virt="non-virtual"><scope>tsa::KaiserWindow</scope><name>CrossSquareAverage</name></member>
+      <member refid="classtsa_1_1_base_window_1a15647cb85344c7e82ecde50675b07efd" prot="public" virt="non-virtual"><scope>tsa::KaiserWindow</scope><name>execute</name></member>
+      <member refid="classtsa_1_1_base_window_1a7e4b5f7d87bbe397332b4e506b0681c2" prot="public" virt="non-virtual"><scope>tsa::KaiserWindow</scope><name>execute</name></member>
+      <member refid="classtsa_1_1_base_window_1a34b933da998ba8137d0e0def7514d2cb" prot="public" virt="non-virtual"><scope>tsa::KaiserWindow</scope><name>execute</name></member>
+      <member refid="classtsa_1_1_base_window_1abadd3d1ef579310ab440a70d77e1d46d" prot="public" virt="non-virtual"><scope>tsa::KaiserWindow</scope><name>execute</name></member>
+      <member refid="classtsa_1_1_kaiser_window_1a4799ed39290a058eea9d44df73f764ea" prot="private" virt="virtual"><scope>tsa::KaiserWindow</scope><name>FillWindow</name></member>
+      <member refid="classtsa_1_1_base_window_1af3e45daf0401f06108c6634344532af8" prot="public" virt="non-virtual"><scope>tsa::KaiserWindow</scope><name>GetSize</name></member>
+      <member refid="classtsa_1_1_kaiser_window_1a1435f80a21b198c05d60be076fa152b1" prot="public" virt="non-virtual"><scope>tsa::KaiserWindow</scope><name>KaiserWindow</name></member>
+      <member refid="classtsa_1_1_kaiser_window_1ae1de2ef14d0c6b80161d0456502b4753" prot="public" virt="non-virtual"><scope>tsa::KaiserWindow</scope><name>KaiserWindow</name></member>
+      <member refid="classtsa_1_1_kaiser_window_1a92c5708ea950eaf9845b13f2272cf43f" prot="private" virt="non-virtual"><scope>tsa::KaiserWindow</scope><name>mAlpha</name></member>
+      <member refid="classtsa_1_1_base_window_1a182b397ac3f3c409bfcb3a39d9c1575a" prot="protected" virt="non-virtual"><scope>tsa::KaiserWindow</scope><name>mWindow</name></member>
+      <member refid="classtsa_1_1_base_window_1ad6681a5cb29414a97af6be1ea7805a81" prot="public" virt="virtual"><scope>tsa::KaiserWindow</scope><name>Normalize</name></member>
+      <member refid="classtsa_1_1_kaiser_window_1a02d18a272d16d54fa4f7c9e8b227356e" prot="public" virt="virtual"><scope>tsa::KaiserWindow</scope><name>operator()</name></member>
+      <member refid="classtsa_1_1_kaiser_window_1a94b99f1c961eadad783e44ccce9629e7" prot="public" virt="virtual"><scope>tsa::KaiserWindow</scope><name>operator()</name></member>
+      <member refid="classtsa_1_1_kaiser_window_1a12dbee6e0639e3f8b7bc1191c46d9798" prot="public" virt="non-virtual"><scope>tsa::KaiserWindow</scope><name>operator()</name></member>
+      <member refid="classtsa_1_1_kaiser_window_1ae573c5ab979c3292d10feddc5180b6b4" prot="public" virt="virtual"><scope>tsa::KaiserWindow</scope><name>Resize</name></member>
+      <member refid="classtsa_1_1_base_window_1a0e99ffa3d84e8c7a05f7de437bfd6241" prot="public" virt="virtual"><scope>tsa::KaiserWindow</scope><name>~BaseWindow</name></member>
+      <member refid="classtsa_1_1_kaiser_window_1a98965a07384b404238a53bf9d66e8c77" prot="public" virt="virtual"><scope>tsa::KaiserWindow</scope><name>~KaiserWindow</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

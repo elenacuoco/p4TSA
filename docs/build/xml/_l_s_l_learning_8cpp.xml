@@ -1,0 +1,465 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_l_s_l_learning_8cpp" kind="file" language="C++">
+    <compoundname>LSLLearning.cpp</compoundname>
+    <includes refid="_l_s_l_learning_8hpp" local="no">LSLLearning.hpp</includes>
+    <incdepgraph>
+      <node id="5780">
+        <label>tsaTraits.hpp</label>
+        <link refid="tsa_traits_8hpp"/>
+        <childnode refid="5781" relation="include">
+        </childnode>
+      </node>
+      <node id="5760">
+        <label>eternity.hpp</label>
+        <link refid="eternity_8hpp"/>
+        <childnode refid="5761" relation="include">
+        </childnode>
+        <childnode refid="5764" relation="include">
+        </childnode>
+        <childnode refid="5769" relation="include">
+        </childnode>
+        <childnode refid="5773" relation="include">
+        </childnode>
+      </node>
+      <node id="5766">
+        <label>stdlib.h</label>
+      </node>
+      <node id="5753">
+        <label>stdexcept</label>
+      </node>
+      <node id="5775">
+        <label>tsaTypes.hpp</label>
+        <link refid="tsa_types_8hpp"/>
+        <childnode refid="5755" relation="include">
+        </childnode>
+        <childnode refid="5756" relation="include">
+        </childnode>
+        <childnode refid="5776" relation="include">
+        </childnode>
+        <childnode refid="5757" relation="include">
+        </childnode>
+        <childnode refid="5760" relation="include">
+        </childnode>
+      </node>
+      <node id="5758">
+        <label>string</label>
+      </node>
+      <node id="5761">
+        <label>eternity/dynamic.hpp</label>
+        <link refid="dynamic_8hpp"/>
+        <childnode refid="5762" relation="include">
+        </childnode>
+        <childnode refid="5763" relation="include">
+        </childnode>
+        <childnode refid="5758" relation="include">
+        </childnode>
+      </node>
+      <node id="5771">
+        <label>map</label>
+      </node>
+      <node id="5777">
+        <label>tsaLog.hpp</label>
+        <link refid="tsa_log_8hpp"/>
+        <childnode refid="5754" relation="include">
+        </childnode>
+        <childnode refid="5755" relation="include">
+        </childnode>
+        <childnode refid="5778" relation="include">
+        </childnode>
+      </node>
+      <node id="5755">
+        <label>fstream</label>
+      </node>
+      <node id="5770">
+        <label>xmlscanner.hpp</label>
+        <link refid="xmlscanner_8hpp"/>
+        <childnode refid="5765" relation="include">
+        </childnode>
+        <childnode refid="5766" relation="include">
+        </childnode>
+        <childnode refid="5767" relation="include">
+        </childnode>
+        <childnode refid="5771" relation="include">
+        </childnode>
+        <childnode refid="5768" relation="include">
+        </childnode>
+        <childnode refid="5755" relation="include">
+        </childnode>
+        <childnode refid="5758" relation="include">
+        </childnode>
+        <childnode refid="5754" relation="include">
+        </childnode>
+      </node>
+      <node id="5759">
+        <label>tsaSerialize.hpp</label>
+        <link refid="tsa_serialize_8hpp"/>
+        <childnode refid="5753" relation="include">
+        </childnode>
+        <childnode refid="5754" relation="include">
+        </childnode>
+        <childnode refid="5755" relation="include">
+        </childnode>
+        <childnode refid="5760" relation="include">
+        </childnode>
+        <childnode refid="5775" relation="include">
+        </childnode>
+      </node>
+      <node id="5784">
+        <label>fparser.hpp</label>
+        <link refid="fparser_8hpp"/>
+        <childnode refid="5758" relation="include">
+        </childnode>
+        <childnode refid="5771" relation="include">
+        </childnode>
+        <childnode refid="5767" relation="include">
+        </childnode>
+      </node>
+      <node id="5752">
+        <label>AlgoBase.hpp</label>
+        <link refid="_algo_base_8hpp"/>
+        <childnode refid="5753" relation="include">
+        </childnode>
+        <childnode refid="5754" relation="include">
+        </childnode>
+        <childnode refid="5755" relation="include">
+        </childnode>
+        <childnode refid="5756" relation="include">
+        </childnode>
+        <childnode refid="5757" relation="include">
+        </childnode>
+        <childnode refid="5758" relation="include">
+        </childnode>
+        <childnode refid="5759" relation="include">
+        </childnode>
+        <childnode refid="5775" relation="include">
+        </childnode>
+        <childnode refid="5777" relation="include">
+        </childnode>
+        <childnode refid="5779" relation="include">
+        </childnode>
+        <childnode refid="5785" relation="include">
+        </childnode>
+        <childnode refid="5787" relation="include">
+        </childnode>
+      </node>
+      <node id="5764">
+        <label>eternity/persist.hpp</label>
+        <link refid="persist_8hpp"/>
+        <childnode refid="5761" relation="include">
+        </childnode>
+        <childnode refid="5765" relation="include">
+        </childnode>
+        <childnode refid="5766" relation="include">
+        </childnode>
+        <childnode refid="5767" relation="include">
+        </childnode>
+        <childnode refid="5768" relation="include">
+        </childnode>
+        <childnode refid="5755" relation="include">
+        </childnode>
+      </node>
+      <node id="5783">
+        <label>string.h</label>
+      </node>
+      <node id="5763">
+        <label>typeinfo</label>
+      </node>
+      <node id="5757">
+        <label>boost/numeric/ublas/io.hpp</label>
+      </node>
+      <node id="5778">
+        <label>unistd.h</label>
+      </node>
+      <node id="5750">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/LSLLearning.cpp</label>
+        <link refid="_l_s_l_learning_8cpp"/>
+        <childnode refid="5751" relation="include">
+        </childnode>
+      </node>
+      <node id="5782">
+        <label>tsaUtilityFunctions.hpp</label>
+        <link refid="tsa_utility_functions_8hpp"/>
+        <childnode refid="5783" relation="include">
+        </childnode>
+        <childnode refid="5784" relation="include">
+        </childnode>
+        <childnode refid="5781" relation="include">
+        </childnode>
+        <childnode refid="5755" relation="include">
+        </childnode>
+      </node>
+      <node id="5767">
+        <label>vector</label>
+      </node>
+      <node id="5779">
+        <label>BaseView.hpp</label>
+        <link refid="_base_view_8hpp"/>
+        <childnode refid="5771" relation="include">
+        </childnode>
+        <childnode refid="5758" relation="include">
+        </childnode>
+        <childnode refid="5775" relation="include">
+        </childnode>
+        <childnode refid="5780" relation="include">
+        </childnode>
+        <childnode refid="5782" relation="include">
+        </childnode>
+        <childnode refid="5759" relation="include">
+        </childnode>
+        <childnode refid="5777" relation="include">
+        </childnode>
+      </node>
+      <node id="5776">
+        <label>boost/numeric/ublas/matrix_proxy.hpp</label>
+      </node>
+      <node id="5751">
+        <label>LSLLearning.hpp</label>
+        <link refid="_l_s_l_learning_8hpp"/>
+        <childnode refid="5752" relation="include">
+        </childnode>
+        <childnode refid="5785" relation="include">
+        </childnode>
+        <childnode refid="5788" relation="include">
+        </childnode>
+      </node>
+      <node id="5774">
+        <label>sstream</label>
+      </node>
+      <node id="5786">
+        <label>FrameL.h</label>
+      </node>
+      <node id="5787">
+        <label>AlgoExceptions.hpp</label>
+        <link refid="_algo_exceptions_8hpp"/>
+        <childnode refid="5753" relation="include">
+        </childnode>
+        <childnode refid="5758" relation="include">
+        </childnode>
+      </node>
+      <node id="5785">
+        <label>SeqView.hpp</label>
+        <link refid="_seq_view_8hpp"/>
+        <childnode refid="5756" relation="include">
+        </childnode>
+        <childnode refid="5776" relation="include">
+        </childnode>
+        <childnode refid="5757" relation="include">
+        </childnode>
+        <childnode refid="5779" relation="include">
+        </childnode>
+        <childnode refid="5786" relation="include">
+        </childnode>
+      </node>
+      <node id="5765">
+        <label>math.h</label>
+      </node>
+      <node id="5756">
+        <label>boost/numeric/ublas/matrix.hpp</label>
+      </node>
+      <node id="5754">
+        <label>iostream</label>
+      </node>
+      <node id="5772">
+        <label>deque</label>
+      </node>
+      <node id="5788">
+        <label>LatticeView.hpp</label>
+        <link refid="_lattice_view_8hpp"/>
+        <childnode refid="5756" relation="include">
+        </childnode>
+        <childnode refid="5757" relation="include">
+        </childnode>
+        <childnode refid="5760" relation="include">
+        </childnode>
+        <childnode refid="5779" relation="include">
+        </childnode>
+      </node>
+      <node id="5769">
+        <label>eternity/persist_xml.hpp</label>
+        <link refid="persist__xml_8hpp"/>
+        <childnode refid="5764" relation="include">
+        </childnode>
+        <childnode refid="5770" relation="include">
+        </childnode>
+        <childnode refid="5772" relation="include">
+        </childnode>
+      </node>
+      <node id="5781">
+        <label>complex</label>
+      </node>
+      <node id="5773">
+        <label>eternity/algorithms.hpp</label>
+        <link refid="algorithms_8hpp"/>
+        <childnode refid="5764" relation="include">
+        </childnode>
+        <childnode refid="5769" relation="include">
+        </childnode>
+        <childnode refid="5770" relation="include">
+        </childnode>
+        <childnode refid="5774" relation="include">
+        </childnode>
+      </node>
+      <node id="5768">
+        <label>algorithm</label>
+      </node>
+      <node id="5762">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacetsa">tsa</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>C++<sp/>Implementation:<sp/>LSLLearning.cpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Description:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/>Elena<sp/>Cuoco<sp/>&lt;elena.cuoco@ego-gw.it&gt;,<sp/>(C)<sp/>2005</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Copyright:<sp/>See<sp/>COPYING<sp/>file<sp/>that<sp/>comes<sp/>with<sp/>this<sp/>distribution</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_l_s_l_learning_8hpp" kindref="compound">LSLLearning.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetsa" kindref="compound">tsa</ref><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="classtsa_1_1_l_s_l_learning_1ab1065fd9f61b44f25c4a9ee67e95dc1e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_l_learning_1ab1065fd9f61b44f25c4a9ee67e95dc1e" kindref="member">LSLLearning::LSLLearning</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Order,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sigma,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>lambda)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>:</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>mOrder(Order<sp/>+<sp/>1),</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>mSigma(sigma),</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>mLambda(lambda)<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_l_learning_1abc6dbb01c7f1a1b4c1d6ee5cb6ba14e8" kindref="member">mEF</ref>.resize(2,<sp/><ref refid="classtsa_1_1_l_s_l_learning_1ae1e400504ab5fc285b4b2d740e4bde72" kindref="member">mOrder</ref>);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_l_learning_1aee8f5369206276f3a7faaaaa048485fb" kindref="member">mEB</ref>.resize(2,<sp/><ref refid="classtsa_1_1_l_s_l_learning_1ae1e400504ab5fc285b4b2d740e4bde72" kindref="member">mOrder</ref>);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_l_learning_1a5cd2595571d70a64dfefbdd48dd96eb5" kindref="member">mEpf</ref>.resize(2,<sp/><ref refid="classtsa_1_1_l_s_l_learning_1ae1e400504ab5fc285b4b2d740e4bde72" kindref="member">mOrder</ref>);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_l_learning_1a4ccb655fdbbebb1a9875c6bc8238b373" kindref="member">mEpb</ref>.resize(2,<sp/><ref refid="classtsa_1_1_l_s_l_learning_1ae1e400504ab5fc285b4b2d740e4bde72" kindref="member">mOrder</ref>);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_l_learning_1ad651adf83f8b9e770446ccf7f41fe61d" kindref="member">mKf</ref>.resize(<ref refid="classtsa_1_1_l_s_l_learning_1ae1e400504ab5fc285b4b2d740e4bde72" kindref="member">mOrder</ref>);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_l_learning_1ac895dcbb7407c99df7c8703e27b53ca4" kindref="member">mKb</ref>.resize(<ref refid="classtsa_1_1_l_s_l_learning_1ae1e400504ab5fc285b4b2d740e4bde72" kindref="member">mOrder</ref>);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_l_learning_1a4dc069522ea6f00876e144b7c26a8056" kindref="member">mG</ref>.resize(<ref refid="classtsa_1_1_l_s_l_learning_1ae1e400504ab5fc285b4b2d740e4bde72" kindref="member">mOrder</ref>);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_l_learning_1ab1e86d5df54de8730402c123caccfd30" kindref="member">mF0</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>0;<sp/>k<sp/>&lt;<sp/><ref refid="classtsa_1_1_l_s_l_learning_1ae1e400504ab5fc285b4b2d740e4bde72" kindref="member">mOrder</ref>;<sp/>k++)<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_l_learning_1aee8f5369206276f3a7faaaaa048485fb" kindref="member">mEB</ref>(0,<sp/>k)<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_l_learning_1ad651adf83f8b9e770446ccf7f41fe61d" kindref="member">mKf</ref>(k)<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_l_learning_1ac895dcbb7407c99df7c8703e27b53ca4" kindref="member">mKb</ref>(k)<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_l_learning_1a4dc069522ea6f00876e144b7c26a8056" kindref="member">mG</ref>(k)<sp/>=<sp/>1.0;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_l_learning_1a5cd2595571d70a64dfefbdd48dd96eb5" kindref="member">mEpf</ref>(0,<sp/>k)<sp/>=<sp/>sigma;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_l_learning_1a4ccb655fdbbebb1a9875c6bc8238b373" kindref="member">mEpb</ref>(0,<sp/>k)<sp/>=<sp/>sigma;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_l_learning_1ad651adf83f8b9e770446ccf7f41fe61d" kindref="member">mKf</ref>(0)<sp/>=<sp/>-sigma;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_l_learning_1ac895dcbb7407c99df7c8703e27b53ca4" kindref="member">mKb</ref>(0)<sp/>=<sp/>-sigma;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="classtsa_1_1_l_s_l_learning_1aab97f819bb4e1537621d9e84ee0bf140" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_l_learning_1aab97f819bb4e1537621d9e84ee0bf140" kindref="member">LSLLearning::~LSLLearning</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="classtsa_1_1_l_s_l_learning_1ac703af8aec35bece47d8b5dd5da96125" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_l_s_l_learning_1ac703af8aec35bece47d8b5dd5da96125" kindref="member">LSLLearning::operator()</ref>(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>InputData,<sp/><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>WhitenedData)<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref>*<sp/>in<sp/>=<sp/>InputData.GetData();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref>*<sp/>out<sp/>=<sp/>WhitenedData.GetData();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((in-&gt;size1()<sp/>!=<sp/>out-&gt;size1())<sp/>||<sp/>(in-&gt;size2()<sp/>!=<sp/>out-&gt;size2()))<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out-&gt;resize(in-&gt;size1(),<sp/>in-&gt;size2());</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1a91d266348bcf69ab00c97a253b0ec790" kindref="member">LogWarning</ref>(</highlight><highlight class="stringliteral">&quot;LSLLearning:<sp/>resizing<sp/>output<sp/>view&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>r<sp/>=<sp/>0;<sp/>r<sp/>&lt;<sp/>in-&gt;size1();<sp/>r++)<sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_l_learning_1a9ec866ab1a8d8173e77519ce9f9855d5" kindref="member">execute</ref>(row(*in,<sp/>r),<sp/>row(*out,<sp/>r));</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WhitenedData.SetStart(InputData.GetStart());</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WhitenedData.SetSampling(InputData.GetSampling());</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="classtsa_1_1_l_s_l_learning_1a8a3c4b73d36808f940cd37fe8520d76f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_l_s_l_learning_1ac703af8aec35bece47d8b5dd5da96125" kindref="member">LSLLearning::operator()</ref>(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>InputData,<sp/><ref refid="classtsa_1_1_lattice_view" kindref="compound">LatticeView</ref>&amp;<sp/>LatView)<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref><sp/>*<sp/>in<sp/>=<sp/>InputData.GetData();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1a91d266348bcf69ab00c97a253b0ec790" kindref="member">LogWarning</ref>(</highlight><highlight class="stringliteral">&quot;LSLLearning:<sp/>the<sp/>input<sp/>data<sp/>have<sp/>been<sp/>overwritten&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>r<sp/>=<sp/>0;<sp/>r<sp/>&lt;<sp/>in-&gt;size1();<sp/>r++)<sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_l_learning_1a9ec866ab1a8d8173e77519ce9f9855d5" kindref="member">execute</ref>(row(*in,<sp/>r),<sp/>row(*in,<sp/>r));</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(LatView.<ref refid="classtsa_1_1_lattice_view_1a9aedf999a2129ae0b000ba6caded4b6b" kindref="member">GetOrder</ref>()<sp/>!=<sp/><ref refid="classtsa_1_1_l_s_l_learning_1ae442a68a9f2f455d86ce56342288381c" kindref="member">GetOrder</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LatView.<ref refid="classtsa_1_1_lattice_view_1a0d555a7ff35604537e4391d4debd2d9a" kindref="member">SetOrder</ref>(<ref refid="classtsa_1_1_l_s_l_learning_1ae442a68a9f2f455d86ce56342288381c" kindref="member">GetOrder</ref>());</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1a91d266348bcf69ab00c97a253b0ec790" kindref="member">LogWarning</ref>(</highlight><highlight class="stringliteral">&quot;LSLLearning:<sp/>resizing<sp/>Lattice<sp/>view<sp/>order&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;=<sp/><ref refid="classtsa_1_1_l_s_l_learning_1ae442a68a9f2f455d86ce56342288381c" kindref="member">GetOrder</ref>();<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LatView.<ref refid="classtsa_1_1_lattice_view_1a0e099a0196edb96d4e9265ea2901e6b9" kindref="member">SetParcorF</ref>(i,<sp/>-<ref refid="classtsa_1_1_l_s_l_learning_1acc051c6ae5281e916083fb80a21779e8" kindref="member">GetParcorForward</ref>(i));</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LatView.<ref refid="classtsa_1_1_lattice_view_1ae2bb756238fc6873839459097717f3dc" kindref="member">SetParcorB</ref>(i,<sp/>-<ref refid="classtsa_1_1_l_s_l_learning_1a276e9d2206da6c6ac89cdca1cd6c4560" kindref="member">GetParcorBackward</ref>(i));</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LatView.<ref refid="classtsa_1_1_lattice_view_1a5d40a6a9e27b0ede53e2735983a83c6e" kindref="member">SetErrorForward</ref>(i,<sp/><ref refid="classtsa_1_1_l_s_l_learning_1ae012adf2bd5b2540f1a757113968a0d4" kindref="member">GetErrorForward</ref>(<ref refid="classtsa_1_1_l_s_l_learning_1ab1e86d5df54de8730402c123caccfd30" kindref="member">mF0</ref>,<sp/>i));</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LatView.<ref refid="classtsa_1_1_lattice_view_1a80b37195a303625d69009cba7f8a0156" kindref="member">SetErrorBackward</ref>(i,<sp/><ref refid="classtsa_1_1_l_s_l_learning_1af7f7b4d2830f2bdd66ab8210ef104480" kindref="member">GetErrorBackward</ref>(<ref refid="classtsa_1_1_l_s_l_learning_1ab1e86d5df54de8730402c123caccfd30" kindref="member">mF0</ref>,<sp/>i));</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="classtsa_1_1_l_s_l_learning_1adaf7049997744cc383427c0c673549f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_l_s_l_learning_1ac703af8aec35bece47d8b5dd5da96125" kindref="member">LSLLearning::operator()</ref>(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>InputData,<sp/><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref>&amp;<sp/>Parcor)<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref><sp/>*<sp/>in<sp/>=<sp/>InputData.GetData();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1a91d266348bcf69ab00c97a253b0ec790" kindref="member">LogWarning</ref>(</highlight><highlight class="stringliteral">&quot;LSLLearning:<sp/>the<sp/>input<sp/>data<sp/>have<sp/>been<sp/>overwritten&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>r<sp/>=<sp/>0;<sp/>r<sp/>&lt;<sp/>in-&gt;size1();<sp/>r++)<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_l_learning_1a9ec866ab1a8d8173e77519ce9f9855d5" kindref="member">execute</ref>(row(*in,<sp/>r),<sp/>row(*in,<sp/>r));</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(Parcor.size()<sp/>!=<sp/>(<ref refid="classtsa_1_1_l_s_l_learning_1ae442a68a9f2f455d86ce56342288381c" kindref="member">GetOrder</ref>()<sp/>+<sp/>1))<sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Parcor.resize(<ref refid="classtsa_1_1_l_s_l_learning_1ae442a68a9f2f455d86ce56342288381c" kindref="member">GetOrder</ref>()<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1a91d266348bcf69ab00c97a253b0ec790" kindref="member">LogWarning</ref>(</highlight><highlight class="stringliteral">&quot;LSLLearning:<sp/>resizing<sp/>order<sp/>of<sp/>vector<sp/>Parcor&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>Parcor.size();<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Parcor(i)<sp/>=<sp/><ref refid="classtsa_1_1_l_s_l_learning_1acc051c6ae5281e916083fb80a21779e8" kindref="member">GetParcorForward</ref>(i);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="classtsa_1_1_l_s_l_learning_1a9ec866ab1a8d8173e77519ce9f9855d5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_l_s_l_learning_1a9ec866ab1a8d8173e77519ce9f9855d5" kindref="member">LSLLearning::execute</ref>(matrix_row&lt;Dmatrix&gt;<sp/>InputData,<sp/>matrix_row&lt;Dmatrix&gt;<sp/>OutputData)<sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>f_0<sp/>=<sp/><ref refid="classtsa_1_1_l_s_l_learning_1ab1e86d5df54de8730402c123caccfd30" kindref="member">mF0</ref>;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>f_1<sp/>=<sp/>1<sp/>-<sp/><ref refid="classtsa_1_1_l_s_l_learning_1ab1e86d5df54de8730402c123caccfd30" kindref="member">mF0</ref>;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*--Recursive<sp/>relation-----------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>End<sp/>=<sp/><ref refid="classtsa_1_1_l_s_l_learning_1ae1e400504ab5fc285b4b2d740e4bde72" kindref="member">mOrder</ref><sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>l<sp/>=<sp/>0;<sp/>l<sp/>&lt;<sp/>InputData.size();<sp/>l++)<sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_l_learning_1aee8f5369206276f3a7faaaaa048485fb" kindref="member">mEB</ref>(f_1,<sp/>0)<sp/>=<sp/>InputData(l);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_l_learning_1abc6dbb01c7f1a1b4c1d6ee5cb6ba14e8" kindref="member">mEF</ref>(f_1,<sp/>0)<sp/>=<sp/>InputData(l);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_l_learning_1a5cd2595571d70a64dfefbdd48dd96eb5" kindref="member">mEpf</ref>(f_1,<sp/>0)<sp/>=<sp/><ref refid="classtsa_1_1_l_s_l_learning_1a15b3df249118e9c6699a39a4b4add1db" kindref="member">mLambda</ref><sp/>*<sp/><ref refid="classtsa_1_1_l_s_l_learning_1a5cd2595571d70a64dfefbdd48dd96eb5" kindref="member">mEpf</ref>(f_0,<sp/>0)<sp/>+<sp/>InputData(l)<sp/>*<sp/>InputData(l);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_l_learning_1a4ccb655fdbbebb1a9875c6bc8238b373" kindref="member">mEpb</ref>(f_1,<sp/>0)<sp/>=<sp/><ref refid="classtsa_1_1_l_s_l_learning_1a15b3df249118e9c6699a39a4b4add1db" kindref="member">mLambda</ref><sp/>*<sp/><ref refid="classtsa_1_1_l_s_l_learning_1a5cd2595571d70a64dfefbdd48dd96eb5" kindref="member">mEpf</ref>(f_0,<sp/>0)<sp/>+<sp/>InputData(l)<sp/>*<sp/>InputData(l);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_l_learning_1a4dc069522ea6f00876e144b7c26a8056" kindref="member">mG</ref>(0)<sp/>=<sp/>1.0;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*--------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>1;<sp/>k<sp/>&lt;<sp/><ref refid="classtsa_1_1_l_s_l_learning_1ae1e400504ab5fc285b4b2d740e4bde72" kindref="member">mOrder</ref>;<sp/>k++)<sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>t<sp/>=<sp/>k<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_l_learning_1a5cd2595571d70a64dfefbdd48dd96eb5" kindref="member">mEpf</ref>(f_1,<sp/>t)<sp/>=<sp/><ref refid="classtsa_1_1_l_s_l_learning_1a15b3df249118e9c6699a39a4b4add1db" kindref="member">mLambda</ref><sp/>*<sp/><ref refid="classtsa_1_1_l_s_l_learning_1a5cd2595571d70a64dfefbdd48dd96eb5" kindref="member">mEpf</ref>(f_0,<sp/>t)<sp/>+<sp/><ref refid="classtsa_1_1_l_s_l_learning_1a4dc069522ea6f00876e144b7c26a8056" kindref="member">mG</ref>(t)<sp/>*<sp/><ref refid="classtsa_1_1_l_s_l_learning_1abc6dbb01c7f1a1b4c1d6ee5cb6ba14e8" kindref="member">mEF</ref>(f_1,<sp/>t)<sp/>*<sp/><ref refid="classtsa_1_1_l_s_l_learning_1abc6dbb01c7f1a1b4c1d6ee5cb6ba14e8" kindref="member">mEF</ref>(f_1,<sp/>t);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_l_learning_1a4ccb655fdbbebb1a9875c6bc8238b373" kindref="member">mEpb</ref>(f_1,<sp/>t)<sp/>=<sp/><ref refid="classtsa_1_1_l_s_l_learning_1a15b3df249118e9c6699a39a4b4add1db" kindref="member">mLambda</ref><sp/>*<sp/><ref refid="classtsa_1_1_l_s_l_learning_1a4ccb655fdbbebb1a9875c6bc8238b373" kindref="member">mEpb</ref>(f_0,<sp/>t)<sp/>+<sp/><ref refid="classtsa_1_1_l_s_l_learning_1a4dc069522ea6f00876e144b7c26a8056" kindref="member">mG</ref>(t)<sp/>*<sp/><ref refid="classtsa_1_1_l_s_l_learning_1aee8f5369206276f3a7faaaaa048485fb" kindref="member">mEB</ref>(f_0,<sp/>t)<sp/>*<sp/><ref refid="classtsa_1_1_l_s_l_learning_1aee8f5369206276f3a7faaaaa048485fb" kindref="member">mEB</ref>(f_0,<sp/>t);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_l_learning_1abc6dbb01c7f1a1b4c1d6ee5cb6ba14e8" kindref="member">mEF</ref>(f_1,<sp/>k)<sp/>=<sp/><ref refid="classtsa_1_1_l_s_l_learning_1abc6dbb01c7f1a1b4c1d6ee5cb6ba14e8" kindref="member">mEF</ref>(f_1,<sp/>t)<sp/>+<sp/><ref refid="classtsa_1_1_l_s_l_learning_1ad651adf83f8b9e770446ccf7f41fe61d" kindref="member">mKf</ref>(k)<sp/>*<sp/><ref refid="classtsa_1_1_l_s_l_learning_1aee8f5369206276f3a7faaaaa048485fb" kindref="member">mEB</ref>(f_0,<sp/>t);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_l_learning_1aee8f5369206276f3a7faaaaa048485fb" kindref="member">mEB</ref>(f_1,<sp/>k)<sp/>=<sp/><ref refid="classtsa_1_1_l_s_l_learning_1aee8f5369206276f3a7faaaaa048485fb" kindref="member">mEB</ref>(f_0,<sp/>t)<sp/>+<sp/><ref refid="classtsa_1_1_l_s_l_learning_1ac895dcbb7407c99df7c8703e27b53ca4" kindref="member">mKb</ref>(k)<sp/>*<sp/><ref refid="classtsa_1_1_l_s_l_learning_1abc6dbb01c7f1a1b4c1d6ee5cb6ba14e8" kindref="member">mEF</ref>(f_1,<sp/>t);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_l_learning_1ad651adf83f8b9e770446ccf7f41fe61d" kindref="member">mKf</ref>(k)<sp/>=<sp/><ref refid="classtsa_1_1_l_s_l_learning_1ad651adf83f8b9e770446ccf7f41fe61d" kindref="member">mKf</ref>(k)<sp/>-<sp/><ref refid="classtsa_1_1_l_s_l_learning_1a4dc069522ea6f00876e144b7c26a8056" kindref="member">mG</ref>(t)<sp/>*<sp/><ref refid="classtsa_1_1_l_s_l_learning_1aee8f5369206276f3a7faaaaa048485fb" kindref="member">mEB</ref>(f_0,<sp/>t)<sp/>*<sp/><ref refid="classtsa_1_1_l_s_l_learning_1abc6dbb01c7f1a1b4c1d6ee5cb6ba14e8" kindref="member">mEF</ref>(f_1,<sp/>k)<sp/>/<sp/><ref refid="classtsa_1_1_l_s_l_learning_1a4ccb655fdbbebb1a9875c6bc8238b373" kindref="member">mEpb</ref>(f_1,<sp/>t);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_l_learning_1ac895dcbb7407c99df7c8703e27b53ca4" kindref="member">mKb</ref>(k)<sp/>=<sp/><ref refid="classtsa_1_1_l_s_l_learning_1ac895dcbb7407c99df7c8703e27b53ca4" kindref="member">mKb</ref>(k)<sp/>-<sp/><ref refid="classtsa_1_1_l_s_l_learning_1a4dc069522ea6f00876e144b7c26a8056" kindref="member">mG</ref>(t)<sp/>*<sp/><ref refid="classtsa_1_1_l_s_l_learning_1abc6dbb01c7f1a1b4c1d6ee5cb6ba14e8" kindref="member">mEF</ref>(f_1,<sp/>t)<sp/>*<sp/><ref refid="classtsa_1_1_l_s_l_learning_1aee8f5369206276f3a7faaaaa048485fb" kindref="member">mEB</ref>(f_1,<sp/>k)<sp/>/<sp/><ref refid="classtsa_1_1_l_s_l_learning_1a5cd2595571d70a64dfefbdd48dd96eb5" kindref="member">mEpf</ref>(f_1,<sp/>t);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_l_learning_1a4dc069522ea6f00876e144b7c26a8056" kindref="member">mG</ref>(k)<sp/>=<sp/><ref refid="classtsa_1_1_l_s_l_learning_1a4dc069522ea6f00876e144b7c26a8056" kindref="member">mG</ref>(t)<sp/>-<sp/>(<ref refid="classtsa_1_1_l_s_l_learning_1a4dc069522ea6f00876e144b7c26a8056" kindref="member">mG</ref>(t)<sp/>*<sp/><ref refid="classtsa_1_1_l_s_l_learning_1a4dc069522ea6f00876e144b7c26a8056" kindref="member">mG</ref>(t))<sp/>*<sp/>(<ref refid="classtsa_1_1_l_s_l_learning_1aee8f5369206276f3a7faaaaa048485fb" kindref="member">mEB</ref>(f_0,<sp/>t)<sp/>*<sp/><ref refid="classtsa_1_1_l_s_l_learning_1aee8f5369206276f3a7faaaaa048485fb" kindref="member">mEB</ref>(f_0,<sp/>t))<sp/>/<sp/><ref refid="classtsa_1_1_l_s_l_learning_1a4ccb655fdbbebb1a9875c6bc8238b373" kindref="member">mEpb</ref>(f_1,<sp/>t);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OutputData(l)<sp/>=<sp/><ref refid="classtsa_1_1_l_s_l_learning_1abc6dbb01c7f1a1b4c1d6ee5cb6ba14e8" kindref="member">mEF</ref>(f_1,<sp/>End);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f_1<sp/>=<sp/>1<sp/>-<sp/>f_1;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f_0<sp/>=<sp/>1<sp/>-<sp/>f_0;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_l_learning_1a6ba93296df7efc898844ff3ef645b287" kindref="member">mSigma</ref><sp/>=<sp/><ref refid="classtsa_1_1_l_s_l_learning_1a5cd2595571d70a64dfefbdd48dd96eb5" kindref="member">mEpf</ref>(f_0,<sp/>End<sp/>-<sp/>1)<sp/>/<sp/>(InputData.size());</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>mSigma<sp/>=<sp/>mEpf(<sp/>f_0,<sp/>End<sp/>-<sp/>1<sp/>);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>---<sp/>Save<sp/>the<sp/>state<sp/>of<sp/>the<sp/>filter</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_l_learning_1ab1e86d5df54de8730402c123caccfd30" kindref="member">mF0</ref><sp/>=<sp/>f_0;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141" refid="classtsa_1_1_l_s_l_learning_1ae1d9f9ea754c88bf19365c680ea2415a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_l_learning_1ab1065fd9f61b44f25c4a9ee67e95dc1e" kindref="member">LSLLearning::LSLLearning</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_l_s_l_learning" kindref="compound">LSLLearning</ref>&amp;<sp/>from)<sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152" refid="classtsa_1_1_l_s_l_learning_1a8b2b47d740bd2207f612e9c4aadaf220" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_l_learning" kindref="compound">LSLLearning</ref>&amp;<sp/><ref refid="classtsa_1_1_l_s_l_learning_1a8b2b47d740bd2207f612e9c4aadaf220" kindref="member">LSLLearning::operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_l_s_l_learning" kindref="compound">LSLLearning</ref>&amp;<sp/>from)<sp/>{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/src/LSLLearning.cpp"/>
+  </compounddef>
+</doxygen>

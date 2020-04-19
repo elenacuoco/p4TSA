@@ -1,0 +1,609 @@
+\hypertarget{classtsa_1_1_b_l_interpolation}{}\section{tsa\+:\+:B\+L\+Interpolation Class Reference}
+\label{classtsa_1_1_b_l_interpolation}\index{tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}}
+
+
+Band limited interpolation.  
+
+
+
+
+{\ttfamily \#include $<$B\+L\+Interpolation.\+hpp$>$}
+
+Inheritance diagram for tsa\+:\+:B\+L\+Interpolation\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classtsa_1_1_b_l_interpolation}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classtsa_1_1_b_l_interpolation_ae11719d30e353da11f076289b87c7b1d}{Normalization\+Type} \{ \hyperlink{classtsa_1_1_b_l_interpolation_ae11719d30e353da11f076289b87c7b1da2eb150e3b7e6ed1aff3dadd9dae02b5b}{N\+O\+Normalization}, 
+\hyperlink{classtsa_1_1_b_l_interpolation_ae11719d30e353da11f076289b87c7b1da203bdef13ad529ea833b62c762c1a395}{D\+C\+Normalization}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtsa_1_1_b_l_interpolation_aef84f84620a59efee8d1e2bb1cffd46d}{B\+L\+Interpolation} (unsigned int channels, unsigned int outdata, unsigned int irate, unsigned int orate, unsigned int order, double alpha=1.\+0, enum \hyperlink{classtsa_1_1_b_l_interpolation_ae11719d30e353da11f076289b87c7b1d}{Normalization\+Type} nt=\hyperlink{classtsa_1_1_b_l_interpolation_ae11719d30e353da11f076289b87c7b1da2eb150e3b7e6ed1aff3dadd9dae02b5b}{N\+O\+Normalization})
+\item 
+\hyperlink{classtsa_1_1_b_l_interpolation_ace4ab80e2c9f5147685bd22d5ee5841e}{B\+L\+Interpolation} (const \hyperlink{classtsa_1_1_b_l_interpolation}{B\+L\+Interpolation} \&from)
+\item 
+\hyperlink{classtsa_1_1_b_l_interpolation_a67cd882b93c7643cd0fdce08b7fa876f}{$\sim$\+B\+L\+Interpolation} ()
+\item 
+\hyperlink{classtsa_1_1_b_l_interpolation}{B\+L\+Interpolation} \& \hyperlink{classtsa_1_1_b_l_interpolation_a71b2bc1e0a68abe528d5c753b4a5c1c1}{operator=} (const \hyperlink{classtsa_1_1_b_l_interpolation}{B\+L\+Interpolation} \&from)
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ User interface}\par
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtsa_1_1_b_l_interpolation}{B\+L\+Interpolation} \& \hyperlink{classtsa_1_1_b_l_interpolation_ad4ce3e5cb5bc89e8de11a0dc1d54121e}{Input} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&indata)
+\item 
+\hyperlink{classtsa_1_1_b_l_interpolation}{B\+L\+Interpolation} \& \hyperlink{classtsa_1_1_b_l_interpolation_aa67c8de249d447dea6bb6b9d353139bc}{Output} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&outdata)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Getters}\par
+\begin{DoxyCompactItemize}
+\item 
+long int \hyperlink{classtsa_1_1_b_l_interpolation_a10f95a5ac0e7cc6981d30ed420404a3d}{Get\+Data\+Available} ()
+\item 
+unsigned int \hyperlink{classtsa_1_1_b_l_interpolation_a30ed4268c0691edf852ddb3c2ce541c7}{Get\+Data} (\hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&outdata)
+\item 
+double \hyperlink{classtsa_1_1_b_l_interpolation_a4fa7c4bfb9e12a3eb6767fc6b128093c}{Get\+Start\+Time} ()
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Setters}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtsa_1_1_b_l_interpolation_ac8a67161f8c0aeb39ced9d36664860ba}{Set\+Data} (\hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&indata, double scale)
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtsa_1_1_b_l_interpolation_aff26a1c884d2733cebf280a556987e51}{Init} ()
+\item 
+void \hyperlink{classtsa_1_1_b_l_interpolation_a7b429b2867b887e3fec9d44c584f026c}{N\+O\+Renormalization} ()
+\item 
+void \hyperlink{classtsa_1_1_b_l_interpolation_a5d7f3b437e0aa09df7831c2b72a39f62}{D\+C\+Renormalization} ()
+\item 
+double \hyperlink{classtsa_1_1_b_l_interpolation_a8eeac8a3a0439f46764cf1455bd2febe}{Kaiser} (double x)
+\item 
+void \hyperlink{classtsa_1_1_b_l_interpolation_a23d1958ad6c23572e21c39ad421bf2a2}{add\+\_\+back\+\_\+point} ()
+\item 
+void \hyperlink{classtsa_1_1_b_l_interpolation_ac9f1957097458403fd2919445d3323db}{del\+\_\+front\+\_\+point} (unsigned int n)
+\item 
+long int \hyperlink{classtsa_1_1_b_l_interpolation_adfb54e2b5bd52c05c3caaf062f97d9b6}{resampled\+\_\+available} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{classtsa_1_1_b_l_interpolation_a1299ee71922f13c989b9961a0adcd14f}{m\+Channels}
+\item 
+unsigned int \hyperlink{classtsa_1_1_b_l_interpolation_ab8ea8e129045096ccb53d1b5e6d27329}{m\+Out\+Data}
+\item 
+unsigned int \hyperlink{classtsa_1_1_b_l_interpolation_a3fc5200b462e9fbd87644f2d5bfa4381}{m\+Input\+Rate}
+\item 
+unsigned int \hyperlink{classtsa_1_1_b_l_interpolation_a4511cbb0d6e97a901e8d52cffad670a1}{m\+Output\+Rate}
+\item 
+unsigned int \hyperlink{classtsa_1_1_b_l_interpolation_aa8c5e5637c561ed9b3eabe6b8027e5da}{m\+Order}
+\item 
+double \hyperlink{classtsa_1_1_b_l_interpolation_a768c64c85e393f975e2caaaba7bc5f90}{m\+Alpha}
+\item 
+std\+::queue$<$ \hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} $\ast$ $>$ \hyperlink{classtsa_1_1_b_l_interpolation_ab7b685a2b64f9139ca4ea3907f6b0a07}{m\+Repository}
+\item 
+std\+::deque$<$ \hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} $\ast$ $>$ \hyperlink{classtsa_1_1_b_l_interpolation_ad40701a7e17ce4a2368605c0e77ec6a7}{m\+Buffer}
+\item 
+long int \hyperlink{classtsa_1_1_b_l_interpolation_a7e179ad859cffc61384efe0bc841255b}{m\+Buffer\+Base}
+\item 
+double \hyperlink{classtsa_1_1_b_l_interpolation_a21a038009c7323c00263367ca678f767}{m\+Rho}
+\item 
+\hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} $\ast$ \hyperlink{classtsa_1_1_b_l_interpolation_ab0b2cee3d403a0ae8d3cc3d5c0618f02}{m\+Filter}
+\item 
+long int \hyperlink{classtsa_1_1_b_l_interpolation_ac7684f2b6ae85030eac7992412df45aa}{m\+Filter\+Center}
+\item 
+\hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} \hyperlink{classtsa_1_1_b_l_interpolation_a5390ed81fda1345890543a95ab91a6e2}{m\+Normalization}
+\item 
+\hyperlink{classtsa_1_1_b_l_interpolation_ae11719d30e353da11f076289b87c7b1d}{Normalization\+Type} \hyperlink{classtsa_1_1_b_l_interpolation_aa41a64576f7c0df22870378780d8f73d}{m\+Normalization\+Type}
+\item 
+bool \hyperlink{classtsa_1_1_b_l_interpolation_adf29f91edc45fbbf8127732fa4b971f0}{m\+First\+Data}
+\item 
+double \hyperlink{classtsa_1_1_b_l_interpolation_afed34dd05a75cc0eb6ce313a584aa9ef}{m\+Start\+Time}
+\item 
+double \hyperlink{classtsa_1_1_b_l_interpolation_a76258e5da0c92a792af987a3f2cf972d}{m\+Sampling}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Band limited interpolation. 
+
+Definition at line 74 of file B\+L\+Interpolation.\+hpp.
+
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classtsa_1_1_b_l_interpolation_ae11719d30e353da11f076289b87c7b1d}\label{classtsa_1_1_b_l_interpolation_ae11719d30e353da11f076289b87c7b1d}} 
+\index{tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}!Normalization\+Type@{Normalization\+Type}}
+\index{Normalization\+Type@{Normalization\+Type}!tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}}
+\subsubsection{\texorpdfstring{Normalization\+Type}{NormalizationType}}
+{\footnotesize\ttfamily enum \hyperlink{classtsa_1_1_b_l_interpolation_ae11719d30e353da11f076289b87c7b1d}{tsa\+::\+B\+L\+Interpolation\+::\+Normalization\+Type}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+Normalization@{N\+O\+Normalization}!tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}}\index{tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}!N\+O\+Normalization@{N\+O\+Normalization}}}\mbox{\Hypertarget{classtsa_1_1_b_l_interpolation_ae11719d30e353da11f076289b87c7b1da2eb150e3b7e6ed1aff3dadd9dae02b5b}\label{classtsa_1_1_b_l_interpolation_ae11719d30e353da11f076289b87c7b1da2eb150e3b7e6ed1aff3dadd9dae02b5b}} 
+N\+O\+Normalization&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+C\+Normalization@{D\+C\+Normalization}!tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}}\index{tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}!D\+C\+Normalization@{D\+C\+Normalization}}}\mbox{\Hypertarget{classtsa_1_1_b_l_interpolation_ae11719d30e353da11f076289b87c7b1da203bdef13ad529ea833b62c762c1a395}\label{classtsa_1_1_b_l_interpolation_ae11719d30e353da11f076289b87c7b1da203bdef13ad529ea833b62c762c1a395}} 
+D\+C\+Normalization&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 77 of file B\+L\+Interpolation.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtsa_1_1_b_l_interpolation_aef84f84620a59efee8d1e2bb1cffd46d}\label{classtsa_1_1_b_l_interpolation_aef84f84620a59efee8d1e2bb1cffd46d}} 
+\index{tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}!B\+L\+Interpolation@{B\+L\+Interpolation}}
+\index{B\+L\+Interpolation@{B\+L\+Interpolation}!tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}}
+\subsubsection{\texorpdfstring{B\+L\+Interpolation()}{BLInterpolation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily tsa\+::\+B\+L\+Interpolation\+::\+B\+L\+Interpolation (\begin{DoxyParamCaption}\item[{unsigned int}]{channels,  }\item[{unsigned int}]{outdata,  }\item[{unsigned int}]{irate,  }\item[{unsigned int}]{orate,  }\item[{unsigned int}]{order,  }\item[{double}]{alpha = {\ttfamily 1.0},  }\item[{enum \hyperlink{classtsa_1_1_b_l_interpolation_ae11719d30e353da11f076289b87c7b1d}{Normalization\+Type}}]{nt = {\ttfamily \hyperlink{classtsa_1_1_b_l_interpolation_ae11719d30e353da11f076289b87c7b1da2eb150e3b7e6ed1aff3dadd9dae02b5b}{N\+O\+Normalization}} }\end{DoxyParamCaption})}
+
+Constructor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em channels} & number of channels \\
+\hline
+{\em outdata} & number of resampled data returned at each call \\
+\hline
+{\em irate} & input rate \\
+\hline
+{\em orate} & output rate \\
+\hline
+{\em order} & order of filter \\
+\hline
+{\em alpha} & window parameter \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 5 of file B\+L\+Interpolation.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_b_l_interpolation_ace4ab80e2c9f5147685bd22d5ee5841e}\label{classtsa_1_1_b_l_interpolation_ace4ab80e2c9f5147685bd22d5ee5841e}} 
+\index{tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}!B\+L\+Interpolation@{B\+L\+Interpolation}}
+\index{B\+L\+Interpolation@{B\+L\+Interpolation}!tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}}
+\subsubsection{\texorpdfstring{B\+L\+Interpolation()}{BLInterpolation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily tsa\+::\+B\+L\+Interpolation\+::\+B\+L\+Interpolation (\begin{DoxyParamCaption}\item[{const \hyperlink{classtsa_1_1_b_l_interpolation}{B\+L\+Interpolation} \&}]{from }\end{DoxyParamCaption})}
+
+Copy constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & The instance that must be copied \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 24 of file B\+L\+Interpolation.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_b_l_interpolation_a67cd882b93c7643cd0fdce08b7fa876f}\label{classtsa_1_1_b_l_interpolation_a67cd882b93c7643cd0fdce08b7fa876f}} 
+\index{tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}!````~B\+L\+Interpolation@{$\sim$\+B\+L\+Interpolation}}
+\index{````~B\+L\+Interpolation@{$\sim$\+B\+L\+Interpolation}!tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}}
+\subsubsection{\texorpdfstring{$\sim$\+B\+L\+Interpolation()}{~BLInterpolation()}}
+{\footnotesize\ttfamily tsa\+::\+B\+L\+Interpolation\+::$\sim$\+B\+L\+Interpolation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor 
+
+Definition at line 36 of file B\+L\+Interpolation.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classtsa_1_1_b_l_interpolation_a23d1958ad6c23572e21c39ad421bf2a2}\label{classtsa_1_1_b_l_interpolation_a23d1958ad6c23572e21c39ad421bf2a2}} 
+\index{tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}!add\+\_\+back\+\_\+point@{add\+\_\+back\+\_\+point}}
+\index{add\+\_\+back\+\_\+point@{add\+\_\+back\+\_\+point}!tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}}
+\subsubsection{\texorpdfstring{add\+\_\+back\+\_\+point()}{add\_back\_point()}}
+{\footnotesize\ttfamily void tsa\+::\+B\+L\+Interpolation\+::add\+\_\+back\+\_\+point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Add a new data point to the buffer. If possible this is taken from the repository, allocated otherwise. 
+
+Definition at line 240 of file B\+L\+Interpolation.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_b_l_interpolation_a5d7f3b437e0aa09df7831c2b72a39f62}\label{classtsa_1_1_b_l_interpolation_a5d7f3b437e0aa09df7831c2b72a39f62}} 
+\index{tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}!D\+C\+Renormalization@{D\+C\+Renormalization}}
+\index{D\+C\+Renormalization@{D\+C\+Renormalization}!tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}}
+\subsubsection{\texorpdfstring{D\+C\+Renormalization()}{DCRenormalization()}}
+{\footnotesize\ttfamily void tsa\+::\+B\+L\+Interpolation\+::\+D\+C\+Renormalization (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 276 of file B\+L\+Interpolation.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_b_l_interpolation_ac9f1957097458403fd2919445d3323db}\label{classtsa_1_1_b_l_interpolation_ac9f1957097458403fd2919445d3323db}} 
+\index{tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}!del\+\_\+front\+\_\+point@{del\+\_\+front\+\_\+point}}
+\index{del\+\_\+front\+\_\+point@{del\+\_\+front\+\_\+point}!tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}}
+\subsubsection{\texorpdfstring{del\+\_\+front\+\_\+point()}{del\_front\_point()}}
+{\footnotesize\ttfamily void tsa\+::\+B\+L\+Interpolation\+::del\+\_\+front\+\_\+point (\begin{DoxyParamCaption}\item[{unsigned int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Delete some points from the buffer (the oldest ones) and increment the start of the buffer position m\+Buffer
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & number of points to delete from the buffer \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 249 of file B\+L\+Interpolation.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_b_l_interpolation_a30ed4268c0691edf852ddb3c2ce541c7}\label{classtsa_1_1_b_l_interpolation_a30ed4268c0691edf852ddb3c2ce541c7}} 
+\index{tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}!Get\+Data@{Get\+Data}}
+\index{Get\+Data@{Get\+Data}!tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}}
+\subsubsection{\texorpdfstring{Get\+Data()}{GetData()}}
+{\footnotesize\ttfamily unsigned int tsa\+::\+B\+L\+Interpolation\+::\+Get\+Data (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&}]{outdata }\end{DoxyParamCaption})}
+
+Get resampled data
+
+
+\begin{DoxyParams}{Parameters}
+{\em outdata} & a matrix which will be filled with resampled data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of resampled data returned 
+\end{DoxyReturn}
+
+
+Definition at line 109 of file B\+L\+Interpolation.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_b_l_interpolation_a10f95a5ac0e7cc6981d30ed420404a3d}\label{classtsa_1_1_b_l_interpolation_a10f95a5ac0e7cc6981d30ed420404a3d}} 
+\index{tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}!Get\+Data\+Available@{Get\+Data\+Available}}
+\index{Get\+Data\+Available@{Get\+Data\+Available}!tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}}
+\subsubsection{\texorpdfstring{Get\+Data\+Available()}{GetDataAvailable()}}
+{\footnotesize\ttfamily long int tsa\+::\+B\+L\+Interpolation\+::\+Get\+Data\+Available (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 178 of file B\+L\+Interpolation.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_b_l_interpolation_a4fa7c4bfb9e12a3eb6767fc6b128093c}\label{classtsa_1_1_b_l_interpolation_a4fa7c4bfb9e12a3eb6767fc6b128093c}} 
+\index{tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}!Get\+Start\+Time@{Get\+Start\+Time}}
+\index{Get\+Start\+Time@{Get\+Start\+Time}!tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}}
+\subsubsection{\texorpdfstring{Get\+Start\+Time()}{GetStartTime()}}
+{\footnotesize\ttfamily double tsa\+::\+B\+L\+Interpolation\+::\+Get\+Start\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Start time of the next sequence of resampled data.
+
+\begin{DoxyReturn}{Returns}
+the start time of the next sequence of resampled data 
+\end{DoxyReturn}
+
+
+Definition at line 105 of file B\+L\+Interpolation.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_b_l_interpolation_aff26a1c884d2733cebf280a556987e51}\label{classtsa_1_1_b_l_interpolation_aff26a1c884d2733cebf280a556987e51}} 
+\index{tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}!Init@{Init}}
+\index{Init@{Init}!tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void tsa\+::\+B\+L\+Interpolation\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Initialize internal structures 
+
+Definition at line 187 of file B\+L\+Interpolation.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_b_l_interpolation_ad4ce3e5cb5bc89e8de11a0dc1d54121e}\label{classtsa_1_1_b_l_interpolation_ad4ce3e5cb5bc89e8de11a0dc1d54121e}} 
+\index{tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}!Input@{Input}}
+\index{Input@{Input}!tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}}
+\subsubsection{\texorpdfstring{Input()}{Input()}}
+{\footnotesize\ttfamily \hyperlink{classtsa_1_1_b_l_interpolation}{B\+L\+Interpolation} \& tsa\+::\+B\+L\+Interpolation\+::\+Input (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{indata }\end{DoxyParamCaption})}
+
+Add data to be resampled. This method can be called repeatedly, each time with a different chunk of data. The chunks are considered as consecutive pieces of a continuous stream.
+
+
+\begin{DoxyParams}{Parameters}
+{\em indata} & view containing input data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a reference to an instance of this class
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+the number of rows in indata must be equal to the number of channels 
+\end{DoxyPrecond}
+
+
+Definition at line 67 of file B\+L\+Interpolation.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_b_l_interpolation_a8eeac8a3a0439f46764cf1455bd2febe}\label{classtsa_1_1_b_l_interpolation_a8eeac8a3a0439f46764cf1455bd2febe}} 
+\index{tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}!Kaiser@{Kaiser}}
+\index{Kaiser@{Kaiser}!tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}}
+\subsubsection{\texorpdfstring{Kaiser()}{Kaiser()}}
+{\footnotesize\ttfamily double tsa\+::\+B\+L\+Interpolation\+::\+Kaiser (\begin{DoxyParamCaption}\item[{double}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Kaiser window.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & position in the window (between -\/1 and 1)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the value of Kaiser window at index k 
+\end{DoxyReturn}
+
+
+Definition at line 235 of file B\+L\+Interpolation.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_b_l_interpolation_a7b429b2867b887e3fec9d44c584f026c}\label{classtsa_1_1_b_l_interpolation_a7b429b2867b887e3fec9d44c584f026c}} 
+\index{tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}!N\+O\+Renormalization@{N\+O\+Renormalization}}
+\index{N\+O\+Renormalization@{N\+O\+Renormalization}!tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}}
+\subsubsection{\texorpdfstring{N\+O\+Renormalization()}{NORenormalization()}}
+{\footnotesize\ttfamily void tsa\+::\+B\+L\+Interpolation\+::\+N\+O\+Renormalization (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 267 of file B\+L\+Interpolation.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_b_l_interpolation_a71b2bc1e0a68abe528d5c753b4a5c1c1}\label{classtsa_1_1_b_l_interpolation_a71b2bc1e0a68abe528d5c753b4a5c1c1}} 
+\index{tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}!operator=@{operator=}}
+\index{operator=@{operator=}!tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{classtsa_1_1_b_l_interpolation}{B\+L\+Interpolation} \& tsa\+::\+B\+L\+Interpolation\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{classtsa_1_1_b_l_interpolation}{B\+L\+Interpolation} \&}]{from }\end{DoxyParamCaption})}
+
+Assignement operator
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & The instance to be assigned from\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a reference to a new object 
+\end{DoxyReturn}
+
+
+Definition at line 51 of file B\+L\+Interpolation.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_b_l_interpolation_aa67c8de249d447dea6bb6b9d353139bc}\label{classtsa_1_1_b_l_interpolation_aa67c8de249d447dea6bb6b9d353139bc}} 
+\index{tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}!Output@{Output}}
+\index{Output@{Output}!tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}}
+\subsubsection{\texorpdfstring{Output()}{Output()}}
+{\footnotesize\ttfamily \hyperlink{classtsa_1_1_b_l_interpolation}{B\+L\+Interpolation} \& tsa\+::\+B\+L\+Interpolation\+::\+Output (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{outdata }\end{DoxyParamCaption})}
+
+Get resampled data. If there are enough resampled data available these are returned, otherwise an exception is raised.
+
+
+\begin{DoxyParams}{Parameters}
+{\em outdata} & view which will be filled with resampled data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a reference to an instance of this class
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classtsa_1_1no__data__available}{no\+\_\+data\+\_\+available}} & there are not enough resampled data available\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyPostcond}{Postcondition}
+if no exception is raised outdata has a number of rows equal to the number of channels and a number of columns equal to the number of returned data 
+\end{DoxyPostcond}
+
+
+Definition at line 81 of file B\+L\+Interpolation.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_b_l_interpolation_adfb54e2b5bd52c05c3caaf062f97d9b6}\label{classtsa_1_1_b_l_interpolation_adfb54e2b5bd52c05c3caaf062f97d9b6}} 
+\index{tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}!resampled\+\_\+available@{resampled\+\_\+available}}
+\index{resampled\+\_\+available@{resampled\+\_\+available}!tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}}
+\subsubsection{\texorpdfstring{resampled\+\_\+available()}{resampled\_available()}}
+{\footnotesize\ttfamily long int tsa\+::\+B\+L\+Interpolation\+::resampled\+\_\+available (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+This function returns the number of resampled data which are available at the current time.
+
+\begin{DoxyReturn}{Returns}
+resampled data available 
+\end{DoxyReturn}
+
+
+Definition at line 260 of file B\+L\+Interpolation.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_b_l_interpolation_ac8a67161f8c0aeb39ced9d36664860ba}\label{classtsa_1_1_b_l_interpolation_ac8a67161f8c0aeb39ced9d36664860ba}} 
+\index{tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}!Set\+Data@{Set\+Data}}
+\index{Set\+Data@{Set\+Data}!tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}}
+\subsubsection{\texorpdfstring{Set\+Data()}{SetData()}}
+{\footnotesize\ttfamily void tsa\+::\+B\+L\+Interpolation\+::\+Set\+Data (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&}]{indata,  }\item[{double}]{scale }\end{DoxyParamCaption})}
+
+Add data to be resampled
+
+
+\begin{DoxyParams}{Parameters}
+{\em indata} & a matrix which contains input data \\
+\hline
+{\em scale} & a scale parameter for input data \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 169 of file B\+L\+Interpolation.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classtsa_1_1_b_l_interpolation_a768c64c85e393f975e2caaaba7bc5f90}\label{classtsa_1_1_b_l_interpolation_a768c64c85e393f975e2caaaba7bc5f90}} 
+\index{tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}!m\+Alpha@{m\+Alpha}}
+\index{m\+Alpha@{m\+Alpha}!tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}}
+\subsubsection{\texorpdfstring{m\+Alpha}{mAlpha}}
+{\footnotesize\ttfamily double tsa\+::\+B\+L\+Interpolation\+::m\+Alpha\hspace{0.3cm}{\ttfamily [private]}}
+
+Parameter of the Kaiser window 
+
+Definition at line 249 of file B\+L\+Interpolation.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_b_l_interpolation_ad40701a7e17ce4a2368605c0e77ec6a7}\label{classtsa_1_1_b_l_interpolation_ad40701a7e17ce4a2368605c0e77ec6a7}} 
+\index{tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}!m\+Buffer@{m\+Buffer}}
+\index{m\+Buffer@{m\+Buffer}!tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}}
+\subsubsection{\texorpdfstring{m\+Buffer}{mBuffer}}
+{\footnotesize\ttfamily std\+::deque$<$\hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector}$\ast$$>$ tsa\+::\+B\+L\+Interpolation\+::m\+Buffer\hspace{0.3cm}{\ttfamily [private]}}
+
+Buffer for incoming data points 
+
+Definition at line 252 of file B\+L\+Interpolation.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_b_l_interpolation_a7e179ad859cffc61384efe0bc841255b}\label{classtsa_1_1_b_l_interpolation_a7e179ad859cffc61384efe0bc841255b}} 
+\index{tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}!m\+Buffer\+Base@{m\+Buffer\+Base}}
+\index{m\+Buffer\+Base@{m\+Buffer\+Base}!tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}}
+\subsubsection{\texorpdfstring{m\+Buffer\+Base}{mBufferBase}}
+{\footnotesize\ttfamily long int tsa\+::\+B\+L\+Interpolation\+::m\+Buffer\+Base\hspace{0.3cm}{\ttfamily [private]}}
+
+Start of the buffer, in ticks units 
+
+Definition at line 253 of file B\+L\+Interpolation.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_b_l_interpolation_a1299ee71922f13c989b9961a0adcd14f}\label{classtsa_1_1_b_l_interpolation_a1299ee71922f13c989b9961a0adcd14f}} 
+\index{tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}!m\+Channels@{m\+Channels}}
+\index{m\+Channels@{m\+Channels}!tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}}
+\subsubsection{\texorpdfstring{m\+Channels}{mChannels}}
+{\footnotesize\ttfamily unsigned int tsa\+::\+B\+L\+Interpolation\+::m\+Channels\hspace{0.3cm}{\ttfamily [private]}}
+
+Number of channels to resample 
+
+Definition at line 244 of file B\+L\+Interpolation.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_b_l_interpolation_ab0b2cee3d403a0ae8d3cc3d5c0618f02}\label{classtsa_1_1_b_l_interpolation_ab0b2cee3d403a0ae8d3cc3d5c0618f02}} 
+\index{tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}!m\+Filter@{m\+Filter}}
+\index{m\+Filter@{m\+Filter}!tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}}
+\subsubsection{\texorpdfstring{m\+Filter}{mFilter}}
+{\footnotesize\ttfamily \hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector}$\ast$ tsa\+::\+B\+L\+Interpolation\+::m\+Filter\hspace{0.3cm}{\ttfamily [private]}}
+
+Template for the filter 
+
+Definition at line 257 of file B\+L\+Interpolation.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_b_l_interpolation_ac7684f2b6ae85030eac7992412df45aa}\label{classtsa_1_1_b_l_interpolation_ac7684f2b6ae85030eac7992412df45aa}} 
+\index{tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}!m\+Filter\+Center@{m\+Filter\+Center}}
+\index{m\+Filter\+Center@{m\+Filter\+Center}!tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}}
+\subsubsection{\texorpdfstring{m\+Filter\+Center}{mFilterCenter}}
+{\footnotesize\ttfamily long int tsa\+::\+B\+L\+Interpolation\+::m\+Filter\+Center\hspace{0.3cm}{\ttfamily [private]}}
+
+Center of the filter, in ticks units 
+
+Definition at line 258 of file B\+L\+Interpolation.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_b_l_interpolation_adf29f91edc45fbbf8127732fa4b971f0}\label{classtsa_1_1_b_l_interpolation_adf29f91edc45fbbf8127732fa4b971f0}} 
+\index{tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}!m\+First\+Data@{m\+First\+Data}}
+\index{m\+First\+Data@{m\+First\+Data}!tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}}
+\subsubsection{\texorpdfstring{m\+First\+Data}{mFirstData}}
+{\footnotesize\ttfamily bool tsa\+::\+B\+L\+Interpolation\+::m\+First\+Data\hspace{0.3cm}{\ttfamily [private]}}
+
+Flag\+: is the actual view the first submitted? 
+
+Definition at line 263 of file B\+L\+Interpolation.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_b_l_interpolation_a3fc5200b462e9fbd87644f2d5bfa4381}\label{classtsa_1_1_b_l_interpolation_a3fc5200b462e9fbd87644f2d5bfa4381}} 
+\index{tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}!m\+Input\+Rate@{m\+Input\+Rate}}
+\index{m\+Input\+Rate@{m\+Input\+Rate}!tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}}
+\subsubsection{\texorpdfstring{m\+Input\+Rate}{mInputRate}}
+{\footnotesize\ttfamily unsigned int tsa\+::\+B\+L\+Interpolation\+::m\+Input\+Rate\hspace{0.3cm}{\ttfamily [private]}}
+
+Input rate of data 
+
+Definition at line 246 of file B\+L\+Interpolation.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_b_l_interpolation_a5390ed81fda1345890543a95ab91a6e2}\label{classtsa_1_1_b_l_interpolation_a5390ed81fda1345890543a95ab91a6e2}} 
+\index{tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}!m\+Normalization@{m\+Normalization}}
+\index{m\+Normalization@{m\+Normalization}!tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}}
+\subsubsection{\texorpdfstring{m\+Normalization}{mNormalization}}
+{\footnotesize\ttfamily \hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} tsa\+::\+B\+L\+Interpolation\+::m\+Normalization\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 260 of file B\+L\+Interpolation.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_b_l_interpolation_aa41a64576f7c0df22870378780d8f73d}\label{classtsa_1_1_b_l_interpolation_aa41a64576f7c0df22870378780d8f73d}} 
+\index{tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}!m\+Normalization\+Type@{m\+Normalization\+Type}}
+\index{m\+Normalization\+Type@{m\+Normalization\+Type}!tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}}
+\subsubsection{\texorpdfstring{m\+Normalization\+Type}{mNormalizationType}}
+{\footnotesize\ttfamily \hyperlink{classtsa_1_1_b_l_interpolation_ae11719d30e353da11f076289b87c7b1d}{Normalization\+Type} tsa\+::\+B\+L\+Interpolation\+::m\+Normalization\+Type\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 261 of file B\+L\+Interpolation.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_b_l_interpolation_aa8c5e5637c561ed9b3eabe6b8027e5da}\label{classtsa_1_1_b_l_interpolation_aa8c5e5637c561ed9b3eabe6b8027e5da}} 
+\index{tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}!m\+Order@{m\+Order}}
+\index{m\+Order@{m\+Order}!tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}}
+\subsubsection{\texorpdfstring{m\+Order}{mOrder}}
+{\footnotesize\ttfamily unsigned int tsa\+::\+B\+L\+Interpolation\+::m\+Order\hspace{0.3cm}{\ttfamily [private]}}
+
+Order of the filter 
+
+Definition at line 248 of file B\+L\+Interpolation.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_b_l_interpolation_ab8ea8e129045096ccb53d1b5e6d27329}\label{classtsa_1_1_b_l_interpolation_ab8ea8e129045096ccb53d1b5e6d27329}} 
+\index{tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}!m\+Out\+Data@{m\+Out\+Data}}
+\index{m\+Out\+Data@{m\+Out\+Data}!tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}}
+\subsubsection{\texorpdfstring{m\+Out\+Data}{mOutData}}
+{\footnotesize\ttfamily unsigned int tsa\+::\+B\+L\+Interpolation\+::m\+Out\+Data\hspace{0.3cm}{\ttfamily [private]}}
+
+Number of resampled data for channel that will be returned if possible at each call 
+
+Definition at line 245 of file B\+L\+Interpolation.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_b_l_interpolation_a4511cbb0d6e97a901e8d52cffad670a1}\label{classtsa_1_1_b_l_interpolation_a4511cbb0d6e97a901e8d52cffad670a1}} 
+\index{tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}!m\+Output\+Rate@{m\+Output\+Rate}}
+\index{m\+Output\+Rate@{m\+Output\+Rate}!tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}}
+\subsubsection{\texorpdfstring{m\+Output\+Rate}{mOutputRate}}
+{\footnotesize\ttfamily unsigned int tsa\+::\+B\+L\+Interpolation\+::m\+Output\+Rate\hspace{0.3cm}{\ttfamily [private]}}
+
+Output rate of data 
+
+Definition at line 247 of file B\+L\+Interpolation.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_b_l_interpolation_ab7b685a2b64f9139ca4ea3907f6b0a07}\label{classtsa_1_1_b_l_interpolation_ab7b685a2b64f9139ca4ea3907f6b0a07}} 
+\index{tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}!m\+Repository@{m\+Repository}}
+\index{m\+Repository@{m\+Repository}!tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}}
+\subsubsection{\texorpdfstring{m\+Repository}{mRepository}}
+{\footnotesize\ttfamily std\+::queue$<$\hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector}$\ast$$>$ tsa\+::\+B\+L\+Interpolation\+::m\+Repository\hspace{0.3cm}{\ttfamily [private]}}
+
+Repository for unused data points 
+
+Definition at line 251 of file B\+L\+Interpolation.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_b_l_interpolation_a21a038009c7323c00263367ca678f767}\label{classtsa_1_1_b_l_interpolation_a21a038009c7323c00263367ca678f767}} 
+\index{tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}!m\+Rho@{m\+Rho}}
+\index{m\+Rho@{m\+Rho}!tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}}
+\subsubsection{\texorpdfstring{m\+Rho}{mRho}}
+{\footnotesize\ttfamily double tsa\+::\+B\+L\+Interpolation\+::m\+Rho\hspace{0.3cm}{\ttfamily [private]}}
+
+Normalization factor for upsampling/downsampling 
+
+Definition at line 256 of file B\+L\+Interpolation.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_b_l_interpolation_a76258e5da0c92a792af987a3f2cf972d}\label{classtsa_1_1_b_l_interpolation_a76258e5da0c92a792af987a3f2cf972d}} 
+\index{tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}!m\+Sampling@{m\+Sampling}}
+\index{m\+Sampling@{m\+Sampling}!tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}}
+\subsubsection{\texorpdfstring{m\+Sampling}{mSampling}}
+{\footnotesize\ttfamily double tsa\+::\+B\+L\+Interpolation\+::m\+Sampling\hspace{0.3cm}{\ttfamily [private]}}
+
+Physical sampling rate 
+
+Definition at line 265 of file B\+L\+Interpolation.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_b_l_interpolation_afed34dd05a75cc0eb6ce313a584aa9ef}\label{classtsa_1_1_b_l_interpolation_afed34dd05a75cc0eb6ce313a584aa9ef}} 
+\index{tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}!m\+Start\+Time@{m\+Start\+Time}}
+\index{m\+Start\+Time@{m\+Start\+Time}!tsa\+::\+B\+L\+Interpolation@{tsa\+::\+B\+L\+Interpolation}}
+\subsubsection{\texorpdfstring{m\+Start\+Time}{mStartTime}}
+{\footnotesize\ttfamily double tsa\+::\+B\+L\+Interpolation\+::m\+Start\+Time\hspace{0.3cm}{\ttfamily [private]}}
+
+Start (physical) time for resampling 
+
+Definition at line 264 of file B\+L\+Interpolation.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/include/\hyperlink{_b_l_interpolation_8hpp}{B\+L\+Interpolation.\+hpp}\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/src/\hyperlink{_b_l_interpolation_8cpp}{B\+L\+Interpolation.\+cpp}\end{DoxyCompactItemize}

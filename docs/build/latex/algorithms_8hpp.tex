@@ -1,0 +1,35 @@
+\hypertarget{algorithms_8hpp}{}\section{/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/include/eternity/algorithms.hpp File Reference}
+\label{algorithms_8hpp}\index{/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/include/eternity/algorithms.\+hpp@{/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/include/eternity/algorithms.\+hpp}}
+{\ttfamily \#include \char`\"{}persist.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}persist\+\_\+xml.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xmlscanner.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structeternity_1_1primitives}{eternity\+::primitives}
+\item 
+struct \hyperlink{structeternity_1_1objects}{eternity\+::objects}
+\item 
+struct \hyperlink{structeternity_1_1pointers}{eternity\+::pointers}
+\item 
+struct \hyperlink{structeternity_1_1sequence}{eternity\+::sequence$<$ Collection\+Content $>$}
+\item 
+struct \hyperlink{structeternity_1_1association}{eternity\+::association$<$ First\+Content, Second\+Content $>$}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespaceeternity}{eternity}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Input\+Iterator , class Collection\+Category $>$ }\\void \hyperlink{namespaceeternity_a839ed28b40afacc8ece1c9198aff5117}{eternity\+::xml\+\_\+write} (Collection\+Category, Input\+Iterator first, Input\+Iterator last, xml\+\_\+archive \&archive, std\+::string label)
+\item 
+{\footnotesize template$<$class Container , class Input\+Iterator , class Collection\+Category $>$ }\\void \hyperlink{namespaceeternity_acbfdd0b95d15efaa347565f99effa8c3}{eternity\+::xml\+\_\+read} (Collection\+Category, Container \&container, Input\+Iterator inserter, xml\+\_\+archive \&archive, std\+::string label)
+\item 
+{\footnotesize template$<$class Input\+Iterator , class Collection\+Category $>$ }\\void \hyperlink{namespaceeternity_a60ba54c971ad5c7de37fa57de8b3fd4c}{eternity\+::binary\+\_\+write} (Collection\+Category, Input\+Iterator first, Input\+Iterator last, bin\+\_\+archive \&archive)
+\item 
+{\footnotesize template$<$class Container , class Input\+Iterator , class Collection\+Category $>$ }\\void \hyperlink{namespaceeternity_a4bd77f03b6e8ea105a1b7a8d4e245fbe}{eternity\+::binary\+\_\+read} (Collection\+Category, Container \&container, Input\+Iterator inserter, bin\+\_\+archive \&archive)
+\end{DoxyCompactItemize}

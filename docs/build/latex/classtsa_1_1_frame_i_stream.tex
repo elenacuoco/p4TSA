@@ -1,0 +1,641 @@
+\hypertarget{classtsa_1_1_frame_i_stream}{}\section{tsa\+:\+:Frame\+I\+Stream Class Reference}
+\label{classtsa_1_1_frame_i_stream}\index{tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}}
+
+
+A source of data taken from a Frame file.  
+
+
+
+
+{\ttfamily \#include $<$Frame\+I\+Stream.\+hpp$>$}
+
+Inheritance diagram for tsa\+:\+:Frame\+I\+Stream\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classtsa_1_1_frame_i_stream}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtsa_1_1_frame_i_stream_a5bd1cb2479b947745f39121ba638d23f}{Frame\+I\+Stream} (const std\+::string \&file\+Name, const double \&Start\+Time)
+\item 
+\hyperlink{classtsa_1_1_frame_i_stream_a12f14bd9445709d3f03dcb122dc89889}{Frame\+I\+Stream} (const std\+::string \&file\+Name, const double \&Start\+Time, const double \&Time\+Length, const std\+::vector$<$ std\+::string $>$ \&channel\+Names)
+\item 
+\hyperlink{classtsa_1_1_frame_i_stream_a867c0e6a3cd0c2405c038026880d268d}{$\sim$\+Frame\+I\+Stream} ()
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Operations}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtsa_1_1_frame_i_stream_a9c53d0d13f4fe78ce0eef01af69e3f22}{Init} ()
+\item 
+\hyperlink{classtsa_1_1_frame_i_stream}{Frame\+I\+Stream} \& \hyperlink{classtsa_1_1_frame_i_stream_ad2ad3c75a6448ce8ce8f119aee4609e5}{operator$>$$>$} (std\+::vector$<$ \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} $>$ \&r\+Seq\+View)
+\item 
+\hyperlink{classtsa_1_1_frame_i_stream}{Frame\+I\+Stream} \& \hyperlink{classtsa_1_1_frame_i_stream_a1d57b62edf1783696b7c52120dad9e5a}{operator$>$$>$} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&r\+Seq\+View)
+\item 
+void \hyperlink{classtsa_1_1_frame_i_stream_a66b4e5b136f07fc3044865908364c913}{Fill\+View} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&r\+Seq\+View, double tstart, double tend)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Getters}\par
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classtsa_1_1_frame_i_stream_a3a199e1e8993581115311de3164550cc}{Get\+Info} (int gtime=0)
+\item 
+const std\+::string \& \hyperlink{classtsa_1_1_frame_i_stream_aa5e27458593c788665c737f40c445bf4}{Get\+File\+Name} (void) const
+\item 
+const std\+::vector$<$ std\+::string $>$ \& \hyperlink{classtsa_1_1_frame_i_stream_a0f65554481bf64cab44c7f5cbddb1987}{Get\+Channel\+Names} (void) const
+\item 
+double \hyperlink{classtsa_1_1_frame_i_stream_a88781ac3b80bddcca52e252f416009a6}{Get\+Start\+Time} (void) const
+\item 
+double \hyperlink{classtsa_1_1_frame_i_stream_a2b54726738d6155f6e4ccbae2b4a3f8f}{Get\+End\+Time} (void) const
+\item 
+double \hyperlink{classtsa_1_1_frame_i_stream_a02a205a02b70055814056216951476a6}{Get\+Sampling} (unsigned int cn) const
+\item 
+double \hyperlink{classtsa_1_1_frame_i_stream_aa9cae02ea01e99c39ba6a9da12fa8a21}{Get\+Time\+Length} ()
+\item 
+FrameH $\ast$ \hyperlink{classtsa_1_1_frame_i_stream_a7719f5fb6f7adc5b96555728489b5df6}{Get\+Frame} ()
+\item 
+struct Fr\+File $\ast$ \hyperlink{classtsa_1_1_frame_i_stream_a9ecf2c1985bf7578f70e0bef5ac993b3}{Get\+Frame\+File} ()
+\item 
+bool \hyperlink{classtsa_1_1_frame_i_stream_abdd07c781d107408f1b3e800e7fab42f}{Get\+Data\+Loss\+Flag} ()
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Setters}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtsa_1_1_frame_i_stream_a5f23c61f80f232c70717dd2b021fae6d}{Set\+Channels} (const std\+::vector$<$ std\+::string $>$ \&channel\+Names)
+\item 
+void \hyperlink{classtsa_1_1_frame_i_stream_a8fb9dea502f55380a8a21e2976efa9b2}{Set\+Time\+Length} (double length)
+\item 
+void \hyperlink{classtsa_1_1_frame_i_stream_a1f12e9321856878c40266cd97890e3d4}{Reset\+Validation\+View} ()
+\item 
+void \hyperlink{classtsa_1_1_frame_i_stream_a89e7cd73df5fb44c8235166d8b9ccd12}{Set\+Validation\+View} (std\+::vector$<$ \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} $>$ $\ast$r\+Validation\+View)
+\item 
+void \hyperlink{classtsa_1_1_frame_i_stream_a188c2351c1717037f955c959e61629ff}{Set\+Data\+Loss\+Flag} (bool status)
+\item 
+void \hyperlink{classtsa_1_1_frame_i_stream_a7a8b3b63fdc352215672bdbdcefdd295}{Add\+Exception} (const std\+::string \&msg, double miss\+\_\+start, double miss\+\_\+end, unsigned int channel)
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtsa_1_1_channel_descriptor}{Channel\+Descriptor} $\ast$ \hyperlink{classtsa_1_1_frame_i_stream_a6a3a7e4523fed47c0055cb7ae1fd9435}{Create\+Channel\+Descriptor} (const std\+::string \&cname, unsigned int id)
+\item 
+bool \hyperlink{classtsa_1_1_frame_i_stream_af13e8a06bafa6e63bde6871d763425f1}{Data\+Required} ()
+\item 
+void \hyperlink{classtsa_1_1_frame_i_stream_a2f95f7fcf1e17f2d1b4a6b3dca976e76}{Get\+Data} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classtsa_1_1_frame_i_stream_adad4100c6f0691cf47ca247b7b2f0fc6}{m\+Start\+Time}
+\item 
+double \hyperlink{classtsa_1_1_frame_i_stream_abd897050716a0879d2437a7e4f9f6b38}{m\+Time\+Length}
+\item 
+struct Fr\+File $\ast$ \hyperlink{classtsa_1_1_frame_i_stream_acee6c81e135c34abb9501753f8088a91}{mp\+Frame\+File}
+\item 
+FrameH $\ast$ \hyperlink{classtsa_1_1_frame_i_stream_a68ac0c21e3c23a219359e177623cf4e9}{mp\+Frame}
+\item 
+std\+::vector$<$ std\+::string $>$ \hyperlink{classtsa_1_1_frame_i_stream_a14bff233330be1d0f995551d55b8eb98}{m\+Channel\+Names}
+\item 
+std\+::string \hyperlink{classtsa_1_1_frame_i_stream_a888a976c4806d295c7ab6731459a0d90}{m\+File\+Name}
+\item 
+std\+::vector$<$ \hyperlink{classtsa_1_1_channel_descriptor}{Channel\+Descriptor} $\ast$ $>$ \hyperlink{classtsa_1_1_frame_i_stream_aef647c717912f7f4522d98fa967de2a0}{m\+Channel\+Descriptors}
+\item 
+std\+::vector$<$ \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} $>$ $\ast$ \hyperlink{classtsa_1_1_frame_i_stream_a12d9c0c136ca288fc1fd64a660062494}{m\+Validation\+View}
+\item 
+bool \hyperlink{classtsa_1_1_frame_i_stream_aef23fdf187cda4ab4a3aaaa0a9ba59ee}{m\+Data\+Loss}
+\item 
+std\+::deque$<$ \hyperlink{classtsa_1_1missing__data}{missing\+\_\+data} $>$ \hyperlink{classtsa_1_1_frame_i_stream_ab0dfc2d31350678af1d0e1abe165ef65}{m\+Miss\+Exceptions}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A source of data taken from a Frame file. 
+
+This class can be used to read data from a frame file. A set of channels can be specified, which are returned together.
+
+Ser data\+:
+
+Channel\+:\+Parameter\+:\+Frequency\+:Default 
+
+Definition at line 536 of file Frame\+I\+Stream.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtsa_1_1_frame_i_stream_a5bd1cb2479b947745f39121ba638d23f}\label{classtsa_1_1_frame_i_stream_a5bd1cb2479b947745f39121ba638d23f}} 
+\index{tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}!Frame\+I\+Stream@{Frame\+I\+Stream}}
+\index{Frame\+I\+Stream@{Frame\+I\+Stream}!tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}}
+\subsubsection{\texorpdfstring{Frame\+I\+Stream()}{FrameIStream()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily tsa\+::\+Frame\+I\+Stream\+::\+Frame\+I\+Stream (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Name,  }\item[{const double \&}]{Start\+Time }\end{DoxyParamCaption})}
+
+Constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & the name of the frame file (or a ffl file) \\
+\hline
+{\em Start\+Time} & start time of the data chunk we want \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 590 of file Frame\+I\+Stream.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_stream_a12f14bd9445709d3f03dcb122dc89889}\label{classtsa_1_1_frame_i_stream_a12f14bd9445709d3f03dcb122dc89889}} 
+\index{tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}!Frame\+I\+Stream@{Frame\+I\+Stream}}
+\index{Frame\+I\+Stream@{Frame\+I\+Stream}!tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}}
+\subsubsection{\texorpdfstring{Frame\+I\+Stream()}{FrameIStream()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily tsa\+::\+Frame\+I\+Stream\+::\+Frame\+I\+Stream (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Name,  }\item[{const double \&}]{Start\+Time,  }\item[{const double \&}]{Time\+Length,  }\item[{const std\+::vector$<$ std\+::string $>$ \&}]{channel\+Names }\end{DoxyParamCaption})}
+
+Constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & the name of the frame file (or a ffl file) \\
+\hline
+{\em Start\+Time} & start time of the data chunk we want \\
+\hline
+{\em Time\+Length} & time length of requested data \\
+\hline
+{\em channel\+Names} & a list of channel\textquotesingle{}s names \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 571 of file Frame\+I\+Stream.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_stream_a867c0e6a3cd0c2405c038026880d268d}\label{classtsa_1_1_frame_i_stream_a867c0e6a3cd0c2405c038026880d268d}} 
+\index{tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}!````~Frame\+I\+Stream@{$\sim$\+Frame\+I\+Stream}}
+\index{````~Frame\+I\+Stream@{$\sim$\+Frame\+I\+Stream}!tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}}
+\subsubsection{\texorpdfstring{$\sim$\+Frame\+I\+Stream()}{~FrameIStream()}}
+{\footnotesize\ttfamily tsa\+::\+Frame\+I\+Stream\+::$\sim$\+Frame\+I\+Stream (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor 
+
+Definition at line 655 of file Frame\+I\+Stream.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classtsa_1_1_frame_i_stream_a7a8b3b63fdc352215672bdbdcefdd295}\label{classtsa_1_1_frame_i_stream_a7a8b3b63fdc352215672bdbdcefdd295}} 
+\index{tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}!Add\+Exception@{Add\+Exception}}
+\index{Add\+Exception@{Add\+Exception}!tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}}
+\subsubsection{\texorpdfstring{Add\+Exception()}{AddException()}}
+{\footnotesize\ttfamily void tsa\+::\+Frame\+I\+Stream\+::\+Add\+Exception (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{msg,  }\item[{double}]{miss\+\_\+start,  }\item[{double}]{miss\+\_\+end,  }\item[{unsigned int}]{channel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Ad an exception to the set of data losses.
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & exception textual message \\
+\hline
+{\em miss\+\_\+start} & start time for data loss \\
+\hline
+{\em miss\+\_\+end} & end time for data loss (excluded) \\
+\hline
+{\em channel} & channel where the data loss occurred \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 739 of file Frame\+I\+Stream.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_stream_a6a3a7e4523fed47c0055cb7ae1fd9435}\label{classtsa_1_1_frame_i_stream_a6a3a7e4523fed47c0055cb7ae1fd9435}} 
+\index{tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}!Create\+Channel\+Descriptor@{Create\+Channel\+Descriptor}}
+\index{Create\+Channel\+Descriptor@{Create\+Channel\+Descriptor}!tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}}
+\subsubsection{\texorpdfstring{Create\+Channel\+Descriptor()}{CreateChannelDescriptor()}}
+{\footnotesize\ttfamily \hyperlink{classtsa_1_1_channel_descriptor}{Channel\+Descriptor} $\ast$ tsa\+::\+Frame\+I\+Stream\+::\+Create\+Channel\+Descriptor (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{cname,  }\item[{unsigned int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Create a new channel descriptor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em cname} & the name of the requested channel descriptor \\
+\hline
+{\em id} & the index of the desired channel descriptor\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the new channel descriptor structure, or null 
+\end{DoxyReturn}
+
+
+Definition at line 9 of file Frame\+I\+Stream.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_stream_af13e8a06bafa6e63bde6871d763425f1}\label{classtsa_1_1_frame_i_stream_af13e8a06bafa6e63bde6871d763425f1}} 
+\index{tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}!Data\+Required@{Data\+Required}}
+\index{Data\+Required@{Data\+Required}!tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}}
+\subsubsection{\texorpdfstring{Data\+Required()}{DataRequired()}}
+{\footnotesize\ttfamily bool tsa\+::\+Frame\+I\+Stream\+::\+Data\+Required (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Test if some data are required.
+
+\begin{DoxyReturn}{Returns}
+true if soem data are required 
+\end{DoxyReturn}
+
+
+Definition at line 823 of file Frame\+I\+Stream.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_stream_a66b4e5b136f07fc3044865908364c913}\label{classtsa_1_1_frame_i_stream_a66b4e5b136f07fc3044865908364c913}} 
+\index{tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}!Fill\+View@{Fill\+View}}
+\index{Fill\+View@{Fill\+View}!tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}}
+\subsubsection{\texorpdfstring{Fill\+View()}{FillView()}}
+{\footnotesize\ttfamily void tsa\+::\+Frame\+I\+Stream\+::\+Fill\+View (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{r\+Seq\+View,  }\item[{double}]{tstart,  }\item[{double}]{tend }\end{DoxyParamCaption})}
+
+
+
+Definition at line 847 of file Frame\+I\+Stream.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_stream_a0f65554481bf64cab44c7f5cbddb1987}\label{classtsa_1_1_frame_i_stream_a0f65554481bf64cab44c7f5cbddb1987}} 
+\index{tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}!Get\+Channel\+Names@{Get\+Channel\+Names}}
+\index{Get\+Channel\+Names@{Get\+Channel\+Names}!tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}}
+\subsubsection{\texorpdfstring{Get\+Channel\+Names()}{GetChannelNames()}}
+{\footnotesize\ttfamily const std\+::vector$<$ std\+::string $>$ \& tsa\+::\+Frame\+I\+Stream\+::\+Get\+Channel\+Names (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+Get the list of the channel\textquotesingle{}s names.
+
+\begin{DoxyReturn}{Returns}
+a list of channel\textquotesingle{}s names 
+\end{DoxyReturn}
+
+
+Definition at line 757 of file Frame\+I\+Stream.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_stream_a2f95f7fcf1e17f2d1b4a6b3dca976e76}\label{classtsa_1_1_frame_i_stream_a2f95f7fcf1e17f2d1b4a6b3dca976e76}} 
+\index{tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}!Get\+Data@{Get\+Data}}
+\index{Get\+Data@{Get\+Data}!tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}}
+\subsubsection{\texorpdfstring{Get\+Data()}{GetData()}}
+{\footnotesize\ttfamily void tsa\+::\+Frame\+I\+Stream\+::\+Get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Get new data from the file 
+
+Definition at line 805 of file Frame\+I\+Stream.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_stream_abdd07c781d107408f1b3e800e7fab42f}\label{classtsa_1_1_frame_i_stream_abdd07c781d107408f1b3e800e7fab42f}} 
+\index{tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}!Get\+Data\+Loss\+Flag@{Get\+Data\+Loss\+Flag}}
+\index{Get\+Data\+Loss\+Flag@{Get\+Data\+Loss\+Flag}!tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}}
+\subsubsection{\texorpdfstring{Get\+Data\+Loss\+Flag()}{GetDataLossFlag()}}
+{\footnotesize\ttfamily bool tsa\+::\+Frame\+I\+Stream\+::\+Get\+Data\+Loss\+Flag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the value of the data loss flag. It is true if a data loss event is occurred.
+
+\begin{DoxyReturn}{Returns}
+the data loss flag value 
+\end{DoxyReturn}
+
+
+Definition at line 684 of file Frame\+I\+Stream.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_stream_a2b54726738d6155f6e4ccbae2b4a3f8f}\label{classtsa_1_1_frame_i_stream_a2b54726738d6155f6e4ccbae2b4a3f8f}} 
+\index{tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}!Get\+End\+Time@{Get\+End\+Time}}
+\index{Get\+End\+Time@{Get\+End\+Time}!tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}}
+\subsubsection{\texorpdfstring{Get\+End\+Time()}{GetEndTime()}}
+{\footnotesize\ttfamily double tsa\+::\+Frame\+I\+Stream\+::\+Get\+End\+Time (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+Get the actual end time, which is the end time of the next data chunk that will be read.
+
+\begin{DoxyReturn}{Returns}
+the actual end time 
+\end{DoxyReturn}
+
+
+Definition at line 765 of file Frame\+I\+Stream.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_stream_aa5e27458593c788665c737f40c445bf4}\label{classtsa_1_1_frame_i_stream_aa5e27458593c788665c737f40c445bf4}} 
+\index{tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}!Get\+File\+Name@{Get\+File\+Name}}
+\index{Get\+File\+Name@{Get\+File\+Name}!tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}}
+\subsubsection{\texorpdfstring{Get\+File\+Name()}{GetFileName()}}
+{\footnotesize\ttfamily const std\+::string \& tsa\+::\+Frame\+I\+Stream\+::\+Get\+File\+Name (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+Get the file name of the frame file used.
+
+\begin{DoxyReturn}{Returns}
+the file name of the frame file 
+\end{DoxyReturn}
+
+
+Definition at line 753 of file Frame\+I\+Stream.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_stream_a7719f5fb6f7adc5b96555728489b5df6}\label{classtsa_1_1_frame_i_stream_a7719f5fb6f7adc5b96555728489b5df6}} 
+\index{tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}!Get\+Frame@{Get\+Frame}}
+\index{Get\+Frame@{Get\+Frame}!tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}}
+\subsubsection{\texorpdfstring{Get\+Frame()}{GetFrame()}}
+{\footnotesize\ttfamily FrameH$\ast$ tsa\+::\+Frame\+I\+Stream\+::\+Get\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get a pointer to the current FrameH structure.
+
+\begin{DoxyReturn}{Returns}
+a pointer to the current FrameH 
+\end{DoxyReturn}
+
+
+Definition at line 670 of file Frame\+I\+Stream.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_stream_a9ecf2c1985bf7578f70e0bef5ac993b3}\label{classtsa_1_1_frame_i_stream_a9ecf2c1985bf7578f70e0bef5ac993b3}} 
+\index{tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}!Get\+Frame\+File@{Get\+Frame\+File}}
+\index{Get\+Frame\+File@{Get\+Frame\+File}!tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}}
+\subsubsection{\texorpdfstring{Get\+Frame\+File()}{GetFrameFile()}}
+{\footnotesize\ttfamily struct Fr\+File$\ast$ tsa\+::\+Frame\+I\+Stream\+::\+Get\+Frame\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 674 of file Frame\+I\+Stream.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_stream_a3a199e1e8993581115311de3164550cc}\label{classtsa_1_1_frame_i_stream_a3a199e1e8993581115311de3164550cc}} 
+\index{tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}!Get\+Info@{Get\+Info}}
+\index{Get\+Info@{Get\+Info}!tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}}
+\subsubsection{\texorpdfstring{Get\+Info()}{GetInfo()}}
+{\footnotesize\ttfamily std\+::string tsa\+::\+Frame\+I\+Stream\+::\+Get\+Info (\begin{DoxyParamCaption}\item[{int}]{gtime = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 664 of file Frame\+I\+Stream.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_stream_a02a205a02b70055814056216951476a6}\label{classtsa_1_1_frame_i_stream_a02a205a02b70055814056216951476a6}} 
+\index{tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}!Get\+Sampling@{Get\+Sampling}}
+\index{Get\+Sampling@{Get\+Sampling}!tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}}
+\subsubsection{\texorpdfstring{Get\+Sampling()}{GetSampling()}}
+{\footnotesize\ttfamily double tsa\+::\+Frame\+I\+Stream\+::\+Get\+Sampling (\begin{DoxyParamCaption}\item[{unsigned int}]{cn }\end{DoxyParamCaption}) const}
+
+Get the sampling time of a channel
+
+
+\begin{DoxyParams}{Parameters}
+{\em cname} & the channel\textquotesingle{}s name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the channel\textquotesingle{}s sampling time 
+\end{DoxyReturn}
+
+
+Definition at line 769 of file Frame\+I\+Stream.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_stream_a88781ac3b80bddcca52e252f416009a6}\label{classtsa_1_1_frame_i_stream_a88781ac3b80bddcca52e252f416009a6}} 
+\index{tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}!Get\+Start\+Time@{Get\+Start\+Time}}
+\index{Get\+Start\+Time@{Get\+Start\+Time}!tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}}
+\subsubsection{\texorpdfstring{Get\+Start\+Time()}{GetStartTime()}}
+{\footnotesize\ttfamily double tsa\+::\+Frame\+I\+Stream\+::\+Get\+Start\+Time (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+Get the actual start time, which is the start time of the next data chunk that will be read.
+
+\begin{DoxyReturn}{Returns}
+the actual start time 
+\end{DoxyReturn}
+
+
+Definition at line 761 of file Frame\+I\+Stream.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_stream_aa9cae02ea01e99c39ba6a9da12fa8a21}\label{classtsa_1_1_frame_i_stream_aa9cae02ea01e99c39ba6a9da12fa8a21}} 
+\index{tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}!Get\+Time\+Length@{Get\+Time\+Length}}
+\index{Get\+Time\+Length@{Get\+Time\+Length}!tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}}
+\subsubsection{\texorpdfstring{Get\+Time\+Length()}{GetTimeLength()}}
+{\footnotesize\ttfamily double tsa\+::\+Frame\+I\+Stream\+::\+Get\+Time\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the time duration of the next data chunk that will be read.
+
+\begin{DoxyReturn}{Returns}
+the actual time duration. 
+\end{DoxyReturn}
+
+
+Definition at line 660 of file Frame\+I\+Stream.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_stream_a9c53d0d13f4fe78ce0eef01af69e3f22}\label{classtsa_1_1_frame_i_stream_a9c53d0d13f4fe78ce0eef01af69e3f22}} 
+\index{tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}!Init@{Init}}
+\index{Init@{Init}!tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void tsa\+::\+Frame\+I\+Stream\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 606 of file Frame\+I\+Stream.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_stream_ad2ad3c75a6448ce8ce8f119aee4609e5}\label{classtsa_1_1_frame_i_stream_ad2ad3c75a6448ce8ce8f119aee4609e5}} 
+\index{tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}}
+\subsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{classtsa_1_1_frame_i_stream}{Frame\+I\+Stream} \& tsa\+::\+Frame\+I\+Stream\+::operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} $>$ \&}]{r\+Seq\+View }\end{DoxyParamCaption})}
+
+Read data from the frame file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em r\+Seq\+View} & A list of time views to fill with data. Each view contain a single channel.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a reference to the instance of the class 
+\end{DoxyReturn}
+
+
+Definition at line 716 of file Frame\+I\+Stream.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_stream_a1d57b62edf1783696b7c52120dad9e5a}\label{classtsa_1_1_frame_i_stream_a1d57b62edf1783696b7c52120dad9e5a}} 
+\index{tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}}
+\subsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{classtsa_1_1_frame_i_stream}{Frame\+I\+Stream} \& tsa\+::\+Frame\+I\+Stream\+::operator$>$$>$ (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{r\+Seq\+View }\end{DoxyParamCaption})}
+
+Read data from the frame file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em r\+Seq\+View} & A list a time view to fill with data. It contains a single channel.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a reference to the instance of the class 
+\end{DoxyReturn}
+
+
+Definition at line 688 of file Frame\+I\+Stream.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_stream_a1f12e9321856878c40266cd97890e3d4}\label{classtsa_1_1_frame_i_stream_a1f12e9321856878c40266cd97890e3d4}} 
+\index{tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}!Reset\+Validation\+View@{Reset\+Validation\+View}}
+\index{Reset\+Validation\+View@{Reset\+Validation\+View}!tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}}
+\subsubsection{\texorpdfstring{Reset\+Validation\+View()}{ResetValidationView()}}
+{\footnotesize\ttfamily void tsa\+::\+Frame\+I\+Stream\+::\+Reset\+Validation\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Set to zero the validation view. No validation data are written. 
+
+Definition at line 839 of file Frame\+I\+Stream.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_stream_a5f23c61f80f232c70717dd2b021fae6d}\label{classtsa_1_1_frame_i_stream_a5f23c61f80f232c70717dd2b021fae6d}} 
+\index{tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}!Set\+Channels@{Set\+Channels}}
+\index{Set\+Channels@{Set\+Channels}!tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}}
+\subsubsection{\texorpdfstring{Set\+Channels()}{SetChannels()}}
+{\footnotesize\ttfamily void tsa\+::\+Frame\+I\+Stream\+::\+Set\+Channels (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{channel\+Names }\end{DoxyParamCaption})}
+
+Set the channels which should be opened
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel\+Names} & vector of names for the channels \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 773 of file Frame\+I\+Stream.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_stream_a188c2351c1717037f955c959e61629ff}\label{classtsa_1_1_frame_i_stream_a188c2351c1717037f955c959e61629ff}} 
+\index{tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}!Set\+Data\+Loss\+Flag@{Set\+Data\+Loss\+Flag}}
+\index{Set\+Data\+Loss\+Flag@{Set\+Data\+Loss\+Flag}!tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}}
+\subsubsection{\texorpdfstring{Set\+Data\+Loss\+Flag()}{SetDataLossFlag()}}
+{\footnotesize\ttfamily void tsa\+::\+Frame\+I\+Stream\+::\+Set\+Data\+Loss\+Flag (\begin{DoxyParamCaption}\item[{bool}]{status }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the value of the data loss flag.
+
+
+\begin{DoxyParams}{Parameters}
+{\em status} & new value of the data loss flag \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 727 of file Frame\+I\+Stream.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_stream_a8fb9dea502f55380a8a21e2976efa9b2}\label{classtsa_1_1_frame_i_stream_a8fb9dea502f55380a8a21e2976efa9b2}} 
+\index{tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}!Set\+Time\+Length@{Set\+Time\+Length}}
+\index{Set\+Time\+Length@{Set\+Time\+Length}!tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}}
+\subsubsection{\texorpdfstring{Set\+Time\+Length()}{SetTimeLength()}}
+{\footnotesize\ttfamily void tsa\+::\+Frame\+I\+Stream\+::\+Set\+Time\+Length (\begin{DoxyParamCaption}\item[{double}]{length }\end{DoxyParamCaption})}
+
+Set the length of the data buffer that will be returned from now on 
+\begin{DoxyParams}{Parameters}
+{\em length} & the new length \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 801 of file Frame\+I\+Stream.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_stream_a89e7cd73df5fb44c8235166d8b9ccd12}\label{classtsa_1_1_frame_i_stream_a89e7cd73df5fb44c8235166d8b9ccd12}} 
+\index{tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}!Set\+Validation\+View@{Set\+Validation\+View}}
+\index{Set\+Validation\+View@{Set\+Validation\+View}!tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}}
+\subsubsection{\texorpdfstring{Set\+Validation\+View()}{SetValidationView()}}
+{\footnotesize\ttfamily void tsa\+::\+Frame\+I\+Stream\+::\+Set\+Validation\+View (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} $>$ $\ast$}]{r\+Validation\+View }\end{DoxyParamCaption})}
+
+Set the current validation view. From now on the validation data are written on the given views every time some data is read.
+
+
+\begin{DoxyParams}{Parameters}
+{\em r\+Validation\+View} & pointer to a vector of validation views \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 843 of file Frame\+I\+Stream.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classtsa_1_1_frame_i_stream_aef647c717912f7f4522d98fa967de2a0}\label{classtsa_1_1_frame_i_stream_aef647c717912f7f4522d98fa967de2a0}} 
+\index{tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}!m\+Channel\+Descriptors@{m\+Channel\+Descriptors}}
+\index{m\+Channel\+Descriptors@{m\+Channel\+Descriptors}!tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}}
+\subsubsection{\texorpdfstring{m\+Channel\+Descriptors}{mChannelDescriptors}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{classtsa_1_1_channel_descriptor}{Channel\+Descriptor}$\ast$$>$ tsa\+::\+Frame\+I\+Stream\+::m\+Channel\+Descriptors\hspace{0.3cm}{\ttfamily [private]}}
+
+list of channel descriptor 
+
+Definition at line 780 of file Frame\+I\+Stream.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_stream_a14bff233330be1d0f995551d55b8eb98}\label{classtsa_1_1_frame_i_stream_a14bff233330be1d0f995551d55b8eb98}} 
+\index{tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}!m\+Channel\+Names@{m\+Channel\+Names}}
+\index{m\+Channel\+Names@{m\+Channel\+Names}!tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}}
+\subsubsection{\texorpdfstring{m\+Channel\+Names}{mChannelNames}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ tsa\+::\+Frame\+I\+Stream\+::m\+Channel\+Names\hspace{0.3cm}{\ttfamily [private]}}
+
+The list of channel names 
+
+Definition at line 778 of file Frame\+I\+Stream.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_stream_aef23fdf187cda4ab4a3aaaa0a9ba59ee}\label{classtsa_1_1_frame_i_stream_aef23fdf187cda4ab4a3aaaa0a9ba59ee}} 
+\index{tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}!m\+Data\+Loss@{m\+Data\+Loss}}
+\index{m\+Data\+Loss@{m\+Data\+Loss}!tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}}
+\subsubsection{\texorpdfstring{m\+Data\+Loss}{mDataLoss}}
+{\footnotesize\ttfamily bool tsa\+::\+Frame\+I\+Stream\+::m\+Data\+Loss\hspace{0.3cm}{\ttfamily [private]}}
+
+Data loss flag 
+
+Definition at line 782 of file Frame\+I\+Stream.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_stream_a888a976c4806d295c7ab6731459a0d90}\label{classtsa_1_1_frame_i_stream_a888a976c4806d295c7ab6731459a0d90}} 
+\index{tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}!m\+File\+Name@{m\+File\+Name}}
+\index{m\+File\+Name@{m\+File\+Name}!tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}}
+\subsubsection{\texorpdfstring{m\+File\+Name}{mFileName}}
+{\footnotesize\ttfamily std\+::string tsa\+::\+Frame\+I\+Stream\+::m\+File\+Name\hspace{0.3cm}{\ttfamily [private]}}
+
+The file name 
+
+Definition at line 779 of file Frame\+I\+Stream.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_stream_ab0dfc2d31350678af1d0e1abe165ef65}\label{classtsa_1_1_frame_i_stream_ab0dfc2d31350678af1d0e1abe165ef65}} 
+\index{tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}!m\+Miss\+Exceptions@{m\+Miss\+Exceptions}}
+\index{m\+Miss\+Exceptions@{m\+Miss\+Exceptions}!tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}}
+\subsubsection{\texorpdfstring{m\+Miss\+Exceptions}{mMissExceptions}}
+{\footnotesize\ttfamily std\+::deque$<$\hyperlink{classtsa_1_1missing__data}{missing\+\_\+data}$>$ tsa\+::\+Frame\+I\+Stream\+::m\+Miss\+Exceptions\hspace{0.3cm}{\ttfamily [private]}}
+
+Set of data loss exception 
+
+Definition at line 783 of file Frame\+I\+Stream.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_stream_a68ac0c21e3c23a219359e177623cf4e9}\label{classtsa_1_1_frame_i_stream_a68ac0c21e3c23a219359e177623cf4e9}} 
+\index{tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}!mp\+Frame@{mp\+Frame}}
+\index{mp\+Frame@{mp\+Frame}!tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}}
+\subsubsection{\texorpdfstring{mp\+Frame}{mpFrame}}
+{\footnotesize\ttfamily FrameH$\ast$ tsa\+::\+Frame\+I\+Stream\+::mp\+Frame\hspace{0.3cm}{\ttfamily [private]}}
+
+The current FrameH structure 
+
+Definition at line 777 of file Frame\+I\+Stream.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_stream_acee6c81e135c34abb9501753f8088a91}\label{classtsa_1_1_frame_i_stream_acee6c81e135c34abb9501753f8088a91}} 
+\index{tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}!mp\+Frame\+File@{mp\+Frame\+File}}
+\index{mp\+Frame\+File@{mp\+Frame\+File}!tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}}
+\subsubsection{\texorpdfstring{mp\+Frame\+File}{mpFrameFile}}
+{\footnotesize\ttfamily struct Fr\+File$\ast$ tsa\+::\+Frame\+I\+Stream\+::mp\+Frame\+File\hspace{0.3cm}{\ttfamily [private]}}
+
+The current frame file 
+
+Definition at line 776 of file Frame\+I\+Stream.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_stream_adad4100c6f0691cf47ca247b7b2f0fc6}\label{classtsa_1_1_frame_i_stream_adad4100c6f0691cf47ca247b7b2f0fc6}} 
+\index{tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}!m\+Start\+Time@{m\+Start\+Time}}
+\index{m\+Start\+Time@{m\+Start\+Time}!tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}}
+\subsubsection{\texorpdfstring{m\+Start\+Time}{mStartTime}}
+{\footnotesize\ttfamily double tsa\+::\+Frame\+I\+Stream\+::m\+Start\+Time\hspace{0.3cm}{\ttfamily [private]}}
+
+Start time for the data queue 
+
+Definition at line 774 of file Frame\+I\+Stream.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_stream_abd897050716a0879d2437a7e4f9f6b38}\label{classtsa_1_1_frame_i_stream_abd897050716a0879d2437a7e4f9f6b38}} 
+\index{tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}!m\+Time\+Length@{m\+Time\+Length}}
+\index{m\+Time\+Length@{m\+Time\+Length}!tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}}
+\subsubsection{\texorpdfstring{m\+Time\+Length}{mTimeLength}}
+{\footnotesize\ttfamily double tsa\+::\+Frame\+I\+Stream\+::m\+Time\+Length\hspace{0.3cm}{\ttfamily [private]}}
+
+Time length of the data given at each request 
+
+Definition at line 775 of file Frame\+I\+Stream.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_stream_a12d9c0c136ca288fc1fd64a660062494}\label{classtsa_1_1_frame_i_stream_a12d9c0c136ca288fc1fd64a660062494}} 
+\index{tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}!m\+Validation\+View@{m\+Validation\+View}}
+\index{m\+Validation\+View@{m\+Validation\+View}!tsa\+::\+Frame\+I\+Stream@{tsa\+::\+Frame\+I\+Stream}}
+\subsubsection{\texorpdfstring{m\+Validation\+View}{mValidationView}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double}$>$$\ast$ tsa\+::\+Frame\+I\+Stream\+::m\+Validation\+View\hspace{0.3cm}{\ttfamily [private]}}
+
+Pointer to the validation views 
+
+Definition at line 781 of file Frame\+I\+Stream.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/include/\hyperlink{_frame_i_stream_8hpp}{Frame\+I\+Stream.\+hpp}\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/src/\hyperlink{_frame_i_stream_8cpp}{Frame\+I\+Stream.\+cpp}\end{DoxyCompactItemize}

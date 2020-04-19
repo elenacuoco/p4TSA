@@ -1,0 +1,228 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classtsa_1_1_butterworth_filter" kind="class" language="C++" prot="public">
+    <compoundname>tsa::ButterworthFilter</compoundname>
+    <basecompoundref refid="classtsa_1_1_algo_base" prot="public" virt="non-virtual">tsa::AlgoBase</basecompoundref>
+    <includes refid="_butterworth_filter_8hpp" local="no">ButterworthFilter.hpp</includes>
+      <sectiondef kind="user-defined">
+      <header>Operations</header>
+      <memberdef kind="function" id="classtsa_1_1_butterworth_filter_1a3e0223e447ec10bd00d488652abb702f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::ButterworthFilter::execute</definition>
+        <argsstring>(Cmatrix &amp;datain, Cmatrix &amp;dataout, double fstart, double fsample, double scale)</argsstring>
+        <name>execute</name>
+        <param>
+          <type><ref refid="namespacetsa_1a86348fef1603a135fe5fba9e5f5486ee" kindref="member">Cmatrix</ref> &amp;</type>
+          <declname>datain</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetsa_1a86348fef1603a135fe5fba9e5f5486ee" kindref="member">Cmatrix</ref> &amp;</type>
+          <declname>dataout</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>fstart</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>fsample</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>scale</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ButterworthFilter.hpp" line="110" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/ButterworthFilter.cpp" bodystart="79" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_butterworth_filter_1acff437ecb48fcb6cae8865bba97ac533" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::ButterworthFilter::execute</definition>
+        <argsstring>(Cmatrix &amp;datain, double fstart, double fsample, double scale)</argsstring>
+        <name>execute</name>
+        <param>
+          <type><ref refid="namespacetsa_1a86348fef1603a135fe5fba9e5f5486ee" kindref="member">Cmatrix</ref> &amp;</type>
+          <declname>datain</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>fstart</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>fsample</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>scale</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ButterworthFilter.hpp" line="112" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/ButterworthFilter.cpp" bodystart="64" bodyend="77"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtsa_1_1_butterworth_filter_1ad81a41345c8b088c6aa02f138b39348b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int tsa::ButterworthFilter::mOrder</definition>
+        <argsstring></argsstring>
+        <name>mOrder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ButterworthFilter.hpp" line="136" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/ButterworthFilter.hpp" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_butterworth_filter_1a7bff04791bdba8c8b668e8b664f01e60" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double tsa::ButterworthFilter::mFreq</definition>
+        <argsstring></argsstring>
+        <name>mFreq</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ButterworthFilter.hpp" line="137" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/ButterworthFilter.hpp" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_butterworth_filter_1a35cbb21e7a98ac4214147afd1aa5b1fe" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacetsa_1a7b1f40fa90474b78dd0ab472b7c37547" kindref="member">Cdouble</ref> *</type>
+        <definition>Cdouble* tsa::ButterworthFilter::poles</definition>
+        <argsstring></argsstring>
+        <name>poles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ButterworthFilter.hpp" line="138" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/ButterworthFilter.hpp" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtsa_1_1_butterworth_filter_1a593153a0d04510ed85ddf1464c68dc74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tsa::ButterworthFilter::ButterworthFilter</definition>
+        <argsstring>(double freq, int order)</argsstring>
+        <name>ButterworthFilter</name>
+        <param>
+          <type>double</type>
+          <declname>freq</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>order</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ButterworthFilter.hpp" line="81" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/ButterworthFilter.cpp" bodystart="7" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_butterworth_filter_1a085e8ea21b5fb0d564513bca234318df" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>tsa::ButterworthFilter::~ButterworthFilter</definition>
+        <argsstring>()</argsstring>
+        <name>~ButterworthFilter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ButterworthFilter.hpp" line="86" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/ButterworthFilter.cpp" bodystart="22" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_butterworth_filter_1aa38eef705674e3c799e23bd145d243c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::ButterworthFilter::operator()</definition>
+        <argsstring>(SeqViewComplex &amp;data)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type><ref refid="namespacetsa_1ab32775c889b53c40fa83939f22372b75" kindref="member">SeqViewComplex</ref> &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write the filter on a view </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ButterworthFilter.hpp" line="92" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/ButterworthFilter.cpp" bodystart="26" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_butterworth_filter_1a68cf85f26d694402fe52601707cf9bbb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::ButterworthFilter::operator()</definition>
+        <argsstring>(SeqViewComplex &amp;datain, SeqViewComplex &amp;dataout)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type><ref refid="namespacetsa_1ab32775c889b53c40fa83939f22372b75" kindref="member">SeqViewComplex</ref> &amp;</type>
+          <declname>datain</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetsa_1ab32775c889b53c40fa83939f22372b75" kindref="member">SeqViewComplex</ref> &amp;</type>
+          <declname>dataout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Apply the filter on a view </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ButterworthFilter.hpp" line="99" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/ButterworthFilter.cpp" bodystart="43" bodyend="62"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A generator of random normal numbers. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="164">
+        <label>tsa::ButterworthFilter</label>
+        <link refid="classtsa_1_1_butterworth_filter"/>
+        <childnode refid="165" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="165">
+        <label>tsa::AlgoBase</label>
+        <link refid="classtsa_1_1_algo_base"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="166">
+        <label>tsa::ButterworthFilter</label>
+        <link refid="classtsa_1_1_butterworth_filter"/>
+        <childnode refid="167" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="167">
+        <label>tsa::AlgoBase</label>
+        <link refid="classtsa_1_1_algo_base"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ButterworthFilter.hpp" line="74" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/ButterworthFilter.hpp" bodystart="74" bodyend="140"/>
+    <listofallmembers>
+      <member refid="classtsa_1_1_butterworth_filter_1a593153a0d04510ed85ddf1464c68dc74" prot="public" virt="non-virtual"><scope>tsa::ButterworthFilter</scope><name>ButterworthFilter</name></member>
+      <member refid="classtsa_1_1_butterworth_filter_1a3e0223e447ec10bd00d488652abb702f" prot="public" virt="non-virtual"><scope>tsa::ButterworthFilter</scope><name>execute</name></member>
+      <member refid="classtsa_1_1_butterworth_filter_1acff437ecb48fcb6cae8865bba97ac533" prot="public" virt="non-virtual"><scope>tsa::ButterworthFilter</scope><name>execute</name></member>
+      <member refid="classtsa_1_1_butterworth_filter_1a7bff04791bdba8c8b668e8b664f01e60" prot="private" virt="non-virtual"><scope>tsa::ButterworthFilter</scope><name>mFreq</name></member>
+      <member refid="classtsa_1_1_butterworth_filter_1ad81a41345c8b088c6aa02f138b39348b" prot="private" virt="non-virtual"><scope>tsa::ButterworthFilter</scope><name>mOrder</name></member>
+      <member refid="classtsa_1_1_butterworth_filter_1aa38eef705674e3c799e23bd145d243c0" prot="public" virt="non-virtual"><scope>tsa::ButterworthFilter</scope><name>operator()</name></member>
+      <member refid="classtsa_1_1_butterworth_filter_1a68cf85f26d694402fe52601707cf9bbb" prot="public" virt="non-virtual"><scope>tsa::ButterworthFilter</scope><name>operator()</name></member>
+      <member refid="classtsa_1_1_butterworth_filter_1a35cbb21e7a98ac4214147afd1aa5b1fe" prot="private" virt="non-virtual"><scope>tsa::ButterworthFilter</scope><name>poles</name></member>
+      <member refid="classtsa_1_1_butterworth_filter_1a085e8ea21b5fb0d564513bca234318df" prot="public" virt="virtual"><scope>tsa::ButterworthFilter</scope><name>~ButterworthFilter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

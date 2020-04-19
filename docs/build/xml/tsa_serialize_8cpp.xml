@@ -1,0 +1,201 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="tsa_serialize_8cpp" kind="file" language="C++">
+    <compoundname>tsaSerialize.cpp</compoundname>
+    <includes refid="tsa_serialize_8hpp" local="no">tsaSerialize.hpp</includes>
+    <incdepgraph>
+      <node id="6041">
+        <label>eternity.hpp</label>
+        <link refid="eternity_8hpp"/>
+        <childnode refid="6042" relation="include">
+        </childnode>
+        <childnode refid="6046" relation="include">
+        </childnode>
+        <childnode refid="6051" relation="include">
+        </childnode>
+        <childnode refid="6055" relation="include">
+        </childnode>
+      </node>
+      <node id="6048">
+        <label>stdlib.h</label>
+      </node>
+      <node id="6038">
+        <label>stdexcept</label>
+      </node>
+      <node id="6057">
+        <label>tsaTypes.hpp</label>
+        <link refid="tsa_types_8hpp"/>
+        <childnode refid="6040" relation="include">
+        </childnode>
+        <childnode refid="6058" relation="include">
+        </childnode>
+        <childnode refid="6059" relation="include">
+        </childnode>
+        <childnode refid="6060" relation="include">
+        </childnode>
+        <childnode refid="6041" relation="include">
+        </childnode>
+      </node>
+      <node id="6045">
+        <label>string</label>
+      </node>
+      <node id="6042">
+        <label>eternity/dynamic.hpp</label>
+        <link refid="dynamic_8hpp"/>
+        <childnode refid="6043" relation="include">
+        </childnode>
+        <childnode refid="6044" relation="include">
+        </childnode>
+        <childnode refid="6045" relation="include">
+        </childnode>
+      </node>
+      <node id="6053">
+        <label>map</label>
+      </node>
+      <node id="6040">
+        <label>fstream</label>
+      </node>
+      <node id="6052">
+        <label>xmlscanner.hpp</label>
+        <link refid="xmlscanner_8hpp"/>
+        <childnode refid="6047" relation="include">
+        </childnode>
+        <childnode refid="6048" relation="include">
+        </childnode>
+        <childnode refid="6049" relation="include">
+        </childnode>
+        <childnode refid="6053" relation="include">
+        </childnode>
+        <childnode refid="6050" relation="include">
+        </childnode>
+        <childnode refid="6040" relation="include">
+        </childnode>
+        <childnode refid="6045" relation="include">
+        </childnode>
+        <childnode refid="6039" relation="include">
+        </childnode>
+      </node>
+      <node id="6037">
+        <label>tsaSerialize.hpp</label>
+        <link refid="tsa_serialize_8hpp"/>
+        <childnode refid="6038" relation="include">
+        </childnode>
+        <childnode refid="6039" relation="include">
+        </childnode>
+        <childnode refid="6040" relation="include">
+        </childnode>
+        <childnode refid="6041" relation="include">
+        </childnode>
+        <childnode refid="6057" relation="include">
+        </childnode>
+      </node>
+      <node id="6046">
+        <label>eternity/persist.hpp</label>
+        <link refid="persist_8hpp"/>
+        <childnode refid="6042" relation="include">
+        </childnode>
+        <childnode refid="6047" relation="include">
+        </childnode>
+        <childnode refid="6048" relation="include">
+        </childnode>
+        <childnode refid="6049" relation="include">
+        </childnode>
+        <childnode refid="6050" relation="include">
+        </childnode>
+        <childnode refid="6040" relation="include">
+        </childnode>
+      </node>
+      <node id="6044">
+        <label>typeinfo</label>
+      </node>
+      <node id="6060">
+        <label>boost/numeric/ublas/io.hpp</label>
+      </node>
+      <node id="6049">
+        <label>vector</label>
+      </node>
+      <node id="6059">
+        <label>boost/numeric/ublas/matrix_proxy.hpp</label>
+      </node>
+      <node id="6056">
+        <label>sstream</label>
+      </node>
+      <node id="6047">
+        <label>math.h</label>
+      </node>
+      <node id="6058">
+        <label>boost/numeric/ublas/matrix.hpp</label>
+      </node>
+      <node id="6039">
+        <label>iostream</label>
+      </node>
+      <node id="6054">
+        <label>deque</label>
+      </node>
+      <node id="6051">
+        <label>eternity/persist_xml.hpp</label>
+        <link refid="persist__xml_8hpp"/>
+        <childnode refid="6046" relation="include">
+        </childnode>
+        <childnode refid="6052" relation="include">
+        </childnode>
+        <childnode refid="6054" relation="include">
+        </childnode>
+      </node>
+      <node id="6055">
+        <label>eternity/algorithms.hpp</label>
+        <link refid="algorithms_8hpp"/>
+        <childnode refid="6046" relation="include">
+        </childnode>
+        <childnode refid="6051" relation="include">
+        </childnode>
+        <childnode refid="6052" relation="include">
+        </childnode>
+        <childnode refid="6056" relation="include">
+        </childnode>
+      </node>
+      <node id="6050">
+        <label>algorithm</label>
+      </node>
+      <node id="6043">
+        <label>stdio.h</label>
+      </node>
+      <node id="6036">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/tsaSerialize.cpp</label>
+        <link refid="tsa_serialize_8cpp"/>
+        <childnode refid="6037" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacetsa">tsa</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;<ref refid="tsa_serialize_8hpp" kindref="compound">tsaSerialize.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetsa" kindref="compound">tsa</ref><sp/>{</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="namespacetsa_1afb13ed99dfd49fe21c248464155e8806" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="namespacetsa_1afb13ed99dfd49fe21c248464155e8806" kindref="member">Tag</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buffer,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>base,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>rec)<sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>snprintf(buffer,<sp/>n,<sp/></highlight><highlight class="stringliteral">&quot;%s.%s&quot;</highlight><highlight class="normal">,<sp/>base,<sp/>rec);</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>buffer;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="namespacetsa_1a1079ab07e72bc3aaa35f2a9fce42cbd9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="namespacetsa_1afb13ed99dfd49fe21c248464155e8806" kindref="member">Tag</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buffer,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>base,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>rec,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i)<sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>snprintf(buffer,<sp/>n,<sp/></highlight><highlight class="stringliteral">&quot;%s.%s.%d&quot;</highlight><highlight class="normal">,<sp/>base,<sp/>rec,<sp/>i);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>buffer;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="namespacetsa_1a1b02aafe1625f78174f56249e0ec5d34" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="namespacetsa_1afb13ed99dfd49fe21c248464155e8806" kindref="member">Tag</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buffer,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>base,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>rec,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j)<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>snprintf(buffer,<sp/>n,<sp/></highlight><highlight class="stringliteral">&quot;%s.%s.%d.%d&quot;</highlight><highlight class="normal">,<sp/>base,<sp/>rec,<sp/>i,<sp/>j);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>buffer;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/src/tsaSerialize.cpp"/>
+  </compounddef>
+</doxygen>

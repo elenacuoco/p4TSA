@@ -1,0 +1,592 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_w_d_f2_reconstruct_8cpp" kind="file" language="C++">
+    <compoundname>WDF2Reconstruct.cpp</compoundname>
+    <includes refid="_w_d_f2_reconstruct_8hpp" local="no">WDF2Reconstruct.hpp</includes>
+    <incdepgraph>
+      <node id="6349">
+        <label>queue</label>
+      </node>
+      <node id="6340">
+        <label>tsaTraits.hpp</label>
+        <link refid="tsa_traits_8hpp"/>
+        <childnode refid="6341" relation="include">
+        </childnode>
+      </node>
+      <node id="6357">
+        <label>Cs2HammingWindow.hpp</label>
+        <link refid="_cs2_hamming_window_8hpp"/>
+        <childnode refid="6358" relation="include">
+        </childnode>
+      </node>
+      <node id="6320">
+        <label>eternity.hpp</label>
+        <link refid="eternity_8hpp"/>
+        <childnode refid="6321" relation="include">
+        </childnode>
+        <childnode refid="6324" relation="include">
+        </childnode>
+        <childnode refid="6329" relation="include">
+        </childnode>
+        <childnode refid="6333" relation="include">
+        </childnode>
+      </node>
+      <node id="6326">
+        <label>stdlib.h</label>
+      </node>
+      <node id="6314">
+        <label>stdexcept</label>
+      </node>
+      <node id="6335">
+        <label>tsaTypes.hpp</label>
+        <link refid="tsa_types_8hpp"/>
+        <childnode refid="6316" relation="include">
+        </childnode>
+        <childnode refid="6317" relation="include">
+        </childnode>
+        <childnode refid="6336" relation="include">
+        </childnode>
+        <childnode refid="6318" relation="include">
+        </childnode>
+        <childnode refid="6320" relation="include">
+        </childnode>
+      </node>
+      <node id="6312">
+        <label>string</label>
+      </node>
+      <node id="6354">
+        <label>WaveletThreshold.hpp</label>
+        <link refid="_wavelet_threshold_8hpp"/>
+        <childnode refid="6313" relation="include">
+        </childnode>
+        <childnode refid="6345" relation="include">
+        </childnode>
+        <childnode refid="6355" relation="include">
+        </childnode>
+        <childnode refid="6356" relation="include">
+        </childnode>
+      </node>
+      <node id="6321">
+        <label>eternity/dynamic.hpp</label>
+        <link refid="dynamic_8hpp"/>
+        <childnode refid="6322" relation="include">
+        </childnode>
+        <childnode refid="6323" relation="include">
+        </childnode>
+        <childnode refid="6312" relation="include">
+        </childnode>
+      </node>
+      <node id="6331">
+        <label>map</label>
+      </node>
+      <node id="6337">
+        <label>tsaLog.hpp</label>
+        <link refid="tsa_log_8hpp"/>
+        <childnode refid="6315" relation="include">
+        </childnode>
+        <childnode refid="6316" relation="include">
+        </childnode>
+        <childnode refid="6338" relation="include">
+        </childnode>
+      </node>
+      <node id="6316">
+        <label>fstream</label>
+      </node>
+      <node id="6330">
+        <label>xmlscanner.hpp</label>
+        <link refid="xmlscanner_8hpp"/>
+        <childnode refid="6325" relation="include">
+        </childnode>
+        <childnode refid="6326" relation="include">
+        </childnode>
+        <childnode refid="6327" relation="include">
+        </childnode>
+        <childnode refid="6331" relation="include">
+        </childnode>
+        <childnode refid="6328" relation="include">
+        </childnode>
+        <childnode refid="6316" relation="include">
+        </childnode>
+        <childnode refid="6312" relation="include">
+        </childnode>
+        <childnode refid="6315" relation="include">
+        </childnode>
+      </node>
+      <node id="6319">
+        <label>tsaSerialize.hpp</label>
+        <link refid="tsa_serialize_8hpp"/>
+        <childnode refid="6314" relation="include">
+        </childnode>
+        <childnode refid="6315" relation="include">
+        </childnode>
+        <childnode refid="6316" relation="include">
+        </childnode>
+        <childnode refid="6320" relation="include">
+        </childnode>
+        <childnode refid="6335" relation="include">
+        </childnode>
+      </node>
+      <node id="6355">
+        <label>gsl/gsl_sort.h</label>
+      </node>
+      <node id="6344">
+        <label>fparser.hpp</label>
+        <link refid="fparser_8hpp"/>
+        <childnode refid="6312" relation="include">
+        </childnode>
+        <childnode refid="6331" relation="include">
+        </childnode>
+        <childnode refid="6327" relation="include">
+        </childnode>
+      </node>
+      <node id="6313">
+        <label>AlgoBase.hpp</label>
+        <link refid="_algo_base_8hpp"/>
+        <childnode refid="6314" relation="include">
+        </childnode>
+        <childnode refid="6315" relation="include">
+        </childnode>
+        <childnode refid="6316" relation="include">
+        </childnode>
+        <childnode refid="6317" relation="include">
+        </childnode>
+        <childnode refid="6318" relation="include">
+        </childnode>
+        <childnode refid="6312" relation="include">
+        </childnode>
+        <childnode refid="6319" relation="include">
+        </childnode>
+        <childnode refid="6335" relation="include">
+        </childnode>
+        <childnode refid="6337" relation="include">
+        </childnode>
+        <childnode refid="6339" relation="include">
+        </childnode>
+        <childnode refid="6345" relation="include">
+        </childnode>
+        <childnode refid="6347" relation="include">
+        </childnode>
+      </node>
+      <node id="6324">
+        <label>eternity/persist.hpp</label>
+        <link refid="persist_8hpp"/>
+        <childnode refid="6321" relation="include">
+        </childnode>
+        <childnode refid="6325" relation="include">
+        </childnode>
+        <childnode refid="6326" relation="include">
+        </childnode>
+        <childnode refid="6327" relation="include">
+        </childnode>
+        <childnode refid="6328" relation="include">
+        </childnode>
+        <childnode refid="6316" relation="include">
+        </childnode>
+      </node>
+      <node id="6348">
+        <label>FifoBuffer.hpp</label>
+        <link refid="_fifo_buffer_8hpp"/>
+        <childnode refid="6349" relation="include">
+        </childnode>
+        <childnode refid="6332" relation="include">
+        </childnode>
+        <childnode refid="6320" relation="include">
+        </childnode>
+        <childnode refid="6335" relation="include">
+        </childnode>
+        <childnode refid="6319" relation="include">
+        </childnode>
+      </node>
+      <node id="6343">
+        <label>string.h</label>
+      </node>
+      <node id="6323">
+        <label>typeinfo</label>
+      </node>
+      <node id="6318">
+        <label>boost/numeric/ublas/io.hpp</label>
+      </node>
+      <node id="6356">
+        <label>gsl/gsl_statistics.h</label>
+      </node>
+      <node id="6338">
+        <label>unistd.h</label>
+      </node>
+      <node id="6342">
+        <label>tsaUtilityFunctions.hpp</label>
+        <link refid="tsa_utility_functions_8hpp"/>
+        <childnode refid="6343" relation="include">
+        </childnode>
+        <childnode refid="6344" relation="include">
+        </childnode>
+        <childnode refid="6341" relation="include">
+        </childnode>
+        <childnode refid="6316" relation="include">
+        </childnode>
+      </node>
+      <node id="6327">
+        <label>vector</label>
+      </node>
+      <node id="6339">
+        <label>BaseView.hpp</label>
+        <link refid="_base_view_8hpp"/>
+        <childnode refid="6331" relation="include">
+        </childnode>
+        <childnode refid="6312" relation="include">
+        </childnode>
+        <childnode refid="6335" relation="include">
+        </childnode>
+        <childnode refid="6340" relation="include">
+        </childnode>
+        <childnode refid="6342" relation="include">
+        </childnode>
+        <childnode refid="6319" relation="include">
+        </childnode>
+        <childnode refid="6337" relation="include">
+        </childnode>
+      </node>
+      <node id="6351">
+        <label>WaveletTransform.hpp</label>
+        <link refid="_wavelet_transform_8hpp"/>
+        <childnode refid="6352" relation="include">
+        </childnode>
+        <childnode refid="6353" relation="include">
+        </childnode>
+        <childnode refid="6313" relation="include">
+        </childnode>
+        <childnode refid="6345" relation="include">
+        </childnode>
+      </node>
+      <node id="6336">
+        <label>boost/numeric/ublas/matrix_proxy.hpp</label>
+      </node>
+      <node id="6358">
+        <label>BaseWindow.hpp</label>
+        <link refid="_base_window_8hpp"/>
+        <childnode refid="6331" relation="include">
+        </childnode>
+        <childnode refid="6322" relation="include">
+        </childnode>
+        <childnode refid="6317" relation="include">
+        </childnode>
+        <childnode refid="6313" relation="include">
+        </childnode>
+      </node>
+      <node id="6334">
+        <label>sstream</label>
+      </node>
+      <node id="6352">
+        <label>gsl/gsl_wavelet.h</label>
+      </node>
+      <node id="6346">
+        <label>FrameL.h</label>
+      </node>
+      <node id="6347">
+        <label>AlgoExceptions.hpp</label>
+        <link refid="_algo_exceptions_8hpp"/>
+        <childnode refid="6314" relation="include">
+        </childnode>
+        <childnode refid="6312" relation="include">
+        </childnode>
+      </node>
+      <node id="6345">
+        <label>SeqView.hpp</label>
+        <link refid="_seq_view_8hpp"/>
+        <childnode refid="6317" relation="include">
+        </childnode>
+        <childnode refid="6336" relation="include">
+        </childnode>
+        <childnode refid="6318" relation="include">
+        </childnode>
+        <childnode refid="6339" relation="include">
+        </childnode>
+        <childnode refid="6346" relation="include">
+        </childnode>
+      </node>
+      <node id="6325">
+        <label>math.h</label>
+      </node>
+      <node id="6317">
+        <label>boost/numeric/ublas/matrix.hpp</label>
+      </node>
+      <node id="6350">
+        <label>EventFullFeatured.hpp</label>
+        <link refid="_event_full_featured_8hpp"/>
+        <childnode refid="6312" relation="include">
+        </childnode>
+        <childnode refid="6313" relation="include">
+        </childnode>
+        <childnode refid="6339" relation="include">
+        </childnode>
+      </node>
+      <node id="6315">
+        <label>iostream</label>
+      </node>
+      <node id="6311">
+        <label>WDF2Reconstruct.hpp</label>
+        <link refid="_w_d_f2_reconstruct_8hpp"/>
+        <childnode refid="6312" relation="include">
+        </childnode>
+        <childnode refid="6313" relation="include">
+        </childnode>
+        <childnode refid="6345" relation="include">
+        </childnode>
+        <childnode refid="6348" relation="include">
+        </childnode>
+        <childnode refid="6347" relation="include">
+        </childnode>
+        <childnode refid="6350" relation="include">
+        </childnode>
+        <childnode refid="6351" relation="include">
+        </childnode>
+        <childnode refid="6354" relation="include">
+        </childnode>
+        <childnode refid="6357" relation="include">
+        </childnode>
+        <childnode refid="6339" relation="include">
+        </childnode>
+        <childnode refid="6325" relation="include">
+        </childnode>
+      </node>
+      <node id="6332">
+        <label>deque</label>
+      </node>
+      <node id="6329">
+        <label>eternity/persist_xml.hpp</label>
+        <link refid="persist__xml_8hpp"/>
+        <childnode refid="6324" relation="include">
+        </childnode>
+        <childnode refid="6330" relation="include">
+        </childnode>
+        <childnode refid="6332" relation="include">
+        </childnode>
+      </node>
+      <node id="6310">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/WDF2Reconstruct.cpp</label>
+        <link refid="_w_d_f2_reconstruct_8cpp"/>
+        <childnode refid="6311" relation="include">
+        </childnode>
+      </node>
+      <node id="6341">
+        <label>complex</label>
+      </node>
+      <node id="6333">
+        <label>eternity/algorithms.hpp</label>
+        <link refid="algorithms_8hpp"/>
+        <childnode refid="6324" relation="include">
+        </childnode>
+        <childnode refid="6329" relation="include">
+        </childnode>
+        <childnode refid="6330" relation="include">
+        </childnode>
+        <childnode refid="6334" relation="include">
+        </childnode>
+      </node>
+      <node id="6328">
+        <label>algorithm</label>
+      </node>
+      <node id="6322">
+        <label>stdio.h</label>
+      </node>
+      <node id="6353">
+        <label>gsl/gsl_errno.h</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacetsa">tsa</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>C++<sp/>Implementation:<sp/>WavTransientDetection.cpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Description:<sp/>Module<sp/>responsible<sp/>for<sp/>the<sp/>reconstruction<sp/>of<sp/>waveforms</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Current<sp/>version<sp/>(feb.<sp/>2020)<sp/>contains<sp/>only<sp/>one<sp/>wavelet<sp/>-<sp/>BSpline309</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/>Filip<sp/>Morawski<sp/>&lt;fmorawski@camk.edu.pl&gt;,<sp/>(C)<sp/>2020</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Copyright:<sp/>See<sp/>COPYING<sp/>file<sp/>that<sp/>comes<sp/>with<sp/>this<sp/>distribution</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_w_d_f2_reconstruct_8hpp" kindref="compound">WDF2Reconstruct.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetsa" kindref="compound">tsa</ref><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="classtsa_1_1_w_d_f2_reconstruct_1adfa6c8b28248983673226fd3617b553d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_w_d_f2_reconstruct_1adfa6c8b28248983673226fd3617b553d" kindref="member">WDF2Reconstruct::WDF2Reconstruct</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>window,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>overlap,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>thresh,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sigma,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ncoeff,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_wavelet_threshold_1a50c42c95dae960986a985157ca038fae" kindref="member">WaveletThreshold::WaveletThresholding</ref><sp/>WTh)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mWindow(window),</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mNCoeff(ncoeff),</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mOverlap(overlap),</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mStep(mWindow<sp/>-<sp/>mOverlap),</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mThresh(thresh),</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mSigma(sigma),</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mSigmaH(sigma),</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mSigmaBsC309(sigma),</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mBuffer(1),</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mBuff(1,<sp/>mWindow),</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mWtH(<ref refid="classtsa_1_1_wavelet_transform" kindref="compound">WaveletTransform</ref>::Haar),</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mWTH(mWindow,<sp/>mWtH),</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mWtBsC309(<ref refid="classtsa_1_1_wavelet_transform" kindref="compound">WaveletTransform</ref>::BsplineC309),</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mWTBsC309(mWindow,<sp/>mWtBsC309),</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//mT(<sp/>WaveletThreshold::dohonojohnston<sp/>),</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mT(WTh),</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mWavThres(mWindow,<sp/>mWindow,<sp/>sigma),</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mWindowing(mWindow),</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mEvFF(mNCoeff)<sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="classtsa_1_1_w_d_f2_reconstruct_1a0f5a941f09423254ceaff5d60365d894" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_w_d_f2_reconstruct_1a0f5a941f09423254ceaff5d60365d894" kindref="member">WDF2Reconstruct::~WDF2Reconstruct</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="classtsa_1_1_w_d_f2_reconstruct_1a39d74ac7135a6daa66bd7c2880f33215" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_w_d_f2_reconstruct_1a39d74ac7135a6daa66bd7c2880f33215" kindref="member">WDF2Reconstruct::GetDataNeeded</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_w_d_f2_reconstruct_1aebba7cbb7525432c73a7820db5decd6d" kindref="member">mBuffer</ref>.<ref refid="classtsa_1_1_fifo_buffer_1a7c14d2ae86c581d1ccc427dccb3f1213" kindref="member">Size</ref>()<sp/>-<sp/><ref refid="classtsa_1_1_w_d_f2_reconstruct_1a97572713b59f4cc16d3ac49e459383f9" kindref="member">mWindow</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"></codeline>
+<codeline lineno="72" refid="classtsa_1_1_w_d_f2_reconstruct_1a9cd78987651d392b4742f2f63df49e49" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_w_d_f2_reconstruct_1a9cd78987651d392b4742f2f63df49e49" kindref="member">WDF2Reconstruct::SetData</ref>(<ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref>&amp;<sp/>Data,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>scale)<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_w_d_f2_reconstruct_1aebba7cbb7525432c73a7820db5decd6d" kindref="member">mBuffer</ref>.<ref refid="classtsa_1_1_fifo_buffer_1ab70c4b3ba1a5356ab5384cd7f8638b0d" kindref="member">AddPoints</ref>(Data,<sp/>scale);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="classtsa_1_1_w_d_f2_reconstruct_1a59a5db57e65ecb9abf0b822f55d057af" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_w_d_f2_reconstruct_1a59a5db57e65ecb9abf0b822f55d057af" kindref="member">WDF2Reconstruct::GetDataVector</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>abov,<sp/><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref>&amp;<sp/>Cmax,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>levelR,<sp/>std::string&amp;<sp/>Wave)<sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>varmax<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref><sp/>cmax(<ref refid="classtsa_1_1_w_d_f2_reconstruct_1a36c49edf04b207715deed1029e67f660" kindref="member">mNCoeff</ref>);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>level;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>varH;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>varBsC309;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>levelH;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>levelBsC309;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref><sp/>cH(<ref refid="classtsa_1_1_w_d_f2_reconstruct_1a36c49edf04b207715deed1029e67f660" kindref="member">mNCoeff</ref>);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref><sp/>cBsC309(<ref refid="classtsa_1_1_w_d_f2_reconstruct_1a36c49edf04b207715deed1029e67f660" kindref="member">mNCoeff</ref>);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Cmax.resize(<ref refid="classtsa_1_1_w_d_f2_reconstruct_1a36c49edf04b207715deed1029e67f660" kindref="member">mNCoeff</ref>);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((<ref refid="classtsa_1_1_w_d_f2_reconstruct_1a97572713b59f4cc16d3ac49e459383f9" kindref="member">mWindow</ref>)<sp/>&gt;<sp/><ref refid="classtsa_1_1_w_d_f2_reconstruct_1aebba7cbb7525432c73a7820db5decd6d" kindref="member">mBuffer</ref>.<ref refid="classtsa_1_1_fifo_buffer_1a7c14d2ae86c581d1ccc427dccb3f1213" kindref="member">Size</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1a91d266348bcf69ab00c97a253b0ec790" kindref="member">LogWarning</ref>(</highlight><highlight class="stringliteral">&quot;Not<sp/>enough<sp/>data<sp/>points&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classtsa_1_1_w_d_f2_reconstruct_1a97572713b59f4cc16d3ac49e459383f9" kindref="member">mWindow</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_w_d_f2_reconstruct_1a08fb7c45a063d9143cd616e4d20e06da" kindref="member">mBuff</ref>(0,<sp/>i)<sp/>=<sp/><ref refid="classtsa_1_1_w_d_f2_reconstruct_1aebba7cbb7525432c73a7820db5decd6d" kindref="member">mBuffer</ref>(0,<sp/>i);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_w_d_f2_reconstruct_1af77219bc01d5cb4f609484186cbae5ad" kindref="member">mWTH</ref>.<ref refid="classtsa_1_1_wavelet_transform_1afb63ce4986e8e123c7a35f5a39bb7600" kindref="member">Forward</ref>(<ref refid="classtsa_1_1_w_d_f2_reconstruct_1a08fb7c45a063d9143cd616e4d20e06da" kindref="member">mBuff</ref>);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_w_d_f2_reconstruct_1a529018ba087a57db45f9aa578c3b4cb0" kindref="member">mWavThres</ref>(<ref refid="classtsa_1_1_w_d_f2_reconstruct_1a08fb7c45a063d9143cd616e4d20e06da" kindref="member">mBuff</ref>,<sp/><ref refid="classtsa_1_1_w_d_f2_reconstruct_1ae36f218c387d68609cbeb6301061d2c6" kindref="member">mT</ref>);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_w_d_f2_reconstruct_1aca130a979033ef5580368a4d5b86e96b" kindref="member">mSigmaH</ref><sp/>=<sp/><ref refid="classtsa_1_1_w_d_f2_reconstruct_1a529018ba087a57db45f9aa578c3b4cb0" kindref="member">mWavThres</ref>.<ref refid="classtsa_1_1_wavelet_threshold_1a219b1dbce4e92a84e8078a839b75c4c3" kindref="member">GetSigma</ref>();</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>levelH<sp/>=<sp/><ref refid="classtsa_1_1_w_d_f2_reconstruct_1a529018ba087a57db45f9aa578c3b4cb0" kindref="member">mWavThres</ref>.<ref refid="classtsa_1_1_wavelet_threshold_1a2b6e84938c13629e11a9f31b26c34eb9" kindref="member">GetLevel</ref>();</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>varH<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classtsa_1_1_w_d_f2_reconstruct_1a97572713b59f4cc16d3ac49e459383f9" kindref="member">mWindow</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>varH<sp/>+=<sp/>(<ref refid="classtsa_1_1_w_d_f2_reconstruct_1a08fb7c45a063d9143cd616e4d20e06da" kindref="member">mBuff</ref>(0,<sp/>i)<sp/>*<sp/><ref refid="classtsa_1_1_w_d_f2_reconstruct_1a08fb7c45a063d9143cd616e4d20e06da" kindref="member">mBuff</ref>(0,<sp/>i));</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classtsa_1_1_w_d_f2_reconstruct_1a36c49edf04b207715deed1029e67f660" kindref="member">mNCoeff</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cH[i]<sp/>=<sp/><ref refid="classtsa_1_1_w_d_f2_reconstruct_1a08fb7c45a063d9143cd616e4d20e06da" kindref="member">mBuff</ref>(0,<sp/>i);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classtsa_1_1_w_d_f2_reconstruct_1a97572713b59f4cc16d3ac49e459383f9" kindref="member">mWindow</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_w_d_f2_reconstruct_1a08fb7c45a063d9143cd616e4d20e06da" kindref="member">mBuff</ref>(0,<sp/>i)<sp/>=<sp/><ref refid="classtsa_1_1_w_d_f2_reconstruct_1aebba7cbb7525432c73a7820db5decd6d" kindref="member">mBuffer</ref>(0,<sp/>i);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_w_d_f2_reconstruct_1aa1285fe7b4f8823822f615c7b3c2fc96" kindref="member">mWTBsC309</ref>.<ref refid="classtsa_1_1_wavelet_transform_1afb63ce4986e8e123c7a35f5a39bb7600" kindref="member">Forward</ref>(<ref refid="classtsa_1_1_w_d_f2_reconstruct_1a08fb7c45a063d9143cd616e4d20e06da" kindref="member">mBuff</ref>);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_w_d_f2_reconstruct_1a529018ba087a57db45f9aa578c3b4cb0" kindref="member">mWavThres</ref>(<ref refid="classtsa_1_1_w_d_f2_reconstruct_1a08fb7c45a063d9143cd616e4d20e06da" kindref="member">mBuff</ref>,<sp/><ref refid="classtsa_1_1_w_d_f2_reconstruct_1ae36f218c387d68609cbeb6301061d2c6" kindref="member">mT</ref>);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_w_d_f2_reconstruct_1afe74f7265462b0999a81a46406e936b1" kindref="member">mSigmaBsC309</ref><sp/>=<sp/><ref refid="classtsa_1_1_w_d_f2_reconstruct_1a529018ba087a57db45f9aa578c3b4cb0" kindref="member">mWavThres</ref>.<ref refid="classtsa_1_1_wavelet_threshold_1a219b1dbce4e92a84e8078a839b75c4c3" kindref="member">GetSigma</ref>();</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>levelBsC309<sp/>=<sp/><ref refid="classtsa_1_1_w_d_f2_reconstruct_1a529018ba087a57db45f9aa578c3b4cb0" kindref="member">mWavThres</ref>.<ref refid="classtsa_1_1_wavelet_threshold_1a2b6e84938c13629e11a9f31b26c34eb9" kindref="member">GetLevel</ref>();</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>varBsC309<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classtsa_1_1_w_d_f2_reconstruct_1a97572713b59f4cc16d3ac49e459383f9" kindref="member">mWindow</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>varBsC309<sp/>+=<sp/>(<ref refid="classtsa_1_1_w_d_f2_reconstruct_1a08fb7c45a063d9143cd616e4d20e06da" kindref="member">mBuff</ref>(0,<sp/>i)<sp/>*<sp/><ref refid="classtsa_1_1_w_d_f2_reconstruct_1a08fb7c45a063d9143cd616e4d20e06da" kindref="member">mBuff</ref>(0,<sp/>i));</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classtsa_1_1_w_d_f2_reconstruct_1a36c49edf04b207715deed1029e67f660" kindref="member">mNCoeff</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cBsC309[i]<sp/>=<sp/><ref refid="classtsa_1_1_w_d_f2_reconstruct_1a08fb7c45a063d9143cd616e4d20e06da" kindref="member">mBuff</ref>(0,<sp/>i);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classtsa_1_1_w_d_f2_reconstruct_1aca130a979033ef5580368a4d5b86e96b" kindref="member">mSigmaH</ref>&gt;0)<sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>varH<sp/>=<sp/>sqrt(varH)<sp/>/<sp/>(2.0*<ref refid="classtsa_1_1_w_d_f2_reconstruct_1aca130a979033ef5580368a4d5b86e96b" kindref="member">mSigmaH</ref>);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>varH=0;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classtsa_1_1_w_d_f2_reconstruct_1afe74f7265462b0999a81a46406e936b1" kindref="member">mSigmaBsC309</ref>&gt;0)<sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>varBsC309<sp/>=<sp/>sqrt(varBsC309)<sp/>/<sp/>(2.0*<ref refid="classtsa_1_1_w_d_f2_reconstruct_1afe74f7265462b0999a81a46406e936b1" kindref="member">mSigmaBsC309</ref>);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>varBsC309=0;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>varmax<sp/>=<sp/>varH;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classtsa_1_1_w_d_f2_reconstruct_1a36c49edf04b207715deed1029e67f660" kindref="member">mNCoeff</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cmax[i]<sp/>=<sp/>cH[i];</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>level<sp/>=<sp/>levelH;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Wave<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Haar&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>###########33<sp/>BSPLINE<sp/>####################</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(varBsC309<sp/>&gt;=<sp/>varmax)<sp/>{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>varmax<sp/>=<sp/>varBsC309;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classtsa_1_1_w_d_f2_reconstruct_1a36c49edf04b207715deed1029e67f660" kindref="member">mNCoeff</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cmax[i]<sp/>=<sp/>cBsC309[i];</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>level<sp/>=<sp/>levelBsC309;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Wave<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;BsplineC309&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_w_d_f2_reconstruct_1aebba7cbb7525432c73a7820db5decd6d" kindref="member">mBuffer</ref>.<ref refid="classtsa_1_1_fifo_buffer_1a17acb27e83ab4af3667974660b58cb4e" kindref="member">DelPoints</ref>(<ref refid="classtsa_1_1_w_d_f2_reconstruct_1aa8a8e91d9a534af546624733364a2980" kindref="member">mStep</ref>);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(varmax<sp/>&gt;=<sp/><ref refid="classtsa_1_1_w_d_f2_reconstruct_1a3c8f4a6b926cbf3954528beddb924c82" kindref="member">mThresh</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>abov<sp/>=<sp/>varmax;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>levelR<sp/>=<sp/>level;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classtsa_1_1_w_d_f2_reconstruct_1a36c49edf04b207715deed1029e67f660" kindref="member">mNCoeff</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Cmax[i]<sp/>=<sp/>cmax[i];</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/src/WDF2Reconstruct.cpp"/>
+  </compounddef>
+</doxygen>

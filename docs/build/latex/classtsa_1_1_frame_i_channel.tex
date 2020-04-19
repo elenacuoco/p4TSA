@@ -1,0 +1,320 @@
+\hypertarget{classtsa_1_1_frame_i_channel}{}\section{tsa\+:\+:Frame\+I\+Channel Class Reference}
+\label{classtsa_1_1_frame_i_channel}\index{tsa\+::\+Frame\+I\+Channel@{tsa\+::\+Frame\+I\+Channel}}
+
+
+A source of data taken from a Frame file.  
+
+
+
+
+{\ttfamily \#include $<$Frame\+I\+Channel.\+hpp$>$}
+
+Inheritance diagram for tsa\+:\+:Frame\+I\+Channel\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classtsa_1_1_frame_i_channel}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtsa_1_1_frame_i_channel_acc55687d86116d3cc2db6c4d2b2e7c1e}{Frame\+I\+Channel} (const std\+::string \&file\+Name, const std\+::string \&channel\+Name, double d\+Length=1.\+0, double t\+Start=0.\+0)
+\item 
+\hyperlink{classtsa_1_1_frame_i_channel_ab6f4fd4a65dee05ef58590ed6216408c}{$\sim$\+Frame\+I\+Channel} ()
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Operations}\par
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classtsa_1_1_frame_i_channel_a8caf984495dce2862909b0d7192c9fb4}{Next\+Slice} ()
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Setters}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtsa_1_1_frame_i_channel_ae637a0e659963fa2ef3e5ab057d17509}{Set\+Start\+Time} (double t\+Start)
+\item 
+void \hyperlink{classtsa_1_1_frame_i_channel_a9e2483d3942bf13922ee4afa065f4da1}{Set\+Data\+Length} (double d\+Length)
+\item 
+void \hyperlink{classtsa_1_1_frame_i_channel_a7ef54c22707b58caa5d4174dfccffc26}{Set\+Auto\+Increment} (bool status)
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtsa_1_1_frame_i_channel_aaca5759288add902732cc640633f17d4}{Push\+Fr\+Vect} (Fr\+Vect $\ast$frv, \hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&data, unsigned int row, double offset, double slope)
+\item 
+bool \hyperlink{classtsa_1_1_frame_i_channel_a8049d4e90ebecce30c7f60573da7fe87}{Reopen\+If\+Modified} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classtsa_1_1_frame_i_channel_a252988d4bbef0e293be14f3637edc7ef}{m\+File\+Name}
+\item 
+Fr\+File $\ast$ \hyperlink{classtsa_1_1_frame_i_channel_aa679a81dbcec2ca8c7126d092de59651}{mi\+File}
+\item 
+std\+::string \hyperlink{classtsa_1_1_frame_i_channel_a7cc80840311ef703c68393f95b077f9a}{m\+Channel\+Name}
+\item 
+double \hyperlink{classtsa_1_1_frame_i_channel_affbd1b60487a643f2bdec4875f4d3643}{m\+Start\+Time}
+\item 
+double \hyperlink{classtsa_1_1_frame_i_channel_a32e512e479d9f8eb1de5b7a4cfd53254}{m\+Data\+Length}
+\item 
+Fr\+Vect $\ast$ \hyperlink{classtsa_1_1_frame_i_channel_a12a55e4ea728e58b37c811fe93a7d774}{m\+Frame\+Vect}
+\item 
+bool \hyperlink{classtsa_1_1_frame_i_channel_a90c8009f4280dfee6a8f61b97f246a25}{m\+Auto\+Increment}
+\item 
+time\+\_\+t \hyperlink{classtsa_1_1_frame_i_channel_a7a643eb00f14d0bbd02f1b04e4e3ccdc}{m\+Last\+Modification}
+\end{DoxyCompactItemize}
+\subsection*{Getters}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classtsa_1_1_frame_i_channel_a9e8d07780eb81e8c4a373c3b49932df3}{Get\+Data} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&r\+Seq\+View, double t\+Start, double d\+Length)
+\item 
+bool \hyperlink{classtsa_1_1_frame_i_channel_a0c17cedafee827df1662036795cd954c}{Get\+Data} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&r\+Seq\+View)
+\item 
+static std\+::string \hyperlink{classtsa_1_1_frame_i_channel_aaab838f283b44ecf0d52842e99406146}{Get\+Channel\+List} (const std\+::string \&file\+Name, int gtime=0)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A source of data taken from a Frame file. 
+
+This class can be used to read data from a frame file, in a single channel. 
+
+Definition at line 82 of file Frame\+I\+Channel.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtsa_1_1_frame_i_channel_acc55687d86116d3cc2db6c4d2b2e7c1e}\label{classtsa_1_1_frame_i_channel_acc55687d86116d3cc2db6c4d2b2e7c1e}} 
+\index{tsa\+::\+Frame\+I\+Channel@{tsa\+::\+Frame\+I\+Channel}!Frame\+I\+Channel@{Frame\+I\+Channel}}
+\index{Frame\+I\+Channel@{Frame\+I\+Channel}!tsa\+::\+Frame\+I\+Channel@{tsa\+::\+Frame\+I\+Channel}}
+\subsubsection{\texorpdfstring{Frame\+I\+Channel()}{FrameIChannel()}}
+{\footnotesize\ttfamily tsa\+::\+Frame\+I\+Channel\+::\+Frame\+I\+Channel (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Name,  }\item[{const std\+::string \&}]{channel\+Name,  }\item[{double}]{d\+Length = {\ttfamily 1.0},  }\item[{double}]{t\+Start = {\ttfamily 0.0} }\end{DoxyParamCaption})}
+
+Constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & the name of the frame file (or a ffl file) \\
+\hline
+{\em channel\+Name} & the channel\textquotesingle{}s names \\
+\hline
+{\em d\+Length} & length of data that will be returned by \hyperlink{classtsa_1_1_frame_i_channel_a9e8d07780eb81e8c4a373c3b49932df3}{Get\+Data()} \\
+\hline
+{\em t\+Start} & start time of the data returned by \hyperlink{classtsa_1_1_frame_i_channel_a9e8d07780eb81e8c4a373c3b49932df3}{Get\+Data()} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 43 of file Frame\+I\+Channel.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_channel_ab6f4fd4a65dee05ef58590ed6216408c}\label{classtsa_1_1_frame_i_channel_ab6f4fd4a65dee05ef58590ed6216408c}} 
+\index{tsa\+::\+Frame\+I\+Channel@{tsa\+::\+Frame\+I\+Channel}!````~Frame\+I\+Channel@{$\sim$\+Frame\+I\+Channel}}
+\index{````~Frame\+I\+Channel@{$\sim$\+Frame\+I\+Channel}!tsa\+::\+Frame\+I\+Channel@{tsa\+::\+Frame\+I\+Channel}}
+\subsubsection{\texorpdfstring{$\sim$\+Frame\+I\+Channel()}{~FrameIChannel()}}
+{\footnotesize\ttfamily tsa\+::\+Frame\+I\+Channel\+::$\sim$\+Frame\+I\+Channel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor 
+
+Definition at line 61 of file Frame\+I\+Channel.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classtsa_1_1_frame_i_channel_aaab838f283b44ecf0d52842e99406146}\label{classtsa_1_1_frame_i_channel_aaab838f283b44ecf0d52842e99406146}} 
+\index{tsa\+::\+Frame\+I\+Channel@{tsa\+::\+Frame\+I\+Channel}!Get\+Channel\+List@{Get\+Channel\+List}}
+\index{Get\+Channel\+List@{Get\+Channel\+List}!tsa\+::\+Frame\+I\+Channel@{tsa\+::\+Frame\+I\+Channel}}
+\subsubsection{\texorpdfstring{Get\+Channel\+List()}{GetChannelList()}}
+{\footnotesize\ttfamily std\+::string tsa\+::\+Frame\+I\+Channel\+::\+Get\+Channel\+List (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Name,  }\item[{int}]{gtime = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 128 of file Frame\+I\+Channel.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_channel_a9e8d07780eb81e8c4a373c3b49932df3}\label{classtsa_1_1_frame_i_channel_a9e8d07780eb81e8c4a373c3b49932df3}} 
+\index{tsa\+::\+Frame\+I\+Channel@{tsa\+::\+Frame\+I\+Channel}!Get\+Data@{Get\+Data}}
+\index{Get\+Data@{Get\+Data}!tsa\+::\+Frame\+I\+Channel@{tsa\+::\+Frame\+I\+Channel}}
+\subsubsection{\texorpdfstring{Get\+Data()}{GetData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool tsa\+::\+Frame\+I\+Channel\+::\+Get\+Data (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{r\+Seq\+View,  }\item[{double}]{t\+Start,  }\item[{double}]{d\+Length }\end{DoxyParamCaption})}
+
+Get a specified slice of data. After this call, start time will be set to t\+Start+d\+Length and data length to d\+Length
+
+
+\begin{DoxyParams}{Parameters}
+{\em r\+Seq\+View} & the view to fill with data \\
+\hline
+{\em t\+Start} & start time of the data returned \\
+\hline
+{\em d\+Length} & length of data returned by \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 69 of file Frame\+I\+Channel.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_channel_a0c17cedafee827df1662036795cd954c}\label{classtsa_1_1_frame_i_channel_a0c17cedafee827df1662036795cd954c}} 
+\index{tsa\+::\+Frame\+I\+Channel@{tsa\+::\+Frame\+I\+Channel}!Get\+Data@{Get\+Data}}
+\index{Get\+Data@{Get\+Data}!tsa\+::\+Frame\+I\+Channel@{tsa\+::\+Frame\+I\+Channel}}
+\subsubsection{\texorpdfstring{Get\+Data()}{GetData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool tsa\+::\+Frame\+I\+Channel\+::\+Get\+Data (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{r\+Seq\+View }\end{DoxyParamCaption})}
+
+Get a slice of data the current data length, starting from the current start time.
+
+
+\begin{DoxyParams}{Parameters}
+{\em r\+Seq\+View} & the view to fill with data \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 75 of file Frame\+I\+Channel.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_channel_a8caf984495dce2862909b0d7192c9fb4}\label{classtsa_1_1_frame_i_channel_a8caf984495dce2862909b0d7192c9fb4}} 
+\index{tsa\+::\+Frame\+I\+Channel@{tsa\+::\+Frame\+I\+Channel}!Next\+Slice@{Next\+Slice}}
+\index{Next\+Slice@{Next\+Slice}!tsa\+::\+Frame\+I\+Channel@{tsa\+::\+Frame\+I\+Channel}}
+\subsubsection{\texorpdfstring{Next\+Slice()}{NextSlice()}}
+{\footnotesize\ttfamily double tsa\+::\+Frame\+I\+Channel\+::\+Next\+Slice (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 135 of file Frame\+I\+Channel.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_channel_aaca5759288add902732cc640633f17d4}\label{classtsa_1_1_frame_i_channel_aaca5759288add902732cc640633f17d4}} 
+\index{tsa\+::\+Frame\+I\+Channel@{tsa\+::\+Frame\+I\+Channel}!Push\+Fr\+Vect@{Push\+Fr\+Vect}}
+\index{Push\+Fr\+Vect@{Push\+Fr\+Vect}!tsa\+::\+Frame\+I\+Channel@{tsa\+::\+Frame\+I\+Channel}}
+\subsubsection{\texorpdfstring{Push\+Fr\+Vect()}{PushFrVect()}}
+{\footnotesize\ttfamily void tsa\+::\+Frame\+I\+Channel\+::\+Push\+Fr\+Vect (\begin{DoxyParamCaption}\item[{Fr\+Vect $\ast$}]{frv,  }\item[{\hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&}]{data,  }\item[{unsigned int}]{row,  }\item[{double}]{offset,  }\item[{double}]{slope }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 143 of file Frame\+I\+Channel.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_channel_a8049d4e90ebecce30c7f60573da7fe87}\label{classtsa_1_1_frame_i_channel_a8049d4e90ebecce30c7f60573da7fe87}} 
+\index{tsa\+::\+Frame\+I\+Channel@{tsa\+::\+Frame\+I\+Channel}!Reopen\+If\+Modified@{Reopen\+If\+Modified}}
+\index{Reopen\+If\+Modified@{Reopen\+If\+Modified}!tsa\+::\+Frame\+I\+Channel@{tsa\+::\+Frame\+I\+Channel}}
+\subsubsection{\texorpdfstring{Reopen\+If\+Modified()}{ReopenIfModified()}}
+{\footnotesize\ttfamily bool tsa\+::\+Frame\+I\+Channel\+::\+Reopen\+If\+Modified (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 9 of file Frame\+I\+Channel.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_channel_a7ef54c22707b58caa5d4174dfccffc26}\label{classtsa_1_1_frame_i_channel_a7ef54c22707b58caa5d4174dfccffc26}} 
+\index{tsa\+::\+Frame\+I\+Channel@{tsa\+::\+Frame\+I\+Channel}!Set\+Auto\+Increment@{Set\+Auto\+Increment}}
+\index{Set\+Auto\+Increment@{Set\+Auto\+Increment}!tsa\+::\+Frame\+I\+Channel@{tsa\+::\+Frame\+I\+Channel}}
+\subsubsection{\texorpdfstring{Set\+Auto\+Increment()}{SetAutoIncrement()}}
+{\footnotesize\ttfamily void tsa\+::\+Frame\+I\+Channel\+::\+Set\+Auto\+Increment (\begin{DoxyParamCaption}\item[{bool}]{status }\end{DoxyParamCaption})}
+
+
+
+Definition at line 139 of file Frame\+I\+Channel.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_channel_a9e2483d3942bf13922ee4afa065f4da1}\label{classtsa_1_1_frame_i_channel_a9e2483d3942bf13922ee4afa065f4da1}} 
+\index{tsa\+::\+Frame\+I\+Channel@{tsa\+::\+Frame\+I\+Channel}!Set\+Data\+Length@{Set\+Data\+Length}}
+\index{Set\+Data\+Length@{Set\+Data\+Length}!tsa\+::\+Frame\+I\+Channel@{tsa\+::\+Frame\+I\+Channel}}
+\subsubsection{\texorpdfstring{Set\+Data\+Length()}{SetDataLength()}}
+{\footnotesize\ttfamily void tsa\+::\+Frame\+I\+Channel\+::\+Set\+Data\+Length (\begin{DoxyParamCaption}\item[{double}]{d\+Length }\end{DoxyParamCaption})}
+
+
+
+Definition at line 123 of file Frame\+I\+Channel.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_channel_ae637a0e659963fa2ef3e5ab057d17509}\label{classtsa_1_1_frame_i_channel_ae637a0e659963fa2ef3e5ab057d17509}} 
+\index{tsa\+::\+Frame\+I\+Channel@{tsa\+::\+Frame\+I\+Channel}!Set\+Start\+Time@{Set\+Start\+Time}}
+\index{Set\+Start\+Time@{Set\+Start\+Time}!tsa\+::\+Frame\+I\+Channel@{tsa\+::\+Frame\+I\+Channel}}
+\subsubsection{\texorpdfstring{Set\+Start\+Time()}{SetStartTime()}}
+{\footnotesize\ttfamily void tsa\+::\+Frame\+I\+Channel\+::\+Set\+Start\+Time (\begin{DoxyParamCaption}\item[{double}]{t\+Start }\end{DoxyParamCaption})}
+
+
+
+Definition at line 119 of file Frame\+I\+Channel.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classtsa_1_1_frame_i_channel_a90c8009f4280dfee6a8f61b97f246a25}\label{classtsa_1_1_frame_i_channel_a90c8009f4280dfee6a8f61b97f246a25}} 
+\index{tsa\+::\+Frame\+I\+Channel@{tsa\+::\+Frame\+I\+Channel}!m\+Auto\+Increment@{m\+Auto\+Increment}}
+\index{m\+Auto\+Increment@{m\+Auto\+Increment}!tsa\+::\+Frame\+I\+Channel@{tsa\+::\+Frame\+I\+Channel}}
+\subsubsection{\texorpdfstring{m\+Auto\+Increment}{mAutoIncrement}}
+{\footnotesize\ttfamily bool tsa\+::\+Frame\+I\+Channel\+::m\+Auto\+Increment\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 167 of file Frame\+I\+Channel.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_channel_a7cc80840311ef703c68393f95b077f9a}\label{classtsa_1_1_frame_i_channel_a7cc80840311ef703c68393f95b077f9a}} 
+\index{tsa\+::\+Frame\+I\+Channel@{tsa\+::\+Frame\+I\+Channel}!m\+Channel\+Name@{m\+Channel\+Name}}
+\index{m\+Channel\+Name@{m\+Channel\+Name}!tsa\+::\+Frame\+I\+Channel@{tsa\+::\+Frame\+I\+Channel}}
+\subsubsection{\texorpdfstring{m\+Channel\+Name}{mChannelName}}
+{\footnotesize\ttfamily std\+::string tsa\+::\+Frame\+I\+Channel\+::m\+Channel\+Name\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 163 of file Frame\+I\+Channel.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_channel_a32e512e479d9f8eb1de5b7a4cfd53254}\label{classtsa_1_1_frame_i_channel_a32e512e479d9f8eb1de5b7a4cfd53254}} 
+\index{tsa\+::\+Frame\+I\+Channel@{tsa\+::\+Frame\+I\+Channel}!m\+Data\+Length@{m\+Data\+Length}}
+\index{m\+Data\+Length@{m\+Data\+Length}!tsa\+::\+Frame\+I\+Channel@{tsa\+::\+Frame\+I\+Channel}}
+\subsubsection{\texorpdfstring{m\+Data\+Length}{mDataLength}}
+{\footnotesize\ttfamily double tsa\+::\+Frame\+I\+Channel\+::m\+Data\+Length\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 165 of file Frame\+I\+Channel.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_channel_a252988d4bbef0e293be14f3637edc7ef}\label{classtsa_1_1_frame_i_channel_a252988d4bbef0e293be14f3637edc7ef}} 
+\index{tsa\+::\+Frame\+I\+Channel@{tsa\+::\+Frame\+I\+Channel}!m\+File\+Name@{m\+File\+Name}}
+\index{m\+File\+Name@{m\+File\+Name}!tsa\+::\+Frame\+I\+Channel@{tsa\+::\+Frame\+I\+Channel}}
+\subsubsection{\texorpdfstring{m\+File\+Name}{mFileName}}
+{\footnotesize\ttfamily std\+::string tsa\+::\+Frame\+I\+Channel\+::m\+File\+Name\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 161 of file Frame\+I\+Channel.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_channel_a12a55e4ea728e58b37c811fe93a7d774}\label{classtsa_1_1_frame_i_channel_a12a55e4ea728e58b37c811fe93a7d774}} 
+\index{tsa\+::\+Frame\+I\+Channel@{tsa\+::\+Frame\+I\+Channel}!m\+Frame\+Vect@{m\+Frame\+Vect}}
+\index{m\+Frame\+Vect@{m\+Frame\+Vect}!tsa\+::\+Frame\+I\+Channel@{tsa\+::\+Frame\+I\+Channel}}
+\subsubsection{\texorpdfstring{m\+Frame\+Vect}{mFrameVect}}
+{\footnotesize\ttfamily Fr\+Vect$\ast$ tsa\+::\+Frame\+I\+Channel\+::m\+Frame\+Vect\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 166 of file Frame\+I\+Channel.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_channel_aa679a81dbcec2ca8c7126d092de59651}\label{classtsa_1_1_frame_i_channel_aa679a81dbcec2ca8c7126d092de59651}} 
+\index{tsa\+::\+Frame\+I\+Channel@{tsa\+::\+Frame\+I\+Channel}!mi\+File@{mi\+File}}
+\index{mi\+File@{mi\+File}!tsa\+::\+Frame\+I\+Channel@{tsa\+::\+Frame\+I\+Channel}}
+\subsubsection{\texorpdfstring{mi\+File}{miFile}}
+{\footnotesize\ttfamily Fr\+File$\ast$ tsa\+::\+Frame\+I\+Channel\+::mi\+File\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 162 of file Frame\+I\+Channel.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_channel_a7a643eb00f14d0bbd02f1b04e4e3ccdc}\label{classtsa_1_1_frame_i_channel_a7a643eb00f14d0bbd02f1b04e4e3ccdc}} 
+\index{tsa\+::\+Frame\+I\+Channel@{tsa\+::\+Frame\+I\+Channel}!m\+Last\+Modification@{m\+Last\+Modification}}
+\index{m\+Last\+Modification@{m\+Last\+Modification}!tsa\+::\+Frame\+I\+Channel@{tsa\+::\+Frame\+I\+Channel}}
+\subsubsection{\texorpdfstring{m\+Last\+Modification}{mLastModification}}
+{\footnotesize\ttfamily time\+\_\+t tsa\+::\+Frame\+I\+Channel\+::m\+Last\+Modification\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 168 of file Frame\+I\+Channel.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_frame_i_channel_affbd1b60487a643f2bdec4875f4d3643}\label{classtsa_1_1_frame_i_channel_affbd1b60487a643f2bdec4875f4d3643}} 
+\index{tsa\+::\+Frame\+I\+Channel@{tsa\+::\+Frame\+I\+Channel}!m\+Start\+Time@{m\+Start\+Time}}
+\index{m\+Start\+Time@{m\+Start\+Time}!tsa\+::\+Frame\+I\+Channel@{tsa\+::\+Frame\+I\+Channel}}
+\subsubsection{\texorpdfstring{m\+Start\+Time}{mStartTime}}
+{\footnotesize\ttfamily double tsa\+::\+Frame\+I\+Channel\+::m\+Start\+Time\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 164 of file Frame\+I\+Channel.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/include/\hyperlink{_frame_i_channel_8hpp}{Frame\+I\+Channel.\+hpp}\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/src/\hyperlink{_frame_i_channel_8cpp}{Frame\+I\+Channel.\+cpp}\end{DoxyCompactItemize}

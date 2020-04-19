@@ -1,0 +1,483 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_kaiser_window_8hpp" kind="file" language="C++">
+    <compoundname>KaiserWindow.hpp</compoundname>
+    <includes refid="_base_window_8hpp" local="no">BaseWindow.hpp</includes>
+    <includes refid="tsa_utility_functions_8hpp" local="no">tsaUtilityFunctions.hpp</includes>
+    <includes local="no">gsl/gsl_sf_bessel.h</includes>
+    <includedby refid="tsa_8hpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/include/tsa.hpp</includedby>
+    <includedby refid="_window_factory_8hpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/include/WindowFactory.hpp</includedby>
+    <incdepgraph>
+      <node id="2665">
+        <label>tsaTraits.hpp</label>
+        <link refid="tsa_traits_8hpp"/>
+        <childnode refid="2666" relation="include">
+        </childnode>
+      </node>
+      <node id="2647">
+        <label>eternity.hpp</label>
+        <link refid="eternity_8hpp"/>
+        <childnode refid="2648" relation="include">
+        </childnode>
+        <childnode refid="2650" relation="include">
+        </childnode>
+        <childnode refid="2655" relation="include">
+        </childnode>
+        <childnode refid="2658" relation="include">
+        </childnode>
+      </node>
+      <node id="2635">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/KaiserWindow.hpp</label>
+        <link refid="_kaiser_window_8hpp"/>
+        <childnode refid="2636" relation="include">
+        </childnode>
+        <childnode refid="2667" relation="include">
+        </childnode>
+        <childnode refid="2673" relation="include">
+        </childnode>
+      </node>
+      <node id="2652">
+        <label>stdlib.h</label>
+      </node>
+      <node id="2641">
+        <label>stdexcept</label>
+      </node>
+      <node id="2660">
+        <label>tsaTypes.hpp</label>
+        <link refid="tsa_types_8hpp"/>
+        <childnode refid="2643" relation="include">
+        </childnode>
+        <childnode refid="2639" relation="include">
+        </childnode>
+        <childnode refid="2661" relation="include">
+        </childnode>
+        <childnode refid="2644" relation="include">
+        </childnode>
+        <childnode refid="2647" relation="include">
+        </childnode>
+      </node>
+      <node id="2645">
+        <label>string</label>
+      </node>
+      <node id="2648">
+        <label>eternity/dynamic.hpp</label>
+        <link refid="dynamic_8hpp"/>
+        <childnode refid="2638" relation="include">
+        </childnode>
+        <childnode refid="2649" relation="include">
+        </childnode>
+        <childnode refid="2645" relation="include">
+        </childnode>
+      </node>
+      <node id="2637">
+        <label>map</label>
+      </node>
+      <node id="2662">
+        <label>tsaLog.hpp</label>
+        <link refid="tsa_log_8hpp"/>
+        <childnode refid="2642" relation="include">
+        </childnode>
+        <childnode refid="2643" relation="include">
+        </childnode>
+        <childnode refid="2663" relation="include">
+        </childnode>
+      </node>
+      <node id="2643">
+        <label>fstream</label>
+      </node>
+      <node id="2656">
+        <label>xmlscanner.hpp</label>
+        <link refid="xmlscanner_8hpp"/>
+        <childnode refid="2651" relation="include">
+        </childnode>
+        <childnode refid="2652" relation="include">
+        </childnode>
+        <childnode refid="2653" relation="include">
+        </childnode>
+        <childnode refid="2637" relation="include">
+        </childnode>
+        <childnode refid="2654" relation="include">
+        </childnode>
+        <childnode refid="2643" relation="include">
+        </childnode>
+        <childnode refid="2645" relation="include">
+        </childnode>
+        <childnode refid="2642" relation="include">
+        </childnode>
+      </node>
+      <node id="2646">
+        <label>tsaSerialize.hpp</label>
+        <link refid="tsa_serialize_8hpp"/>
+        <childnode refid="2641" relation="include">
+        </childnode>
+        <childnode refid="2642" relation="include">
+        </childnode>
+        <childnode refid="2643" relation="include">
+        </childnode>
+        <childnode refid="2647" relation="include">
+        </childnode>
+        <childnode refid="2660" relation="include">
+        </childnode>
+      </node>
+      <node id="2669">
+        <label>fparser.hpp</label>
+        <link refid="fparser_8hpp"/>
+        <childnode refid="2645" relation="include">
+        </childnode>
+        <childnode refid="2637" relation="include">
+        </childnode>
+        <childnode refid="2653" relation="include">
+        </childnode>
+      </node>
+      <node id="2640">
+        <label>AlgoBase.hpp</label>
+        <link refid="_algo_base_8hpp"/>
+        <childnode refid="2641" relation="include">
+        </childnode>
+        <childnode refid="2642" relation="include">
+        </childnode>
+        <childnode refid="2643" relation="include">
+        </childnode>
+        <childnode refid="2639" relation="include">
+        </childnode>
+        <childnode refid="2644" relation="include">
+        </childnode>
+        <childnode refid="2645" relation="include">
+        </childnode>
+        <childnode refid="2646" relation="include">
+        </childnode>
+        <childnode refid="2660" relation="include">
+        </childnode>
+        <childnode refid="2662" relation="include">
+        </childnode>
+        <childnode refid="2664" relation="include">
+        </childnode>
+        <childnode refid="2670" relation="include">
+        </childnode>
+        <childnode refid="2672" relation="include">
+        </childnode>
+      </node>
+      <node id="2650">
+        <label>eternity/persist.hpp</label>
+        <link refid="persist_8hpp"/>
+        <childnode refid="2648" relation="include">
+        </childnode>
+        <childnode refid="2651" relation="include">
+        </childnode>
+        <childnode refid="2652" relation="include">
+        </childnode>
+        <childnode refid="2653" relation="include">
+        </childnode>
+        <childnode refid="2654" relation="include">
+        </childnode>
+        <childnode refid="2643" relation="include">
+        </childnode>
+      </node>
+      <node id="2668">
+        <label>string.h</label>
+      </node>
+      <node id="2649">
+        <label>typeinfo</label>
+      </node>
+      <node id="2644">
+        <label>boost/numeric/ublas/io.hpp</label>
+      </node>
+      <node id="2663">
+        <label>unistd.h</label>
+      </node>
+      <node id="2667">
+        <label>tsaUtilityFunctions.hpp</label>
+        <link refid="tsa_utility_functions_8hpp"/>
+        <childnode refid="2668" relation="include">
+        </childnode>
+        <childnode refid="2669" relation="include">
+        </childnode>
+        <childnode refid="2666" relation="include">
+        </childnode>
+        <childnode refid="2643" relation="include">
+        </childnode>
+      </node>
+      <node id="2653">
+        <label>vector</label>
+      </node>
+      <node id="2664">
+        <label>BaseView.hpp</label>
+        <link refid="_base_view_8hpp"/>
+        <childnode refid="2637" relation="include">
+        </childnode>
+        <childnode refid="2645" relation="include">
+        </childnode>
+        <childnode refid="2660" relation="include">
+        </childnode>
+        <childnode refid="2665" relation="include">
+        </childnode>
+        <childnode refid="2667" relation="include">
+        </childnode>
+        <childnode refid="2646" relation="include">
+        </childnode>
+        <childnode refid="2662" relation="include">
+        </childnode>
+      </node>
+      <node id="2661">
+        <label>boost/numeric/ublas/matrix_proxy.hpp</label>
+      </node>
+      <node id="2659">
+        <label>sstream</label>
+      </node>
+      <node id="2636">
+        <label>BaseWindow.hpp</label>
+        <link refid="_base_window_8hpp"/>
+        <childnode refid="2637" relation="include">
+        </childnode>
+        <childnode refid="2638" relation="include">
+        </childnode>
+        <childnode refid="2639" relation="include">
+        </childnode>
+        <childnode refid="2640" relation="include">
+        </childnode>
+      </node>
+      <node id="2671">
+        <label>FrameL.h</label>
+      </node>
+      <node id="2672">
+        <label>AlgoExceptions.hpp</label>
+        <link refid="_algo_exceptions_8hpp"/>
+        <childnode refid="2641" relation="include">
+        </childnode>
+        <childnode refid="2645" relation="include">
+        </childnode>
+      </node>
+      <node id="2670">
+        <label>SeqView.hpp</label>
+        <link refid="_seq_view_8hpp"/>
+        <childnode refid="2639" relation="include">
+        </childnode>
+        <childnode refid="2661" relation="include">
+        </childnode>
+        <childnode refid="2644" relation="include">
+        </childnode>
+        <childnode refid="2664" relation="include">
+        </childnode>
+        <childnode refid="2671" relation="include">
+        </childnode>
+      </node>
+      <node id="2651">
+        <label>math.h</label>
+      </node>
+      <node id="2639">
+        <label>boost/numeric/ublas/matrix.hpp</label>
+      </node>
+      <node id="2642">
+        <label>iostream</label>
+      </node>
+      <node id="2657">
+        <label>deque</label>
+      </node>
+      <node id="2655">
+        <label>eternity/persist_xml.hpp</label>
+        <link refid="persist__xml_8hpp"/>
+        <childnode refid="2650" relation="include">
+        </childnode>
+        <childnode refid="2656" relation="include">
+        </childnode>
+        <childnode refid="2657" relation="include">
+        </childnode>
+      </node>
+      <node id="2666">
+        <label>complex</label>
+      </node>
+      <node id="2658">
+        <label>eternity/algorithms.hpp</label>
+        <link refid="algorithms_8hpp"/>
+        <childnode refid="2650" relation="include">
+        </childnode>
+        <childnode refid="2655" relation="include">
+        </childnode>
+        <childnode refid="2656" relation="include">
+        </childnode>
+        <childnode refid="2659" relation="include">
+        </childnode>
+      </node>
+      <node id="2654">
+        <label>algorithm</label>
+      </node>
+      <node id="2673">
+        <label>gsl/gsl_sf_bessel.h</label>
+      </node>
+      <node id="2638">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2674">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/KaiserWindow.hpp</label>
+        <link refid="_kaiser_window_8hpp"/>
+        <childnode refid="2675" relation="include">
+        </childnode>
+        <childnode refid="2676" relation="include">
+        </childnode>
+      </node>
+      <node id="2677">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/WindowFactory.cpp</label>
+        <link refid="_window_factory_8cpp"/>
+      </node>
+      <node id="2676">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/WindowFactory.hpp</label>
+        <link refid="_window_factory_8hpp"/>
+        <childnode refid="2677" relation="include">
+        </childnode>
+        <childnode refid="2675" relation="include">
+        </childnode>
+      </node>
+      <node id="2675">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/tsa.hpp</label>
+        <link refid="tsa_8hpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classtsa_1_1_kaiser_window" prot="public">tsa::KaiserWindow</innerclass>
+    <innernamespace refid="namespacetsa">tsa</innernamespace>
+    <briefdescription>
+<para>Cs2Hamming windowing. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Giancarlo Cella <ulink url="mailto:giancarlo.cella@pi.infn.it">giancarlo.cella@pi.infn.it</ulink> </para></simplesect>
+<simplesect kind="date"><para>Sat Nov 13 17:21:06 2004</para></simplesect>
+Copyright (C) 2004 by Giancarlo Cella <ulink url="mailto:giancarlo.cella@pi.infn.it">giancarlo.cella@pi.infn.it</ulink></para><para>This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by (at your option) any later version. the Free Software Foundation; either version 2 of the License, or</para><para>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</para><para>You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="27"><highlight class="preprocessor">#ifndef<sp/>__KAISERWINDOW_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__KAISERWINDOW_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"></codeline>
+<codeline lineno="36"></codeline>
+<codeline lineno="41"><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_base_window_8hpp" kindref="compound">BaseWindow.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="tsa_utility_functions_8hpp" kindref="compound">tsaUtilityFunctions.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gsl/gsl_sf_bessel.h&gt;</highlight></codeline>
+<codeline lineno="45"></codeline>
+<codeline lineno="50"></codeline>
+<codeline lineno="52"></codeline>
+<codeline lineno="57"></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceboost_1_1numeric_1_1ublas" kindref="compound">boost::numeric::ublas</ref>;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetsa" kindref="compound">tsa</ref><sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="classtsa_1_1_kaiser_window" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classtsa_1_1_kaiser_window" kindref="compound">KaiserWindow</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_base_window" kindref="compound">BaseWindow</ref><sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="classtsa_1_1_kaiser_window_1a1435f80a21b198c05d60be076fa152b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_kaiser_window_1a1435f80a21b198c05d60be076fa152b1" kindref="member">KaiserWindow</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size)</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_base_window" kindref="compound">BaseWindow</ref>(size)<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mAlpha<sp/>=<sp/>1.0;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FillWindow();</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="classtsa_1_1_kaiser_window_1ae1de2ef14d0c6b80161d0456502b4753" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_kaiser_window_1ae1de2ef14d0c6b80161d0456502b4753" kindref="member">KaiserWindow</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>par)</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_base_window" kindref="compound">BaseWindow</ref>(size)<sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_parse_parameter_string" kindref="compound">ParseParameterString</ref><sp/>parse(par);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mAlpha<sp/>=<sp/>parse.<ref refid="classtsa_1_1_parse_parameter_string_1a36f54e156537db06f4aca02194cba5cf" kindref="member">GetFloat</ref>(0);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FillWindow();</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="classtsa_1_1_kaiser_window_1a98965a07384b404238a53bf9d66e8c77" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_kaiser_window_1a98965a07384b404238a53bf9d66e8c77" kindref="member">~KaiserWindow</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"></codeline>
+<codeline lineno="118" refid="classtsa_1_1_kaiser_window_1a02d18a272d16d54fa4f7c9e8b227356e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_kaiser_window_1a02d18a272d16d54fa4f7c9e8b227356e" kindref="member">operator()</ref>(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>v1)<sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(v1.GetSize()<sp/>!=<sp/>mWindow.size())<sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Resize(v1.GetSize());</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1a91d266348bcf69ab00c97a253b0ec790" kindref="member">LogWarning</ref>(</highlight><highlight class="stringliteral">&quot;KaiserWindow:<sp/>Resizing<sp/>window&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>execute(</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*v1.GetData(),</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*v1.GetData()</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140" refid="classtsa_1_1_kaiser_window_1a94b99f1c961eadad783e44ccce9629e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_kaiser_window_1a94b99f1c961eadad783e44ccce9629e7" kindref="member">operator()</ref>(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>v1,<sp/><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>v2)<sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref><sp/>*arg1<sp/>=<sp/>v1.GetData();</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref><sp/>*arg2<sp/>=<sp/>v2.GetData();</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(v1.GetSize()<sp/>!=<sp/>mWindow.size())<sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Resize(v1.GetSize());</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1a91d266348bcf69ab00c97a253b0ec790" kindref="member">LogWarning</ref>(</highlight><highlight class="stringliteral">&quot;KaiserWindow:<sp/>Resizing<sp/>window&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((arg1-&gt;size1()<sp/>!=<sp/>arg2-&gt;size1())<sp/>||<sp/>(arg1-&gt;size2()<sp/>!=<sp/>arg2-&gt;size2()))<sp/>{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>arg2-&gt;resize(arg1-&gt;size1(),<sp/>arg1-&gt;size2());</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1a91d266348bcf69ab00c97a253b0ec790" kindref="member">LogWarning</ref>(</highlight><highlight class="stringliteral">&quot;KaiserWindow:<sp/>Resizing<sp/>output&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>execute(*arg1,<sp/>*arg2);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>v2.SetScale(v1.GetScale());</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>v2.SetStart(v1.GetStart());</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>v2.SetSampling(v1.GetSampling());</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169" refid="classtsa_1_1_kaiser_window_1ae573c5ab979c3292d10feddc5180b6b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_kaiser_window_1ae573c5ab979c3292d10feddc5180b6b4" kindref="member">Resize</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size)<sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BaseWindow::Resize(size);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FillWindow();</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"></codeline>
+<codeline lineno="181"></codeline>
+<codeline lineno="188" refid="classtsa_1_1_kaiser_window_1a12dbee6e0639e3f8b7bc1191c46d9798" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_kaiser_window_1a12dbee6e0639e3f8b7bc1191c46d9798" kindref="member">operator()</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i)<sp/>{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mWindow(i);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209" refid="classtsa_1_1_kaiser_window_1a92c5708ea950eaf9845b13f2272cf43f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_kaiser_window_1a92c5708ea950eaf9845b13f2272cf43f" kindref="member">mAlpha</ref>;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217" refid="classtsa_1_1_kaiser_window_1a4799ed39290a058eea9d44df73f764ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_kaiser_window_1a4799ed39290a058eea9d44df73f764ea" kindref="member">FillWindow</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n<sp/>=<sp/>mWindow.size()<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>norm<sp/>=<sp/>1.0<sp/>/<sp/>gsl_sf_bessel_I0(<ref refid="fparser_8cpp_1ae71449b1cc6e6250b91f539153a7a0d3" kindref="member">M_PI</ref><sp/>*<sp/>mAlpha);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>0;<sp/>k<sp/>&lt;<sp/>n;<sp/>k++)<sp/>{</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>p<sp/>=<sp/>double(2.0<sp/>*<sp/>k)<sp/>/<sp/>n<sp/>-<sp/>1.0;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x<sp/>=<sp/><ref refid="fparser_8cpp_1ae71449b1cc6e6250b91f539153a7a0d3" kindref="member">M_PI</ref><sp/>*<sp/>mAlpha<sp/>*<sp/>sqrt(1.0<sp/>-<sp/>p<sp/>*<sp/>p);</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mWindow(k)<sp/>=<sp/>norm<sp/>*<sp/>gsl_sf_bessel_I0(x);</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Normalize();</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"></codeline>
+<codeline lineno="243"></codeline>
+<codeline lineno="248"></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>end<sp/>namespace<sp/>tsa</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>__KAISERWINDOW_HPP</highlight></codeline>
+    </programlisting>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/KaiserWindow.hpp"/>
+  </compounddef>
+</doxygen>

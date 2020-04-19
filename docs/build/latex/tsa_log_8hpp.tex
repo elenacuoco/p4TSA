@@ -1,0 +1,115 @@
+\hypertarget{tsa_log_8hpp}{}\section{/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/include/tsa\+Log.hpp File Reference}
+\label{tsa_log_8hpp}\index{/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/include/tsa\+Log.\+hpp@{/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/include/tsa\+Log.\+hpp}}
+
+
+Interface for tsa\+Log.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacetsa}{tsa}
+\begin{DoxyCompactList}\small\item\em The main namespace of the library. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{tsa_log_8hpp_a4858002cc014b9392dcf6df8496f487a}{R\+L\+O\+G\+\_\+\+C\+O\+M\+P\+O\+N\+E\+NT}~tsa
+\item 
+\#define \hyperlink{tsa_log_8hpp_a99afb0abe77e01cb3aef957cc2883205}{L\+O\+G\+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+E\+V\+E\+L\+\_\+2}~2
+\item 
+\#define \hyperlink{tsa_log_8hpp_ad89190533829c21d411a8d833c199727}{L\+O\+G\+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+E\+V\+E\+L\+\_\+3}~3
+\item 
+\#define \hyperlink{tsa_log_8hpp_a222b19506a114bade17c0a5349078624}{L\+O\+G\+H1}~\char`\"{}============================================\char`\"{}
+\item 
+\#define \hyperlink{tsa_log_8hpp_a6ce78cc7328b78feb05404edb055ce1c}{L\+O\+G\+H2}~\char`\"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespacetsa_a08952ac2e7ac6e538c83692501aed4e7}{tsa\+::\+Log\+Info} (const std\+::string \&s,...)
+\item 
+void \hyperlink{namespacetsa_a91d266348bcf69ab00c97a253b0ec790}{tsa\+::\+Log\+Warning} (const std\+::string \&s,...)
+\item 
+void \hyperlink{namespacetsa_a3bce10382fbb41b48aca0e5b8afeb896}{tsa\+::\+Log\+Severe} (const std\+::string \&s,...)
+\item 
+void \hyperlink{namespacetsa_aeff53394d3502127b84380cceb41cba8}{tsa\+::\+Log\+Severe} (int lvl, const std\+::string \&s,...)
+\item 
+void \hyperlink{namespacetsa_a0314b9c30387b942a5de0ec7ff3026e3}{tsa\+::\+Log\+Fatal} (const std\+::string \&s,...)
+\item 
+void \hyperlink{namespacetsa_a2a922785b9b967a8e92ded5a1540688f}{tsa\+::\+Log\+Debug} (int lvl, const std\+::string \&s,...)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface for tsa\+Log. 
+
+Copyright (C) 2004 by Giancarlo Cella \href{mailto:giancarlo.cella@pi.infn.it}{\tt giancarlo.\+cella@pi.\+infn.\+it}
+
+This program is free software; you can redistribute it and/or modify it under the terms of the G\+NU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but W\+I\+T\+H\+O\+UT A\+NY W\+A\+R\+R\+A\+N\+TY; without even the implied warranty of M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY or F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE. See the G\+NU General Public License for more details.
+
+You should have received a copy of the G\+NU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place -\/ Suite 330, Boston, MA 02111-\/1307, U\+SA.
+
+\begin{DoxyAuthor}{Author}
+Giancarlo Cella \href{mailto:giancarlo.cella@pi.infn.it}{\tt giancarlo.\+cella@pi.\+infn.\+it} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Sat Nov 13 17\+:21\+:06 2004 
+\end{DoxyDate}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{tsa_log_8hpp_a99afb0abe77e01cb3aef957cc2883205}\label{tsa_log_8hpp_a99afb0abe77e01cb3aef957cc2883205}} 
+\index{tsa\+Log.\+hpp@{tsa\+Log.\+hpp}!L\+O\+G\+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+E\+V\+E\+L\+\_\+2@{L\+O\+G\+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+E\+V\+E\+L\+\_\+2}}
+\index{L\+O\+G\+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+E\+V\+E\+L\+\_\+2@{L\+O\+G\+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+E\+V\+E\+L\+\_\+2}!tsa\+Log.\+hpp@{tsa\+Log.\+hpp}}
+\subsubsection{\texorpdfstring{L\+O\+G\+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+E\+V\+E\+L\+\_\+2}{LOG\_DEBUG\_LEVEL\_2}}
+{\footnotesize\ttfamily \#define L\+O\+G\+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+E\+V\+E\+L\+\_\+2~2}
+
+
+
+Definition at line 70 of file tsa\+Log.\+hpp.
+
+\mbox{\Hypertarget{tsa_log_8hpp_ad89190533829c21d411a8d833c199727}\label{tsa_log_8hpp_ad89190533829c21d411a8d833c199727}} 
+\index{tsa\+Log.\+hpp@{tsa\+Log.\+hpp}!L\+O\+G\+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+E\+V\+E\+L\+\_\+3@{L\+O\+G\+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+E\+V\+E\+L\+\_\+3}}
+\index{L\+O\+G\+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+E\+V\+E\+L\+\_\+3@{L\+O\+G\+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+E\+V\+E\+L\+\_\+3}!tsa\+Log.\+hpp@{tsa\+Log.\+hpp}}
+\subsubsection{\texorpdfstring{L\+O\+G\+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+E\+V\+E\+L\+\_\+3}{LOG\_DEBUG\_LEVEL\_3}}
+{\footnotesize\ttfamily \#define L\+O\+G\+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+E\+V\+E\+L\+\_\+3~3}
+
+
+
+Definition at line 71 of file tsa\+Log.\+hpp.
+
+\mbox{\Hypertarget{tsa_log_8hpp_a222b19506a114bade17c0a5349078624}\label{tsa_log_8hpp_a222b19506a114bade17c0a5349078624}} 
+\index{tsa\+Log.\+hpp@{tsa\+Log.\+hpp}!L\+O\+G\+H1@{L\+O\+G\+H1}}
+\index{L\+O\+G\+H1@{L\+O\+G\+H1}!tsa\+Log.\+hpp@{tsa\+Log.\+hpp}}
+\subsubsection{\texorpdfstring{L\+O\+G\+H1}{LOGH1}}
+{\footnotesize\ttfamily \#define L\+O\+G\+H1~\char`\"{}============================================\char`\"{}}
+
+
+
+Definition at line 73 of file tsa\+Log.\+hpp.
+
+\mbox{\Hypertarget{tsa_log_8hpp_a6ce78cc7328b78feb05404edb055ce1c}\label{tsa_log_8hpp_a6ce78cc7328b78feb05404edb055ce1c}} 
+\index{tsa\+Log.\+hpp@{tsa\+Log.\+hpp}!L\+O\+G\+H2@{L\+O\+G\+H2}}
+\index{L\+O\+G\+H2@{L\+O\+G\+H2}!tsa\+Log.\+hpp@{tsa\+Log.\+hpp}}
+\subsubsection{\texorpdfstring{L\+O\+G\+H2}{LOGH2}}
+{\footnotesize\ttfamily \#define L\+O\+G\+H2~\char`\"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\char`\"{}}
+
+
+
+Definition at line 74 of file tsa\+Log.\+hpp.
+
+\mbox{\Hypertarget{tsa_log_8hpp_a4858002cc014b9392dcf6df8496f487a}\label{tsa_log_8hpp_a4858002cc014b9392dcf6df8496f487a}} 
+\index{tsa\+Log.\+hpp@{tsa\+Log.\+hpp}!R\+L\+O\+G\+\_\+\+C\+O\+M\+P\+O\+N\+E\+NT@{R\+L\+O\+G\+\_\+\+C\+O\+M\+P\+O\+N\+E\+NT}}
+\index{R\+L\+O\+G\+\_\+\+C\+O\+M\+P\+O\+N\+E\+NT@{R\+L\+O\+G\+\_\+\+C\+O\+M\+P\+O\+N\+E\+NT}!tsa\+Log.\+hpp@{tsa\+Log.\+hpp}}
+\subsubsection{\texorpdfstring{R\+L\+O\+G\+\_\+\+C\+O\+M\+P\+O\+N\+E\+NT}{RLOG\_COMPONENT}}
+{\footnotesize\ttfamily \#define R\+L\+O\+G\+\_\+\+C\+O\+M\+P\+O\+N\+E\+NT~tsa}
+
+
+
+Definition at line 30 of file tsa\+Log.\+hpp.
+

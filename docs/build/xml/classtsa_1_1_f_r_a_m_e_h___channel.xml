@@ -1,0 +1,329 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classtsa_1_1_f_r_a_m_e_h___channel" kind="class" language="C++" prot="public">
+    <compoundname>tsa::FRAMEH_Channel</compoundname>
+    <basecompoundref refid="classtsa_1_1_channel_descriptor" prot="public" virt="non-virtual">tsa::ChannelDescriptor</basecompoundref>
+    <includes refid="_frame_i_stream_8hpp" local="no">FrameIStream.hpp</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classtsa_1_1_f_r_a_m_e_h___channel_1af9bd3bfda5ebc40f65e8af27abac9fe3" prot="public" static="no">
+        <name>field_type</name>
+        <enumvalue id="classtsa_1_1_f_r_a_m_e_h___channel_1af9bd3bfda5ebc40f65e8af27abac9fe3a11936056dc8f51d020db82b4cd4cd5b3" prot="public">
+          <name>field_run</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Run number </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_f_r_a_m_e_h___channel_1af9bd3bfda5ebc40f65e8af27abac9fe3a37f297e43f3378c404b42391c9ece6bf" prot="public">
+          <name>field_frame</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Frame number </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_f_r_a_m_e_h___channel_1af9bd3bfda5ebc40f65e8af27abac9fe3ae1cd9acd47598e9f3473148b6fcc09d4" prot="public">
+          <name>field_dataQuality</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Data quality </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_f_r_a_m_e_h___channel_1af9bd3bfda5ebc40f65e8af27abac9fe3a93b921e1acc87fa78badf6e4bc4552d7" prot="public">
+          <name>field_GTimeS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>GTimeS </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_f_r_a_m_e_h___channel_1af9bd3bfda5ebc40f65e8af27abac9fe3ab14b559f3bf02d8c2dfbcd71b0a2f17b" prot="public">
+          <name>field_GTimeN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>GTimeN </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_f_r_a_m_e_h___channel_1af9bd3bfda5ebc40f65e8af27abac9fe3add897c0e122b716817814e73f0afef3b" prot="public">
+          <name>field_ULeapS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>ULeapS </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_f_r_a_m_e_h___channel_1af9bd3bfda5ebc40f65e8af27abac9fe3aa467146fdc3b2c4bd49bf0f301d3fad5" prot="public">
+          <name>field_dt</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>dt </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_f_r_a_m_e_h___channel_1af9bd3bfda5ebc40f65e8af27abac9fe3a7aa7e4e96809decee1afe9a7583b0ae8" prot="public">
+          <name>field_time</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>time </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Field type in the frame to dump on channel </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" line="463" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" bodystart="463" bodyend="472"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtsa_1_1_f_r_a_m_e_h___channel_1aff87ea1426812c4e02ccaa741774db29" prot="private" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* tsa::FRAMEH_Channel::mFieldName</definition>
+        <argsstring></argsstring>
+        <name>mFieldName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Field name </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" line="518" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" bodystart="518" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_f_r_a_m_e_h___channel_1a3a63c899c18c606c39c2cd32859d3b05" prot="private" static="no" mutable="no">
+        <type>enum <ref refid="classtsa_1_1_f_r_a_m_e_h___channel_1af9bd3bfda5ebc40f65e8af27abac9fe3" kindref="member">field_type</ref></type>
+        <definition>enum field_type tsa::FRAMEH_Channel::mFieldType</definition>
+        <argsstring></argsstring>
+        <name>mFieldType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Field type </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" line="518" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" bodystart="519" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtsa_1_1_f_r_a_m_e_h___channel_1a27a8bc2d9aba282cb68f855c49b2eaba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tsa::FRAMEH_Channel::FRAMEH_Channel</definition>
+        <argsstring>(FrameIStream *FIS, enum field_type ft, unsigned int id)</argsstring>
+        <name>FRAMEH_Channel</name>
+        <param>
+          <type><ref refid="classtsa_1_1_frame_i_stream" kindref="compound">FrameIStream</ref> *</type>
+          <declname>FIS</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="classtsa_1_1_f_r_a_m_e_h___channel_1af9bd3bfda5ebc40f65e8af27abac9fe3" kindref="member">field_type</ref></type>
+          <declname>ft</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FIS</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the <ref refid="classtsa_1_1_frame_i_stream" kindref="compound">FrameIStream</ref> class </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ft</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the field type of the requested channel </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>id of the channel </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" line="482" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/FrameIStream.cpp" bodystart="474" bodyend="525"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_f_r_a_m_e_h___channel_1a6174aa904d4e084e77695f8e19b8fcd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>tsa::FRAMEH_Channel::~FRAMEH_Channel</definition>
+        <argsstring>()</argsstring>
+        <name>~FRAMEH_Channel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" line="488" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/FrameIStream.cpp" bodystart="527" bodyend="529"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_f_r_a_m_e_h___channel_1af757e23c465da95ac0ed7b97876ead66" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void tsa::FRAMEH_Channel::AddData</definition>
+        <argsstring>()</argsstring>
+        <name>AddData</name>
+        <reimplements refid="classtsa_1_1_channel_descriptor_1aa1e001a5e712415cd4e9d66846914a56">AddData</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function must be called when there are not enough data to fill the output view. It reads a chunk of data from the current frame. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" line="496" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/FrameIStream.cpp" bodystart="531" bodyend="565"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_f_r_a_m_e_h___channel_1a022b134fb62d99e8cb00a6ce28b2d569" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double tsa::FRAMEH_Channel::GetLength</definition>
+        <argsstring>()</argsstring>
+        <name>GetLength</name>
+        <reimplements refid="classtsa_1_1_channel_descriptor_1a456d14e6136c389fbd307fabab7d7b73">GetLength</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the maximul time length of data that can be currently filled without calling AddData.</para><para><simplesect kind="return"><para>the time length of the data available in seconds </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" line="504" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/FrameIStream.cpp" bodystart="567" bodyend="569"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classtsa_1_1_f_r_a_m_e_h___channel_1a9a920292ece110df4cdce41f9f8e451b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classtsa_1_1_f_r_a_m_e_h___channel" kindref="compound">FRAMEH_Channel</ref> *</type>
+        <definition>FRAMEH_Channel * tsa::FRAMEH_Channel::Create</definition>
+        <argsstring>(FrameIStream *FIS, char *field_name, unsigned int id)</argsstring>
+        <name>Create</name>
+        <param>
+          <type><ref refid="classtsa_1_1_frame_i_stream" kindref="compound">FrameIStream</ref> *</type>
+          <declname>FIS</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>field_name</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create, if possible, an instance of the class</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FIS</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the <ref refid="classtsa_1_1_frame_i_stream" kindref="compound">FrameIStream</ref> class instance </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of the channel </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of the channel</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pointer to the created class instance or null </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" line="515" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/FrameIStream.cpp" bodystart="418" bodyend="472"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Descriptor for a FrameH field channel. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="248">
+        <label>tsa::ChannelDescriptor</label>
+        <link refid="classtsa_1_1_channel_descriptor"/>
+        <childnode refid="249" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="249">
+        <label>tsa::AlgoBase</label>
+        <link refid="classtsa_1_1_algo_base"/>
+      </node>
+      <node id="247">
+        <label>tsa::FRAMEH_Channel</label>
+        <link refid="classtsa_1_1_f_r_a_m_e_h___channel"/>
+        <childnode refid="248" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="253">
+        <label>tsa::FrameIStream</label>
+        <link refid="classtsa_1_1_frame_i_stream"/>
+        <childnode refid="252" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="251">
+        <label>tsa::ChannelDescriptor</label>
+        <link refid="classtsa_1_1_channel_descriptor"/>
+        <childnode refid="252" relation="public-inheritance">
+        </childnode>
+        <childnode refid="253" relation="usage">
+          <edgelabel>mFIS</edgelabel>
+        </childnode>
+      </node>
+      <node id="252">
+        <label>tsa::AlgoBase</label>
+        <link refid="classtsa_1_1_algo_base"/>
+      </node>
+      <node id="250">
+        <label>tsa::FRAMEH_Channel</label>
+        <link refid="classtsa_1_1_f_r_a_m_e_h___channel"/>
+        <childnode refid="251" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" line="456" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" bodystart="456" bodyend="521"/>
+    <listofallmembers>
+      <member refid="classtsa_1_1_f_r_a_m_e_h___channel_1af757e23c465da95ac0ed7b97876ead66" prot="public" virt="virtual"><scope>tsa::FRAMEH_Channel</scope><name>AddData</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a320624e156e5d856077465474bc7154f" prot="public" virt="non-virtual"><scope>tsa::FRAMEH_Channel</scope><name>ChannelDescriptor</name></member>
+      <member refid="classtsa_1_1_f_r_a_m_e_h___channel_1a9a920292ece110df4cdce41f9f8e451b" prot="public" virt="non-virtual"><scope>tsa::FRAMEH_Channel</scope><name>Create</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a73d060e190a75faa7ac64ee4a328a9d4" prot="protected" virt="non-virtual"><scope>tsa::FRAMEH_Channel</scope><name>data_available</name></member>
+      <member refid="classtsa_1_1_f_r_a_m_e_h___channel_1af9bd3bfda5ebc40f65e8af27abac9fe3ae1cd9acd47598e9f3473148b6fcc09d4" prot="public" virt="non-virtual"><scope>tsa::FRAMEH_Channel</scope><name>field_dataQuality</name></member>
+      <member refid="classtsa_1_1_f_r_a_m_e_h___channel_1af9bd3bfda5ebc40f65e8af27abac9fe3aa467146fdc3b2c4bd49bf0f301d3fad5" prot="public" virt="non-virtual"><scope>tsa::FRAMEH_Channel</scope><name>field_dt</name></member>
+      <member refid="classtsa_1_1_f_r_a_m_e_h___channel_1af9bd3bfda5ebc40f65e8af27abac9fe3a37f297e43f3378c404b42391c9ece6bf" prot="public" virt="non-virtual"><scope>tsa::FRAMEH_Channel</scope><name>field_frame</name></member>
+      <member refid="classtsa_1_1_f_r_a_m_e_h___channel_1af9bd3bfda5ebc40f65e8af27abac9fe3ab14b559f3bf02d8c2dfbcd71b0a2f17b" prot="public" virt="non-virtual"><scope>tsa::FRAMEH_Channel</scope><name>field_GTimeN</name></member>
+      <member refid="classtsa_1_1_f_r_a_m_e_h___channel_1af9bd3bfda5ebc40f65e8af27abac9fe3a93b921e1acc87fa78badf6e4bc4552d7" prot="public" virt="non-virtual"><scope>tsa::FRAMEH_Channel</scope><name>field_GTimeS</name></member>
+      <member refid="classtsa_1_1_f_r_a_m_e_h___channel_1af9bd3bfda5ebc40f65e8af27abac9fe3a11936056dc8f51d020db82b4cd4cd5b3" prot="public" virt="non-virtual"><scope>tsa::FRAMEH_Channel</scope><name>field_run</name></member>
+      <member refid="classtsa_1_1_f_r_a_m_e_h___channel_1af9bd3bfda5ebc40f65e8af27abac9fe3a7aa7e4e96809decee1afe9a7583b0ae8" prot="public" virt="non-virtual"><scope>tsa::FRAMEH_Channel</scope><name>field_time</name></member>
+      <member refid="classtsa_1_1_f_r_a_m_e_h___channel_1af9bd3bfda5ebc40f65e8af27abac9fe3" prot="public" virt="non-virtual"><scope>tsa::FRAMEH_Channel</scope><name>field_type</name></member>
+      <member refid="classtsa_1_1_f_r_a_m_e_h___channel_1af9bd3bfda5ebc40f65e8af27abac9fe3add897c0e122b716817814e73f0afef3b" prot="public" virt="non-virtual"><scope>tsa::FRAMEH_Channel</scope><name>field_ULeapS</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a6553da04ba33471fc5465b6bd2b5275c" prot="public" virt="virtual"><scope>tsa::FRAMEH_Channel</scope><name>FillView</name></member>
+      <member refid="classtsa_1_1_f_r_a_m_e_h___channel_1a27a8bc2d9aba282cb68f855c49b2eaba" prot="public" virt="non-virtual"><scope>tsa::FRAMEH_Channel</scope><name>FRAMEH_Channel</name></member>
+      <member refid="classtsa_1_1_f_r_a_m_e_h___channel_1a022b134fb62d99e8cb00a6ce28b2d569" prot="public" virt="virtual"><scope>tsa::FRAMEH_Channel</scope><name>GetLength</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a602c501d3fa47c0951ae45f78336a1a8" prot="public" virt="virtual"><scope>tsa::FRAMEH_Channel</scope><name>GetRate</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1ad1568c18971efe9a5cb1d114e06f5050" prot="protected" virt="non-virtual"><scope>tsa::FRAMEH_Channel</scope><name>mData</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1ac4103a2793b7e507f8f982070ee27348" prot="protected" virt="non-virtual"><scope>tsa::FRAMEH_Channel</scope><name>mExceptions</name></member>
+      <member refid="classtsa_1_1_f_r_a_m_e_h___channel_1aff87ea1426812c4e02ccaa741774db29" prot="private" virt="non-virtual"><scope>tsa::FRAMEH_Channel</scope><name>mFieldName</name></member>
+      <member refid="classtsa_1_1_f_r_a_m_e_h___channel_1a3a63c899c18c606c39c2cd32859d3b05" prot="private" virt="non-virtual"><scope>tsa::FRAMEH_Channel</scope><name>mFieldType</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a7767947e90a66d41bbd13bd4c54149a6" prot="protected" virt="non-virtual"><scope>tsa::FRAMEH_Channel</scope><name>mFIS</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a49d1e3852cb22b0a56ebc03b3176c5b8" prot="protected" virt="non-virtual"><scope>tsa::FRAMEH_Channel</scope><name>mId</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a6bad409238df7dff8b5265570adac8ff" prot="protected" virt="non-virtual"><scope>tsa::FRAMEH_Channel</scope><name>mNextTime</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a142c7f60e14fa8036340b902529cf956" prot="protected" virt="non-virtual"><scope>tsa::FRAMEH_Channel</scope><name>mRate</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a61cb9c3f50762989afc59c9e365f0927" prot="protected" virt="non-virtual"><scope>tsa::FRAMEH_Channel</scope><name>PushFrVect</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1ae3da8cb574d6a43bcca33daca5394530" prot="protected" virt="non-virtual"><scope>tsa::FRAMEH_Channel</scope><name>PushValue</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1ae38a3b6ca5d23123a61a421fe3612b86" prot="protected" virt="non-virtual"><scope>tsa::FRAMEH_Channel</scope><name>Queue</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a5ebd9a8bf358666b2cd9ae00056d2728" prot="public" virt="virtual"><scope>tsa::FRAMEH_Channel</scope><name>WriteView</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a51b2df6d09b5b0b07d2a9ecda6fffa2b" prot="public" virt="virtual"><scope>tsa::FRAMEH_Channel</scope><name>WriteView</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a2b4f201421dcd2cc9d2c1705fe4bea61" prot="public" virt="virtual"><scope>tsa::FRAMEH_Channel</scope><name>~ChannelDescriptor</name></member>
+      <member refid="classtsa_1_1_f_r_a_m_e_h___channel_1a6174aa904d4e084e77695f8e19b8fcd2" prot="public" virt="virtual"><scope>tsa::FRAMEH_Channel</scope><name>~FRAMEH_Channel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

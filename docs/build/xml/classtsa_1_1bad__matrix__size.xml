@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classtsa_1_1bad__matrix__size" kind="class" language="C++" prot="public">
+    <compoundname>tsa::bad_matrix_size</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">invalid_argument</basecompoundref>
+    <includes refid="_algo_exceptions_8hpp" local="no">AlgoExceptions.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtsa_1_1bad__matrix__size_1a5d06e7b24038b0b1ff07a0fa308f8e54" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>tsa::bad_matrix_size::bad_matrix_size</definition>
+        <argsstring>(const std::string &amp;msg)</argsstring>
+        <name>bad_matrix_size</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>error message </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/AlgoExceptions.hpp" line="80" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/AlgoExceptions.hpp" bodystart="80" bodyend="84"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This exception should be used when a matrix argument of an algorithm has an incorrect size. It contains information about the correct expected size. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="102">
+        <label>tsa::bad_matrix_size</label>
+        <link refid="classtsa_1_1bad__matrix__size"/>
+        <childnode refid="103" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="103">
+        <label>std::invalid_argument</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="104">
+        <label>tsa::bad_matrix_size</label>
+        <link refid="classtsa_1_1bad__matrix__size"/>
+        <childnode refid="105" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="105">
+        <label>std::invalid_argument</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/AlgoExceptions.hpp" line="72" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/AlgoExceptions.hpp" bodystart="72" bodyend="89"/>
+    <listofallmembers>
+      <member refid="classtsa_1_1bad__matrix__size_1a5d06e7b24038b0b1ff07a0fa308f8e54" prot="public" virt="non-virtual"><scope>tsa::bad_matrix_size</scope><name>bad_matrix_size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

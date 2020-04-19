@@ -1,0 +1,196 @@
+\hypertarget{classtsa_1_1_wav_reconstruction}{}\section{tsa\+:\+:Wav\+Reconstruction Class Reference}
+\label{classtsa_1_1_wav_reconstruction}\index{tsa\+::\+Wav\+Reconstruction@{tsa\+::\+Wav\+Reconstruction}}
+
+
+Reconstructed the wavelet transformed signal.  
+
+
+
+
+{\ttfamily \#include $<$Wav\+Reconstruction.\+hpp$>$}
+
+Inheritance diagram for tsa\+:\+:Wav\+Reconstruction\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classtsa_1_1_wav_reconstruction}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtsa_1_1_wav_reconstruction_a30e49dd92bc216fdc8a8411914bac3da}{Wav\+Reconstruction} (unsigned int N, enum \hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7}{Wavelet\+Transform\+::\+Wavelet\+Type} F, double Th)
+\item 
+\hyperlink{classtsa_1_1_wav_reconstruction_a98992576615196547b63822980a1c9d3}{$\sim$\+Wav\+Reconstruction} ()
+\item 
+void \hyperlink{classtsa_1_1_wav_reconstruction_af5a0010f467f436732548165315efeb0}{operator()} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&Input\+Data)
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Operations}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtsa_1_1_wav_reconstruction_abf80b87f146d0557af51f4e5ec60580e}{execute} (\hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&buffer)
+\begin{DoxyCompactList}\small\item\em Brief documentation for the execute method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{classtsa_1_1_wav_reconstruction_a27b9eb7cb4914273f4551579aba645a6}{mN}
+\item 
+\hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \hyperlink{classtsa_1_1_wav_reconstruction_a12d1f32ebdce8967bc9faacc7be2bad2}{m\+Buff}
+\item 
+enum \hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7}{Wavelet\+Transform\+::\+Wavelet\+Type} \hyperlink{classtsa_1_1_wav_reconstruction_ad97d775e3186bf6b642526359fa88580}{m\+Wt}
+\item 
+\hyperlink{classtsa_1_1_wavelet_transform}{Wavelet\+Transform} \hyperlink{classtsa_1_1_wav_reconstruction_a23f1a718111dd2028f82b954e85115b6}{m\+WT}
+\item 
+enum \hyperlink{classtsa_1_1_wavelet_threshold_a50c42c95dae960986a985157ca038fae}{Wavelet\+Threshold\+::\+Wavelet\+Thresholding} \hyperlink{classtsa_1_1_wav_reconstruction_a79826cf2c35973c054b45fa1e0e0a8f7}{mT}
+\item 
+\hyperlink{classtsa_1_1_wavelet_threshold}{Wavelet\+Threshold} \hyperlink{classtsa_1_1_wav_reconstruction_a487dbe8b4e390594631931f6bf7c60db}{m\+Wav\+Thres}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Reconstructed the wavelet transformed signal. 
+
+A more detailed description of \hyperlink{classtsa_1_1_wav_reconstruction}{Wav\+Reconstruction} 
+
+Definition at line 78 of file Wav\+Reconstruction.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtsa_1_1_wav_reconstruction_a30e49dd92bc216fdc8a8411914bac3da}\label{classtsa_1_1_wav_reconstruction_a30e49dd92bc216fdc8a8411914bac3da}} 
+\index{tsa\+::\+Wav\+Reconstruction@{tsa\+::\+Wav\+Reconstruction}!Wav\+Reconstruction@{Wav\+Reconstruction}}
+\index{Wav\+Reconstruction@{Wav\+Reconstruction}!tsa\+::\+Wav\+Reconstruction@{tsa\+::\+Wav\+Reconstruction}}
+\subsubsection{\texorpdfstring{Wav\+Reconstruction()}{WavReconstruction()}}
+{\footnotesize\ttfamily tsa\+::\+Wav\+Reconstruction\+::\+Wav\+Reconstruction (\begin{DoxyParamCaption}\item[{unsigned int}]{N,  }\item[{enum \hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7}{Wavelet\+Transform\+::\+Wavelet\+Type}}]{F,  }\item[{double}]{Th }\end{DoxyParamCaption})}
+
+Constructor 
+
+Definition at line 19 of file Wav\+Reconstruction.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_wav_reconstruction_a98992576615196547b63822980a1c9d3}\label{classtsa_1_1_wav_reconstruction_a98992576615196547b63822980a1c9d3}} 
+\index{tsa\+::\+Wav\+Reconstruction@{tsa\+::\+Wav\+Reconstruction}!````~Wav\+Reconstruction@{$\sim$\+Wav\+Reconstruction}}
+\index{````~Wav\+Reconstruction@{$\sim$\+Wav\+Reconstruction}!tsa\+::\+Wav\+Reconstruction@{tsa\+::\+Wav\+Reconstruction}}
+\subsubsection{\texorpdfstring{$\sim$\+Wav\+Reconstruction()}{~WavReconstruction()}}
+{\footnotesize\ttfamily tsa\+::\+Wav\+Reconstruction\+::$\sim$\+Wav\+Reconstruction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor 
+
+Definition at line 28 of file Wav\+Reconstruction.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classtsa_1_1_wav_reconstruction_abf80b87f146d0557af51f4e5ec60580e}\label{classtsa_1_1_wav_reconstruction_abf80b87f146d0557af51f4e5ec60580e}} 
+\index{tsa\+::\+Wav\+Reconstruction@{tsa\+::\+Wav\+Reconstruction}!execute@{execute}}
+\index{execute@{execute}!tsa\+::\+Wav\+Reconstruction@{tsa\+::\+Wav\+Reconstruction}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void tsa\+::\+Wav\+Reconstruction\+::execute (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&}]{buffer }\end{DoxyParamCaption})}
+
+
+
+Brief documentation for the execute method. 
+
+Start of the long documentation for execute method.
+
+\begin{DoxyPrecond}{Precondition}
+A precondition 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+A postcondition 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em An} & exception\\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}{Parameters}
+{\em a} & parameter\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a returned value
+\end{DoxyReturn}
+Declaration of execute operation 
+
+Definition at line 36 of file Wav\+Reconstruction.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_wav_reconstruction_af5a0010f467f436732548165315efeb0}\label{classtsa_1_1_wav_reconstruction_af5a0010f467f436732548165315efeb0}} 
+\index{tsa\+::\+Wav\+Reconstruction@{tsa\+::\+Wav\+Reconstruction}!operator()@{operator()}}
+\index{operator()@{operator()}!tsa\+::\+Wav\+Reconstruction@{tsa\+::\+Wav\+Reconstruction}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily void tsa\+::\+Wav\+Reconstruction\+::operator() (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{Input\+Data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 31 of file Wav\+Reconstruction.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classtsa_1_1_wav_reconstruction_a12d1f32ebdce8967bc9faacc7be2bad2}\label{classtsa_1_1_wav_reconstruction_a12d1f32ebdce8967bc9faacc7be2bad2}} 
+\index{tsa\+::\+Wav\+Reconstruction@{tsa\+::\+Wav\+Reconstruction}!m\+Buff@{m\+Buff}}
+\index{m\+Buff@{m\+Buff}!tsa\+::\+Wav\+Reconstruction@{tsa\+::\+Wav\+Reconstruction}}
+\subsubsection{\texorpdfstring{m\+Buff}{mBuff}}
+{\footnotesize\ttfamily \hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} tsa\+::\+Wav\+Reconstruction\+::m\+Buff\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 135 of file Wav\+Reconstruction.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_wav_reconstruction_a27b9eb7cb4914273f4551579aba645a6}\label{classtsa_1_1_wav_reconstruction_a27b9eb7cb4914273f4551579aba645a6}} 
+\index{tsa\+::\+Wav\+Reconstruction@{tsa\+::\+Wav\+Reconstruction}!mN@{mN}}
+\index{mN@{mN}!tsa\+::\+Wav\+Reconstruction@{tsa\+::\+Wav\+Reconstruction}}
+\subsubsection{\texorpdfstring{mN}{mN}}
+{\footnotesize\ttfamily unsigned int tsa\+::\+Wav\+Reconstruction\+::mN\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 134 of file Wav\+Reconstruction.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_wav_reconstruction_a79826cf2c35973c054b45fa1e0e0a8f7}\label{classtsa_1_1_wav_reconstruction_a79826cf2c35973c054b45fa1e0e0a8f7}} 
+\index{tsa\+::\+Wav\+Reconstruction@{tsa\+::\+Wav\+Reconstruction}!mT@{mT}}
+\index{mT@{mT}!tsa\+::\+Wav\+Reconstruction@{tsa\+::\+Wav\+Reconstruction}}
+\subsubsection{\texorpdfstring{mT}{mT}}
+{\footnotesize\ttfamily enum \hyperlink{classtsa_1_1_wavelet_threshold_a50c42c95dae960986a985157ca038fae}{Wavelet\+Threshold\+::\+Wavelet\+Thresholding} tsa\+::\+Wav\+Reconstruction\+::mT\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 138 of file Wav\+Reconstruction.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_wav_reconstruction_a487dbe8b4e390594631931f6bf7c60db}\label{classtsa_1_1_wav_reconstruction_a487dbe8b4e390594631931f6bf7c60db}} 
+\index{tsa\+::\+Wav\+Reconstruction@{tsa\+::\+Wav\+Reconstruction}!m\+Wav\+Thres@{m\+Wav\+Thres}}
+\index{m\+Wav\+Thres@{m\+Wav\+Thres}!tsa\+::\+Wav\+Reconstruction@{tsa\+::\+Wav\+Reconstruction}}
+\subsubsection{\texorpdfstring{m\+Wav\+Thres}{mWavThres}}
+{\footnotesize\ttfamily \hyperlink{classtsa_1_1_wavelet_threshold}{Wavelet\+Threshold} tsa\+::\+Wav\+Reconstruction\+::m\+Wav\+Thres\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 139 of file Wav\+Reconstruction.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_wav_reconstruction_ad97d775e3186bf6b642526359fa88580}\label{classtsa_1_1_wav_reconstruction_ad97d775e3186bf6b642526359fa88580}} 
+\index{tsa\+::\+Wav\+Reconstruction@{tsa\+::\+Wav\+Reconstruction}!m\+Wt@{m\+Wt}}
+\index{m\+Wt@{m\+Wt}!tsa\+::\+Wav\+Reconstruction@{tsa\+::\+Wav\+Reconstruction}}
+\subsubsection{\texorpdfstring{m\+Wt}{mWt}}
+{\footnotesize\ttfamily enum \hyperlink{classtsa_1_1_wavelet_transform_a5a529de70e0004333fcf23b9cca88ce7}{Wavelet\+Transform\+::\+Wavelet\+Type} tsa\+::\+Wav\+Reconstruction\+::m\+Wt\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 136 of file Wav\+Reconstruction.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_wav_reconstruction_a23f1a718111dd2028f82b954e85115b6}\label{classtsa_1_1_wav_reconstruction_a23f1a718111dd2028f82b954e85115b6}} 
+\index{tsa\+::\+Wav\+Reconstruction@{tsa\+::\+Wav\+Reconstruction}!m\+WT@{m\+WT}}
+\index{m\+WT@{m\+WT}!tsa\+::\+Wav\+Reconstruction@{tsa\+::\+Wav\+Reconstruction}}
+\subsubsection{\texorpdfstring{m\+WT}{mWT}}
+{\footnotesize\ttfamily \hyperlink{classtsa_1_1_wavelet_transform}{Wavelet\+Transform} tsa\+::\+Wav\+Reconstruction\+::m\+WT\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 137 of file Wav\+Reconstruction.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/include/\hyperlink{_wav_reconstruction_8hpp}{Wav\+Reconstruction.\+hpp}\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/src/\hyperlink{_wav_reconstruction_8cpp}{Wav\+Reconstruction.\+cpp}\end{DoxyCompactItemize}

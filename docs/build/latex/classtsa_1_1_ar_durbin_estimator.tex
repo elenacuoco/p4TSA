@@ -1,0 +1,148 @@
+\hypertarget{classtsa_1_1_ar_durbin_estimator}{}\section{tsa\+:\+:Ar\+Durbin\+Estimator Class Reference}
+\label{classtsa_1_1_ar_durbin_estimator}\index{tsa\+::\+Ar\+Durbin\+Estimator@{tsa\+::\+Ar\+Durbin\+Estimator}}
+
+
+Estimate the AR coefficients and the P\+A\+R\+C\+OR of a time series using its correlation function.  
+
+
+
+
+{\ttfamily \#include $<$Ar\+Durbin\+Estimator.\+hpp$>$}
+
+Inheritance diagram for tsa\+:\+:Ar\+Durbin\+Estimator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classtsa_1_1_ar_durbin_estimator}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtsa_1_1_ar_durbin_estimator_a2c79884f3aca03b9f6701c826dcbc07b}{Ar\+Durbin\+Estimator} (unsigned int Ar\+Order)
+\item 
+virtual \hyperlink{classtsa_1_1_ar_durbin_estimator_a19ed9832b8899ebf095d339952ee0f47}{$\sim$\+Ar\+Durbin\+Estimator} ()
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Operations}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtsa_1_1_ar_durbin_estimator_acefc1efc5c95e7b7b2703eab6aa0bcd6}{execute} (\hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} \&Auto\+Corr, \hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} \&Ar\+Parcor)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Getters}\par
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{classtsa_1_1_ar_durbin_estimator_adce1261baa333e3a2c0c2c502544d135}{Get\+Ar\+Order} ()
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Setters}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtsa_1_1_ar_durbin_estimator_af5cfeefd7e9a7bbd564373ead8d2a308}{Set\+Ar\+Order} (unsigned int P)
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{classtsa_1_1_ar_durbin_estimator_a40783c942f77e9626e48eb1f8d7771ac}{m\+Ar\+Order}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Estimate the AR coefficients and the P\+A\+R\+C\+OR of a time series using its correlation function. 
+
+Definition at line 78 of file Ar\+Durbin\+Estimator.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtsa_1_1_ar_durbin_estimator_a2c79884f3aca03b9f6701c826dcbc07b}\label{classtsa_1_1_ar_durbin_estimator_a2c79884f3aca03b9f6701c826dcbc07b}} 
+\index{tsa\+::\+Ar\+Durbin\+Estimator@{tsa\+::\+Ar\+Durbin\+Estimator}!Ar\+Durbin\+Estimator@{Ar\+Durbin\+Estimator}}
+\index{Ar\+Durbin\+Estimator@{Ar\+Durbin\+Estimator}!tsa\+::\+Ar\+Durbin\+Estimator@{tsa\+::\+Ar\+Durbin\+Estimator}}
+\subsubsection{\texorpdfstring{Ar\+Durbin\+Estimator()}{ArDurbinEstimator()}}
+{\footnotesize\ttfamily tsa\+::\+Ar\+Durbin\+Estimator\+::\+Ar\+Durbin\+Estimator (\begin{DoxyParamCaption}\item[{unsigned int}]{Ar\+Order }\end{DoxyParamCaption})}
+
+Constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em Ar\+Order} & order of the the AR model \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 19 of file Ar\+Durbin\+Estimator.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_ar_durbin_estimator_a19ed9832b8899ebf095d339952ee0f47}\label{classtsa_1_1_ar_durbin_estimator_a19ed9832b8899ebf095d339952ee0f47}} 
+\index{tsa\+::\+Ar\+Durbin\+Estimator@{tsa\+::\+Ar\+Durbin\+Estimator}!````~Ar\+Durbin\+Estimator@{$\sim$\+Ar\+Durbin\+Estimator}}
+\index{````~Ar\+Durbin\+Estimator@{$\sim$\+Ar\+Durbin\+Estimator}!tsa\+::\+Ar\+Durbin\+Estimator@{tsa\+::\+Ar\+Durbin\+Estimator}}
+\subsubsection{\texorpdfstring{$\sim$\+Ar\+Durbin\+Estimator()}{~ArDurbinEstimator()}}
+{\footnotesize\ttfamily tsa\+::\+Ar\+Durbin\+Estimator\+::$\sim$\+Ar\+Durbin\+Estimator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor 
+
+Definition at line 24 of file Ar\+Durbin\+Estimator.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classtsa_1_1_ar_durbin_estimator_acefc1efc5c95e7b7b2703eab6aa0bcd6}\label{classtsa_1_1_ar_durbin_estimator_acefc1efc5c95e7b7b2703eab6aa0bcd6}} 
+\index{tsa\+::\+Ar\+Durbin\+Estimator@{tsa\+::\+Ar\+Durbin\+Estimator}!execute@{execute}}
+\index{execute@{execute}!tsa\+::\+Ar\+Durbin\+Estimator@{tsa\+::\+Ar\+Durbin\+Estimator}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void tsa\+::\+Ar\+Durbin\+Estimator\+::execute (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} \&}]{Auto\+Corr,  }\item[{\hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} \&}]{Ar\+Parcor }\end{DoxyParamCaption})}
+
+The excute method estimate the AR and P\+A\+R\+C\+OR parameters with the Durbin rithm. \begin{DoxyPrecond}{Precondition}
+The input of the algorithm must be the autocorrelation function in Toeplitz form
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em Auto\+Corr} & autocorrelation in Toeplitz form \\
+\hline
+{\em Ar\+Parcor} & vector containing the Reflection coefficients \\
+\hline
+\end{DoxyParams}
+$<$ auxiliary matrix to estimate the AR coeff. by the Parcor
+
+Estimation of the AR coefficient via durbin\textquotesingle{}s algorithm 
+
+Definition at line 27 of file Ar\+Durbin\+Estimator.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_ar_durbin_estimator_adce1261baa333e3a2c0c2c502544d135}\label{classtsa_1_1_ar_durbin_estimator_adce1261baa333e3a2c0c2c502544d135}} 
+\index{tsa\+::\+Ar\+Durbin\+Estimator@{tsa\+::\+Ar\+Durbin\+Estimator}!Get\+Ar\+Order@{Get\+Ar\+Order}}
+\index{Get\+Ar\+Order@{Get\+Ar\+Order}!tsa\+::\+Ar\+Durbin\+Estimator@{tsa\+::\+Ar\+Durbin\+Estimator}}
+\subsubsection{\texorpdfstring{Get\+Ar\+Order()}{GetArOrder()}}
+{\footnotesize\ttfamily unsigned int tsa\+::\+Ar\+Durbin\+Estimator\+::\+Get\+Ar\+Order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 117 of file Ar\+Durbin\+Estimator.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_ar_durbin_estimator_af5cfeefd7e9a7bbd564373ead8d2a308}\label{classtsa_1_1_ar_durbin_estimator_af5cfeefd7e9a7bbd564373ead8d2a308}} 
+\index{tsa\+::\+Ar\+Durbin\+Estimator@{tsa\+::\+Ar\+Durbin\+Estimator}!Set\+Ar\+Order@{Set\+Ar\+Order}}
+\index{Set\+Ar\+Order@{Set\+Ar\+Order}!tsa\+::\+Ar\+Durbin\+Estimator@{tsa\+::\+Ar\+Durbin\+Estimator}}
+\subsubsection{\texorpdfstring{Set\+Ar\+Order()}{SetArOrder()}}
+{\footnotesize\ttfamily void tsa\+::\+Ar\+Durbin\+Estimator\+::\+Set\+Ar\+Order (\begin{DoxyParamCaption}\item[{unsigned int}]{P }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 128 of file Ar\+Durbin\+Estimator.\+hpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classtsa_1_1_ar_durbin_estimator_a40783c942f77e9626e48eb1f8d7771ac}\label{classtsa_1_1_ar_durbin_estimator_a40783c942f77e9626e48eb1f8d7771ac}} 
+\index{tsa\+::\+Ar\+Durbin\+Estimator@{tsa\+::\+Ar\+Durbin\+Estimator}!m\+Ar\+Order@{m\+Ar\+Order}}
+\index{m\+Ar\+Order@{m\+Ar\+Order}!tsa\+::\+Ar\+Durbin\+Estimator@{tsa\+::\+Ar\+Durbin\+Estimator}}
+\subsubsection{\texorpdfstring{m\+Ar\+Order}{mArOrder}}
+{\footnotesize\ttfamily unsigned int tsa\+::\+Ar\+Durbin\+Estimator\+::m\+Ar\+Order\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 138 of file Ar\+Durbin\+Estimator.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/include/\hyperlink{_ar_durbin_estimator_8hpp}{Ar\+Durbin\+Estimator.\+hpp}\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/src/\hyperlink{_ar_durbin_estimator_8cpp}{Ar\+Durbin\+Estimator.\+cpp}\end{DoxyCompactItemize}

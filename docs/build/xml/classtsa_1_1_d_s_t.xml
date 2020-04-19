@@ -1,0 +1,321 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classtsa_1_1_d_s_t" kind="class" language="C++" prot="public">
+    <compoundname>tsa::DST</compoundname>
+    <basecompoundref refid="classtsa_1_1_base_f_f_t" prot="public" virt="non-virtual">tsa::BaseFFT</basecompoundref>
+    <includes refid="_d_s_t_8hpp" local="no">DST.hpp</includes>
+      <sectiondef kind="user-defined">
+      <header>Operations</header>
+      <memberdef kind="function" id="classtsa_1_1_d_s_t_1a98927f7365561b6af059465598eb3445" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::DST::operator()</definition>
+        <argsstring>(SeqViewDouble &amp;in, SeqViewDouble &amp;out)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref> &amp;</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref> &amp;</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Apply the transformation on the data</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a reference to the buffer containing the input data </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a reference to the buffer containing the input data</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a reference to this instance of the class </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/DST.hpp" line="110" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/DST.cpp" bodystart="21" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_d_s_t_1a9bb56b2c2e4b7bff93d06a065903c347" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::DST::execute</definition>
+        <argsstring>(Dmatrix &amp;in, Dmatrix &amp;out)</argsstring>
+        <name>execute</name>
+        <param>
+          <type><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref> &amp;</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref> &amp;</type>
+          <declname>out</declname>
+        </param>
+        <exceptions> throw (<ref refid="classtsa_1_1bad__matrix__size" kindref="compound">bad_matrix_size</ref>)</exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Execution of the fft of a multichannel buffer of double. Input data are organized in a matrix. Each row is a different channel, and the number of data to transform is equal to the number of columns. Both the number of rows and the number of columns can change between each call to this method. If the number of rows changes nothing special will happen, if the number of cols changes the plan is reevaluated with the current flags.</para><para><simplesect kind="pre"><para>The number of rows of input and output matrix must be the same. </para></simplesect>
+<simplesect kind="pre"><para>The columns of the output matrix must be int(n/2)+1, where n is the number of columns of the input matrix.</para></simplesect>
+<simplesect kind="post"><para>the input buffer is unchanged, unless SetPreserveInput(false) was called </para></simplesect>
+<simplesect kind="post"><para>the output buffer contain the fft of the input data</para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classtsa_1_1bad__matrix__size" kindref="compound">bad_matrix_size</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the size of the output matrix is wrong </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>reference to the input multichannel buffer </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>reference to the output multichannel buffer </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/DST.hpp" line="132" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/DST.cpp" bodystart="42" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_d_s_t_1a90170687661872523f06360cae3965ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::DST::execute</definition>
+        <argsstring>(Dvector &amp;in, Dvector &amp;out)</argsstring>
+        <name>execute</name>
+        <param>
+          <type><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref> &amp;</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref> &amp;</type>
+          <declname>out</declname>
+        </param>
+        <exceptions> throw (<ref refid="classtsa_1_1bad__vector__size" kindref="compound">bad_vector_size</ref>)</exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Execution of the fft of a single channel buffer of double. If the number of the buffer changes the plan is reevaluated with the current flags.</para><para><simplesect kind="pre"><para>The sized of the output vector must be int(n/2)+1, where n is the size of the input vector.</para></simplesect>
+<simplesect kind="post"><para>the input buffer is unchanged, unless SetPreserveInput(false) was called </para></simplesect>
+<simplesect kind="post"><para>the output buffer contain the fft of the input data</para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classtsa_1_1bad__matrix__size" kindref="compound">bad_matrix_size</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the size of the output matrix is wrong </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>reference to the input buffer </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>reference to the output buffer </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/DST.hpp" line="148" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/DST.cpp" bodystart="71" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_d_s_t_1a066a93f3ddbf56f8e5c67067156ebb9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void tsa::DST::MakePlan</definition>
+        <argsstring>()</argsstring>
+        <name>MakePlan</name>
+        <reimplements refid="classtsa_1_1_base_f_f_t_1a9af0c36413173821cac8dbdce9cfe3b4">MakePlan</reimplements>
+        <exceptions> throw (std::runtime_error)</exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Make a new plan, with the current parameters.</para><para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>std::runtime_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new plan cannot be created </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/DST.hpp" line="156" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/DST.cpp" bodystart="95" bodyend="111"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtsa_1_1_d_s_t_1a903a949ad84aaa3f5ef11e9f08a1abf9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tsa::DST::DST</definition>
+        <argsstring>(int size=0, enum FFTPlanningMode mode=ESTIMATE, bool PreserveInput=true)</argsstring>
+        <name>DST</name>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>enum <ref refid="namespacetsa_1a217e07ef78939f88b22c8428ac96b1ae" kindref="member">FFTPlanningMode</ref></type>
+          <declname>mode</declname>
+          <defval><ref refid="namespacetsa_1a217e07ef78939f88b22c8428ac96b1aea2762be66fb6f3e4772c7f4cc162b9750" kindref="member">ESTIMATE</ref></defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>PreserveInput</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the size of the transform </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>specify the way in which plans are calculated </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PreserveInput</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if the input buffer must be preserved during the transform, false otherwise </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/DST.hpp" line="82" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/DST.cpp" bodystart="5" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_d_s_t_1ac7d9747deee363dbd0d20edc19d0028a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tsa::DST::DST</definition>
+        <argsstring>(const DST &amp;from)</argsstring>
+        <name>DST</name>
+        <param>
+          <type>const <ref refid="classtsa_1_1_d_s_t" kindref="compound">DST</ref> &amp;</type>
+          <declname>from</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Copy constructor</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>from</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The instance that must be copied </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/DST.hpp" line="89" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/DST.cpp" bodystart="11" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_d_s_t_1a670a8bae9d3361b5a0e0be7160fee75c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>tsa::DST::~DST</definition>
+        <argsstring>()</argsstring>
+        <name>~DST</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/DST.hpp" line="94" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/DST.cpp" bodystart="17" bodyend="19"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Multichannel Discrete Sine Transform. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="219">
+        <label>tsa::DST</label>
+        <link refid="classtsa_1_1_d_s_t"/>
+        <childnode refid="220" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="220">
+        <label>tsa::BaseFFT</label>
+        <link refid="classtsa_1_1_base_f_f_t"/>
+        <childnode refid="221" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="221">
+        <label>tsa::AlgoBase</label>
+        <link refid="classtsa_1_1_algo_base"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="222">
+        <label>tsa::DST</label>
+        <link refid="classtsa_1_1_d_s_t"/>
+        <childnode refid="223" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="223">
+        <label>tsa::BaseFFT</label>
+        <link refid="classtsa_1_1_base_f_f_t"/>
+        <childnode refid="224" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="224">
+        <label>tsa::AlgoBase</label>
+        <link refid="classtsa_1_1_algo_base"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/DST.hpp" line="73" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/DST.hpp" bodystart="73" bodyend="184"/>
+    <listofallmembers>
+      <member refid="classtsa_1_1_base_f_f_t_1a724f59f3f5bded31174373eac81e67ee" prot="public" virt="non-virtual"><scope>tsa::DST</scope><name>BaseFFT</name></member>
+      <member refid="classtsa_1_1_base_f_f_t_1a84fa441e825a8e375f9721263d358ac8" prot="public" virt="non-virtual"><scope>tsa::DST</scope><name>BaseFFT</name></member>
+      <member refid="classtsa_1_1_d_s_t_1a903a949ad84aaa3f5ef11e9f08a1abf9" prot="public" virt="non-virtual"><scope>tsa::DST</scope><name>DST</name></member>
+      <member refid="classtsa_1_1_d_s_t_1ac7d9747deee363dbd0d20edc19d0028a" prot="public" virt="non-virtual"><scope>tsa::DST</scope><name>DST</name></member>
+      <member refid="classtsa_1_1_d_s_t_1a9bb56b2c2e4b7bff93d06a065903c347" prot="public" virt="non-virtual"><scope>tsa::DST</scope><name>execute</name></member>
+      <member refid="classtsa_1_1_d_s_t_1a90170687661872523f06360cae3965ff" prot="public" virt="non-virtual"><scope>tsa::DST</scope><name>execute</name></member>
+      <member refid="classtsa_1_1_base_f_f_t_1a7069819e421ad4cb2a4c58f65c8540ea" prot="public" virt="non-virtual"><scope>tsa::DST</scope><name>ForgetWisdom</name></member>
+      <member refid="classtsa_1_1_base_f_f_t_1a53ccc1ae425bb9f91adbd5562ecb9131" prot="public" virt="non-virtual"><scope>tsa::DST</scope><name>LoadWisdomFromFile</name></member>
+      <member refid="classtsa_1_1_d_s_t_1a066a93f3ddbf56f8e5c67067156ebb9a" prot="public" virt="virtual"><scope>tsa::DST</scope><name>MakePlan</name></member>
+      <member refid="classtsa_1_1_base_f_f_t_1a171c71011fea314f23633b1816771d98" prot="protected" virt="non-virtual"><scope>tsa::DST</scope><name>mLogicalSize</name></member>
+      <member refid="classtsa_1_1_base_f_f_t_1a5c7dd6dee349547018d493be6d5874eb" prot="protected" virt="non-virtual"><scope>tsa::DST</scope><name>mPlan</name></member>
+      <member refid="classtsa_1_1_base_f_f_t_1aa89fef1777c6df148cdb8533265b6163" prot="protected" virt="non-virtual"><scope>tsa::DST</scope><name>mPlanNeedsUpdate</name></member>
+      <member refid="classtsa_1_1_base_f_f_t_1a2fe7f53db024bb408beeb5e22eaefbb9" prot="protected" virt="non-virtual"><scope>tsa::DST</scope><name>mPlanningRestriction</name></member>
+      <member refid="classtsa_1_1_base_f_f_t_1abbd656cda5a7cb6a88fc5d556d3269f7" prot="protected" virt="non-virtual"><scope>tsa::DST</scope><name>mPlanningRigor</name></member>
+      <member refid="classtsa_1_1_d_s_t_1a98927f7365561b6af059465598eb3445" prot="public" virt="non-virtual"><scope>tsa::DST</scope><name>operator()</name></member>
+      <member refid="classtsa_1_1_base_f_f_t_1a1f5332f508749018f0c6a58c9b1ed9dc" prot="public" virt="non-virtual"><scope>tsa::DST</scope><name>SaveWisdomOnFile</name></member>
+      <member refid="classtsa_1_1_base_f_f_t_1a4a8b00feb20dc3ace768d3c851143a03" prot="public" virt="non-virtual"><scope>tsa::DST</scope><name>SetPlanningMode</name></member>
+      <member refid="classtsa_1_1_base_f_f_t_1a5b1e2f36dbdfe197aa6c74d1cf963f40" prot="public" virt="non-virtual"><scope>tsa::DST</scope><name>SetPreserveInput</name></member>
+      <member refid="classtsa_1_1_base_f_f_t_1ad73b78693c83ef6c7e07701965ae8cb6" prot="public" virt="virtual"><scope>tsa::DST</scope><name>~BaseFFT</name></member>
+      <member refid="classtsa_1_1_d_s_t_1a670a8bae9d3361b5a0e0be7160fee75c" prot="public" virt="virtual"><scope>tsa::DST</scope><name>~DST</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,76 @@
+\hypertarget{structeternity_1_1objects}{}\section{eternity\+:\+:objects Struct Reference}
+\label{structeternity_1_1objects}\index{eternity\+::objects@{eternity\+::objects}}
+
+
+{\ttfamily \#include $<$algorithms.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T , class Archive $>$ }\\void \hyperlink{structeternity_1_1objects_a1c4f6adbfec429e299ed9b87d3e882dc}{xml\+\_\+write} (Archive \&\hyperlink{classeternity_1_1archive}{archive}, std\+::string key, T \&x)
+\item 
+{\footnotesize template$<$class Value\+Type , class Archive $>$ }\\void \hyperlink{structeternity_1_1objects_a784de99cba7a1d4a1a048fa6a4ac5a4f}{xml\+\_\+read} (Archive \&\hyperlink{classeternity_1_1archive}{archive}, std\+::string key, Value\+Type $\ast$var, size\+\_\+t pos)
+\item 
+{\footnotesize template$<$class T , class Archive $>$ }\\void \hyperlink{structeternity_1_1objects_a4a22aa281cdd22163b1a4f52065185e6}{write} (Archive \&\hyperlink{classeternity_1_1archive}{archive}, T \&x)
+\item 
+{\footnotesize template$<$class Value\+Type , class Archive $>$ }\\void \hyperlink{structeternity_1_1objects_a7454fa173d59bfe23b5ac6fa78cbdfc9}{read} (Archive \&\hyperlink{classeternity_1_1archive}{archive}, Value\+Type $\ast$var)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Manage persistence of object containers (e.\+g. collections of stack allocated objects) This struct is not intended to direct use but must be passed as template parameter of sequence struct. 
+
+Definition at line 80 of file algorithms.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structeternity_1_1objects_a7454fa173d59bfe23b5ac6fa78cbdfc9}\label{structeternity_1_1objects_a7454fa173d59bfe23b5ac6fa78cbdfc9}} 
+\index{eternity\+::objects@{eternity\+::objects}!read@{read}}
+\index{read@{read}!eternity\+::objects@{eternity\+::objects}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily template$<$class Value\+Type , class Archive $>$ \\
+void eternity\+::objects\+::read (\begin{DoxyParamCaption}\item[{Archive \&}]{archive,  }\item[{Value\+Type $\ast$}]{var }\end{DoxyParamCaption})}
+
+
+
+Definition at line 110 of file algorithms.\+hpp.
+
+\mbox{\Hypertarget{structeternity_1_1objects_a4a22aa281cdd22163b1a4f52065185e6}\label{structeternity_1_1objects_a4a22aa281cdd22163b1a4f52065185e6}} 
+\index{eternity\+::objects@{eternity\+::objects}!write@{write}}
+\index{write@{write}!eternity\+::objects@{eternity\+::objects}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily template$<$class T , class Archive $>$ \\
+void eternity\+::objects\+::write (\begin{DoxyParamCaption}\item[{Archive \&}]{archive,  }\item[{T \&}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line 105 of file algorithms.\+hpp.
+
+\mbox{\Hypertarget{structeternity_1_1objects_a784de99cba7a1d4a1a048fa6a4ac5a4f}\label{structeternity_1_1objects_a784de99cba7a1d4a1a048fa6a4ac5a4f}} 
+\index{eternity\+::objects@{eternity\+::objects}!xml\+\_\+read@{xml\+\_\+read}}
+\index{xml\+\_\+read@{xml\+\_\+read}!eternity\+::objects@{eternity\+::objects}}
+\subsubsection{\texorpdfstring{xml\+\_\+read()}{xml\_read()}}
+{\footnotesize\ttfamily template$<$class Value\+Type , class Archive $>$ \\
+void eternity\+::objects\+::xml\+\_\+read (\begin{DoxyParamCaption}\item[{Archive \&}]{archive,  }\item[{std\+::string}]{key,  }\item[{Value\+Type $\ast$}]{var,  }\item[{size\+\_\+t}]{pos }\end{DoxyParamCaption})}
+
+
+
+Definition at line 100 of file algorithms.\+hpp.
+
+\mbox{\Hypertarget{structeternity_1_1objects_a1c4f6adbfec429e299ed9b87d3e882dc}\label{structeternity_1_1objects_a1c4f6adbfec429e299ed9b87d3e882dc}} 
+\index{eternity\+::objects@{eternity\+::objects}!xml\+\_\+write@{xml\+\_\+write}}
+\index{xml\+\_\+write@{xml\+\_\+write}!eternity\+::objects@{eternity\+::objects}}
+\subsubsection{\texorpdfstring{xml\+\_\+write()}{xml\_write()}}
+{\footnotesize\ttfamily template$<$class T , class Archive $>$ \\
+void eternity\+::objects\+::xml\+\_\+write (\begin{DoxyParamCaption}\item[{Archive \&}]{archive,  }\item[{std\+::string}]{key,  }\item[{T \&}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line 95 of file algorithms.\+hpp.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/include/eternity/\hyperlink{algorithms_8hpp}{algorithms.\+hpp}\end{DoxyCompactItemize}

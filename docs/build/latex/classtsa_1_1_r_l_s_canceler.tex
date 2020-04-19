@@ -1,0 +1,366 @@
+\hypertarget{classtsa_1_1_r_l_s_canceler}{}\section{tsa\+:\+:R\+L\+S\+Canceler Class Reference}
+\label{classtsa_1_1_r_l_s_canceler}\index{tsa\+::\+R\+L\+S\+Canceler@{tsa\+::\+R\+L\+S\+Canceler}}
+
+
+{\ttfamily \#include $<$R\+L\+S\+Canceler.\+hpp$>$}
+
+Inheritance diagram for tsa\+:\+:R\+L\+S\+Canceler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classtsa_1_1_r_l_s_canceler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtsa_1_1_r_l_s_canceler_aab2d9be86611bc4b0f2912e7f673e478}{R\+L\+S\+Canceler} (unsigned int Order, double delta, double lambda, unsigned int Channels)
+\item 
+\hyperlink{classtsa_1_1_r_l_s_canceler_a80a39cdda14b8d902e720932b5fcf052}{R\+L\+S\+Canceler} (const \hyperlink{classtsa_1_1_r_l_s_canceler}{R\+L\+S\+Canceler} \&from)
+\item 
+virtual \hyperlink{classtsa_1_1_r_l_s_canceler_a3aadd00151305795177bf2b2e394f140}{$\sim$\+R\+L\+S\+Canceler} ()
+\item 
+\hyperlink{classtsa_1_1_r_l_s_canceler}{R\+L\+S\+Canceler} \& \hyperlink{classtsa_1_1_r_l_s_canceler_ad37c41807b26bb323a1fc044b17a5ca9}{operator=} (const \hyperlink{classtsa_1_1_r_l_s_canceler}{R\+L\+S\+Canceler} \&from)
+\item 
+void \hyperlink{classtsa_1_1_r_l_s_canceler_aa83e2ee91b1e68b54099455dc6e5f3c6}{operator()} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&Input\+Data, \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&Cleaned\+Data)
+\item 
+void \hyperlink{classtsa_1_1_r_l_s_canceler_a8801aca2920a4cdaca83c41fdc5d7754}{operator()} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&Input\+Data, \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&Cleaned\+Data, \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&Reference\+Signal)
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Operations}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtsa_1_1_r_l_s_canceler_ab6cb776cf208561a60840498626965dd}{execute} (\hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&Input, \hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&Output, \hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&Reference\+Signa)
+\item 
+void \hyperlink{classtsa_1_1_r_l_s_canceler_a823ebcfe58dffca733a2d36400623cd5}{execute} (\hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&Input, \hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&Output)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Getters}\par
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classtsa_1_1_r_l_s_canceler_a4387e7c608cb5f32932286caac5f3b43}{Getlstart} ()
+\item 
+double \hyperlink{classtsa_1_1_r_l_s_canceler_abcff7cc0ecfe6fda9be3f0c4a698ecb4}{Get\+Weights} (unsigned int j, unsigned int channel)
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{classtsa_1_1_r_l_s_canceler_ac96db09b7154fb657b33325c7dcb0ba9}{mP}
+\item 
+double \hyperlink{classtsa_1_1_r_l_s_canceler_a689a06e01e97d29f98be6f37c2ac229d}{mdelta}
+\item 
+double \hyperlink{classtsa_1_1_r_l_s_canceler_a3c2ce539583693961306866f2d0d0b40}{mlambda}
+\item 
+\hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \hyperlink{classtsa_1_1_r_l_s_canceler_a9abd498386c6750bfa22910242ace12e}{m\+Weights}
+\item 
+\hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \hyperlink{classtsa_1_1_r_l_s_canceler_a5f45c202fd98fb28fc600747bda6d8e3}{mC}
+\item 
+\hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} \hyperlink{classtsa_1_1_r_l_s_canceler_ac555ed3641b607e0818eb0d55d09e024}{mX}
+\item 
+\hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} \hyperlink{classtsa_1_1_r_l_s_canceler_ab23f9b24f1909251587df0ec11218a4e}{mM}
+\item 
+\hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} \hyperlink{classtsa_1_1_r_l_s_canceler_aca9845a6e34fb8ce588d9b8e7e44b489}{mG}
+\item 
+double \hyperlink{classtsa_1_1_r_l_s_canceler_a68cb1250ac509a8f038e6541b5b14c99}{mlstart}
+\item 
+double \hyperlink{classtsa_1_1_r_l_s_canceler_a290c458da793dc228fb0a2c2fc0cfd8a}{msigma}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 71 of file R\+L\+S\+Canceler.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtsa_1_1_r_l_s_canceler_aab2d9be86611bc4b0f2912e7f673e478}\label{classtsa_1_1_r_l_s_canceler_aab2d9be86611bc4b0f2912e7f673e478}} 
+\index{tsa\+::\+R\+L\+S\+Canceler@{tsa\+::\+R\+L\+S\+Canceler}!R\+L\+S\+Canceler@{R\+L\+S\+Canceler}}
+\index{R\+L\+S\+Canceler@{R\+L\+S\+Canceler}!tsa\+::\+R\+L\+S\+Canceler@{tsa\+::\+R\+L\+S\+Canceler}}
+\subsubsection{\texorpdfstring{R\+L\+S\+Canceler()}{RLSCanceler()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily tsa\+::\+R\+L\+S\+Canceler\+::\+R\+L\+S\+Canceler (\begin{DoxyParamCaption}\item[{unsigned int}]{Order,  }\item[{double}]{delta,  }\item[{double}]{lambda,  }\item[{unsigned int}]{Channels }\end{DoxyParamCaption})}
+
+Constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em Order} & order of the filter \\
+\hline
+{\em delta} & guessed inverse rms \\
+\hline
+{\em lambda} & forgetting factor \\
+\hline
+{\em Channels} & number of channels of the incoming data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 19 of file R\+L\+S\+Canceler.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_r_l_s_canceler_a80a39cdda14b8d902e720932b5fcf052}\label{classtsa_1_1_r_l_s_canceler_a80a39cdda14b8d902e720932b5fcf052}} 
+\index{tsa\+::\+R\+L\+S\+Canceler@{tsa\+::\+R\+L\+S\+Canceler}!R\+L\+S\+Canceler@{R\+L\+S\+Canceler}}
+\index{R\+L\+S\+Canceler@{R\+L\+S\+Canceler}!tsa\+::\+R\+L\+S\+Canceler@{tsa\+::\+R\+L\+S\+Canceler}}
+\subsubsection{\texorpdfstring{R\+L\+S\+Canceler()}{RLSCanceler()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily tsa\+::\+R\+L\+S\+Canceler\+::\+R\+L\+S\+Canceler (\begin{DoxyParamCaption}\item[{const \hyperlink{classtsa_1_1_r_l_s_canceler}{R\+L\+S\+Canceler} \&}]{from }\end{DoxyParamCaption})}
+
+Copy constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & The instance that must be copied \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 56 of file R\+L\+S\+Canceler.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_r_l_s_canceler_a3aadd00151305795177bf2b2e394f140}\label{classtsa_1_1_r_l_s_canceler_a3aadd00151305795177bf2b2e394f140}} 
+\index{tsa\+::\+R\+L\+S\+Canceler@{tsa\+::\+R\+L\+S\+Canceler}!````~R\+L\+S\+Canceler@{$\sim$\+R\+L\+S\+Canceler}}
+\index{````~R\+L\+S\+Canceler@{$\sim$\+R\+L\+S\+Canceler}!tsa\+::\+R\+L\+S\+Canceler@{tsa\+::\+R\+L\+S\+Canceler}}
+\subsubsection{\texorpdfstring{$\sim$\+R\+L\+S\+Canceler()}{~RLSCanceler()}}
+{\footnotesize\ttfamily tsa\+::\+R\+L\+S\+Canceler\+::$\sim$\+R\+L\+S\+Canceler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destructor 
+
+Definition at line 48 of file R\+L\+S\+Canceler.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classtsa_1_1_r_l_s_canceler_ab6cb776cf208561a60840498626965dd}\label{classtsa_1_1_r_l_s_canceler_ab6cb776cf208561a60840498626965dd}} 
+\index{tsa\+::\+R\+L\+S\+Canceler@{tsa\+::\+R\+L\+S\+Canceler}!execute@{execute}}
+\index{execute@{execute}!tsa\+::\+R\+L\+S\+Canceler@{tsa\+::\+R\+L\+S\+Canceler}}
+\subsubsection{\texorpdfstring{execute()}{execute()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void tsa\+::\+R\+L\+S\+Canceler\+::execute (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&}]{Input,  }\item[{\hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&}]{Output,  }\item[{\hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&}]{Reference\+Signa }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em Input} & input data \\
+\hline
+{\em Reference\+Signal} & noise reference signal \\
+\hline
+{\em Output} & cleaned data \\
+\hline
+\end{DoxyParams}
+temporary data 
+
+Definition at line 97 of file R\+L\+S\+Canceler.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_r_l_s_canceler_a823ebcfe58dffca733a2d36400623cd5}\label{classtsa_1_1_r_l_s_canceler_a823ebcfe58dffca733a2d36400623cd5}} 
+\index{tsa\+::\+R\+L\+S\+Canceler@{tsa\+::\+R\+L\+S\+Canceler}!execute@{execute}}
+\index{execute@{execute}!tsa\+::\+R\+L\+S\+Canceler@{tsa\+::\+R\+L\+S\+Canceler}}
+\subsubsection{\texorpdfstring{execute()}{execute()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void tsa\+::\+R\+L\+S\+Canceler\+::execute (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&}]{Input,  }\item[{\hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&}]{Output }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em Input} & input data \\
+\hline
+{\em Output} & whitened data \\
+\hline
+\end{DoxyParams}
+temporary data 
+
+Definition at line 148 of file R\+L\+S\+Canceler.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_r_l_s_canceler_a4387e7c608cb5f32932286caac5f3b43}\label{classtsa_1_1_r_l_s_canceler_a4387e7c608cb5f32932286caac5f3b43}} 
+\index{tsa\+::\+R\+L\+S\+Canceler@{tsa\+::\+R\+L\+S\+Canceler}!Getlstart@{Getlstart}}
+\index{Getlstart@{Getlstart}!tsa\+::\+R\+L\+S\+Canceler@{tsa\+::\+R\+L\+S\+Canceler}}
+\subsubsection{\texorpdfstring{Getlstart()}{Getlstart()}}
+{\footnotesize\ttfamily double tsa\+::\+R\+L\+S\+Canceler\+::\+Getlstart (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the last step 
+\end{DoxyReturn}
+
+
+Definition at line 152 of file R\+L\+S\+Canceler.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_r_l_s_canceler_abcff7cc0ecfe6fda9be3f0c4a698ecb4}\label{classtsa_1_1_r_l_s_canceler_abcff7cc0ecfe6fda9be3f0c4a698ecb4}} 
+\index{tsa\+::\+R\+L\+S\+Canceler@{tsa\+::\+R\+L\+S\+Canceler}!Get\+Weights@{Get\+Weights}}
+\index{Get\+Weights@{Get\+Weights}!tsa\+::\+R\+L\+S\+Canceler@{tsa\+::\+R\+L\+S\+Canceler}}
+\subsubsection{\texorpdfstring{Get\+Weights()}{GetWeights()}}
+{\footnotesize\ttfamily double tsa\+::\+R\+L\+S\+Canceler\+::\+Get\+Weights (\begin{DoxyParamCaption}\item[{unsigned int}]{j,  }\item[{unsigned int}]{channel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em j} & index of the weights \\
+\hline
+{\em channel} & channel to which the weights belong \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+yhe weights of the R\+LS filter 
+\end{DoxyReturn}
+
+
+Definition at line 162 of file R\+L\+S\+Canceler.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_r_l_s_canceler_aa83e2ee91b1e68b54099455dc6e5f3c6}\label{classtsa_1_1_r_l_s_canceler_aa83e2ee91b1e68b54099455dc6e5f3c6}} 
+\index{tsa\+::\+R\+L\+S\+Canceler@{tsa\+::\+R\+L\+S\+Canceler}!operator()@{operator()}}
+\index{operator()@{operator()}!tsa\+::\+R\+L\+S\+Canceler@{tsa\+::\+R\+L\+S\+Canceler}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void tsa\+::\+R\+L\+S\+Canceler\+::operator() (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{Input\+Data,  }\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{Cleaned\+Data }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em Input\+Data} & \\
+\hline
+{\em Cleaned\+Data} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 59 of file R\+L\+S\+Canceler.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_r_l_s_canceler_a8801aca2920a4cdaca83c41fdc5d7754}\label{classtsa_1_1_r_l_s_canceler_a8801aca2920a4cdaca83c41fdc5d7754}} 
+\index{tsa\+::\+R\+L\+S\+Canceler@{tsa\+::\+R\+L\+S\+Canceler}!operator()@{operator()}}
+\index{operator()@{operator()}!tsa\+::\+R\+L\+S\+Canceler@{tsa\+::\+R\+L\+S\+Canceler}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void tsa\+::\+R\+L\+S\+Canceler\+::operator() (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{Input\+Data,  }\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{Cleaned\+Data,  }\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{Reference\+Signal }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em Input\+Data} & \\
+\hline
+{\em Cleaned\+Data} & \\
+\hline
+{\em Reference\+Signal} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 74 of file R\+L\+S\+Canceler.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_r_l_s_canceler_ad37c41807b26bb323a1fc044b17a5ca9}\label{classtsa_1_1_r_l_s_canceler_ad37c41807b26bb323a1fc044b17a5ca9}} 
+\index{tsa\+::\+R\+L\+S\+Canceler@{tsa\+::\+R\+L\+S\+Canceler}!operator=@{operator=}}
+\index{operator=@{operator=}!tsa\+::\+R\+L\+S\+Canceler@{tsa\+::\+R\+L\+S\+Canceler}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{classtsa_1_1_r_l_s_canceler}{R\+L\+S\+Canceler} \& tsa\+::\+R\+L\+S\+Canceler\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{classtsa_1_1_r_l_s_canceler}{R\+L\+S\+Canceler} \&}]{from }\end{DoxyParamCaption})}
+
+Assignement operator
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & The instance to be assigned from\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a reference to a new object 
+\end{DoxyReturn}
+
+
+Definition at line 206 of file R\+L\+S\+Canceler.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classtsa_1_1_r_l_s_canceler_a5f45c202fd98fb28fc600747bda6d8e3}\label{classtsa_1_1_r_l_s_canceler_a5f45c202fd98fb28fc600747bda6d8e3}} 
+\index{tsa\+::\+R\+L\+S\+Canceler@{tsa\+::\+R\+L\+S\+Canceler}!mC@{mC}}
+\index{mC@{mC}!tsa\+::\+R\+L\+S\+Canceler@{tsa\+::\+R\+L\+S\+Canceler}}
+\subsubsection{\texorpdfstring{mC}{mC}}
+{\footnotesize\ttfamily \hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} tsa\+::\+R\+L\+S\+Canceler\+::mC\hspace{0.3cm}{\ttfamily [private]}}
+
+Gain matrix 
+
+Definition at line 183 of file R\+L\+S\+Canceler.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_r_l_s_canceler_a689a06e01e97d29f98be6f37c2ac229d}\label{classtsa_1_1_r_l_s_canceler_a689a06e01e97d29f98be6f37c2ac229d}} 
+\index{tsa\+::\+R\+L\+S\+Canceler@{tsa\+::\+R\+L\+S\+Canceler}!mdelta@{mdelta}}
+\index{mdelta@{mdelta}!tsa\+::\+R\+L\+S\+Canceler@{tsa\+::\+R\+L\+S\+Canceler}}
+\subsubsection{\texorpdfstring{mdelta}{mdelta}}
+{\footnotesize\ttfamily double tsa\+::\+R\+L\+S\+Canceler\+::mdelta\hspace{0.3cm}{\ttfamily [private]}}
+
+guessed average 1.\+0/sigma$\ast$sigma 
+
+Definition at line 180 of file R\+L\+S\+Canceler.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_r_l_s_canceler_aca9845a6e34fb8ce588d9b8e7e44b489}\label{classtsa_1_1_r_l_s_canceler_aca9845a6e34fb8ce588d9b8e7e44b489}} 
+\index{tsa\+::\+R\+L\+S\+Canceler@{tsa\+::\+R\+L\+S\+Canceler}!mG@{mG}}
+\index{mG@{mG}!tsa\+::\+R\+L\+S\+Canceler@{tsa\+::\+R\+L\+S\+Canceler}}
+\subsubsection{\texorpdfstring{mG}{mG}}
+{\footnotesize\ttfamily \hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} tsa\+::\+R\+L\+S\+Canceler\+::mG\hspace{0.3cm}{\ttfamily [private]}}
+
+gain vector 
+
+Definition at line 186 of file R\+L\+S\+Canceler.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_r_l_s_canceler_a3c2ce539583693961306866f2d0d0b40}\label{classtsa_1_1_r_l_s_canceler_a3c2ce539583693961306866f2d0d0b40}} 
+\index{tsa\+::\+R\+L\+S\+Canceler@{tsa\+::\+R\+L\+S\+Canceler}!mlambda@{mlambda}}
+\index{mlambda@{mlambda}!tsa\+::\+R\+L\+S\+Canceler@{tsa\+::\+R\+L\+S\+Canceler}}
+\subsubsection{\texorpdfstring{mlambda}{mlambda}}
+{\footnotesize\ttfamily double tsa\+::\+R\+L\+S\+Canceler\+::mlambda\hspace{0.3cm}{\ttfamily [private]}}
+
+forgetting factor 
+
+Definition at line 181 of file R\+L\+S\+Canceler.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_r_l_s_canceler_a68cb1250ac509a8f038e6541b5b14c99}\label{classtsa_1_1_r_l_s_canceler_a68cb1250ac509a8f038e6541b5b14c99}} 
+\index{tsa\+::\+R\+L\+S\+Canceler@{tsa\+::\+R\+L\+S\+Canceler}!mlstart@{mlstart}}
+\index{mlstart@{mlstart}!tsa\+::\+R\+L\+S\+Canceler@{tsa\+::\+R\+L\+S\+Canceler}}
+\subsubsection{\texorpdfstring{mlstart}{mlstart}}
+{\footnotesize\ttfamily double tsa\+::\+R\+L\+S\+Canceler\+::mlstart\hspace{0.3cm}{\ttfamily [private]}}
+
+starting point for buffered inputs 
+
+Definition at line 187 of file R\+L\+S\+Canceler.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_r_l_s_canceler_ab23f9b24f1909251587df0ec11218a4e}\label{classtsa_1_1_r_l_s_canceler_ab23f9b24f1909251587df0ec11218a4e}} 
+\index{tsa\+::\+R\+L\+S\+Canceler@{tsa\+::\+R\+L\+S\+Canceler}!mM@{mM}}
+\index{mM@{mM}!tsa\+::\+R\+L\+S\+Canceler@{tsa\+::\+R\+L\+S\+Canceler}}
+\subsubsection{\texorpdfstring{mM}{mM}}
+{\footnotesize\ttfamily \hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} tsa\+::\+R\+L\+S\+Canceler\+::mM\hspace{0.3cm}{\ttfamily [private]}}
+
+learning parameter 
+
+Definition at line 185 of file R\+L\+S\+Canceler.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_r_l_s_canceler_ac96db09b7154fb657b33325c7dcb0ba9}\label{classtsa_1_1_r_l_s_canceler_ac96db09b7154fb657b33325c7dcb0ba9}} 
+\index{tsa\+::\+R\+L\+S\+Canceler@{tsa\+::\+R\+L\+S\+Canceler}!mP@{mP}}
+\index{mP@{mP}!tsa\+::\+R\+L\+S\+Canceler@{tsa\+::\+R\+L\+S\+Canceler}}
+\subsubsection{\texorpdfstring{mP}{mP}}
+{\footnotesize\ttfamily unsigned int tsa\+::\+R\+L\+S\+Canceler\+::mP\hspace{0.3cm}{\ttfamily [private]}}
+
+order of the model 
+
+Definition at line 179 of file R\+L\+S\+Canceler.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_r_l_s_canceler_a290c458da793dc228fb0a2c2fc0cfd8a}\label{classtsa_1_1_r_l_s_canceler_a290c458da793dc228fb0a2c2fc0cfd8a}} 
+\index{tsa\+::\+R\+L\+S\+Canceler@{tsa\+::\+R\+L\+S\+Canceler}!msigma@{msigma}}
+\index{msigma@{msigma}!tsa\+::\+R\+L\+S\+Canceler@{tsa\+::\+R\+L\+S\+Canceler}}
+\subsubsection{\texorpdfstring{msigma}{msigma}}
+{\footnotesize\ttfamily double tsa\+::\+R\+L\+S\+Canceler\+::msigma\hspace{0.3cm}{\ttfamily [private]}}
+
+estimation of sigma of the data 
+
+Definition at line 188 of file R\+L\+S\+Canceler.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_r_l_s_canceler_a9abd498386c6750bfa22910242ace12e}\label{classtsa_1_1_r_l_s_canceler_a9abd498386c6750bfa22910242ace12e}} 
+\index{tsa\+::\+R\+L\+S\+Canceler@{tsa\+::\+R\+L\+S\+Canceler}!m\+Weights@{m\+Weights}}
+\index{m\+Weights@{m\+Weights}!tsa\+::\+R\+L\+S\+Canceler@{tsa\+::\+R\+L\+S\+Canceler}}
+\subsubsection{\texorpdfstring{m\+Weights}{mWeights}}
+{\footnotesize\ttfamily \hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} tsa\+::\+R\+L\+S\+Canceler\+::m\+Weights\hspace{0.3cm}{\ttfamily [private]}}
+
+P weights for noise removal 
+
+Definition at line 182 of file R\+L\+S\+Canceler.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_r_l_s_canceler_ac555ed3641b607e0818eb0d55d09e024}\label{classtsa_1_1_r_l_s_canceler_ac555ed3641b607e0818eb0d55d09e024}} 
+\index{tsa\+::\+R\+L\+S\+Canceler@{tsa\+::\+R\+L\+S\+Canceler}!mX@{mX}}
+\index{mX@{mX}!tsa\+::\+R\+L\+S\+Canceler@{tsa\+::\+R\+L\+S\+Canceler}}
+\subsubsection{\texorpdfstring{mX}{mX}}
+{\footnotesize\ttfamily \hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} tsa\+::\+R\+L\+S\+Canceler\+::mX\hspace{0.3cm}{\ttfamily [private]}}
+
+P-\/length data buffer 
+
+Definition at line 184 of file R\+L\+S\+Canceler.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/include/\hyperlink{_r_l_s_canceler_8hpp}{R\+L\+S\+Canceler.\+hpp}\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/src/\hyperlink{_r_l_s_canceler_8cpp}{R\+L\+S\+Canceler.\+cpp}\end{DoxyCompactItemize}

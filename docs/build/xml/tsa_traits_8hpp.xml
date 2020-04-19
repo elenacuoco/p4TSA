@@ -1,0 +1,969 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="tsa_traits_8hpp" kind="file" language="C++">
+    <compoundname>tsaTraits.hpp</compoundname>
+    <includes local="no">complex</includes>
+    <includedby refid="_base_view_8hpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/include/BaseView.hpp</includedby>
+    <includedby refid="tsa_8hpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/include/tsa.hpp</includedby>
+    <incdepgraph>
+      <node id="3691">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTraits.hpp</label>
+        <link refid="tsa_traits_8hpp"/>
+        <childnode refid="3692" relation="include">
+        </childnode>
+      </node>
+      <node id="3692">
+        <label>complex</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3743">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/BLInterpolation.cpp</label>
+        <link refid="_b_l_interpolation_8cpp"/>
+      </node>
+      <node id="3693">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTraits.hpp</label>
+        <link refid="tsa_traits_8hpp"/>
+        <childnode refid="3694" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+      </node>
+      <node id="3705">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/Arma2Psd.hpp</label>
+        <link refid="_arma2_psd_8hpp"/>
+        <childnode refid="3706" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+      </node>
+      <node id="3718">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/WDF2Classify.hpp</label>
+        <link refid="_w_d_f2_classify_8hpp"/>
+        <childnode refid="3719" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+      </node>
+      <node id="3714">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/ComplexFFT.hpp</label>
+        <link refid="_complex_f_f_t_8hpp"/>
+        <childnode refid="3715" relation="include">
+        </childnode>
+      </node>
+      <node id="3774">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/NotchWidrow.hpp</label>
+        <link refid="_notch_widrow_8hpp"/>
+        <childnode refid="3775" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+      </node>
+      <node id="3734">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/Cs2HammingWindow.hpp</label>
+        <link refid="_cs2_hamming_window_8hpp"/>
+        <childnode refid="3698" relation="include">
+        </childnode>
+        <childnode refid="3718" relation="include">
+        </childnode>
+        <childnode refid="3735" relation="include">
+        </childnode>
+        <childnode refid="3731" relation="include">
+        </childnode>
+      </node>
+      <node id="3753">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/Parcor2AR.cpp</label>
+        <link refid="_parcor2_a_r_8cpp"/>
+      </node>
+      <node id="3703">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/ArDurbinEstimator.hpp</label>
+        <link refid="_ar_durbin_estimator_8hpp"/>
+        <childnode refid="3704" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+      </node>
+      <node id="3701">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/ArBurgEstimator.hpp</label>
+        <link refid="_ar_burg_estimator_8hpp"/>
+        <childnode refid="3702" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+      </node>
+      <node id="3712">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/ARMAfit.cpp</label>
+        <link refid="_a_r_m_afit_8cpp"/>
+      </node>
+      <node id="3738">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/KaiserWindow.hpp</label>
+        <link refid="_kaiser_window_8hpp"/>
+        <childnode refid="3698" relation="include">
+        </childnode>
+        <childnode refid="3731" relation="include">
+        </childnode>
+      </node>
+      <node id="3732">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/WindowFactory.cpp</label>
+        <link refid="_window_factory_8cpp"/>
+      </node>
+      <node id="3765">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/LatticeFilter.cpp</label>
+        <link refid="_lattice_filter_8cpp"/>
+      </node>
+      <node id="3751">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/CreateDvector.cpp</label>
+        <link refid="_create_dvector_8cpp"/>
+      </node>
+      <node id="3726">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/RealFFT.hpp</label>
+        <link refid="_real_f_f_t_8hpp"/>
+        <childnode refid="3727" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+      </node>
+      <node id="3768">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLfilter.hpp</label>
+        <link refid="_l_s_lfilter_8hpp"/>
+        <childnode refid="3769" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+      </node>
+      <node id="3754">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/DoubleWhitening.hpp</label>
+        <link refid="_double_whitening_8hpp"/>
+        <childnode refid="3755" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+      </node>
+      <node id="3755">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/DoubleWhitening.cpp</label>
+        <link refid="_double_whitening_8cpp"/>
+      </node>
+      <node id="3775">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/NotchWidrow.cpp</label>
+        <link refid="_notch_widrow_8cpp"/>
+      </node>
+      <node id="3740">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/TukeyWindow.hpp</label>
+        <link refid="_tukey_window_8hpp"/>
+        <childnode refid="3698" relation="include">
+        </childnode>
+        <childnode refid="3731" relation="include">
+        </childnode>
+      </node>
+      <node id="3730">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/BartlettWindow.hpp</label>
+        <link refid="_bartlett_window_8hpp"/>
+        <childnode refid="3698" relation="include">
+        </childnode>
+        <childnode refid="3731" relation="include">
+        </childnode>
+      </node>
+      <node id="3739">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/TukeyHannWindow.hpp</label>
+        <link refid="_tukey_hann_window_8hpp"/>
+        <childnode refid="3698" relation="include">
+        </childnode>
+        <childnode refid="3731" relation="include">
+        </childnode>
+      </node>
+      <node id="3785">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletThreshold.hpp</label>
+        <link refid="_wavelet_threshold_8hpp"/>
+        <childnode refid="3786" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+        <childnode refid="3787" relation="include">
+        </childnode>
+        <childnode refid="3718" relation="include">
+        </childnode>
+        <childnode refid="3735" relation="include">
+        </childnode>
+      </node>
+      <node id="3788">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/WavReconstruction.cpp</label>
+        <link refid="_wav_reconstruction_8cpp"/>
+      </node>
+      <node id="3747">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/Cholesky.cpp</label>
+        <link refid="_cholesky_8cpp"/>
+      </node>
+      <node id="3741">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/WelchWindow.hpp</label>
+        <link refid="_welch_window_8hpp"/>
+        <childnode refid="3698" relation="include">
+        </childnode>
+        <childnode refid="3731" relation="include">
+        </childnode>
+      </node>
+      <node id="3767">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/LeastSquaresLattice.cpp</label>
+        <link refid="_least_squares_lattice_8cpp"/>
+      </node>
+      <node id="3777">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/RLSCanceler.cpp</label>
+        <link refid="_r_l_s_canceler_8cpp"/>
+      </node>
+      <node id="3709">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/ARMAFilter.hpp</label>
+        <link refid="_a_r_m_a_filter_8hpp"/>
+        <childnode refid="3710" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+      </node>
+      <node id="3697">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/AR2.cpp</label>
+        <link refid="_a_r2_8cpp"/>
+      </node>
+      <node id="3715">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/ComplexFFT.cpp</label>
+        <link refid="_complex_f_f_t_8cpp"/>
+      </node>
+      <node id="3700">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/AR2Parcor.cpp</label>
+        <link refid="_a_r2_parcor_8cpp"/>
+      </node>
+      <node id="3731">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/WindowFactory.hpp</label>
+        <link refid="_window_factory_8hpp"/>
+        <childnode refid="3732" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+      </node>
+      <node id="3724">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/InverseRealFFT.hpp</label>
+        <link refid="_inverse_real_f_f_t_8hpp"/>
+        <childnode refid="3725" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+      </node>
+      <node id="3750">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/CreateDvector.hpp</label>
+        <link refid="_create_dvector_8hpp"/>
+        <childnode refid="3751" relation="include">
+        </childnode>
+        <childnode refid="3752" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+      </node>
+      <node id="3717">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/DCT.cpp</label>
+        <link refid="_d_c_t_8cpp"/>
+      </node>
+      <node id="3725">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/InverseRealFFT.cpp</label>
+        <link refid="_inverse_real_f_f_t_8cpp"/>
+      </node>
+      <node id="3720">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/DST.hpp</label>
+        <link refid="_d_s_t_8hpp"/>
+        <childnode refid="3721" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+      </node>
+      <node id="3719">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/WDF2Classify.cpp</label>
+        <link refid="_w_d_f2_classify_8cpp"/>
+      </node>
+      <node id="3722">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/IDCT.hpp</label>
+        <link refid="_i_d_c_t_8hpp"/>
+        <childnode refid="3723" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+      </node>
+      <node id="3772">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/MYWE.hpp</label>
+        <link refid="_m_y_w_e_8hpp"/>
+        <childnode refid="3773" relation="include">
+        </childnode>
+        <childnode refid="3711" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+      </node>
+      <node id="3762">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp</label>
+        <link refid="_frame_i_stream_8hpp"/>
+        <childnode refid="3763" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+      </node>
+      <node id="3773">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/MYWE.cpp</label>
+        <link refid="_m_y_w_e_8cpp"/>
+      </node>
+      <node id="3742">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/BLInterpolation.hpp</label>
+        <link refid="_b_l_interpolation_8hpp"/>
+        <childnode refid="3743" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+      </node>
+      <node id="3695">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/AlgoBase.hpp</label>
+        <link refid="_algo_base_8hpp"/>
+        <childnode refid="3696" relation="include">
+        </childnode>
+        <childnode refid="3699" relation="include">
+        </childnode>
+        <childnode refid="3701" relation="include">
+        </childnode>
+        <childnode refid="3703" relation="include">
+        </childnode>
+        <childnode refid="3705" relation="include">
+        </childnode>
+        <childnode refid="3707" relation="include">
+        </childnode>
+        <childnode refid="3709" relation="include">
+        </childnode>
+        <childnode refid="3711" relation="include">
+        </childnode>
+        <childnode refid="3713" relation="include">
+        </childnode>
+        <childnode refid="3728" relation="include">
+        </childnode>
+        <childnode refid="3742" relation="include">
+        </childnode>
+        <childnode refid="3744" relation="include">
+        </childnode>
+        <childnode refid="3746" relation="include">
+        </childnode>
+        <childnode refid="3748" relation="include">
+        </childnode>
+        <childnode refid="3750" relation="include">
+        </childnode>
+        <childnode refid="3754" relation="include">
+        </childnode>
+        <childnode refid="3756" relation="include">
+        </childnode>
+        <childnode refid="3758" relation="include">
+        </childnode>
+        <childnode refid="3760" relation="include">
+        </childnode>
+        <childnode refid="3762" relation="include">
+        </childnode>
+        <childnode refid="3764" relation="include">
+        </childnode>
+        <childnode refid="3766" relation="include">
+        </childnode>
+        <childnode refid="3768" relation="include">
+        </childnode>
+        <childnode refid="3770" relation="include">
+        </childnode>
+        <childnode refid="3772" relation="include">
+        </childnode>
+        <childnode refid="3774" relation="include">
+        </childnode>
+        <childnode refid="3752" relation="include">
+        </childnode>
+        <childnode refid="3776" relation="include">
+        </childnode>
+        <childnode refid="3778" relation="include">
+        </childnode>
+        <childnode refid="3780" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+        <childnode refid="3781" relation="include">
+        </childnode>
+        <childnode refid="3782" relation="include">
+        </childnode>
+        <childnode refid="3783" relation="include">
+        </childnode>
+        <childnode refid="3785" relation="include">
+        </childnode>
+        <childnode refid="3789" relation="include">
+        </childnode>
+        <childnode refid="3787" relation="include">
+        </childnode>
+        <childnode refid="3718" relation="include">
+        </childnode>
+        <childnode refid="3735" relation="include">
+        </childnode>
+      </node>
+      <node id="3787">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/WavReconstruction.hpp</label>
+        <link refid="_wav_reconstruction_8hpp"/>
+        <childnode refid="3788" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+      </node>
+      <node id="3776">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/RLSCanceler.hpp</label>
+        <link refid="_r_l_s_canceler_8hpp"/>
+        <childnode refid="3777" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+      </node>
+      <node id="3781">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/Util.hpp</label>
+        <link refid="_util_8hpp"/>
+        <childnode refid="3698" relation="include">
+        </childnode>
+      </node>
+      <node id="3699">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/AR2Parcor.hpp</label>
+        <link refid="_a_r2_parcor_8hpp"/>
+        <childnode refid="3700" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+      </node>
+      <node id="3698">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/tsa.hpp</label>
+        <link refid="tsa_8hpp"/>
+      </node>
+      <node id="3778">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/SelectionOrderCriteria.hpp</label>
+        <link refid="_selection_order_criteria_8hpp"/>
+        <childnode refid="3779" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+      </node>
+      <node id="3757">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/EventDescription.cpp</label>
+        <link refid="_event_description_8cpp"/>
+      </node>
+      <node id="3711">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/ARMAfit.hpp</label>
+        <link refid="_a_r_m_afit_8hpp"/>
+        <childnode refid="3712" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+      </node>
+      <node id="3783">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/ViewUtil.hpp</label>
+        <link refid="_view_util_8hpp"/>
+        <childnode refid="3784" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+      </node>
+      <node id="3702">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/ArBurgEstimator.cpp</label>
+        <link refid="_ar_burg_estimator_8cpp"/>
+      </node>
+      <node id="3771">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/LSLLearning.cpp</label>
+        <link refid="_l_s_l_learning_8cpp"/>
+      </node>
+      <node id="3746">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/Cholesky.hpp</label>
+        <link refid="_cholesky_8hpp"/>
+        <childnode refid="3747" relation="include">
+        </childnode>
+      </node>
+      <node id="3759">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/EventFullFeatured.cpp</label>
+        <link refid="_event_full_featured_8cpp"/>
+      </node>
+      <node id="3745">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/ButterworthFilter.cpp</label>
+        <link refid="_butterworth_filter_8cpp"/>
+      </node>
+      <node id="3694">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/BaseView.hpp</label>
+        <link refid="_base_view_8hpp"/>
+        <childnode refid="3695" relation="include">
+        </childnode>
+        <childnode refid="3791" relation="include">
+        </childnode>
+        <childnode refid="3748" relation="include">
+        </childnode>
+        <childnode refid="3756" relation="include">
+        </childnode>
+        <childnode refid="3758" relation="include">
+        </childnode>
+        <childnode refid="3792" relation="include">
+        </childnode>
+        <childnode refid="3793" relation="include">
+        </childnode>
+        <childnode refid="3794" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+        <childnode refid="3718" relation="include">
+        </childnode>
+        <childnode refid="3735" relation="include">
+        </childnode>
+      </node>
+      <node id="3786">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/WaveletThreshold.cpp</label>
+        <link refid="_wavelet_threshold_8cpp"/>
+      </node>
+      <node id="3789">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletTransform.hpp</label>
+        <link refid="_wavelet_transform_8hpp"/>
+        <childnode refid="3790" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+        <childnode refid="3787" relation="include">
+        </childnode>
+        <childnode refid="3718" relation="include">
+        </childnode>
+        <childnode refid="3735" relation="include">
+        </childnode>
+      </node>
+      <node id="3779">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/SelectionOrderCriteria.cpp</label>
+        <link refid="_selection_order_criteria_8cpp"/>
+      </node>
+      <node id="3794">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp</label>
+        <link refid="_t_f_view_8hpp"/>
+        <childnode refid="3698" relation="include">
+        </childnode>
+      </node>
+      <node id="3696">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/AR2.hpp</label>
+        <link refid="_a_r2_8hpp"/>
+        <childnode refid="3697" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+      </node>
+      <node id="3770">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp</label>
+        <link refid="_l_s_l_learning_8hpp"/>
+        <childnode refid="3771" relation="include">
+        </childnode>
+        <childnode refid="3766" relation="include">
+        </childnode>
+        <childnode refid="3768" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+      </node>
+      <node id="3763">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/FrameIStream.cpp</label>
+        <link refid="_frame_i_stream_8cpp"/>
+      </node>
+      <node id="3728">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/BaseWindow.hpp</label>
+        <link refid="_base_window_8hpp"/>
+        <childnode refid="3729" relation="include">
+        </childnode>
+        <childnode refid="3730" relation="include">
+        </childnode>
+        <childnode refid="3733" relation="include">
+        </childnode>
+        <childnode refid="3734" relation="include">
+        </childnode>
+        <childnode refid="3737" relation="include">
+        </childnode>
+        <childnode refid="3738" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+        <childnode refid="3739" relation="include">
+        </childnode>
+        <childnode refid="3740" relation="include">
+        </childnode>
+        <childnode refid="3741" relation="include">
+        </childnode>
+      </node>
+      <node id="3729">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/BaseWindow.cpp</label>
+        <link refid="_base_window_8cpp"/>
+      </node>
+      <node id="3790">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/WaveletTransform.cpp</label>
+        <link refid="_wavelet_transform_8cpp"/>
+      </node>
+      <node id="3748">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/ClusterizedEventFullFeatured.hpp</label>
+        <link refid="_clusterized_event_full_featured_8hpp"/>
+        <childnode refid="3749" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+      </node>
+      <node id="3793">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/SeqView.hpp</label>
+        <link refid="_seq_view_8hpp"/>
+        <childnode refid="3695" relation="include">
+        </childnode>
+        <childnode refid="3701" relation="include">
+        </childnode>
+        <childnode refid="3705" relation="include">
+        </childnode>
+        <childnode refid="3707" relation="include">
+        </childnode>
+        <childnode refid="3742" relation="include">
+        </childnode>
+        <childnode refid="3716" relation="include">
+        </childnode>
+        <childnode refid="3754" relation="include">
+        </childnode>
+        <childnode refid="3720" relation="include">
+        </childnode>
+        <childnode refid="3760" relation="include">
+        </childnode>
+        <childnode refid="3762" relation="include">
+        </childnode>
+        <childnode refid="3722" relation="include">
+        </childnode>
+        <childnode refid="3764" relation="include">
+        </childnode>
+        <childnode refid="3768" relation="include">
+        </childnode>
+        <childnode refid="3770" relation="include">
+        </childnode>
+        <childnode refid="3774" relation="include">
+        </childnode>
+        <childnode refid="3726" relation="include">
+        </childnode>
+        <childnode refid="3778" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+        <childnode refid="3781" relation="include">
+        </childnode>
+        <childnode refid="3785" relation="include">
+        </childnode>
+        <childnode refid="3789" relation="include">
+        </childnode>
+        <childnode refid="3787" relation="include">
+        </childnode>
+        <childnode refid="3718" relation="include">
+        </childnode>
+        <childnode refid="3735" relation="include">
+        </childnode>
+      </node>
+      <node id="3706">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/Arma2Psd.cpp</label>
+        <link refid="_arma2_psd_8cpp"/>
+      </node>
+      <node id="3708">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/Arma2TF.cpp</label>
+        <link refid="_arma2_t_f_8cpp"/>
+      </node>
+      <node id="3758">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/EventFullFeatured.hpp</label>
+        <link refid="_event_full_featured_8hpp"/>
+        <childnode refid="3759" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+        <childnode refid="3718" relation="include">
+        </childnode>
+        <childnode refid="3735" relation="include">
+        </childnode>
+      </node>
+      <node id="3704">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/ArDurbinEstimator.cpp</label>
+        <link refid="_ar_durbin_estimator_8cpp"/>
+      </node>
+      <node id="3723">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/IDCT.cpp</label>
+        <link refid="_i_d_c_t_8cpp"/>
+      </node>
+      <node id="3735">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/WDF2Reconstruct.hpp</label>
+        <link refid="_w_d_f2_reconstruct_8hpp"/>
+        <childnode refid="3736" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+      </node>
+      <node id="3780">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/TF2Psd.hpp</label>
+        <link refid="_t_f2_psd_8hpp"/>
+        <childnode refid="3698" relation="include">
+        </childnode>
+      </node>
+      <node id="3727">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/RealFFT.cpp</label>
+        <link refid="_real_f_f_t_8cpp"/>
+      </node>
+      <node id="3791">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/ARMAView.hpp</label>
+        <link refid="_a_r_m_a_view_8hpp"/>
+        <childnode refid="3705" relation="include">
+        </childnode>
+        <childnode refid="3707" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+      </node>
+      <node id="3744">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/ButterworthFilter.hpp</label>
+        <link refid="_butterworth_filter_8hpp"/>
+        <childnode refid="3745" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+      </node>
+      <node id="3749">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/ClusterizedEventFullFeatured.cpp</label>
+        <link refid="_clusterized_event_full_featured_8cpp"/>
+      </node>
+      <node id="3713">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/BaseFFT.hpp</label>
+        <link refid="_base_f_f_t_8hpp"/>
+        <childnode refid="3714" relation="include">
+        </childnode>
+        <childnode refid="3716" relation="include">
+        </childnode>
+        <childnode refid="3720" relation="include">
+        </childnode>
+        <childnode refid="3722" relation="include">
+        </childnode>
+        <childnode refid="3724" relation="include">
+        </childnode>
+        <childnode refid="3726" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+      </node>
+      <node id="3733">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/BisquareWindow.hpp</label>
+        <link refid="_bisquare_window_8hpp"/>
+        <childnode refid="3698" relation="include">
+        </childnode>
+        <childnode refid="3731" relation="include">
+        </childnode>
+      </node>
+      <node id="3766">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/LeastSquaresLattice.hpp</label>
+        <link refid="_least_squares_lattice_8hpp"/>
+        <childnode refid="3767" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+      </node>
+      <node id="3764">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeFilter.hpp</label>
+        <link refid="_lattice_filter_8hpp"/>
+        <childnode refid="3765" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+      </node>
+      <node id="3792">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp</label>
+        <link refid="_lattice_view_8hpp"/>
+        <childnode refid="3701" relation="include">
+        </childnode>
+        <childnode refid="3754" relation="include">
+        </childnode>
+        <childnode refid="3764" relation="include">
+        </childnode>
+        <childnode refid="3768" relation="include">
+        </childnode>
+        <childnode refid="3770" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+      </node>
+      <node id="3710">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/ARMAFilter.cpp</label>
+        <link refid="_a_r_m_a_filter_8cpp"/>
+      </node>
+      <node id="3736">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/WDF2Reconstruct.cpp</label>
+        <link refid="_w_d_f2_reconstruct_8cpp"/>
+      </node>
+      <node id="3761">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/FrameIChannel.cpp</label>
+        <link refid="_frame_i_channel_8cpp"/>
+      </node>
+      <node id="3707">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/Arma2TF.hpp</label>
+        <link refid="_arma2_t_f_8hpp"/>
+        <childnode refid="3708" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+      </node>
+      <node id="3737">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/Cs2HannWindow.hpp</label>
+        <link refid="_cs2_hann_window_8hpp"/>
+        <childnode refid="3698" relation="include">
+        </childnode>
+        <childnode refid="3731" relation="include">
+        </childnode>
+      </node>
+      <node id="3784">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/ViewUtil.cpp</label>
+        <link refid="_view_util_8cpp"/>
+      </node>
+      <node id="3782">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/VArma2TF.hpp</label>
+        <link refid="_v_arma2_t_f_8hpp"/>
+      </node>
+      <node id="3769">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/LSLfilter.cpp</label>
+        <link refid="_l_s_lfilter_8cpp"/>
+      </node>
+      <node id="3721">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/DST.cpp</label>
+        <link refid="_d_s_t_8cpp"/>
+      </node>
+      <node id="3760">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIChannel.hpp</label>
+        <link refid="_frame_i_channel_8hpp"/>
+        <childnode refid="3761" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+      </node>
+      <node id="3716">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/DCT.hpp</label>
+        <link refid="_d_c_t_8hpp"/>
+        <childnode refid="3717" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+        <childnode refid="3718" relation="include">
+        </childnode>
+      </node>
+      <node id="3752">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/Parcor2AR.hpp</label>
+        <link refid="_parcor2_a_r_8hpp"/>
+        <childnode refid="3702" relation="include">
+        </childnode>
+        <childnode refid="3753" relation="include">
+        </childnode>
+        <childnode refid="3701" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+      </node>
+      <node id="3756">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/EventDescription.hpp</label>
+        <link refid="_event_description_8hpp"/>
+        <childnode refid="3757" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classtsa_1_1_view_traits" prot="public">tsa::ViewTraits</innerclass>
+    <innerclass refid="classtsa_1_1_type_traits" prot="public">tsa::TypeTraits</innerclass>
+    <innerclass refid="classtsa_1_1_type_traits_3_01double_01_4" prot="public">tsa::TypeTraits&lt; double &gt;</innerclass>
+    <innerclass refid="classtsa_1_1_type_traits_3_01std_1_1complex_3_01double_01_4_01_4" prot="public">tsa::TypeTraits&lt; std::complex&lt; double &gt; &gt;</innerclass>
+    <innernamespace refid="namespacetsa">tsa</innernamespace>
+    <briefdescription>
+<para>Define the tsa Traits. </para>    </briefdescription>
+    <detaileddescription>
+<para>Copyright (C) 2004 by Giancarlo Cella <ulink url="mailto:giancarlo.cella@pi.infn.it">giancarlo.cella@pi.infn.it</ulink></para><para>This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</para><para>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</para><para>You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.</para><para><simplesect kind="author"><para>Giancarlo Cella <ulink url="mailto:giancarlo.cella@pi.infn.it">giancarlo.cella@pi.infn.it</ulink> </para></simplesect>
+<simplesect kind="date"><para>Sat Nov 13 17:21:06 2004 </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>__NAPTRAITS_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__NAPTRAITS_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"></codeline>
+<codeline lineno="33"><highlight class="preprocessor">#include<sp/>&lt;complex&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"></codeline>
+<codeline lineno="40"></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"></codeline>
+<codeline lineno="48"></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"></codeline>
+<codeline lineno="56"></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"></codeline>
+<codeline lineno="64"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetsa" kindref="compound">tsa</ref><sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="67" refid="classtsa_1_1_view_traits" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classtsa_1_1_view_traits" kindref="compound">ViewTraits</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="71" refid="classtsa_1_1_type_traits" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classtsa_1_1_type_traits" kindref="compound">TypeTraits</ref>;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;&gt;</highlight></codeline>
+<codeline lineno="74" refid="classtsa_1_1_type_traits_3_01double_01_4" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classtsa_1_1_type_traits" kindref="compound">TypeTraits</ref>&lt;double&gt;<sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="classtsa_1_1_type_traits_3_01double_01_4_1aafff3eab224af5ae3f4dea65aeb3f611" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_type_traits_3_01double_01_4_1aafff3eab224af5ae3f4dea65aeb3f611" kindref="member">conj</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="classtsa_1_1_type_traits_3_01double_01_4_1aacaf66bc787883b8cd043fa65a77ab2b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_type_traits_3_01double_01_4_1aacaf66bc787883b8cd043fa65a77ab2b" kindref="member">real</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="classtsa_1_1_type_traits_3_01double_01_4_1a98ded872afb62012bd9595b1b032fb7e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_type_traits_3_01double_01_4_1a98ded872afb62012bd9595b1b032fb7e" kindref="member">imag</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;)<sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.0;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="classtsa_1_1_type_traits_3_01double_01_4_1aa10a603ba4edcfcb09985d7c7bc2fb78" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_type_traits_3_01double_01_4_1aa10a603ba4edcfcb09985d7c7bc2fb78" kindref="member">abs</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fabs(x);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="classtsa_1_1_type_traits_3_01double_01_4_1a4771ebd87b610400d5623f76dd58d7b3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_type_traits_3_01double_01_4_1a4771ebd87b610400d5623f76dd58d7b3" kindref="member">abs2</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x*x;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="classtsa_1_1_type_traits_3_01double_01_4_1a6488c1cb2f330e72537a488589197df6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_type_traits_3_01double_01_4_1a6488c1cb2f330e72537a488589197df6" kindref="member">phase</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(x<sp/>&gt;<sp/>0.0)<sp/>?<sp/>0.0<sp/>:<sp/><ref refid="fparser_8cpp_1ae71449b1cc6e6250b91f539153a7a0d3" kindref="member">M_PI</ref>;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;&gt;</highlight></codeline>
+<codeline lineno="103" refid="classtsa_1_1_type_traits_3_01std_1_1complex_3_01double_01_4_01_4" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classtsa_1_1_type_traits" kindref="compound">TypeTraits</ref>&lt;<sp/><ref refid="namespacestd" kindref="compound">std</ref>::complex&lt;double&gt;<sp/>&gt;<sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="classtsa_1_1_type_traits_3_01std_1_1complex_3_01double_01_4_01_4_1a9eced3592f7dafac90d6f7d6aa9bca66" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::complex&lt;double&gt;<sp/><ref refid="classtsa_1_1_type_traits_3_01std_1_1complex_3_01double_01_4_01_4_1a9eced3592f7dafac90d6f7d6aa9bca66" kindref="member">conj</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::complex&lt;double&gt;&amp;<sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>conj(x);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="classtsa_1_1_type_traits_3_01std_1_1complex_3_01double_01_4_01_4_1ab79705afcbcb0c504ecd924f57c1ed49" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_type_traits_3_01std_1_1complex_3_01double_01_4_01_4_1ab79705afcbcb0c504ecd924f57c1ed49" kindref="member">real</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::complex&lt;double&gt;&amp;<sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x.real();</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="classtsa_1_1_type_traits_3_01std_1_1complex_3_01double_01_4_01_4_1a6bf03301824846b16d9927ab5d841ed4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_type_traits_3_01std_1_1complex_3_01double_01_4_01_4_1a6bf03301824846b16d9927ab5d841ed4" kindref="member">imag</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::complex&lt;double&gt;&amp;<sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x.imag();</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118" refid="classtsa_1_1_type_traits_3_01std_1_1complex_3_01double_01_4_01_4_1ad25e2572dee56a68dde04217087b95ad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_type_traits_3_01std_1_1complex_3_01double_01_4_01_4_1ad25e2572dee56a68dde04217087b95ad" kindref="member">abs</ref>(std::complex&lt;double&gt;<sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>abs(x);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122" refid="classtsa_1_1_type_traits_3_01std_1_1complex_3_01double_01_4_01_4_1aff1b7714042e772177e6031c9df77e34" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_type_traits_3_01std_1_1complex_3_01double_01_4_01_4_1aff1b7714042e772177e6031c9df77e34" kindref="member">abs2</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::complex&lt;double&gt;&amp;<sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x.real()<sp/>*<sp/>x.real()<sp/>+<sp/>x.imag()<sp/>*<sp/>x.imag();</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="classtsa_1_1_type_traits_3_01std_1_1complex_3_01double_01_4_01_4_1ae96f4d0c1512efbf11bfb92907115431" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_type_traits_3_01std_1_1complex_3_01double_01_4_01_4_1ae96f4d0c1512efbf11bfb92907115431" kindref="member">phase</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::complex&lt;double&gt;&amp;<sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>arg(x);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>end<sp/>namespace<sp/>tsa</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>__NAPTRAITS_HPP</highlight></codeline>
+    </programlisting>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTraits.hpp"/>
+  </compounddef>
+</doxygen>

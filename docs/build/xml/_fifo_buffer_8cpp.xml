@@ -1,0 +1,303 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_fifo_buffer_8cpp" kind="file" language="C++">
+    <compoundname>FifoBuffer.cpp</compoundname>
+    <includes refid="_fifo_buffer_8hpp" local="no">FifoBuffer.hpp</includes>
+    <incdepgraph>
+      <node id="5421">
+        <label>queue</label>
+      </node>
+      <node id="5423">
+        <label>eternity.hpp</label>
+        <link refid="eternity_8hpp"/>
+        <childnode refid="5424" relation="include">
+        </childnode>
+        <childnode refid="5428" relation="include">
+        </childnode>
+        <childnode refid="5434" relation="include">
+        </childnode>
+        <childnode refid="5438" relation="include">
+        </childnode>
+      </node>
+      <node id="5430">
+        <label>stdlib.h</label>
+      </node>
+      <node id="5445">
+        <label>stdexcept</label>
+      </node>
+      <node id="5440">
+        <label>tsaTypes.hpp</label>
+        <link refid="tsa_types_8hpp"/>
+        <childnode refid="5433" relation="include">
+        </childnode>
+        <childnode refid="5441" relation="include">
+        </childnode>
+        <childnode refid="5442" relation="include">
+        </childnode>
+        <childnode refid="5443" relation="include">
+        </childnode>
+        <childnode refid="5423" relation="include">
+        </childnode>
+      </node>
+      <node id="5427">
+        <label>string</label>
+      </node>
+      <node id="5424">
+        <label>eternity/dynamic.hpp</label>
+        <link refid="dynamic_8hpp"/>
+        <childnode refid="5425" relation="include">
+        </childnode>
+        <childnode refid="5426" relation="include">
+        </childnode>
+        <childnode refid="5427" relation="include">
+        </childnode>
+      </node>
+      <node id="5436">
+        <label>map</label>
+      </node>
+      <node id="5433">
+        <label>fstream</label>
+      </node>
+      <node id="5435">
+        <label>xmlscanner.hpp</label>
+        <link refid="xmlscanner_8hpp"/>
+        <childnode refid="5429" relation="include">
+        </childnode>
+        <childnode refid="5430" relation="include">
+        </childnode>
+        <childnode refid="5431" relation="include">
+        </childnode>
+        <childnode refid="5436" relation="include">
+        </childnode>
+        <childnode refid="5432" relation="include">
+        </childnode>
+        <childnode refid="5433" relation="include">
+        </childnode>
+        <childnode refid="5427" relation="include">
+        </childnode>
+        <childnode refid="5437" relation="include">
+        </childnode>
+      </node>
+      <node id="5444">
+        <label>tsaSerialize.hpp</label>
+        <link refid="tsa_serialize_8hpp"/>
+        <childnode refid="5445" relation="include">
+        </childnode>
+        <childnode refid="5437" relation="include">
+        </childnode>
+        <childnode refid="5433" relation="include">
+        </childnode>
+        <childnode refid="5423" relation="include">
+        </childnode>
+        <childnode refid="5440" relation="include">
+        </childnode>
+      </node>
+      <node id="5419">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/FifoBuffer.cpp</label>
+        <link refid="_fifo_buffer_8cpp"/>
+        <childnode refid="5420" relation="include">
+        </childnode>
+      </node>
+      <node id="5428">
+        <label>eternity/persist.hpp</label>
+        <link refid="persist_8hpp"/>
+        <childnode refid="5424" relation="include">
+        </childnode>
+        <childnode refid="5429" relation="include">
+        </childnode>
+        <childnode refid="5430" relation="include">
+        </childnode>
+        <childnode refid="5431" relation="include">
+        </childnode>
+        <childnode refid="5432" relation="include">
+        </childnode>
+        <childnode refid="5433" relation="include">
+        </childnode>
+      </node>
+      <node id="5420">
+        <label>FifoBuffer.hpp</label>
+        <link refid="_fifo_buffer_8hpp"/>
+        <childnode refid="5421" relation="include">
+        </childnode>
+        <childnode refid="5422" relation="include">
+        </childnode>
+        <childnode refid="5423" relation="include">
+        </childnode>
+        <childnode refid="5440" relation="include">
+        </childnode>
+        <childnode refid="5444" relation="include">
+        </childnode>
+      </node>
+      <node id="5426">
+        <label>typeinfo</label>
+      </node>
+      <node id="5443">
+        <label>boost/numeric/ublas/io.hpp</label>
+      </node>
+      <node id="5431">
+        <label>vector</label>
+      </node>
+      <node id="5442">
+        <label>boost/numeric/ublas/matrix_proxy.hpp</label>
+      </node>
+      <node id="5439">
+        <label>sstream</label>
+      </node>
+      <node id="5429">
+        <label>math.h</label>
+      </node>
+      <node id="5441">
+        <label>boost/numeric/ublas/matrix.hpp</label>
+      </node>
+      <node id="5437">
+        <label>iostream</label>
+      </node>
+      <node id="5422">
+        <label>deque</label>
+      </node>
+      <node id="5434">
+        <label>eternity/persist_xml.hpp</label>
+        <link refid="persist__xml_8hpp"/>
+        <childnode refid="5428" relation="include">
+        </childnode>
+        <childnode refid="5435" relation="include">
+        </childnode>
+        <childnode refid="5422" relation="include">
+        </childnode>
+      </node>
+      <node id="5438">
+        <label>eternity/algorithms.hpp</label>
+        <link refid="algorithms_8hpp"/>
+        <childnode refid="5428" relation="include">
+        </childnode>
+        <childnode refid="5434" relation="include">
+        </childnode>
+        <childnode refid="5435" relation="include">
+        </childnode>
+        <childnode refid="5439" relation="include">
+        </childnode>
+      </node>
+      <node id="5432">
+        <label>algorithm</label>
+      </node>
+      <node id="5425">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacetsa">tsa</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_fifo_buffer_8hpp" kindref="compound">FifoBuffer.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetsa" kindref="compound">tsa</ref><sp/>{</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="classtsa_1_1_fifo_buffer_1ad30fe947e5c2b34614859cbf12d749f1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_fifo_buffer_1ad30fe947e5c2b34614859cbf12d749f1" kindref="member">FifoBuffer::FifoBuffer</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>channels)</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>:</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>mChannels(channels)<sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="classtsa_1_1_fifo_buffer_1ac6a76ca0fd208c80de6e4e04d5c43173" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_fifo_buffer_1ad30fe947e5c2b34614859cbf12d749f1" kindref="member">FifoBuffer::FifoBuffer</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_fifo_buffer" kindref="compound">FifoBuffer</ref>&amp;<sp/>from)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>:</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_fifo_buffer_1add6db36d6910a8b1efba4b2439f4b9c5" kindref="member">mChannels</ref>(from.<ref refid="classtsa_1_1_fifo_buffer_1add6db36d6910a8b1efba4b2439f4b9c5" kindref="member">mChannels</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="classtsa_1_1_fifo_buffer_1ad7bec7c4fc528a12763f29c8f6a8e460" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_fifo_buffer_1ad7bec7c4fc528a12763f29c8f6a8e460" kindref="member">FifoBuffer::~FifoBuffer</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="classtsa_1_1_fifo_buffer_1a538034e48a1c598fbbde1fefb9e92f91" kindref="member">mRepository</ref>.size()<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_fifo_buffer_1a538034e48a1c598fbbde1fefb9e92f91" kindref="member">mRepository</ref>.front();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_fifo_buffer_1a538034e48a1c598fbbde1fefb9e92f91" kindref="member">mRepository</ref>.pop();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="classtsa_1_1_fifo_buffer_1aa8039b60b66e4e6bedd661352fff095f" kindref="member">mBuffer</ref>.size()<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_fifo_buffer_1aa8039b60b66e4e6bedd661352fff095f" kindref="member">mBuffer</ref>.front();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_fifo_buffer_1aa8039b60b66e4e6bedd661352fff095f" kindref="member">mBuffer</ref>.pop_front();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="classtsa_1_1_fifo_buffer_1ad3c89a0f4aa3e475e136ec8c47f2165e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_fifo_buffer" kindref="compound">FifoBuffer</ref>&amp;<sp/><ref refid="classtsa_1_1_fifo_buffer_1ad3c89a0f4aa3e475e136ec8c47f2165e" kindref="member">FifoBuffer::operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_fifo_buffer" kindref="compound">FifoBuffer</ref>&amp;<sp/>from)<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="classtsa_1_1_fifo_buffer_1a538034e48a1c598fbbde1fefb9e92f91" kindref="member">mRepository</ref>.size()<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_fifo_buffer_1a538034e48a1c598fbbde1fefb9e92f91" kindref="member">mRepository</ref>.front();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_fifo_buffer_1a538034e48a1c598fbbde1fefb9e92f91" kindref="member">mRepository</ref>.pop();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="classtsa_1_1_fifo_buffer_1aa8039b60b66e4e6bedd661352fff095f" kindref="member">mBuffer</ref>.size()<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_fifo_buffer_1aa8039b60b66e4e6bedd661352fff095f" kindref="member">mBuffer</ref>.front();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_fifo_buffer_1aa8039b60b66e4e6bedd661352fff095f" kindref="member">mBuffer</ref>.pop_front();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_fifo_buffer_1add6db36d6910a8b1efba4b2439f4b9c5" kindref="member">mChannels</ref><sp/>=<sp/>from.<ref refid="classtsa_1_1_fifo_buffer_1add6db36d6910a8b1efba4b2439f4b9c5" kindref="member">mChannels</ref>;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="classtsa_1_1_fifo_buffer_1a5cec8568b62047b4fb5b19c3fb44d28b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_fifo_buffer_1a5cec8568b62047b4fb5b19c3fb44d28b" kindref="member">FifoBuffer::AddPoint</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classtsa_1_1_fifo_buffer_1a538034e48a1c598fbbde1fefb9e92f91" kindref="member">mRepository</ref>.empty())<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_fifo_buffer_1aa8039b60b66e4e6bedd661352fff095f" kindref="member">mBuffer</ref>.push_back(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref>(<ref refid="classtsa_1_1_fifo_buffer_1add6db36d6910a8b1efba4b2439f4b9c5" kindref="member">mChannels</ref>));</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_fifo_buffer_1aa8039b60b66e4e6bedd661352fff095f" kindref="member">mBuffer</ref>.push_back(<ref refid="classtsa_1_1_fifo_buffer_1a538034e48a1c598fbbde1fefb9e92f91" kindref="member">mRepository</ref>.front());</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_fifo_buffer_1a538034e48a1c598fbbde1fefb9e92f91" kindref="member">mRepository</ref>.pop();</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="classtsa_1_1_fifo_buffer_1a7058127e3d126d9d6f434d3bf386c59b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_fifo_buffer_1a5cec8568b62047b4fb5b19c3fb44d28b" kindref="member">FifoBuffer::AddPoint</ref>(<ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref>&amp;<sp/>data,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>scale)<sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classtsa_1_1_fifo_buffer_1a538034e48a1c598fbbde1fefb9e92f91" kindref="member">mRepository</ref>.empty())<sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_fifo_buffer_1aa8039b60b66e4e6bedd661352fff095f" kindref="member">mBuffer</ref>.push_back(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref>(<ref refid="classtsa_1_1_fifo_buffer_1add6db36d6910a8b1efba4b2439f4b9c5" kindref="member">mChannels</ref>));</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_fifo_buffer_1aa8039b60b66e4e6bedd661352fff095f" kindref="member">mBuffer</ref>.push_back(<ref refid="classtsa_1_1_fifo_buffer_1a538034e48a1c598fbbde1fefb9e92f91" kindref="member">mRepository</ref>.front());</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_fifo_buffer_1a538034e48a1c598fbbde1fefb9e92f91" kindref="member">mRepository</ref>.pop();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref><sp/>*p<sp/>=<sp/><ref refid="classtsa_1_1_fifo_buffer_1aa8039b60b66e4e6bedd661352fff095f" kindref="member">mBuffer</ref>.back();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>0;<sp/>k&lt;int(<ref refid="classtsa_1_1_fifo_buffer_1add6db36d6910a8b1efba4b2439f4b9c5" kindref="member">mChannels</ref>);<sp/>k++)<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*p)(k)<sp/>=<sp/>scale<sp/>*<sp/>data(k);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="classtsa_1_1_fifo_buffer_1ab70c4b3ba1a5356ab5384cd7f8638b0d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_fifo_buffer_1ab70c4b3ba1a5356ab5384cd7f8638b0d" kindref="member">FifoBuffer::AddPoints</ref>(<ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref>&amp;<sp/>data,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>scale,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>offset)<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(n<sp/>==<sp/>0)<sp/>n<sp/>=<sp/>data.size2()<sp/>-<sp/>offset;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>n;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classtsa_1_1_fifo_buffer_1a538034e48a1c598fbbde1fefb9e92f91" kindref="member">mRepository</ref>.empty())<sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_fifo_buffer_1aa8039b60b66e4e6bedd661352fff095f" kindref="member">mBuffer</ref>.push_back(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref>(<ref refid="classtsa_1_1_fifo_buffer_1add6db36d6910a8b1efba4b2439f4b9c5" kindref="member">mChannels</ref>));</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_fifo_buffer_1aa8039b60b66e4e6bedd661352fff095f" kindref="member">mBuffer</ref>.push_back(<ref refid="classtsa_1_1_fifo_buffer_1a538034e48a1c598fbbde1fefb9e92f91" kindref="member">mRepository</ref>.front());</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_fifo_buffer_1a538034e48a1c598fbbde1fefb9e92f91" kindref="member">mRepository</ref>.pop();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref><sp/>*p<sp/>=<sp/><ref refid="classtsa_1_1_fifo_buffer_1aa8039b60b66e4e6bedd661352fff095f" kindref="member">mBuffer</ref>.back();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>0;<sp/>k&lt;int(<ref refid="classtsa_1_1_fifo_buffer_1add6db36d6910a8b1efba4b2439f4b9c5" kindref="member">mChannels</ref>);<sp/>k++)<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*p)(k)<sp/>=<sp/>scale<sp/>*<sp/>data(k,<sp/>i<sp/>+<sp/>offset);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="classtsa_1_1_fifo_buffer_1a17acb27e83ab4af3667974660b58cb4e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_fifo_buffer_1a17acb27e83ab4af3667974660b58cb4e" kindref="member">FifoBuffer::DelPoints</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n)<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((n<sp/>&gt;<sp/>0)<sp/>&amp;&amp;<sp/>(<ref refid="classtsa_1_1_fifo_buffer_1aa8039b60b66e4e6bedd661352fff095f" kindref="member">mBuffer</ref>.size()<sp/>&gt;<sp/>0))<sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_fifo_buffer_1a538034e48a1c598fbbde1fefb9e92f91" kindref="member">mRepository</ref>.push(<ref refid="classtsa_1_1_fifo_buffer_1aa8039b60b66e4e6bedd661352fff095f" kindref="member">mBuffer</ref>.front());</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n--;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_fifo_buffer_1aa8039b60b66e4e6bedd661352fff095f" kindref="member">mBuffer</ref>.pop_front();</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/src/FifoBuffer.cpp"/>
+  </compounddef>
+</doxygen>

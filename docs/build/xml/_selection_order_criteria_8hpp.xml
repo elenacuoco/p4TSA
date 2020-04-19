@@ -1,0 +1,433 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_selection_order_criteria_8hpp" kind="file" language="C++">
+    <compoundname>SelectionOrderCriteria.hpp</compoundname>
+    <includes refid="_algo_base_8hpp" local="no">AlgoBase.hpp</includes>
+    <includes refid="_seq_view_8hpp" local="no">SeqView.hpp</includes>
+    <includedby refid="_selection_order_criteria_8cpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/src/SelectionOrderCriteria.cpp</includedby>
+    <includedby refid="tsa_8hpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/include/tsa.hpp</includedby>
+    <incdepgraph>
+      <node id="3133">
+        <label>tsaTraits.hpp</label>
+        <link refid="tsa_traits_8hpp"/>
+        <childnode refid="3134" relation="include">
+        </childnode>
+      </node>
+      <node id="3113">
+        <label>eternity.hpp</label>
+        <link refid="eternity_8hpp"/>
+        <childnode refid="3114" relation="include">
+        </childnode>
+        <childnode refid="3117" relation="include">
+        </childnode>
+        <childnode refid="3122" relation="include">
+        </childnode>
+        <childnode refid="3126" relation="include">
+        </childnode>
+      </node>
+      <node id="3119">
+        <label>stdlib.h</label>
+      </node>
+      <node id="3106">
+        <label>stdexcept</label>
+      </node>
+      <node id="3128">
+        <label>tsaTypes.hpp</label>
+        <link refid="tsa_types_8hpp"/>
+        <childnode refid="3108" relation="include">
+        </childnode>
+        <childnode refid="3109" relation="include">
+        </childnode>
+        <childnode refid="3129" relation="include">
+        </childnode>
+        <childnode refid="3110" relation="include">
+        </childnode>
+        <childnode refid="3113" relation="include">
+        </childnode>
+      </node>
+      <node id="3111">
+        <label>string</label>
+      </node>
+      <node id="3114">
+        <label>eternity/dynamic.hpp</label>
+        <link refid="dynamic_8hpp"/>
+        <childnode refid="3115" relation="include">
+        </childnode>
+        <childnode refid="3116" relation="include">
+        </childnode>
+        <childnode refid="3111" relation="include">
+        </childnode>
+      </node>
+      <node id="3124">
+        <label>map</label>
+      </node>
+      <node id="3130">
+        <label>tsaLog.hpp</label>
+        <link refid="tsa_log_8hpp"/>
+        <childnode refid="3107" relation="include">
+        </childnode>
+        <childnode refid="3108" relation="include">
+        </childnode>
+        <childnode refid="3131" relation="include">
+        </childnode>
+      </node>
+      <node id="3108">
+        <label>fstream</label>
+      </node>
+      <node id="3123">
+        <label>xmlscanner.hpp</label>
+        <link refid="xmlscanner_8hpp"/>
+        <childnode refid="3118" relation="include">
+        </childnode>
+        <childnode refid="3119" relation="include">
+        </childnode>
+        <childnode refid="3120" relation="include">
+        </childnode>
+        <childnode refid="3124" relation="include">
+        </childnode>
+        <childnode refid="3121" relation="include">
+        </childnode>
+        <childnode refid="3108" relation="include">
+        </childnode>
+        <childnode refid="3111" relation="include">
+        </childnode>
+        <childnode refid="3107" relation="include">
+        </childnode>
+      </node>
+      <node id="3112">
+        <label>tsaSerialize.hpp</label>
+        <link refid="tsa_serialize_8hpp"/>
+        <childnode refid="3106" relation="include">
+        </childnode>
+        <childnode refid="3107" relation="include">
+        </childnode>
+        <childnode refid="3108" relation="include">
+        </childnode>
+        <childnode refid="3113" relation="include">
+        </childnode>
+        <childnode refid="3128" relation="include">
+        </childnode>
+      </node>
+      <node id="3137">
+        <label>fparser.hpp</label>
+        <link refid="fparser_8hpp"/>
+        <childnode refid="3111" relation="include">
+        </childnode>
+        <childnode refid="3124" relation="include">
+        </childnode>
+        <childnode refid="3120" relation="include">
+        </childnode>
+      </node>
+      <node id="3105">
+        <label>AlgoBase.hpp</label>
+        <link refid="_algo_base_8hpp"/>
+        <childnode refid="3106" relation="include">
+        </childnode>
+        <childnode refid="3107" relation="include">
+        </childnode>
+        <childnode refid="3108" relation="include">
+        </childnode>
+        <childnode refid="3109" relation="include">
+        </childnode>
+        <childnode refid="3110" relation="include">
+        </childnode>
+        <childnode refid="3111" relation="include">
+        </childnode>
+        <childnode refid="3112" relation="include">
+        </childnode>
+        <childnode refid="3128" relation="include">
+        </childnode>
+        <childnode refid="3130" relation="include">
+        </childnode>
+        <childnode refid="3132" relation="include">
+        </childnode>
+        <childnode refid="3138" relation="include">
+        </childnode>
+        <childnode refid="3140" relation="include">
+        </childnode>
+      </node>
+      <node id="3117">
+        <label>eternity/persist.hpp</label>
+        <link refid="persist_8hpp"/>
+        <childnode refid="3114" relation="include">
+        </childnode>
+        <childnode refid="3118" relation="include">
+        </childnode>
+        <childnode refid="3119" relation="include">
+        </childnode>
+        <childnode refid="3120" relation="include">
+        </childnode>
+        <childnode refid="3121" relation="include">
+        </childnode>
+        <childnode refid="3108" relation="include">
+        </childnode>
+      </node>
+      <node id="3136">
+        <label>string.h</label>
+      </node>
+      <node id="3104">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/SelectionOrderCriteria.hpp</label>
+        <link refid="_selection_order_criteria_8hpp"/>
+        <childnode refid="3105" relation="include">
+        </childnode>
+        <childnode refid="3138" relation="include">
+        </childnode>
+      </node>
+      <node id="3116">
+        <label>typeinfo</label>
+      </node>
+      <node id="3110">
+        <label>boost/numeric/ublas/io.hpp</label>
+      </node>
+      <node id="3131">
+        <label>unistd.h</label>
+      </node>
+      <node id="3135">
+        <label>tsaUtilityFunctions.hpp</label>
+        <link refid="tsa_utility_functions_8hpp"/>
+        <childnode refid="3136" relation="include">
+        </childnode>
+        <childnode refid="3137" relation="include">
+        </childnode>
+        <childnode refid="3134" relation="include">
+        </childnode>
+        <childnode refid="3108" relation="include">
+        </childnode>
+      </node>
+      <node id="3120">
+        <label>vector</label>
+      </node>
+      <node id="3132">
+        <label>BaseView.hpp</label>
+        <link refid="_base_view_8hpp"/>
+        <childnode refid="3124" relation="include">
+        </childnode>
+        <childnode refid="3111" relation="include">
+        </childnode>
+        <childnode refid="3128" relation="include">
+        </childnode>
+        <childnode refid="3133" relation="include">
+        </childnode>
+        <childnode refid="3135" relation="include">
+        </childnode>
+        <childnode refid="3112" relation="include">
+        </childnode>
+        <childnode refid="3130" relation="include">
+        </childnode>
+      </node>
+      <node id="3129">
+        <label>boost/numeric/ublas/matrix_proxy.hpp</label>
+      </node>
+      <node id="3127">
+        <label>sstream</label>
+      </node>
+      <node id="3139">
+        <label>FrameL.h</label>
+      </node>
+      <node id="3140">
+        <label>AlgoExceptions.hpp</label>
+        <link refid="_algo_exceptions_8hpp"/>
+        <childnode refid="3106" relation="include">
+        </childnode>
+        <childnode refid="3111" relation="include">
+        </childnode>
+      </node>
+      <node id="3138">
+        <label>SeqView.hpp</label>
+        <link refid="_seq_view_8hpp"/>
+        <childnode refid="3109" relation="include">
+        </childnode>
+        <childnode refid="3129" relation="include">
+        </childnode>
+        <childnode refid="3110" relation="include">
+        </childnode>
+        <childnode refid="3132" relation="include">
+        </childnode>
+        <childnode refid="3139" relation="include">
+        </childnode>
+      </node>
+      <node id="3118">
+        <label>math.h</label>
+      </node>
+      <node id="3109">
+        <label>boost/numeric/ublas/matrix.hpp</label>
+      </node>
+      <node id="3107">
+        <label>iostream</label>
+      </node>
+      <node id="3125">
+        <label>deque</label>
+      </node>
+      <node id="3122">
+        <label>eternity/persist_xml.hpp</label>
+        <link refid="persist__xml_8hpp"/>
+        <childnode refid="3117" relation="include">
+        </childnode>
+        <childnode refid="3123" relation="include">
+        </childnode>
+        <childnode refid="3125" relation="include">
+        </childnode>
+      </node>
+      <node id="3134">
+        <label>complex</label>
+      </node>
+      <node id="3126">
+        <label>eternity/algorithms.hpp</label>
+        <link refid="algorithms_8hpp"/>
+        <childnode refid="3117" relation="include">
+        </childnode>
+        <childnode refid="3122" relation="include">
+        </childnode>
+        <childnode refid="3123" relation="include">
+        </childnode>
+        <childnode refid="3127" relation="include">
+        </childnode>
+      </node>
+      <node id="3121">
+        <label>algorithm</label>
+      </node>
+      <node id="3115">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3143">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/tsa.hpp</label>
+        <link refid="tsa_8hpp"/>
+      </node>
+      <node id="3141">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/SelectionOrderCriteria.hpp</label>
+        <link refid="_selection_order_criteria_8hpp"/>
+        <childnode refid="3142" relation="include">
+        </childnode>
+        <childnode refid="3143" relation="include">
+        </childnode>
+      </node>
+      <node id="3142">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/SelectionOrderCriteria.cpp</label>
+        <link refid="_selection_order_criteria_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classtsa_1_1_selection_order_criteria" prot="public">tsa::SelectionOrderCriteria</innerclass>
+    <innernamespace refid="namespacetsa">tsa</innernamespace>
+    <briefdescription>
+<para>Estimate the function for the AR Selection Order Criteria. </para>    </briefdescription>
+    <detaileddescription>
+<para>Copyright (C) 2004 by Elena Cuoco <ulink url="mailto:elena.cuoco@ego-gw.it">elena.cuoco@ego-gw.it</ulink></para><para>This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</para><para>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</para><para>You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.</para><para><simplesect kind="author"><para>Elena Cuoco <ulink url="mailto:elena.cuoco@ego-gw.it">elena.cuoco@ego-gw.it</ulink> </para></simplesect>
+<simplesect kind="date"><para>2005 </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>__SELECTIONORDERCRITERIA_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__SELECTIONORDERCRITERIA_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"></codeline>
+<codeline lineno="41"></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_algo_base_8hpp" kindref="compound">AlgoBase.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_seq_view_8hpp" kindref="compound">SeqView.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"></codeline>
+<codeline lineno="51"></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"></codeline>
+<codeline lineno="58"></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"></codeline>
+<codeline lineno="66"><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceboost_1_1numeric_1_1ublas" kindref="compound">boost::numeric::ublas</ref>;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetsa" kindref="compound">tsa</ref><sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="classtsa_1_1_selection_order_criteria" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classtsa_1_1_selection_order_criteria" kindref="compound">SelectionOrderCriteria</ref><sp/>:<sp/><ref refid="classtsa_1_1_algo_base" kindref="compound">AlgoBase</ref><sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_selection_order_criteria" kindref="compound">SelectionOrderCriteria</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>N,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Order);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classtsa_1_1_selection_order_criteria" kindref="compound">SelectionOrderCriteria</ref>();</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>execute(<ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref>&amp;<sp/>Parcor);</highlight></codeline>
+<codeline lineno="113"></codeline>
+<codeline lineno="117"></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119" refid="classtsa_1_1_selection_order_criteria_1aeb60448670ad981aca76e9a72816c529" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_selection_order_criteria_1aeb60448670ad981aca76e9a72816c529" kindref="member">GetEps</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j)<sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mEps(j);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124" refid="classtsa_1_1_selection_order_criteria_1a576439d71bf4a7e567c540c4f1eabf40" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_selection_order_criteria_1a576439d71bf4a7e567c540c4f1eabf40" kindref="member">GetFpe</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j)<sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mFpe(j);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129" refid="classtsa_1_1_selection_order_criteria_1a2756d71a6b56eba01538e54fa71f5cce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_selection_order_criteria_1a2756d71a6b56eba01538e54fa71f5cce" kindref="member">GetMdl</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j)<sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mMdl(j);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134" refid="classtsa_1_1_selection_order_criteria_1add034262822c903dfd6d52b00e014c07" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_selection_order_criteria_1add034262822c903dfd6d52b00e014c07" kindref="member">GetAic</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j)<sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mAic(j);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139" refid="classtsa_1_1_selection_order_criteria_1a8ccfe952a0ef4d2b60e0e6a968abc439" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_selection_order_criteria_1a8ccfe952a0ef4d2b60e0e6a968abc439" kindref="member">GetAicC</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j)<sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mAicC(j);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144" refid="classtsa_1_1_selection_order_criteria_1a3e273fa404fe97a0479c7fc43a510801" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_selection_order_criteria_1a3e273fa404fe97a0479c7fc43a510801" kindref="member">GetCat</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j)<sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mCat(j);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149" refid="classtsa_1_1_selection_order_criteria_1a7dd080dd100b191e8b1638d15019c175" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_selection_order_criteria_1a7dd080dd100b191e8b1638d15019c175" kindref="member">GetHQ</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j)<sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mHQ(j);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154" refid="classtsa_1_1_selection_order_criteria_1aaa56b262fea6a0c8081c92b408f83754" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_selection_order_criteria_1aaa56b262fea6a0c8081c92b408f83754" kindref="member">GetCic</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j)<sp/>{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mCic(j);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159" refid="classtsa_1_1_selection_order_criteria_1a6cd4473ff39d1ef44384cbd3dd2ee9c6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_selection_order_criteria_1a6cd4473ff39d1ef44384cbd3dd2ee9c6" kindref="member">GetFsic</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j)<sp/>{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mFsic(j);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"></codeline>
+<codeline lineno="168"></codeline>
+<codeline lineno="169"></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="176" refid="classtsa_1_1_selection_order_criteria_1a2b364448fe8af2072b3c4443a611200c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_selection_order_criteria_1a2b364448fe8af2072b3c4443a611200c" kindref="member">mMaxOrder</ref>;</highlight></codeline>
+<codeline lineno="177" refid="classtsa_1_1_selection_order_criteria_1a838d65217ce4468ea6e3a26343d051b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_selection_order_criteria_1a838d65217ce4468ea6e3a26343d051b1" kindref="member">mN</ref>;</highlight></codeline>
+<codeline lineno="178" refid="classtsa_1_1_selection_order_criteria_1a0628c9e68c9c176c700f8605a5292fb0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_selection_order_criteria_1a0628c9e68c9c176c700f8605a5292fb0" kindref="member">mSelOrd</ref>;</highlight></codeline>
+<codeline lineno="179" refid="classtsa_1_1_selection_order_criteria_1af943c278592db40087a1dc8f7e55422d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref><sp/><ref refid="classtsa_1_1_selection_order_criteria_1af943c278592db40087a1dc8f7e55422d" kindref="member">mEps</ref>;</highlight></codeline>
+<codeline lineno="180" refid="classtsa_1_1_selection_order_criteria_1a661541b1bd821838cff0d7dc74f5b074" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref><sp/><ref refid="classtsa_1_1_selection_order_criteria_1a661541b1bd821838cff0d7dc74f5b074" kindref="member">mFpe</ref>;</highlight></codeline>
+<codeline lineno="181" refid="classtsa_1_1_selection_order_criteria_1a6aff5035c2b110a5e81ba55c296a6012" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref><sp/><ref refid="classtsa_1_1_selection_order_criteria_1a6aff5035c2b110a5e81ba55c296a6012" kindref="member">mMdl</ref>;</highlight></codeline>
+<codeline lineno="182" refid="classtsa_1_1_selection_order_criteria_1a80e4268e4f5f617411d8529c9f4d3b76" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref><sp/><ref refid="classtsa_1_1_selection_order_criteria_1a80e4268e4f5f617411d8529c9f4d3b76" kindref="member">mAic</ref>;</highlight></codeline>
+<codeline lineno="183" refid="classtsa_1_1_selection_order_criteria_1acde6db27b392c9a0c62becf4128f9ef8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref><sp/><ref refid="classtsa_1_1_selection_order_criteria_1acde6db27b392c9a0c62becf4128f9ef8" kindref="member">mAicC</ref>;</highlight></codeline>
+<codeline lineno="184" refid="classtsa_1_1_selection_order_criteria_1ad94e1f1c5867ddbdc0209067e840d433" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref><sp/><ref refid="classtsa_1_1_selection_order_criteria_1ad94e1f1c5867ddbdc0209067e840d433" kindref="member">mCat</ref>;</highlight></codeline>
+<codeline lineno="185" refid="classtsa_1_1_selection_order_criteria_1ae5332ab27aff98eed6f196387dd83a51" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref><sp/><ref refid="classtsa_1_1_selection_order_criteria_1ae5332ab27aff98eed6f196387dd83a51" kindref="member">mHQ</ref>;</highlight></codeline>
+<codeline lineno="186" refid="classtsa_1_1_selection_order_criteria_1a6c76b9bb7bdb04d6c983dba37c76fadd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref><sp/><ref refid="classtsa_1_1_selection_order_criteria_1a6c76b9bb7bdb04d6c983dba37c76fadd" kindref="member">mFsic</ref>;</highlight></codeline>
+<codeline lineno="187" refid="classtsa_1_1_selection_order_criteria_1a6028ff4ec0b73586797d81dad9eeabc1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref><sp/><ref refid="classtsa_1_1_selection_order_criteria_1a6028ff4ec0b73586797d81dad9eeabc1" kindref="member">mCic</ref>;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"></codeline>
+<codeline lineno="196"></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"></codeline>
+<codeline lineno="204"></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal">}<sp/></highlight><highlight class="comment">//end<sp/>namespace</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/><sp/>__SELECTIONORDERCRITERIA_HPP</highlight></codeline>
+    </programlisting>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/SelectionOrderCriteria.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,220 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classtsa_1_1_a_r2" kind="class" language="C++" prot="public">
+    <compoundname>tsa::AR2</compoundname>
+    <basecompoundref refid="classtsa_1_1_algo_base" prot="public" virt="non-virtual">tsa::AlgoBase</basecompoundref>
+    <includes refid="_a_r2_8hpp" local="no">AR2.hpp</includes>
+      <sectiondef kind="user-defined">
+      <header>Operations</header>
+      <memberdef kind="function" id="classtsa_1_1_a_r2_1ac99c0344d5376911a0976a78c0f8a96f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::AR2::operator()</definition>
+        <argsstring>(SeqViewDouble &amp;in, SeqViewDouble &amp;out)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref> &amp;</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref> &amp;</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/AR2.hpp" line="90" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/AR2.cpp" bodystart="19" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_a_r2_1a5a3bc7f3a15baca56a2660fff78259f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::AR2::execute</definition>
+        <argsstring>(Dmatrix &amp;in, Dmatrix &amp;out, double scale)</argsstring>
+        <name>execute</name>
+        <param>
+          <type><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref> &amp;</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref> &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>scale</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input Data </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Filtered Data </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/AR2.hpp" line="99" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/AR2.cpp" bodystart="36" bodyend="45"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtsa_1_1_a_r2_1ad91c696d1eb47fb92e4440de0e871b34" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double tsa::AR2::mA</definition>
+        <argsstring></argsstring>
+        <name>mA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/AR2.hpp" line="124" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/AR2.hpp" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_a_r2_1aa5edb94b32659768807f67f124b055f7" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double tsa::AR2::mB</definition>
+        <argsstring></argsstring>
+        <name>mB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/AR2.hpp" line="125" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/AR2.hpp" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_a_r2_1a1e28277853e0e35cca6eb9a283cbc39e" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double tsa::AR2::mC</definition>
+        <argsstring></argsstring>
+        <name>mC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/AR2.hpp" line="126" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/AR2.hpp" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_a_r2_1a855a67e26b267c41a48b5eb48d35ec06" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double tsa::AR2::mXm1</definition>
+        <argsstring></argsstring>
+        <name>mXm1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/AR2.hpp" line="128" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/AR2.hpp" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_a_r2_1add01d087af153e0addabb8c5b98318e4" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double tsa::AR2::mXm2</definition>
+        <argsstring></argsstring>
+        <name>mXm2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/AR2.hpp" line="129" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/AR2.hpp" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtsa_1_1_a_r2_1af98beea50a63f72e22af69e2f1843bc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tsa::AR2::AR2</definition>
+        <argsstring>(const double f, const double gamma, const double h)</argsstring>
+        <name>AR2</name>
+        <param>
+          <type>const double</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>gamma</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>h</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/AR2.hpp" line="76" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/AR2.cpp" bodystart="5" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_a_r2_1a69e035a519d396ff2ef47759d6394117" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>tsa::AR2::~AR2</definition>
+        <argsstring>()</argsstring>
+        <name>~AR2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/AR2.hpp" line="82" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/AR2.cpp" bodystart="15" bodyend="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="59">
+        <label>tsa::AR2</label>
+        <link refid="classtsa_1_1_a_r2"/>
+        <childnode refid="60" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="60">
+        <label>tsa::AlgoBase</label>
+        <link refid="classtsa_1_1_algo_base"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="61">
+        <label>tsa::AR2</label>
+        <link refid="classtsa_1_1_a_r2"/>
+        <childnode refid="62" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="62">
+        <label>tsa::AlgoBase</label>
+        <link refid="classtsa_1_1_algo_base"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/AR2.hpp" line="70" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/AR2.hpp" bodystart="70" bodyend="132"/>
+    <listofallmembers>
+      <member refid="classtsa_1_1_a_r2_1af98beea50a63f72e22af69e2f1843bc3" prot="public" virt="non-virtual"><scope>tsa::AR2</scope><name>AR2</name></member>
+      <member refid="classtsa_1_1_a_r2_1a5a3bc7f3a15baca56a2660fff78259f9" prot="public" virt="non-virtual"><scope>tsa::AR2</scope><name>execute</name></member>
+      <member refid="classtsa_1_1_a_r2_1ad91c696d1eb47fb92e4440de0e871b34" prot="private" virt="non-virtual"><scope>tsa::AR2</scope><name>mA</name></member>
+      <member refid="classtsa_1_1_a_r2_1aa5edb94b32659768807f67f124b055f7" prot="private" virt="non-virtual"><scope>tsa::AR2</scope><name>mB</name></member>
+      <member refid="classtsa_1_1_a_r2_1a1e28277853e0e35cca6eb9a283cbc39e" prot="private" virt="non-virtual"><scope>tsa::AR2</scope><name>mC</name></member>
+      <member refid="classtsa_1_1_a_r2_1a855a67e26b267c41a48b5eb48d35ec06" prot="private" virt="non-virtual"><scope>tsa::AR2</scope><name>mXm1</name></member>
+      <member refid="classtsa_1_1_a_r2_1add01d087af153e0addabb8c5b98318e4" prot="private" virt="non-virtual"><scope>tsa::AR2</scope><name>mXm2</name></member>
+      <member refid="classtsa_1_1_a_r2_1ac99c0344d5376911a0976a78c0f8a96f" prot="public" virt="non-virtual"><scope>tsa::AR2</scope><name>operator()</name></member>
+      <member refid="classtsa_1_1_a_r2_1a69e035a519d396ff2ef47759d6394117" prot="public" virt="virtual"><scope>tsa::AR2</scope><name>~AR2</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

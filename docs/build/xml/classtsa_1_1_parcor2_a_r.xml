@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classtsa_1_1_parcor2_a_r" kind="class" language="C++" prot="public">
+    <compoundname>tsa::Parcor2AR</compoundname>
+    <basecompoundref refid="classtsa_1_1_algo_base" prot="public" virt="non-virtual">tsa::AlgoBase</basecompoundref>
+    <includes refid="_parcor2_a_r_8hpp" local="no">Parcor2AR.hpp</includes>
+      <sectiondef kind="user-defined">
+      <header>Operations</header>
+      <memberdef kind="function" id="classtsa_1_1_parcor2_a_r_1a0a761baa7118ecfe61e612c1ae27a360" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::Parcor2AR::execute</definition>
+        <argsstring>(Dvector &amp;Parcor, Dvector &amp;AR)</argsstring>
+        <name>execute</name>
+        <param>
+          <type><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref> &amp;</type>
+          <declname>Parcor</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref> &amp;</type>
+          <declname>AR</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The execute method transform the parcor in AR</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Parcor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>reflection coefficients vector </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>AR</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>autoregressive parameters </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/Parcor2AR.hpp" line="99" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/Parcor2AR.cpp" bodystart="32" bodyend="56"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtsa_1_1_parcor2_a_r_1a071a1e9ef52185df08d6889937bf4a15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tsa::Parcor2AR::Parcor2AR</definition>
+        <argsstring>()</argsstring>
+        <name>Parcor2AR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/Parcor2AR.hpp" line="78" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/Parcor2AR.cpp" bodystart="19" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_parcor2_a_r_1a048e923396810067505a8a18ca95ec3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>tsa::Parcor2AR::~Parcor2AR</definition>
+        <argsstring>()</argsstring>
+        <name>~Parcor2AR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/Parcor2AR.hpp" line="83" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/Parcor2AR.cpp" bodystart="22" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_parcor2_a_r_1aa87caf6b20cdb03a33fddf7e8c9beeef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref></type>
+        <definition>Dvector tsa::Parcor2AR::operator()</definition>
+        <argsstring>(Dvector Parcor)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref></type>
+          <declname>Parcor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/Parcor2AR.hpp" line="85" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/Parcor2AR.cpp" bodystart="25" bodyend="30"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Estimate the AR parameters by the Parcor. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="350">
+        <label>tsa::Parcor2AR</label>
+        <link refid="classtsa_1_1_parcor2_a_r"/>
+        <childnode refid="351" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="351">
+        <label>tsa::AlgoBase</label>
+        <link refid="classtsa_1_1_algo_base"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="352">
+        <label>tsa::Parcor2AR</label>
+        <link refid="classtsa_1_1_parcor2_a_r"/>
+        <childnode refid="353" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="353">
+        <label>tsa::AlgoBase</label>
+        <link refid="classtsa_1_1_algo_base"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/Parcor2AR.hpp" line="72" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/Parcor2AR.hpp" bodystart="72" bodyend="122"/>
+    <listofallmembers>
+      <member refid="classtsa_1_1_parcor2_a_r_1a0a761baa7118ecfe61e612c1ae27a360" prot="public" virt="non-virtual"><scope>tsa::Parcor2AR</scope><name>execute</name></member>
+      <member refid="classtsa_1_1_parcor2_a_r_1aa87caf6b20cdb03a33fddf7e8c9beeef" prot="public" virt="non-virtual"><scope>tsa::Parcor2AR</scope><name>operator()</name></member>
+      <member refid="classtsa_1_1_parcor2_a_r_1a071a1e9ef52185df08d6889937bf4a15" prot="public" virt="non-virtual"><scope>tsa::Parcor2AR</scope><name>Parcor2AR</name></member>
+      <member refid="classtsa_1_1_parcor2_a_r_1a048e923396810067505a8a18ca95ec3a" prot="public" virt="virtual"><scope>tsa::Parcor2AR</scope><name>~Parcor2AR</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classtsa_1_1_type_traits_3_01std_1_1complex_3_01double_01_4_01_4" kind="class" language="C++" prot="public">
+    <compoundname>tsa::TypeTraits&lt; std::complex&lt; double &gt; &gt;</compoundname>
+    <includes refid="tsa_traits_8hpp" local="no">tsaTraits.hpp</includes>
+    <templateparamlist>
+    </templateparamlist>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classtsa_1_1_type_traits_3_01std_1_1complex_3_01double_01_4_01_4_1a9eced3592f7dafac90d6f7d6aa9bca66" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::complex&lt; double &gt;</type>
+        <definition>static std::complex&lt;double&gt; tsa::TypeTraits&lt; std::complex&lt; double &gt; &gt;::conj</definition>
+        <argsstring>(const std::complex&lt; double &gt; &amp;x)</argsstring>
+        <name>conj</name>
+        <param>
+          <type>const std::complex&lt; double &gt; &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTraits.hpp" line="106" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTraits.hpp" bodystart="106" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_type_traits_3_01std_1_1complex_3_01double_01_4_01_4_1ab79705afcbcb0c504ecd924f57c1ed49" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>static double tsa::TypeTraits&lt; std::complex&lt; double &gt; &gt;::real</definition>
+        <argsstring>(const std::complex&lt; double &gt; &amp;x)</argsstring>
+        <name>real</name>
+        <param>
+          <type>const std::complex&lt; double &gt; &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTraits.hpp" line="110" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTraits.hpp" bodystart="110" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_type_traits_3_01std_1_1complex_3_01double_01_4_01_4_1a6bf03301824846b16d9927ab5d841ed4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>static double tsa::TypeTraits&lt; std::complex&lt; double &gt; &gt;::imag</definition>
+        <argsstring>(const std::complex&lt; double &gt; &amp;x)</argsstring>
+        <name>imag</name>
+        <param>
+          <type>const std::complex&lt; double &gt; &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTraits.hpp" line="114" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTraits.hpp" bodystart="114" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_type_traits_3_01std_1_1complex_3_01double_01_4_01_4_1ad25e2572dee56a68dde04217087b95ad" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>static double tsa::TypeTraits&lt; std::complex&lt; double &gt; &gt;::abs</definition>
+        <argsstring>(std::complex&lt; double &gt; x)</argsstring>
+        <name>abs</name>
+        <param>
+          <type>std::complex&lt; double &gt;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTraits.hpp" line="118" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTraits.hpp" bodystart="118" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_type_traits_3_01std_1_1complex_3_01double_01_4_01_4_1aff1b7714042e772177e6031c9df77e34" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>static double tsa::TypeTraits&lt; std::complex&lt; double &gt; &gt;::abs2</definition>
+        <argsstring>(const std::complex&lt; double &gt; &amp;x)</argsstring>
+        <name>abs2</name>
+        <param>
+          <type>const std::complex&lt; double &gt; &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTraits.hpp" line="122" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTraits.hpp" bodystart="122" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_type_traits_3_01std_1_1complex_3_01double_01_4_01_4_1ae96f4d0c1512efbf11bfb92907115431" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>static double tsa::TypeTraits&lt; std::complex&lt; double &gt; &gt;::phase</definition>
+        <argsstring>(const std::complex&lt; double &gt; &amp;x)</argsstring>
+        <name>phase</name>
+        <param>
+          <type>const std::complex&lt; double &gt; &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTraits.hpp" line="126" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTraits.hpp" bodystart="126" bodyend="128"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTraits.hpp" line="103" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTraits.hpp" bodystart="103" bodyend="130"/>
+    <listofallmembers>
+      <member refid="classtsa_1_1_type_traits_3_01std_1_1complex_3_01double_01_4_01_4_1ad25e2572dee56a68dde04217087b95ad" prot="public" virt="non-virtual"><scope>tsa::TypeTraits&lt; std::complex&lt; double &gt; &gt;</scope><name>abs</name></member>
+      <member refid="classtsa_1_1_type_traits_3_01std_1_1complex_3_01double_01_4_01_4_1aff1b7714042e772177e6031c9df77e34" prot="public" virt="non-virtual"><scope>tsa::TypeTraits&lt; std::complex&lt; double &gt; &gt;</scope><name>abs2</name></member>
+      <member refid="classtsa_1_1_type_traits_3_01std_1_1complex_3_01double_01_4_01_4_1a9eced3592f7dafac90d6f7d6aa9bca66" prot="public" virt="non-virtual"><scope>tsa::TypeTraits&lt; std::complex&lt; double &gt; &gt;</scope><name>conj</name></member>
+      <member refid="classtsa_1_1_type_traits_3_01std_1_1complex_3_01double_01_4_01_4_1a6bf03301824846b16d9927ab5d841ed4" prot="public" virt="non-virtual"><scope>tsa::TypeTraits&lt; std::complex&lt; double &gt; &gt;</scope><name>imag</name></member>
+      <member refid="classtsa_1_1_type_traits_3_01std_1_1complex_3_01double_01_4_01_4_1ae96f4d0c1512efbf11bfb92907115431" prot="public" virt="non-virtual"><scope>tsa::TypeTraits&lt; std::complex&lt; double &gt; &gt;</scope><name>phase</name></member>
+      <member refid="classtsa_1_1_type_traits_3_01std_1_1complex_3_01double_01_4_01_4_1ab79705afcbcb0c504ecd924f57c1ed49" prot="public" virt="non-virtual"><scope>tsa::TypeTraits&lt; std::complex&lt; double &gt; &gt;</scope><name>real</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

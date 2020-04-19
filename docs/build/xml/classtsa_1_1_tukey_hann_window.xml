@@ -1,0 +1,273 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classtsa_1_1_tukey_hann_window" kind="class" language="C++" prot="public">
+    <compoundname>tsa::TukeyHannWindow</compoundname>
+    <basecompoundref refid="classtsa_1_1_base_window" prot="public" virt="non-virtual">tsa::BaseWindow</basecompoundref>
+    <includes refid="_tukey_hann_window_8hpp" local="no">TukeyHannWindow.hpp</includes>
+      <sectiondef kind="user-defined">
+      <header>Operations</header>
+      <memberdef kind="function" id="classtsa_1_1_tukey_hann_window_1a2a10c0c94b2c5ebbc1db201371074295" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void tsa::TukeyHannWindow::operator()</definition>
+        <argsstring>(SeqViewDouble &amp;v1)</argsstring>
+        <name>operator()</name>
+        <reimplements refid="classtsa_1_1_base_window_1a05d9edb95dc01840a1b2df78dfa3a8c1">operator()</reimplements>
+        <param>
+          <type><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref> &amp;</type>
+          <declname>v1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Apply the window to a given time view.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the time view </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/TukeyHannWindow.hpp" line="117" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/TukeyHannWindow.hpp" bodystart="117" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_tukey_hann_window_1af889453b564781f9eca6993f2fd95646" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void tsa::TukeyHannWindow::operator()</definition>
+        <argsstring>(SeqViewDouble &amp;v1, SeqViewDouble &amp;v2)</argsstring>
+        <name>operator()</name>
+        <reimplements refid="classtsa_1_1_base_window_1afda50daa943527e09792b06e5ba69bcb">operator()</reimplements>
+        <param>
+          <type><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref> &amp;</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref> &amp;</type>
+          <declname>v2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Apply a window to an input view and write the results on a output view.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the input view </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the output view </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/TukeyHannWindow.hpp" line="139" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/TukeyHannWindow.hpp" bodystart="139" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_tukey_hann_window_1a253c1786cef6ec7b5e7ef700f4238496" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void tsa::TukeyHannWindow::Resize</definition>
+        <argsstring>(unsigned int size)</argsstring>
+        <name>Resize</name>
+        <reimplements refid="classtsa_1_1_base_window_1a8a2a3425f2915762d50fa57dd0e04f22">Resize</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Resize the window dimension.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new size for the window </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/TukeyHannWindow.hpp" line="167" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/TukeyHannWindow.hpp" bodystart="167" bodyend="170"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtsa_1_1_tukey_hann_window_1abdd4209c65b5774c0279a7ea2ce2fa7b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>tsa::TukeyHannWindow::TukeyHannWindow</definition>
+        <argsstring>(int size)</argsstring>
+        <name>TukeyHannWindow</name>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the size of the window </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cached</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if the window must be preevaluated in a buffer </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/TukeyHannWindow.hpp" line="77" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/TukeyHannWindow.hpp" bodystart="77" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_tukey_hann_window_1ab883fbdd5791e0bbedede99126e17bf7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>tsa::TukeyHannWindow::TukeyHannWindow</definition>
+        <argsstring>(int size, const std::string &amp;p)</argsstring>
+        <name>TukeyHannWindow</name>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/TukeyHannWindow.hpp" line="88" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/TukeyHannWindow.hpp" bodystart="88" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_tukey_hann_window_1af6b96cf901725bc0bcc7cf79bef2d766" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual tsa::TukeyHannWindow::~TukeyHannWindow</definition>
+        <argsstring>()</argsstring>
+        <name>~TukeyHannWindow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/TukeyHannWindow.hpp" line="103" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/TukeyHannWindow.hpp" bodystart="103" bodyend="105"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classtsa_1_1_tukey_hann_window_1a041a98810aa841fd88d19139bf0e977f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void tsa::TukeyHannWindow::FillWindow</definition>
+        <argsstring>()</argsstring>
+        <name>FillWindow</name>
+        <reimplements refid="classtsa_1_1_base_window_1aa74b29105d94caa521d308198e8e6643">FillWindow</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialize the window with the correct values, given its actual size. This is a pure virtual function, which is redefined by each window class. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/TukeyHannWindow.hpp" line="205" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/TukeyHannWindow.hpp" bodystart="205" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_tukey_hann_window_1a6d97dd74ecf13fce86fc5a9349cbd598" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double tsa::TukeyHannWindow::Dirichlet</definition>
+        <argsstring>(double theta)</argsstring>
+        <name>Dirichlet</name>
+        <param>
+          <type>double</type>
+          <declname>theta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Dirichlet&apos;s function</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>theta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>argument</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the Dirichlet&apos;s function </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/TukeyHannWindow.hpp" line="222" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/TukeyHannWindow.hpp" bodystart="222" bodyend="224"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>TukeyHann windowing algorithm. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="422">
+        <label>tsa::BaseWindow</label>
+        <link refid="classtsa_1_1_base_window"/>
+        <childnode refid="423" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="421">
+        <label>tsa::TukeyHannWindow</label>
+        <link refid="classtsa_1_1_tukey_hann_window"/>
+        <childnode refid="422" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="423">
+        <label>tsa::AlgoBase</label>
+        <link refid="classtsa_1_1_algo_base"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="425">
+        <label>tsa::BaseWindow</label>
+        <link refid="classtsa_1_1_base_window"/>
+        <childnode refid="426" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="424">
+        <label>tsa::TukeyHannWindow</label>
+        <link refid="classtsa_1_1_tukey_hann_window"/>
+        <childnode refid="425" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="426">
+        <label>tsa::AlgoBase</label>
+        <link refid="classtsa_1_1_algo_base"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/TukeyHannWindow.hpp" line="68" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/TukeyHannWindow.hpp" bodystart="68" bodyend="226"/>
+    <listofallmembers>
+      <member refid="classtsa_1_1_base_window_1aea4dee45722299896913859d7b899d6f" prot="public" virt="non-virtual"><scope>tsa::TukeyHannWindow</scope><name>BaseWindow</name></member>
+      <member refid="classtsa_1_1_base_window_1a4bd3edc44a56103ac3f9112a55a10420" prot="public" virt="non-virtual"><scope>tsa::TukeyHannWindow</scope><name>CrossAverage</name></member>
+      <member refid="classtsa_1_1_base_window_1a31f86887f9ccbddd97bdca903c506606" prot="public" virt="non-virtual"><scope>tsa::TukeyHannWindow</scope><name>CrossSquareAverage</name></member>
+      <member refid="classtsa_1_1_tukey_hann_window_1a6d97dd74ecf13fce86fc5a9349cbd598" prot="private" virt="non-virtual"><scope>tsa::TukeyHannWindow</scope><name>Dirichlet</name></member>
+      <member refid="classtsa_1_1_base_window_1a15647cb85344c7e82ecde50675b07efd" prot="public" virt="non-virtual"><scope>tsa::TukeyHannWindow</scope><name>execute</name></member>
+      <member refid="classtsa_1_1_base_window_1a7e4b5f7d87bbe397332b4e506b0681c2" prot="public" virt="non-virtual"><scope>tsa::TukeyHannWindow</scope><name>execute</name></member>
+      <member refid="classtsa_1_1_base_window_1a34b933da998ba8137d0e0def7514d2cb" prot="public" virt="non-virtual"><scope>tsa::TukeyHannWindow</scope><name>execute</name></member>
+      <member refid="classtsa_1_1_base_window_1abadd3d1ef579310ab440a70d77e1d46d" prot="public" virt="non-virtual"><scope>tsa::TukeyHannWindow</scope><name>execute</name></member>
+      <member refid="classtsa_1_1_tukey_hann_window_1a041a98810aa841fd88d19139bf0e977f" prot="private" virt="virtual"><scope>tsa::TukeyHannWindow</scope><name>FillWindow</name></member>
+      <member refid="classtsa_1_1_base_window_1af3e45daf0401f06108c6634344532af8" prot="public" virt="non-virtual"><scope>tsa::TukeyHannWindow</scope><name>GetSize</name></member>
+      <member refid="classtsa_1_1_base_window_1a182b397ac3f3c409bfcb3a39d9c1575a" prot="protected" virt="non-virtual"><scope>tsa::TukeyHannWindow</scope><name>mWindow</name></member>
+      <member refid="classtsa_1_1_base_window_1ad6681a5cb29414a97af6be1ea7805a81" prot="public" virt="virtual"><scope>tsa::TukeyHannWindow</scope><name>Normalize</name></member>
+      <member refid="classtsa_1_1_tukey_hann_window_1a2a10c0c94b2c5ebbc1db201371074295" prot="public" virt="virtual"><scope>tsa::TukeyHannWindow</scope><name>operator()</name></member>
+      <member refid="classtsa_1_1_tukey_hann_window_1af889453b564781f9eca6993f2fd95646" prot="public" virt="virtual"><scope>tsa::TukeyHannWindow</scope><name>operator()</name></member>
+      <member refid="classtsa_1_1_base_window_1ab9dc5e39e09701b60b9e160837f059df" prot="public" virt="non-virtual" ambiguityscope="tsa::BaseWindow::"><scope>tsa::TukeyHannWindow</scope><name>operator()</name></member>
+      <member refid="classtsa_1_1_tukey_hann_window_1a253c1786cef6ec7b5e7ef700f4238496" prot="public" virt="virtual"><scope>tsa::TukeyHannWindow</scope><name>Resize</name></member>
+      <member refid="classtsa_1_1_tukey_hann_window_1abdd4209c65b5774c0279a7ea2ce2fa7b" prot="public" virt="non-virtual"><scope>tsa::TukeyHannWindow</scope><name>TukeyHannWindow</name></member>
+      <member refid="classtsa_1_1_tukey_hann_window_1ab883fbdd5791e0bbedede99126e17bf7" prot="public" virt="non-virtual"><scope>tsa::TukeyHannWindow</scope><name>TukeyHannWindow</name></member>
+      <member refid="classtsa_1_1_base_window_1a0e99ffa3d84e8c7a05f7de437bfd6241" prot="public" virt="virtual"><scope>tsa::TukeyHannWindow</scope><name>~BaseWindow</name></member>
+      <member refid="classtsa_1_1_tukey_hann_window_1af6b96cf901725bc0bcc7cf79bef2d766" prot="public" virt="virtual"><scope>tsa::TukeyHannWindow</scope><name>~TukeyHannWindow</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

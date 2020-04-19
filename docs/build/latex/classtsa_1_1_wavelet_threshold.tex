@@ -1,0 +1,358 @@
+\hypertarget{classtsa_1_1_wavelet_threshold}{}\section{tsa\+:\+:Wavelet\+Threshold Class Reference}
+\label{classtsa_1_1_wavelet_threshold}\index{tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}}
+
+
+{\ttfamily \#include $<$Wavelet\+Threshold.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classtsa_1_1_wavelet_threshold_a50c42c95dae960986a985157ca038fae}{Wavelet\+Thresholding} \{ \hyperlink{classtsa_1_1_wavelet_threshold_a50c42c95dae960986a985157ca038faea9f61564af63af2a5259667285adc8404}{highest}, 
+\hyperlink{classtsa_1_1_wavelet_threshold_a50c42c95dae960986a985157ca038faea890fa411734e6128a3422faa61aff98b}{dohonojohnston}, 
+\hyperlink{classtsa_1_1_wavelet_threshold_a50c42c95dae960986a985157ca038faea849b2c33799f9de0e842f1d935ea3822}{cuoco}
+ \}
+\item 
+enum \hyperlink{classtsa_1_1_wavelet_threshold_a93d14df024bbc8c3da182bf5899f8f83}{Thresholding\+Mode} \{ \hyperlink{classtsa_1_1_wavelet_threshold_a93d14df024bbc8c3da182bf5899f8f83adddc84c6cfd6dbd73d08352618545fb3}{hard}, 
+\hyperlink{classtsa_1_1_wavelet_threshold_a93d14df024bbc8c3da182bf5899f8f83a356244854a142af0e9f3db2cf4ad5192}{soft}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtsa_1_1_wavelet_threshold_a2815780145d4327729f21aa42eb08ddc}{Wavelet\+Threshold} (unsigned int N, unsigned int ncoeff=0, double sigma=1.\+0)
+\item 
+\hyperlink{classtsa_1_1_wavelet_threshold_a7a3219da0f0f814157c7a7c3d41a17cc}{$\sim$\+Wavelet\+Threshold} ()
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Operations}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtsa_1_1_wavelet_threshold_a124b4c13b828d8b85500f9c99d5f93ae}{operator()} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&WT, enum \hyperlink{classtsa_1_1_wavelet_threshold_a50c42c95dae960986a985157ca038fae}{Wavelet\+Thresholding} t, enum \hyperlink{classtsa_1_1_wavelet_threshold_a93d14df024bbc8c3da182bf5899f8f83}{Thresholding\+Mode} m=\hyperlink{classtsa_1_1_wavelet_threshold_a93d14df024bbc8c3da182bf5899f8f83a356244854a142af0e9f3db2cf4ad5192}{soft})
+\begin{DoxyCompactList}\small\item\em Brief documentation for the execute method. \end{DoxyCompactList}\item 
+void \hyperlink{classtsa_1_1_wavelet_threshold_ae05f0886ef54f3370fc5c91eff2b0de7}{operator()} (\hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&WT, enum \hyperlink{classtsa_1_1_wavelet_threshold_a50c42c95dae960986a985157ca038fae}{Wavelet\+Thresholding} t, enum \hyperlink{classtsa_1_1_wavelet_threshold_a93d14df024bbc8c3da182bf5899f8f83}{Thresholding\+Mode} m=\hyperlink{classtsa_1_1_wavelet_threshold_a93d14df024bbc8c3da182bf5899f8f83a356244854a142af0e9f3db2cf4ad5192}{soft})
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Getters}\par
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classtsa_1_1_wavelet_threshold_a219b1dbce4e92a84e8078a839b75c4c3}{Get\+Sigma} ()
+\item 
+double \hyperlink{classtsa_1_1_wavelet_threshold_a2b6e84938c13629e11a9f31b26c34eb9}{Get\+Level} ()
+\item 
+double \hyperlink{classtsa_1_1_wavelet_threshold_aa2a36e1131551abc41b02c4e6a4352c7}{Get\+Cm} ()
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Setters}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtsa_1_1_wavelet_threshold_a828cc5dbb8c68647a28f72eb0945e2a4}{Set\+Sigma} (double sigma)
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double $\ast$ \hyperlink{classtsa_1_1_wavelet_threshold_a033b585f29f5e95f7e525e993569e781}{m\+Abs\+Coeff}
+\item 
+size\+\_\+t $\ast$ \hyperlink{classtsa_1_1_wavelet_threshold_a937714dbfda90649e89c445837bf7bd3}{mP}
+\item 
+size\+\_\+t $\ast$ \hyperlink{classtsa_1_1_wavelet_threshold_a8491f1b1b3679c964294a3b277513374}{m\+P\+AC}
+\item 
+double $\ast$ \hyperlink{classtsa_1_1_wavelet_threshold_a85ce0caeabe9ca87f46e6a87df776262}{m\+Ord}
+\item 
+unsigned int \hyperlink{classtsa_1_1_wavelet_threshold_a5ee193a15408f941545c28a04cd3f71f}{mN}
+\item 
+double \hyperlink{classtsa_1_1_wavelet_threshold_a94759bf0bffb9f82c4544ace28d511ff}{m\+Median}
+\item 
+double \hyperlink{classtsa_1_1_wavelet_threshold_abce83133feca77b08cfc7efdb017e8ca}{m\+Thresh}
+\item 
+unsigned int \hyperlink{classtsa_1_1_wavelet_threshold_a1cde32dc32105b805047c8f59fa96057}{m\+Ncoeff}
+\item 
+double \hyperlink{classtsa_1_1_wavelet_threshold_a99b389ace8c9d6578e356b7a1c6855d9}{m\+Sigma}
+\item 
+int \hyperlink{classtsa_1_1_wavelet_threshold_af3141e33035206b95835c279a39393eb}{mlevel}
+\item 
+double \hyperlink{classtsa_1_1_wavelet_threshold_afb847894dc69de8339ceb444bc8e1dca}{mC}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Perform threshold on wavelet coefficients 
+
+Definition at line 77 of file Wavelet\+Threshold.\+hpp.
+
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classtsa_1_1_wavelet_threshold_a93d14df024bbc8c3da182bf5899f8f83}\label{classtsa_1_1_wavelet_threshold_a93d14df024bbc8c3da182bf5899f8f83}} 
+\index{tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}!Thresholding\+Mode@{Thresholding\+Mode}}
+\index{Thresholding\+Mode@{Thresholding\+Mode}!tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}}
+\subsubsection{\texorpdfstring{Thresholding\+Mode}{ThresholdingMode}}
+{\footnotesize\ttfamily enum \hyperlink{classtsa_1_1_wavelet_threshold_a93d14df024bbc8c3da182bf5899f8f83}{tsa\+::\+Wavelet\+Threshold\+::\+Thresholding\+Mode}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{hard@{hard}!tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}}\index{tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}!hard@{hard}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_threshold_a93d14df024bbc8c3da182bf5899f8f83adddc84c6cfd6dbd73d08352618545fb3}\label{classtsa_1_1_wavelet_threshold_a93d14df024bbc8c3da182bf5899f8f83adddc84c6cfd6dbd73d08352618545fb3}} 
+hard&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{soft@{soft}!tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}}\index{tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}!soft@{soft}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_threshold_a93d14df024bbc8c3da182bf5899f8f83a356244854a142af0e9f3db2cf4ad5192}\label{classtsa_1_1_wavelet_threshold_a93d14df024bbc8c3da182bf5899f8f83a356244854a142af0e9f3db2cf4ad5192}} 
+soft&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 86 of file Wavelet\+Threshold.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_wavelet_threshold_a50c42c95dae960986a985157ca038fae}\label{classtsa_1_1_wavelet_threshold_a50c42c95dae960986a985157ca038fae}} 
+\index{tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}!Wavelet\+Thresholding@{Wavelet\+Thresholding}}
+\index{Wavelet\+Thresholding@{Wavelet\+Thresholding}!tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}}
+\subsubsection{\texorpdfstring{Wavelet\+Thresholding}{WaveletThresholding}}
+{\footnotesize\ttfamily enum \hyperlink{classtsa_1_1_wavelet_threshold_a50c42c95dae960986a985157ca038fae}{tsa\+::\+Wavelet\+Threshold\+::\+Wavelet\+Thresholding}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{highest@{highest}!tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}}\index{tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}!highest@{highest}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_threshold_a50c42c95dae960986a985157ca038faea9f61564af63af2a5259667285adc8404}\label{classtsa_1_1_wavelet_threshold_a50c42c95dae960986a985157ca038faea9f61564af63af2a5259667285adc8404}} 
+highest&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{dohonojohnston@{dohonojohnston}!tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}}\index{tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}!dohonojohnston@{dohonojohnston}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_threshold_a50c42c95dae960986a985157ca038faea890fa411734e6128a3422faa61aff98b}\label{classtsa_1_1_wavelet_threshold_a50c42c95dae960986a985157ca038faea890fa411734e6128a3422faa61aff98b}} 
+dohonojohnston&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{cuoco@{cuoco}!tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}}\index{tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}!cuoco@{cuoco}}}\mbox{\Hypertarget{classtsa_1_1_wavelet_threshold_a50c42c95dae960986a985157ca038faea849b2c33799f9de0e842f1d935ea3822}\label{classtsa_1_1_wavelet_threshold_a50c42c95dae960986a985157ca038faea849b2c33799f9de0e842f1d935ea3822}} 
+cuoco&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 80 of file Wavelet\+Threshold.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtsa_1_1_wavelet_threshold_a2815780145d4327729f21aa42eb08ddc}\label{classtsa_1_1_wavelet_threshold_a2815780145d4327729f21aa42eb08ddc}} 
+\index{tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}!Wavelet\+Threshold@{Wavelet\+Threshold}}
+\index{Wavelet\+Threshold@{Wavelet\+Threshold}!tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}}
+\subsubsection{\texorpdfstring{Wavelet\+Threshold()}{WaveletThreshold()}}
+{\footnotesize\ttfamily tsa\+::\+Wavelet\+Threshold\+::\+Wavelet\+Threshold (\begin{DoxyParamCaption}\item[{unsigned int}]{N,  }\item[{unsigned int}]{ncoeff = {\ttfamily 0},  }\item[{double}]{sigma = {\ttfamily 1.0} }\end{DoxyParamCaption})}
+
+Constructor 
+
+Definition at line 20 of file Wavelet\+Threshold.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_wavelet_threshold_a7a3219da0f0f814157c7a7c3d41a17cc}\label{classtsa_1_1_wavelet_threshold_a7a3219da0f0f814157c7a7c3d41a17cc}} 
+\index{tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}!````~Wavelet\+Threshold@{$\sim$\+Wavelet\+Threshold}}
+\index{````~Wavelet\+Threshold@{$\sim$\+Wavelet\+Threshold}!tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}}
+\subsubsection{\texorpdfstring{$\sim$\+Wavelet\+Threshold()}{~WaveletThreshold()}}
+{\footnotesize\ttfamily tsa\+::\+Wavelet\+Threshold\+::$\sim$\+Wavelet\+Threshold (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor 
+
+Definition at line 36 of file Wavelet\+Threshold.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classtsa_1_1_wavelet_threshold_aa2a36e1131551abc41b02c4e6a4352c7}\label{classtsa_1_1_wavelet_threshold_aa2a36e1131551abc41b02c4e6a4352c7}} 
+\index{tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}!Get\+Cm@{Get\+Cm}}
+\index{Get\+Cm@{Get\+Cm}!tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}}
+\subsubsection{\texorpdfstring{Get\+Cm()}{GetCm()}}
+{\footnotesize\ttfamily double tsa\+::\+Wavelet\+Threshold\+::\+Get\+Cm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 135 of file Wavelet\+Threshold.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_wavelet_threshold_a2b6e84938c13629e11a9f31b26c34eb9}\label{classtsa_1_1_wavelet_threshold_a2b6e84938c13629e11a9f31b26c34eb9}} 
+\index{tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}!Get\+Level@{Get\+Level}}
+\index{Get\+Level@{Get\+Level}!tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}}
+\subsubsection{\texorpdfstring{Get\+Level()}{GetLevel()}}
+{\footnotesize\ttfamily double tsa\+::\+Wavelet\+Threshold\+::\+Get\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 131 of file Wavelet\+Threshold.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_wavelet_threshold_a219b1dbce4e92a84e8078a839b75c4c3}\label{classtsa_1_1_wavelet_threshold_a219b1dbce4e92a84e8078a839b75c4c3}} 
+\index{tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}!Get\+Sigma@{Get\+Sigma}}
+\index{Get\+Sigma@{Get\+Sigma}!tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}}
+\subsubsection{\texorpdfstring{Get\+Sigma()}{GetSigma()}}
+{\footnotesize\ttfamily double tsa\+::\+Wavelet\+Threshold\+::\+Get\+Sigma (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 127 of file Wavelet\+Threshold.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_wavelet_threshold_a124b4c13b828d8b85500f9c99d5f93ae}\label{classtsa_1_1_wavelet_threshold_a124b4c13b828d8b85500f9c99d5f93ae}} 
+\index{tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}!operator()@{operator()}}
+\index{operator()@{operator()}!tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void tsa\+::\+Wavelet\+Threshold\+::operator() (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{WT,  }\item[{enum \hyperlink{classtsa_1_1_wavelet_threshold_a50c42c95dae960986a985157ca038fae}{Wavelet\+Thresholding}}]{t,  }\item[{enum \hyperlink{classtsa_1_1_wavelet_threshold_a93d14df024bbc8c3da182bf5899f8f83}{Thresholding\+Mode}}]{m = {\ttfamily \hyperlink{classtsa_1_1_wavelet_threshold_a93d14df024bbc8c3da182bf5899f8f83a356244854a142af0e9f3db2cf4ad5192}{soft}} }\end{DoxyParamCaption})}
+
+
+
+Brief documentation for the execute method. 
+
+Start of the long documentation for execute method.
+
+\begin{DoxyPrecond}{Precondition}
+A precondition 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+A postcondition 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em An} & exception\\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}{Parameters}
+{\em a} & parameter\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a returned value
+\end{DoxyReturn}
+Declaration of execute operation 
+
+Definition at line 43 of file Wavelet\+Threshold.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_wavelet_threshold_ae05f0886ef54f3370fc5c91eff2b0de7}\label{classtsa_1_1_wavelet_threshold_ae05f0886ef54f3370fc5c91eff2b0de7}} 
+\index{tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}!operator()@{operator()}}
+\index{operator()@{operator()}!tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void tsa\+::\+Wavelet\+Threshold\+::operator() (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&}]{WT,  }\item[{enum \hyperlink{classtsa_1_1_wavelet_threshold_a50c42c95dae960986a985157ca038fae}{Wavelet\+Thresholding}}]{t,  }\item[{enum \hyperlink{classtsa_1_1_wavelet_threshold_a93d14df024bbc8c3da182bf5899f8f83}{Thresholding\+Mode}}]{m = {\ttfamily \hyperlink{classtsa_1_1_wavelet_threshold_a93d14df024bbc8c3da182bf5899f8f83a356244854a142af0e9f3db2cf4ad5192}{soft}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 120 of file Wavelet\+Threshold.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_wavelet_threshold_a828cc5dbb8c68647a28f72eb0945e2a4}\label{classtsa_1_1_wavelet_threshold_a828cc5dbb8c68647a28f72eb0945e2a4}} 
+\index{tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}!Set\+Sigma@{Set\+Sigma}}
+\index{Set\+Sigma@{Set\+Sigma}!tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}}
+\subsubsection{\texorpdfstring{Set\+Sigma()}{SetSigma()}}
+{\footnotesize\ttfamily void tsa\+::\+Wavelet\+Threshold\+::\+Set\+Sigma (\begin{DoxyParamCaption}\item[{double}]{sigma }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 146 of file Wavelet\+Threshold.\+hpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classtsa_1_1_wavelet_threshold_a033b585f29f5e95f7e525e993569e781}\label{classtsa_1_1_wavelet_threshold_a033b585f29f5e95f7e525e993569e781}} 
+\index{tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}!m\+Abs\+Coeff@{m\+Abs\+Coeff}}
+\index{m\+Abs\+Coeff@{m\+Abs\+Coeff}!tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}}
+\subsubsection{\texorpdfstring{m\+Abs\+Coeff}{mAbsCoeff}}
+{\footnotesize\ttfamily double$\ast$ tsa\+::\+Wavelet\+Threshold\+::m\+Abs\+Coeff\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 155 of file Wavelet\+Threshold.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_wavelet_threshold_afb847894dc69de8339ceb444bc8e1dca}\label{classtsa_1_1_wavelet_threshold_afb847894dc69de8339ceb444bc8e1dca}} 
+\index{tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}!mC@{mC}}
+\index{mC@{mC}!tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}}
+\subsubsection{\texorpdfstring{mC}{mC}}
+{\footnotesize\ttfamily double tsa\+::\+Wavelet\+Threshold\+::mC\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 165 of file Wavelet\+Threshold.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_wavelet_threshold_af3141e33035206b95835c279a39393eb}\label{classtsa_1_1_wavelet_threshold_af3141e33035206b95835c279a39393eb}} 
+\index{tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}!mlevel@{mlevel}}
+\index{mlevel@{mlevel}!tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}}
+\subsubsection{\texorpdfstring{mlevel}{mlevel}}
+{\footnotesize\ttfamily int tsa\+::\+Wavelet\+Threshold\+::mlevel\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 164 of file Wavelet\+Threshold.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_wavelet_threshold_a94759bf0bffb9f82c4544ace28d511ff}\label{classtsa_1_1_wavelet_threshold_a94759bf0bffb9f82c4544ace28d511ff}} 
+\index{tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}!m\+Median@{m\+Median}}
+\index{m\+Median@{m\+Median}!tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}}
+\subsubsection{\texorpdfstring{m\+Median}{mMedian}}
+{\footnotesize\ttfamily double tsa\+::\+Wavelet\+Threshold\+::m\+Median\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 160 of file Wavelet\+Threshold.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_wavelet_threshold_a5ee193a15408f941545c28a04cd3f71f}\label{classtsa_1_1_wavelet_threshold_a5ee193a15408f941545c28a04cd3f71f}} 
+\index{tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}!mN@{mN}}
+\index{mN@{mN}!tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}}
+\subsubsection{\texorpdfstring{mN}{mN}}
+{\footnotesize\ttfamily unsigned int tsa\+::\+Wavelet\+Threshold\+::mN\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 159 of file Wavelet\+Threshold.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_wavelet_threshold_a1cde32dc32105b805047c8f59fa96057}\label{classtsa_1_1_wavelet_threshold_a1cde32dc32105b805047c8f59fa96057}} 
+\index{tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}!m\+Ncoeff@{m\+Ncoeff}}
+\index{m\+Ncoeff@{m\+Ncoeff}!tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}}
+\subsubsection{\texorpdfstring{m\+Ncoeff}{mNcoeff}}
+{\footnotesize\ttfamily unsigned int tsa\+::\+Wavelet\+Threshold\+::m\+Ncoeff\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 162 of file Wavelet\+Threshold.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_wavelet_threshold_a85ce0caeabe9ca87f46e6a87df776262}\label{classtsa_1_1_wavelet_threshold_a85ce0caeabe9ca87f46e6a87df776262}} 
+\index{tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}!m\+Ord@{m\+Ord}}
+\index{m\+Ord@{m\+Ord}!tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}}
+\subsubsection{\texorpdfstring{m\+Ord}{mOrd}}
+{\footnotesize\ttfamily double$\ast$ tsa\+::\+Wavelet\+Threshold\+::m\+Ord\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 158 of file Wavelet\+Threshold.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_wavelet_threshold_a937714dbfda90649e89c445837bf7bd3}\label{classtsa_1_1_wavelet_threshold_a937714dbfda90649e89c445837bf7bd3}} 
+\index{tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}!mP@{mP}}
+\index{mP@{mP}!tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}}
+\subsubsection{\texorpdfstring{mP}{mP}}
+{\footnotesize\ttfamily size\+\_\+t$\ast$ tsa\+::\+Wavelet\+Threshold\+::mP\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 156 of file Wavelet\+Threshold.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_wavelet_threshold_a8491f1b1b3679c964294a3b277513374}\label{classtsa_1_1_wavelet_threshold_a8491f1b1b3679c964294a3b277513374}} 
+\index{tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}!m\+P\+AC@{m\+P\+AC}}
+\index{m\+P\+AC@{m\+P\+AC}!tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}}
+\subsubsection{\texorpdfstring{m\+P\+AC}{mPAC}}
+{\footnotesize\ttfamily size\+\_\+t$\ast$ tsa\+::\+Wavelet\+Threshold\+::m\+P\+AC\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 157 of file Wavelet\+Threshold.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_wavelet_threshold_a99b389ace8c9d6578e356b7a1c6855d9}\label{classtsa_1_1_wavelet_threshold_a99b389ace8c9d6578e356b7a1c6855d9}} 
+\index{tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}!m\+Sigma@{m\+Sigma}}
+\index{m\+Sigma@{m\+Sigma}!tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}}
+\subsubsection{\texorpdfstring{m\+Sigma}{mSigma}}
+{\footnotesize\ttfamily double tsa\+::\+Wavelet\+Threshold\+::m\+Sigma\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 163 of file Wavelet\+Threshold.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_wavelet_threshold_abce83133feca77b08cfc7efdb017e8ca}\label{classtsa_1_1_wavelet_threshold_abce83133feca77b08cfc7efdb017e8ca}} 
+\index{tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}!m\+Thresh@{m\+Thresh}}
+\index{m\+Thresh@{m\+Thresh}!tsa\+::\+Wavelet\+Threshold@{tsa\+::\+Wavelet\+Threshold}}
+\subsubsection{\texorpdfstring{m\+Thresh}{mThresh}}
+{\footnotesize\ttfamily double tsa\+::\+Wavelet\+Threshold\+::m\+Thresh\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 161 of file Wavelet\+Threshold.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/include/\hyperlink{_wavelet_threshold_8hpp}{Wavelet\+Threshold.\+hpp}\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/src/\hyperlink{_wavelet_threshold_8cpp}{Wavelet\+Threshold.\+cpp}\end{DoxyCompactItemize}

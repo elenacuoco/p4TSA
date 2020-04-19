@@ -1,0 +1,614 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classtsa_1_1_t_f_view" kind="class" language="C++" prot="public">
+    <compoundname>tsa::TFView</compoundname>
+    <basecompoundref refid="classtsa_1_1_base_view" prot="public" virt="non-virtual">tsa::BaseView</basecompoundref>
+    <includes refid="_t_f_view_8hpp" local="no">TFView.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>class T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="user-defined">
+      <header>Operations</header>
+      <memberdef kind="function" id="classtsa_1_1_t_f_view_1a5c152e1753388d15dae7215ec9951595" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::TFView&lt; T &gt;::Clear</definition>
+        <argsstring>()</argsstring>
+        <name>Clear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Clear the data in the view, which are all initialized to zero. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" line="75" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" bodystart="75" bodyend="77"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Data access</header>
+      <memberdef kind="function" id="classtsa_1_1_t_f_view_1a6f20d608542849e71c31a1abd56a92a6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtsa_1_1_t_f_view_1a9dcd740f5d29edefd0a181917a9c700b" kindref="member">numericType</ref> &amp;</type>
+        <definition>numericType&amp; tsa::TFView&lt; T &gt;::operator()</definition>
+        <argsstring>(unsigned int i, unsigned int j)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a value in a given channel at a given index.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index on the time axis </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index on the frequency axis</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the data value </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" line="95" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" bodystart="95" bodyend="98"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Getters</header>
+      <memberdef kind="function" id="classtsa_1_1_t_f_view_1a4dbb5d10597478b8440429e1a9842eab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boost::numeric::ublas::matrix&lt; <ref refid="classtsa_1_1_t_f_view_1a9dcd740f5d29edefd0a181917a9c700b" kindref="member">numericType</ref> &gt; *</type>
+        <definition>boost::numeric::ublas::matrix&lt;numericType&gt;* tsa::TFView&lt; T &gt;::GetData</definition>
+        <argsstring>()</argsstring>
+        <name>GetData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" line="107" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" bodystart="107" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_t_f_view_1a7dcdf5430baeedfb3170f4dcfbf9cd09" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int tsa::TFView&lt; T &gt;::GetFrequencySize</definition>
+        <argsstring>()</argsstring>
+        <name>GetFrequencySize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" line="111" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" bodystart="111" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_t_f_view_1ac8b74db7ad7e2aacd1d92b5da737ee3e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int tsa::TFView&lt; T &gt;::GetTimeSize</definition>
+        <argsstring>()</argsstring>
+        <name>GetTimeSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" line="115" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" bodystart="115" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_t_f_view_1ad8f53724f34669fee2ee12d656c43d51" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double tsa::TFView&lt; T &gt;::GetStartT</definition>
+        <argsstring>()</argsstring>
+        <name>GetStartT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" line="119" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" bodystart="119" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_t_f_view_1acb07eb67f2ef12f13b4f91941bda15d5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double tsa::TFView&lt; T &gt;::GetStartF</definition>
+        <argsstring>()</argsstring>
+        <name>GetStartF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" line="123" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" bodystart="123" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_t_f_view_1a13f50c0e460377632ccc771e196df064" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double tsa::TFView&lt; T &gt;::GetFrequency</definition>
+        <argsstring>(unsigned int k)</argsstring>
+        <name>GetFrequency</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" line="127" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" bodystart="127" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_t_f_view_1ab5041c986c79f6daac52fa248ec050cf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double tsa::TFView&lt; T &gt;::GetTime</definition>
+        <argsstring>(unsigned int k)</argsstring>
+        <name>GetTime</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" line="131" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" bodystart="131" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_t_f_view_1a0dcfff88b1560da2c7999cce2d636fd7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double tsa::TFView&lt; T &gt;::GetEndF</definition>
+        <argsstring>()</argsstring>
+        <name>GetEndF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" line="135" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" bodystart="135" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_t_f_view_1a61bc73548b5e9e568a5b5e692dfecde7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double tsa::TFView&lt; T &gt;::GetEndT</definition>
+        <argsstring>()</argsstring>
+        <name>GetEndT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" line="139" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" bodystart="139" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_t_f_view_1abd84518db70471ee4dc9e1d19fd532ca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double tsa::TFView&lt; T &gt;::GetFrequencySlice</definition>
+        <argsstring>()</argsstring>
+        <name>GetFrequencySlice</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" line="143" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" bodystart="143" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_t_f_view_1adcf936687b668125c123aae1ae31bb94" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double tsa::TFView&lt; T &gt;::GetTimeSlice</definition>
+        <argsstring>()</argsstring>
+        <name>GetTimeSlice</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" line="147" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" bodystart="147" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_t_f_view_1aca01f57f4015fa85e1b70e244d635eec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double tsa::TFView&lt; T &gt;::GetSamplingF</definition>
+        <argsstring>()</argsstring>
+        <name>GetSamplingF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" line="151" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" bodystart="151" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_t_f_view_1a3f014481f5ed76c12a3ab831952e4e3d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double tsa::TFView&lt; T &gt;::GetSamplingT</definition>
+        <argsstring>()</argsstring>
+        <name>GetSamplingT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" line="155" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" bodystart="155" bodyend="157"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Setters</header>
+      <memberdef kind="function" id="classtsa_1_1_t_f_view_1a19ae1d94585e16c5580d2459a30384a5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::TFView&lt; T &gt;::SetStartT</definition>
+        <argsstring>(double v)</argsstring>
+        <name>SetStartT</name>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" line="167" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" bodystart="167" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_t_f_view_1a8a3ef3daaaab4d9836f32140079c747f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::TFView&lt; T &gt;::SetStartF</definition>
+        <argsstring>(double v)</argsstring>
+        <name>SetStartF</name>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" line="171" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" bodystart="171" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_t_f_view_1a1f77299b852922b33ffae367df01988c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::TFView&lt; T &gt;::SetSamplingT</definition>
+        <argsstring>(double v)</argsstring>
+        <name>SetSamplingT</name>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" line="175" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" bodystart="175" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_t_f_view_1abb1df435da547728dbb1ff762c3a38be" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::TFView&lt; T &gt;::SetSamplingF</definition>
+        <argsstring>(double v)</argsstring>
+        <name>SetSamplingF</name>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" line="179" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" bodystart="179" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_t_f_view_1a4926dbef93856a5b642c83ad6c60a178" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::TFView&lt; T &gt;::SetScale</definition>
+        <argsstring>(double aScale)</argsstring>
+        <name>SetScale</name>
+        <param>
+          <type>double</type>
+          <declname>aScale</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" line="183" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" bodystart="183" bodyend="185"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classtsa_1_1_t_f_view_1a9dcd740f5d29edefd0a181917a9c700b" prot="public" static="no">
+        <type>T</type>
+        <definition>typedef T tsa::TFView&lt; T &gt;::numericType</definition>
+        <argsstring></argsstring>
+        <name>numericType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" line="26" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classtsa_1_1_t_f_view_1a2681e1d8a18806d0add738068a43bf11" prot="protected" static="no" mutable="no">
+        <type>boost::numeric::ublas::matrix&lt; <ref refid="classtsa_1_1_t_f_view_1a9dcd740f5d29edefd0a181917a9c700b" kindref="member">numericType</ref> &gt;</type>
+        <definition>boost::numeric::ublas::matrix&lt;numericType&gt; tsa::TFView&lt; T &gt;::mData</definition>
+        <argsstring></argsstring>
+        <name>mData</name>
+        <briefdescription>
+<para>The data array. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" line="199" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_t_f_view_1a1f7ed10cd264a12d99744197c134e1bf" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double tsa::TFView&lt; T &gt;::mScale</definition>
+        <argsstring></argsstring>
+        <name>mScale</name>
+        <briefdescription>
+<para>The auxiliary scale. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" line="200" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_t_f_view_1a42d5dc9edb5b4d6c746d5c1a1614abb4" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double tsa::TFView&lt; T &gt;::mStartT</definition>
+        <argsstring></argsstring>
+        <name>mStartT</name>
+        <briefdescription>
+<para>The start time. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" line="201" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_t_f_view_1a0195d10ff8a0c865975f81ea67c64816" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double tsa::TFView&lt; T &gt;::mSamplingT</definition>
+        <argsstring></argsstring>
+        <name>mSamplingT</name>
+        <briefdescription>
+<para>The sampling in time. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" line="202" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_t_f_view_1afd3043fa47a3c337b1eedcb5cad1aa63" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double tsa::TFView&lt; T &gt;::mStartF</definition>
+        <argsstring></argsstring>
+        <name>mStartF</name>
+        <briefdescription>
+<para>The start frequency. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" line="203" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_t_f_view_1a7c966f8d9d2e2f2e4790ed5067f46f40" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double tsa::TFView&lt; T &gt;::mSamplingF</definition>
+        <argsstring></argsstring>
+        <name>mSamplingF</name>
+        <briefdescription>
+<para>The sampling in frequency. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" line="204" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtsa_1_1_t_f_view_1a03015be7d08c3aa9ac9fa82210706990" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>tsa::TFView&lt; T &gt;::TFView</definition>
+        <argsstring>(unsigned int FrequencySize, unsigned int TimeSize, double aStartT=0.0, double aSamplingT=1.0, double aStartF=0.0, double aSamplingF=1.0)</argsstring>
+        <name>TFView</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>FrequencySize</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>TimeSize</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>aStartT</declname>
+          <defval>0.0</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>aSamplingT</declname>
+          <defval>1.0</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>aStartF</declname>
+          <defval>0.0</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>aSamplingF</declname>
+          <defval>1.0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FrequencySize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of data on frequency axis </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TimeSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of data on time axis </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aStartT</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>start time </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSamplingT</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>time step </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aStartF</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>start frequency </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSamplingF</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>frequency step </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" line="39" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" bodystart="39" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_t_f_view_1abdab74797261823f5f66dc8faf53373f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>tsa::TFView&lt; T &gt;::~TFView</definition>
+        <argsstring>()</argsstring>
+        <name>~TFView</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" line="62" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" bodystart="62" bodyend="64"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classtsa_1_1_t_f_view_1ac93678cadb31386dfffd7e9e0ce2fb0b" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::TFView&lt; T &gt;::Rescale</definition>
+        <argsstring>()</argsstring>
+        <name>Rescale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Rescale the data, setting the auxiliary scale to one. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" line="194" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" bodystart="194" bodyend="197"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Time view: container for time series. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="418">
+        <label>tsa::BaseView</label>
+        <link refid="classtsa_1_1_base_view"/>
+      </node>
+      <node id="417">
+        <label>tsa::TFView&lt; T &gt;</label>
+        <link refid="classtsa_1_1_t_f_view"/>
+        <childnode refid="418" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="420">
+        <label>tsa::BaseView</label>
+        <link refid="classtsa_1_1_base_view"/>
+      </node>
+      <node id="419">
+        <label>tsa::TFView&lt; T &gt;</label>
+        <link refid="classtsa_1_1_t_f_view"/>
+        <childnode refid="420" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" line="24" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" bodystart="24" bodyend="205"/>
+    <listofallmembers>
+      <member refid="classtsa_1_1_base_view_1a87ba8f0c139190b95f8b1c5486b342d1" prot="public" virt="non-virtual"><scope>tsa::TFView</scope><name>BaseView</name></member>
+      <member refid="classtsa_1_1_base_view_1a21d825daa5ede62830f69e0ea7275008" prot="public" virt="non-virtual"><scope>tsa::TFView</scope><name>BaseView</name></member>
+      <member refid="classtsa_1_1_t_f_view_1a5c152e1753388d15dae7215ec9951595" prot="public" virt="non-virtual"><scope>tsa::TFView</scope><name>Clear</name></member>
+      <member refid="classtsa_1_1_t_f_view_1a4dbb5d10597478b8440429e1a9842eab" prot="public" virt="non-virtual"><scope>tsa::TFView</scope><name>GetData</name></member>
+      <member refid="classtsa_1_1_t_f_view_1a0dcfff88b1560da2c7999cce2d636fd7" prot="public" virt="non-virtual"><scope>tsa::TFView</scope><name>GetEndF</name></member>
+      <member refid="classtsa_1_1_t_f_view_1a61bc73548b5e9e568a5b5e692dfecde7" prot="public" virt="non-virtual"><scope>tsa::TFView</scope><name>GetEndT</name></member>
+      <member refid="classtsa_1_1_t_f_view_1a13f50c0e460377632ccc771e196df064" prot="public" virt="non-virtual"><scope>tsa::TFView</scope><name>GetFrequency</name></member>
+      <member refid="classtsa_1_1_t_f_view_1a7dcdf5430baeedfb3170f4dcfbf9cd09" prot="public" virt="non-virtual"><scope>tsa::TFView</scope><name>GetFrequencySize</name></member>
+      <member refid="classtsa_1_1_t_f_view_1abd84518db70471ee4dc9e1d19fd532ca" prot="public" virt="non-virtual"><scope>tsa::TFView</scope><name>GetFrequencySlice</name></member>
+      <member refid="classtsa_1_1_base_view_1ac6e0354eb1ec24205ff893440ff561b9" prot="public" virt="non-virtual"><scope>tsa::TFView</scope><name>GetName</name></member>
+      <member refid="classtsa_1_1_t_f_view_1aca01f57f4015fa85e1b70e244d635eec" prot="public" virt="non-virtual"><scope>tsa::TFView</scope><name>GetSamplingF</name></member>
+      <member refid="classtsa_1_1_t_f_view_1a3f014481f5ed76c12a3ab831952e4e3d" prot="public" virt="non-virtual"><scope>tsa::TFView</scope><name>GetSamplingT</name></member>
+      <member refid="classtsa_1_1_t_f_view_1acb07eb67f2ef12f13b4f91941bda15d5" prot="public" virt="non-virtual"><scope>tsa::TFView</scope><name>GetStartF</name></member>
+      <member refid="classtsa_1_1_t_f_view_1ad8f53724f34669fee2ee12d656c43d51" prot="public" virt="non-virtual"><scope>tsa::TFView</scope><name>GetStartT</name></member>
+      <member refid="classtsa_1_1_t_f_view_1ab5041c986c79f6daac52fa248ec050cf" prot="public" virt="non-virtual"><scope>tsa::TFView</scope><name>GetTime</name></member>
+      <member refid="classtsa_1_1_t_f_view_1ac8b74db7ad7e2aacd1d92b5da737ee3e" prot="public" virt="non-virtual"><scope>tsa::TFView</scope><name>GetTimeSize</name></member>
+      <member refid="classtsa_1_1_t_f_view_1adcf936687b668125c123aae1ae31bb94" prot="public" virt="non-virtual"><scope>tsa::TFView</scope><name>GetTimeSlice</name></member>
+      <member refid="classtsa_1_1_t_f_view_1a2681e1d8a18806d0add738068a43bf11" prot="protected" virt="non-virtual"><scope>tsa::TFView</scope><name>mData</name></member>
+      <member refid="classtsa_1_1_base_view_1a91429dee1249c140160bfca20e783019" prot="protected" virt="non-virtual"><scope>tsa::TFView</scope><name>mName</name></member>
+      <member refid="classtsa_1_1_t_f_view_1a7c966f8d9d2e2f2e4790ed5067f46f40" prot="protected" virt="non-virtual"><scope>tsa::TFView</scope><name>mSamplingF</name></member>
+      <member refid="classtsa_1_1_t_f_view_1a0195d10ff8a0c865975f81ea67c64816" prot="protected" virt="non-virtual"><scope>tsa::TFView</scope><name>mSamplingT</name></member>
+      <member refid="classtsa_1_1_t_f_view_1a1f7ed10cd264a12d99744197c134e1bf" prot="protected" virt="non-virtual"><scope>tsa::TFView</scope><name>mScale</name></member>
+      <member refid="classtsa_1_1_t_f_view_1afd3043fa47a3c337b1eedcb5cad1aa63" prot="protected" virt="non-virtual"><scope>tsa::TFView</scope><name>mStartF</name></member>
+      <member refid="classtsa_1_1_t_f_view_1a42d5dc9edb5b4d6c746d5c1a1614abb4" prot="protected" virt="non-virtual"><scope>tsa::TFView</scope><name>mStartT</name></member>
+      <member refid="classtsa_1_1_t_f_view_1a9dcd740f5d29edefd0a181917a9c700b" prot="public" virt="non-virtual"><scope>tsa::TFView</scope><name>numericType</name></member>
+      <member refid="classtsa_1_1_t_f_view_1a6f20d608542849e71c31a1abd56a92a6" prot="public" virt="non-virtual"><scope>tsa::TFView</scope><name>operator()</name></member>
+      <member refid="classtsa_1_1_base_view_1a29e213aae81ad55e146a5e41ad5a1ce9" prot="public" virt="non-virtual"><scope>tsa::TFView</scope><name>operator=</name></member>
+      <member refid="classtsa_1_1_t_f_view_1ac93678cadb31386dfffd7e9e0ce2fb0b" prot="protected" virt="non-virtual"><scope>tsa::TFView</scope><name>Rescale</name></member>
+      <member refid="classtsa_1_1_base_view_1abcfce2c227a5826093e7cb86a02765f9" prot="public" virt="non-virtual"><scope>tsa::TFView</scope><name>SetName</name></member>
+      <member refid="classtsa_1_1_t_f_view_1abb1df435da547728dbb1ff762c3a38be" prot="public" virt="non-virtual"><scope>tsa::TFView</scope><name>SetSamplingF</name></member>
+      <member refid="classtsa_1_1_t_f_view_1a1f77299b852922b33ffae367df01988c" prot="public" virt="non-virtual"><scope>tsa::TFView</scope><name>SetSamplingT</name></member>
+      <member refid="classtsa_1_1_t_f_view_1a4926dbef93856a5b642c83ad6c60a178" prot="public" virt="non-virtual"><scope>tsa::TFView</scope><name>SetScale</name></member>
+      <member refid="classtsa_1_1_t_f_view_1a8a3ef3daaaab4d9836f32140079c747f" prot="public" virt="non-virtual"><scope>tsa::TFView</scope><name>SetStartF</name></member>
+      <member refid="classtsa_1_1_t_f_view_1a19ae1d94585e16c5580d2459a30384a5" prot="public" virt="non-virtual"><scope>tsa::TFView</scope><name>SetStartT</name></member>
+      <member refid="classtsa_1_1_t_f_view_1a03015be7d08c3aa9ac9fa82210706990" prot="public" virt="non-virtual"><scope>tsa::TFView</scope><name>TFView</name></member>
+      <member refid="classtsa_1_1_base_view_1ad3e2d3032a8efe2bd2dc7a9a9c7636d6" prot="public" virt="non-virtual"><scope>tsa::TFView</scope><name>~BaseView</name></member>
+      <member refid="classtsa_1_1_t_f_view_1abdab74797261823f5f66dc8faf53373f" prot="public" virt="non-virtual"><scope>tsa::TFView</scope><name>~TFView</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,170 @@
+\hypertarget{classtsa_1_1_p_r_o_c___channel}{}\section{tsa\+:\+:P\+R\+O\+C\+\_\+\+Channel Class Reference}
+\label{classtsa_1_1_p_r_o_c___channel}\index{tsa\+::\+P\+R\+O\+C\+\_\+\+Channel@{tsa\+::\+P\+R\+O\+C\+\_\+\+Channel}}
+
+
+{\ttfamily \#include $<$Frame\+I\+Stream.\+hpp$>$}
+
+Inheritance diagram for tsa\+:\+:P\+R\+O\+C\+\_\+\+Channel\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classtsa_1_1_p_r_o_c___channel}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtsa_1_1_p_r_o_c___channel_ab92dfa656aaf23e89436ba364d573980}{P\+R\+O\+C\+\_\+\+Channel} (\hyperlink{classtsa_1_1_frame_i_stream}{Frame\+I\+Stream} $\ast$F\+IS, Fr\+Proc\+Data $\ast$proc, unsigned int id)
+\item 
+virtual \hyperlink{classtsa_1_1_p_r_o_c___channel_acba6a69209ee63e13427046085d2be8d}{$\sim$\+P\+R\+O\+C\+\_\+\+Channel} ()
+\item 
+virtual void \hyperlink{classtsa_1_1_p_r_o_c___channel_ab4f986f7829c52ca6c0d8c244be7c617}{Add\+Data} ()
+\item 
+virtual double \hyperlink{classtsa_1_1_p_r_o_c___channel_ac29ae55cbededca3814b30e1186a4650}{Get\+Length} ()
+\item 
+virtual void \hyperlink{classtsa_1_1_p_r_o_c___channel_a84f00b22077b0aa41dba95ac0aaf0478}{Fill\+View} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&v, double tstart, double tend)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classtsa_1_1_p_r_o_c___channel}{P\+R\+O\+C\+\_\+\+Channel} $\ast$ \hyperlink{classtsa_1_1_p_r_o_c___channel_ae1d07e5c6af50796d0e97e4258807521}{Create} (\hyperlink{classtsa_1_1_frame_i_stream}{Frame\+I\+Stream} $\ast$F\+IS, char $\ast$name, unsigned int id)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{classtsa_1_1_p_r_o_c___channel_a81ce6bd37c7c57c76da43519841e0c85}{m\+Name}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A descriptor for a proc channel 
+
+Definition at line 285 of file Frame\+I\+Stream.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtsa_1_1_p_r_o_c___channel_ab92dfa656aaf23e89436ba364d573980}\label{classtsa_1_1_p_r_o_c___channel_ab92dfa656aaf23e89436ba364d573980}} 
+\index{tsa\+::\+P\+R\+O\+C\+\_\+\+Channel@{tsa\+::\+P\+R\+O\+C\+\_\+\+Channel}!P\+R\+O\+C\+\_\+\+Channel@{P\+R\+O\+C\+\_\+\+Channel}}
+\index{P\+R\+O\+C\+\_\+\+Channel@{P\+R\+O\+C\+\_\+\+Channel}!tsa\+::\+P\+R\+O\+C\+\_\+\+Channel@{tsa\+::\+P\+R\+O\+C\+\_\+\+Channel}}
+\subsubsection{\texorpdfstring{P\+R\+O\+C\+\_\+\+Channel()}{PROC\_Channel()}}
+{\footnotesize\ttfamily tsa\+::\+P\+R\+O\+C\+\_\+\+Channel\+::\+P\+R\+O\+C\+\_\+\+Channel (\begin{DoxyParamCaption}\item[{\hyperlink{classtsa_1_1_frame_i_stream}{Frame\+I\+Stream} $\ast$}]{F\+IS,  }\item[{Fr\+Proc\+Data $\ast$}]{proc,  }\item[{unsigned int}]{id }\end{DoxyParamCaption})}
+
+Constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em F\+IS} & pointer to the \hyperlink{classtsa_1_1_frame_i_stream}{Frame\+I\+Stream} class \\
+\hline
+{\em proc} & pointer to the first Fr\+Proc\+Data structure \\
+\hline
+{\em id} & id of the channel \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 269 of file Frame\+I\+Stream.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_p_r_o_c___channel_acba6a69209ee63e13427046085d2be8d}\label{classtsa_1_1_p_r_o_c___channel_acba6a69209ee63e13427046085d2be8d}} 
+\index{tsa\+::\+P\+R\+O\+C\+\_\+\+Channel@{tsa\+::\+P\+R\+O\+C\+\_\+\+Channel}!````~P\+R\+O\+C\+\_\+\+Channel@{$\sim$\+P\+R\+O\+C\+\_\+\+Channel}}
+\index{````~P\+R\+O\+C\+\_\+\+Channel@{$\sim$\+P\+R\+O\+C\+\_\+\+Channel}!tsa\+::\+P\+R\+O\+C\+\_\+\+Channel@{tsa\+::\+P\+R\+O\+C\+\_\+\+Channel}}
+\subsubsection{\texorpdfstring{$\sim$\+P\+R\+O\+C\+\_\+\+Channel()}{~PROC\_Channel()}}
+{\footnotesize\ttfamily tsa\+::\+P\+R\+O\+C\+\_\+\+Channel\+::$\sim$\+P\+R\+O\+C\+\_\+\+Channel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destructor 
+
+Definition at line 281 of file Frame\+I\+Stream.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classtsa_1_1_p_r_o_c___channel_ab4f986f7829c52ca6c0d8c244be7c617}\label{classtsa_1_1_p_r_o_c___channel_ab4f986f7829c52ca6c0d8c244be7c617}} 
+\index{tsa\+::\+P\+R\+O\+C\+\_\+\+Channel@{tsa\+::\+P\+R\+O\+C\+\_\+\+Channel}!Add\+Data@{Add\+Data}}
+\index{Add\+Data@{Add\+Data}!tsa\+::\+P\+R\+O\+C\+\_\+\+Channel@{tsa\+::\+P\+R\+O\+C\+\_\+\+Channel}}
+\subsubsection{\texorpdfstring{Add\+Data()}{AddData()}}
+{\footnotesize\ttfamily void tsa\+::\+P\+R\+O\+C\+\_\+\+Channel\+::\+Add\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This function must be called when there are not enough data to fill the output view. It reads a chunk of data from the next Fr\+Proc\+Data structure. 
+
+Reimplemented from \hyperlink{classtsa_1_1_channel_descriptor_aa1e001a5e712415cd4e9d66846914a56}{tsa\+::\+Channel\+Descriptor}.
+
+
+
+Definition at line 285 of file Frame\+I\+Stream.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_p_r_o_c___channel_ae1d07e5c6af50796d0e97e4258807521}\label{classtsa_1_1_p_r_o_c___channel_ae1d07e5c6af50796d0e97e4258807521}} 
+\index{tsa\+::\+P\+R\+O\+C\+\_\+\+Channel@{tsa\+::\+P\+R\+O\+C\+\_\+\+Channel}!Create@{Create}}
+\index{Create@{Create}!tsa\+::\+P\+R\+O\+C\+\_\+\+Channel@{tsa\+::\+P\+R\+O\+C\+\_\+\+Channel}}
+\subsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily \hyperlink{classtsa_1_1_p_r_o_c___channel}{P\+R\+O\+C\+\_\+\+Channel} $\ast$ tsa\+::\+P\+R\+O\+C\+\_\+\+Channel\+::\+Create (\begin{DoxyParamCaption}\item[{\hyperlink{classtsa_1_1_frame_i_stream}{Frame\+I\+Stream} $\ast$}]{F\+IS,  }\item[{char $\ast$}]{name,  }\item[{unsigned int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Create, if possible, an instance of the class
+
+
+\begin{DoxyParams}{Parameters}
+{\em F\+IS} & pointer to the \hyperlink{classtsa_1_1_frame_i_stream}{Frame\+I\+Stream} class instance \\
+\hline
+{\em name} & name of the channel \\
+\hline
+{\em id} & index of the channel\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to the created class instance or null 
+\end{DoxyReturn}
+
+
+Definition at line 258 of file Frame\+I\+Stream.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_p_r_o_c___channel_a84f00b22077b0aa41dba95ac0aaf0478}\label{classtsa_1_1_p_r_o_c___channel_a84f00b22077b0aa41dba95ac0aaf0478}} 
+\index{tsa\+::\+P\+R\+O\+C\+\_\+\+Channel@{tsa\+::\+P\+R\+O\+C\+\_\+\+Channel}!Fill\+View@{Fill\+View}}
+\index{Fill\+View@{Fill\+View}!tsa\+::\+P\+R\+O\+C\+\_\+\+Channel@{tsa\+::\+P\+R\+O\+C\+\_\+\+Channel}}
+\subsubsection{\texorpdfstring{Fill\+View()}{FillView()}}
+{\footnotesize\ttfamily void tsa\+::\+P\+R\+O\+C\+\_\+\+Channel\+::\+Fill\+View (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{v,  }\item[{double}]{tstart,  }\item[{double}]{tend }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \hyperlink{classtsa_1_1_channel_descriptor_a6553da04ba33471fc5465b6bd2b5275c}{tsa\+::\+Channel\+Descriptor}.
+
+
+
+Definition at line 298 of file Frame\+I\+Stream.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_p_r_o_c___channel_ac29ae55cbededca3814b30e1186a4650}\label{classtsa_1_1_p_r_o_c___channel_ac29ae55cbededca3814b30e1186a4650}} 
+\index{tsa\+::\+P\+R\+O\+C\+\_\+\+Channel@{tsa\+::\+P\+R\+O\+C\+\_\+\+Channel}!Get\+Length@{Get\+Length}}
+\index{Get\+Length@{Get\+Length}!tsa\+::\+P\+R\+O\+C\+\_\+\+Channel@{tsa\+::\+P\+R\+O\+C\+\_\+\+Channel}}
+\subsubsection{\texorpdfstring{Get\+Length()}{GetLength()}}
+{\footnotesize\ttfamily double tsa\+::\+P\+R\+O\+C\+\_\+\+Channel\+::\+Get\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Get the maximul time length of data that can be currently filled without calling Add\+Data.
+
+\begin{DoxyReturn}{Returns}
+the time length of the data available in seconds 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classtsa_1_1_channel_descriptor_a456d14e6136c389fbd307fabab7d7b73}{tsa\+::\+Channel\+Descriptor}.
+
+
+
+Definition at line 294 of file Frame\+I\+Stream.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classtsa_1_1_p_r_o_c___channel_a81ce6bd37c7c57c76da43519841e0c85}\label{classtsa_1_1_p_r_o_c___channel_a81ce6bd37c7c57c76da43519841e0c85}} 
+\index{tsa\+::\+P\+R\+O\+C\+\_\+\+Channel@{tsa\+::\+P\+R\+O\+C\+\_\+\+Channel}!m\+Name@{m\+Name}}
+\index{m\+Name@{m\+Name}!tsa\+::\+P\+R\+O\+C\+\_\+\+Channel@{tsa\+::\+P\+R\+O\+C\+\_\+\+Channel}}
+\subsubsection{\texorpdfstring{m\+Name}{mName}}
+{\footnotesize\ttfamily char$\ast$ tsa\+::\+P\+R\+O\+C\+\_\+\+Channel\+::m\+Name\hspace{0.3cm}{\ttfamily [private]}}
+
+The channel\textquotesingle{}s name 
+
+Definition at line 335 of file Frame\+I\+Stream.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/include/\hyperlink{_frame_i_stream_8hpp}{Frame\+I\+Stream.\+hpp}\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/src/\hyperlink{_frame_i_stream_8cpp}{Frame\+I\+Stream.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="index_8md" kind="file" language="Markdown">
+    <compoundname>index.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>P4TSA<sp/>(package<sp/>for<sp/>Time<sp/>Series<sp/>Analysis)<sp/>#</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[![Foo](https://img.shields.io/badge/docs-latest-brightgreen.svg?style=flat)](http://p4tsa.readthedocs.io/en/latest/?badge=latest)<sp/>[![Build<sp/>Status](https://travis-ci.org/elenacuoco/p4TSA.png)](https://travis-ci.org/elenacuoco/p4TSA)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/>(info@elenacuoco.com)<sp/>https://www.elenacuoco.com</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>library<sp/>is<sp/>a<sp/>&apos;spin-off&apos;<sp/>of<sp/>C++<sp/>Noise<sp/>Analysis<sp/>Package<sp/>(NAP)<sp/>written<sp/>together</highlight></codeline>
+<codeline><highlight class="normal">with<sp/>Giancarlo<sp/>Cella<sp/>(giancarlo.cella@pi.infn.it)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>core<sp/>library<sp/>is<sp/>written<sp/>in<sp/>C++<sp/>and<sp/>should<sp/>be<sp/>compiled<sp/>before<sp/>using<sp/>the<sp/>python<sp/>interface.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>Python<sp/>interface<sp/>to<sp/>the<sp/>library<sp/>is<sp/>pyTSA<sp/>(you<sp/>can<sp/>call<sp/>it<sp/>pi&apos;za)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>What<sp/>is<sp/>this<sp/>repository<sp/>for?<sp/>###</highlight></codeline>
+<codeline><highlight class="normal">p4TSA<sp/>is<sp/>a<sp/>minimal<sp/>package<sp/>containing<sp/>ad<sp/>hoc<sp/>function<sp/>to<sp/>work<sp/>with<sp/>time<sp/>series.</highlight></codeline>
+<codeline><highlight class="normal">It<sp/>includes</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Whitening<sp/>in<sp/>time<sp/>domain</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Wavelet<sp/>decomposition</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Wavelet<sp/>Detection<sp/>Filter</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>How<sp/>do<sp/>I<sp/>get<sp/>set<sp/>up?<sp/>###</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>You<sp/>need<sp/>to<sp/>have<sp/>a<sp/>python<sp/>environment<sp/>setup<sp/>and<sp/>some<sp/>extralibrary<sp/>(boost,<sp/>FramLib,gsl,fftw3<sp/>installed)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>You<sp/>should<sp/>run<sp/>cmake<sp/>CMakeList.txt</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Dependencies:<sp/>gsl,<sp/>fftw3,<sp/>gslcblas,<sp/>Framelib</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Python<sp/>Binding:<sp/>it<sp/>depends<sp/>on<sp/>binder<sp/>and<sp/>pybind11<sp/>which<sp/>should<sp/>be<sp/>installed</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Database<sp/>configuration:<sp/>none</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>How<sp/>to<sp/>run<sp/>tests:<sp/>under<sp/>dir<sp/>test<sp/>run</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;code&gt;python<sp/>test.py&lt;/code&gt;</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Deployment<sp/>instructions:<sp/>under<sp/>python-wrapper<sp/>directory<sp/>run</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;code&gt;python<sp/>setup.py<sp/>install&lt;/code&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Contribution<sp/>guidelines<sp/>###</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Writing<sp/>tests</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Code<sp/>review</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Other<sp/>guidelines</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Who<sp/>do<sp/>I<sp/>talk<sp/>to?<sp/>###</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Repo<sp/>owner<sp/>or<sp/>admin<sp/>(info@elenacuoco.com)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Other<sp/>community<sp/>or<sp/>team<sp/>contact<sp/>(elena.cuoco@ego-gw.it,<sp/>giancarlo.cella@pi.infn.it)</highlight></codeline>
+    </programlisting>
+    <location file="index.md"/>
+  </compounddef>
+</doxygen>

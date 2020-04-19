@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structeternity_1_1association" kind="struct" language="C++" prot="public">
+    <compoundname>eternity::association</compoundname>
+    <includes refid="algorithms_8hpp" local="no">algorithms.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>class FirstContent</type>
+      </param>
+      <param>
+        <type>class SecondContent</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structeternity_1_1association_1a826dce070ffd89015b66ea9ea26c07e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class InputIterator</type>
+          </param>
+          <param>
+            <type>class Archive</type>
+          </param>
+        </templateparamlist>
+        <type>size_t</type>
+        <definition>size_t eternity::association&lt; FirstContent, SecondContent &gt;::xml_write</definition>
+        <argsstring>(InputIterator first, InputIterator last, Archive &amp;archive)</argsstring>
+        <name>xml_write</name>
+        <param>
+          <type>InputIterator</type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type>InputIterator</type>
+          <declname>last</declname>
+        </param>
+        <param>
+          <type>Archive &amp;</type>
+          <declname>archive</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/algorithms.hpp" line="229" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/algorithms.hpp" bodystart="242" bodyend="253"/>
+      </memberdef>
+      <memberdef kind="function" id="structeternity_1_1association_1a2f1c27b77cd84364c498feb134864d4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Container</type>
+          </param>
+          <param>
+            <type>class InputIterator</type>
+          </param>
+          <param>
+            <type>class Archive</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void eternity::association&lt; FirstContent, SecondContent &gt;::xml_read</definition>
+        <argsstring>(Container &amp;container, InputIterator insert, size_t len, Archive &amp;archive)</argsstring>
+        <name>xml_read</name>
+        <param>
+          <type>Container &amp;</type>
+          <declname>container</declname>
+        </param>
+        <param>
+          <type>InputIterator</type>
+          <declname>insert</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>Archive &amp;</type>
+          <declname>archive</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/algorithms.hpp" line="232" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/algorithms.hpp" bodystart="256" bodyend="272"/>
+      </memberdef>
+      <memberdef kind="function" id="structeternity_1_1association_1a927d1de7c19bce31622b31417e107ebe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class InputIterator</type>
+          </param>
+          <param>
+            <type>class Archive</type>
+          </param>
+        </templateparamlist>
+        <type>size_t</type>
+        <definition>size_t eternity::association&lt; FirstContent, SecondContent &gt;::write</definition>
+        <argsstring>(InputIterator first, InputIterator last, Archive &amp;archive)</argsstring>
+        <name>write</name>
+        <param>
+          <type>InputIterator</type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type>InputIterator</type>
+          <declname>last</declname>
+        </param>
+        <param>
+          <type>Archive &amp;</type>
+          <declname>archive</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/algorithms.hpp" line="235" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/algorithms.hpp" bodystart="275" bodyend="286"/>
+      </memberdef>
+      <memberdef kind="function" id="structeternity_1_1association_1ab488701a51e5c139347c7c5acc88d05e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Container</type>
+          </param>
+          <param>
+            <type>class InputIterator</type>
+          </param>
+          <param>
+            <type>class Archive</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void eternity::association&lt; FirstContent, SecondContent &gt;::read</definition>
+        <argsstring>(Container &amp;container, InputIterator insert, size_t len, Archive &amp;archive)</argsstring>
+        <name>read</name>
+        <param>
+          <type>Container &amp;</type>
+          <declname>container</declname>
+        </param>
+        <param>
+          <type>InputIterator</type>
+          <declname>insert</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>Archive &amp;</type>
+          <declname>archive</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/algorithms.hpp" line="238" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/algorithms.hpp" bodystart="289" bodyend="305"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Manage persistence of associtative containers (e.g. map or set). Use template parameter to specify contents type of key (e.g. primitives, objects or pointers) and the content type of data (again one from primitives, objects or pointers). This struct is not intended to direct use but must be passed as template parameter of xml_serialize() or serialize() algorithms. </para>    </detaileddescription>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/algorithms.hpp" line="227" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/algorithms.hpp" bodystart="227" bodyend="239"/>
+    <listofallmembers>
+      <member refid="structeternity_1_1association_1ab488701a51e5c139347c7c5acc88d05e" prot="public" virt="non-virtual"><scope>eternity::association</scope><name>read</name></member>
+      <member refid="structeternity_1_1association_1a927d1de7c19bce31622b31417e107ebe" prot="public" virt="non-virtual"><scope>eternity::association</scope><name>write</name></member>
+      <member refid="structeternity_1_1association_1a2f1c27b77cd84364c498feb134864d4f" prot="public" virt="non-virtual"><scope>eternity::association</scope><name>xml_read</name></member>
+      <member refid="structeternity_1_1association_1a826dce070ffd89015b66ea9ea26c07e2" prot="public" virt="non-virtual"><scope>eternity::association</scope><name>xml_write</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

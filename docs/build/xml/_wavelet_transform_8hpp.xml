@@ -1,0 +1,496 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_wavelet_transform_8hpp" kind="file" language="C++">
+    <compoundname>WaveletTransform.hpp</compoundname>
+    <includes local="no">gsl/gsl_wavelet.h</includes>
+    <includes local="no">gsl/gsl_errno.h</includes>
+    <includes refid="_algo_base_8hpp" local="no">AlgoBase.hpp</includes>
+    <includes refid="_seq_view_8hpp" local="no">SeqView.hpp</includes>
+    <includedby refid="_wavelet_transform_8cpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/src/WaveletTransform.cpp</includedby>
+    <includedby refid="tsa_8hpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/include/tsa.hpp</includedby>
+    <includedby refid="_wav_reconstruction_8hpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/include/WavReconstruction.hpp</includedby>
+    <includedby refid="_w_d_f2_classify_8hpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/include/WDF2Classify.hpp</includedby>
+    <includedby refid="_w_d_f2_reconstruct_8hpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/include/WDF2Reconstruct.hpp</includedby>
+    <incdepgraph>
+      <node id="4315">
+        <label>tsaTraits.hpp</label>
+        <link refid="tsa_traits_8hpp"/>
+        <childnode refid="4316" relation="include">
+        </childnode>
+      </node>
+      <node id="4295">
+        <label>eternity.hpp</label>
+        <link refid="eternity_8hpp"/>
+        <childnode refid="4296" relation="include">
+        </childnode>
+        <childnode refid="4299" relation="include">
+        </childnode>
+        <childnode refid="4304" relation="include">
+        </childnode>
+        <childnode refid="4308" relation="include">
+        </childnode>
+      </node>
+      <node id="4301">
+        <label>stdlib.h</label>
+      </node>
+      <node id="4288">
+        <label>stdexcept</label>
+      </node>
+      <node id="4310">
+        <label>tsaTypes.hpp</label>
+        <link refid="tsa_types_8hpp"/>
+        <childnode refid="4290" relation="include">
+        </childnode>
+        <childnode refid="4291" relation="include">
+        </childnode>
+        <childnode refid="4311" relation="include">
+        </childnode>
+        <childnode refid="4292" relation="include">
+        </childnode>
+        <childnode refid="4295" relation="include">
+        </childnode>
+      </node>
+      <node id="4293">
+        <label>string</label>
+      </node>
+      <node id="4296">
+        <label>eternity/dynamic.hpp</label>
+        <link refid="dynamic_8hpp"/>
+        <childnode refid="4297" relation="include">
+        </childnode>
+        <childnode refid="4298" relation="include">
+        </childnode>
+        <childnode refid="4293" relation="include">
+        </childnode>
+      </node>
+      <node id="4306">
+        <label>map</label>
+      </node>
+      <node id="4312">
+        <label>tsaLog.hpp</label>
+        <link refid="tsa_log_8hpp"/>
+        <childnode refid="4289" relation="include">
+        </childnode>
+        <childnode refid="4290" relation="include">
+        </childnode>
+        <childnode refid="4313" relation="include">
+        </childnode>
+      </node>
+      <node id="4290">
+        <label>fstream</label>
+      </node>
+      <node id="4305">
+        <label>xmlscanner.hpp</label>
+        <link refid="xmlscanner_8hpp"/>
+        <childnode refid="4300" relation="include">
+        </childnode>
+        <childnode refid="4301" relation="include">
+        </childnode>
+        <childnode refid="4302" relation="include">
+        </childnode>
+        <childnode refid="4306" relation="include">
+        </childnode>
+        <childnode refid="4303" relation="include">
+        </childnode>
+        <childnode refid="4290" relation="include">
+        </childnode>
+        <childnode refid="4293" relation="include">
+        </childnode>
+        <childnode refid="4289" relation="include">
+        </childnode>
+      </node>
+      <node id="4294">
+        <label>tsaSerialize.hpp</label>
+        <link refid="tsa_serialize_8hpp"/>
+        <childnode refid="4288" relation="include">
+        </childnode>
+        <childnode refid="4289" relation="include">
+        </childnode>
+        <childnode refid="4290" relation="include">
+        </childnode>
+        <childnode refid="4295" relation="include">
+        </childnode>
+        <childnode refid="4310" relation="include">
+        </childnode>
+      </node>
+      <node id="4319">
+        <label>fparser.hpp</label>
+        <link refid="fparser_8hpp"/>
+        <childnode refid="4293" relation="include">
+        </childnode>
+        <childnode refid="4306" relation="include">
+        </childnode>
+        <childnode refid="4302" relation="include">
+        </childnode>
+      </node>
+      <node id="4287">
+        <label>AlgoBase.hpp</label>
+        <link refid="_algo_base_8hpp"/>
+        <childnode refid="4288" relation="include">
+        </childnode>
+        <childnode refid="4289" relation="include">
+        </childnode>
+        <childnode refid="4290" relation="include">
+        </childnode>
+        <childnode refid="4291" relation="include">
+        </childnode>
+        <childnode refid="4292" relation="include">
+        </childnode>
+        <childnode refid="4293" relation="include">
+        </childnode>
+        <childnode refid="4294" relation="include">
+        </childnode>
+        <childnode refid="4310" relation="include">
+        </childnode>
+        <childnode refid="4312" relation="include">
+        </childnode>
+        <childnode refid="4314" relation="include">
+        </childnode>
+        <childnode refid="4320" relation="include">
+        </childnode>
+        <childnode refid="4322" relation="include">
+        </childnode>
+      </node>
+      <node id="4299">
+        <label>eternity/persist.hpp</label>
+        <link refid="persist_8hpp"/>
+        <childnode refid="4296" relation="include">
+        </childnode>
+        <childnode refid="4300" relation="include">
+        </childnode>
+        <childnode refid="4301" relation="include">
+        </childnode>
+        <childnode refid="4302" relation="include">
+        </childnode>
+        <childnode refid="4303" relation="include">
+        </childnode>
+        <childnode refid="4290" relation="include">
+        </childnode>
+      </node>
+      <node id="4318">
+        <label>string.h</label>
+      </node>
+      <node id="4298">
+        <label>typeinfo</label>
+      </node>
+      <node id="4292">
+        <label>boost/numeric/ublas/io.hpp</label>
+      </node>
+      <node id="4313">
+        <label>unistd.h</label>
+      </node>
+      <node id="4317">
+        <label>tsaUtilityFunctions.hpp</label>
+        <link refid="tsa_utility_functions_8hpp"/>
+        <childnode refid="4318" relation="include">
+        </childnode>
+        <childnode refid="4319" relation="include">
+        </childnode>
+        <childnode refid="4316" relation="include">
+        </childnode>
+        <childnode refid="4290" relation="include">
+        </childnode>
+      </node>
+      <node id="4302">
+        <label>vector</label>
+      </node>
+      <node id="4314">
+        <label>BaseView.hpp</label>
+        <link refid="_base_view_8hpp"/>
+        <childnode refid="4306" relation="include">
+        </childnode>
+        <childnode refid="4293" relation="include">
+        </childnode>
+        <childnode refid="4310" relation="include">
+        </childnode>
+        <childnode refid="4315" relation="include">
+        </childnode>
+        <childnode refid="4317" relation="include">
+        </childnode>
+        <childnode refid="4294" relation="include">
+        </childnode>
+        <childnode refid="4312" relation="include">
+        </childnode>
+      </node>
+      <node id="4284">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletTransform.hpp</label>
+        <link refid="_wavelet_transform_8hpp"/>
+        <childnode refid="4285" relation="include">
+        </childnode>
+        <childnode refid="4286" relation="include">
+        </childnode>
+        <childnode refid="4287" relation="include">
+        </childnode>
+        <childnode refid="4320" relation="include">
+        </childnode>
+      </node>
+      <node id="4311">
+        <label>boost/numeric/ublas/matrix_proxy.hpp</label>
+      </node>
+      <node id="4309">
+        <label>sstream</label>
+      </node>
+      <node id="4285">
+        <label>gsl/gsl_wavelet.h</label>
+      </node>
+      <node id="4321">
+        <label>FrameL.h</label>
+      </node>
+      <node id="4322">
+        <label>AlgoExceptions.hpp</label>
+        <link refid="_algo_exceptions_8hpp"/>
+        <childnode refid="4288" relation="include">
+        </childnode>
+        <childnode refid="4293" relation="include">
+        </childnode>
+      </node>
+      <node id="4320">
+        <label>SeqView.hpp</label>
+        <link refid="_seq_view_8hpp"/>
+        <childnode refid="4291" relation="include">
+        </childnode>
+        <childnode refid="4311" relation="include">
+        </childnode>
+        <childnode refid="4292" relation="include">
+        </childnode>
+        <childnode refid="4314" relation="include">
+        </childnode>
+        <childnode refid="4321" relation="include">
+        </childnode>
+      </node>
+      <node id="4300">
+        <label>math.h</label>
+      </node>
+      <node id="4291">
+        <label>boost/numeric/ublas/matrix.hpp</label>
+      </node>
+      <node id="4289">
+        <label>iostream</label>
+      </node>
+      <node id="4307">
+        <label>deque</label>
+      </node>
+      <node id="4304">
+        <label>eternity/persist_xml.hpp</label>
+        <link refid="persist__xml_8hpp"/>
+        <childnode refid="4299" relation="include">
+        </childnode>
+        <childnode refid="4305" relation="include">
+        </childnode>
+        <childnode refid="4307" relation="include">
+        </childnode>
+      </node>
+      <node id="4316">
+        <label>complex</label>
+      </node>
+      <node id="4308">
+        <label>eternity/algorithms.hpp</label>
+        <link refid="algorithms_8hpp"/>
+        <childnode refid="4299" relation="include">
+        </childnode>
+        <childnode refid="4304" relation="include">
+        </childnode>
+        <childnode refid="4305" relation="include">
+        </childnode>
+        <childnode refid="4309" relation="include">
+        </childnode>
+      </node>
+      <node id="4303">
+        <label>algorithm</label>
+      </node>
+      <node id="4297">
+        <label>stdio.h</label>
+      </node>
+      <node id="4286">
+        <label>gsl/gsl_errno.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4328">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/WDF2Classify.hpp</label>
+        <link refid="_w_d_f2_classify_8hpp"/>
+        <childnode refid="4329" relation="include">
+        </childnode>
+        <childnode refid="4325" relation="include">
+        </childnode>
+      </node>
+      <node id="4327">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/WavReconstruction.cpp</label>
+        <link refid="_wav_reconstruction_8cpp"/>
+      </node>
+      <node id="4329">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/WDF2Classify.cpp</label>
+        <link refid="_w_d_f2_classify_8cpp"/>
+      </node>
+      <node id="4326">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/WavReconstruction.hpp</label>
+        <link refid="_wav_reconstruction_8hpp"/>
+        <childnode refid="4327" relation="include">
+        </childnode>
+        <childnode refid="4325" relation="include">
+        </childnode>
+      </node>
+      <node id="4325">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/tsa.hpp</label>
+        <link refid="tsa_8hpp"/>
+      </node>
+      <node id="4323">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletTransform.hpp</label>
+        <link refid="_wavelet_transform_8hpp"/>
+        <childnode refid="4324" relation="include">
+        </childnode>
+        <childnode refid="4325" relation="include">
+        </childnode>
+        <childnode refid="4326" relation="include">
+        </childnode>
+        <childnode refid="4328" relation="include">
+        </childnode>
+        <childnode refid="4330" relation="include">
+        </childnode>
+      </node>
+      <node id="4324">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/WaveletTransform.cpp</label>
+        <link refid="_wavelet_transform_8cpp"/>
+      </node>
+      <node id="4330">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/WDF2Reconstruct.hpp</label>
+        <link refid="_w_d_f2_reconstruct_8hpp"/>
+        <childnode refid="4331" relation="include">
+        </childnode>
+        <childnode refid="4325" relation="include">
+        </childnode>
+      </node>
+      <node id="4331">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/WDF2Reconstruct.cpp</label>
+        <link refid="_w_d_f2_reconstruct_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classtsa_1_1_wavelet_transform" prot="public">tsa::WaveletTransform</innerclass>
+    <innernamespace refid="namespacetsa">tsa</innernamespace>
+    <briefdescription>
+<para>compute the Wavelet Transform usign GSL </para>    </briefdescription>
+    <detaileddescription>
+<para>Copyright (C) 2004 by Elena Cuoco <ulink url="mailto:elena.cuoco@ego-gw.it">elena.cuoco@ego-gw.it</ulink></para><para>This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</para><para>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</para><para>You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.</para><para><simplesect kind="author"><para>Elena Cuoco <ulink url="mailto:elena.cuoco@ego-gw.it">elena.cuoco@ego-gw.it</ulink> </para></simplesect>
+<simplesect kind="date"><para>2005 </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>__WAVELETTRANSFORM_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__WAVELETTRANSFORM_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"></codeline>
+<codeline lineno="34"><highlight class="preprocessor">#include<sp/>&lt;gsl/gsl_wavelet.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gsl/gsl_errno.h&gt;</highlight></codeline>
+<codeline lineno="37"></codeline>
+<codeline lineno="41"></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_algo_base_8hpp" kindref="compound">AlgoBase.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_seq_view_8hpp" kindref="compound">SeqView.hpp</ref>&gt;</highlight></codeline>
+<codeline lineno="46"></codeline>
+<codeline lineno="50"></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"></codeline>
+<codeline lineno="58"></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"></codeline>
+<codeline lineno="66"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetsa" kindref="compound">tsa</ref><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="classtsa_1_1_wavelet_transform" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classtsa_1_1_wavelet_transform" kindref="compound">WaveletTransform</ref><sp/>:<sp/><ref refid="classtsa_1_1_algo_base" kindref="compound">AlgoBase</ref><sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7" kindref="member">WaveletType</ref><sp/>{</highlight></codeline>
+<codeline lineno="79" refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a580e35e8152e9f9c38cc59e7e6f95f63" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a580e35e8152e9f9c38cc59e7e6f95f63" kindref="member">Daub4</ref>,</highlight></codeline>
+<codeline lineno="80" refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7abbc8f42079b9b16b86dd0eea6773b556" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7abbc8f42079b9b16b86dd0eea6773b556" kindref="member">Daub6</ref>,</highlight></codeline>
+<codeline lineno="81" refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7af3f57bf73ec38c12f412e32f3fefc945" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7af3f57bf73ec38c12f412e32f3fefc945" kindref="member">Daub8</ref>,</highlight></codeline>
+<codeline lineno="82" refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7ae5443b626f94846ef15550c90361bcff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7ae5443b626f94846ef15550c90361bcff" kindref="member">Daub10</ref>,</highlight></codeline>
+<codeline lineno="83" refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a758b6e0e0b2ee02e693c63a53a1f9333" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a758b6e0e0b2ee02e693c63a53a1f9333" kindref="member">Daub12</ref>,</highlight></codeline>
+<codeline lineno="84" refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7aabd73c4462dcb2666c54abc4db830759" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7aabd73c4462dcb2666c54abc4db830759" kindref="member">Daub14</ref>,</highlight></codeline>
+<codeline lineno="85" refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7ab5fc531e10550919c9d84df86836d59e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7ab5fc531e10550919c9d84df86836d59e" kindref="member">Daub16</ref>,</highlight></codeline>
+<codeline lineno="86" refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7aac9879db72a48b70a3452a92a4442c34" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7aac9879db72a48b70a3452a92a4442c34" kindref="member">Daub18</ref>,</highlight></codeline>
+<codeline lineno="87" refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7ab186f455c9555915f9c39f5333735867" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7ab186f455c9555915f9c39f5333735867" kindref="member">Daub20</ref>,</highlight></codeline>
+<codeline lineno="88" refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a28aea448a107b358379cc8516eb99d6a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a28aea448a107b358379cc8516eb99d6a" kindref="member">DaubC4</ref>,</highlight></codeline>
+<codeline lineno="89" refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7adf2d680bbb7bf0f870308547955994d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7adf2d680bbb7bf0f870308547955994d9" kindref="member">DaubC6</ref>,</highlight></codeline>
+<codeline lineno="90" refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a8160a2ef65c5221bd784011eea9aac89" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a8160a2ef65c5221bd784011eea9aac89" kindref="member">DaubC8</ref>,</highlight></codeline>
+<codeline lineno="91" refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a917e6a76e69601d05a444303fcf789a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a917e6a76e69601d05a444303fcf789a6" kindref="member">DaubC10</ref>,</highlight></codeline>
+<codeline lineno="92" refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a82e9e7944ed5e3ff49bc00dd116b8b65" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a82e9e7944ed5e3ff49bc00dd116b8b65" kindref="member">DaubC12</ref>,</highlight></codeline>
+<codeline lineno="93" refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a5764140d65198d6c2f993c697172e487" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a5764140d65198d6c2f993c697172e487" kindref="member">DaubC14</ref>,</highlight></codeline>
+<codeline lineno="94" refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7aba6e06ba03e008d3b64144194210ca3d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7aba6e06ba03e008d3b64144194210ca3d" kindref="member">DaubC16</ref>,</highlight></codeline>
+<codeline lineno="95" refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a84aa39411df82b12534b156a39d4bd52" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a84aa39411df82b12534b156a39d4bd52" kindref="member">DaubC18</ref>,</highlight></codeline>
+<codeline lineno="96" refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7afd26c797b74ea4704f53aaa4f12b3906" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7afd26c797b74ea4704f53aaa4f12b3906" kindref="member">DaubC20</ref>,</highlight></codeline>
+<codeline lineno="97" refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a4a6a48aa7201c6e1a777bb02cbb4535e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a4a6a48aa7201c6e1a777bb02cbb4535e" kindref="member">Haar</ref>,</highlight></codeline>
+<codeline lineno="98" refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a12473aee3dcbf06605e96ce368ccae47" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a12473aee3dcbf06605e96ce368ccae47" kindref="member">HaarC</ref>,</highlight></codeline>
+<codeline lineno="99" refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a1d6c5ac4b418a6577ae3ec9f1e7bcbe8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a1d6c5ac4b418a6577ae3ec9f1e7bcbe8" kindref="member">Bspline103</ref>,</highlight></codeline>
+<codeline lineno="100" refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a3922eacdee7535beb5f72e06813eacec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a3922eacdee7535beb5f72e06813eacec" kindref="member">Bspline105</ref>,</highlight></codeline>
+<codeline lineno="101" refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a0d29cf9c751238c382de92a03fd1bafc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a0d29cf9c751238c382de92a03fd1bafc" kindref="member">Bspline202</ref>,</highlight></codeline>
+<codeline lineno="102" refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a58c8fc8b63dce89e8782c0e0f48213e4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a58c8fc8b63dce89e8782c0e0f48213e4" kindref="member">Bspline204</ref>,</highlight></codeline>
+<codeline lineno="103" refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a30aadd3a24a27f4f2c7a2eb428ebd377" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a30aadd3a24a27f4f2c7a2eb428ebd377" kindref="member">Bspline206</ref>,</highlight></codeline>
+<codeline lineno="104" refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a1e6e70960647c10e6fb1aacdc7c308fa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a1e6e70960647c10e6fb1aacdc7c308fa" kindref="member">Bspline208</ref>,</highlight></codeline>
+<codeline lineno="105" refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7aa949ba486b87f3e95b7a9475f834ea5b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7aa949ba486b87f3e95b7a9475f834ea5b" kindref="member">Bspline301</ref>,</highlight></codeline>
+<codeline lineno="106" refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7ae10c4856932c326e229342b505bc718e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7ae10c4856932c326e229342b505bc718e" kindref="member">Bspline303</ref>,</highlight></codeline>
+<codeline lineno="107" refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a1c0c6499b40407f852737e79905ff9e0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a1c0c6499b40407f852737e79905ff9e0" kindref="member">Bspline305</ref>,</highlight></codeline>
+<codeline lineno="108" refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7aceab407628fb381713fd7019b3bcdd9c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7aceab407628fb381713fd7019b3bcdd9c" kindref="member">Bspline307</ref>,</highlight></codeline>
+<codeline lineno="109" refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a42869721bee4963cd4e6bdac3beb1154" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a42869721bee4963cd4e6bdac3beb1154" kindref="member">Bspline309</ref>,</highlight></codeline>
+<codeline lineno="110" refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a967bf6ee049e0ff4a25b8f741effa1c2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a967bf6ee049e0ff4a25b8f741effa1c2" kindref="member">BsplineC103</ref>,</highlight></codeline>
+<codeline lineno="111" refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a345a7862067a2952ffae4ab9b60963c4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a345a7862067a2952ffae4ab9b60963c4" kindref="member">BsplineC105</ref>,</highlight></codeline>
+<codeline lineno="112" refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a1f278be1e05d3fa527c7d3679850b612" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a1f278be1e05d3fa527c7d3679850b612" kindref="member">BsplineC202</ref>,</highlight></codeline>
+<codeline lineno="113" refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7aa6ee016a8728feb7a5dc2c62ee99e6aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7aa6ee016a8728feb7a5dc2c62ee99e6aa" kindref="member">BsplineC204</ref>,</highlight></codeline>
+<codeline lineno="114" refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7ab740399eea9e95054be8ccf94711a38d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7ab740399eea9e95054be8ccf94711a38d" kindref="member">BsplineC206</ref>,</highlight></codeline>
+<codeline lineno="115" refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7ae0b40952d704854be0279927da7897d3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7ae0b40952d704854be0279927da7897d3" kindref="member">BsplineC208</ref>,</highlight></codeline>
+<codeline lineno="116" refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a2f0be8161937b31fe3b7b582d2e6ed91" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a2f0be8161937b31fe3b7b582d2e6ed91" kindref="member">BsplineC301</ref>,</highlight></codeline>
+<codeline lineno="117" refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7adb63b1c011f7c2ef23754f3e96ca84bf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7adb63b1c011f7c2ef23754f3e96ca84bf" kindref="member">BsplineC303</ref>,</highlight></codeline>
+<codeline lineno="118" refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a1ee63e7ef3a0df171210967f760e4c31" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a1ee63e7ef3a0df171210967f760e4c31" kindref="member">BsplineC305</ref>,</highlight></codeline>
+<codeline lineno="119" refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7ac2317657fd83bd6231f453c31b18403e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7ac2317657fd83bd6231f453c31b18403e" kindref="member">BsplineC307</ref>,</highlight></codeline>
+<codeline lineno="120" refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a41edf59d2f019badd954f24250146ea4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a41edf59d2f019badd954f24250146ea4" kindref="member">BsplineC309</ref></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_transform_1a311a12f22747485e6e3ecb0ede6143a7" kindref="member">WaveletTransform</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>N,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7" kindref="member">WaveletType</ref><sp/>wt);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_transform_1a311a12f22747485e6e3ecb0ede6143a7" kindref="member">WaveletTransform</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_wavelet_transform" kindref="compound">WaveletTransform</ref>&amp;<sp/>from);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_transform_1a119186776e4cc28d80d5d8d72cf12a5a" kindref="member">~WaveletTransform</ref>();</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_wavelet_transform" kindref="compound">WaveletTransform</ref>&amp;<sp/><ref refid="classtsa_1_1_wavelet_transform_1af8ca4e2e5be0413ef4ed484d27e2ff8b" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_wavelet_transform" kindref="compound">WaveletTransform</ref>&amp;<sp/>from);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_wavelet_transform_1afb63ce4986e8e123c7a35f5a39bb7600" kindref="member">Forward</ref>(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>In);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_wavelet_transform_1a0e85c6c3970435147e5db3075a437b9f" kindref="member">Inverse</ref>(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>In);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_wavelet_transform_1afb63ce4986e8e123c7a35f5a39bb7600" kindref="member">Forward</ref>(<ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref>&amp;<sp/>In);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_wavelet_transform_1a0e85c6c3970435147e5db3075a437b9f" kindref="member">Inverse</ref>(<ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref>&amp;<sp/>In);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"></codeline>
+<codeline lineno="176"></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_wavelet_transform_1ae18b8342c7cfd37728a40691ec12f6f5" kindref="member">WaveletPrint</ref>();</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_wavelet_transform_1ae5d5c1a1fc9b787a4d74c643b8fce1fb" kindref="member">WaveletWaveform</ref>(<ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref>&amp;<sp/>V);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"></codeline>
+<codeline lineno="185"></codeline>
+<codeline lineno="186"></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="193" refid="classtsa_1_1_wavelet_transform_1a5ee4ab685e354aafa0a1f617f0b624b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gsl_wavelet<sp/>*<ref refid="classtsa_1_1_wavelet_transform_1a5ee4ab685e354aafa0a1f617f0b624b4" kindref="member">mW</ref>;</highlight></codeline>
+<codeline lineno="194" refid="classtsa_1_1_wavelet_transform_1a0629db488589d2b7451746747456cee2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gsl_wavelet_workspace<sp/>*<ref refid="classtsa_1_1_wavelet_transform_1a0629db488589d2b7451746747456cee2" kindref="member">mWork</ref>;</highlight></codeline>
+<codeline lineno="195" refid="classtsa_1_1_wavelet_transform_1a8497adc5f0a85650a880992b3765f75a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_wavelet_transform_1a8497adc5f0a85650a880992b3765f75a" kindref="member">mN</ref>;<sp/></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"></codeline>
+<codeline lineno="202"></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"></codeline>
+<codeline lineno="210"></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal">}<sp/></highlight><highlight class="comment">//end<sp/>namespace</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>___WAVELETTRANSFORM_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletTransform.hpp"/>
+  </compounddef>
+</doxygen>

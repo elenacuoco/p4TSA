@@ -1,0 +1,387 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_butterworth_filter_8hpp" kind="file" language="C++">
+    <compoundname>ButterworthFilter.hpp</compoundname>
+    <includes refid="fparser_8hpp" local="no">fparser.hpp</includes>
+    <includes refid="_algo_base_8hpp" local="no">AlgoBase.hpp</includes>
+    <includedby refid="_butterworth_filter_8cpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/src/ButterworthFilter.cpp</includedby>
+    <includedby refid="tsa_8hpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/include/tsa.hpp</includedby>
+    <incdepgraph>
+      <node id="996">
+        <label>tsaTraits.hpp</label>
+        <link refid="tsa_traits_8hpp"/>
+        <childnode refid="997" relation="include">
+        </childnode>
+      </node>
+      <node id="978">
+        <label>eternity.hpp</label>
+        <link refid="eternity_8hpp"/>
+        <childnode refid="979" relation="include">
+        </childnode>
+        <childnode refid="982" relation="include">
+        </childnode>
+        <childnode refid="986" relation="include">
+        </childnode>
+        <childnode refid="989" relation="include">
+        </childnode>
+      </node>
+      <node id="984">
+        <label>stdlib.h</label>
+      </node>
+      <node id="972">
+        <label>stdexcept</label>
+      </node>
+      <node id="991">
+        <label>tsaTypes.hpp</label>
+        <link refid="tsa_types_8hpp"/>
+        <childnode refid="974" relation="include">
+        </childnode>
+        <childnode refid="975" relation="include">
+        </childnode>
+        <childnode refid="992" relation="include">
+        </childnode>
+        <childnode refid="976" relation="include">
+        </childnode>
+        <childnode refid="978" relation="include">
+        </childnode>
+      </node>
+      <node id="968">
+        <label>string</label>
+      </node>
+      <node id="979">
+        <label>eternity/dynamic.hpp</label>
+        <link refid="dynamic_8hpp"/>
+        <childnode refid="980" relation="include">
+        </childnode>
+        <childnode refid="981" relation="include">
+        </childnode>
+        <childnode refid="968" relation="include">
+        </childnode>
+      </node>
+      <node id="969">
+        <label>map</label>
+      </node>
+      <node id="993">
+        <label>tsaLog.hpp</label>
+        <link refid="tsa_log_8hpp"/>
+        <childnode refid="973" relation="include">
+        </childnode>
+        <childnode refid="974" relation="include">
+        </childnode>
+        <childnode refid="994" relation="include">
+        </childnode>
+      </node>
+      <node id="974">
+        <label>fstream</label>
+      </node>
+      <node id="987">
+        <label>xmlscanner.hpp</label>
+        <link refid="xmlscanner_8hpp"/>
+        <childnode refid="983" relation="include">
+        </childnode>
+        <childnode refid="984" relation="include">
+        </childnode>
+        <childnode refid="970" relation="include">
+        </childnode>
+        <childnode refid="969" relation="include">
+        </childnode>
+        <childnode refid="985" relation="include">
+        </childnode>
+        <childnode refid="974" relation="include">
+        </childnode>
+        <childnode refid="968" relation="include">
+        </childnode>
+        <childnode refid="973" relation="include">
+        </childnode>
+      </node>
+      <node id="977">
+        <label>tsaSerialize.hpp</label>
+        <link refid="tsa_serialize_8hpp"/>
+        <childnode refid="972" relation="include">
+        </childnode>
+        <childnode refid="973" relation="include">
+        </childnode>
+        <childnode refid="974" relation="include">
+        </childnode>
+        <childnode refid="978" relation="include">
+        </childnode>
+        <childnode refid="991" relation="include">
+        </childnode>
+      </node>
+      <node id="967">
+        <label>fparser.hpp</label>
+        <link refid="fparser_8hpp"/>
+        <childnode refid="968" relation="include">
+        </childnode>
+        <childnode refid="969" relation="include">
+        </childnode>
+        <childnode refid="970" relation="include">
+        </childnode>
+      </node>
+      <node id="971">
+        <label>AlgoBase.hpp</label>
+        <link refid="_algo_base_8hpp"/>
+        <childnode refid="972" relation="include">
+        </childnode>
+        <childnode refid="973" relation="include">
+        </childnode>
+        <childnode refid="974" relation="include">
+        </childnode>
+        <childnode refid="975" relation="include">
+        </childnode>
+        <childnode refid="976" relation="include">
+        </childnode>
+        <childnode refid="968" relation="include">
+        </childnode>
+        <childnode refid="977" relation="include">
+        </childnode>
+        <childnode refid="991" relation="include">
+        </childnode>
+        <childnode refid="993" relation="include">
+        </childnode>
+        <childnode refid="995" relation="include">
+        </childnode>
+        <childnode refid="1000" relation="include">
+        </childnode>
+        <childnode refid="1002" relation="include">
+        </childnode>
+      </node>
+      <node id="982">
+        <label>eternity/persist.hpp</label>
+        <link refid="persist_8hpp"/>
+        <childnode refid="979" relation="include">
+        </childnode>
+        <childnode refid="983" relation="include">
+        </childnode>
+        <childnode refid="984" relation="include">
+        </childnode>
+        <childnode refid="970" relation="include">
+        </childnode>
+        <childnode refid="985" relation="include">
+        </childnode>
+        <childnode refid="974" relation="include">
+        </childnode>
+      </node>
+      <node id="999">
+        <label>string.h</label>
+      </node>
+      <node id="981">
+        <label>typeinfo</label>
+      </node>
+      <node id="976">
+        <label>boost/numeric/ublas/io.hpp</label>
+      </node>
+      <node id="994">
+        <label>unistd.h</label>
+      </node>
+      <node id="998">
+        <label>tsaUtilityFunctions.hpp</label>
+        <link refid="tsa_utility_functions_8hpp"/>
+        <childnode refid="999" relation="include">
+        </childnode>
+        <childnode refid="967" relation="include">
+        </childnode>
+        <childnode refid="997" relation="include">
+        </childnode>
+        <childnode refid="974" relation="include">
+        </childnode>
+      </node>
+      <node id="970">
+        <label>vector</label>
+      </node>
+      <node id="995">
+        <label>BaseView.hpp</label>
+        <link refid="_base_view_8hpp"/>
+        <childnode refid="969" relation="include">
+        </childnode>
+        <childnode refid="968" relation="include">
+        </childnode>
+        <childnode refid="991" relation="include">
+        </childnode>
+        <childnode refid="996" relation="include">
+        </childnode>
+        <childnode refid="998" relation="include">
+        </childnode>
+        <childnode refid="977" relation="include">
+        </childnode>
+        <childnode refid="993" relation="include">
+        </childnode>
+      </node>
+      <node id="992">
+        <label>boost/numeric/ublas/matrix_proxy.hpp</label>
+      </node>
+      <node id="990">
+        <label>sstream</label>
+      </node>
+      <node id="1001">
+        <label>FrameL.h</label>
+      </node>
+      <node id="1002">
+        <label>AlgoExceptions.hpp</label>
+        <link refid="_algo_exceptions_8hpp"/>
+        <childnode refid="972" relation="include">
+        </childnode>
+        <childnode refid="968" relation="include">
+        </childnode>
+      </node>
+      <node id="1000">
+        <label>SeqView.hpp</label>
+        <link refid="_seq_view_8hpp"/>
+        <childnode refid="975" relation="include">
+        </childnode>
+        <childnode refid="992" relation="include">
+        </childnode>
+        <childnode refid="976" relation="include">
+        </childnode>
+        <childnode refid="995" relation="include">
+        </childnode>
+        <childnode refid="1001" relation="include">
+        </childnode>
+      </node>
+      <node id="983">
+        <label>math.h</label>
+      </node>
+      <node id="975">
+        <label>boost/numeric/ublas/matrix.hpp</label>
+      </node>
+      <node id="973">
+        <label>iostream</label>
+      </node>
+      <node id="988">
+        <label>deque</label>
+      </node>
+      <node id="966">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/ButterworthFilter.hpp</label>
+        <link refid="_butterworth_filter_8hpp"/>
+        <childnode refid="967" relation="include">
+        </childnode>
+        <childnode refid="971" relation="include">
+        </childnode>
+      </node>
+      <node id="986">
+        <label>eternity/persist_xml.hpp</label>
+        <link refid="persist__xml_8hpp"/>
+        <childnode refid="982" relation="include">
+        </childnode>
+        <childnode refid="987" relation="include">
+        </childnode>
+        <childnode refid="988" relation="include">
+        </childnode>
+      </node>
+      <node id="997">
+        <label>complex</label>
+      </node>
+      <node id="989">
+        <label>eternity/algorithms.hpp</label>
+        <link refid="algorithms_8hpp"/>
+        <childnode refid="982" relation="include">
+        </childnode>
+        <childnode refid="986" relation="include">
+        </childnode>
+        <childnode refid="987" relation="include">
+        </childnode>
+        <childnode refid="990" relation="include">
+        </childnode>
+      </node>
+      <node id="985">
+        <label>algorithm</label>
+      </node>
+      <node id="980">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1005">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/tsa.hpp</label>
+        <link refid="tsa_8hpp"/>
+      </node>
+      <node id="1004">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/ButterworthFilter.cpp</label>
+        <link refid="_butterworth_filter_8cpp"/>
+      </node>
+      <node id="1003">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/ButterworthFilter.hpp</label>
+        <link refid="_butterworth_filter_8hpp"/>
+        <childnode refid="1004" relation="include">
+        </childnode>
+        <childnode refid="1005" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classtsa_1_1_butterworth_filter" prot="public">tsa::ButterworthFilter</innerclass>
+    <innernamespace refid="namespacetsa">tsa</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="26"><highlight class="preprocessor">#ifndef<sp/>__BUTTERWORTHFILTER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__BUTTERWORTHFILTER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="preprocessor">#include<sp/>&lt;<ref refid="fparser_8hpp" kindref="compound">fparser.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"></codeline>
+<codeline lineno="42"><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_algo_base_8hpp" kindref="compound">AlgoBase.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceboost_1_1numeric_1_1ublas" kindref="compound">boost::numeric::ublas</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetsa" kindref="compound">tsa</ref><sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="classtsa_1_1_butterworth_filter" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classtsa_1_1_butterworth_filter" kindref="compound">ButterworthFilter</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_algo_base" kindref="compound">AlgoBase</ref><sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_butterworth_filter" kindref="compound">ButterworthFilter</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>freq,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>order);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classtsa_1_1_butterworth_filter" kindref="compound">ButterworthFilter</ref>();</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>operator()(<ref refid="namespacetsa_1ab32775c889b53c40fa83939f22372b75" kindref="member">SeqViewComplex</ref>&amp;<sp/>data);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>operator()(<ref refid="namespacetsa_1ab32775c889b53c40fa83939f22372b75" kindref="member">SeqViewComplex</ref>&amp;<sp/>datain,<sp/><ref refid="namespacetsa_1ab32775c889b53c40fa83939f22372b75" kindref="member">SeqViewComplex</ref>&amp;<sp/>dataout);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>execute(<ref refid="namespacetsa_1a86348fef1603a135fe5fba9e5f5486ee" kindref="member">Cmatrix</ref><sp/>&amp;datain,<sp/><ref refid="namespacetsa_1a86348fef1603a135fe5fba9e5f5486ee" kindref="member">Cmatrix</ref><sp/>&amp;dataout,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>fstart,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>fsample,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>scale);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>execute(<ref refid="namespacetsa_1a86348fef1603a135fe5fba9e5f5486ee" kindref="member">Cmatrix</ref><sp/>&amp;datain,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>fstart,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>fsample,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>scale);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"></codeline>
+<codeline lineno="129"></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="136" refid="classtsa_1_1_butterworth_filter_1ad81a41345c8b088c6aa02f138b39348b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_butterworth_filter_1ad81a41345c8b088c6aa02f138b39348b" kindref="member">mOrder</ref>;</highlight></codeline>
+<codeline lineno="137" refid="classtsa_1_1_butterworth_filter_1a7bff04791bdba8c8b668e8b664f01e60" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_butterworth_filter_1a7bff04791bdba8c8b668e8b664f01e60" kindref="member">mFreq</ref>;</highlight></codeline>
+<codeline lineno="138" refid="classtsa_1_1_butterworth_filter_1a35cbb21e7a98ac4214147afd1aa5b1fe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1a7b1f40fa90474b78dd0ab472b7c37547" kindref="member">Cdouble</ref><sp/>*<ref refid="classtsa_1_1_butterworth_filter_1a35cbb21e7a98ac4214147afd1aa5b1fe" kindref="member">poles</ref>;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>end<sp/>namespace<sp/>tsa</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>__BUTTERWORTHFILTER_HPP</highlight></codeline>
+    </programlisting>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ButterworthFilter.hpp"/>
+  </compounddef>
+</doxygen>

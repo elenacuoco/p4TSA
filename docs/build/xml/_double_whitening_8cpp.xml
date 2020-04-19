@@ -1,0 +1,543 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_double_whitening_8cpp" kind="file" language="C++">
+    <compoundname>DoubleWhitening.cpp</compoundname>
+    <includes refid="_double_whitening_8hpp" local="no">DoubleWhitening.hpp</includes>
+    <incdepgraph>
+      <node id="5252">
+        <label>queue</label>
+      </node>
+      <node id="5238">
+        <label>tsaTraits.hpp</label>
+        <link refid="tsa_traits_8hpp"/>
+        <childnode refid="5239" relation="include">
+        </childnode>
+      </node>
+      <node id="5223">
+        <label>eternity.hpp</label>
+        <link refid="eternity_8hpp"/>
+        <childnode refid="5224" relation="include">
+        </childnode>
+        <childnode refid="5227" relation="include">
+        </childnode>
+        <childnode refid="5232" relation="include">
+        </childnode>
+        <childnode refid="5236" relation="include">
+        </childnode>
+      </node>
+      <node id="5229">
+        <label>stdlib.h</label>
+      </node>
+      <node id="5212">
+        <label>DoubleWhitening.hpp</label>
+        <link refid="_double_whitening_8hpp"/>
+        <childnode refid="5213" relation="include">
+        </childnode>
+        <childnode refid="5214" relation="include">
+        </childnode>
+        <childnode refid="5248" relation="include">
+        </childnode>
+        <childnode refid="5249" relation="include">
+        </childnode>
+        <childnode refid="5251" relation="include">
+        </childnode>
+      </node>
+      <node id="5211">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/DoubleWhitening.cpp</label>
+        <link refid="_double_whitening_8cpp"/>
+        <childnode refid="5212" relation="include">
+        </childnode>
+      </node>
+      <node id="5244">
+        <label>stdexcept</label>
+      </node>
+      <node id="5221">
+        <label>tsaTypes.hpp</label>
+        <link refid="tsa_types_8hpp"/>
+        <childnode refid="5222" relation="include">
+        </childnode>
+        <childnode refid="5215" relation="include">
+        </childnode>
+        <childnode refid="5216" relation="include">
+        </childnode>
+        <childnode refid="5217" relation="include">
+        </childnode>
+        <childnode refid="5223" relation="include">
+        </childnode>
+      </node>
+      <node id="5220">
+        <label>string</label>
+      </node>
+      <node id="5224">
+        <label>eternity/dynamic.hpp</label>
+        <link refid="dynamic_8hpp"/>
+        <childnode refid="5225" relation="include">
+        </childnode>
+        <childnode refid="5226" relation="include">
+        </childnode>
+        <childnode refid="5220" relation="include">
+        </childnode>
+      </node>
+      <node id="5219">
+        <label>map</label>
+      </node>
+      <node id="5245">
+        <label>tsaLog.hpp</label>
+        <link refid="tsa_log_8hpp"/>
+        <childnode refid="5234" relation="include">
+        </childnode>
+        <childnode refid="5222" relation="include">
+        </childnode>
+        <childnode refid="5246" relation="include">
+        </childnode>
+      </node>
+      <node id="5222">
+        <label>fstream</label>
+      </node>
+      <node id="5233">
+        <label>xmlscanner.hpp</label>
+        <link refid="xmlscanner_8hpp"/>
+        <childnode refid="5228" relation="include">
+        </childnode>
+        <childnode refid="5229" relation="include">
+        </childnode>
+        <childnode refid="5230" relation="include">
+        </childnode>
+        <childnode refid="5219" relation="include">
+        </childnode>
+        <childnode refid="5231" relation="include">
+        </childnode>
+        <childnode refid="5222" relation="include">
+        </childnode>
+        <childnode refid="5220" relation="include">
+        </childnode>
+        <childnode refid="5234" relation="include">
+        </childnode>
+      </node>
+      <node id="5243">
+        <label>tsaSerialize.hpp</label>
+        <link refid="tsa_serialize_8hpp"/>
+        <childnode refid="5244" relation="include">
+        </childnode>
+        <childnode refid="5234" relation="include">
+        </childnode>
+        <childnode refid="5222" relation="include">
+        </childnode>
+        <childnode refid="5223" relation="include">
+        </childnode>
+        <childnode refid="5221" relation="include">
+        </childnode>
+      </node>
+      <node id="5242">
+        <label>fparser.hpp</label>
+        <link refid="fparser_8hpp"/>
+        <childnode refid="5220" relation="include">
+        </childnode>
+        <childnode refid="5219" relation="include">
+        </childnode>
+        <childnode refid="5230" relation="include">
+        </childnode>
+      </node>
+      <node id="5249">
+        <label>AlgoBase.hpp</label>
+        <link refid="_algo_base_8hpp"/>
+        <childnode refid="5244" relation="include">
+        </childnode>
+        <childnode refid="5234" relation="include">
+        </childnode>
+        <childnode refid="5222" relation="include">
+        </childnode>
+        <childnode refid="5215" relation="include">
+        </childnode>
+        <childnode refid="5217" relation="include">
+        </childnode>
+        <childnode refid="5220" relation="include">
+        </childnode>
+        <childnode refid="5243" relation="include">
+        </childnode>
+        <childnode refid="5221" relation="include">
+        </childnode>
+        <childnode refid="5245" relation="include">
+        </childnode>
+        <childnode refid="5218" relation="include">
+        </childnode>
+        <childnode refid="5214" relation="include">
+        </childnode>
+        <childnode refid="5250" relation="include">
+        </childnode>
+      </node>
+      <node id="5227">
+        <label>eternity/persist.hpp</label>
+        <link refid="persist_8hpp"/>
+        <childnode refid="5224" relation="include">
+        </childnode>
+        <childnode refid="5228" relation="include">
+        </childnode>
+        <childnode refid="5229" relation="include">
+        </childnode>
+        <childnode refid="5230" relation="include">
+        </childnode>
+        <childnode refid="5231" relation="include">
+        </childnode>
+        <childnode refid="5222" relation="include">
+        </childnode>
+      </node>
+      <node id="5251">
+        <label>FifoBuffer.hpp</label>
+        <link refid="_fifo_buffer_8hpp"/>
+        <childnode refid="5252" relation="include">
+        </childnode>
+        <childnode refid="5235" relation="include">
+        </childnode>
+        <childnode refid="5223" relation="include">
+        </childnode>
+        <childnode refid="5221" relation="include">
+        </childnode>
+        <childnode refid="5243" relation="include">
+        </childnode>
+      </node>
+      <node id="5241">
+        <label>string.h</label>
+      </node>
+      <node id="5226">
+        <label>typeinfo</label>
+      </node>
+      <node id="5217">
+        <label>boost/numeric/ublas/io.hpp</label>
+      </node>
+      <node id="5246">
+        <label>unistd.h</label>
+      </node>
+      <node id="5240">
+        <label>tsaUtilityFunctions.hpp</label>
+        <link refid="tsa_utility_functions_8hpp"/>
+        <childnode refid="5241" relation="include">
+        </childnode>
+        <childnode refid="5242" relation="include">
+        </childnode>
+        <childnode refid="5239" relation="include">
+        </childnode>
+        <childnode refid="5222" relation="include">
+        </childnode>
+      </node>
+      <node id="5230">
+        <label>vector</label>
+      </node>
+      <node id="5218">
+        <label>BaseView.hpp</label>
+        <link refid="_base_view_8hpp"/>
+        <childnode refid="5219" relation="include">
+        </childnode>
+        <childnode refid="5220" relation="include">
+        </childnode>
+        <childnode refid="5221" relation="include">
+        </childnode>
+        <childnode refid="5238" relation="include">
+        </childnode>
+        <childnode refid="5240" relation="include">
+        </childnode>
+        <childnode refid="5243" relation="include">
+        </childnode>
+        <childnode refid="5245" relation="include">
+        </childnode>
+      </node>
+      <node id="5216">
+        <label>boost/numeric/ublas/matrix_proxy.hpp</label>
+      </node>
+      <node id="5237">
+        <label>sstream</label>
+      </node>
+      <node id="5247">
+        <label>FrameL.h</label>
+      </node>
+      <node id="5250">
+        <label>AlgoExceptions.hpp</label>
+        <link refid="_algo_exceptions_8hpp"/>
+        <childnode refid="5244" relation="include">
+        </childnode>
+        <childnode refid="5220" relation="include">
+        </childnode>
+      </node>
+      <node id="5228">
+        <label>math.h</label>
+      </node>
+      <node id="5214">
+        <label>SeqView.hpp</label>
+        <link refid="_seq_view_8hpp"/>
+        <childnode refid="5215" relation="include">
+        </childnode>
+        <childnode refid="5216" relation="include">
+        </childnode>
+        <childnode refid="5217" relation="include">
+        </childnode>
+        <childnode refid="5218" relation="include">
+        </childnode>
+        <childnode refid="5247" relation="include">
+        </childnode>
+      </node>
+      <node id="5215">
+        <label>boost/numeric/ublas/matrix.hpp</label>
+      </node>
+      <node id="5234">
+        <label>iostream</label>
+      </node>
+      <node id="5235">
+        <label>deque</label>
+      </node>
+      <node id="5213">
+        <label>boost/config.hpp</label>
+      </node>
+      <node id="5248">
+        <label>LatticeView.hpp</label>
+        <link refid="_lattice_view_8hpp"/>
+        <childnode refid="5215" relation="include">
+        </childnode>
+        <childnode refid="5217" relation="include">
+        </childnode>
+        <childnode refid="5223" relation="include">
+        </childnode>
+        <childnode refid="5218" relation="include">
+        </childnode>
+      </node>
+      <node id="5232">
+        <label>eternity/persist_xml.hpp</label>
+        <link refid="persist__xml_8hpp"/>
+        <childnode refid="5227" relation="include">
+        </childnode>
+        <childnode refid="5233" relation="include">
+        </childnode>
+        <childnode refid="5235" relation="include">
+        </childnode>
+      </node>
+      <node id="5239">
+        <label>complex</label>
+      </node>
+      <node id="5236">
+        <label>eternity/algorithms.hpp</label>
+        <link refid="algorithms_8hpp"/>
+        <childnode refid="5227" relation="include">
+        </childnode>
+        <childnode refid="5232" relation="include">
+        </childnode>
+        <childnode refid="5233" relation="include">
+        </childnode>
+        <childnode refid="5237" relation="include">
+        </childnode>
+      </node>
+      <node id="5231">
+        <label>algorithm</label>
+      </node>
+      <node id="5225">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacetsa">tsa</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>C++<sp/>Implementation:<sp/>DoubleWhitening.cpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Description:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/>Elena<sp/>Cuoco<sp/>&lt;elena.cuoco@ego-gw.it&gt;,<sp/>(C)<sp/>2005</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Copyright:<sp/>See<sp/>COPYING<sp/>file<sp/>that<sp/>comes<sp/>with<sp/>this<sp/>distribution</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_double_whitening_8hpp" kindref="compound">DoubleWhitening.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetsa" kindref="compound">tsa</ref><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="classtsa_1_1_double_whitening_1a58092ba19e23ed52e13c8631dd2bd011" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1ae3fdd3dfab61182230994059995ad710" kindref="member">DoubleWhitening::DoubleWhitening</ref>(<ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref><sp/>&amp;ParcorF,<sp/><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref><sp/>&amp;ParcorB,<sp/><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref><sp/>&amp;ErrF,<sp/><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref><sp/>&amp;ErrB,</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>OutputSize,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ExtraSize)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mBuffer(1),</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mFirstCall(true),</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mOutputSize(OutputSize),</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mTotSize(ExtraSize<sp/>+<sp/>OutputSize),</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mOrder(ParcorF.size()),</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mParcorF(ParcorF),</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mParcorB(ParcorB),</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mErrF(ErrF),</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mErrB(ErrB),</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mStatus(0),</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mEf(2,<sp/>mOrder),</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mEb(2,<sp/>mOrder),</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mWhitened(1,<sp/>mTotSize)<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="classtsa_1_1_double_whitening_1ae3fdd3dfab61182230994059995ad710" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1ae3fdd3dfab61182230994059995ad710" kindref="member">DoubleWhitening::DoubleWhitening</ref>(<ref refid="classtsa_1_1_lattice_view" kindref="compound">LatticeView</ref><sp/>&amp;LV,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>OutputSize,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ExtraSize)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1ad472c774f12c7ad546950187be9bafce" kindref="member">mBuffer</ref>(1),</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1abcf4caf8a0d07a8ab19c61b73f5e36b7" kindref="member">mFirstCall</ref>(true),</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1a921503ab03e5b133a04795f04ee73b42" kindref="member">mOutputSize</ref>(OutputSize),</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1a2cce95c06b23e6311261476052941d7c" kindref="member">mTotSize</ref>(ExtraSize<sp/>+<sp/>OutputSize),</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1afb79abe4e14ab46247a46de61f732db8" kindref="member">mOrder</ref>(LV.GetParcorF()-&gt;size()),</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1a6a5ffe2b00d598c95a10913b42383361" kindref="member">mParcorF</ref>(*LV.GetParcorF()),</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1a6b5cc8f3c501692349449d6580b739a5" kindref="member">mParcorB</ref>(*LV.GetParcorB()),</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1aa89217d3e82036c041f44e8f9d31951c" kindref="member">mErrF</ref>(*LV.GetErrorForward()),</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1aeb88a0efebbd64e8b1cacaf574e62cfb" kindref="member">mErrB</ref>(*LV.GetErrorBackward()),</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1acf877cd00f9096595ccf1bf96e07e70d" kindref="member">mStatus</ref>(0),</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1a210ca70e697ac431e21381905392223f" kindref="member">mEf</ref>(2,<sp/><ref refid="classtsa_1_1_double_whitening_1afb79abe4e14ab46247a46de61f732db8" kindref="member">mOrder</ref>),</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1a43a337d8f3320fe180dea2d4266a2a2a" kindref="member">mEb</ref>(2,<sp/><ref refid="classtsa_1_1_double_whitening_1afb79abe4e14ab46247a46de61f732db8" kindref="member">mOrder</ref>),</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1ae27de92c8e9e51195590dc842ce211e6" kindref="member">mWhitened</ref>(1,<sp/><ref refid="classtsa_1_1_double_whitening_1a2cce95c06b23e6311261476052941d7c" kindref="member">mTotSize</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="classtsa_1_1_double_whitening_1acb49520a47e49872aa817d09b98e0b76" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_double_whitening_1acb49520a47e49872aa817d09b98e0b76" kindref="member">DoubleWhitening::init</ref>(<ref refid="classtsa_1_1_lattice_view" kindref="compound">LatticeView</ref><sp/>&amp;LV)<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1afb79abe4e14ab46247a46de61f732db8" kindref="member">mOrder</ref><sp/>=<sp/>LV.<ref refid="classtsa_1_1_lattice_view_1a302999b98f7af945965749026dc655f9" kindref="member">GetParcorF</ref>()-&gt;size();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1a6a5ffe2b00d598c95a10913b42383361" kindref="member">mParcorF</ref><sp/>=<sp/>*LV.<ref refid="classtsa_1_1_lattice_view_1a302999b98f7af945965749026dc655f9" kindref="member">GetParcorF</ref>();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1a6b5cc8f3c501692349449d6580b739a5" kindref="member">mParcorB</ref><sp/>=<sp/>*LV.<ref refid="classtsa_1_1_lattice_view_1a166491c83511a3c64ec63c1aa5e2cbbd" kindref="member">GetParcorB</ref>();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1aa89217d3e82036c041f44e8f9d31951c" kindref="member">mErrF</ref><sp/>=<sp/>*LV.<ref refid="classtsa_1_1_lattice_view_1a893dd18c7f1d423a8478a786c3c731c5" kindref="member">GetErrorForward</ref>();</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1aeb88a0efebbd64e8b1cacaf574e62cfb" kindref="member">mErrB</ref><sp/>=<sp/>*LV.<ref refid="classtsa_1_1_lattice_view_1a8b682c3db5bcce323d107e4ba889795f" kindref="member">GetErrorBackward</ref>();</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1acf877cd00f9096595ccf1bf96e07e70d" kindref="member">mStatus</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="classtsa_1_1_double_whitening_1a313995cfbaec5ed83333b0b63214270b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1a313995cfbaec5ed83333b0b63214270b" kindref="member">DoubleWhitening::~DoubleWhitening</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="classtsa_1_1_double_whitening_1a0b4972ef97afa13544eb713749d891ae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_double_whitening_1a0b4972ef97afa13544eb713749d891ae" kindref="member">DoubleWhitening::SetData</ref>(<ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref><sp/>&amp;Data,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>scale)<sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1ad472c774f12c7ad546950187be9bafce" kindref="member">mBuffer</ref>.<ref refid="classtsa_1_1_fifo_buffer_1ab70c4b3ba1a5356ab5384cd7f8638b0d" kindref="member">AddPoints</ref>(Data,<sp/>scale);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="classtsa_1_1_double_whitening_1abd1b553bad47599218970e1528b6c66a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_double_whitening_1abd1b553bad47599218970e1528b6c66a" kindref="member">DoubleWhitening::GetData</ref>(<ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref><sp/>&amp;DWOutput)<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>F0<sp/>=<sp/><ref refid="classtsa_1_1_double_whitening_1acf877cd00f9096595ccf1bf96e07e70d" kindref="member">mStatus</ref>;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>F1<sp/>=<sp/>1<sp/>-<sp/><ref refid="classtsa_1_1_double_whitening_1acf877cd00f9096595ccf1bf96e07e70d" kindref="member">mStatus</ref>;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>t;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>End<sp/>=<sp/><ref refid="classtsa_1_1_double_whitening_1afb79abe4e14ab46247a46de61f732db8" kindref="member">mOrder</ref><sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1a210ca70e697ac431e21381905392223f" kindref="member">mEf</ref>.clear();</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1a43a337d8f3320fe180dea2d4266a2a2a" kindref="member">mEb</ref>.clear();</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classtsa_1_1_double_whitening_1a2cce95c06b23e6311261476052941d7c" kindref="member">mTotSize</ref><sp/>&gt;<sp/><ref refid="classtsa_1_1_double_whitening_1ad472c774f12c7ad546950187be9bafce" kindref="member">mBuffer</ref>.<ref refid="classtsa_1_1_fifo_buffer_1a7c14d2ae86c581d1ccc427dccb3f1213" kindref="member">Size</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1a91d266348bcf69ab00c97a253b0ec790" kindref="member">LogWarning</ref>(</highlight><highlight class="stringliteral">&quot;Not<sp/>enough<sp/>data<sp/>points&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1no__data__available" kindref="compound">no_data_available</ref>(</highlight><highlight class="stringliteral">&quot;DoubleWhitening::GetData<sp/>-&gt;No<sp/>data<sp/>available&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classtsa_1_1_double_whitening_1a921503ab03e5b133a04795f04ee73b42" kindref="member">mOutputSize</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1aa89217d3e82036c041f44e8f9d31951c" kindref="member">mErrF</ref>(F1,<sp/>0)<sp/>=<sp/><ref refid="classtsa_1_1_double_whitening_1ad472c774f12c7ad546950187be9bafce" kindref="member">mBuffer</ref>(0,<sp/>i);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1aeb88a0efebbd64e8b1cacaf574e62cfb" kindref="member">mErrB</ref>(F1,<sp/>0)<sp/>=<sp/><ref refid="classtsa_1_1_double_whitening_1ad472c774f12c7ad546950187be9bafce" kindref="member">mBuffer</ref>(0,<sp/>i);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>1;<sp/>k<sp/>&lt;<sp/><ref refid="classtsa_1_1_double_whitening_1afb79abe4e14ab46247a46de61f732db8" kindref="member">mOrder</ref>;<sp/>k++)<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t<sp/>=<sp/>k<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1aa89217d3e82036c041f44e8f9d31951c" kindref="member">mErrF</ref>(F1,<sp/>k)<sp/>=<sp/><ref refid="classtsa_1_1_double_whitening_1aa89217d3e82036c041f44e8f9d31951c" kindref="member">mErrF</ref>(F1,<sp/>t)<sp/>-<sp/><ref refid="classtsa_1_1_double_whitening_1a6a5ffe2b00d598c95a10913b42383361" kindref="member">mParcorF</ref>(k)<sp/>*<sp/><ref refid="classtsa_1_1_double_whitening_1aeb88a0efebbd64e8b1cacaf574e62cfb" kindref="member">mErrB</ref>(F0,<sp/>t);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1aeb88a0efebbd64e8b1cacaf574e62cfb" kindref="member">mErrB</ref>(F1,<sp/>k)<sp/>=<sp/><ref refid="classtsa_1_1_double_whitening_1aeb88a0efebbd64e8b1cacaf574e62cfb" kindref="member">mErrB</ref>(F0,<sp/>t)<sp/>-<sp/><ref refid="classtsa_1_1_double_whitening_1a6b5cc8f3c501692349449d6580b739a5" kindref="member">mParcorB</ref>(k)<sp/>*<sp/><ref refid="classtsa_1_1_double_whitening_1aa89217d3e82036c041f44e8f9d31951c" kindref="member">mErrF</ref>(F1,<sp/>t);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1ae27de92c8e9e51195590dc842ce211e6" kindref="member">mWhitened</ref>(0,<sp/>i)<sp/>=<sp/><ref refid="classtsa_1_1_double_whitening_1aa89217d3e82036c041f44e8f9d31951c" kindref="member">mErrF</ref>(F1,<sp/>End);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>F0<sp/>=<sp/>1<sp/>-<sp/>F0;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>F1<sp/>=<sp/>1<sp/>-<sp/>F1;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1acf877cd00f9096595ccf1bf96e07e70d" kindref="member">mStatus</ref><sp/>=<sp/>F0;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>0;<sp/>k<sp/>&lt;<sp/><ref refid="classtsa_1_1_double_whitening_1afb79abe4e14ab46247a46de61f732db8" kindref="member">mOrder</ref>;<sp/>k++)<sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1a210ca70e697ac431e21381905392223f" kindref="member">mEf</ref>(F0,<sp/>k)<sp/>=<sp/><ref refid="classtsa_1_1_double_whitening_1aa89217d3e82036c041f44e8f9d31951c" kindref="member">mErrF</ref>(<ref refid="classtsa_1_1_double_whitening_1acf877cd00f9096595ccf1bf96e07e70d" kindref="member">mStatus</ref>,<sp/>k);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1a43a337d8f3320fe180dea2d4266a2a2a" kindref="member">mEb</ref>(F0,<sp/>k)<sp/>=<sp/><ref refid="classtsa_1_1_double_whitening_1aeb88a0efebbd64e8b1cacaf574e62cfb" kindref="member">mErrB</ref>(<ref refid="classtsa_1_1_double_whitening_1acf877cd00f9096595ccf1bf96e07e70d" kindref="member">mStatus</ref>,<sp/>k);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/**********Lattice<sp/>implementation<sp/>on<sp/>workspace***************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>mOutputSize;<sp/>i<sp/>&lt;<sp/><ref refid="classtsa_1_1_double_whitening_1a2cce95c06b23e6311261476052941d7c" kindref="member">mTotSize</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1a210ca70e697ac431e21381905392223f" kindref="member">mEf</ref>(F1,<sp/>0)<sp/>=<sp/><ref refid="classtsa_1_1_double_whitening_1ad472c774f12c7ad546950187be9bafce" kindref="member">mBuffer</ref>(0,<sp/>i);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1a43a337d8f3320fe180dea2d4266a2a2a" kindref="member">mEb</ref>(F1,<sp/>0)<sp/>=<sp/><ref refid="classtsa_1_1_double_whitening_1ad472c774f12c7ad546950187be9bafce" kindref="member">mBuffer</ref>(0,<sp/>i);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>1;<sp/>k<sp/>&lt;<sp/><ref refid="classtsa_1_1_double_whitening_1afb79abe4e14ab46247a46de61f732db8" kindref="member">mOrder</ref>;<sp/>k++)<sp/>{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t<sp/>=<sp/>k<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1a210ca70e697ac431e21381905392223f" kindref="member">mEf</ref>(F1,<sp/>k)<sp/>=<sp/><ref refid="classtsa_1_1_double_whitening_1a210ca70e697ac431e21381905392223f" kindref="member">mEf</ref>(F1,<sp/>t)<sp/>-<sp/><ref refid="classtsa_1_1_double_whitening_1a6a5ffe2b00d598c95a10913b42383361" kindref="member">mParcorF</ref>(k)<sp/>*<sp/><ref refid="classtsa_1_1_double_whitening_1a43a337d8f3320fe180dea2d4266a2a2a" kindref="member">mEb</ref>(F0,<sp/>t);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1a43a337d8f3320fe180dea2d4266a2a2a" kindref="member">mEb</ref>(F1,<sp/>k)<sp/>=<sp/><ref refid="classtsa_1_1_double_whitening_1a43a337d8f3320fe180dea2d4266a2a2a" kindref="member">mEb</ref>(F0,<sp/>t)<sp/>-<sp/><ref refid="classtsa_1_1_double_whitening_1a6b5cc8f3c501692349449d6580b739a5" kindref="member">mParcorB</ref>(k)<sp/>*<sp/><ref refid="classtsa_1_1_double_whitening_1a210ca70e697ac431e21381905392223f" kindref="member">mEf</ref>(F1,<sp/>t);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>F0<sp/>=<sp/>1<sp/>-<sp/>F0;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>F1<sp/>=<sp/>1<sp/>-<sp/>F1;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1ae27de92c8e9e51195590dc842ce211e6" kindref="member">mWhitened</ref>(0,<sp/>i)<sp/>=<sp/><ref refid="classtsa_1_1_double_whitening_1a210ca70e697ac431e21381905392223f" kindref="member">mEf</ref>(F0,<sp/>End);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1a210ca70e697ac431e21381905392223f" kindref="member">mEf</ref>(F0,<sp/>0)<sp/>=<sp/><ref refid="classtsa_1_1_double_whitening_1ae27de92c8e9e51195590dc842ce211e6" kindref="member">mWhitened</ref>(0,<sp/>mTotSize<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1a43a337d8f3320fe180dea2d4266a2a2a" kindref="member">mEb</ref>(F0,<sp/>0)<sp/>=<sp/><ref refid="classtsa_1_1_double_whitening_1ae27de92c8e9e51195590dc842ce211e6" kindref="member">mWhitened</ref>(0,<sp/>mTotSize<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>1;<sp/>k<sp/>&lt;<sp/><ref refid="classtsa_1_1_double_whitening_1afb79abe4e14ab46247a46de61f732db8" kindref="member">mOrder</ref>;<sp/>k++)<sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1a210ca70e697ac431e21381905392223f" kindref="member">mEf</ref>(F0,<sp/>k)<sp/>=<sp/><ref refid="classtsa_1_1_double_whitening_1a210ca70e697ac431e21381905392223f" kindref="member">mEf</ref>(F0,<sp/>k<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1a43a337d8f3320fe180dea2d4266a2a2a" kindref="member">mEb</ref>(F0,<sp/>k)<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>(mTotSize<sp/>-<sp/><ref refid="classtsa_1_1_double_whitening_1a921503ab03e5b133a04795f04ee73b42" kindref="member">mOutputSize</ref>);<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1a210ca70e697ac431e21381905392223f" kindref="member">mEf</ref>(F1,<sp/>0)<sp/>=<sp/><ref refid="classtsa_1_1_double_whitening_1ae27de92c8e9e51195590dc842ce211e6" kindref="member">mWhitened</ref>(0,<sp/>mTotSize<sp/>-<sp/>i<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1a43a337d8f3320fe180dea2d4266a2a2a" kindref="member">mEb</ref>(F1,<sp/>0)<sp/>=<sp/><ref refid="classtsa_1_1_double_whitening_1ae27de92c8e9e51195590dc842ce211e6" kindref="member">mWhitened</ref>(0,<sp/>mTotSize<sp/>-<sp/>i<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>1;<sp/>k<sp/>&lt;<sp/><ref refid="classtsa_1_1_double_whitening_1afb79abe4e14ab46247a46de61f732db8" kindref="member">mOrder</ref>;<sp/>k++)<sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t<sp/>=<sp/>k<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1a210ca70e697ac431e21381905392223f" kindref="member">mEf</ref>(F1,<sp/>k)<sp/>=<sp/><ref refid="classtsa_1_1_double_whitening_1a210ca70e697ac431e21381905392223f" kindref="member">mEf</ref>(F1,<sp/>t)<sp/>-<sp/><ref refid="classtsa_1_1_double_whitening_1a6a5ffe2b00d598c95a10913b42383361" kindref="member">mParcorF</ref>(k)<sp/>*<sp/><ref refid="classtsa_1_1_double_whitening_1a43a337d8f3320fe180dea2d4266a2a2a" kindref="member">mEb</ref>(F0,<sp/>t);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1a43a337d8f3320fe180dea2d4266a2a2a" kindref="member">mEb</ref>(F1,<sp/>k)<sp/>=<sp/><ref refid="classtsa_1_1_double_whitening_1a43a337d8f3320fe180dea2d4266a2a2a" kindref="member">mEb</ref>(F0,<sp/>t)<sp/>-<sp/><ref refid="classtsa_1_1_double_whitening_1a6b5cc8f3c501692349449d6580b739a5" kindref="member">mParcorB</ref>(k)<sp/>*<sp/><ref refid="classtsa_1_1_double_whitening_1a210ca70e697ac431e21381905392223f" kindref="member">mEf</ref>(F1,<sp/>t);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>F0<sp/>=<sp/>1<sp/>-<sp/>F0;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>F1<sp/>=<sp/>1<sp/>-<sp/>F1;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>(mTotSize<sp/>-<sp/>mOutputSize);<sp/>i<sp/>&lt;<sp/><ref refid="classtsa_1_1_double_whitening_1a2cce95c06b23e6311261476052941d7c" kindref="member">mTotSize</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1a210ca70e697ac431e21381905392223f" kindref="member">mEf</ref>(F1,<sp/>0)<sp/>=<sp/><ref refid="classtsa_1_1_double_whitening_1ae27de92c8e9e51195590dc842ce211e6" kindref="member">mWhitened</ref>(0,<sp/>mTotSize<sp/>-<sp/>i<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1a43a337d8f3320fe180dea2d4266a2a2a" kindref="member">mEb</ref>(F1,<sp/>0)<sp/>=<sp/><ref refid="classtsa_1_1_double_whitening_1ae27de92c8e9e51195590dc842ce211e6" kindref="member">mWhitened</ref>(0,<sp/>mTotSize<sp/>-<sp/>i<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>1;<sp/>k<sp/>&lt;<sp/><ref refid="classtsa_1_1_double_whitening_1afb79abe4e14ab46247a46de61f732db8" kindref="member">mOrder</ref>;<sp/>k++)<sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t<sp/>=<sp/>k<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1a210ca70e697ac431e21381905392223f" kindref="member">mEf</ref>(F1,<sp/>k)<sp/>=<sp/><ref refid="classtsa_1_1_double_whitening_1a210ca70e697ac431e21381905392223f" kindref="member">mEf</ref>(F1,<sp/>t)<sp/>-<sp/><ref refid="classtsa_1_1_double_whitening_1a6a5ffe2b00d598c95a10913b42383361" kindref="member">mParcorF</ref>(k)<sp/>*<sp/><ref refid="classtsa_1_1_double_whitening_1a43a337d8f3320fe180dea2d4266a2a2a" kindref="member">mEb</ref>(F0,<sp/>t);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1a43a337d8f3320fe180dea2d4266a2a2a" kindref="member">mEb</ref>(F1,<sp/>k)<sp/>=<sp/><ref refid="classtsa_1_1_double_whitening_1a43a337d8f3320fe180dea2d4266a2a2a" kindref="member">mEb</ref>(F0,<sp/>t)<sp/>-<sp/><ref refid="classtsa_1_1_double_whitening_1a6b5cc8f3c501692349449d6580b739a5" kindref="member">mParcorB</ref>(k)<sp/>*<sp/><ref refid="classtsa_1_1_double_whitening_1a210ca70e697ac431e21381905392223f" kindref="member">mEf</ref>(F1,<sp/>t);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>F0<sp/>=<sp/>1<sp/>-<sp/>F0;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>F1<sp/>=<sp/>1<sp/>-<sp/>F1;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DWOutput(0,<sp/>mTotSize<sp/>-<sp/>i<sp/>-<sp/>1)<sp/>=<sp/><ref refid="classtsa_1_1_double_whitening_1a210ca70e697ac431e21381905392223f" kindref="member">mEf</ref>(F0,<sp/>End);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1ad472c774f12c7ad546950187be9bafce" kindref="member">mBuffer</ref>.<ref refid="classtsa_1_1_fifo_buffer_1a17acb27e83ab4af3667974660b58cb4e" kindref="member">DelPoints</ref>(mOutputSize);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168" refid="classtsa_1_1_double_whitening_1a84c0175991fd9103e3783fbb8e3e1acb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening" kindref="compound">DoubleWhitening</ref>&amp;<sp/><ref refid="classtsa_1_1_double_whitening_1a84c0175991fd9103e3783fbb8e3e1acb" kindref="member">DoubleWhitening::Input</ref>(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref><sp/>&amp;Data)<sp/>{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref><sp/>*in<sp/>=<sp/>Data.<ref refid="classtsa_1_1_double_whitening_1abd1b553bad47599218970e1528b6c66a" kindref="member">GetData</ref>();</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(in-&gt;size1()<sp/>!=<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1a3bce10382fbb41b48aca0e5b8afeb896" kindref="member">LogSevere</ref>(</highlight><highlight class="stringliteral">&quot;DoubleWhitening:<sp/>multichannels<sp/>not<sp/>implemented<sp/>resize&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1bad__matrix__size" kindref="compound">bad_matrix_size</ref>(</highlight><highlight class="stringliteral">&quot;Wrong<sp/>Matrix<sp/>size&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1a0b4972ef97afa13544eb713749d891ae" kindref="member">SetData</ref>(*in,<sp/>Data.GetScale());</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classtsa_1_1_double_whitening_1abcf4caf8a0d07a8ab19c61b73f5e36b7" kindref="member">mFirstCall</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1abcf4caf8a0d07a8ab19c61b73f5e36b7" kindref="member">mFirstCall</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1a41231ba5d7395b08cd8a36578dc639a5" kindref="member">mStartTime</ref><sp/>=<sp/>Data.GetStart();</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1a2bb0cecac07b14fbd1f05df23138f7e8" kindref="member">mSampling</ref><sp/>=<sp/>Data.GetSampling();</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187" refid="classtsa_1_1_double_whitening_1a7ad38eb80858187dd73cf9c86e5e9d9b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening" kindref="compound">DoubleWhitening</ref>&amp;<sp/><ref refid="classtsa_1_1_double_whitening_1a7ad38eb80858187dd73cf9c86e5e9d9b" kindref="member">DoubleWhitening::Output</ref>(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref><sp/>&amp;outdata)<sp/>{</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref><sp/>*out<sp/>=<sp/>outdata.<ref refid="classtsa_1_1_double_whitening_1abd1b553bad47599218970e1528b6c66a" kindref="member">GetData</ref>();</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out-&gt;resize(1,<sp/><ref refid="classtsa_1_1_double_whitening_1a921503ab03e5b133a04795f04ee73b42" kindref="member">mOutputSize</ref>);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1abd1b553bad47599218970e1528b6c66a" kindref="member">GetData</ref>(*out);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>outdata.SetStart(<ref refid="classtsa_1_1_double_whitening_1a41231ba5d7395b08cd8a36578dc639a5" kindref="member">mStartTime</ref>);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>outdata.SetSampling(<ref refid="classtsa_1_1_double_whitening_1a2bb0cecac07b14fbd1f05df23138f7e8" kindref="member">mSampling</ref>);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>outdata.SetScale(1.0);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_double_whitening_1a41231ba5d7395b08cd8a36578dc639a5" kindref="member">mStartTime</ref><sp/>+=<sp/><ref refid="classtsa_1_1_double_whitening_1a2bb0cecac07b14fbd1f05df23138f7e8" kindref="member">mSampling</ref><sp/>*<sp/><ref refid="classtsa_1_1_double_whitening_1a921503ab03e5b133a04795f04ee73b42" kindref="member">mOutputSize</ref>;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/src/DoubleWhitening.cpp"/>
+  </compounddef>
+</doxygen>

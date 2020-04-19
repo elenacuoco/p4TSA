@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classtsa_1_1missing__data" kind="class" language="C++" prot="public">
+    <compoundname>tsa::missing_data</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">runtime_error</basecompoundref>
+    <includes refid="_algo_exceptions_8hpp" local="no">AlgoExceptions.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtsa_1_1missing__data_1a3bb2ac2dd0703730e7f0b29037bf65aa" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double tsa::missing_data::mStartPeriod</definition>
+        <argsstring></argsstring>
+        <name>mStartPeriod</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/AlgoExceptions.hpp" line="197" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/AlgoExceptions.hpp" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1missing__data_1ae4ac26763b09836066dd3202f421a2cc" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double tsa::missing_data::mEndPeriod</definition>
+        <argsstring></argsstring>
+        <name>mEndPeriod</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/AlgoExceptions.hpp" line="198" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/AlgoExceptions.hpp" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1missing__data_1ac223001a840eeb59c73cb0cef2483ed2" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int tsa::missing_data::mChannel</definition>
+        <argsstring></argsstring>
+        <name>mChannel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/AlgoExceptions.hpp" line="199" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/AlgoExceptions.hpp" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtsa_1_1missing__data_1a8d5ae46c22478ec86fae022f0044d2b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>tsa::missing_data::missing_data</definition>
+        <argsstring>(const std::string &amp;msg, double miss_start, double miss_end, unsigned int channel)</argsstring>
+        <name>missing_data</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>miss_start</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>miss_end</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>channel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>error message </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/AlgoExceptions.hpp" line="176" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/AlgoExceptions.hpp" bodystart="176" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1missing__data_1a14e20caa0f0f2baf341625d09e9da157" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double tsa::missing_data::Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/AlgoExceptions.hpp" line="185" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/AlgoExceptions.hpp" bodystart="185" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1missing__data_1a10c01ad5fd1fd4bc26d69114cb90ee08" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double tsa::missing_data::End</definition>
+        <argsstring>()</argsstring>
+        <name>End</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/AlgoExceptions.hpp" line="189" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/AlgoExceptions.hpp" bodystart="189" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1missing__data_1a96f7fd1c113289c1cfd22117fda3ec83" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double tsa::missing_data::Channel</definition>
+        <argsstring>()</argsstring>
+        <name>Channel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/AlgoExceptions.hpp" line="193" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/AlgoExceptions.hpp" bodystart="193" bodyend="195"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This exception should be used when some frames are missing </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="333">
+        <label>runtime_error</label>
+      </node>
+      <node id="332">
+        <label>tsa::missing_data</label>
+        <link refid="classtsa_1_1missing__data"/>
+        <childnode refid="333" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="335">
+        <label>runtime_error</label>
+      </node>
+      <node id="334">
+        <label>tsa::missing_data</label>
+        <link refid="classtsa_1_1missing__data"/>
+        <childnode refid="335" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/AlgoExceptions.hpp" line="168" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/AlgoExceptions.hpp" bodystart="168" bodyend="200"/>
+    <listofallmembers>
+      <member refid="classtsa_1_1missing__data_1a96f7fd1c113289c1cfd22117fda3ec83" prot="public" virt="non-virtual"><scope>tsa::missing_data</scope><name>Channel</name></member>
+      <member refid="classtsa_1_1missing__data_1a10c01ad5fd1fd4bc26d69114cb90ee08" prot="public" virt="non-virtual"><scope>tsa::missing_data</scope><name>End</name></member>
+      <member refid="classtsa_1_1missing__data_1ac223001a840eeb59c73cb0cef2483ed2" prot="private" virt="non-virtual"><scope>tsa::missing_data</scope><name>mChannel</name></member>
+      <member refid="classtsa_1_1missing__data_1ae4ac26763b09836066dd3202f421a2cc" prot="private" virt="non-virtual"><scope>tsa::missing_data</scope><name>mEndPeriod</name></member>
+      <member refid="classtsa_1_1missing__data_1a8d5ae46c22478ec86fae022f0044d2b7" prot="public" virt="non-virtual"><scope>tsa::missing_data</scope><name>missing_data</name></member>
+      <member refid="classtsa_1_1missing__data_1a3bb2ac2dd0703730e7f0b29037bf65aa" prot="private" virt="non-virtual"><scope>tsa::missing_data</scope><name>mStartPeriod</name></member>
+      <member refid="classtsa_1_1missing__data_1a14e20caa0f0f2baf341625d09e9da157" prot="public" virt="non-virtual"><scope>tsa::missing_data</scope><name>Start</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

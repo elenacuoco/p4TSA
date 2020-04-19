@@ -1,0 +1,214 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classtsa_1_1_arma2_t_f" kind="class" language="C++" prot="public">
+    <compoundname>tsa::Arma2TF</compoundname>
+    <basecompoundref refid="classtsa_1_1_algo_base" prot="public" virt="non-virtual">tsa::AlgoBase</basecompoundref>
+    <includes refid="_arma2_t_f_8hpp" local="no">Arma2TF.hpp</includes>
+      <sectiondef kind="user-defined">
+      <header>Operations</header>
+      <memberdef kind="function" id="classtsa_1_1_arma2_t_f_1ab1e6a1c801109ef7f884317bacbe5f64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::Arma2TF::operator()</definition>
+        <argsstring>(ARMAView &amp;arma, SeqViewComplex &amp;TF)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type><ref refid="classtsa_1_1_a_r_m_a_view" kindref="compound">ARMAView</ref> &amp;</type>
+          <declname>arma</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetsa_1ab32775c889b53c40fa83939f22372b75" kindref="member">SeqViewComplex</ref> &amp;</type>
+          <declname>TF</declname>
+        </param>
+        <briefdescription>
+<para>Brief documentation for the execute method. </para>        </briefdescription>
+        <detaileddescription>
+<para>Start of the long documentation for execute method.</para><para><simplesect kind="pre"><para>A precondition </para></simplesect>
+<simplesect kind="post"><para>A postcondition </para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>An</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>exception</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>parameter</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a returned value </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para><xrefsect id="todo_1_todo000001"><xreftitle>Todo</xreftitle><xrefdescription><para>implement Multivectorial Arma </para></xrefdescription></xrefsect></para>        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/Arma2TF.hpp" line="122" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/Arma2TF.cpp" bodystart="23" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_arma2_t_f_1ad7716bcd575670622bdec2fc32745e6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::Arma2TF::execute</definition>
+        <argsstring>(Dvector &amp;AR, Dvector &amp;MA, Cvector &amp;TF)</argsstring>
+        <name>execute</name>
+        <param>
+          <type><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref> &amp;</type>
+          <declname>AR</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref> &amp;</type>
+          <declname>MA</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetsa_1a054d1045ead95a65819e9e5722baf600" kindref="member">Cvector</ref> &amp;</type>
+          <declname>TF</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Declaration of execute operation</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>AR</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>autoregressive part </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>MA</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>moving average part </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TF</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>transfer function </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/Arma2TF.hpp" line="132" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/Arma2TF.cpp" bodystart="59" bodyend="102"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtsa_1_1_arma2_t_f_1aabbe1c03f711805d11bf7f4951149617" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tsa::Arma2TF::Arma2TF</definition>
+        <argsstring>()</argsstring>
+        <name>Arma2TF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/Arma2TF.hpp" line="81" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/Arma2TF.cpp" bodystart="19" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_arma2_t_f_1a93ac79691dd4f811d21f2021476ce4b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tsa::Arma2TF::Arma2TF</definition>
+        <argsstring>(const Arma2TF &amp;from)</argsstring>
+        <name>Arma2TF</name>
+        <param>
+          <type>const <ref refid="classtsa_1_1_arma2_t_f" kindref="compound">Arma2TF</ref> &amp;</type>
+          <declname>from</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Copy constructor</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>from</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The instance that must be copied </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/Arma2TF.hpp" line="88" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/Arma2TF.cpp" bodystart="109" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_arma2_t_f_1aa48720a5c5a48ebfbaf1ee080f27a411" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>tsa::Arma2TF::~Arma2TF</definition>
+        <argsstring>()</argsstring>
+        <name>~Arma2TF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/Arma2TF.hpp" line="93" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/Arma2TF.cpp" bodystart="117" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_arma2_t_f_1ac2fa5584ff0fed36eabfc908ded9b5de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classtsa_1_1_arma2_t_f" kindref="compound">Arma2TF</ref> &amp;</type>
+        <definition>Arma2TF &amp; tsa::Arma2TF::operator=</definition>
+        <argsstring>(const Arma2TF &amp;from)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classtsa_1_1_arma2_t_f" kindref="compound">Arma2TF</ref> &amp;</type>
+          <declname>from</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assignement operator</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>from</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The instance to be assigned from</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a reference to a new object </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/Arma2TF.hpp" line="102" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/Arma2TF.cpp" bodystart="127" bodyend="129"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Estimate the Transfer function using the ARMA parametrization. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="85">
+        <label>tsa::Arma2TF</label>
+        <link refid="classtsa_1_1_arma2_t_f"/>
+        <childnode refid="86" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="86">
+        <label>tsa::AlgoBase</label>
+        <link refid="classtsa_1_1_algo_base"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="87">
+        <label>tsa::Arma2TF</label>
+        <link refid="classtsa_1_1_arma2_t_f"/>
+        <childnode refid="88" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="88">
+        <label>tsa::AlgoBase</label>
+        <link refid="classtsa_1_1_algo_base"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/Arma2TF.hpp" line="75" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/Arma2TF.hpp" bodystart="75" bodyend="155"/>
+    <listofallmembers>
+      <member refid="classtsa_1_1_arma2_t_f_1aabbe1c03f711805d11bf7f4951149617" prot="public" virt="non-virtual"><scope>tsa::Arma2TF</scope><name>Arma2TF</name></member>
+      <member refid="classtsa_1_1_arma2_t_f_1a93ac79691dd4f811d21f2021476ce4b5" prot="public" virt="non-virtual"><scope>tsa::Arma2TF</scope><name>Arma2TF</name></member>
+      <member refid="classtsa_1_1_arma2_t_f_1ad7716bcd575670622bdec2fc32745e6e" prot="public" virt="non-virtual"><scope>tsa::Arma2TF</scope><name>execute</name></member>
+      <member refid="classtsa_1_1_arma2_t_f_1ab1e6a1c801109ef7f884317bacbe5f64" prot="public" virt="non-virtual"><scope>tsa::Arma2TF</scope><name>operator()</name></member>
+      <member refid="classtsa_1_1_arma2_t_f_1ac2fa5584ff0fed36eabfc908ded9b5de" prot="public" virt="non-virtual"><scope>tsa::Arma2TF</scope><name>operator=</name></member>
+      <member refid="classtsa_1_1_arma2_t_f_1aa48720a5c5a48ebfbaf1ee080f27a411" prot="public" virt="virtual"><scope>tsa::Arma2TF</scope><name>~Arma2TF</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

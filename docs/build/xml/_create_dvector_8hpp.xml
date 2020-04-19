@@ -1,0 +1,381 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_create_dvector_8hpp" kind="file" language="C++">
+    <compoundname>CreateDvector.hpp</compoundname>
+    <includes refid="_algo_base_8hpp" local="no">AlgoBase.hpp</includes>
+    <includedby refid="_create_dvector_8cpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/src/CreateDvector.cpp</includedby>
+    <includedby refid="_parcor2_a_r_8hpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/include/Parcor2AR.hpp</includedby>
+    <includedby refid="tsa_8hpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/include/tsa.hpp</includedby>
+    <incdepgraph>
+      <node id="1155">
+        <label>tsaTraits.hpp</label>
+        <link refid="tsa_traits_8hpp"/>
+        <childnode refid="1156" relation="include">
+        </childnode>
+      </node>
+      <node id="1135">
+        <label>eternity.hpp</label>
+        <link refid="eternity_8hpp"/>
+        <childnode refid="1136" relation="include">
+        </childnode>
+        <childnode refid="1139" relation="include">
+        </childnode>
+        <childnode refid="1144" relation="include">
+        </childnode>
+        <childnode refid="1148" relation="include">
+        </childnode>
+      </node>
+      <node id="1141">
+        <label>stdlib.h</label>
+      </node>
+      <node id="1128">
+        <label>stdexcept</label>
+      </node>
+      <node id="1150">
+        <label>tsaTypes.hpp</label>
+        <link refid="tsa_types_8hpp"/>
+        <childnode refid="1130" relation="include">
+        </childnode>
+        <childnode refid="1131" relation="include">
+        </childnode>
+        <childnode refid="1151" relation="include">
+        </childnode>
+        <childnode refid="1132" relation="include">
+        </childnode>
+        <childnode refid="1135" relation="include">
+        </childnode>
+      </node>
+      <node id="1133">
+        <label>string</label>
+      </node>
+      <node id="1136">
+        <label>eternity/dynamic.hpp</label>
+        <link refid="dynamic_8hpp"/>
+        <childnode refid="1137" relation="include">
+        </childnode>
+        <childnode refid="1138" relation="include">
+        </childnode>
+        <childnode refid="1133" relation="include">
+        </childnode>
+      </node>
+      <node id="1146">
+        <label>map</label>
+      </node>
+      <node id="1152">
+        <label>tsaLog.hpp</label>
+        <link refid="tsa_log_8hpp"/>
+        <childnode refid="1129" relation="include">
+        </childnode>
+        <childnode refid="1130" relation="include">
+        </childnode>
+        <childnode refid="1153" relation="include">
+        </childnode>
+      </node>
+      <node id="1130">
+        <label>fstream</label>
+      </node>
+      <node id="1145">
+        <label>xmlscanner.hpp</label>
+        <link refid="xmlscanner_8hpp"/>
+        <childnode refid="1140" relation="include">
+        </childnode>
+        <childnode refid="1141" relation="include">
+        </childnode>
+        <childnode refid="1142" relation="include">
+        </childnode>
+        <childnode refid="1146" relation="include">
+        </childnode>
+        <childnode refid="1143" relation="include">
+        </childnode>
+        <childnode refid="1130" relation="include">
+        </childnode>
+        <childnode refid="1133" relation="include">
+        </childnode>
+        <childnode refid="1129" relation="include">
+        </childnode>
+      </node>
+      <node id="1134">
+        <label>tsaSerialize.hpp</label>
+        <link refid="tsa_serialize_8hpp"/>
+        <childnode refid="1128" relation="include">
+        </childnode>
+        <childnode refid="1129" relation="include">
+        </childnode>
+        <childnode refid="1130" relation="include">
+        </childnode>
+        <childnode refid="1135" relation="include">
+        </childnode>
+        <childnode refid="1150" relation="include">
+        </childnode>
+      </node>
+      <node id="1126">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/CreateDvector.hpp</label>
+        <link refid="_create_dvector_8hpp"/>
+        <childnode refid="1127" relation="include">
+        </childnode>
+      </node>
+      <node id="1159">
+        <label>fparser.hpp</label>
+        <link refid="fparser_8hpp"/>
+        <childnode refid="1133" relation="include">
+        </childnode>
+        <childnode refid="1146" relation="include">
+        </childnode>
+        <childnode refid="1142" relation="include">
+        </childnode>
+      </node>
+      <node id="1127">
+        <label>AlgoBase.hpp</label>
+        <link refid="_algo_base_8hpp"/>
+        <childnode refid="1128" relation="include">
+        </childnode>
+        <childnode refid="1129" relation="include">
+        </childnode>
+        <childnode refid="1130" relation="include">
+        </childnode>
+        <childnode refid="1131" relation="include">
+        </childnode>
+        <childnode refid="1132" relation="include">
+        </childnode>
+        <childnode refid="1133" relation="include">
+        </childnode>
+        <childnode refid="1134" relation="include">
+        </childnode>
+        <childnode refid="1150" relation="include">
+        </childnode>
+        <childnode refid="1152" relation="include">
+        </childnode>
+        <childnode refid="1154" relation="include">
+        </childnode>
+        <childnode refid="1160" relation="include">
+        </childnode>
+        <childnode refid="1162" relation="include">
+        </childnode>
+      </node>
+      <node id="1139">
+        <label>eternity/persist.hpp</label>
+        <link refid="persist_8hpp"/>
+        <childnode refid="1136" relation="include">
+        </childnode>
+        <childnode refid="1140" relation="include">
+        </childnode>
+        <childnode refid="1141" relation="include">
+        </childnode>
+        <childnode refid="1142" relation="include">
+        </childnode>
+        <childnode refid="1143" relation="include">
+        </childnode>
+        <childnode refid="1130" relation="include">
+        </childnode>
+      </node>
+      <node id="1158">
+        <label>string.h</label>
+      </node>
+      <node id="1138">
+        <label>typeinfo</label>
+      </node>
+      <node id="1132">
+        <label>boost/numeric/ublas/io.hpp</label>
+      </node>
+      <node id="1153">
+        <label>unistd.h</label>
+      </node>
+      <node id="1157">
+        <label>tsaUtilityFunctions.hpp</label>
+        <link refid="tsa_utility_functions_8hpp"/>
+        <childnode refid="1158" relation="include">
+        </childnode>
+        <childnode refid="1159" relation="include">
+        </childnode>
+        <childnode refid="1156" relation="include">
+        </childnode>
+        <childnode refid="1130" relation="include">
+        </childnode>
+      </node>
+      <node id="1142">
+        <label>vector</label>
+      </node>
+      <node id="1154">
+        <label>BaseView.hpp</label>
+        <link refid="_base_view_8hpp"/>
+        <childnode refid="1146" relation="include">
+        </childnode>
+        <childnode refid="1133" relation="include">
+        </childnode>
+        <childnode refid="1150" relation="include">
+        </childnode>
+        <childnode refid="1155" relation="include">
+        </childnode>
+        <childnode refid="1157" relation="include">
+        </childnode>
+        <childnode refid="1134" relation="include">
+        </childnode>
+        <childnode refid="1152" relation="include">
+        </childnode>
+      </node>
+      <node id="1151">
+        <label>boost/numeric/ublas/matrix_proxy.hpp</label>
+      </node>
+      <node id="1149">
+        <label>sstream</label>
+      </node>
+      <node id="1161">
+        <label>FrameL.h</label>
+      </node>
+      <node id="1162">
+        <label>AlgoExceptions.hpp</label>
+        <link refid="_algo_exceptions_8hpp"/>
+        <childnode refid="1128" relation="include">
+        </childnode>
+        <childnode refid="1133" relation="include">
+        </childnode>
+      </node>
+      <node id="1160">
+        <label>SeqView.hpp</label>
+        <link refid="_seq_view_8hpp"/>
+        <childnode refid="1131" relation="include">
+        </childnode>
+        <childnode refid="1151" relation="include">
+        </childnode>
+        <childnode refid="1132" relation="include">
+        </childnode>
+        <childnode refid="1154" relation="include">
+        </childnode>
+        <childnode refid="1161" relation="include">
+        </childnode>
+      </node>
+      <node id="1140">
+        <label>math.h</label>
+      </node>
+      <node id="1131">
+        <label>boost/numeric/ublas/matrix.hpp</label>
+      </node>
+      <node id="1129">
+        <label>iostream</label>
+      </node>
+      <node id="1147">
+        <label>deque</label>
+      </node>
+      <node id="1144">
+        <label>eternity/persist_xml.hpp</label>
+        <link refid="persist__xml_8hpp"/>
+        <childnode refid="1139" relation="include">
+        </childnode>
+        <childnode refid="1145" relation="include">
+        </childnode>
+        <childnode refid="1147" relation="include">
+        </childnode>
+      </node>
+      <node id="1156">
+        <label>complex</label>
+      </node>
+      <node id="1148">
+        <label>eternity/algorithms.hpp</label>
+        <link refid="algorithms_8hpp"/>
+        <childnode refid="1139" relation="include">
+        </childnode>
+        <childnode refid="1144" relation="include">
+        </childnode>
+        <childnode refid="1145" relation="include">
+        </childnode>
+        <childnode refid="1149" relation="include">
+        </childnode>
+      </node>
+      <node id="1143">
+        <label>algorithm</label>
+      </node>
+      <node id="1137">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1167">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/Parcor2AR.cpp</label>
+        <link refid="_parcor2_a_r_8cpp"/>
+      </node>
+      <node id="1168">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/ArBurgEstimator.hpp</label>
+        <link refid="_ar_burg_estimator_8hpp"/>
+        <childnode refid="1166" relation="include">
+        </childnode>
+        <childnode refid="1169" relation="include">
+        </childnode>
+      </node>
+      <node id="1164">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/CreateDvector.cpp</label>
+        <link refid="_create_dvector_8cpp"/>
+      </node>
+      <node id="1163">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/CreateDvector.hpp</label>
+        <link refid="_create_dvector_8hpp"/>
+        <childnode refid="1164" relation="include">
+        </childnode>
+        <childnode refid="1165" relation="include">
+        </childnode>
+        <childnode refid="1169" relation="include">
+        </childnode>
+      </node>
+      <node id="1169">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/tsa.hpp</label>
+        <link refid="tsa_8hpp"/>
+      </node>
+      <node id="1166">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/ArBurgEstimator.cpp</label>
+        <link refid="_ar_burg_estimator_8cpp"/>
+      </node>
+      <node id="1165">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/Parcor2AR.hpp</label>
+        <link refid="_parcor2_a_r_8hpp"/>
+        <childnode refid="1166" relation="include">
+        </childnode>
+        <childnode refid="1167" relation="include">
+        </childnode>
+        <childnode refid="1168" relation="include">
+        </childnode>
+        <childnode refid="1169" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespacetsa">tsa</innernamespace>
+    <briefdescription>
+<para>Estimate the AR parameters by the Parcor. </para>    </briefdescription>
+    <detaileddescription>
+<para>Copyright (C) 2004 by Elena Cuoco <ulink url="mailto:elena.cuoco@ego-gw.it">elena.cuoco@ego-gw.it</ulink></para><para>This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</para><para>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</para><para>You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.</para><para><simplesect kind="author"><para>Elena Cuoco <ulink url="mailto:elena.cuoco@ego-gw.it">elena.cuoco@ego-gw.it</ulink> </para></simplesect>
+<simplesect kind="date"><para>2005 </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="27"><highlight class="preprocessor">#ifndef<sp/>__CREATEDVECTOR_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__CREATEDVECTOR_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_algo_base_8hpp" kindref="compound">AlgoBase.hpp</ref>&gt;</highlight></codeline>
+<codeline lineno="46"></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"></codeline>
+<codeline lineno="66"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetsa" kindref="compound">tsa</ref><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref><sp/><ref refid="namespacetsa_1a1f1681e991b47cfe3bc50282c96bd744" kindref="member">create_dvector</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal">}<sp/></highlight><highlight class="comment">//end<sp/>namespace</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>___CREATEDVECTOR_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/CreateDvector.hpp"/>
+  </compounddef>
+</doxygen>

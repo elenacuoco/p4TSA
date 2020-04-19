@@ -1,0 +1,238 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classtsa_1_1_a_d_c___channel" kind="class" language="C++" prot="public">
+    <compoundname>tsa::ADC_Channel</compoundname>
+    <basecompoundref refid="classtsa_1_1_channel_descriptor" prot="public" virt="non-virtual">tsa::ChannelDescriptor</basecompoundref>
+    <includes refid="_frame_i_stream_8hpp" local="no">FrameIStream.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtsa_1_1_a_d_c___channel_1a10f5984a8170a8cc68f5e78234166cd2" prot="private" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* tsa::ADC_Channel::mName</definition>
+        <argsstring></argsstring>
+        <name>mName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" line="276" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" bodystart="276" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtsa_1_1_a_d_c___channel_1a18595131ed55a3488ef56cfc0b39611d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tsa::ADC_Channel::ADC_Channel</definition>
+        <argsstring>(FrameIStream *FIS, FrAdcData *adc, unsigned int id)</argsstring>
+        <name>ADC_Channel</name>
+        <param>
+          <type><ref refid="classtsa_1_1_frame_i_stream" kindref="compound">FrameIStream</ref> *</type>
+          <declname>FIS</declname>
+        </param>
+        <param>
+          <type>FrAdcData *</type>
+          <declname>adc</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FIS</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the <ref refid="classtsa_1_1_frame_i_stream" kindref="compound">FrameIStream</ref> class </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>adc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the first FrAdcData structure </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>id of the channel </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" line="240" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/FrameIStream.cpp" bodystart="229" bodyend="239"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_a_d_c___channel_1a0f9c5bbb98da25e712d4f6f8c078e658" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>tsa::ADC_Channel::~ADC_Channel</definition>
+        <argsstring>()</argsstring>
+        <name>~ADC_Channel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" line="246" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/FrameIStream.cpp" bodystart="241" bodyend="243"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_a_d_c___channel_1a23052bc47591e46246701ec0573c7902" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void tsa::ADC_Channel::AddData</definition>
+        <argsstring>()</argsstring>
+        <name>AddData</name>
+        <reimplements refid="classtsa_1_1_channel_descriptor_1aa1e001a5e712415cd4e9d66846914a56">AddData</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function must be called when there are not enough data to fill the output view. It reads a chunk of data from the current frame </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" line="254" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/FrameIStream.cpp" bodystart="245" bodyend="252"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_a_d_c___channel_1ab5e23c219a7bf70866b05c9d3ad3da6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double tsa::ADC_Channel::GetLength</definition>
+        <argsstring>()</argsstring>
+        <name>GetLength</name>
+        <reimplements refid="classtsa_1_1_channel_descriptor_1a456d14e6136c389fbd307fabab7d7b73">GetLength</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the maximul time length of data that can be currently filled without calling AddData.</para><para><simplesect kind="return"><para>the time length of the data available in seconds </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" line="262" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/FrameIStream.cpp" bodystart="254" bodyend="256"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classtsa_1_1_a_d_c___channel_1a4585997f9f0029bb8d6fee7d36d33c92" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classtsa_1_1_a_d_c___channel" kindref="compound">ADC_Channel</ref> *</type>
+        <definition>ADC_Channel * tsa::ADC_Channel::Create</definition>
+        <argsstring>(FrameIStream *FIS, char *name, unsigned int id)</argsstring>
+        <name>Create</name>
+        <param>
+          <type><ref refid="classtsa_1_1_frame_i_stream" kindref="compound">FrameIStream</ref> *</type>
+          <declname>FIS</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create, if possible, an instance of the class</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FIS</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the <ref refid="classtsa_1_1_frame_i_stream" kindref="compound">FrameIStream</ref> class instance </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of the channel </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of the channel</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pointer to the created class instance or null </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" line="273" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/FrameIStream.cpp" bodystart="218" bodyend="227"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A descriptor for an ADC channel </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="0">
+        <label>tsa::ADC_Channel</label>
+        <link refid="classtsa_1_1_a_d_c___channel"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>tsa::ChannelDescriptor</label>
+        <link refid="classtsa_1_1_channel_descriptor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>tsa::AlgoBase</label>
+        <link refid="classtsa_1_1_algo_base"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6">
+        <label>tsa::FrameIStream</label>
+        <link refid="classtsa_1_1_frame_i_stream"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>tsa::ADC_Channel</label>
+        <link refid="classtsa_1_1_a_d_c___channel"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>tsa::ChannelDescriptor</label>
+        <link refid="classtsa_1_1_channel_descriptor"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>mFIS</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>tsa::AlgoBase</label>
+        <link refid="classtsa_1_1_algo_base"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" line="230" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp" bodystart="230" bodyend="279"/>
+    <listofallmembers>
+      <member refid="classtsa_1_1_a_d_c___channel_1a18595131ed55a3488ef56cfc0b39611d" prot="public" virt="non-virtual"><scope>tsa::ADC_Channel</scope><name>ADC_Channel</name></member>
+      <member refid="classtsa_1_1_a_d_c___channel_1a23052bc47591e46246701ec0573c7902" prot="public" virt="virtual"><scope>tsa::ADC_Channel</scope><name>AddData</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a320624e156e5d856077465474bc7154f" prot="public" virt="non-virtual"><scope>tsa::ADC_Channel</scope><name>ChannelDescriptor</name></member>
+      <member refid="classtsa_1_1_a_d_c___channel_1a4585997f9f0029bb8d6fee7d36d33c92" prot="public" virt="non-virtual"><scope>tsa::ADC_Channel</scope><name>Create</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a73d060e190a75faa7ac64ee4a328a9d4" prot="protected" virt="non-virtual"><scope>tsa::ADC_Channel</scope><name>data_available</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a6553da04ba33471fc5465b6bd2b5275c" prot="public" virt="virtual"><scope>tsa::ADC_Channel</scope><name>FillView</name></member>
+      <member refid="classtsa_1_1_a_d_c___channel_1ab5e23c219a7bf70866b05c9d3ad3da6f" prot="public" virt="virtual"><scope>tsa::ADC_Channel</scope><name>GetLength</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a602c501d3fa47c0951ae45f78336a1a8" prot="public" virt="virtual"><scope>tsa::ADC_Channel</scope><name>GetRate</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1ad1568c18971efe9a5cb1d114e06f5050" prot="protected" virt="non-virtual"><scope>tsa::ADC_Channel</scope><name>mData</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1ac4103a2793b7e507f8f982070ee27348" prot="protected" virt="non-virtual"><scope>tsa::ADC_Channel</scope><name>mExceptions</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a7767947e90a66d41bbd13bd4c54149a6" prot="protected" virt="non-virtual"><scope>tsa::ADC_Channel</scope><name>mFIS</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a49d1e3852cb22b0a56ebc03b3176c5b8" prot="protected" virt="non-virtual"><scope>tsa::ADC_Channel</scope><name>mId</name></member>
+      <member refid="classtsa_1_1_a_d_c___channel_1a10f5984a8170a8cc68f5e78234166cd2" prot="private" virt="non-virtual"><scope>tsa::ADC_Channel</scope><name>mName</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a6bad409238df7dff8b5265570adac8ff" prot="protected" virt="non-virtual"><scope>tsa::ADC_Channel</scope><name>mNextTime</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a142c7f60e14fa8036340b902529cf956" prot="protected" virt="non-virtual"><scope>tsa::ADC_Channel</scope><name>mRate</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a61cb9c3f50762989afc59c9e365f0927" prot="protected" virt="non-virtual"><scope>tsa::ADC_Channel</scope><name>PushFrVect</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1ae3da8cb574d6a43bcca33daca5394530" prot="protected" virt="non-virtual"><scope>tsa::ADC_Channel</scope><name>PushValue</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1ae38a3b6ca5d23123a61a421fe3612b86" prot="protected" virt="non-virtual"><scope>tsa::ADC_Channel</scope><name>Queue</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a5ebd9a8bf358666b2cd9ae00056d2728" prot="public" virt="virtual"><scope>tsa::ADC_Channel</scope><name>WriteView</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a51b2df6d09b5b0b07d2a9ecda6fffa2b" prot="public" virt="virtual"><scope>tsa::ADC_Channel</scope><name>WriteView</name></member>
+      <member refid="classtsa_1_1_a_d_c___channel_1a0f9c5bbb98da25e712d4f6f8c078e658" prot="public" virt="virtual"><scope>tsa::ADC_Channel</scope><name>~ADC_Channel</name></member>
+      <member refid="classtsa_1_1_channel_descriptor_1a2b4f201421dcd2cc9d2c1705fe4bea61" prot="public" virt="virtual"><scope>tsa::ADC_Channel</scope><name>~ChannelDescriptor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

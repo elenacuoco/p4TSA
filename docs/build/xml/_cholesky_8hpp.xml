@@ -1,0 +1,384 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_cholesky_8hpp" kind="file" language="C++">
+    <compoundname>Cholesky.hpp</compoundname>
+    <includes refid="_algo_base_8hpp" local="no">AlgoBase.hpp</includes>
+    <includedby refid="_cholesky_8cpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/src/Cholesky.cpp</includedby>
+    <incdepgraph>
+      <node id="1035">
+        <label>tsaTraits.hpp</label>
+        <link refid="tsa_traits_8hpp"/>
+        <childnode refid="1036" relation="include">
+        </childnode>
+      </node>
+      <node id="1015">
+        <label>eternity.hpp</label>
+        <link refid="eternity_8hpp"/>
+        <childnode refid="1016" relation="include">
+        </childnode>
+        <childnode refid="1019" relation="include">
+        </childnode>
+        <childnode refid="1024" relation="include">
+        </childnode>
+        <childnode refid="1028" relation="include">
+        </childnode>
+      </node>
+      <node id="1021">
+        <label>stdlib.h</label>
+      </node>
+      <node id="1008">
+        <label>stdexcept</label>
+      </node>
+      <node id="1030">
+        <label>tsaTypes.hpp</label>
+        <link refid="tsa_types_8hpp"/>
+        <childnode refid="1010" relation="include">
+        </childnode>
+        <childnode refid="1011" relation="include">
+        </childnode>
+        <childnode refid="1031" relation="include">
+        </childnode>
+        <childnode refid="1012" relation="include">
+        </childnode>
+        <childnode refid="1015" relation="include">
+        </childnode>
+      </node>
+      <node id="1013">
+        <label>string</label>
+      </node>
+      <node id="1016">
+        <label>eternity/dynamic.hpp</label>
+        <link refid="dynamic_8hpp"/>
+        <childnode refid="1017" relation="include">
+        </childnode>
+        <childnode refid="1018" relation="include">
+        </childnode>
+        <childnode refid="1013" relation="include">
+        </childnode>
+      </node>
+      <node id="1026">
+        <label>map</label>
+      </node>
+      <node id="1032">
+        <label>tsaLog.hpp</label>
+        <link refid="tsa_log_8hpp"/>
+        <childnode refid="1009" relation="include">
+        </childnode>
+        <childnode refid="1010" relation="include">
+        </childnode>
+        <childnode refid="1033" relation="include">
+        </childnode>
+      </node>
+      <node id="1010">
+        <label>fstream</label>
+      </node>
+      <node id="1025">
+        <label>xmlscanner.hpp</label>
+        <link refid="xmlscanner_8hpp"/>
+        <childnode refid="1020" relation="include">
+        </childnode>
+        <childnode refid="1021" relation="include">
+        </childnode>
+        <childnode refid="1022" relation="include">
+        </childnode>
+        <childnode refid="1026" relation="include">
+        </childnode>
+        <childnode refid="1023" relation="include">
+        </childnode>
+        <childnode refid="1010" relation="include">
+        </childnode>
+        <childnode refid="1013" relation="include">
+        </childnode>
+        <childnode refid="1009" relation="include">
+        </childnode>
+      </node>
+      <node id="1014">
+        <label>tsaSerialize.hpp</label>
+        <link refid="tsa_serialize_8hpp"/>
+        <childnode refid="1008" relation="include">
+        </childnode>
+        <childnode refid="1009" relation="include">
+        </childnode>
+        <childnode refid="1010" relation="include">
+        </childnode>
+        <childnode refid="1015" relation="include">
+        </childnode>
+        <childnode refid="1030" relation="include">
+        </childnode>
+      </node>
+      <node id="1039">
+        <label>fparser.hpp</label>
+        <link refid="fparser_8hpp"/>
+        <childnode refid="1013" relation="include">
+        </childnode>
+        <childnode refid="1026" relation="include">
+        </childnode>
+        <childnode refid="1022" relation="include">
+        </childnode>
+      </node>
+      <node id="1007">
+        <label>AlgoBase.hpp</label>
+        <link refid="_algo_base_8hpp"/>
+        <childnode refid="1008" relation="include">
+        </childnode>
+        <childnode refid="1009" relation="include">
+        </childnode>
+        <childnode refid="1010" relation="include">
+        </childnode>
+        <childnode refid="1011" relation="include">
+        </childnode>
+        <childnode refid="1012" relation="include">
+        </childnode>
+        <childnode refid="1013" relation="include">
+        </childnode>
+        <childnode refid="1014" relation="include">
+        </childnode>
+        <childnode refid="1030" relation="include">
+        </childnode>
+        <childnode refid="1032" relation="include">
+        </childnode>
+        <childnode refid="1034" relation="include">
+        </childnode>
+        <childnode refid="1040" relation="include">
+        </childnode>
+        <childnode refid="1042" relation="include">
+        </childnode>
+      </node>
+      <node id="1019">
+        <label>eternity/persist.hpp</label>
+        <link refid="persist_8hpp"/>
+        <childnode refid="1016" relation="include">
+        </childnode>
+        <childnode refid="1020" relation="include">
+        </childnode>
+        <childnode refid="1021" relation="include">
+        </childnode>
+        <childnode refid="1022" relation="include">
+        </childnode>
+        <childnode refid="1023" relation="include">
+        </childnode>
+        <childnode refid="1010" relation="include">
+        </childnode>
+      </node>
+      <node id="1038">
+        <label>string.h</label>
+      </node>
+      <node id="1018">
+        <label>typeinfo</label>
+      </node>
+      <node id="1012">
+        <label>boost/numeric/ublas/io.hpp</label>
+      </node>
+      <node id="1033">
+        <label>unistd.h</label>
+      </node>
+      <node id="1006">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/Cholesky.hpp</label>
+        <link refid="_cholesky_8hpp"/>
+        <childnode refid="1007" relation="include">
+        </childnode>
+      </node>
+      <node id="1037">
+        <label>tsaUtilityFunctions.hpp</label>
+        <link refid="tsa_utility_functions_8hpp"/>
+        <childnode refid="1038" relation="include">
+        </childnode>
+        <childnode refid="1039" relation="include">
+        </childnode>
+        <childnode refid="1036" relation="include">
+        </childnode>
+        <childnode refid="1010" relation="include">
+        </childnode>
+      </node>
+      <node id="1022">
+        <label>vector</label>
+      </node>
+      <node id="1034">
+        <label>BaseView.hpp</label>
+        <link refid="_base_view_8hpp"/>
+        <childnode refid="1026" relation="include">
+        </childnode>
+        <childnode refid="1013" relation="include">
+        </childnode>
+        <childnode refid="1030" relation="include">
+        </childnode>
+        <childnode refid="1035" relation="include">
+        </childnode>
+        <childnode refid="1037" relation="include">
+        </childnode>
+        <childnode refid="1014" relation="include">
+        </childnode>
+        <childnode refid="1032" relation="include">
+        </childnode>
+      </node>
+      <node id="1031">
+        <label>boost/numeric/ublas/matrix_proxy.hpp</label>
+      </node>
+      <node id="1029">
+        <label>sstream</label>
+      </node>
+      <node id="1041">
+        <label>FrameL.h</label>
+      </node>
+      <node id="1042">
+        <label>AlgoExceptions.hpp</label>
+        <link refid="_algo_exceptions_8hpp"/>
+        <childnode refid="1008" relation="include">
+        </childnode>
+        <childnode refid="1013" relation="include">
+        </childnode>
+      </node>
+      <node id="1040">
+        <label>SeqView.hpp</label>
+        <link refid="_seq_view_8hpp"/>
+        <childnode refid="1011" relation="include">
+        </childnode>
+        <childnode refid="1031" relation="include">
+        </childnode>
+        <childnode refid="1012" relation="include">
+        </childnode>
+        <childnode refid="1034" relation="include">
+        </childnode>
+        <childnode refid="1041" relation="include">
+        </childnode>
+      </node>
+      <node id="1020">
+        <label>math.h</label>
+      </node>
+      <node id="1011">
+        <label>boost/numeric/ublas/matrix.hpp</label>
+      </node>
+      <node id="1009">
+        <label>iostream</label>
+      </node>
+      <node id="1027">
+        <label>deque</label>
+      </node>
+      <node id="1024">
+        <label>eternity/persist_xml.hpp</label>
+        <link refid="persist__xml_8hpp"/>
+        <childnode refid="1019" relation="include">
+        </childnode>
+        <childnode refid="1025" relation="include">
+        </childnode>
+        <childnode refid="1027" relation="include">
+        </childnode>
+      </node>
+      <node id="1036">
+        <label>complex</label>
+      </node>
+      <node id="1028">
+        <label>eternity/algorithms.hpp</label>
+        <link refid="algorithms_8hpp"/>
+        <childnode refid="1019" relation="include">
+        </childnode>
+        <childnode refid="1024" relation="include">
+        </childnode>
+        <childnode refid="1025" relation="include">
+        </childnode>
+        <childnode refid="1029" relation="include">
+        </childnode>
+      </node>
+      <node id="1023">
+        <label>algorithm</label>
+      </node>
+      <node id="1017">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1044">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/Cholesky.cpp</label>
+        <link refid="_cholesky_8cpp"/>
+      </node>
+      <node id="1043">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/Cholesky.hpp</label>
+        <link refid="_cholesky_8hpp"/>
+        <childnode refid="1044" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classtsa_1_1_cholesky" prot="public">tsa::Cholesky</innerclass>
+    <innernamespace refid="namespacetsa">tsa</innernamespace>
+    <briefdescription>
+<para>Implement the Cholesky decomposition. </para>    </briefdescription>
+    <detaileddescription>
+<para>Copyright (C) 2004 by Elena Cuoco <ulink url="mailto:elena.cuoco@ego-gw.it">elena.cuoco@ego-gw.it</ulink></para><para>This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</para><para>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</para><para>You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.</para><para><simplesect kind="author"><para>Elena Cuoco <ulink url="mailto:elena.cuoco@ego-gw.it">elena.cuoco@ego-gw.it</ulink> </para></simplesect>
+<simplesect kind="date"><para>2006 </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>__CHOLESKY_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__CHOLESKY_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"></codeline>
+<codeline lineno="41"></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_algo_base_8hpp" kindref="compound">AlgoBase.hpp</ref>&gt;</highlight></codeline>
+<codeline lineno="45"></codeline>
+<codeline lineno="49"></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"></codeline>
+<codeline lineno="57"></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"></codeline>
+<codeline lineno="65"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetsa" kindref="compound">tsa</ref><sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"></codeline>
+<codeline lineno="71"></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="classtsa_1_1_cholesky" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classtsa_1_1_cholesky" kindref="compound">Cholesky</ref><sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_cholesky_1a19dfa3cb6bf14721a91ec6fdcb26dbcf" kindref="member">Cholesky</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>N,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>eps);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_cholesky_1a19dfa3cb6bf14721a91ec6fdcb26dbcf" kindref="member">Cholesky</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_cholesky" kindref="compound">Cholesky</ref>&amp;<sp/>from);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_cholesky_1a45d30ca313f3949504716bacb5036b6d" kindref="member">~Cholesky</ref>();</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_cholesky" kindref="compound">Cholesky</ref>&amp;<sp/><ref refid="classtsa_1_1_cholesky_1a3c86b3ab61a3dd759b067ce685e6f51e" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_cholesky" kindref="compound">Cholesky</ref>&amp;<sp/>from);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_cholesky_1ac04746ca67f2fb532dc060a35a1ba4d8" kindref="member">execute</ref>(<ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref>&amp;<sp/>A,<sp/><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref>&amp;<sp/>B);</highlight></codeline>
+<codeline lineno="126"></codeline>
+<codeline lineno="130"></codeline>
+<codeline lineno="131"></codeline>
+<codeline lineno="133"></codeline>
+<codeline lineno="137"></codeline>
+<codeline lineno="138"></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="145" refid="classtsa_1_1_cholesky_1aeebdfa1ac318dceb73fccfe75f3928bc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_cholesky_1aeebdfa1ac318dceb73fccfe75f3928bc" kindref="member">mN</ref>;</highlight></codeline>
+<codeline lineno="146" refid="classtsa_1_1_cholesky_1afb8463f2c148c8ae2ef2c2914074718a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref><sp/><ref refid="classtsa_1_1_cholesky_1afb8463f2c148c8ae2ef2c2914074718a" kindref="member">mD</ref>;</highlight></codeline>
+<codeline lineno="147" refid="classtsa_1_1_cholesky_1a71ce7b253e3824f3629ca31ba049f58e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref><sp/><ref refid="classtsa_1_1_cholesky_1a71ce7b253e3824f3629ca31ba049f58e" kindref="member">mY</ref>;</highlight></codeline>
+<codeline lineno="148" refid="classtsa_1_1_cholesky_1a56d3135a9c56e030e9cf876fd99dbbc3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref><sp/><ref refid="classtsa_1_1_cholesky_1a56d3135a9c56e030e9cf876fd99dbbc3" kindref="member">mXL</ref>;</highlight></codeline>
+<codeline lineno="149" refid="classtsa_1_1_cholesky_1afc88d4ebf8b5a163a77ef3e3dd90f99d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_cholesky_1afc88d4ebf8b5a163a77ef3e3dd90f99d" kindref="member">mIflag</ref>;</highlight></codeline>
+<codeline lineno="150" refid="classtsa_1_1_cholesky_1aa49812e981a177f6792389d0d760db52" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_cholesky_1aa49812e981a177f6792389d0d760db52" kindref="member">mEps</ref>;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"></codeline>
+<codeline lineno="158"></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"></codeline>
+<codeline lineno="166"></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal">}<sp/></highlight><highlight class="comment">//end<sp/>namespace</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>__CHOLESKY_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/Cholesky.hpp"/>
+  </compounddef>
+</doxygen>

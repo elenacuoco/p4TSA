@@ -1,0 +1,664 @@
+\hypertarget{class_function_parser}{}\section{Function\+Parser Class Reference}
+\label{class_function_parser}\index{Function\+Parser@{Function\+Parser}}
+
+
+{\ttfamily \#include $<$fparser.\+hpp$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_function_parser_1_1_data}{Data}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_function_parser_a0bb74d288d02ba86367cc1c85351c8e7}{Parse\+Error\+Type} \{ \newline
+\hyperlink{class_function_parser_a0bb74d288d02ba86367cc1c85351c8e7ae2d4f26e44818f756cbdefbeb76e4ca3}{S\+Y\+N\+T\+A\+X\+\_\+\+E\+R\+R\+OR} = 0, 
+\hyperlink{class_function_parser_a0bb74d288d02ba86367cc1c85351c8e7a8d264fb5dadc95cb61c97384d9351669}{M\+I\+S\+M\+\_\+\+P\+A\+R\+E\+N\+TH}, 
+\hyperlink{class_function_parser_a0bb74d288d02ba86367cc1c85351c8e7a8e549b77de5e9f6f52e3a19a6267b16c}{M\+I\+S\+S\+I\+N\+G\+\_\+\+P\+A\+R\+E\+N\+TH}, 
+\hyperlink{class_function_parser_a0bb74d288d02ba86367cc1c85351c8e7ac5ed9e2f99d67c7b11f22dcc1e096474}{E\+M\+P\+T\+Y\+\_\+\+P\+A\+R\+E\+N\+TH}, 
+\newline
+\hyperlink{class_function_parser_a0bb74d288d02ba86367cc1c85351c8e7aa9b7c33316017f2de413ed7f140f36c6}{E\+X\+P\+E\+C\+T\+\_\+\+O\+P\+E\+R\+A\+T\+OR}, 
+\hyperlink{class_function_parser_a0bb74d288d02ba86367cc1c85351c8e7a9387af9f1f8e2339997b932d37728aa6}{O\+U\+T\+\_\+\+O\+F\+\_\+\+M\+E\+M\+O\+RY}, 
+\hyperlink{class_function_parser_a0bb74d288d02ba86367cc1c85351c8e7a455a3ffd84dd6f97b008aba834c45b9e}{U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+E\+R\+R\+OR}, 
+\hyperlink{class_function_parser_a0bb74d288d02ba86367cc1c85351c8e7a970abfe88a6d4f3ccf0f999d4c0a0445}{I\+N\+V\+A\+L\+I\+D\+\_\+\+V\+A\+RS}, 
+\newline
+\hyperlink{class_function_parser_a0bb74d288d02ba86367cc1c85351c8e7abeede85e1cc0910db7ae8f06e4fe29e9}{I\+L\+L\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+A\+M\+O\+U\+NT}, 
+\hyperlink{class_function_parser_a0bb74d288d02ba86367cc1c85351c8e7ad000e35ddadcb28fa56e509766b051df}{P\+R\+E\+M\+A\+T\+U\+R\+E\+\_\+\+E\+OS}, 
+\hyperlink{class_function_parser_a0bb74d288d02ba86367cc1c85351c8e7a5d885cdd62d468c4643667704ed21f43}{E\+X\+P\+E\+C\+T\+\_\+\+P\+A\+R\+E\+N\+T\+H\+\_\+\+F\+U\+NC}, 
+\hyperlink{class_function_parser_a0bb74d288d02ba86367cc1c85351c8e7afe98956d3451f7e3d66f259f8b36108a}{F\+P\+\_\+\+N\+O\+\_\+\+E\+R\+R\+OR}
+ \}
+\item 
+typedef double($\ast$ \hyperlink{class_function_parser_acca53651fb8f1c7a44e3d2cac7e62455}{Function\+Ptr}) (const double $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_function_parser_af4e0b209ec9771dcd76e27f3fcad1b51}{Parse} (const std\+::string \&Function, const std\+::string \&Vars, bool use\+Degrees=false)
+\item 
+const char $\ast$ \hyperlink{class_function_parser_a000e3edaf5dc8ee121df03b731ff0192}{Error\+Msg} () const
+\item 
+\hyperlink{class_function_parser_a0bb74d288d02ba86367cc1c85351c8e7}{Parse\+Error\+Type} \hyperlink{class_function_parser_ad6ddf1546278fa7148c968374e6a097a}{Get\+Parse\+Error\+Type} () const
+\item 
+double \hyperlink{class_function_parser_a8fe3538f4cd207346c390059ba334023}{Eval} (const double $\ast$Vars)
+\item 
+int \hyperlink{class_function_parser_a94faf9f4616d0850821cce15abbcf421}{Eval\+Error} () const
+\item 
+bool \hyperlink{class_function_parser_a481976b6eb58b15d31d4f3700d9ad730}{Add\+Constant} (const std\+::string \&name, double value)
+\item 
+bool \hyperlink{class_function_parser_a8d477dd0041ca594dac795bba24c9f3a}{Add\+Function} (const std\+::string \&name, \hyperlink{class_function_parser_acca53651fb8f1c7a44e3d2cac7e62455}{Function\+Ptr}, unsigned params\+Amount)
+\item 
+bool \hyperlink{class_function_parser_a7d6c6465658e9831d0c51e3bd6b5a4c0}{Add\+Function} (const std\+::string \&name, \hyperlink{class_function_parser}{Function\+Parser} \&)
+\item 
+void \hyperlink{class_function_parser_a5466523ee5198fb4b38461b362b1481d}{Optimize} ()
+\item 
+\hyperlink{class_function_parser_a18468eeb56ac5c1b1a6a0b0cebb2c045}{Function\+Parser} ()
+\item 
+\hyperlink{class_function_parser_a50257dda6ec4f2c4adf6740e31cf7da7}{$\sim$\+Function\+Parser} ()
+\item 
+\hyperlink{class_function_parser_adcfa2c887c17019c29fdbfaa39ab28fb}{Function\+Parser} (const \hyperlink{class_function_parser}{Function\+Parser} \&)
+\item 
+\hyperlink{class_function_parser}{Function\+Parser} \& \hyperlink{class_function_parser_a316870fce14d0b1d9bc386f23115cc53}{operator=} (const \hyperlink{class_function_parser}{Function\+Parser} \&)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_function_parser_a0af0f9ad348adf7df57fa630eddf8e47}{copy\+On\+Write} ()
+\item 
+bool \hyperlink{class_function_parser_abfc0c76a7006ba7b0e45e21bcd6f83cd}{check\+Recursive\+Linking} (const \hyperlink{class_function_parser}{Function\+Parser} $\ast$) const
+\item 
+bool \hyperlink{class_function_parser_a79441f19176e18e88155f1101108dbe6}{is\+Valid\+Name} (const std\+::string \&) const
+\item 
+Data\+::\+Var\+Map\+\_\+t\+::const\+\_\+iterator \hyperlink{class_function_parser_a1c1ea54f04c1dfb8d8609240ba9f5f40}{Find\+Variable} (const char $\ast$, const \hyperlink{struct_function_parser_1_1_data_a02f3fbca3164d0e498312b418258ea84}{Data\+::\+Var\+Map\+\_\+t} \&) const
+\item 
+Data\+::\+Const\+Map\+\_\+t\+::const\+\_\+iterator \hyperlink{class_function_parser_a305fdcea81a498567dc92010338cee7c}{Find\+Constant} (const char $\ast$) const
+\item 
+int \hyperlink{class_function_parser_a3895fdbb2f21fc7facebcd4a3c2399f7}{Check\+Syntax} (const char $\ast$)
+\item 
+bool \hyperlink{class_function_parser_aa136efc410ad6a9c2992fb6e1c9b057c}{Compile} (const char $\ast$)
+\item 
+bool \hyperlink{class_function_parser_afd635d05f1b4d3ef6f09b75dd92926e5}{Is\+Variable} (int)
+\item 
+void \hyperlink{class_function_parser_a714d401cb9368826a87b7f15575de2a3}{Add\+Compiled\+Byte} (unsigned)
+\item 
+void \hyperlink{class_function_parser_a59cf4b93d74e0572386742603977f886}{Add\+Immediate} (double)
+\item 
+void \hyperlink{class_function_parser_aadefd3517f92e066d9926a1998e9fe2f}{Add\+Function\+Opcode} (unsigned)
+\item 
+void \hyperlink{class_function_parser_a2ba1bb889a7035da4a7639d6b7ce53c6}{inc\+Stack\+Ptr} ()
+\item 
+int \hyperlink{class_function_parser_a9978dd583ee328a7f71a6075a3c5f97c}{Compile\+If} (const char $\ast$, int)
+\item 
+int \hyperlink{class_function_parser_a22e24efb5ef28aa34025bf49fe505010}{Compile\+Function\+Params} (const char $\ast$, int, unsigned)
+\item 
+int \hyperlink{class_function_parser_a7673096cf704d1fa7ab542db5f22fe95}{Compile\+Element} (const char $\ast$, int)
+\item 
+int \hyperlink{class_function_parser_a34d2686ecb9619b0b459bfa249b64498}{Compile\+Pow} (const char $\ast$, int)
+\item 
+int \hyperlink{class_function_parser_adda1df6bf29a91d38e838bdf96524f61}{Compile\+Unary\+Minus} (const char $\ast$, int)
+\item 
+int \hyperlink{class_function_parser_ade4859b2f9b822a19a2beccbc25d36b0}{Compile\+Mult} (const char $\ast$, int)
+\item 
+int \hyperlink{class_function_parser_a9b3024d49f9094731f3cbd17eeea29e5}{Compile\+Addition} (const char $\ast$, int)
+\item 
+int \hyperlink{class_function_parser_a2418f51d1feca9195780bda66a64923a}{Compile\+Comparison} (const char $\ast$, int)
+\item 
+int \hyperlink{class_function_parser_adb0768f374333bbee4c84c30a2769d1b}{Compile\+And} (const char $\ast$, int)
+\item 
+int \hyperlink{class_function_parser_a233a126157058829dcda9aa3f00781f8}{Compile\+Or} (const char $\ast$, int)
+\item 
+int \hyperlink{class_function_parser_a854c0c23a60d2d206ddf67015747a80a}{Compile\+Expression} (const char $\ast$, int, bool=false)
+\item 
+void \hyperlink{class_function_parser_a8f09d400c39a72c7485d26cbff2543c9}{Make\+Tree} (void $\ast$) const
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_function_parser_a0bb74d288d02ba86367cc1c85351c8e7}{Parse\+Error\+Type} \hyperlink{class_function_parser_a8ae06b8ee6ddb247b6a7c0075fd6cf30}{parse\+Error\+Type}
+\item 
+int \hyperlink{class_function_parser_a43c35628fcb4a11d459e48265eca45df}{eval\+Error\+Type}
+\item 
+\hyperlink{struct_function_parser_1_1_data}{Data} $\ast$ \hyperlink{class_function_parser_ac4c90e783d1a41f8f842383a9a5088d0}{data}
+\item 
+unsigned \hyperlink{class_function_parser_a5b75f74ce82219fc4aaf05665ab46034}{eval\+Recursion\+Level}
+\item 
+unsigned \hyperlink{class_function_parser_a4a54f868e24abc53d4474ca538c999bf}{Stack\+Ptr}
+\item 
+std\+::vector$<$ unsigned $>$ $\ast$ \hyperlink{class_function_parser_a78e461023408c6074247df656f93bbae}{temp\+Byte\+Code}
+\item 
+std\+::vector$<$ double $>$ $\ast$ \hyperlink{class_function_parser_a9e6c21543859ee17e917a292a16c495a}{temp\+Immed}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 20 of file fparser.\+hpp.
+
+
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_function_parser_acca53651fb8f1c7a44e3d2cac7e62455}\label{class_function_parser_acca53651fb8f1c7a44e3d2cac7e62455}} 
+\index{Function\+Parser@{Function\+Parser}!Function\+Ptr@{Function\+Ptr}}
+\index{Function\+Ptr@{Function\+Ptr}!Function\+Parser@{Function\+Parser}}
+\subsubsection{\texorpdfstring{Function\+Ptr}{FunctionPtr}}
+{\footnotesize\ttfamily typedef double($\ast$ Function\+Parser\+::\+Function\+Ptr) (const double $\ast$)}
+
+
+
+Definition at line 47 of file fparser.\+hpp.
+
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_function_parser_a0bb74d288d02ba86367cc1c85351c8e7}\label{class_function_parser_a0bb74d288d02ba86367cc1c85351c8e7}} 
+\index{Function\+Parser@{Function\+Parser}!Parse\+Error\+Type@{Parse\+Error\+Type}}
+\index{Parse\+Error\+Type@{Parse\+Error\+Type}!Function\+Parser@{Function\+Parser}}
+\subsubsection{\texorpdfstring{Parse\+Error\+Type}{ParseErrorType}}
+{\footnotesize\ttfamily enum \hyperlink{class_function_parser_a0bb74d288d02ba86367cc1c85351c8e7}{Function\+Parser\+::\+Parse\+Error\+Type}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+Y\+N\+T\+A\+X\+\_\+\+E\+R\+R\+OR@{S\+Y\+N\+T\+A\+X\+\_\+\+E\+R\+R\+OR}!Function\+Parser@{Function\+Parser}}\index{Function\+Parser@{Function\+Parser}!S\+Y\+N\+T\+A\+X\+\_\+\+E\+R\+R\+OR@{S\+Y\+N\+T\+A\+X\+\_\+\+E\+R\+R\+OR}}}\mbox{\Hypertarget{class_function_parser_a0bb74d288d02ba86367cc1c85351c8e7ae2d4f26e44818f756cbdefbeb76e4ca3}\label{class_function_parser_a0bb74d288d02ba86367cc1c85351c8e7ae2d4f26e44818f756cbdefbeb76e4ca3}} 
+S\+Y\+N\+T\+A\+X\+\_\+\+E\+R\+R\+OR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+I\+S\+M\+\_\+\+P\+A\+R\+E\+N\+TH@{M\+I\+S\+M\+\_\+\+P\+A\+R\+E\+N\+TH}!Function\+Parser@{Function\+Parser}}\index{Function\+Parser@{Function\+Parser}!M\+I\+S\+M\+\_\+\+P\+A\+R\+E\+N\+TH@{M\+I\+S\+M\+\_\+\+P\+A\+R\+E\+N\+TH}}}\mbox{\Hypertarget{class_function_parser_a0bb74d288d02ba86367cc1c85351c8e7a8d264fb5dadc95cb61c97384d9351669}\label{class_function_parser_a0bb74d288d02ba86367cc1c85351c8e7a8d264fb5dadc95cb61c97384d9351669}} 
+M\+I\+S\+M\+\_\+\+P\+A\+R\+E\+N\+TH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+I\+S\+S\+I\+N\+G\+\_\+\+P\+A\+R\+E\+N\+TH@{M\+I\+S\+S\+I\+N\+G\+\_\+\+P\+A\+R\+E\+N\+TH}!Function\+Parser@{Function\+Parser}}\index{Function\+Parser@{Function\+Parser}!M\+I\+S\+S\+I\+N\+G\+\_\+\+P\+A\+R\+E\+N\+TH@{M\+I\+S\+S\+I\+N\+G\+\_\+\+P\+A\+R\+E\+N\+TH}}}\mbox{\Hypertarget{class_function_parser_a0bb74d288d02ba86367cc1c85351c8e7a8e549b77de5e9f6f52e3a19a6267b16c}\label{class_function_parser_a0bb74d288d02ba86367cc1c85351c8e7a8e549b77de5e9f6f52e3a19a6267b16c}} 
+M\+I\+S\+S\+I\+N\+G\+\_\+\+P\+A\+R\+E\+N\+TH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+M\+P\+T\+Y\+\_\+\+P\+A\+R\+E\+N\+TH@{E\+M\+P\+T\+Y\+\_\+\+P\+A\+R\+E\+N\+TH}!Function\+Parser@{Function\+Parser}}\index{Function\+Parser@{Function\+Parser}!E\+M\+P\+T\+Y\+\_\+\+P\+A\+R\+E\+N\+TH@{E\+M\+P\+T\+Y\+\_\+\+P\+A\+R\+E\+N\+TH}}}\mbox{\Hypertarget{class_function_parser_a0bb74d288d02ba86367cc1c85351c8e7ac5ed9e2f99d67c7b11f22dcc1e096474}\label{class_function_parser_a0bb74d288d02ba86367cc1c85351c8e7ac5ed9e2f99d67c7b11f22dcc1e096474}} 
+E\+M\+P\+T\+Y\+\_\+\+P\+A\+R\+E\+N\+TH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+X\+P\+E\+C\+T\+\_\+\+O\+P\+E\+R\+A\+T\+OR@{E\+X\+P\+E\+C\+T\+\_\+\+O\+P\+E\+R\+A\+T\+OR}!Function\+Parser@{Function\+Parser}}\index{Function\+Parser@{Function\+Parser}!E\+X\+P\+E\+C\+T\+\_\+\+O\+P\+E\+R\+A\+T\+OR@{E\+X\+P\+E\+C\+T\+\_\+\+O\+P\+E\+R\+A\+T\+OR}}}\mbox{\Hypertarget{class_function_parser_a0bb74d288d02ba86367cc1c85351c8e7aa9b7c33316017f2de413ed7f140f36c6}\label{class_function_parser_a0bb74d288d02ba86367cc1c85351c8e7aa9b7c33316017f2de413ed7f140f36c6}} 
+E\+X\+P\+E\+C\+T\+\_\+\+O\+P\+E\+R\+A\+T\+OR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{O\+U\+T\+\_\+\+O\+F\+\_\+\+M\+E\+M\+O\+RY@{O\+U\+T\+\_\+\+O\+F\+\_\+\+M\+E\+M\+O\+RY}!Function\+Parser@{Function\+Parser}}\index{Function\+Parser@{Function\+Parser}!O\+U\+T\+\_\+\+O\+F\+\_\+\+M\+E\+M\+O\+RY@{O\+U\+T\+\_\+\+O\+F\+\_\+\+M\+E\+M\+O\+RY}}}\mbox{\Hypertarget{class_function_parser_a0bb74d288d02ba86367cc1c85351c8e7a9387af9f1f8e2339997b932d37728aa6}\label{class_function_parser_a0bb74d288d02ba86367cc1c85351c8e7a9387af9f1f8e2339997b932d37728aa6}} 
+O\+U\+T\+\_\+\+O\+F\+\_\+\+M\+E\+M\+O\+RY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+E\+R\+R\+OR@{U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+E\+R\+R\+OR}!Function\+Parser@{Function\+Parser}}\index{Function\+Parser@{Function\+Parser}!U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+E\+R\+R\+OR@{U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+E\+R\+R\+OR}}}\mbox{\Hypertarget{class_function_parser_a0bb74d288d02ba86367cc1c85351c8e7a455a3ffd84dd6f97b008aba834c45b9e}\label{class_function_parser_a0bb74d288d02ba86367cc1c85351c8e7a455a3ffd84dd6f97b008aba834c45b9e}} 
+U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+E\+R\+R\+OR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\+N\+V\+A\+L\+I\+D\+\_\+\+V\+A\+RS@{I\+N\+V\+A\+L\+I\+D\+\_\+\+V\+A\+RS}!Function\+Parser@{Function\+Parser}}\index{Function\+Parser@{Function\+Parser}!I\+N\+V\+A\+L\+I\+D\+\_\+\+V\+A\+RS@{I\+N\+V\+A\+L\+I\+D\+\_\+\+V\+A\+RS}}}\mbox{\Hypertarget{class_function_parser_a0bb74d288d02ba86367cc1c85351c8e7a970abfe88a6d4f3ccf0f999d4c0a0445}\label{class_function_parser_a0bb74d288d02ba86367cc1c85351c8e7a970abfe88a6d4f3ccf0f999d4c0a0445}} 
+I\+N\+V\+A\+L\+I\+D\+\_\+\+V\+A\+RS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\+L\+L\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+A\+M\+O\+U\+NT@{I\+L\+L\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+A\+M\+O\+U\+NT}!Function\+Parser@{Function\+Parser}}\index{Function\+Parser@{Function\+Parser}!I\+L\+L\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+A\+M\+O\+U\+NT@{I\+L\+L\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+A\+M\+O\+U\+NT}}}\mbox{\Hypertarget{class_function_parser_a0bb74d288d02ba86367cc1c85351c8e7abeede85e1cc0910db7ae8f06e4fe29e9}\label{class_function_parser_a0bb74d288d02ba86367cc1c85351c8e7abeede85e1cc0910db7ae8f06e4fe29e9}} 
+I\+L\+L\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+A\+M\+O\+U\+NT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+R\+E\+M\+A\+T\+U\+R\+E\+\_\+\+E\+OS@{P\+R\+E\+M\+A\+T\+U\+R\+E\+\_\+\+E\+OS}!Function\+Parser@{Function\+Parser}}\index{Function\+Parser@{Function\+Parser}!P\+R\+E\+M\+A\+T\+U\+R\+E\+\_\+\+E\+OS@{P\+R\+E\+M\+A\+T\+U\+R\+E\+\_\+\+E\+OS}}}\mbox{\Hypertarget{class_function_parser_a0bb74d288d02ba86367cc1c85351c8e7ad000e35ddadcb28fa56e509766b051df}\label{class_function_parser_a0bb74d288d02ba86367cc1c85351c8e7ad000e35ddadcb28fa56e509766b051df}} 
+P\+R\+E\+M\+A\+T\+U\+R\+E\+\_\+\+E\+OS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+X\+P\+E\+C\+T\+\_\+\+P\+A\+R\+E\+N\+T\+H\+\_\+\+F\+U\+NC@{E\+X\+P\+E\+C\+T\+\_\+\+P\+A\+R\+E\+N\+T\+H\+\_\+\+F\+U\+NC}!Function\+Parser@{Function\+Parser}}\index{Function\+Parser@{Function\+Parser}!E\+X\+P\+E\+C\+T\+\_\+\+P\+A\+R\+E\+N\+T\+H\+\_\+\+F\+U\+NC@{E\+X\+P\+E\+C\+T\+\_\+\+P\+A\+R\+E\+N\+T\+H\+\_\+\+F\+U\+NC}}}\mbox{\Hypertarget{class_function_parser_a0bb74d288d02ba86367cc1c85351c8e7a5d885cdd62d468c4643667704ed21f43}\label{class_function_parser_a0bb74d288d02ba86367cc1c85351c8e7a5d885cdd62d468c4643667704ed21f43}} 
+E\+X\+P\+E\+C\+T\+\_\+\+P\+A\+R\+E\+N\+T\+H\+\_\+\+F\+U\+NC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+P\+\_\+\+N\+O\+\_\+\+E\+R\+R\+OR@{F\+P\+\_\+\+N\+O\+\_\+\+E\+R\+R\+OR}!Function\+Parser@{Function\+Parser}}\index{Function\+Parser@{Function\+Parser}!F\+P\+\_\+\+N\+O\+\_\+\+E\+R\+R\+OR@{F\+P\+\_\+\+N\+O\+\_\+\+E\+R\+R\+OR}}}\mbox{\Hypertarget{class_function_parser_a0bb74d288d02ba86367cc1c85351c8e7afe98956d3451f7e3d66f259f8b36108a}\label{class_function_parser_a0bb74d288d02ba86367cc1c85351c8e7afe98956d3451f7e3d66f259f8b36108a}} 
+F\+P\+\_\+\+N\+O\+\_\+\+E\+R\+R\+OR&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 23 of file fparser.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_function_parser_a18468eeb56ac5c1b1a6a0b0cebb2c045}\label{class_function_parser_a18468eeb56ac5c1b1a6a0b0cebb2c045}} 
+\index{Function\+Parser@{Function\+Parser}!Function\+Parser@{Function\+Parser}}
+\index{Function\+Parser@{Function\+Parser}!Function\+Parser@{Function\+Parser}}
+\subsubsection{\texorpdfstring{Function\+Parser()}{FunctionParser()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Function\+Parser\+::\+Function\+Parser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 78 of file fparser.\+cpp.
+
+\mbox{\Hypertarget{class_function_parser_a50257dda6ec4f2c4adf6740e31cf7da7}\label{class_function_parser_a50257dda6ec4f2c4adf6740e31cf7da7}} 
+\index{Function\+Parser@{Function\+Parser}!````~Function\+Parser@{$\sim$\+Function\+Parser}}
+\index{````~Function\+Parser@{$\sim$\+Function\+Parser}!Function\+Parser@{Function\+Parser}}
+\subsubsection{\texorpdfstring{$\sim$\+Function\+Parser()}{~FunctionParser()}}
+{\footnotesize\ttfamily Function\+Parser\+::$\sim$\+Function\+Parser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 85 of file fparser.\+cpp.
+
+\mbox{\Hypertarget{class_function_parser_adcfa2c887c17019c29fdbfaa39ab28fb}\label{class_function_parser_adcfa2c887c17019c29fdbfaa39ab28fb}} 
+\index{Function\+Parser@{Function\+Parser}!Function\+Parser@{Function\+Parser}}
+\index{Function\+Parser@{Function\+Parser}!Function\+Parser@{Function\+Parser}}
+\subsubsection{\texorpdfstring{Function\+Parser()}{FunctionParser()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Function\+Parser\+::\+Function\+Parser (\begin{DoxyParamCaption}\item[{const \hyperlink{class_function_parser}{Function\+Parser} \&}]{cpy }\end{DoxyParamCaption})}
+
+
+
+Definition at line 91 of file fparser.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_function_parser_a714d401cb9368826a87b7f15575de2a3}\label{class_function_parser_a714d401cb9368826a87b7f15575de2a3}} 
+\index{Function\+Parser@{Function\+Parser}!Add\+Compiled\+Byte@{Add\+Compiled\+Byte}}
+\index{Add\+Compiled\+Byte@{Add\+Compiled\+Byte}!Function\+Parser@{Function\+Parser}}
+\subsubsection{\texorpdfstring{Add\+Compiled\+Byte()}{AddCompiledByte()}}
+{\footnotesize\ttfamily void Function\+Parser\+::\+Add\+Compiled\+Byte (\begin{DoxyParamCaption}\item[{unsigned}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line 579 of file fparser.\+cpp.
+
+\mbox{\Hypertarget{class_function_parser_a481976b6eb58b15d31d4f3700d9ad730}\label{class_function_parser_a481976b6eb58b15d31d4f3700d9ad730}} 
+\index{Function\+Parser@{Function\+Parser}!Add\+Constant@{Add\+Constant}}
+\index{Add\+Constant@{Add\+Constant}!Function\+Parser@{Function\+Parser}}
+\subsubsection{\texorpdfstring{Add\+Constant()}{AddConstant()}}
+{\footnotesize\ttfamily bool Function\+Parser\+::\+Add\+Constant (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{double}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line 215 of file fparser.\+cpp.
+
+\mbox{\Hypertarget{class_function_parser_a8d477dd0041ca594dac795bba24c9f3a}\label{class_function_parser_a8d477dd0041ca594dac795bba24c9f3a}} 
+\index{Function\+Parser@{Function\+Parser}!Add\+Function@{Add\+Function}}
+\index{Add\+Function@{Add\+Function}!Function\+Parser@{Function\+Parser}}
+\subsubsection{\texorpdfstring{Add\+Function()}{AddFunction()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Function\+Parser\+::\+Add\+Function (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{\hyperlink{class_function_parser_acca53651fb8f1c7a44e3d2cac7e62455}{Function\+Ptr}}]{func,  }\item[{unsigned}]{params\+Amount }\end{DoxyParamCaption})}
+
+
+
+Definition at line 234 of file fparser.\+cpp.
+
+\mbox{\Hypertarget{class_function_parser_a7d6c6465658e9831d0c51e3bd6b5a4c0}\label{class_function_parser_a7d6c6465658e9831d0c51e3bd6b5a4c0}} 
+\index{Function\+Parser@{Function\+Parser}!Add\+Function@{Add\+Function}}
+\index{Add\+Function@{Add\+Function}!Function\+Parser@{Function\+Parser}}
+\subsubsection{\texorpdfstring{Add\+Function()}{AddFunction()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Function\+Parser\+::\+Add\+Function (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{\hyperlink{class_function_parser}{Function\+Parser} \&}]{parser }\end{DoxyParamCaption})}
+
+
+
+Definition at line 259 of file fparser.\+cpp.
+
+\mbox{\Hypertarget{class_function_parser_aadefd3517f92e066d9926a1998e9fe2f}\label{class_function_parser_aadefd3517f92e066d9926a1998e9fe2f}} 
+\index{Function\+Parser@{Function\+Parser}!Add\+Function\+Opcode@{Add\+Function\+Opcode}}
+\index{Add\+Function\+Opcode@{Add\+Function\+Opcode}!Function\+Parser@{Function\+Parser}}
+\subsubsection{\texorpdfstring{Add\+Function\+Opcode()}{AddFunctionOpcode()}}
+{\footnotesize\ttfamily void Function\+Parser\+::\+Add\+Function\+Opcode (\begin{DoxyParamCaption}\item[{unsigned}]{opcode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line 587 of file fparser.\+cpp.
+
+\mbox{\Hypertarget{class_function_parser_a59cf4b93d74e0572386742603977f886}\label{class_function_parser_a59cf4b93d74e0572386742603977f886}} 
+\index{Function\+Parser@{Function\+Parser}!Add\+Immediate@{Add\+Immediate}}
+\index{Add\+Immediate@{Add\+Immediate}!Function\+Parser@{Function\+Parser}}
+\subsubsection{\texorpdfstring{Add\+Immediate()}{AddImmediate()}}
+{\footnotesize\ttfamily void Function\+Parser\+::\+Add\+Immediate (\begin{DoxyParamCaption}\item[{double}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line 583 of file fparser.\+cpp.
+
+\mbox{\Hypertarget{class_function_parser_abfc0c76a7006ba7b0e45e21bcd6f83cd}\label{class_function_parser_abfc0c76a7006ba7b0e45e21bcd6f83cd}} 
+\index{Function\+Parser@{Function\+Parser}!check\+Recursive\+Linking@{check\+Recursive\+Linking}}
+\index{check\+Recursive\+Linking@{check\+Recursive\+Linking}!Function\+Parser@{Function\+Parser}}
+\subsubsection{\texorpdfstring{check\+Recursive\+Linking()}{checkRecursiveLinking()}}
+{\footnotesize\ttfamily bool Function\+Parser\+::check\+Recursive\+Linking (\begin{DoxyParamCaption}\item[{const \hyperlink{class_function_parser}{Function\+Parser} $\ast$}]{fp }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 252 of file fparser.\+cpp.
+
+\mbox{\Hypertarget{class_function_parser_a3895fdbb2f21fc7facebcd4a3c2399f7}\label{class_function_parser_a3895fdbb2f21fc7facebcd4a3c2399f7}} 
+\index{Function\+Parser@{Function\+Parser}!Check\+Syntax@{Check\+Syntax}}
+\index{Check\+Syntax@{Check\+Syntax}!Function\+Parser@{Function\+Parser}}
+\subsubsection{\texorpdfstring{Check\+Syntax()}{CheckSyntax()}}
+{\footnotesize\ttfamily int Function\+Parser\+::\+Check\+Syntax (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Function }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 373 of file fparser.\+cpp.
+
+\mbox{\Hypertarget{class_function_parser_aa136efc410ad6a9c2992fb6e1c9b057c}\label{class_function_parser_aa136efc410ad6a9c2992fb6e1c9b057c}} 
+\index{Function\+Parser@{Function\+Parser}!Compile@{Compile}}
+\index{Compile@{Compile}!Function\+Parser@{Function\+Parser}}
+\subsubsection{\texorpdfstring{Compile()}{Compile()}}
+{\footnotesize\ttfamily bool Function\+Parser\+::\+Compile (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Function }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 533 of file fparser.\+cpp.
+
+\mbox{\Hypertarget{class_function_parser_a9b3024d49f9094731f3cbd17eeea29e5}\label{class_function_parser_a9b3024d49f9094731f3cbd17eeea29e5}} 
+\index{Function\+Parser@{Function\+Parser}!Compile\+Addition@{Compile\+Addition}}
+\index{Compile\+Addition@{Compile\+Addition}!Function\+Parser@{Function\+Parser}}
+\subsubsection{\texorpdfstring{Compile\+Addition()}{CompileAddition()}}
+{\footnotesize\ttfamily int Function\+Parser\+::\+Compile\+Addition (\begin{DoxyParamCaption}\item[{const char $\ast$}]{F,  }\item[{int}]{ind }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 866 of file fparser.\+cpp.
+
+\mbox{\Hypertarget{class_function_parser_adb0768f374333bbee4c84c30a2769d1b}\label{class_function_parser_adb0768f374333bbee4c84c30a2769d1b}} 
+\index{Function\+Parser@{Function\+Parser}!Compile\+And@{Compile\+And}}
+\index{Compile\+And@{Compile\+And}!Function\+Parser@{Function\+Parser}}
+\subsubsection{\texorpdfstring{Compile\+And()}{CompileAnd()}}
+{\footnotesize\ttfamily int Function\+Parser\+::\+Compile\+And (\begin{DoxyParamCaption}\item[{const char $\ast$}]{F,  }\item[{int}]{ind }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 914 of file fparser.\+cpp.
+
+\mbox{\Hypertarget{class_function_parser_a2418f51d1feca9195780bda66a64923a}\label{class_function_parser_a2418f51d1feca9195780bda66a64923a}} 
+\index{Function\+Parser@{Function\+Parser}!Compile\+Comparison@{Compile\+Comparison}}
+\index{Compile\+Comparison@{Compile\+Comparison}!Function\+Parser@{Function\+Parser}}
+\subsubsection{\texorpdfstring{Compile\+Comparison()}{CompileComparison()}}
+{\footnotesize\ttfamily int Function\+Parser\+::\+Compile\+Comparison (\begin{DoxyParamCaption}\item[{const char $\ast$}]{F,  }\item[{int}]{ind }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 883 of file fparser.\+cpp.
+
+\mbox{\Hypertarget{class_function_parser_a7673096cf704d1fa7ab542db5f22fe95}\label{class_function_parser_a7673096cf704d1fa7ab542db5f22fe95}} 
+\index{Function\+Parser@{Function\+Parser}!Compile\+Element@{Compile\+Element}}
+\index{Compile\+Element@{Compile\+Element}!Function\+Parser@{Function\+Parser}}
+\subsubsection{\texorpdfstring{Compile\+Element()}{CompileElement()}}
+{\footnotesize\ttfamily int Function\+Parser\+::\+Compile\+Element (\begin{DoxyParamCaption}\item[{const char $\ast$}]{F,  }\item[{int}]{ind }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 693 of file fparser.\+cpp.
+
+\mbox{\Hypertarget{class_function_parser_a854c0c23a60d2d206ddf67015747a80a}\label{class_function_parser_a854c0c23a60d2d206ddf67015747a80a}} 
+\index{Function\+Parser@{Function\+Parser}!Compile\+Expression@{Compile\+Expression}}
+\index{Compile\+Expression@{Compile\+Expression}!Function\+Parser@{Function\+Parser}}
+\subsubsection{\texorpdfstring{Compile\+Expression()}{CompileExpression()}}
+{\footnotesize\ttfamily int Function\+Parser\+::\+Compile\+Expression (\begin{DoxyParamCaption}\item[{const char $\ast$}]{F,  }\item[{int}]{ind,  }\item[{bool}]{stop\+At\+Comma = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 946 of file fparser.\+cpp.
+
+\mbox{\Hypertarget{class_function_parser_a22e24efb5ef28aa34025bf49fe505010}\label{class_function_parser_a22e24efb5ef28aa34025bf49fe505010}} 
+\index{Function\+Parser@{Function\+Parser}!Compile\+Function\+Params@{Compile\+Function\+Params}}
+\index{Compile\+Function\+Params@{Compile\+Function\+Params}!Function\+Parser@{Function\+Parser}}
+\subsubsection{\texorpdfstring{Compile\+Function\+Params()}{CompileFunctionParams()}}
+{\footnotesize\ttfamily int Function\+Parser\+::\+Compile\+Function\+Params (\begin{DoxyParamCaption}\item[{const char $\ast$}]{F,  }\item[{int}]{ind,  }\item[{unsigned}]{required\+Params }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 670 of file fparser.\+cpp.
+
+\mbox{\Hypertarget{class_function_parser_a9978dd583ee328a7f71a6075a3c5f97c}\label{class_function_parser_a9978dd583ee328a7f71a6075a3c5f97c}} 
+\index{Function\+Parser@{Function\+Parser}!Compile\+If@{Compile\+If}}
+\index{Compile\+If@{Compile\+If}!Function\+Parser@{Function\+Parser}}
+\subsubsection{\texorpdfstring{Compile\+If()}{CompileIf()}}
+{\footnotesize\ttfamily int Function\+Parser\+::\+Compile\+If (\begin{DoxyParamCaption}\item[{const char $\ast$}]{F,  }\item[{int}]{ind }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 626 of file fparser.\+cpp.
+
+\mbox{\Hypertarget{class_function_parser_ade4859b2f9b822a19a2beccbc25d36b0}\label{class_function_parser_ade4859b2f9b822a19a2beccbc25d36b0}} 
+\index{Function\+Parser@{Function\+Parser}!Compile\+Mult@{Compile\+Mult}}
+\index{Compile\+Mult@{Compile\+Mult}!Function\+Parser@{Function\+Parser}}
+\subsubsection{\texorpdfstring{Compile\+Mult()}{CompileMult()}}
+{\footnotesize\ttfamily int Function\+Parser\+::\+Compile\+Mult (\begin{DoxyParamCaption}\item[{const char $\ast$}]{F,  }\item[{int}]{ind }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 842 of file fparser.\+cpp.
+
+\mbox{\Hypertarget{class_function_parser_a233a126157058829dcda9aa3f00781f8}\label{class_function_parser_a233a126157058829dcda9aa3f00781f8}} 
+\index{Function\+Parser@{Function\+Parser}!Compile\+Or@{Compile\+Or}}
+\index{Compile\+Or@{Compile\+Or}!Function\+Parser@{Function\+Parser}}
+\subsubsection{\texorpdfstring{Compile\+Or()}{CompileOr()}}
+{\footnotesize\ttfamily int Function\+Parser\+::\+Compile\+Or (\begin{DoxyParamCaption}\item[{const char $\ast$}]{F,  }\item[{int}]{ind }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 930 of file fparser.\+cpp.
+
+\mbox{\Hypertarget{class_function_parser_a34d2686ecb9619b0b459bfa249b64498}\label{class_function_parser_a34d2686ecb9619b0b459bfa249b64498}} 
+\index{Function\+Parser@{Function\+Parser}!Compile\+Pow@{Compile\+Pow}}
+\index{Compile\+Pow@{Compile\+Pow}!Function\+Parser@{Function\+Parser}}
+\subsubsection{\texorpdfstring{Compile\+Pow()}{CompilePow()}}
+{\footnotesize\ttfamily int Function\+Parser\+::\+Compile\+Pow (\begin{DoxyParamCaption}\item[{const char $\ast$}]{F,  }\item[{int}]{ind }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 797 of file fparser.\+cpp.
+
+\mbox{\Hypertarget{class_function_parser_adda1df6bf29a91d38e838bdf96524f61}\label{class_function_parser_adda1df6bf29a91d38e838bdf96524f61}} 
+\index{Function\+Parser@{Function\+Parser}!Compile\+Unary\+Minus@{Compile\+Unary\+Minus}}
+\index{Compile\+Unary\+Minus@{Compile\+Unary\+Minus}!Function\+Parser@{Function\+Parser}}
+\subsubsection{\texorpdfstring{Compile\+Unary\+Minus()}{CompileUnaryMinus()}}
+{\footnotesize\ttfamily int Function\+Parser\+::\+Compile\+Unary\+Minus (\begin{DoxyParamCaption}\item[{const char $\ast$}]{F,  }\item[{int}]{ind }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 813 of file fparser.\+cpp.
+
+\mbox{\Hypertarget{class_function_parser_a0af0f9ad348adf7df57fa630eddf8e47}\label{class_function_parser_a0af0f9ad348adf7df57fa630eddf8e47}} 
+\index{Function\+Parser@{Function\+Parser}!copy\+On\+Write@{copy\+On\+Write}}
+\index{copy\+On\+Write@{copy\+On\+Write}!Function\+Parser@{Function\+Parser}}
+\subsubsection{\texorpdfstring{copy\+On\+Write()}{copyOnWrite()}}
+{\footnotesize\ttfamily void Function\+Parser\+::copy\+On\+Write (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 63 of file fparser.\+cpp.
+
+\mbox{\Hypertarget{class_function_parser_a000e3edaf5dc8ee121df03b731ff0192}\label{class_function_parser_a000e3edaf5dc8ee121df03b731ff0192}} 
+\index{Function\+Parser@{Function\+Parser}!Error\+Msg@{Error\+Msg}}
+\index{Error\+Msg@{Error\+Msg}!Function\+Parser@{Function\+Parser}}
+\subsubsection{\texorpdfstring{Error\+Msg()}{ErrorMsg()}}
+{\footnotesize\ttfamily const char $\ast$ Function\+Parser\+::\+Error\+Msg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 964 of file fparser.\+cpp.
+
+\mbox{\Hypertarget{class_function_parser_a8fe3538f4cd207346c390059ba334023}\label{class_function_parser_a8fe3538f4cd207346c390059ba334023}} 
+\index{Function\+Parser@{Function\+Parser}!Eval@{Eval}}
+\index{Eval@{Eval}!Function\+Parser@{Function\+Parser}}
+\subsubsection{\texorpdfstring{Eval()}{Eval()}}
+{\footnotesize\ttfamily double Function\+Parser\+::\+Eval (\begin{DoxyParamCaption}\item[{const double $\ast$}]{Vars }\end{DoxyParamCaption})}
+
+
+
+Definition at line 996 of file fparser.\+cpp.
+
+\mbox{\Hypertarget{class_function_parser_a94faf9f4616d0850821cce15abbcf421}\label{class_function_parser_a94faf9f4616d0850821cce15abbcf421}} 
+\index{Function\+Parser@{Function\+Parser}!Eval\+Error@{Eval\+Error}}
+\index{Eval\+Error@{Eval\+Error}!Function\+Parser@{Function\+Parser}}
+\subsubsection{\texorpdfstring{Eval\+Error()}{EvalError()}}
+{\footnotesize\ttfamily int Function\+Parser\+::\+Eval\+Error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 41 of file fparser.\+hpp.
+
+\mbox{\Hypertarget{class_function_parser_a305fdcea81a498567dc92010338cee7c}\label{class_function_parser_a305fdcea81a498567dc92010338cee7c}} 
+\index{Function\+Parser@{Function\+Parser}!Find\+Constant@{Find\+Constant}}
+\index{Find\+Constant@{Find\+Constant}!Function\+Parser@{Function\+Parser}}
+\subsubsection{\texorpdfstring{Find\+Constant()}{FindConstant()}}
+{\footnotesize\ttfamily Function\+Parser\+::\+Data\+::\+Const\+Map\+\_\+t\+::const\+\_\+iterator Function\+Parser\+::\+Find\+Constant (\begin{DoxyParamCaption}\item[{const char $\ast$}]{F }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line 357 of file fparser.\+cpp.
+
+\mbox{\Hypertarget{class_function_parser_a1c1ea54f04c1dfb8d8609240ba9f5f40}\label{class_function_parser_a1c1ea54f04c1dfb8d8609240ba9f5f40}} 
+\index{Function\+Parser@{Function\+Parser}!Find\+Variable@{Find\+Variable}}
+\index{Find\+Variable@{Find\+Variable}!Function\+Parser@{Function\+Parser}}
+\subsubsection{\texorpdfstring{Find\+Variable()}{FindVariable()}}
+{\footnotesize\ttfamily Function\+Parser\+::\+Data\+::\+Var\+Map\+\_\+t\+::const\+\_\+iterator Function\+Parser\+::\+Find\+Variable (\begin{DoxyParamCaption}\item[{const char $\ast$}]{F,  }\item[{const \hyperlink{struct_function_parser_1_1_data_a02f3fbca3164d0e498312b418258ea84}{Data\+::\+Var\+Map\+\_\+t} \&}]{vars }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line 344 of file fparser.\+cpp.
+
+\mbox{\Hypertarget{class_function_parser_ad6ddf1546278fa7148c968374e6a097a}\label{class_function_parser_ad6ddf1546278fa7148c968374e6a097a}} 
+\index{Function\+Parser@{Function\+Parser}!Get\+Parse\+Error\+Type@{Get\+Parse\+Error\+Type}}
+\index{Get\+Parse\+Error\+Type@{Get\+Parse\+Error\+Type}!Function\+Parser@{Function\+Parser}}
+\subsubsection{\texorpdfstring{Get\+Parse\+Error\+Type()}{GetParseErrorType()}}
+{\footnotesize\ttfamily \hyperlink{class_function_parser_a0bb74d288d02ba86367cc1c85351c8e7}{Parse\+Error\+Type} Function\+Parser\+::\+Get\+Parse\+Error\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 35 of file fparser.\+hpp.
+
+\mbox{\Hypertarget{class_function_parser_a2ba1bb889a7035da4a7639d6b7ce53c6}\label{class_function_parser_a2ba1bb889a7035da4a7639d6b7ce53c6}} 
+\index{Function\+Parser@{Function\+Parser}!inc\+Stack\+Ptr@{inc\+Stack\+Ptr}}
+\index{inc\+Stack\+Ptr@{inc\+Stack\+Ptr}!Function\+Parser@{Function\+Parser}}
+\subsubsection{\texorpdfstring{inc\+Stack\+Ptr()}{incStackPtr()}}
+{\footnotesize\ttfamily void Function\+Parser\+::inc\+Stack\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line 619 of file fparser.\+cpp.
+
+\mbox{\Hypertarget{class_function_parser_a79441f19176e18e88155f1101108dbe6}\label{class_function_parser_a79441f19176e18e88155f1101108dbe6}} 
+\index{Function\+Parser@{Function\+Parser}!is\+Valid\+Name@{is\+Valid\+Name}}
+\index{is\+Valid\+Name@{is\+Valid\+Name}!Function\+Parser@{Function\+Parser}}
+\subsubsection{\texorpdfstring{is\+Valid\+Name()}{isValidName()}}
+{\footnotesize\ttfamily bool Function\+Parser\+::is\+Valid\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 202 of file fparser.\+cpp.
+
+\mbox{\Hypertarget{class_function_parser_afd635d05f1b4d3ef6f09b75dd92926e5}\label{class_function_parser_afd635d05f1b4d3ef6f09b75dd92926e5}} 
+\index{Function\+Parser@{Function\+Parser}!Is\+Variable@{Is\+Variable}}
+\index{Is\+Variable@{Is\+Variable}!Function\+Parser@{Function\+Parser}}
+\subsubsection{\texorpdfstring{Is\+Variable()}{IsVariable()}}
+{\footnotesize\ttfamily bool Function\+Parser\+::\+Is\+Variable (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_function_parser_a8f09d400c39a72c7485d26cbff2543c9}\label{class_function_parser_a8f09d400c39a72c7485d26cbff2543c9}} 
+\index{Function\+Parser@{Function\+Parser}!Make\+Tree@{Make\+Tree}}
+\index{Make\+Tree@{Make\+Tree}!Function\+Parser@{Function\+Parser}}
+\subsubsection{\texorpdfstring{Make\+Tree()}{MakeTree()}}
+{\footnotesize\ttfamily void Function\+Parser\+::\+Make\+Tree (\begin{DoxyParamCaption}\item[{void $\ast$}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 1437 of file fparser.\+cpp.
+
+\mbox{\Hypertarget{class_function_parser_a316870fce14d0b1d9bc386f23115cc53}\label{class_function_parser_a316870fce14d0b1d9bc386f23115cc53}} 
+\index{Function\+Parser@{Function\+Parser}!operator=@{operator=}}
+\index{operator=@{operator=}!Function\+Parser@{Function\+Parser}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{class_function_parser}{Function\+Parser} \& Function\+Parser\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_function_parser}{Function\+Parser} \&}]{cpy }\end{DoxyParamCaption})}
+
+
+
+Definition at line 99 of file fparser.\+cpp.
+
+\mbox{\Hypertarget{class_function_parser_a5466523ee5198fb4b38461b362b1481d}\label{class_function_parser_a5466523ee5198fb4b38461b362b1481d}} 
+\index{Function\+Parser@{Function\+Parser}!Optimize@{Optimize}}
+\index{Optimize@{Optimize}!Function\+Parser@{Function\+Parser}}
+\subsubsection{\texorpdfstring{Optimize()}{Optimize()}}
+{\footnotesize\ttfamily void Function\+Parser\+::\+Optimize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1440 of file fparser.\+cpp.
+
+\mbox{\Hypertarget{class_function_parser_af4e0b209ec9771dcd76e27f3fcad1b51}\label{class_function_parser_af4e0b209ec9771dcd76e27f3fcad1b51}} 
+\index{Function\+Parser@{Function\+Parser}!Parse@{Parse}}
+\index{Parse@{Parse}!Function\+Parser@{Function\+Parser}}
+\subsubsection{\texorpdfstring{Parse()}{Parse()}}
+{\footnotesize\ttfamily int Function\+Parser\+::\+Parse (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{Function,  }\item[{const std\+::string \&}]{Vars,  }\item[{bool}]{use\+Degrees = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 283 of file fparser.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_function_parser_ac4c90e783d1a41f8f842383a9a5088d0}\label{class_function_parser_ac4c90e783d1a41f8f842383a9a5088d0}} 
+\index{Function\+Parser@{Function\+Parser}!data@{data}}
+\index{data@{data}!Function\+Parser@{Function\+Parser}}
+\subsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily \hyperlink{struct_function_parser_1_1_data}{Data}$\ast$ Function\+Parser\+::data\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 121 of file fparser.\+hpp.
+
+\mbox{\Hypertarget{class_function_parser_a43c35628fcb4a11d459e48265eca45df}\label{class_function_parser_a43c35628fcb4a11d459e48265eca45df}} 
+\index{Function\+Parser@{Function\+Parser}!eval\+Error\+Type@{eval\+Error\+Type}}
+\index{eval\+Error\+Type@{eval\+Error\+Type}!Function\+Parser@{Function\+Parser}}
+\subsubsection{\texorpdfstring{eval\+Error\+Type}{evalErrorType}}
+{\footnotesize\ttfamily int Function\+Parser\+::eval\+Error\+Type\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 79 of file fparser.\+hpp.
+
+\mbox{\Hypertarget{class_function_parser_a5b75f74ce82219fc4aaf05665ab46034}\label{class_function_parser_a5b75f74ce82219fc4aaf05665ab46034}} 
+\index{Function\+Parser@{Function\+Parser}!eval\+Recursion\+Level@{eval\+Recursion\+Level}}
+\index{eval\+Recursion\+Level@{eval\+Recursion\+Level}!Function\+Parser@{Function\+Parser}}
+\subsubsection{\texorpdfstring{eval\+Recursion\+Level}{evalRecursionLevel}}
+{\footnotesize\ttfamily unsigned Function\+Parser\+::eval\+Recursion\+Level\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 122 of file fparser.\+hpp.
+
+\mbox{\Hypertarget{class_function_parser_a8ae06b8ee6ddb247b6a7c0075fd6cf30}\label{class_function_parser_a8ae06b8ee6ddb247b6a7c0075fd6cf30}} 
+\index{Function\+Parser@{Function\+Parser}!parse\+Error\+Type@{parse\+Error\+Type}}
+\index{parse\+Error\+Type@{parse\+Error\+Type}!Function\+Parser@{Function\+Parser}}
+\subsubsection{\texorpdfstring{parse\+Error\+Type}{parseErrorType}}
+{\footnotesize\ttfamily \hyperlink{class_function_parser_a0bb74d288d02ba86367cc1c85351c8e7}{Parse\+Error\+Type} Function\+Parser\+::parse\+Error\+Type\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 78 of file fparser.\+hpp.
+
+\mbox{\Hypertarget{class_function_parser_a4a54f868e24abc53d4474ca538c999bf}\label{class_function_parser_a4a54f868e24abc53d4474ca538c999bf}} 
+\index{Function\+Parser@{Function\+Parser}!Stack\+Ptr@{Stack\+Ptr}}
+\index{Stack\+Ptr@{Stack\+Ptr}!Function\+Parser@{Function\+Parser}}
+\subsubsection{\texorpdfstring{Stack\+Ptr}{StackPtr}}
+{\footnotesize\ttfamily unsigned Function\+Parser\+::\+Stack\+Ptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 125 of file fparser.\+hpp.
+
+\mbox{\Hypertarget{class_function_parser_a78e461023408c6074247df656f93bbae}\label{class_function_parser_a78e461023408c6074247df656f93bbae}} 
+\index{Function\+Parser@{Function\+Parser}!temp\+Byte\+Code@{temp\+Byte\+Code}}
+\index{temp\+Byte\+Code@{temp\+Byte\+Code}!Function\+Parser@{Function\+Parser}}
+\subsubsection{\texorpdfstring{temp\+Byte\+Code}{tempByteCode}}
+{\footnotesize\ttfamily std\+::vector$<$unsigned$>$$\ast$ Function\+Parser\+::temp\+Byte\+Code\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 126 of file fparser.\+hpp.
+
+\mbox{\Hypertarget{class_function_parser_a9e6c21543859ee17e917a292a16c495a}\label{class_function_parser_a9e6c21543859ee17e917a292a16c495a}} 
+\index{Function\+Parser@{Function\+Parser}!temp\+Immed@{temp\+Immed}}
+\index{temp\+Immed@{temp\+Immed}!Function\+Parser@{Function\+Parser}}
+\subsubsection{\texorpdfstring{temp\+Immed}{tempImmed}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$$\ast$ Function\+Parser\+::temp\+Immed\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 127 of file fparser.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/include/\hyperlink{fparser_8hpp}{fparser.\+hpp}\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/src/\hyperlink{fparser_8cpp}{fparser.\+cpp}\end{DoxyCompactItemize}

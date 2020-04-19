@@ -1,0 +1,579 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classtsa_1_1_ar_burg_estimator" kind="class" language="C++" prot="public">
+    <compoundname>tsa::ArBurgEstimator</compoundname>
+    <basecompoundref refid="classtsa_1_1_algo_base" prot="public" virt="non-virtual">tsa::AlgoBase</basecompoundref>
+    <includes refid="_ar_burg_estimator_8hpp" local="no">ArBurgEstimator.hpp</includes>
+      <sectiondef kind="user-defined">
+      <header>Operations</header>
+      <memberdef kind="function" id="classtsa_1_1_ar_burg_estimator_1a904c4776668339798aa429622989dae6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::ArBurgEstimator::operator()</definition>
+        <argsstring>(SeqViewDouble &amp;InputData, SeqViewDouble &amp;WhitenedData)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref> &amp;</type>
+          <declname>InputData</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref> &amp;</type>
+          <declname>WhitenedData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implements the estimation of the AR paramenters using the Burg method.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>InputData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input data time series </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>WhitenedData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Whitened time series </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ArBurgEstimator.hpp" line="138" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/ArBurgEstimator.cpp" bodystart="32" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_ar_burg_estimator_1a4c318ac037fabbad13f506e97576034a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::ArBurgEstimator::Color</definition>
+        <argsstring>(SeqViewDouble &amp;WhitenedData, SeqViewDouble &amp;ColoredData)</argsstring>
+        <name>Color</name>
+        <param>
+          <type><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref> &amp;</type>
+          <declname>WhitenedData</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref> &amp;</type>
+          <declname>ColoredData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implements the estimation of the AR paramenters using the Burg method.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>InputData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input data time series </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>WhitenedData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Whitened time series </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ArBurgEstimator.hpp" line="147" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/ArBurgEstimator.cpp" bodystart="54" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_ar_burg_estimator_1a84c6368cebbbe6965e28769e406d4310" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::ArBurgEstimator::operator()</definition>
+        <argsstring>(SeqViewDouble &amp;InputData)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref> &amp;</type>
+          <declname>InputData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implements the estimation of the AR paramenters using the Burg method.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>InputData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input data time series </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Parcor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parcor coefficients </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ArBurgEstimator.hpp" line="154" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/ArBurgEstimator.cpp" bodystart="70" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_ar_burg_estimator_1aab366c108b53cb7d4ac5b76d5f6ac465" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::ArBurgEstimator::execute</definition>
+        <argsstring>(matrix_row&lt; Dmatrix &gt; InputData)</argsstring>
+        <name>execute</name>
+        <param>
+          <type>matrix_row&lt; <ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref> &gt;</type>
+          <declname>InputData</declname>
+        </param>
+        <briefdescription>
+<para>Estimate the Parcor and AR parameters on a sequence of data. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="pre"><para>The lenght of the input sequence must be greater then the AR order </para></simplesect>
+<xrefsect id="todo_1_todo000002"><xreftitle>Todo</xreftitle><xrefdescription><para>Add execption</para></xrefdescription></xrefsect></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>InputData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the input sequences of data </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para>contain the norm of the input data </para>        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ArBurgEstimator.hpp" line="165" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/ArBurgEstimator.cpp" bodystart="79" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_ar_burg_estimator_1a3b6d9a2e792b5cd1abb9c8daadc15cac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::ArBurgEstimator::color</definition>
+        <argsstring>(matrix_row&lt; Dmatrix &gt; WhitenedData, matrix_row&lt; Dmatrix &gt; ColoredData)</argsstring>
+        <name>color</name>
+        <param>
+          <type>matrix_row&lt; <ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref> &gt;</type>
+          <declname>WhitenedData</declname>
+        </param>
+        <param>
+          <type>matrix_row&lt; <ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref> &gt;</type>
+          <declname>ColoredData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ArBurgEstimator.hpp" line="167" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/ArBurgEstimator.cpp" bodystart="142" bodyend="166"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Getters</header>
+      <memberdef kind="function" id="classtsa_1_1_ar_burg_estimator_1a06b9a3daeecfcc31d6c5e617848ee200" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::ArBurgEstimator::GetLatticeView</definition>
+        <argsstring>(LatticeView &amp;LV)</argsstring>
+        <name>GetLatticeView</name>
+        <param>
+          <type><ref refid="classtsa_1_1_lattice_view" kindref="compound">LatticeView</ref> &amp;</type>
+          <declname>LV</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>LV</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the target lattice view </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ArBurgEstimator.hpp" line="182" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/ArBurgEstimator.cpp" bodystart="168" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_ar_burg_estimator_1a61a8a96608a0d354a1dd942cdf71c669" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int tsa::ArBurgEstimator::GetArOrder</definition>
+        <argsstring>()</argsstring>
+        <name>GetArOrder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the Ar Order </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ArBurgEstimator.hpp" line="190" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/ArBurgEstimator.cpp" bodystart="185" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_ar_burg_estimator_1abfbc945d2915208835f1bce7062a14c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double tsa::ArBurgEstimator::GetParcor</definition>
+        <argsstring>(unsigned int j)</argsstring>
+        <name>GetParcor</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Get The Parcor values </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ArBurgEstimator.hpp" line="195" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/ArBurgEstimator.cpp" bodystart="189" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_ar_burg_estimator_1ae896885d9fcc18375eb2d3c00f3ceec7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double tsa::ArBurgEstimator::GetAR</definition>
+        <argsstring>(unsigned int j)</argsstring>
+        <name>GetAR</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Get The AR values </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ArBurgEstimator.hpp" line="199" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/ArBurgEstimator.cpp" bodystart="193" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_ar_burg_estimator_1a63e4fbfbd1245e1a899cc783c77f5bfd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double tsa::ArBurgEstimator::GetErrorForward</definition>
+        <argsstring>(unsigned int j)</argsstring>
+        <name>GetErrorForward</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Get the ErrorForward values </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ArBurgEstimator.hpp" line="204" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/ArBurgEstimator.cpp" bodystart="197" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_ar_burg_estimator_1ae12190c986e02299da186dc29e97cded" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double tsa::ArBurgEstimator::GetErrorBackward</definition>
+        <argsstring>(unsigned int j)</argsstring>
+        <name>GetErrorBackward</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Get the ErrorBackward values </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ArBurgEstimator.hpp" line="209" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/ArBurgEstimator.cpp" bodystart="201" bodyend="203"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Setters</header>
+      <memberdef kind="function" id="classtsa_1_1_ar_burg_estimator_1acbf9046f1ff3d7e2852ec4daa30ac8af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::ArBurgEstimator::SetArOrder</definition>
+        <argsstring>(unsigned int P)</argsstring>
+        <name>SetArOrder</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>P</declname>
+        </param>
+        <briefdescription>
+<para>setters </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>P</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the Ar order </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ArBurgEstimator.hpp" line="221" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/ArBurgEstimator.cpp" bodystart="207" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_ar_burg_estimator_1ae3873be61a19beab0b5b6e915c594889" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::ArBurgEstimator::SetAR</definition>
+        <argsstring>(unsigned int j, double value)</argsstring>
+        <name>SetAR</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ArBurgEstimator.hpp" line="223" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/ArBurgEstimator.cpp" bodystart="211" bodyend="213"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtsa_1_1_ar_burg_estimator_1a918baccfeb2101848018b6abcf1e9b19" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int tsa::ArBurgEstimator::mArOrder</definition>
+        <argsstring></argsstring>
+        <name>mArOrder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>the Order of the AR model </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ArBurgEstimator.hpp" line="231" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/ArBurgEstimator.hpp" bodystart="231" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_ar_burg_estimator_1a51cbda2be55098f65e4d710cfe1153b7" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref></type>
+        <definition>Dvector tsa::ArBurgEstimator::mParcor</definition>
+        <argsstring></argsstring>
+        <name>mParcor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>the vector of reflection coefficients </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ArBurgEstimator.hpp" line="232" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/ArBurgEstimator.hpp" bodystart="232" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_ar_burg_estimator_1a6d0a5657630ecd64c33761a8f0c835e1" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref></type>
+        <definition>Dvector tsa::ArBurgEstimator::mAR</definition>
+        <argsstring></argsstring>
+        <name>mAR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ArBurgEstimator.hpp" line="233" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/ArBurgEstimator.hpp" bodystart="233" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_ar_burg_estimator_1a3ff0b47d541f89567d177a42103a95a2" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref></type>
+        <definition>Dvector tsa::ArBurgEstimator::mErrorForward</definition>
+        <argsstring></argsstring>
+        <name>mErrorForward</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>the error forward </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ArBurgEstimator.hpp" line="234" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/ArBurgEstimator.hpp" bodystart="234" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_ar_burg_estimator_1abe77e4f47e6eb9e1f39e22f99331c981" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref></type>
+        <definition>Dvector tsa::ArBurgEstimator::mErrorBackward</definition>
+        <argsstring></argsstring>
+        <name>mErrorBackward</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>the error backward </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ArBurgEstimator.hpp" line="235" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/ArBurgEstimator.hpp" bodystart="235" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_ar_burg_estimator_1a3d033517e7242d079e14038dcd50556c" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref></type>
+        <definition>Dvector tsa::ArBurgEstimator::mWhitenedData</definition>
+        <argsstring></argsstring>
+        <name>mWhitenedData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ArBurgEstimator.hpp" line="236" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/ArBurgEstimator.hpp" bodystart="236" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_ar_burg_estimator_1a7b50a6b230b2236500f54f9561d9ef7d" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref></type>
+        <definition>Dvector tsa::ArBurgEstimator::mColoredData</definition>
+        <argsstring></argsstring>
+        <name>mColoredData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ArBurgEstimator.hpp" line="237" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/ArBurgEstimator.hpp" bodystart="237" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtsa_1_1_ar_burg_estimator_1a6204df3016ce1f4aabf95fe4e05b27c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tsa::ArBurgEstimator::ArBurgEstimator</definition>
+        <argsstring>(unsigned int ArOrder)</argsstring>
+        <name>ArBurgEstimator</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>ArOrder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ArOrder</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>order of the AR model </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ArBurgEstimator.hpp" line="84" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/ArBurgEstimator.cpp" bodystart="20" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_ar_burg_estimator_1a4b72f798ee5330d446366c4296aec27b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>tsa::ArBurgEstimator::~ArBurgEstimator</definition>
+        <argsstring>()</argsstring>
+        <name>~ArBurgEstimator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ArBurgEstimator.hpp" line="89" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/ArBurgEstimator.cpp" bodystart="29" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_ar_burg_estimator_1a909ccc5f3ec7155ca60fb23122a8edfd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::ArBurgEstimator::Load</definition>
+        <argsstring>(const char *filename, const char *fmt=&quot;txt&quot;)</argsstring>
+        <name>Load</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+          <defval>&quot;txt&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ArBurgEstimator.hpp" line="91" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/ArBurgEstimator.hpp" bodystart="91" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_ar_burg_estimator_1a5f666a51727cfd49d748973b8f050763" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::ArBurgEstimator::Save</definition>
+        <argsstring>(const char *filename, const char *fmt=&quot;txt&quot;)</argsstring>
+        <name>Save</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+          <defval>&quot;txt&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ArBurgEstimator.hpp" line="98" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/ArBurgEstimator.hpp" bodystart="98" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_ar_burg_estimator_1a2760a49fb1837ff81061ebf7431de0ef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::ArBurgEstimator::xml_serialize</definition>
+        <argsstring>(eternity::xml_archive &amp;xml, const char *prefix)</argsstring>
+        <name>xml_serialize</name>
+        <param>
+          <type><ref refid="classeternity_1_1xml__archive" kindref="compound">eternity::xml_archive</ref> &amp;</type>
+          <declname>xml</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>prefix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ArBurgEstimator.hpp" line="105" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/ArBurgEstimator.hpp" bodystart="105" bodyend="123"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Estimate the Parcor and AR parameters on a sequence of data. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="67">
+        <label>tsa::ArBurgEstimator</label>
+        <link refid="classtsa_1_1_ar_burg_estimator"/>
+        <childnode refid="68" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="68">
+        <label>tsa::AlgoBase</label>
+        <link refid="classtsa_1_1_algo_base"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="69">
+        <label>tsa::ArBurgEstimator</label>
+        <link refid="classtsa_1_1_ar_burg_estimator"/>
+        <childnode refid="70" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="70">
+        <label>tsa::AlgoBase</label>
+        <link refid="classtsa_1_1_algo_base"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ArBurgEstimator.hpp" line="77" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/ArBurgEstimator.hpp" bodystart="77" bodyend="239"/>
+    <listofallmembers>
+      <member refid="classtsa_1_1_ar_burg_estimator_1a6204df3016ce1f4aabf95fe4e05b27c4" prot="public" virt="non-virtual"><scope>tsa::ArBurgEstimator</scope><name>ArBurgEstimator</name></member>
+      <member refid="classtsa_1_1_ar_burg_estimator_1a3b6d9a2e792b5cd1abb9c8daadc15cac" prot="public" virt="non-virtual"><scope>tsa::ArBurgEstimator</scope><name>color</name></member>
+      <member refid="classtsa_1_1_ar_burg_estimator_1a4c318ac037fabbad13f506e97576034a" prot="public" virt="non-virtual"><scope>tsa::ArBurgEstimator</scope><name>Color</name></member>
+      <member refid="classtsa_1_1_ar_burg_estimator_1aab366c108b53cb7d4ac5b76d5f6ac465" prot="public" virt="non-virtual"><scope>tsa::ArBurgEstimator</scope><name>execute</name></member>
+      <member refid="classtsa_1_1_ar_burg_estimator_1ae896885d9fcc18375eb2d3c00f3ceec7" prot="public" virt="non-virtual"><scope>tsa::ArBurgEstimator</scope><name>GetAR</name></member>
+      <member refid="classtsa_1_1_ar_burg_estimator_1a61a8a96608a0d354a1dd942cdf71c669" prot="public" virt="non-virtual"><scope>tsa::ArBurgEstimator</scope><name>GetArOrder</name></member>
+      <member refid="classtsa_1_1_ar_burg_estimator_1ae12190c986e02299da186dc29e97cded" prot="public" virt="non-virtual"><scope>tsa::ArBurgEstimator</scope><name>GetErrorBackward</name></member>
+      <member refid="classtsa_1_1_ar_burg_estimator_1a63e4fbfbd1245e1a899cc783c77f5bfd" prot="public" virt="non-virtual"><scope>tsa::ArBurgEstimator</scope><name>GetErrorForward</name></member>
+      <member refid="classtsa_1_1_ar_burg_estimator_1a06b9a3daeecfcc31d6c5e617848ee200" prot="public" virt="non-virtual"><scope>tsa::ArBurgEstimator</scope><name>GetLatticeView</name></member>
+      <member refid="classtsa_1_1_ar_burg_estimator_1abfbc945d2915208835f1bce7062a14c4" prot="public" virt="non-virtual"><scope>tsa::ArBurgEstimator</scope><name>GetParcor</name></member>
+      <member refid="classtsa_1_1_ar_burg_estimator_1a909ccc5f3ec7155ca60fb23122a8edfd" prot="public" virt="non-virtual"><scope>tsa::ArBurgEstimator</scope><name>Load</name></member>
+      <member refid="classtsa_1_1_ar_burg_estimator_1a6d0a5657630ecd64c33761a8f0c835e1" prot="private" virt="non-virtual"><scope>tsa::ArBurgEstimator</scope><name>mAR</name></member>
+      <member refid="classtsa_1_1_ar_burg_estimator_1a918baccfeb2101848018b6abcf1e9b19" prot="private" virt="non-virtual"><scope>tsa::ArBurgEstimator</scope><name>mArOrder</name></member>
+      <member refid="classtsa_1_1_ar_burg_estimator_1a7b50a6b230b2236500f54f9561d9ef7d" prot="private" virt="non-virtual"><scope>tsa::ArBurgEstimator</scope><name>mColoredData</name></member>
+      <member refid="classtsa_1_1_ar_burg_estimator_1abe77e4f47e6eb9e1f39e22f99331c981" prot="private" virt="non-virtual"><scope>tsa::ArBurgEstimator</scope><name>mErrorBackward</name></member>
+      <member refid="classtsa_1_1_ar_burg_estimator_1a3ff0b47d541f89567d177a42103a95a2" prot="private" virt="non-virtual"><scope>tsa::ArBurgEstimator</scope><name>mErrorForward</name></member>
+      <member refid="classtsa_1_1_ar_burg_estimator_1a51cbda2be55098f65e4d710cfe1153b7" prot="private" virt="non-virtual"><scope>tsa::ArBurgEstimator</scope><name>mParcor</name></member>
+      <member refid="classtsa_1_1_ar_burg_estimator_1a3d033517e7242d079e14038dcd50556c" prot="private" virt="non-virtual"><scope>tsa::ArBurgEstimator</scope><name>mWhitenedData</name></member>
+      <member refid="classtsa_1_1_ar_burg_estimator_1a904c4776668339798aa429622989dae6" prot="public" virt="non-virtual"><scope>tsa::ArBurgEstimator</scope><name>operator()</name></member>
+      <member refid="classtsa_1_1_ar_burg_estimator_1a84c6368cebbbe6965e28769e406d4310" prot="public" virt="non-virtual"><scope>tsa::ArBurgEstimator</scope><name>operator()</name></member>
+      <member refid="classtsa_1_1_ar_burg_estimator_1a5f666a51727cfd49d748973b8f050763" prot="public" virt="non-virtual"><scope>tsa::ArBurgEstimator</scope><name>Save</name></member>
+      <member refid="classtsa_1_1_ar_burg_estimator_1ae3873be61a19beab0b5b6e915c594889" prot="public" virt="non-virtual"><scope>tsa::ArBurgEstimator</scope><name>SetAR</name></member>
+      <member refid="classtsa_1_1_ar_burg_estimator_1acbf9046f1ff3d7e2852ec4daa30ac8af" prot="public" virt="non-virtual"><scope>tsa::ArBurgEstimator</scope><name>SetArOrder</name></member>
+      <member refid="classtsa_1_1_ar_burg_estimator_1a2760a49fb1837ff81061ebf7431de0ef" prot="public" virt="non-virtual"><scope>tsa::ArBurgEstimator</scope><name>xml_serialize</name></member>
+      <member refid="classtsa_1_1_ar_burg_estimator_1a4b72f798ee5330d446366c4296aec27b" prot="public" virt="virtual"><scope>tsa::ArBurgEstimator</scope><name>~ArBurgEstimator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

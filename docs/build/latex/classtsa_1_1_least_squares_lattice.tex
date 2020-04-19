@@ -1,0 +1,194 @@
+\hypertarget{classtsa_1_1_least_squares_lattice}{}\section{tsa\+:\+:Least\+Squares\+Lattice Class Reference}
+\label{classtsa_1_1_least_squares_lattice}\index{tsa\+::\+Least\+Squares\+Lattice@{tsa\+::\+Least\+Squares\+Lattice}}
+
+
+Estimate the parameters for the Least Squares Lattice filter and implement the adaptive whitening.  
+
+
+
+
+{\ttfamily \#include $<$Least\+Squares\+Lattice.\+hpp$>$}
+
+Inheritance diagram for tsa\+:\+:Least\+Squares\+Lattice\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classtsa_1_1_least_squares_lattice}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtsa_1_1_least_squares_lattice_a0fa6ec81a0438b15892c2dbc49932ea0}{Least\+Squares\+Lattice} (matrix\+\_\+row$<$ \hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} $>$ \&Learn\+Data, matrix\+\_\+row$<$ \hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} $>$ \&Whiten\+Data, unsigned int P, double lambda, unsigned int D)
+\item 
+virtual \hyperlink{classtsa_1_1_least_squares_lattice_a9a83bde1203dadf87892afcf25729081}{$\sim$\+Least\+Squares\+Lattice} ()
+\item 
+\hyperlink{classtsa_1_1_least_squares_lattice}{Least\+Squares\+Lattice} \& \hyperlink{classtsa_1_1_least_squares_lattice_a7037938b899e80b09bb34c053d1c7f41}{operator=} (const \hyperlink{classtsa_1_1_least_squares_lattice}{Least\+Squares\+Lattice} \&from)
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Operations}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtsa_1_1_least_squares_lattice_a768ad13ebc89f33b627cc04e5131f7b4}{execute} (\hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} \&Input, \hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} \&Output)
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{classtsa_1_1_least_squares_lattice_a714e35374ee38156cf0fa4816340a6df}{m\+Order}
+\item 
+unsigned int \hyperlink{classtsa_1_1_least_squares_lattice_a00bb9716623be7c8a035c9947023dcda}{m\+Lwsp}
+\item 
+double \hyperlink{classtsa_1_1_least_squares_lattice_a4b1315dc119c22efae15dd97168a5701}{m\+Lambda}
+\item 
+\hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \hyperlink{classtsa_1_1_least_squares_lattice_a3170c018ba5b3dcfb91c9490e11e6199}{m\+Last}
+\item 
+unsigned \hyperlink{classtsa_1_1_least_squares_lattice_a40b578afe8b8e4523cc827337177412c}{m\+Direction}
+\item 
+unsigned int \hyperlink{classtsa_1_1_least_squares_lattice_a17c54dba21bbf5ae79d6687f554eceb9}{m\+Step}
+\item 
+\hyperlink{classtsa_1_1_l_s_l_learning}{L\+S\+L\+Learning} \hyperlink{classtsa_1_1_least_squares_lattice_a720cbccb82705799e96c4053cd1963af}{m\+L\+S\+Llearn}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Estimate the parameters for the Least Squares Lattice filter and implement the adaptive whitening. 
+
+Definition at line 79 of file Least\+Squares\+Lattice.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtsa_1_1_least_squares_lattice_a0fa6ec81a0438b15892c2dbc49932ea0}\label{classtsa_1_1_least_squares_lattice_a0fa6ec81a0438b15892c2dbc49932ea0}} 
+\index{tsa\+::\+Least\+Squares\+Lattice@{tsa\+::\+Least\+Squares\+Lattice}!Least\+Squares\+Lattice@{Least\+Squares\+Lattice}}
+\index{Least\+Squares\+Lattice@{Least\+Squares\+Lattice}!tsa\+::\+Least\+Squares\+Lattice@{tsa\+::\+Least\+Squares\+Lattice}}
+\subsubsection{\texorpdfstring{Least\+Squares\+Lattice()}{LeastSquaresLattice()}}
+{\footnotesize\ttfamily tsa\+::\+Least\+Squares\+Lattice\+::\+Least\+Squares\+Lattice (\begin{DoxyParamCaption}\item[{matrix\+\_\+row$<$ \hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} $>$ \&}]{Learn\+Data,  }\item[{matrix\+\_\+row$<$ \hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} $>$ \&}]{Whiten\+Data,  }\item[{unsigned int}]{P,  }\item[{double}]{lambda,  }\item[{unsigned int}]{D }\end{DoxyParamCaption})}
+
+Constructor 
+
+Definition at line 19 of file Least\+Squares\+Lattice.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_least_squares_lattice_a9a83bde1203dadf87892afcf25729081}\label{classtsa_1_1_least_squares_lattice_a9a83bde1203dadf87892afcf25729081}} 
+\index{tsa\+::\+Least\+Squares\+Lattice@{tsa\+::\+Least\+Squares\+Lattice}!````~Least\+Squares\+Lattice@{$\sim$\+Least\+Squares\+Lattice}}
+\index{````~Least\+Squares\+Lattice@{$\sim$\+Least\+Squares\+Lattice}!tsa\+::\+Least\+Squares\+Lattice@{tsa\+::\+Least\+Squares\+Lattice}}
+\subsubsection{\texorpdfstring{$\sim$\+Least\+Squares\+Lattice()}{~LeastSquaresLattice()}}
+{\footnotesize\ttfamily tsa\+::\+Least\+Squares\+Lattice\+::$\sim$\+Least\+Squares\+Lattice (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destructor 
+
+Definition at line 38 of file Least\+Squares\+Lattice.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classtsa_1_1_least_squares_lattice_a768ad13ebc89f33b627cc04e5131f7b4}\label{classtsa_1_1_least_squares_lattice_a768ad13ebc89f33b627cc04e5131f7b4}} 
+\index{tsa\+::\+Least\+Squares\+Lattice@{tsa\+::\+Least\+Squares\+Lattice}!execute@{execute}}
+\index{execute@{execute}!tsa\+::\+Least\+Squares\+Lattice@{tsa\+::\+Least\+Squares\+Lattice}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void tsa\+::\+Least\+Squares\+Lattice\+::execute (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} \&}]{Input,  }\item[{\hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} \&}]{Output }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em Input} & Input data \\
+\hline
+{\em Output} & Whitened Data \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtsa_1_1_least_squares_lattice_a7037938b899e80b09bb34c053d1c7f41}\label{classtsa_1_1_least_squares_lattice_a7037938b899e80b09bb34c053d1c7f41}} 
+\index{tsa\+::\+Least\+Squares\+Lattice@{tsa\+::\+Least\+Squares\+Lattice}!operator=@{operator=}}
+\index{operator=@{operator=}!tsa\+::\+Least\+Squares\+Lattice@{tsa\+::\+Least\+Squares\+Lattice}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{classtsa_1_1_least_squares_lattice}{Least\+Squares\+Lattice} \& tsa\+::\+Least\+Squares\+Lattice\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{classtsa_1_1_least_squares_lattice}{Least\+Squares\+Lattice} \&}]{from }\end{DoxyParamCaption})}
+
+Assignement operator
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & The instance to be assigned from\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a reference to a new object 
+\end{DoxyReturn}
+
+
+Definition at line 49 of file Least\+Squares\+Lattice.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classtsa_1_1_least_squares_lattice_a40b578afe8b8e4523cc827337177412c}\label{classtsa_1_1_least_squares_lattice_a40b578afe8b8e4523cc827337177412c}} 
+\index{tsa\+::\+Least\+Squares\+Lattice@{tsa\+::\+Least\+Squares\+Lattice}!m\+Direction@{m\+Direction}}
+\index{m\+Direction@{m\+Direction}!tsa\+::\+Least\+Squares\+Lattice@{tsa\+::\+Least\+Squares\+Lattice}}
+\subsubsection{\texorpdfstring{m\+Direction}{mDirection}}
+{\footnotesize\ttfamily unsigned tsa\+::\+Least\+Squares\+Lattice\+::m\+Direction\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 139 of file Least\+Squares\+Lattice.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_least_squares_lattice_a4b1315dc119c22efae15dd97168a5701}\label{classtsa_1_1_least_squares_lattice_a4b1315dc119c22efae15dd97168a5701}} 
+\index{tsa\+::\+Least\+Squares\+Lattice@{tsa\+::\+Least\+Squares\+Lattice}!m\+Lambda@{m\+Lambda}}
+\index{m\+Lambda@{m\+Lambda}!tsa\+::\+Least\+Squares\+Lattice@{tsa\+::\+Least\+Squares\+Lattice}}
+\subsubsection{\texorpdfstring{m\+Lambda}{mLambda}}
+{\footnotesize\ttfamily double tsa\+::\+Least\+Squares\+Lattice\+::m\+Lambda\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 137 of file Least\+Squares\+Lattice.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_least_squares_lattice_a3170c018ba5b3dcfb91c9490e11e6199}\label{classtsa_1_1_least_squares_lattice_a3170c018ba5b3dcfb91c9490e11e6199}} 
+\index{tsa\+::\+Least\+Squares\+Lattice@{tsa\+::\+Least\+Squares\+Lattice}!m\+Last@{m\+Last}}
+\index{m\+Last@{m\+Last}!tsa\+::\+Least\+Squares\+Lattice@{tsa\+::\+Least\+Squares\+Lattice}}
+\subsubsection{\texorpdfstring{m\+Last}{mLast}}
+{\footnotesize\ttfamily \hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} tsa\+::\+Least\+Squares\+Lattice\+::m\+Last\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 138 of file Least\+Squares\+Lattice.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_least_squares_lattice_a720cbccb82705799e96c4053cd1963af}\label{classtsa_1_1_least_squares_lattice_a720cbccb82705799e96c4053cd1963af}} 
+\index{tsa\+::\+Least\+Squares\+Lattice@{tsa\+::\+Least\+Squares\+Lattice}!m\+L\+S\+Llearn@{m\+L\+S\+Llearn}}
+\index{m\+L\+S\+Llearn@{m\+L\+S\+Llearn}!tsa\+::\+Least\+Squares\+Lattice@{tsa\+::\+Least\+Squares\+Lattice}}
+\subsubsection{\texorpdfstring{m\+L\+S\+Llearn}{mLSLlearn}}
+{\footnotesize\ttfamily \hyperlink{classtsa_1_1_l_s_l_learning}{L\+S\+L\+Learning} tsa\+::\+Least\+Squares\+Lattice\+::m\+L\+S\+Llearn\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 141 of file Least\+Squares\+Lattice.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_least_squares_lattice_a00bb9716623be7c8a035c9947023dcda}\label{classtsa_1_1_least_squares_lattice_a00bb9716623be7c8a035c9947023dcda}} 
+\index{tsa\+::\+Least\+Squares\+Lattice@{tsa\+::\+Least\+Squares\+Lattice}!m\+Lwsp@{m\+Lwsp}}
+\index{m\+Lwsp@{m\+Lwsp}!tsa\+::\+Least\+Squares\+Lattice@{tsa\+::\+Least\+Squares\+Lattice}}
+\subsubsection{\texorpdfstring{m\+Lwsp}{mLwsp}}
+{\footnotesize\ttfamily unsigned int tsa\+::\+Least\+Squares\+Lattice\+::m\+Lwsp\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 136 of file Least\+Squares\+Lattice.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_least_squares_lattice_a714e35374ee38156cf0fa4816340a6df}\label{classtsa_1_1_least_squares_lattice_a714e35374ee38156cf0fa4816340a6df}} 
+\index{tsa\+::\+Least\+Squares\+Lattice@{tsa\+::\+Least\+Squares\+Lattice}!m\+Order@{m\+Order}}
+\index{m\+Order@{m\+Order}!tsa\+::\+Least\+Squares\+Lattice@{tsa\+::\+Least\+Squares\+Lattice}}
+\subsubsection{\texorpdfstring{m\+Order}{mOrder}}
+{\footnotesize\ttfamily unsigned int tsa\+::\+Least\+Squares\+Lattice\+::m\+Order\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 135 of file Least\+Squares\+Lattice.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_least_squares_lattice_a17c54dba21bbf5ae79d6687f554eceb9}\label{classtsa_1_1_least_squares_lattice_a17c54dba21bbf5ae79d6687f554eceb9}} 
+\index{tsa\+::\+Least\+Squares\+Lattice@{tsa\+::\+Least\+Squares\+Lattice}!m\+Step@{m\+Step}}
+\index{m\+Step@{m\+Step}!tsa\+::\+Least\+Squares\+Lattice@{tsa\+::\+Least\+Squares\+Lattice}}
+\subsubsection{\texorpdfstring{m\+Step}{mStep}}
+{\footnotesize\ttfamily unsigned int tsa\+::\+Least\+Squares\+Lattice\+::m\+Step\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 140 of file Least\+Squares\+Lattice.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/include/\hyperlink{_least_squares_lattice_8hpp}{Least\+Squares\+Lattice.\+hpp}\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/src/\hyperlink{_least_squares_lattice_8cpp}{Least\+Squares\+Lattice.\+cpp}\end{DoxyCompactItemize}

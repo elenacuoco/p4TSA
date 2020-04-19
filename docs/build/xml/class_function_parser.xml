@@ -1,0 +1,970 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_function_parser" kind="class" language="C++" prot="public">
+    <compoundname>FunctionParser</compoundname>
+    <includes refid="fparser_8hpp" local="no">fparser.hpp</includes>
+    <innerclass refid="struct_function_parser_1_1_data" prot="private">FunctionParser::Data</innerclass>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7" prot="public" static="no">
+        <name>ParseErrorType</name>
+        <enumvalue id="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7ae2d4f26e44818f756cbdefbeb76e4ca3" prot="public">
+          <name>SYNTAX_ERROR</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7a8d264fb5dadc95cb61c97384d9351669" prot="public">
+          <name>MISM_PARENTH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7a8e549b77de5e9f6f52e3a19a6267b16c" prot="public">
+          <name>MISSING_PARENTH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7ac5ed9e2f99d67c7b11f22dcc1e096474" prot="public">
+          <name>EMPTY_PARENTH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7aa9b7c33316017f2de413ed7f140f36c6" prot="public">
+          <name>EXPECT_OPERATOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7a9387af9f1f8e2339997b932d37728aa6" prot="public">
+          <name>OUT_OF_MEMORY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7a455a3ffd84dd6f97b008aba834c45b9e" prot="public">
+          <name>UNEXPECTED_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7a970abfe88a6d4f3ccf0f999d4c0a0445" prot="public">
+          <name>INVALID_VARS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7abeede85e1cc0910db7ae8f06e4fe29e9" prot="public">
+          <name>ILL_PARAMS_AMOUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7ad000e35ddadcb28fa56e509766b051df" prot="public">
+          <name>PREMATURE_EOS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7a5d885cdd62d468c4643667704ed21f43" prot="public">
+          <name>EXPECT_PARENTH_FUNC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7afe98956d3451f7e3d66f259f8b36108a" prot="public">
+          <name>FP_NO_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="23" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" bodystart="23" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_function_parser_1acca53651fb8f1c7a44e3d2cac7e62455" prot="public" static="no">
+        <type>double(*</type>
+        <definition>typedef double(* FunctionParser::FunctionPtr) (const double *)</definition>
+        <argsstring>)(const double *)</argsstring>
+        <name>FunctionPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="47" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_function_parser_1a8ae06b8ee6ddb247b6a7c0075fd6cf30" prot="private" static="no" mutable="no">
+        <type><ref refid="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7" kindref="member">ParseErrorType</ref></type>
+        <definition>ParseErrorType FunctionParser::parseErrorType</definition>
+        <argsstring></argsstring>
+        <name>parseErrorType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="78" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_function_parser_1a43c35628fcb4a11d459e48265eca45df" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FunctionParser::evalErrorType</definition>
+        <argsstring></argsstring>
+        <name>evalErrorType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="79" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_function_parser_1ac4c90e783d1a41f8f842383a9a5088d0" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_function_parser_1_1_data" kindref="compound">Data</ref> *</type>
+        <definition>Data* FunctionParser::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="121" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_function_parser_1a5b75f74ce82219fc4aaf05665ab46034" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned FunctionParser::evalRecursionLevel</definition>
+        <argsstring></argsstring>
+        <name>evalRecursionLevel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="122" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_function_parser_1a4a54f868e24abc53d4474ca538c999bf" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned FunctionParser::StackPtr</definition>
+        <argsstring></argsstring>
+        <name>StackPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="125" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_function_parser_1a78e461023408c6074247df656f93bbae" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; unsigned &gt; *</type>
+        <definition>std::vector&lt;unsigned&gt;* FunctionParser::tempByteCode</definition>
+        <argsstring></argsstring>
+        <name>tempByteCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="126" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_function_parser_1a9e6c21543859ee17e917a292a16c495a" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt; *</type>
+        <definition>std::vector&lt;double&gt;* FunctionParser::tempImmed</definition>
+        <argsstring></argsstring>
+        <name>tempImmed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="127" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_function_parser_1af4e0b209ec9771dcd76e27f3fcad1b51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FunctionParser::Parse</definition>
+        <argsstring>(const std::string &amp;Function, const std::string &amp;Vars, bool useDegrees=false)</argsstring>
+        <name>Parse</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>Function</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>Vars</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>useDegrees</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="31" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/fparser.cpp" bodystart="283" bodyend="310"/>
+      </memberdef>
+      <memberdef kind="function" id="class_function_parser_1a000e3edaf5dc8ee121df03b731ff0192" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * FunctionParser::ErrorMsg</definition>
+        <argsstring>() const</argsstring>
+        <name>ErrorMsg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="33" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/fparser.cpp" bodystart="964" bodyend="967"/>
+      </memberdef>
+      <memberdef kind="function" id="class_function_parser_1ad6ddf1546278fa7148c968374e6a097a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7" kindref="member">ParseErrorType</ref></type>
+        <definition>ParseErrorType FunctionParser::GetParseErrorType</definition>
+        <argsstring>() const</argsstring>
+        <name>GetParseErrorType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="35" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" bodystart="35" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_function_parser_1a8fe3538f4cd207346c390059ba334023" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double FunctionParser::Eval</definition>
+        <argsstring>(const double *Vars)</argsstring>
+        <name>Eval</name>
+        <param>
+          <type>const double *</type>
+          <declname>Vars</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="39" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/fparser.cpp" bodystart="996" bodyend="1295"/>
+      </memberdef>
+      <memberdef kind="function" id="class_function_parser_1a94faf9f4616d0850821cce15abbcf421" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int FunctionParser::EvalError</definition>
+        <argsstring>() const</argsstring>
+        <name>EvalError</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="41" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" bodystart="41" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_function_parser_1a481976b6eb58b15d31d4f3700d9ad730" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FunctionParser::AddConstant</definition>
+        <argsstring>(const std::string &amp;name, double value)</argsstring>
+        <name>AddConstant</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="45" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/fparser.cpp" bodystart="215" bodyend="230"/>
+      </memberdef>
+      <memberdef kind="function" id="class_function_parser_1a8d477dd0041ca594dac795bba24c9f3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FunctionParser::AddFunction</definition>
+        <argsstring>(const std::string &amp;name, FunctionPtr, unsigned paramsAmount)</argsstring>
+        <name>AddFunction</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="class_function_parser_1acca53651fb8f1c7a44e3d2cac7e62455" kindref="member">FunctionPtr</ref></type>
+          <defname>func</defname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>paramsAmount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="49" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/fparser.cpp" bodystart="234" bodyend="250"/>
+      </memberdef>
+      <memberdef kind="function" id="class_function_parser_1a7d6c6465658e9831d0c51e3bd6b5a4c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FunctionParser::AddFunction</definition>
+        <argsstring>(const std::string &amp;name, FunctionParser &amp;)</argsstring>
+        <name>AddFunction</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="class_function_parser" kindref="compound">FunctionParser</ref> &amp;</type>
+          <defname>parser</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="51" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/fparser.cpp" bodystart="259" bodyend="276"/>
+      </memberdef>
+      <memberdef kind="function" id="class_function_parser_1a5466523ee5198fb4b38461b362b1481d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FunctionParser::Optimize</definition>
+        <argsstring>()</argsstring>
+        <name>Optimize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="53" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/fparser.cpp" bodystart="1440" bodyend="1442"/>
+      </memberdef>
+      <memberdef kind="function" id="class_function_parser_1a18468eeb56ac5c1b1a6a0b0cebb2c045" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FunctionParser::FunctionParser</definition>
+        <argsstring>()</argsstring>
+        <name>FunctionParser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="56" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/fparser.cpp" bodystart="78" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class_function_parser_1a50257dda6ec4f2c4adf6740e31cf7da7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FunctionParser::~FunctionParser</definition>
+        <argsstring>()</argsstring>
+        <name>~FunctionParser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="57" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/fparser.cpp" bodystart="85" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="class_function_parser_1adcfa2c887c17019c29fdbfaa39ab28fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FunctionParser::FunctionParser</definition>
+        <argsstring>(const FunctionParser &amp;)</argsstring>
+        <name>FunctionParser</name>
+        <param>
+          <type>const <ref refid="class_function_parser" kindref="compound">FunctionParser</ref> &amp;</type>
+          <defname>cpy</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="61" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/fparser.cpp" bodystart="91" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="class_function_parser_1a316870fce14d0b1d9bc386f23115cc53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_function_parser" kindref="compound">FunctionParser</ref> &amp;</type>
+        <definition>FunctionParser &amp; FunctionParser::operator=</definition>
+        <argsstring>(const FunctionParser &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="class_function_parser" kindref="compound">FunctionParser</ref> &amp;</type>
+          <defname>cpy</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="62" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/fparser.cpp" bodystart="99" bodyend="112"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_function_parser_1a0af0f9ad348adf7df57fa630eddf8e47" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FunctionParser::copyOnWrite</definition>
+        <argsstring>()</argsstring>
+        <name>copyOnWrite</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="132" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/fparser.cpp" bodystart="63" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_function_parser_1abfc0c76a7006ba7b0e45e21bcd6f83cd" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FunctionParser::checkRecursiveLinking</definition>
+        <argsstring>(const FunctionParser *) const</argsstring>
+        <name>checkRecursiveLinking</name>
+        <param>
+          <type>const <ref refid="class_function_parser" kindref="compound">FunctionParser</ref> *</type>
+          <defname>fp</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="135" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/fparser.cpp" bodystart="252" bodyend="257"/>
+      </memberdef>
+      <memberdef kind="function" id="class_function_parser_1a79441f19176e18e88155f1101108dbe6" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FunctionParser::isValidName</definition>
+        <argsstring>(const std::string &amp;) const</argsstring>
+        <name>isValidName</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <defname>name</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="137" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/fparser.cpp" bodystart="202" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="class_function_parser_1a1c1ea54f04c1dfb8d8609240ba9f5f40" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Data::VarMap_t::const_iterator</type>
+        <definition>FunctionParser::Data::VarMap_t::const_iterator FunctionParser::FindVariable</definition>
+        <argsstring>(const char *, const Data::VarMap_t &amp;) const</argsstring>
+        <name>FindVariable</name>
+        <param>
+          <type>const char *</type>
+          <defname>F</defname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_function_parser_1_1_data_1a02f3fbca3164d0e498312b418258ea84" kindref="member">Data::VarMap_t</ref> &amp;</type>
+          <defname>vars</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="138" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/fparser.cpp" bodystart="344" bodyend="354"/>
+      </memberdef>
+      <memberdef kind="function" id="class_function_parser_1a305fdcea81a498567dc92010338cee7c" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Data::ConstMap_t::const_iterator</type>
+        <definition>FunctionParser::Data::ConstMap_t::const_iterator FunctionParser::FindConstant</definition>
+        <argsstring>(const char *) const</argsstring>
+        <name>FindConstant</name>
+        <param>
+          <type>const char *</type>
+          <defname>F</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="140" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/fparser.cpp" bodystart="357" bodyend="367"/>
+      </memberdef>
+      <memberdef kind="function" id="class_function_parser_1a3895fdbb2f21fc7facebcd4a3c2399f7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FunctionParser::CheckSyntax</definition>
+        <argsstring>(const char *)</argsstring>
+        <name>CheckSyntax</name>
+        <param>
+          <type>const char *</type>
+          <defname>Function</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="141" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/fparser.cpp" bodystart="373" bodyend="527"/>
+      </memberdef>
+      <memberdef kind="function" id="class_function_parser_1aa136efc410ad6a9c2992fb6e1c9b057c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FunctionParser::Compile</definition>
+        <argsstring>(const char *)</argsstring>
+        <name>Compile</name>
+        <param>
+          <type>const char *</type>
+          <defname>Function</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="142" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/fparser.cpp" bodystart="533" bodyend="577"/>
+      </memberdef>
+      <memberdef kind="function" id="class_function_parser_1afd635d05f1b4d3ef6f09b75dd92926e5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FunctionParser::IsVariable</definition>
+        <argsstring>(int)</argsstring>
+        <name>IsVariable</name>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="143" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_function_parser_1a714d401cb9368826a87b7f15575de2a3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FunctionParser::AddCompiledByte</definition>
+        <argsstring>(unsigned)</argsstring>
+        <name>AddCompiledByte</name>
+        <param>
+          <type>unsigned</type>
+          <defname>c</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="144" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/fparser.cpp" bodystart="579" bodyend="581"/>
+      </memberdef>
+      <memberdef kind="function" id="class_function_parser_1a59cf4b93d74e0572386742603977f886" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FunctionParser::AddImmediate</definition>
+        <argsstring>(double)</argsstring>
+        <name>AddImmediate</name>
+        <param>
+          <type>double</type>
+          <defname>i</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="145" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/fparser.cpp" bodystart="583" bodyend="585"/>
+      </memberdef>
+      <memberdef kind="function" id="class_function_parser_1aadefd3517f92e066d9926a1998e9fe2f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FunctionParser::AddFunctionOpcode</definition>
+        <argsstring>(unsigned)</argsstring>
+        <name>AddFunctionOpcode</name>
+        <param>
+          <type>unsigned</type>
+          <defname>opcode</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="146" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/fparser.cpp" bodystart="587" bodyend="617"/>
+      </memberdef>
+      <memberdef kind="function" id="class_function_parser_1a2ba1bb889a7035da4a7639d6b7ce53c6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FunctionParser::incStackPtr</definition>
+        <argsstring>()</argsstring>
+        <name>incStackPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="147" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/fparser.cpp" bodystart="619" bodyend="621"/>
+      </memberdef>
+      <memberdef kind="function" id="class_function_parser_1a9978dd583ee328a7f71a6075a3c5f97c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FunctionParser::CompileIf</definition>
+        <argsstring>(const char *, int)</argsstring>
+        <name>CompileIf</name>
+        <param>
+          <type>const char *</type>
+          <defname>F</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>ind</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="148" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/fparser.cpp" bodystart="626" bodyend="668"/>
+      </memberdef>
+      <memberdef kind="function" id="class_function_parser_1a22e24efb5ef28aa34025bf49fe505010" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FunctionParser::CompileFunctionParams</definition>
+        <argsstring>(const char *, int, unsigned)</argsstring>
+        <name>CompileFunctionParams</name>
+        <param>
+          <type>const char *</type>
+          <defname>F</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>ind</defname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <defname>requiredParams</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="149" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/fparser.cpp" bodystart="670" bodyend="689"/>
+      </memberdef>
+      <memberdef kind="function" id="class_function_parser_1a7673096cf704d1fa7ab542db5f22fe95" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FunctionParser::CompileElement</definition>
+        <argsstring>(const char *, int)</argsstring>
+        <name>CompileElement</name>
+        <param>
+          <type>const char *</type>
+          <defname>F</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>ind</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="150" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/fparser.cpp" bodystart="693" bodyend="793"/>
+      </memberdef>
+      <memberdef kind="function" id="class_function_parser_1a34d2686ecb9619b0b459bfa249b64498" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FunctionParser::CompilePow</definition>
+        <argsstring>(const char *, int)</argsstring>
+        <name>CompilePow</name>
+        <param>
+          <type>const char *</type>
+          <defname>F</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>ind</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="151" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/fparser.cpp" bodystart="797" bodyend="809"/>
+      </memberdef>
+      <memberdef kind="function" id="class_function_parser_1adda1df6bf29a91d38e838bdf96524f61" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FunctionParser::CompileUnaryMinus</definition>
+        <argsstring>(const char *, int)</argsstring>
+        <name>CompileUnaryMinus</name>
+        <param>
+          <type>const char *</type>
+          <defname>F</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>ind</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="152" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/fparser.cpp" bodystart="813" bodyend="838"/>
+      </memberdef>
+      <memberdef kind="function" id="class_function_parser_1ade4859b2f9b822a19a2beccbc25d36b0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FunctionParser::CompileMult</definition>
+        <argsstring>(const char *, int)</argsstring>
+        <name>CompileMult</name>
+        <param>
+          <type>const char *</type>
+          <defname>F</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>ind</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="153" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/fparser.cpp" bodystart="842" bodyend="862"/>
+      </memberdef>
+      <memberdef kind="function" id="class_function_parser_1a9b3024d49f9094731f3cbd17eeea29e5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FunctionParser::CompileAddition</definition>
+        <argsstring>(const char *, int)</argsstring>
+        <name>CompileAddition</name>
+        <param>
+          <type>const char *</type>
+          <defname>F</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>ind</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="154" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/fparser.cpp" bodystart="866" bodyend="879"/>
+      </memberdef>
+      <memberdef kind="function" id="class_function_parser_1a2418f51d1feca9195780bda66a64923a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FunctionParser::CompileComparison</definition>
+        <argsstring>(const char *, int)</argsstring>
+        <name>CompileComparison</name>
+        <param>
+          <type>const char *</type>
+          <defname>F</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>ind</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="155" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/fparser.cpp" bodystart="883" bodyend="910"/>
+      </memberdef>
+      <memberdef kind="function" id="class_function_parser_1adb0768f374333bbee4c84c30a2769d1b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FunctionParser::CompileAnd</definition>
+        <argsstring>(const char *, int)</argsstring>
+        <name>CompileAnd</name>
+        <param>
+          <type>const char *</type>
+          <defname>F</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>ind</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="156" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/fparser.cpp" bodystart="914" bodyend="926"/>
+      </memberdef>
+      <memberdef kind="function" id="class_function_parser_1a233a126157058829dcda9aa3f00781f8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FunctionParser::CompileOr</definition>
+        <argsstring>(const char *, int)</argsstring>
+        <name>CompileOr</name>
+        <param>
+          <type>const char *</type>
+          <defname>F</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>ind</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="157" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/fparser.cpp" bodystart="930" bodyend="942"/>
+      </memberdef>
+      <memberdef kind="function" id="class_function_parser_1a854c0c23a60d2d206ddf67015747a80a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FunctionParser::CompileExpression</definition>
+        <argsstring>(const char *, int, bool=false)</argsstring>
+        <name>CompileExpression</name>
+        <param>
+          <type>const char *</type>
+          <defname>F</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>ind</defname>
+        </param>
+        <param>
+          <type>bool</type>
+          <defname>stopAtComma</defname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="158" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/fparser.cpp" bodystart="946" bodyend="958"/>
+      </memberdef>
+      <memberdef kind="function" id="class_function_parser_1a8f09d400c39a72c7485d26cbff2543c9" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FunctionParser::MakeTree</definition>
+        <argsstring>(void *) const</argsstring>
+        <name>MakeTree</name>
+        <param>
+          <type>void *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="161" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/fparser.cpp" bodystart="1437" bodyend="1438"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="267">
+        <label>FunctionParser</label>
+        <link refid="class_function_parser"/>
+        <childnode refid="268" relation="usage">
+          <edgelabel>data</edgelabel>
+        </childnode>
+      </node>
+      <node id="268">
+        <label>FunctionParser::Data</label>
+        <link refid="struct_function_parser_1_1_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" line="20" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp" bodystart="20" bodyend="162"/>
+    <listofallmembers>
+      <member refid="class_function_parser_1a714d401cb9368826a87b7f15575de2a3" prot="private" virt="non-virtual"><scope>FunctionParser</scope><name>AddCompiledByte</name></member>
+      <member refid="class_function_parser_1a481976b6eb58b15d31d4f3700d9ad730" prot="public" virt="non-virtual"><scope>FunctionParser</scope><name>AddConstant</name></member>
+      <member refid="class_function_parser_1a8d477dd0041ca594dac795bba24c9f3a" prot="public" virt="non-virtual"><scope>FunctionParser</scope><name>AddFunction</name></member>
+      <member refid="class_function_parser_1a7d6c6465658e9831d0c51e3bd6b5a4c0" prot="public" virt="non-virtual"><scope>FunctionParser</scope><name>AddFunction</name></member>
+      <member refid="class_function_parser_1aadefd3517f92e066d9926a1998e9fe2f" prot="private" virt="non-virtual"><scope>FunctionParser</scope><name>AddFunctionOpcode</name></member>
+      <member refid="class_function_parser_1a59cf4b93d74e0572386742603977f886" prot="private" virt="non-virtual"><scope>FunctionParser</scope><name>AddImmediate</name></member>
+      <member refid="class_function_parser_1abfc0c76a7006ba7b0e45e21bcd6f83cd" prot="private" virt="non-virtual"><scope>FunctionParser</scope><name>checkRecursiveLinking</name></member>
+      <member refid="class_function_parser_1a3895fdbb2f21fc7facebcd4a3c2399f7" prot="private" virt="non-virtual"><scope>FunctionParser</scope><name>CheckSyntax</name></member>
+      <member refid="class_function_parser_1aa136efc410ad6a9c2992fb6e1c9b057c" prot="private" virt="non-virtual"><scope>FunctionParser</scope><name>Compile</name></member>
+      <member refid="class_function_parser_1a9b3024d49f9094731f3cbd17eeea29e5" prot="private" virt="non-virtual"><scope>FunctionParser</scope><name>CompileAddition</name></member>
+      <member refid="class_function_parser_1adb0768f374333bbee4c84c30a2769d1b" prot="private" virt="non-virtual"><scope>FunctionParser</scope><name>CompileAnd</name></member>
+      <member refid="class_function_parser_1a2418f51d1feca9195780bda66a64923a" prot="private" virt="non-virtual"><scope>FunctionParser</scope><name>CompileComparison</name></member>
+      <member refid="class_function_parser_1a7673096cf704d1fa7ab542db5f22fe95" prot="private" virt="non-virtual"><scope>FunctionParser</scope><name>CompileElement</name></member>
+      <member refid="class_function_parser_1a854c0c23a60d2d206ddf67015747a80a" prot="private" virt="non-virtual"><scope>FunctionParser</scope><name>CompileExpression</name></member>
+      <member refid="class_function_parser_1a22e24efb5ef28aa34025bf49fe505010" prot="private" virt="non-virtual"><scope>FunctionParser</scope><name>CompileFunctionParams</name></member>
+      <member refid="class_function_parser_1a9978dd583ee328a7f71a6075a3c5f97c" prot="private" virt="non-virtual"><scope>FunctionParser</scope><name>CompileIf</name></member>
+      <member refid="class_function_parser_1ade4859b2f9b822a19a2beccbc25d36b0" prot="private" virt="non-virtual"><scope>FunctionParser</scope><name>CompileMult</name></member>
+      <member refid="class_function_parser_1a233a126157058829dcda9aa3f00781f8" prot="private" virt="non-virtual"><scope>FunctionParser</scope><name>CompileOr</name></member>
+      <member refid="class_function_parser_1a34d2686ecb9619b0b459bfa249b64498" prot="private" virt="non-virtual"><scope>FunctionParser</scope><name>CompilePow</name></member>
+      <member refid="class_function_parser_1adda1df6bf29a91d38e838bdf96524f61" prot="private" virt="non-virtual"><scope>FunctionParser</scope><name>CompileUnaryMinus</name></member>
+      <member refid="class_function_parser_1a0af0f9ad348adf7df57fa630eddf8e47" prot="private" virt="non-virtual"><scope>FunctionParser</scope><name>copyOnWrite</name></member>
+      <member refid="class_function_parser_1ac4c90e783d1a41f8f842383a9a5088d0" prot="private" virt="non-virtual"><scope>FunctionParser</scope><name>data</name></member>
+      <member refid="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7ac5ed9e2f99d67c7b11f22dcc1e096474" prot="public" virt="non-virtual"><scope>FunctionParser</scope><name>EMPTY_PARENTH</name></member>
+      <member refid="class_function_parser_1a000e3edaf5dc8ee121df03b731ff0192" prot="public" virt="non-virtual"><scope>FunctionParser</scope><name>ErrorMsg</name></member>
+      <member refid="class_function_parser_1a8fe3538f4cd207346c390059ba334023" prot="public" virt="non-virtual"><scope>FunctionParser</scope><name>Eval</name></member>
+      <member refid="class_function_parser_1a94faf9f4616d0850821cce15abbcf421" prot="public" virt="non-virtual"><scope>FunctionParser</scope><name>EvalError</name></member>
+      <member refid="class_function_parser_1a43c35628fcb4a11d459e48265eca45df" prot="private" virt="non-virtual"><scope>FunctionParser</scope><name>evalErrorType</name></member>
+      <member refid="class_function_parser_1a5b75f74ce82219fc4aaf05665ab46034" prot="private" virt="non-virtual"><scope>FunctionParser</scope><name>evalRecursionLevel</name></member>
+      <member refid="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7aa9b7c33316017f2de413ed7f140f36c6" prot="public" virt="non-virtual"><scope>FunctionParser</scope><name>EXPECT_OPERATOR</name></member>
+      <member refid="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7a5d885cdd62d468c4643667704ed21f43" prot="public" virt="non-virtual"><scope>FunctionParser</scope><name>EXPECT_PARENTH_FUNC</name></member>
+      <member refid="class_function_parser_1a305fdcea81a498567dc92010338cee7c" prot="private" virt="non-virtual"><scope>FunctionParser</scope><name>FindConstant</name></member>
+      <member refid="class_function_parser_1a1c1ea54f04c1dfb8d8609240ba9f5f40" prot="private" virt="non-virtual"><scope>FunctionParser</scope><name>FindVariable</name></member>
+      <member refid="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7afe98956d3451f7e3d66f259f8b36108a" prot="public" virt="non-virtual"><scope>FunctionParser</scope><name>FP_NO_ERROR</name></member>
+      <member refid="class_function_parser_1a18468eeb56ac5c1b1a6a0b0cebb2c045" prot="public" virt="non-virtual"><scope>FunctionParser</scope><name>FunctionParser</name></member>
+      <member refid="class_function_parser_1adcfa2c887c17019c29fdbfaa39ab28fb" prot="public" virt="non-virtual"><scope>FunctionParser</scope><name>FunctionParser</name></member>
+      <member refid="class_function_parser_1acca53651fb8f1c7a44e3d2cac7e62455" prot="public" virt="non-virtual"><scope>FunctionParser</scope><name>FunctionPtr</name></member>
+      <member refid="class_function_parser_1ad6ddf1546278fa7148c968374e6a097a" prot="public" virt="non-virtual"><scope>FunctionParser</scope><name>GetParseErrorType</name></member>
+      <member refid="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7abeede85e1cc0910db7ae8f06e4fe29e9" prot="public" virt="non-virtual"><scope>FunctionParser</scope><name>ILL_PARAMS_AMOUNT</name></member>
+      <member refid="class_function_parser_1a2ba1bb889a7035da4a7639d6b7ce53c6" prot="private" virt="non-virtual"><scope>FunctionParser</scope><name>incStackPtr</name></member>
+      <member refid="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7a970abfe88a6d4f3ccf0f999d4c0a0445" prot="public" virt="non-virtual"><scope>FunctionParser</scope><name>INVALID_VARS</name></member>
+      <member refid="class_function_parser_1a79441f19176e18e88155f1101108dbe6" prot="private" virt="non-virtual"><scope>FunctionParser</scope><name>isValidName</name></member>
+      <member refid="class_function_parser_1afd635d05f1b4d3ef6f09b75dd92926e5" prot="private" virt="non-virtual"><scope>FunctionParser</scope><name>IsVariable</name></member>
+      <member refid="class_function_parser_1a8f09d400c39a72c7485d26cbff2543c9" prot="private" virt="non-virtual"><scope>FunctionParser</scope><name>MakeTree</name></member>
+      <member refid="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7a8d264fb5dadc95cb61c97384d9351669" prot="public" virt="non-virtual"><scope>FunctionParser</scope><name>MISM_PARENTH</name></member>
+      <member refid="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7a8e549b77de5e9f6f52e3a19a6267b16c" prot="public" virt="non-virtual"><scope>FunctionParser</scope><name>MISSING_PARENTH</name></member>
+      <member refid="class_function_parser_1a316870fce14d0b1d9bc386f23115cc53" prot="public" virt="non-virtual"><scope>FunctionParser</scope><name>operator=</name></member>
+      <member refid="class_function_parser_1a5466523ee5198fb4b38461b362b1481d" prot="public" virt="non-virtual"><scope>FunctionParser</scope><name>Optimize</name></member>
+      <member refid="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7a9387af9f1f8e2339997b932d37728aa6" prot="public" virt="non-virtual"><scope>FunctionParser</scope><name>OUT_OF_MEMORY</name></member>
+      <member refid="class_function_parser_1af4e0b209ec9771dcd76e27f3fcad1b51" prot="public" virt="non-virtual"><scope>FunctionParser</scope><name>Parse</name></member>
+      <member refid="class_function_parser_1a8ae06b8ee6ddb247b6a7c0075fd6cf30" prot="private" virt="non-virtual"><scope>FunctionParser</scope><name>parseErrorType</name></member>
+      <member refid="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7" prot="public" virt="non-virtual"><scope>FunctionParser</scope><name>ParseErrorType</name></member>
+      <member refid="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7ad000e35ddadcb28fa56e509766b051df" prot="public" virt="non-virtual"><scope>FunctionParser</scope><name>PREMATURE_EOS</name></member>
+      <member refid="class_function_parser_1a4a54f868e24abc53d4474ca538c999bf" prot="private" virt="non-virtual"><scope>FunctionParser</scope><name>StackPtr</name></member>
+      <member refid="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7ae2d4f26e44818f756cbdefbeb76e4ca3" prot="public" virt="non-virtual"><scope>FunctionParser</scope><name>SYNTAX_ERROR</name></member>
+      <member refid="class_function_parser_1a78e461023408c6074247df656f93bbae" prot="private" virt="non-virtual"><scope>FunctionParser</scope><name>tempByteCode</name></member>
+      <member refid="class_function_parser_1a9e6c21543859ee17e917a292a16c495a" prot="private" virt="non-virtual"><scope>FunctionParser</scope><name>tempImmed</name></member>
+      <member refid="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7a455a3ffd84dd6f97b008aba834c45b9e" prot="public" virt="non-virtual"><scope>FunctionParser</scope><name>UNEXPECTED_ERROR</name></member>
+      <member refid="class_function_parser_1a50257dda6ec4f2c4adf6740e31cf7da7" prot="public" virt="non-virtual"><scope>FunctionParser</scope><name>~FunctionParser</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

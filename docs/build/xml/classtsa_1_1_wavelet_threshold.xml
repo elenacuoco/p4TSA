@@ -1,0 +1,420 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classtsa_1_1_wavelet_threshold" kind="class" language="C++" prot="public">
+    <compoundname>tsa::WaveletThreshold</compoundname>
+    <includes refid="_wavelet_threshold_8hpp" local="no">WaveletThreshold.hpp</includes>
+      <sectiondef kind="user-defined">
+      <header>Operations</header>
+      <memberdef kind="function" id="classtsa_1_1_wavelet_threshold_1a124b4c13b828d8b85500f9c99d5f93ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::WaveletThreshold::operator()</definition>
+        <argsstring>(SeqViewDouble &amp;WT, enum WaveletThresholding t, enum ThresholdingMode m=soft)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref> &amp;</type>
+          <declname>WT</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="classtsa_1_1_wavelet_threshold_1a50c42c95dae960986a985157ca038fae" kindref="member">WaveletThresholding</ref></type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="classtsa_1_1_wavelet_threshold_1a93d14df024bbc8c3da182bf5899f8f83" kindref="member">ThresholdingMode</ref></type>
+          <declname>m</declname>
+          <defval><ref refid="classtsa_1_1_wavelet_threshold_1a93d14df024bbc8c3da182bf5899f8f83a356244854a142af0e9f3db2cf4ad5192" kindref="member">soft</ref></defval>
+        </param>
+        <briefdescription>
+<para>Brief documentation for the execute method. </para>        </briefdescription>
+        <detaileddescription>
+<para>Start of the long documentation for execute method.</para><para><simplesect kind="pre"><para>A precondition </para></simplesect>
+<simplesect kind="post"><para>A postcondition </para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>An</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>exception</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>parameter</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a returned value</para></simplesect>
+Declaration of execute operation </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletThreshold.hpp" line="118" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/WaveletThreshold.cpp" bodystart="43" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_wavelet_threshold_1ae05f0886ef54f3370fc5c91eff2b0de7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::WaveletThreshold::operator()</definition>
+        <argsstring>(Dmatrix &amp;WT, enum WaveletThresholding t, enum ThresholdingMode m=soft)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref> &amp;</type>
+          <declname>WT</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="classtsa_1_1_wavelet_threshold_1a50c42c95dae960986a985157ca038fae" kindref="member">WaveletThresholding</ref></type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="classtsa_1_1_wavelet_threshold_1a93d14df024bbc8c3da182bf5899f8f83" kindref="member">ThresholdingMode</ref></type>
+          <declname>m</declname>
+          <defval><ref refid="classtsa_1_1_wavelet_threshold_1a93d14df024bbc8c3da182bf5899f8f83a356244854a142af0e9f3db2cf4ad5192" kindref="member">soft</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletThreshold.hpp" line="119" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/WaveletThreshold.cpp" bodystart="120" bodyend="207"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Getters</header>
+      <memberdef kind="function" id="classtsa_1_1_wavelet_threshold_1a219b1dbce4e92a84e8078a839b75c4c3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double tsa::WaveletThreshold::GetSigma</definition>
+        <argsstring>()</argsstring>
+        <name>GetSigma</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletThreshold.hpp" line="127" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletThreshold.hpp" bodystart="127" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_wavelet_threshold_1a2b6e84938c13629e11a9f31b26c34eb9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double tsa::WaveletThreshold::GetLevel</definition>
+        <argsstring>()</argsstring>
+        <name>GetLevel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletThreshold.hpp" line="131" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletThreshold.hpp" bodystart="131" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_wavelet_threshold_1aa2a36e1131551abc41b02c4e6a4352c7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double tsa::WaveletThreshold::GetCm</definition>
+        <argsstring>()</argsstring>
+        <name>GetCm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletThreshold.hpp" line="135" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletThreshold.hpp" bodystart="135" bodyend="137"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Setters</header>
+      <memberdef kind="function" id="classtsa_1_1_wavelet_threshold_1a828cc5dbb8c68647a28f72eb0945e2a4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::WaveletThreshold::SetSigma</definition>
+        <argsstring>(double sigma)</argsstring>
+        <name>SetSigma</name>
+        <param>
+          <type>double</type>
+          <declname>sigma</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletThreshold.hpp" line="146" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletThreshold.hpp" bodystart="146" bodyend="148"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classtsa_1_1_wavelet_threshold_1a50c42c95dae960986a985157ca038fae" prot="public" static="no">
+        <name>WaveletThresholding</name>
+        <enumvalue id="classtsa_1_1_wavelet_threshold_1a50c42c95dae960986a985157ca038faea9f61564af63af2a5259667285adc8404" prot="public">
+          <name>highest</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_wavelet_threshold_1a50c42c95dae960986a985157ca038faea890fa411734e6128a3422faa61aff98b" prot="public">
+          <name>dohonojohnston</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_wavelet_threshold_1a50c42c95dae960986a985157ca038faea849b2c33799f9de0e842f1d935ea3822" prot="public">
+          <name>cuoco</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletThreshold.hpp" line="80" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletThreshold.hpp" bodystart="80" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="enum" id="classtsa_1_1_wavelet_threshold_1a93d14df024bbc8c3da182bf5899f8f83" prot="public" static="no">
+        <name>ThresholdingMode</name>
+        <enumvalue id="classtsa_1_1_wavelet_threshold_1a93d14df024bbc8c3da182bf5899f8f83adddc84c6cfd6dbd73d08352618545fb3" prot="public">
+          <name>hard</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_wavelet_threshold_1a93d14df024bbc8c3da182bf5899f8f83a356244854a142af0e9f3db2cf4ad5192" prot="public">
+          <name>soft</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletThreshold.hpp" line="86" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletThreshold.hpp" bodystart="86" bodyend="89"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtsa_1_1_wavelet_threshold_1a033b585f29f5e95f7e525e993569e781" prot="private" static="no" mutable="no">
+        <type>double *</type>
+        <definition>double* tsa::WaveletThreshold::mAbsCoeff</definition>
+        <argsstring></argsstring>
+        <name>mAbsCoeff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletThreshold.hpp" line="155" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletThreshold.hpp" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_wavelet_threshold_1a937714dbfda90649e89c445837bf7bd3" prot="private" static="no" mutable="no">
+        <type>size_t *</type>
+        <definition>size_t* tsa::WaveletThreshold::mP</definition>
+        <argsstring></argsstring>
+        <name>mP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletThreshold.hpp" line="156" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletThreshold.hpp" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_wavelet_threshold_1a8491f1b1b3679c964294a3b277513374" prot="private" static="no" mutable="no">
+        <type>size_t *</type>
+        <definition>size_t* tsa::WaveletThreshold::mPAC</definition>
+        <argsstring></argsstring>
+        <name>mPAC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletThreshold.hpp" line="157" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletThreshold.hpp" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_wavelet_threshold_1a85ce0caeabe9ca87f46e6a87df776262" prot="private" static="no" mutable="no">
+        <type>double *</type>
+        <definition>double* tsa::WaveletThreshold::mOrd</definition>
+        <argsstring></argsstring>
+        <name>mOrd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletThreshold.hpp" line="158" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletThreshold.hpp" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_wavelet_threshold_1a5ee193a15408f941545c28a04cd3f71f" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int tsa::WaveletThreshold::mN</definition>
+        <argsstring></argsstring>
+        <name>mN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletThreshold.hpp" line="159" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletThreshold.hpp" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_wavelet_threshold_1a94759bf0bffb9f82c4544ace28d511ff" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double tsa::WaveletThreshold::mMedian</definition>
+        <argsstring></argsstring>
+        <name>mMedian</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletThreshold.hpp" line="160" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletThreshold.hpp" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_wavelet_threshold_1abce83133feca77b08cfc7efdb017e8ca" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double tsa::WaveletThreshold::mThresh</definition>
+        <argsstring></argsstring>
+        <name>mThresh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletThreshold.hpp" line="161" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletThreshold.hpp" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_wavelet_threshold_1a1cde32dc32105b805047c8f59fa96057" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int tsa::WaveletThreshold::mNcoeff</definition>
+        <argsstring></argsstring>
+        <name>mNcoeff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletThreshold.hpp" line="162" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletThreshold.hpp" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_wavelet_threshold_1a99b389ace8c9d6578e356b7a1c6855d9" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double tsa::WaveletThreshold::mSigma</definition>
+        <argsstring></argsstring>
+        <name>mSigma</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletThreshold.hpp" line="163" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletThreshold.hpp" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_wavelet_threshold_1af3141e33035206b95835c279a39393eb" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int tsa::WaveletThreshold::mlevel</definition>
+        <argsstring></argsstring>
+        <name>mlevel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletThreshold.hpp" line="164" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletThreshold.hpp" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_wavelet_threshold_1afb847894dc69de8339ceb444bc8e1dca" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double tsa::WaveletThreshold::mC</definition>
+        <argsstring></argsstring>
+        <name>mC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletThreshold.hpp" line="165" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletThreshold.hpp" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtsa_1_1_wavelet_threshold_1a2815780145d4327729f21aa42eb08ddc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tsa::WaveletThreshold::WaveletThreshold</definition>
+        <argsstring>(unsigned int N, unsigned int ncoeff=0, double sigma=1.0)</argsstring>
+        <name>WaveletThreshold</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>N</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>ncoeff</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>sigma</declname>
+          <defval>1.0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletThreshold.hpp" line="93" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/WaveletThreshold.cpp" bodystart="20" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_wavelet_threshold_1a7a3219da0f0f814157c7a7c3d41a17cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tsa::WaveletThreshold::~WaveletThreshold</definition>
+        <argsstring>()</argsstring>
+        <name>~WaveletThreshold</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletThreshold.hpp" line="97" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/WaveletThreshold.cpp" bodystart="36" bodyend="41"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Perform threshold on wavelet coefficients </para>    </detaileddescription>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletThreshold.hpp" line="77" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletThreshold.hpp" bodystart="77" bodyend="168"/>
+    <listofallmembers>
+      <member refid="classtsa_1_1_wavelet_threshold_1a50c42c95dae960986a985157ca038faea849b2c33799f9de0e842f1d935ea3822" prot="public" virt="non-virtual"><scope>tsa::WaveletThreshold</scope><name>cuoco</name></member>
+      <member refid="classtsa_1_1_wavelet_threshold_1a50c42c95dae960986a985157ca038faea890fa411734e6128a3422faa61aff98b" prot="public" virt="non-virtual"><scope>tsa::WaveletThreshold</scope><name>dohonojohnston</name></member>
+      <member refid="classtsa_1_1_wavelet_threshold_1aa2a36e1131551abc41b02c4e6a4352c7" prot="public" virt="non-virtual"><scope>tsa::WaveletThreshold</scope><name>GetCm</name></member>
+      <member refid="classtsa_1_1_wavelet_threshold_1a2b6e84938c13629e11a9f31b26c34eb9" prot="public" virt="non-virtual"><scope>tsa::WaveletThreshold</scope><name>GetLevel</name></member>
+      <member refid="classtsa_1_1_wavelet_threshold_1a219b1dbce4e92a84e8078a839b75c4c3" prot="public" virt="non-virtual"><scope>tsa::WaveletThreshold</scope><name>GetSigma</name></member>
+      <member refid="classtsa_1_1_wavelet_threshold_1a93d14df024bbc8c3da182bf5899f8f83adddc84c6cfd6dbd73d08352618545fb3" prot="public" virt="non-virtual"><scope>tsa::WaveletThreshold</scope><name>hard</name></member>
+      <member refid="classtsa_1_1_wavelet_threshold_1a50c42c95dae960986a985157ca038faea9f61564af63af2a5259667285adc8404" prot="public" virt="non-virtual"><scope>tsa::WaveletThreshold</scope><name>highest</name></member>
+      <member refid="classtsa_1_1_wavelet_threshold_1a033b585f29f5e95f7e525e993569e781" prot="private" virt="non-virtual"><scope>tsa::WaveletThreshold</scope><name>mAbsCoeff</name></member>
+      <member refid="classtsa_1_1_wavelet_threshold_1afb847894dc69de8339ceb444bc8e1dca" prot="private" virt="non-virtual"><scope>tsa::WaveletThreshold</scope><name>mC</name></member>
+      <member refid="classtsa_1_1_wavelet_threshold_1af3141e33035206b95835c279a39393eb" prot="private" virt="non-virtual"><scope>tsa::WaveletThreshold</scope><name>mlevel</name></member>
+      <member refid="classtsa_1_1_wavelet_threshold_1a94759bf0bffb9f82c4544ace28d511ff" prot="private" virt="non-virtual"><scope>tsa::WaveletThreshold</scope><name>mMedian</name></member>
+      <member refid="classtsa_1_1_wavelet_threshold_1a5ee193a15408f941545c28a04cd3f71f" prot="private" virt="non-virtual"><scope>tsa::WaveletThreshold</scope><name>mN</name></member>
+      <member refid="classtsa_1_1_wavelet_threshold_1a1cde32dc32105b805047c8f59fa96057" prot="private" virt="non-virtual"><scope>tsa::WaveletThreshold</scope><name>mNcoeff</name></member>
+      <member refid="classtsa_1_1_wavelet_threshold_1a85ce0caeabe9ca87f46e6a87df776262" prot="private" virt="non-virtual"><scope>tsa::WaveletThreshold</scope><name>mOrd</name></member>
+      <member refid="classtsa_1_1_wavelet_threshold_1a937714dbfda90649e89c445837bf7bd3" prot="private" virt="non-virtual"><scope>tsa::WaveletThreshold</scope><name>mP</name></member>
+      <member refid="classtsa_1_1_wavelet_threshold_1a8491f1b1b3679c964294a3b277513374" prot="private" virt="non-virtual"><scope>tsa::WaveletThreshold</scope><name>mPAC</name></member>
+      <member refid="classtsa_1_1_wavelet_threshold_1a99b389ace8c9d6578e356b7a1c6855d9" prot="private" virt="non-virtual"><scope>tsa::WaveletThreshold</scope><name>mSigma</name></member>
+      <member refid="classtsa_1_1_wavelet_threshold_1abce83133feca77b08cfc7efdb017e8ca" prot="private" virt="non-virtual"><scope>tsa::WaveletThreshold</scope><name>mThresh</name></member>
+      <member refid="classtsa_1_1_wavelet_threshold_1a124b4c13b828d8b85500f9c99d5f93ae" prot="public" virt="non-virtual"><scope>tsa::WaveletThreshold</scope><name>operator()</name></member>
+      <member refid="classtsa_1_1_wavelet_threshold_1ae05f0886ef54f3370fc5c91eff2b0de7" prot="public" virt="non-virtual"><scope>tsa::WaveletThreshold</scope><name>operator()</name></member>
+      <member refid="classtsa_1_1_wavelet_threshold_1a828cc5dbb8c68647a28f72eb0945e2a4" prot="public" virt="non-virtual"><scope>tsa::WaveletThreshold</scope><name>SetSigma</name></member>
+      <member refid="classtsa_1_1_wavelet_threshold_1a93d14df024bbc8c3da182bf5899f8f83a356244854a142af0e9f3db2cf4ad5192" prot="public" virt="non-virtual"><scope>tsa::WaveletThreshold</scope><name>soft</name></member>
+      <member refid="classtsa_1_1_wavelet_threshold_1a93d14df024bbc8c3da182bf5899f8f83" prot="public" virt="non-virtual"><scope>tsa::WaveletThreshold</scope><name>ThresholdingMode</name></member>
+      <member refid="classtsa_1_1_wavelet_threshold_1a2815780145d4327729f21aa42eb08ddc" prot="public" virt="non-virtual"><scope>tsa::WaveletThreshold</scope><name>WaveletThreshold</name></member>
+      <member refid="classtsa_1_1_wavelet_threshold_1a50c42c95dae960986a985157ca038fae" prot="public" virt="non-virtual"><scope>tsa::WaveletThreshold</scope><name>WaveletThresholding</name></member>
+      <member refid="classtsa_1_1_wavelet_threshold_1a7a3219da0f0f814157c7a7c3d41a17cc" prot="public" virt="non-virtual"><scope>tsa::WaveletThreshold</scope><name>~WaveletThreshold</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

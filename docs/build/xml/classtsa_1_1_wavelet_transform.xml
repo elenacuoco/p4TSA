@@ -1,0 +1,652 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classtsa_1_1_wavelet_transform" kind="class" language="C++" prot="public">
+    <compoundname>tsa::WaveletTransform</compoundname>
+    <basecompoundref refid="classtsa_1_1_algo_base" prot="private" virt="non-virtual">tsa::AlgoBase</basecompoundref>
+    <includes refid="_wavelet_transform_8hpp" local="no">WaveletTransform.hpp</includes>
+      <sectiondef kind="user-defined">
+      <header>Operations</header>
+      <memberdef kind="function" id="classtsa_1_1_wavelet_transform_1afb63ce4986e8e123c7a35f5a39bb7600" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::WaveletTransform::Forward</definition>
+        <argsstring>(SeqViewDouble &amp;In)</argsstring>
+        <name>Forward</name>
+        <param>
+          <type><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref> &amp;</type>
+          <declname>In</declname>
+        </param>
+        <briefdescription>
+<para>Brief documentation for the execute method. </para>        </briefdescription>
+        <detaileddescription>
+<para>Start of the long documentation for execute method.</para><para><simplesect kind="pre"><para>A precondition </para></simplesect>
+<simplesect kind="post"><para>A postcondition </para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>An</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>exception</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>parameter</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a returned value</para></simplesect>
+Declaration of execute operation </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletTransform.hpp" line="166" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/WaveletTransform.cpp" bodystart="163" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_wavelet_transform_1a0e85c6c3970435147e5db3075a437b9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::WaveletTransform::Inverse</definition>
+        <argsstring>(SeqViewDouble &amp;In)</argsstring>
+        <name>Inverse</name>
+        <param>
+          <type><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref> &amp;</type>
+          <declname>In</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletTransform.hpp" line="167" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/WaveletTransform.cpp" bodystart="168" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_wavelet_transform_1a058f02f4ff2348d1899fda867badc71f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::WaveletTransform::Forward</definition>
+        <argsstring>(Dmatrix &amp;In)</argsstring>
+        <name>Forward</name>
+        <param>
+          <type><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref> &amp;</type>
+          <declname>In</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletTransform.hpp" line="168" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/WaveletTransform.cpp" bodystart="173" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_wavelet_transform_1a7bdfd9a5e262f4441bd95bd6d6892e7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::WaveletTransform::Inverse</definition>
+        <argsstring>(Dmatrix &amp;In)</argsstring>
+        <name>Inverse</name>
+        <param>
+          <type><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref> &amp;</type>
+          <declname>In</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletTransform.hpp" line="169" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/WaveletTransform.cpp" bodystart="194" bodyend="214"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Getters</header>
+      <memberdef kind="function" id="classtsa_1_1_wavelet_transform_1ae18b8342c7cfd37728a40691ec12f6f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::WaveletTransform::WaveletPrint</definition>
+        <argsstring>()</argsstring>
+        <name>WaveletPrint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Getters </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletTransform.hpp" line="177" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/WaveletTransform.cpp" bodystart="239" bodyend="260"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_wavelet_transform_1ae5d5c1a1fc9b787a4d74c643b8fce1fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::WaveletTransform::WaveletWaveform</definition>
+        <argsstring>(Dvector &amp;V)</argsstring>
+        <name>WaveletWaveform</name>
+        <param>
+          <type><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref> &amp;</type>
+          <declname>V</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletTransform.hpp" line="178" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/WaveletTransform.cpp" bodystart="262" bodyend="274"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7" prot="public" static="no">
+        <name>WaveletType</name>
+        <enumvalue id="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a580e35e8152e9f9c38cc59e7e6f95f63" prot="public">
+          <name>Daub4</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7abbc8f42079b9b16b86dd0eea6773b556" prot="public">
+          <name>Daub6</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7af3f57bf73ec38c12f412e32f3fefc945" prot="public">
+          <name>Daub8</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7ae5443b626f94846ef15550c90361bcff" prot="public">
+          <name>Daub10</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a758b6e0e0b2ee02e693c63a53a1f9333" prot="public">
+          <name>Daub12</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7aabd73c4462dcb2666c54abc4db830759" prot="public">
+          <name>Daub14</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7ab5fc531e10550919c9d84df86836d59e" prot="public">
+          <name>Daub16</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7aac9879db72a48b70a3452a92a4442c34" prot="public">
+          <name>Daub18</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7ab186f455c9555915f9c39f5333735867" prot="public">
+          <name>Daub20</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a28aea448a107b358379cc8516eb99d6a" prot="public">
+          <name>DaubC4</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7adf2d680bbb7bf0f870308547955994d9" prot="public">
+          <name>DaubC6</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a8160a2ef65c5221bd784011eea9aac89" prot="public">
+          <name>DaubC8</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a917e6a76e69601d05a444303fcf789a6" prot="public">
+          <name>DaubC10</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a82e9e7944ed5e3ff49bc00dd116b8b65" prot="public">
+          <name>DaubC12</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a5764140d65198d6c2f993c697172e487" prot="public">
+          <name>DaubC14</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7aba6e06ba03e008d3b64144194210ca3d" prot="public">
+          <name>DaubC16</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a84aa39411df82b12534b156a39d4bd52" prot="public">
+          <name>DaubC18</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7afd26c797b74ea4704f53aaa4f12b3906" prot="public">
+          <name>DaubC20</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a4a6a48aa7201c6e1a777bb02cbb4535e" prot="public">
+          <name>Haar</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a12473aee3dcbf06605e96ce368ccae47" prot="public">
+          <name>HaarC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a1d6c5ac4b418a6577ae3ec9f1e7bcbe8" prot="public">
+          <name>Bspline103</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a3922eacdee7535beb5f72e06813eacec" prot="public">
+          <name>Bspline105</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a0d29cf9c751238c382de92a03fd1bafc" prot="public">
+          <name>Bspline202</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a58c8fc8b63dce89e8782c0e0f48213e4" prot="public">
+          <name>Bspline204</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a30aadd3a24a27f4f2c7a2eb428ebd377" prot="public">
+          <name>Bspline206</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a1e6e70960647c10e6fb1aacdc7c308fa" prot="public">
+          <name>Bspline208</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7aa949ba486b87f3e95b7a9475f834ea5b" prot="public">
+          <name>Bspline301</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7ae10c4856932c326e229342b505bc718e" prot="public">
+          <name>Bspline303</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a1c0c6499b40407f852737e79905ff9e0" prot="public">
+          <name>Bspline305</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7aceab407628fb381713fd7019b3bcdd9c" prot="public">
+          <name>Bspline307</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a42869721bee4963cd4e6bdac3beb1154" prot="public">
+          <name>Bspline309</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a967bf6ee049e0ff4a25b8f741effa1c2" prot="public">
+          <name>BsplineC103</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a345a7862067a2952ffae4ab9b60963c4" prot="public">
+          <name>BsplineC105</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a1f278be1e05d3fa527c7d3679850b612" prot="public">
+          <name>BsplineC202</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7aa6ee016a8728feb7a5dc2c62ee99e6aa" prot="public">
+          <name>BsplineC204</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7ab740399eea9e95054be8ccf94711a38d" prot="public">
+          <name>BsplineC206</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7ae0b40952d704854be0279927da7897d3" prot="public">
+          <name>BsplineC208</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a2f0be8161937b31fe3b7b582d2e6ed91" prot="public">
+          <name>BsplineC301</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7adb63b1c011f7c2ef23754f3e96ca84bf" prot="public">
+          <name>BsplineC303</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a1ee63e7ef3a0df171210967f760e4c31" prot="public">
+          <name>BsplineC305</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7ac2317657fd83bd6231f453c31b18403e" prot="public">
+          <name>BsplineC307</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a41edf59d2f019badd954f24250146ea4" prot="public">
+          <name>BsplineC309</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletTransform.hpp" line="78" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletTransform.hpp" bodystart="78" bodyend="121"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtsa_1_1_wavelet_transform_1a5ee4ab685e354aafa0a1f617f0b624b4" prot="private" static="no" mutable="no">
+        <type>gsl_wavelet *</type>
+        <definition>gsl_wavelet* tsa::WaveletTransform::mW</definition>
+        <argsstring></argsstring>
+        <name>mW</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletTransform.hpp" line="193" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletTransform.hpp" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_wavelet_transform_1a0629db488589d2b7451746747456cee2" prot="private" static="no" mutable="no">
+        <type>gsl_wavelet_workspace *</type>
+        <definition>gsl_wavelet_workspace* tsa::WaveletTransform::mWork</definition>
+        <argsstring></argsstring>
+        <name>mWork</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletTransform.hpp" line="194" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletTransform.hpp" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_wavelet_transform_1a8497adc5f0a85650a880992b3765f75a" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int tsa::WaveletTransform::mN</definition>
+        <argsstring></argsstring>
+        <name>mN</name>
+        <briefdescription>
+<para>Lenght of input data. It must be a power of 2. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletTransform.hpp" line="195" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletTransform.hpp" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtsa_1_1_wavelet_transform_1a311a12f22747485e6e3ecb0ede6143a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tsa::WaveletTransform::WaveletTransform</definition>
+        <argsstring>(unsigned int N, enum WaveletType wt)</argsstring>
+        <name>WaveletTransform</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>N</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7" kindref="member">WaveletType</ref></type>
+          <declname>wt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletTransform.hpp" line="126" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/WaveletTransform.cpp" bodystart="19" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_wavelet_transform_1a1ce7211ad9ce11058575e94c15ca2c6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tsa::WaveletTransform::WaveletTransform</definition>
+        <argsstring>(const WaveletTransform &amp;from)</argsstring>
+        <name>WaveletTransform</name>
+        <param>
+          <type>const <ref refid="classtsa_1_1_wavelet_transform" kindref="compound">WaveletTransform</ref> &amp;</type>
+          <declname>from</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Copy constructor</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>from</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The instance that must be copied </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletTransform.hpp" line="132" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/WaveletTransform.cpp" bodystart="221" bodyend="222"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_wavelet_transform_1a119186776e4cc28d80d5d8d72cf12a5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tsa::WaveletTransform::~WaveletTransform</definition>
+        <argsstring>()</argsstring>
+        <name>~WaveletTransform</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletTransform.hpp" line="137" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/WaveletTransform.cpp" bodystart="158" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_wavelet_transform_1af8ca4e2e5be0413ef4ed484d27e2ff8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classtsa_1_1_wavelet_transform" kindref="compound">WaveletTransform</ref> &amp;</type>
+        <definition>WaveletTransform &amp; tsa::WaveletTransform::operator=</definition>
+        <argsstring>(const WaveletTransform &amp;from)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classtsa_1_1_wavelet_transform" kindref="compound">WaveletTransform</ref> &amp;</type>
+          <declname>from</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assignement operator</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>from</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The instance to be assigned from</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a reference to a new object </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletTransform.hpp" line="145" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/WaveletTransform.cpp" bodystart="233" bodyend="235"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Compute the wavelet transform </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="458">
+        <label>tsa::AlgoBase</label>
+        <link refid="classtsa_1_1_algo_base"/>
+      </node>
+      <node id="457">
+        <label>tsa::WaveletTransform</label>
+        <link refid="classtsa_1_1_wavelet_transform"/>
+        <childnode refid="458" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="460">
+        <label>tsa::AlgoBase</label>
+        <link refid="classtsa_1_1_algo_base"/>
+      </node>
+      <node id="459">
+        <label>tsa::WaveletTransform</label>
+        <link refid="classtsa_1_1_wavelet_transform"/>
+        <childnode refid="460" relation="private-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletTransform.hpp" line="75" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletTransform.hpp" bodystart="75" bodyend="196"/>
+    <listofallmembers>
+      <member refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a1d6c5ac4b418a6577ae3ec9f1e7bcbe8" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>Bspline103</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a3922eacdee7535beb5f72e06813eacec" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>Bspline105</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a0d29cf9c751238c382de92a03fd1bafc" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>Bspline202</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a58c8fc8b63dce89e8782c0e0f48213e4" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>Bspline204</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a30aadd3a24a27f4f2c7a2eb428ebd377" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>Bspline206</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a1e6e70960647c10e6fb1aacdc7c308fa" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>Bspline208</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7aa949ba486b87f3e95b7a9475f834ea5b" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>Bspline301</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7ae10c4856932c326e229342b505bc718e" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>Bspline303</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a1c0c6499b40407f852737e79905ff9e0" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>Bspline305</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7aceab407628fb381713fd7019b3bcdd9c" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>Bspline307</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a42869721bee4963cd4e6bdac3beb1154" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>Bspline309</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a967bf6ee049e0ff4a25b8f741effa1c2" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>BsplineC103</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a345a7862067a2952ffae4ab9b60963c4" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>BsplineC105</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a1f278be1e05d3fa527c7d3679850b612" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>BsplineC202</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7aa6ee016a8728feb7a5dc2c62ee99e6aa" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>BsplineC204</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7ab740399eea9e95054be8ccf94711a38d" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>BsplineC206</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7ae0b40952d704854be0279927da7897d3" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>BsplineC208</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a2f0be8161937b31fe3b7b582d2e6ed91" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>BsplineC301</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7adb63b1c011f7c2ef23754f3e96ca84bf" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>BsplineC303</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a1ee63e7ef3a0df171210967f760e4c31" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>BsplineC305</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7ac2317657fd83bd6231f453c31b18403e" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>BsplineC307</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a41edf59d2f019badd954f24250146ea4" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>BsplineC309</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7ae5443b626f94846ef15550c90361bcff" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>Daub10</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a758b6e0e0b2ee02e693c63a53a1f9333" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>Daub12</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7aabd73c4462dcb2666c54abc4db830759" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>Daub14</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7ab5fc531e10550919c9d84df86836d59e" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>Daub16</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7aac9879db72a48b70a3452a92a4442c34" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>Daub18</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7ab186f455c9555915f9c39f5333735867" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>Daub20</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a580e35e8152e9f9c38cc59e7e6f95f63" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>Daub4</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7abbc8f42079b9b16b86dd0eea6773b556" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>Daub6</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7af3f57bf73ec38c12f412e32f3fefc945" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>Daub8</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a917e6a76e69601d05a444303fcf789a6" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>DaubC10</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a82e9e7944ed5e3ff49bc00dd116b8b65" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>DaubC12</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a5764140d65198d6c2f993c697172e487" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>DaubC14</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7aba6e06ba03e008d3b64144194210ca3d" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>DaubC16</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a84aa39411df82b12534b156a39d4bd52" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>DaubC18</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7afd26c797b74ea4704f53aaa4f12b3906" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>DaubC20</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a28aea448a107b358379cc8516eb99d6a" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>DaubC4</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7adf2d680bbb7bf0f870308547955994d9" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>DaubC6</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a8160a2ef65c5221bd784011eea9aac89" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>DaubC8</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1afb63ce4986e8e123c7a35f5a39bb7600" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>Forward</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a058f02f4ff2348d1899fda867badc71f" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>Forward</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a4a6a48aa7201c6e1a777bb02cbb4535e" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>Haar</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7a12473aee3dcbf06605e96ce368ccae47" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>HaarC</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a0e85c6c3970435147e5db3075a437b9f" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>Inverse</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a7bdfd9a5e262f4441bd95bd6d6892e7c" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>Inverse</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a8497adc5f0a85650a880992b3765f75a" prot="private" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>mN</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a5ee4ab685e354aafa0a1f617f0b624b4" prot="private" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>mW</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a0629db488589d2b7451746747456cee2" prot="private" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>mWork</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1af8ca4e2e5be0413ef4ed484d27e2ff8b" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>operator=</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1ae18b8342c7cfd37728a40691ec12f6f5" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>WaveletPrint</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a311a12f22747485e6e3ecb0ede6143a7" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>WaveletTransform</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a1ce7211ad9ce11058575e94c15ca2c6e" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>WaveletTransform</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>WaveletType</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1ae5d5c1a1fc9b787a4d74c643b8fce1fb" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>WaveletWaveform</name></member>
+      <member refid="classtsa_1_1_wavelet_transform_1a119186776e4cc28d80d5d8d72cf12a5a" prot="public" virt="non-virtual"><scope>tsa::WaveletTransform</scope><name>~WaveletTransform</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

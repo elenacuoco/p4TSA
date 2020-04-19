@@ -1,0 +1,178 @@
+\hypertarget{classtsa_1_1_bartlett_window}{}\section{tsa\+:\+:Bartlett\+Window Class Reference}
+\label{classtsa_1_1_bartlett_window}\index{tsa\+::\+Bartlett\+Window@{tsa\+::\+Bartlett\+Window}}
+
+
+Bartlett windowing algorithm.  
+
+
+
+
+{\ttfamily \#include $<$Bartlett\+Window.\+hpp$>$}
+
+Inheritance diagram for tsa\+:\+:Bartlett\+Window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classtsa_1_1_bartlett_window}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtsa_1_1_bartlett_window_a9177fa400660b6bdecfcecbfbffeedbe}{Bartlett\+Window} (int size)
+\item 
+\hyperlink{classtsa_1_1_bartlett_window_a9da0612e0081996ef30439403a8a9c87}{Bartlett\+Window} (int size, const std\+::string \&)
+\item 
+virtual \hyperlink{classtsa_1_1_bartlett_window_a45ce87f449514520865841aa3ac0abac}{$\sim$\+Bartlett\+Window} ()
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Operations}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtsa_1_1_bartlett_window_a9bad239fb8fbaa295713c904e3d9d92e}{operator()} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&v1)
+\item 
+void \hyperlink{classtsa_1_1_bartlett_window_a44d722552ca5281e28a28eadbed2099e}{operator()} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&v1, \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&v2)
+\item 
+void \hyperlink{classtsa_1_1_bartlett_window_af63f6fdd7e2a10d77db1c7363e9963f5}{Resize} (unsigned int size)
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtsa_1_1_bartlett_window_afb3c6c8aa249db673da8dd625ffbb8a5}{Fill\+Window} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Bartlett windowing algorithm. 
+
+Definition at line 68 of file Bartlett\+Window.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtsa_1_1_bartlett_window_a9177fa400660b6bdecfcecbfbffeedbe}\label{classtsa_1_1_bartlett_window_a9177fa400660b6bdecfcecbfbffeedbe}} 
+\index{tsa\+::\+Bartlett\+Window@{tsa\+::\+Bartlett\+Window}!Bartlett\+Window@{Bartlett\+Window}}
+\index{Bartlett\+Window@{Bartlett\+Window}!tsa\+::\+Bartlett\+Window@{tsa\+::\+Bartlett\+Window}}
+\subsubsection{\texorpdfstring{Bartlett\+Window()}{BartlettWindow()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily tsa\+::\+Bartlett\+Window\+::\+Bartlett\+Window (\begin{DoxyParamCaption}\item[{int}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & the size of the window \\
+\hline
+{\em cached} & true if the window must be preevaluated in a buffer \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 77 of file Bartlett\+Window.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_bartlett_window_a9da0612e0081996ef30439403a8a9c87}\label{classtsa_1_1_bartlett_window_a9da0612e0081996ef30439403a8a9c87}} 
+\index{tsa\+::\+Bartlett\+Window@{tsa\+::\+Bartlett\+Window}!Bartlett\+Window@{Bartlett\+Window}}
+\index{Bartlett\+Window@{Bartlett\+Window}!tsa\+::\+Bartlett\+Window@{tsa\+::\+Bartlett\+Window}}
+\subsubsection{\texorpdfstring{Bartlett\+Window()}{BartlettWindow()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily tsa\+::\+Bartlett\+Window\+::\+Bartlett\+Window (\begin{DoxyParamCaption}\item[{int}]{size,  }\item[{const std\+::string \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 83 of file Bartlett\+Window.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_bartlett_window_a45ce87f449514520865841aa3ac0abac}\label{classtsa_1_1_bartlett_window_a45ce87f449514520865841aa3ac0abac}} 
+\index{tsa\+::\+Bartlett\+Window@{tsa\+::\+Bartlett\+Window}!````~Bartlett\+Window@{$\sim$\+Bartlett\+Window}}
+\index{````~Bartlett\+Window@{$\sim$\+Bartlett\+Window}!tsa\+::\+Bartlett\+Window@{tsa\+::\+Bartlett\+Window}}
+\subsubsection{\texorpdfstring{$\sim$\+Bartlett\+Window()}{~BartlettWindow()}}
+{\footnotesize\ttfamily virtual tsa\+::\+Bartlett\+Window\+::$\sim$\+Bartlett\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Destructor 
+
+Definition at line 92 of file Bartlett\+Window.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classtsa_1_1_bartlett_window_afb3c6c8aa249db673da8dd625ffbb8a5}\label{classtsa_1_1_bartlett_window_afb3c6c8aa249db673da8dd625ffbb8a5}} 
+\index{tsa\+::\+Bartlett\+Window@{tsa\+::\+Bartlett\+Window}!Fill\+Window@{Fill\+Window}}
+\index{Fill\+Window@{Fill\+Window}!tsa\+::\+Bartlett\+Window@{tsa\+::\+Bartlett\+Window}}
+\subsubsection{\texorpdfstring{Fill\+Window()}{FillWindow()}}
+{\footnotesize\ttfamily void tsa\+::\+Bartlett\+Window\+::\+Fill\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+Initialize the window with the correct values, given its actual size. This is a pure virtual function, which is redefined by each window class. 
+
+Reimplemented from \hyperlink{classtsa_1_1_base_window_aa74b29105d94caa521d308198e8e6643}{tsa\+::\+Base\+Window}.
+
+
+
+Definition at line 195 of file Bartlett\+Window.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_bartlett_window_a9bad239fb8fbaa295713c904e3d9d92e}\label{classtsa_1_1_bartlett_window_a9bad239fb8fbaa295713c904e3d9d92e}} 
+\index{tsa\+::\+Bartlett\+Window@{tsa\+::\+Bartlett\+Window}!operator()@{operator()}}
+\index{operator()@{operator()}!tsa\+::\+Bartlett\+Window@{tsa\+::\+Bartlett\+Window}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void tsa\+::\+Bartlett\+Window\+::operator() (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{v1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Apply the window to a given time view.
+
+
+\begin{DoxyParams}{Parameters}
+{\em v1} & the time view \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classtsa_1_1_base_window_a05d9edb95dc01840a1b2df78dfa3a8c1}{tsa\+::\+Base\+Window}.
+
+
+
+Definition at line 106 of file Bartlett\+Window.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_bartlett_window_a44d722552ca5281e28a28eadbed2099e}\label{classtsa_1_1_bartlett_window_a44d722552ca5281e28a28eadbed2099e}} 
+\index{tsa\+::\+Bartlett\+Window@{tsa\+::\+Bartlett\+Window}!operator()@{operator()}}
+\index{operator()@{operator()}!tsa\+::\+Bartlett\+Window@{tsa\+::\+Bartlett\+Window}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void tsa\+::\+Bartlett\+Window\+::operator() (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{v1,  }\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{v2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Apply a window to an input view and write the results on a output view.
+
+
+\begin{DoxyParams}{Parameters}
+{\em v1} & the input view \\
+\hline
+{\em v2} & the output view \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classtsa_1_1_base_window_afda50daa943527e09792b06e5ba69bcb}{tsa\+::\+Base\+Window}.
+
+
+
+Definition at line 128 of file Bartlett\+Window.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_bartlett_window_af63f6fdd7e2a10d77db1c7363e9963f5}\label{classtsa_1_1_bartlett_window_af63f6fdd7e2a10d77db1c7363e9963f5}} 
+\index{tsa\+::\+Bartlett\+Window@{tsa\+::\+Bartlett\+Window}!Resize@{Resize}}
+\index{Resize@{Resize}!tsa\+::\+Bartlett\+Window@{tsa\+::\+Bartlett\+Window}}
+\subsubsection{\texorpdfstring{Resize()}{Resize()}}
+{\footnotesize\ttfamily void tsa\+::\+Bartlett\+Window\+::\+Resize (\begin{DoxyParamCaption}\item[{unsigned int}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Resize the window dimension.
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & new size for the window \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classtsa_1_1_base_window_a8a2a3425f2915762d50fa57dd0e04f22}{tsa\+::\+Base\+Window}.
+
+
+
+Definition at line 157 of file Bartlett\+Window.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/include/\hyperlink{_bartlett_window_8hpp}{Bartlett\+Window.\+hpp}\end{DoxyCompactItemize}

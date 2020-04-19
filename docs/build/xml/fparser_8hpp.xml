@@ -1,0 +1,1070 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="fparser_8hpp" kind="file" language="C++">
+    <compoundname>fparser.hpp</compoundname>
+    <includes local="no">string</includes>
+    <includes local="no">map</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="fparser_8cpp" local="yes">/home/filip/PhD/WDFPipe_test/p4TSA/src/fparser.cpp</includedby>
+    <includedby refid="_butterworth_filter_8hpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/include/ButterworthFilter.hpp</includedby>
+    <includedby refid="tsa_8hpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/include/tsa.hpp</includedby>
+    <includedby refid="tsa_utility_functions_8hpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaUtilityFunctions.hpp</includedby>
+    <incdepgraph>
+      <node id="2353">
+        <label>string</label>
+      </node>
+      <node id="2354">
+        <label>map</label>
+      </node>
+      <node id="2352">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp</label>
+        <link refid="fparser_8hpp"/>
+        <childnode refid="2353" relation="include">
+        </childnode>
+        <childnode refid="2354" relation="include">
+        </childnode>
+        <childnode refid="2355" relation="include">
+        </childnode>
+      </node>
+      <node id="2355">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2410">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/BLInterpolation.cpp</label>
+        <link refid="_b_l_interpolation_8cpp"/>
+      </node>
+      <node id="2372">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/Arma2Psd.hpp</label>
+        <link refid="_arma2_psd_8hpp"/>
+        <childnode refid="2373" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+      </node>
+      <node id="2385">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/WDF2Classify.hpp</label>
+        <link refid="_w_d_f2_classify_8hpp"/>
+        <childnode refid="2386" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+      </node>
+      <node id="2381">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/ComplexFFT.hpp</label>
+        <link refid="_complex_f_f_t_8hpp"/>
+        <childnode refid="2382" relation="include">
+        </childnode>
+      </node>
+      <node id="2439">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/NotchWidrow.hpp</label>
+        <link refid="_notch_widrow_8hpp"/>
+        <childnode refid="2440" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+      </node>
+      <node id="2401">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/Cs2HammingWindow.hpp</label>
+        <link refid="_cs2_hamming_window_8hpp"/>
+        <childnode refid="2360" relation="include">
+        </childnode>
+        <childnode refid="2385" relation="include">
+        </childnode>
+        <childnode refid="2402" relation="include">
+        </childnode>
+        <childnode refid="2398" relation="include">
+        </childnode>
+      </node>
+      <node id="2418">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/Parcor2AR.cpp</label>
+        <link refid="_parcor2_a_r_8cpp"/>
+      </node>
+      <node id="2370">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/ArDurbinEstimator.hpp</label>
+        <link refid="_ar_durbin_estimator_8hpp"/>
+        <childnode refid="2371" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+      </node>
+      <node id="2368">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/ArBurgEstimator.hpp</label>
+        <link refid="_ar_burg_estimator_8hpp"/>
+        <childnode refid="2369" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+      </node>
+      <node id="2379">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/ARMAfit.cpp</label>
+        <link refid="_a_r_m_afit_8cpp"/>
+      </node>
+      <node id="2405">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/KaiserWindow.hpp</label>
+        <link refid="_kaiser_window_8hpp"/>
+        <childnode refid="2360" relation="include">
+        </childnode>
+        <childnode refid="2398" relation="include">
+        </childnode>
+      </node>
+      <node id="2399">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/WindowFactory.cpp</label>
+        <link refid="_window_factory_8cpp"/>
+      </node>
+      <node id="2430">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/LatticeFilter.cpp</label>
+        <link refid="_lattice_filter_8cpp"/>
+      </node>
+      <node id="2416">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/CreateDvector.cpp</label>
+        <link refid="_create_dvector_8cpp"/>
+      </node>
+      <node id="2393">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/RealFFT.hpp</label>
+        <link refid="_real_f_f_t_8hpp"/>
+        <childnode refid="2394" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+      </node>
+      <node id="2433">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLfilter.hpp</label>
+        <link refid="_l_s_lfilter_8hpp"/>
+        <childnode refid="2434" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+      </node>
+      <node id="2419">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/DoubleWhitening.hpp</label>
+        <link refid="_double_whitening_8hpp"/>
+        <childnode refid="2420" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+      </node>
+      <node id="2420">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/DoubleWhitening.cpp</label>
+        <link refid="_double_whitening_8cpp"/>
+      </node>
+      <node id="2440">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/NotchWidrow.cpp</label>
+        <link refid="_notch_widrow_8cpp"/>
+      </node>
+      <node id="2407">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/TukeyWindow.hpp</label>
+        <link refid="_tukey_window_8hpp"/>
+        <childnode refid="2360" relation="include">
+        </childnode>
+        <childnode refid="2398" relation="include">
+        </childnode>
+      </node>
+      <node id="2397">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/BartlettWindow.hpp</label>
+        <link refid="_bartlett_window_8hpp"/>
+        <childnode refid="2360" relation="include">
+        </childnode>
+        <childnode refid="2398" relation="include">
+        </childnode>
+      </node>
+      <node id="2406">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/TukeyHannWindow.hpp</label>
+        <link refid="_tukey_hann_window_8hpp"/>
+        <childnode refid="2360" relation="include">
+        </childnode>
+        <childnode refid="2398" relation="include">
+        </childnode>
+      </node>
+      <node id="2450">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletThreshold.hpp</label>
+        <link refid="_wavelet_threshold_8hpp"/>
+        <childnode refid="2451" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+        <childnode refid="2452" relation="include">
+        </childnode>
+        <childnode refid="2385" relation="include">
+        </childnode>
+        <childnode refid="2402" relation="include">
+        </childnode>
+      </node>
+      <node id="2453">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/WavReconstruction.cpp</label>
+        <link refid="_wav_reconstruction_8cpp"/>
+      </node>
+      <node id="2357">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/fparser.cpp</label>
+        <link refid="fparser_8cpp"/>
+      </node>
+      <node id="2412">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/Cholesky.cpp</label>
+        <link refid="_cholesky_8cpp"/>
+      </node>
+      <node id="2408">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/WelchWindow.hpp</label>
+        <link refid="_welch_window_8hpp"/>
+        <childnode refid="2360" relation="include">
+        </childnode>
+        <childnode refid="2398" relation="include">
+        </childnode>
+      </node>
+      <node id="2432">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/LeastSquaresLattice.cpp</label>
+        <link refid="_least_squares_lattice_8cpp"/>
+      </node>
+      <node id="2442">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/RLSCanceler.cpp</label>
+        <link refid="_r_l_s_canceler_8cpp"/>
+      </node>
+      <node id="2376">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/ARMAFilter.hpp</label>
+        <link refid="_a_r_m_a_filter_8hpp"/>
+        <childnode refid="2377" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+      </node>
+      <node id="2365">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/AR2.cpp</label>
+        <link refid="_a_r2_8cpp"/>
+      </node>
+      <node id="2382">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/ComplexFFT.cpp</label>
+        <link refid="_complex_f_f_t_8cpp"/>
+      </node>
+      <node id="2367">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/AR2Parcor.cpp</label>
+        <link refid="_a_r2_parcor_8cpp"/>
+      </node>
+      <node id="2398">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/WindowFactory.hpp</label>
+        <link refid="_window_factory_8hpp"/>
+        <childnode refid="2399" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+      </node>
+      <node id="2391">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/InverseRealFFT.hpp</label>
+        <link refid="_inverse_real_f_f_t_8hpp"/>
+        <childnode refid="2392" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+      </node>
+      <node id="2415">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/CreateDvector.hpp</label>
+        <link refid="_create_dvector_8hpp"/>
+        <childnode refid="2416" relation="include">
+        </childnode>
+        <childnode refid="2417" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+      </node>
+      <node id="2384">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/DCT.cpp</label>
+        <link refid="_d_c_t_8cpp"/>
+      </node>
+      <node id="2392">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/InverseRealFFT.cpp</label>
+        <link refid="_inverse_real_f_f_t_8cpp"/>
+      </node>
+      <node id="2387">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/DST.hpp</label>
+        <link refid="_d_s_t_8hpp"/>
+        <childnode refid="2388" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+      </node>
+      <node id="2386">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/WDF2Classify.cpp</label>
+        <link refid="_w_d_f2_classify_8cpp"/>
+      </node>
+      <node id="2389">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/IDCT.hpp</label>
+        <link refid="_i_d_c_t_8hpp"/>
+        <childnode refid="2390" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+      </node>
+      <node id="2356">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp</label>
+        <link refid="fparser_8hpp"/>
+        <childnode refid="2357" relation="include">
+        </childnode>
+        <childnode refid="2358" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+        <childnode refid="2361" relation="include">
+        </childnode>
+      </node>
+      <node id="2437">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/MYWE.hpp</label>
+        <link refid="_m_y_w_e_8hpp"/>
+        <childnode refid="2438" relation="include">
+        </childnode>
+        <childnode refid="2378" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+      </node>
+      <node id="2427">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIStream.hpp</label>
+        <link refid="_frame_i_stream_8hpp"/>
+        <childnode refid="2428" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+      </node>
+      <node id="2438">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/MYWE.cpp</label>
+        <link refid="_m_y_w_e_8cpp"/>
+      </node>
+      <node id="2409">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/BLInterpolation.hpp</label>
+        <link refid="_b_l_interpolation_8hpp"/>
+        <childnode refid="2410" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+      </node>
+      <node id="2363">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/AlgoBase.hpp</label>
+        <link refid="_algo_base_8hpp"/>
+        <childnode refid="2364" relation="include">
+        </childnode>
+        <childnode refid="2366" relation="include">
+        </childnode>
+        <childnode refid="2368" relation="include">
+        </childnode>
+        <childnode refid="2370" relation="include">
+        </childnode>
+        <childnode refid="2372" relation="include">
+        </childnode>
+        <childnode refid="2374" relation="include">
+        </childnode>
+        <childnode refid="2376" relation="include">
+        </childnode>
+        <childnode refid="2378" relation="include">
+        </childnode>
+        <childnode refid="2380" relation="include">
+        </childnode>
+        <childnode refid="2395" relation="include">
+        </childnode>
+        <childnode refid="2409" relation="include">
+        </childnode>
+        <childnode refid="2358" relation="include">
+        </childnode>
+        <childnode refid="2411" relation="include">
+        </childnode>
+        <childnode refid="2413" relation="include">
+        </childnode>
+        <childnode refid="2415" relation="include">
+        </childnode>
+        <childnode refid="2419" relation="include">
+        </childnode>
+        <childnode refid="2421" relation="include">
+        </childnode>
+        <childnode refid="2423" relation="include">
+        </childnode>
+        <childnode refid="2425" relation="include">
+        </childnode>
+        <childnode refid="2427" relation="include">
+        </childnode>
+        <childnode refid="2429" relation="include">
+        </childnode>
+        <childnode refid="2431" relation="include">
+        </childnode>
+        <childnode refid="2433" relation="include">
+        </childnode>
+        <childnode refid="2435" relation="include">
+        </childnode>
+        <childnode refid="2437" relation="include">
+        </childnode>
+        <childnode refid="2439" relation="include">
+        </childnode>
+        <childnode refid="2417" relation="include">
+        </childnode>
+        <childnode refid="2441" relation="include">
+        </childnode>
+        <childnode refid="2443" relation="include">
+        </childnode>
+        <childnode refid="2445" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+        <childnode refid="2446" relation="include">
+        </childnode>
+        <childnode refid="2447" relation="include">
+        </childnode>
+        <childnode refid="2448" relation="include">
+        </childnode>
+        <childnode refid="2450" relation="include">
+        </childnode>
+        <childnode refid="2454" relation="include">
+        </childnode>
+        <childnode refid="2452" relation="include">
+        </childnode>
+        <childnode refid="2385" relation="include">
+        </childnode>
+        <childnode refid="2402" relation="include">
+        </childnode>
+      </node>
+      <node id="2452">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/WavReconstruction.hpp</label>
+        <link refid="_wav_reconstruction_8hpp"/>
+        <childnode refid="2453" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+      </node>
+      <node id="2441">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/RLSCanceler.hpp</label>
+        <link refid="_r_l_s_canceler_8hpp"/>
+        <childnode refid="2442" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+      </node>
+      <node id="2446">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/Util.hpp</label>
+        <link refid="_util_8hpp"/>
+        <childnode refid="2360" relation="include">
+        </childnode>
+      </node>
+      <node id="2366">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/AR2Parcor.hpp</label>
+        <link refid="_a_r2_parcor_8hpp"/>
+        <childnode refid="2367" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+      </node>
+      <node id="2360">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/tsa.hpp</label>
+        <link refid="tsa_8hpp"/>
+      </node>
+      <node id="2443">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/SelectionOrderCriteria.hpp</label>
+        <link refid="_selection_order_criteria_8hpp"/>
+        <childnode refid="2444" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+      </node>
+      <node id="2422">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/EventDescription.cpp</label>
+        <link refid="_event_description_8cpp"/>
+      </node>
+      <node id="2378">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/ARMAfit.hpp</label>
+        <link refid="_a_r_m_afit_8hpp"/>
+        <childnode refid="2379" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+      </node>
+      <node id="2448">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/ViewUtil.hpp</label>
+        <link refid="_view_util_8hpp"/>
+        <childnode refid="2449" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+      </node>
+      <node id="2369">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/ArBurgEstimator.cpp</label>
+        <link refid="_ar_burg_estimator_8cpp"/>
+      </node>
+      <node id="2436">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/LSLLearning.cpp</label>
+        <link refid="_l_s_l_learning_8cpp"/>
+      </node>
+      <node id="2411">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/Cholesky.hpp</label>
+        <link refid="_cholesky_8hpp"/>
+        <childnode refid="2412" relation="include">
+        </childnode>
+      </node>
+      <node id="2424">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/EventFullFeatured.cpp</label>
+        <link refid="_event_full_featured_8cpp"/>
+      </node>
+      <node id="2359">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/ButterworthFilter.cpp</label>
+        <link refid="_butterworth_filter_8cpp"/>
+      </node>
+      <node id="2361">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaUtilityFunctions.hpp</label>
+        <link refid="tsa_utility_functions_8hpp"/>
+        <childnode refid="2362" relation="include">
+        </childnode>
+        <childnode refid="2405" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+        <childnode refid="2407" relation="include">
+        </childnode>
+      </node>
+      <node id="2362">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/BaseView.hpp</label>
+        <link refid="_base_view_8hpp"/>
+        <childnode refid="2363" relation="include">
+        </childnode>
+        <childnode refid="2456" relation="include">
+        </childnode>
+        <childnode refid="2413" relation="include">
+        </childnode>
+        <childnode refid="2421" relation="include">
+        </childnode>
+        <childnode refid="2423" relation="include">
+        </childnode>
+        <childnode refid="2457" relation="include">
+        </childnode>
+        <childnode refid="2458" relation="include">
+        </childnode>
+        <childnode refid="2459" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+        <childnode refid="2385" relation="include">
+        </childnode>
+        <childnode refid="2402" relation="include">
+        </childnode>
+      </node>
+      <node id="2451">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/WaveletThreshold.cpp</label>
+        <link refid="_wavelet_threshold_8cpp"/>
+      </node>
+      <node id="2454">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/WaveletTransform.hpp</label>
+        <link refid="_wavelet_transform_8hpp"/>
+        <childnode refid="2455" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+        <childnode refid="2452" relation="include">
+        </childnode>
+        <childnode refid="2385" relation="include">
+        </childnode>
+        <childnode refid="2402" relation="include">
+        </childnode>
+      </node>
+      <node id="2444">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/SelectionOrderCriteria.cpp</label>
+        <link refid="_selection_order_criteria_8cpp"/>
+      </node>
+      <node id="2459">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp</label>
+        <link refid="_t_f_view_8hpp"/>
+        <childnode refid="2360" relation="include">
+        </childnode>
+      </node>
+      <node id="2364">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/AR2.hpp</label>
+        <link refid="_a_r2_8hpp"/>
+        <childnode refid="2365" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+      </node>
+      <node id="2435">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp</label>
+        <link refid="_l_s_l_learning_8hpp"/>
+        <childnode refid="2436" relation="include">
+        </childnode>
+        <childnode refid="2431" relation="include">
+        </childnode>
+        <childnode refid="2433" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+      </node>
+      <node id="2428">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/FrameIStream.cpp</label>
+        <link refid="_frame_i_stream_8cpp"/>
+      </node>
+      <node id="2395">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/BaseWindow.hpp</label>
+        <link refid="_base_window_8hpp"/>
+        <childnode refid="2396" relation="include">
+        </childnode>
+        <childnode refid="2397" relation="include">
+        </childnode>
+        <childnode refid="2400" relation="include">
+        </childnode>
+        <childnode refid="2401" relation="include">
+        </childnode>
+        <childnode refid="2404" relation="include">
+        </childnode>
+        <childnode refid="2405" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+        <childnode refid="2406" relation="include">
+        </childnode>
+        <childnode refid="2407" relation="include">
+        </childnode>
+        <childnode refid="2408" relation="include">
+        </childnode>
+      </node>
+      <node id="2396">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/BaseWindow.cpp</label>
+        <link refid="_base_window_8cpp"/>
+      </node>
+      <node id="2455">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/WaveletTransform.cpp</label>
+        <link refid="_wavelet_transform_8cpp"/>
+      </node>
+      <node id="2413">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/ClusterizedEventFullFeatured.hpp</label>
+        <link refid="_clusterized_event_full_featured_8hpp"/>
+        <childnode refid="2414" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+      </node>
+      <node id="2458">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/SeqView.hpp</label>
+        <link refid="_seq_view_8hpp"/>
+        <childnode refid="2363" relation="include">
+        </childnode>
+        <childnode refid="2368" relation="include">
+        </childnode>
+        <childnode refid="2372" relation="include">
+        </childnode>
+        <childnode refid="2374" relation="include">
+        </childnode>
+        <childnode refid="2409" relation="include">
+        </childnode>
+        <childnode refid="2383" relation="include">
+        </childnode>
+        <childnode refid="2419" relation="include">
+        </childnode>
+        <childnode refid="2387" relation="include">
+        </childnode>
+        <childnode refid="2425" relation="include">
+        </childnode>
+        <childnode refid="2427" relation="include">
+        </childnode>
+        <childnode refid="2389" relation="include">
+        </childnode>
+        <childnode refid="2429" relation="include">
+        </childnode>
+        <childnode refid="2433" relation="include">
+        </childnode>
+        <childnode refid="2435" relation="include">
+        </childnode>
+        <childnode refid="2439" relation="include">
+        </childnode>
+        <childnode refid="2393" relation="include">
+        </childnode>
+        <childnode refid="2443" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+        <childnode refid="2446" relation="include">
+        </childnode>
+        <childnode refid="2450" relation="include">
+        </childnode>
+        <childnode refid="2454" relation="include">
+        </childnode>
+        <childnode refid="2452" relation="include">
+        </childnode>
+        <childnode refid="2385" relation="include">
+        </childnode>
+        <childnode refid="2402" relation="include">
+        </childnode>
+      </node>
+      <node id="2373">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/Arma2Psd.cpp</label>
+        <link refid="_arma2_psd_8cpp"/>
+      </node>
+      <node id="2375">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/Arma2TF.cpp</label>
+        <link refid="_arma2_t_f_8cpp"/>
+      </node>
+      <node id="2423">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/EventFullFeatured.hpp</label>
+        <link refid="_event_full_featured_8hpp"/>
+        <childnode refid="2424" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+        <childnode refid="2385" relation="include">
+        </childnode>
+        <childnode refid="2402" relation="include">
+        </childnode>
+      </node>
+      <node id="2371">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/ArDurbinEstimator.cpp</label>
+        <link refid="_ar_durbin_estimator_8cpp"/>
+      </node>
+      <node id="2390">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/IDCT.cpp</label>
+        <link refid="_i_d_c_t_8cpp"/>
+      </node>
+      <node id="2402">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/WDF2Reconstruct.hpp</label>
+        <link refid="_w_d_f2_reconstruct_8hpp"/>
+        <childnode refid="2403" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+      </node>
+      <node id="2445">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/TF2Psd.hpp</label>
+        <link refid="_t_f2_psd_8hpp"/>
+        <childnode refid="2360" relation="include">
+        </childnode>
+      </node>
+      <node id="2394">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/RealFFT.cpp</label>
+        <link refid="_real_f_f_t_8cpp"/>
+      </node>
+      <node id="2456">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/ARMAView.hpp</label>
+        <link refid="_a_r_m_a_view_8hpp"/>
+        <childnode refid="2372" relation="include">
+        </childnode>
+        <childnode refid="2374" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+      </node>
+      <node id="2358">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/ButterworthFilter.hpp</label>
+        <link refid="_butterworth_filter_8hpp"/>
+        <childnode refid="2359" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+      </node>
+      <node id="2414">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/ClusterizedEventFullFeatured.cpp</label>
+        <link refid="_clusterized_event_full_featured_8cpp"/>
+      </node>
+      <node id="2380">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/BaseFFT.hpp</label>
+        <link refid="_base_f_f_t_8hpp"/>
+        <childnode refid="2381" relation="include">
+        </childnode>
+        <childnode refid="2383" relation="include">
+        </childnode>
+        <childnode refid="2387" relation="include">
+        </childnode>
+        <childnode refid="2389" relation="include">
+        </childnode>
+        <childnode refid="2391" relation="include">
+        </childnode>
+        <childnode refid="2393" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+      </node>
+      <node id="2400">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/BisquareWindow.hpp</label>
+        <link refid="_bisquare_window_8hpp"/>
+        <childnode refid="2360" relation="include">
+        </childnode>
+        <childnode refid="2398" relation="include">
+        </childnode>
+      </node>
+      <node id="2431">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/LeastSquaresLattice.hpp</label>
+        <link refid="_least_squares_lattice_8hpp"/>
+        <childnode refid="2432" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+      </node>
+      <node id="2429">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeFilter.hpp</label>
+        <link refid="_lattice_filter_8hpp"/>
+        <childnode refid="2430" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+      </node>
+      <node id="2457">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp</label>
+        <link refid="_lattice_view_8hpp"/>
+        <childnode refid="2368" relation="include">
+        </childnode>
+        <childnode refid="2419" relation="include">
+        </childnode>
+        <childnode refid="2429" relation="include">
+        </childnode>
+        <childnode refid="2433" relation="include">
+        </childnode>
+        <childnode refid="2435" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+      </node>
+      <node id="2377">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/ARMAFilter.cpp</label>
+        <link refid="_a_r_m_a_filter_8cpp"/>
+      </node>
+      <node id="2403">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/WDF2Reconstruct.cpp</label>
+        <link refid="_w_d_f2_reconstruct_8cpp"/>
+      </node>
+      <node id="2426">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/FrameIChannel.cpp</label>
+        <link refid="_frame_i_channel_8cpp"/>
+      </node>
+      <node id="2374">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/Arma2TF.hpp</label>
+        <link refid="_arma2_t_f_8hpp"/>
+        <childnode refid="2375" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+      </node>
+      <node id="2404">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/Cs2HannWindow.hpp</label>
+        <link refid="_cs2_hann_window_8hpp"/>
+        <childnode refid="2360" relation="include">
+        </childnode>
+        <childnode refid="2398" relation="include">
+        </childnode>
+      </node>
+      <node id="2449">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/ViewUtil.cpp</label>
+        <link refid="_view_util_8cpp"/>
+      </node>
+      <node id="2447">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/VArma2TF.hpp</label>
+        <link refid="_v_arma2_t_f_8hpp"/>
+      </node>
+      <node id="2434">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/LSLfilter.cpp</label>
+        <link refid="_l_s_lfilter_8cpp"/>
+      </node>
+      <node id="2388">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/DST.cpp</label>
+        <link refid="_d_s_t_8cpp"/>
+      </node>
+      <node id="2425">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/FrameIChannel.hpp</label>
+        <link refid="_frame_i_channel_8hpp"/>
+        <childnode refid="2426" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+      </node>
+      <node id="2383">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/DCT.hpp</label>
+        <link refid="_d_c_t_8hpp"/>
+        <childnode refid="2384" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+        <childnode refid="2385" relation="include">
+        </childnode>
+      </node>
+      <node id="2417">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/Parcor2AR.hpp</label>
+        <link refid="_parcor2_a_r_8hpp"/>
+        <childnode refid="2369" relation="include">
+        </childnode>
+        <childnode refid="2418" relation="include">
+        </childnode>
+        <childnode refid="2368" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+      </node>
+      <node id="2421">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/EventDescription.hpp</label>
+        <link refid="_event_description_8hpp"/>
+        <childnode refid="2422" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_function_parser" prot="public">FunctionParser</innerclass>
+    <innerclass refid="struct_function_parser_1_1_data" prot="private">FunctionParser::Data</innerclass>
+    <innerclass refid="struct_function_parser_1_1_data_1_1_func_ptr_data" prot="public">FunctionParser::Data::FuncPtrData</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/***************************************************************************\</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">|*<sp/>Function<sp/>parser<sp/>v2.8<sp/>by<sp/>Warp<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*|</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">|*<sp/>----------------------------<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*|</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">|*<sp/>Parses<sp/>and<sp/>evaluates<sp/>the<sp/>given<sp/>function<sp/>with<sp/>the<sp/>given<sp/>variable<sp/>values.<sp/>*|</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">|*<sp/>See<sp/>fparser.txt<sp/>for<sp/>details.<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*|</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">|*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*|</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">\***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ONCE_FPARSER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ONCE_FPARSER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>FUNCTIONPARSER_SUPPORT_DEBUG_OUTPUT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="class_function_parser" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_function_parser" kindref="compound">FunctionParser</ref><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7" kindref="member">ParseErrorType</ref><sp/>{</highlight></codeline>
+<codeline lineno="24" refid="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7ae2d4f26e44818f756cbdefbeb76e4ca3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7ae2d4f26e44818f756cbdefbeb76e4ca3" kindref="member">SYNTAX_ERROR</ref><sp/>=<sp/>0,<sp/><ref refid="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7a8d264fb5dadc95cb61c97384d9351669" kindref="member">MISM_PARENTH</ref>,<sp/><ref refid="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7a8e549b77de5e9f6f52e3a19a6267b16c" kindref="member">MISSING_PARENTH</ref>,<sp/><ref refid="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7ac5ed9e2f99d67c7b11f22dcc1e096474" kindref="member">EMPTY_PARENTH</ref>,</highlight></codeline>
+<codeline lineno="25" refid="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7a455a3ffd84dd6f97b008aba834c45b9e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7aa9b7c33316017f2de413ed7f140f36c6" kindref="member">EXPECT_OPERATOR</ref>,<sp/><ref refid="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7a9387af9f1f8e2339997b932d37728aa6" kindref="member">OUT_OF_MEMORY</ref>,<sp/><ref refid="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7a455a3ffd84dd6f97b008aba834c45b9e" kindref="member">UNEXPECTED_ERROR</ref>,<sp/><ref refid="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7a970abfe88a6d4f3ccf0f999d4c0a0445" kindref="member">INVALID_VARS</ref>,</highlight></codeline>
+<codeline lineno="26" refid="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7ad000e35ddadcb28fa56e509766b051df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7abeede85e1cc0910db7ae8f06e4fe29e9" kindref="member">ILL_PARAMS_AMOUNT</ref>,<sp/><ref refid="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7ad000e35ddadcb28fa56e509766b051df" kindref="member">PREMATURE_EOS</ref>,<sp/><ref refid="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7a5d885cdd62d468c4643667704ed21f43" kindref="member">EXPECT_PARENTH_FUNC</ref>,</highlight></codeline>
+<codeline lineno="27" refid="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7afe98956d3451f7e3d66f259f8b36108a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7afe98956d3451f7e3d66f259f8b36108a" kindref="member">FP_NO_ERROR</ref></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_function_parser_1af4e0b209ec9771dcd76e27f3fcad1b51" kindref="member">Parse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>Function,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>Vars,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>useDegrees<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="class_function_parser_1a000e3edaf5dc8ee121df03b731ff0192" kindref="member">ErrorMsg</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="class_function_parser_1ad6ddf1546278fa7148c968374e6a097a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7" kindref="member">ParseErrorType</ref><sp/><ref refid="class_function_parser_1ad6ddf1546278fa7148c968374e6a097a" kindref="member">GetParseErrorType</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_function_parser_1a8ae06b8ee6ddb247b6a7c0075fd6cf30" kindref="member">parseErrorType</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_function_parser_1a8fe3538f4cd207346c390059ba334023" kindref="member">Eval</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>Vars);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="class_function_parser_1a94faf9f4616d0850821cce15abbcf421" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_function_parser_1a94faf9f4616d0850821cce15abbcf421" kindref="member">EvalError</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_function_parser_1a43c35628fcb4a11d459e48265eca45df" kindref="member">evalErrorType</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_function_parser_1a481976b6eb58b15d31d4f3700d9ad730" kindref="member">AddConstant</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="class_function_parser_1acca53651fb8f1c7a44e3d2cac7e62455" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>double<sp/>(*<ref refid="class_function_parser_1acca53651fb8f1c7a44e3d2cac7e62455" kindref="member">FunctionPtr</ref>)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_function_parser_1a8d477dd0041ca594dac795bba24c9f3a" kindref="member">AddFunction</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_function_parser_1acca53651fb8f1c7a44e3d2cac7e62455" kindref="member">FunctionPtr</ref>,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>paramsAmount);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_function_parser_1a8d477dd0041ca594dac795bba24c9f3a" kindref="member">AddFunction</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name,<sp/><ref refid="class_function_parser" kindref="compound">FunctionParser</ref>&amp;);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_function_parser_1a5466523ee5198fb4b38461b362b1481d" kindref="member">Optimize</ref>();</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_function_parser_1a18468eeb56ac5c1b1a6a0b0cebb2c045" kindref="member">FunctionParser</ref>();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_function_parser_1a50257dda6ec4f2c4adf6740e31cf7da7" kindref="member">~FunctionParser</ref>();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Copy<sp/>constructor<sp/>and<sp/>assignment<sp/>operator<sp/>(implemented<sp/>using<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>copy-on-write<sp/>technique<sp/>for<sp/>efficiency):</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_function_parser_1a18468eeb56ac5c1b1a6a0b0cebb2c045" kindref="member">FunctionParser</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_function_parser" kindref="compound">FunctionParser</ref>&amp;);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_function_parser" kindref="compound">FunctionParser</ref>&amp;<sp/><ref refid="class_function_parser_1a316870fce14d0b1d9bc386f23115cc53" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_function_parser" kindref="compound">FunctionParser</ref>&amp;);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>FUNCTIONPARSER_SUPPORT_DEBUG_OUTPUT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>debugging<sp/>purposes<sp/>only:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>PrintByteCode(std::ostream&amp;<sp/>dest)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//========================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//========================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Private<sp/>data:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="class_function_parser_1a8ae06b8ee6ddb247b6a7c0075fd6cf30" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_function_parser_1a0bb74d288d02ba86367cc1c85351c8e7" kindref="member">ParseErrorType</ref><sp/><ref refid="class_function_parser_1a8ae06b8ee6ddb247b6a7c0075fd6cf30" kindref="member">parseErrorType</ref>;</highlight></codeline>
+<codeline lineno="79" refid="class_function_parser_1a43c35628fcb4a11d459e48265eca45df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_function_parser_1a43c35628fcb4a11d459e48265eca45df" kindref="member">evalErrorType</ref>;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="struct_function_parser_1_1_data" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_function_parser_1_1_data" kindref="compound">Data</ref><sp/>{</highlight></codeline>
+<codeline lineno="82" refid="struct_function_parser_1_1_data_1a73a9146066451148d4ec8fe8c0ec8418" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="struct_function_parser_1_1_data_1a73a9146066451148d4ec8fe8c0ec8418" kindref="member">referenceCounter</ref>;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="struct_function_parser_1_1_data_1af882554224f4977d69c5593254ac210e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_function_parser_1_1_data_1af882554224f4977d69c5593254ac210e" kindref="member">varAmount</ref>;</highlight></codeline>
+<codeline lineno="85" refid="struct_function_parser_1_1_data_1a2e34291302b3dfafd29d64a6aacecb1f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_function_parser_1_1_data_1a2e34291302b3dfafd29d64a6aacecb1f" kindref="member">useDegreeConversion</ref>;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="struct_function_parser_1_1_data_1a02f3fbca3164d0e498312b418258ea84" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::map&lt;std::string,<sp/>unsigned&gt;<sp/><ref refid="struct_function_parser_1_1_data_1a02f3fbca3164d0e498312b418258ea84" kindref="member">VarMap_t</ref>;</highlight></codeline>
+<codeline lineno="88" refid="struct_function_parser_1_1_data_1ab5d416f3bb9086ea069ce85831e4cff6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VarMap_t<sp/><ref refid="struct_function_parser_1_1_data_1ab5d416f3bb9086ea069ce85831e4cff6" kindref="member">Variables</ref>;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="struct_function_parser_1_1_data_1a74ff90f5d1687b68363d1602ef0ccece" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::map&lt;std::string,<sp/>double&gt;<sp/><ref refid="struct_function_parser_1_1_data_1a74ff90f5d1687b68363d1602ef0ccece" kindref="member">ConstMap_t</ref>;</highlight></codeline>
+<codeline lineno="91" refid="struct_function_parser_1_1_data_1a832899b555441fe2ce6bfaf5e0c19f6d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ConstMap_t<sp/><ref refid="struct_function_parser_1_1_data_1a832899b555441fe2ce6bfaf5e0c19f6d" kindref="member">Constants</ref>;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="struct_function_parser_1_1_data_1aca8bc3c4c9840a4ce7fc75a6fb6d0e61" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VarMap_t<sp/><ref refid="struct_function_parser_1_1_data_1aca8bc3c4c9840a4ce7fc75a6fb6d0e61" kindref="member">FuncPtrNames</ref>;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="struct_function_parser_1_1_data_1_1_func_ptr_data" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_function_parser_1_1_data_1_1_func_ptr_data" kindref="compound">FuncPtrData</ref><sp/>{</highlight></codeline>
+<codeline lineno="96" refid="struct_function_parser_1_1_data_1_1_func_ptr_data_1a77521adad1c4cb850c9e439c72986a0c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_function_parser_1acca53651fb8f1c7a44e3d2cac7e62455" kindref="member">FunctionPtr</ref><sp/><ref refid="struct_function_parser_1_1_data_1_1_func_ptr_data_1a77521adad1c4cb850c9e439c72986a0c" kindref="member">ptr</ref>;</highlight></codeline>
+<codeline lineno="97" refid="struct_function_parser_1_1_data_1_1_func_ptr_data_1aa9389ca2450fe7dbc7618c624280da92" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="struct_function_parser_1_1_data_1_1_func_ptr_data_1aa9389ca2450fe7dbc7618c624280da92" kindref="member">params</ref>;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="struct_function_parser_1_1_data_1_1_func_ptr_data_1a9d9f4fac0438cd4cad8edb985c209252" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_function_parser_1_1_data_1_1_func_ptr_data_1a9d9f4fac0438cd4cad8edb985c209252" kindref="member">FuncPtrData</ref>(<ref refid="class_function_parser_1acca53651fb8f1c7a44e3d2cac7e62455" kindref="member">FunctionPtr</ref><sp/>p,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>par)<sp/>:<sp/>ptr(p),<sp/>params(par)<sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="102" refid="struct_function_parser_1_1_data_1a1ba8025daa062d7eef15b95a49c4607f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;FuncPtrData&gt;<sp/><ref refid="struct_function_parser_1_1_data_1a1ba8025daa062d7eef15b95a49c4607f" kindref="member">FuncPtrs</ref>;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="struct_function_parser_1_1_data_1ac552328a6854b174a7d085d9df0c8943" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VarMap_t<sp/><ref refid="struct_function_parser_1_1_data_1ac552328a6854b174a7d085d9df0c8943" kindref="member">FuncParserNames</ref>;</highlight></codeline>
+<codeline lineno="105" refid="struct_function_parser_1_1_data_1a29d036708b0524b8ff0ddd3e6248ef6f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;FunctionParser*&gt;<sp/><ref refid="struct_function_parser_1_1_data_1a29d036708b0524b8ff0ddd3e6248ef6f" kindref="member">FuncParsers</ref>;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="struct_function_parser_1_1_data_1a113be528db3c02713aa9887732897f8d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal">*<sp/><ref refid="struct_function_parser_1_1_data_1a113be528db3c02713aa9887732897f8d" kindref="member">ByteCode</ref>;</highlight></codeline>
+<codeline lineno="108" refid="struct_function_parser_1_1_data_1a6037b3f5d5d8854dfd9ec15b9ac0924f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="struct_function_parser_1_1_data_1a6037b3f5d5d8854dfd9ec15b9ac0924f" kindref="member">ByteCodeSize</ref>;</highlight></codeline>
+<codeline lineno="109" refid="struct_function_parser_1_1_data_1a5a1b2b3c4adaed1b098413547cc67ce3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/><ref refid="struct_function_parser_1_1_data_1a5a1b2b3c4adaed1b098413547cc67ce3" kindref="member">Immed</ref>;</highlight></codeline>
+<codeline lineno="110" refid="struct_function_parser_1_1_data_1a6391f52f7d877cdde635f758d7e9fdbb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="struct_function_parser_1_1_data_1a6391f52f7d877cdde635f758d7e9fdbb" kindref="member">ImmedSize</ref>;</highlight></codeline>
+<codeline lineno="111" refid="struct_function_parser_1_1_data_1a1ba27ea1afffc0f361e4da36723caaa7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/><ref refid="struct_function_parser_1_1_data_1a1ba27ea1afffc0f361e4da36723caaa7" kindref="member">Stack</ref>;</highlight></codeline>
+<codeline lineno="112" refid="struct_function_parser_1_1_data_1afb5f715f8c45ce98b654cb169e656c8b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="struct_function_parser_1_1_data_1afb5f715f8c45ce98b654cb169e656c8b" kindref="member">StackSize</ref>;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_function_parser_1_1_data_1a2f7002e4cc588de6091472be924689b0" kindref="member">Data</ref>();</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_function_parser_1_1_data_1a1091c2cf47cbd047273335f913bb2f82" kindref="member">~Data</ref>();</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_function_parser_1_1_data_1a2f7002e4cc588de6091472be924689b0" kindref="member">Data</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_function_parser_1_1_data" kindref="compound">Data</ref>&amp;);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_function_parser_1_1_data" kindref="compound">Data</ref>&amp;<sp/><ref refid="struct_function_parser_1_1_data_1a5de0c72e14a8dc7fd8d708dfbb013a45" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_function_parser_1_1_data" kindref="compound">Data</ref>&amp;);<sp/></highlight><highlight class="comment">//<sp/>not<sp/>implemented<sp/>on<sp/>purpose</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="class_function_parser_1ac4c90e783d1a41f8f842383a9a5088d0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_function_parser_1_1_data" kindref="compound">Data</ref>*<sp/><ref refid="class_function_parser_1ac4c90e783d1a41f8f842383a9a5088d0" kindref="member">data</ref>;</highlight></codeline>
+<codeline lineno="122" refid="class_function_parser_1a5b75f74ce82219fc4aaf05665ab46034" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="class_function_parser_1a5b75f74ce82219fc4aaf05665ab46034" kindref="member">evalRecursionLevel</ref>;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Temp<sp/>data<sp/>needed<sp/>in<sp/>Compile():</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125" refid="class_function_parser_1a4a54f868e24abc53d4474ca538c999bf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="class_function_parser_1a4a54f868e24abc53d4474ca538c999bf" kindref="member">StackPtr</ref>;</highlight></codeline>
+<codeline lineno="126" refid="class_function_parser_1a78e461023408c6074247df656f93bbae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;unsigned&gt;*<sp/><ref refid="class_function_parser_1a78e461023408c6074247df656f93bbae" kindref="member">tempByteCode</ref>;</highlight></codeline>
+<codeline lineno="127" refid="class_function_parser_1a9e6c21543859ee17e917a292a16c495a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;*<sp/><ref refid="class_function_parser_1a9e6c21543859ee17e917a292a16c495a" kindref="member">tempImmed</ref>;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Private<sp/>methods:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>---------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_function_parser_1a0af0f9ad348adf7df57fa630eddf8e47" kindref="member">copyOnWrite</ref>();</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_function_parser_1abfc0c76a7006ba7b0e45e21bcd6f83cd" kindref="member">checkRecursiveLinking</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_function_parser" kindref="compound">FunctionParser</ref>*)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_function_parser_1a79441f19176e18e88155f1101108dbe6" kindref="member">isValidName</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>Data::VarMap_t::const_iterator<sp/><ref refid="class_function_parser_1a1c1ea54f04c1dfb8d8609240ba9f5f40" kindref="member">FindVariable</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*,</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_function_parser_1_1_data_1a02f3fbca3164d0e498312b418258ea84" kindref="member">Data::VarMap_t</ref>&amp;)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>Data::ConstMap_t::const_iterator<sp/><ref refid="class_function_parser_1a305fdcea81a498567dc92010338cee7c" kindref="member">FindConstant</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_function_parser_1a3895fdbb2f21fc7facebcd4a3c2399f7" kindref="member">CheckSyntax</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_function_parser_1aa136efc410ad6a9c2992fb6e1c9b057c" kindref="member">Compile</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_function_parser_1afd635d05f1b4d3ef6f09b75dd92926e5" kindref="member">IsVariable</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_function_parser_1a714d401cb9368826a87b7f15575de2a3" kindref="member">AddCompiledByte</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_function_parser_1a59cf4b93d74e0572386742603977f886" kindref="member">AddImmediate</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_function_parser_1aadefd3517f92e066d9926a1998e9fe2f" kindref="member">AddFunctionOpcode</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_function_parser_1a2ba1bb889a7035da4a7639d6b7ce53c6" kindref="member">incStackPtr</ref>();</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_function_parser_1a9978dd583ee328a7f71a6075a3c5f97c" kindref="member">CompileIf</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_function_parser_1a22e24efb5ef28aa34025bf49fe505010" kindref="member">CompileFunctionParams</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_function_parser_1a7673096cf704d1fa7ab542db5f22fe95" kindref="member">CompileElement</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_function_parser_1a34d2686ecb9619b0b459bfa249b64498" kindref="member">CompilePow</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_function_parser_1adda1df6bf29a91d38e838bdf96524f61" kindref="member">CompileUnaryMinus</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_function_parser_1ade4859b2f9b822a19a2beccbc25d36b0" kindref="member">CompileMult</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_function_parser_1a9b3024d49f9094731f3cbd17eeea29e5" kindref="member">CompileAddition</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_function_parser_1a2418f51d1feca9195780bda66a64923a" kindref="member">CompileComparison</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_function_parser_1adb0768f374333bbee4c84c30a2769d1b" kindref="member">CompileAnd</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_function_parser_1a233a126157058829dcda9aa3f00781f8" kindref="member">CompileOr</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_function_parser_1a854c0c23a60d2d206ddf67015747a80a" kindref="member">CompileExpression</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_function_parser_1a8f09d400c39a72c7485d26cbff2543c9" kindref="member">MakeTree</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/fparser.hpp"/>
+  </compounddef>
+</doxygen>

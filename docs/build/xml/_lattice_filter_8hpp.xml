@@ -1,0 +1,476 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_lattice_filter_8hpp" kind="file" language="C++">
+    <compoundname>LatticeFilter.hpp</compoundname>
+    <includes refid="_algo_base_8hpp" local="no">AlgoBase.hpp</includes>
+    <includes refid="_seq_view_8hpp" local="no">SeqView.hpp</includes>
+    <includes refid="_lattice_view_8hpp" local="no">LatticeView.hpp</includes>
+    <includedby refid="_lattice_filter_8cpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/src/LatticeFilter.cpp</includedby>
+    <includedby refid="tsa_8hpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/include/tsa.hpp</includedby>
+    <incdepgraph>
+      <node id="2707">
+        <label>tsaTraits.hpp</label>
+        <link refid="tsa_traits_8hpp"/>
+        <childnode refid="2708" relation="include">
+        </childnode>
+      </node>
+      <node id="2687">
+        <label>eternity.hpp</label>
+        <link refid="eternity_8hpp"/>
+        <childnode refid="2688" relation="include">
+        </childnode>
+        <childnode refid="2691" relation="include">
+        </childnode>
+        <childnode refid="2696" relation="include">
+        </childnode>
+        <childnode refid="2700" relation="include">
+        </childnode>
+      </node>
+      <node id="2693">
+        <label>stdlib.h</label>
+      </node>
+      <node id="2680">
+        <label>stdexcept</label>
+      </node>
+      <node id="2702">
+        <label>tsaTypes.hpp</label>
+        <link refid="tsa_types_8hpp"/>
+        <childnode refid="2682" relation="include">
+        </childnode>
+        <childnode refid="2683" relation="include">
+        </childnode>
+        <childnode refid="2703" relation="include">
+        </childnode>
+        <childnode refid="2684" relation="include">
+        </childnode>
+        <childnode refid="2687" relation="include">
+        </childnode>
+      </node>
+      <node id="2685">
+        <label>string</label>
+      </node>
+      <node id="2688">
+        <label>eternity/dynamic.hpp</label>
+        <link refid="dynamic_8hpp"/>
+        <childnode refid="2689" relation="include">
+        </childnode>
+        <childnode refid="2690" relation="include">
+        </childnode>
+        <childnode refid="2685" relation="include">
+        </childnode>
+      </node>
+      <node id="2698">
+        <label>map</label>
+      </node>
+      <node id="2704">
+        <label>tsaLog.hpp</label>
+        <link refid="tsa_log_8hpp"/>
+        <childnode refid="2681" relation="include">
+        </childnode>
+        <childnode refid="2682" relation="include">
+        </childnode>
+        <childnode refid="2705" relation="include">
+        </childnode>
+      </node>
+      <node id="2682">
+        <label>fstream</label>
+      </node>
+      <node id="2697">
+        <label>xmlscanner.hpp</label>
+        <link refid="xmlscanner_8hpp"/>
+        <childnode refid="2692" relation="include">
+        </childnode>
+        <childnode refid="2693" relation="include">
+        </childnode>
+        <childnode refid="2694" relation="include">
+        </childnode>
+        <childnode refid="2698" relation="include">
+        </childnode>
+        <childnode refid="2695" relation="include">
+        </childnode>
+        <childnode refid="2682" relation="include">
+        </childnode>
+        <childnode refid="2685" relation="include">
+        </childnode>
+        <childnode refid="2681" relation="include">
+        </childnode>
+      </node>
+      <node id="2686">
+        <label>tsaSerialize.hpp</label>
+        <link refid="tsa_serialize_8hpp"/>
+        <childnode refid="2680" relation="include">
+        </childnode>
+        <childnode refid="2681" relation="include">
+        </childnode>
+        <childnode refid="2682" relation="include">
+        </childnode>
+        <childnode refid="2687" relation="include">
+        </childnode>
+        <childnode refid="2702" relation="include">
+        </childnode>
+      </node>
+      <node id="2711">
+        <label>fparser.hpp</label>
+        <link refid="fparser_8hpp"/>
+        <childnode refid="2685" relation="include">
+        </childnode>
+        <childnode refid="2698" relation="include">
+        </childnode>
+        <childnode refid="2694" relation="include">
+        </childnode>
+      </node>
+      <node id="2679">
+        <label>AlgoBase.hpp</label>
+        <link refid="_algo_base_8hpp"/>
+        <childnode refid="2680" relation="include">
+        </childnode>
+        <childnode refid="2681" relation="include">
+        </childnode>
+        <childnode refid="2682" relation="include">
+        </childnode>
+        <childnode refid="2683" relation="include">
+        </childnode>
+        <childnode refid="2684" relation="include">
+        </childnode>
+        <childnode refid="2685" relation="include">
+        </childnode>
+        <childnode refid="2686" relation="include">
+        </childnode>
+        <childnode refid="2702" relation="include">
+        </childnode>
+        <childnode refid="2704" relation="include">
+        </childnode>
+        <childnode refid="2706" relation="include">
+        </childnode>
+        <childnode refid="2712" relation="include">
+        </childnode>
+        <childnode refid="2714" relation="include">
+        </childnode>
+      </node>
+      <node id="2691">
+        <label>eternity/persist.hpp</label>
+        <link refid="persist_8hpp"/>
+        <childnode refid="2688" relation="include">
+        </childnode>
+        <childnode refid="2692" relation="include">
+        </childnode>
+        <childnode refid="2693" relation="include">
+        </childnode>
+        <childnode refid="2694" relation="include">
+        </childnode>
+        <childnode refid="2695" relation="include">
+        </childnode>
+        <childnode refid="2682" relation="include">
+        </childnode>
+      </node>
+      <node id="2710">
+        <label>string.h</label>
+      </node>
+      <node id="2690">
+        <label>typeinfo</label>
+      </node>
+      <node id="2684">
+        <label>boost/numeric/ublas/io.hpp</label>
+      </node>
+      <node id="2705">
+        <label>unistd.h</label>
+      </node>
+      <node id="2709">
+        <label>tsaUtilityFunctions.hpp</label>
+        <link refid="tsa_utility_functions_8hpp"/>
+        <childnode refid="2710" relation="include">
+        </childnode>
+        <childnode refid="2711" relation="include">
+        </childnode>
+        <childnode refid="2708" relation="include">
+        </childnode>
+        <childnode refid="2682" relation="include">
+        </childnode>
+      </node>
+      <node id="2694">
+        <label>vector</label>
+      </node>
+      <node id="2706">
+        <label>BaseView.hpp</label>
+        <link refid="_base_view_8hpp"/>
+        <childnode refid="2698" relation="include">
+        </childnode>
+        <childnode refid="2685" relation="include">
+        </childnode>
+        <childnode refid="2702" relation="include">
+        </childnode>
+        <childnode refid="2707" relation="include">
+        </childnode>
+        <childnode refid="2709" relation="include">
+        </childnode>
+        <childnode refid="2686" relation="include">
+        </childnode>
+        <childnode refid="2704" relation="include">
+        </childnode>
+      </node>
+      <node id="2703">
+        <label>boost/numeric/ublas/matrix_proxy.hpp</label>
+      </node>
+      <node id="2701">
+        <label>sstream</label>
+      </node>
+      <node id="2713">
+        <label>FrameL.h</label>
+      </node>
+      <node id="2714">
+        <label>AlgoExceptions.hpp</label>
+        <link refid="_algo_exceptions_8hpp"/>
+        <childnode refid="2680" relation="include">
+        </childnode>
+        <childnode refid="2685" relation="include">
+        </childnode>
+      </node>
+      <node id="2712">
+        <label>SeqView.hpp</label>
+        <link refid="_seq_view_8hpp"/>
+        <childnode refid="2683" relation="include">
+        </childnode>
+        <childnode refid="2703" relation="include">
+        </childnode>
+        <childnode refid="2684" relation="include">
+        </childnode>
+        <childnode refid="2706" relation="include">
+        </childnode>
+        <childnode refid="2713" relation="include">
+        </childnode>
+      </node>
+      <node id="2692">
+        <label>math.h</label>
+      </node>
+      <node id="2683">
+        <label>boost/numeric/ublas/matrix.hpp</label>
+      </node>
+      <node id="2681">
+        <label>iostream</label>
+      </node>
+      <node id="2699">
+        <label>deque</label>
+      </node>
+      <node id="2678">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeFilter.hpp</label>
+        <link refid="_lattice_filter_8hpp"/>
+        <childnode refid="2679" relation="include">
+        </childnode>
+        <childnode refid="2712" relation="include">
+        </childnode>
+        <childnode refid="2715" relation="include">
+        </childnode>
+      </node>
+      <node id="2715">
+        <label>LatticeView.hpp</label>
+        <link refid="_lattice_view_8hpp"/>
+        <childnode refid="2683" relation="include">
+        </childnode>
+        <childnode refid="2684" relation="include">
+        </childnode>
+        <childnode refid="2687" relation="include">
+        </childnode>
+        <childnode refid="2706" relation="include">
+        </childnode>
+      </node>
+      <node id="2696">
+        <label>eternity/persist_xml.hpp</label>
+        <link refid="persist__xml_8hpp"/>
+        <childnode refid="2691" relation="include">
+        </childnode>
+        <childnode refid="2697" relation="include">
+        </childnode>
+        <childnode refid="2699" relation="include">
+        </childnode>
+      </node>
+      <node id="2708">
+        <label>complex</label>
+      </node>
+      <node id="2700">
+        <label>eternity/algorithms.hpp</label>
+        <link refid="algorithms_8hpp"/>
+        <childnode refid="2691" relation="include">
+        </childnode>
+        <childnode refid="2696" relation="include">
+        </childnode>
+        <childnode refid="2697" relation="include">
+        </childnode>
+        <childnode refid="2701" relation="include">
+        </childnode>
+      </node>
+      <node id="2695">
+        <label>algorithm</label>
+      </node>
+      <node id="2689">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2717">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/LatticeFilter.cpp</label>
+        <link refid="_lattice_filter_8cpp"/>
+      </node>
+      <node id="2718">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/tsa.hpp</label>
+        <link refid="tsa_8hpp"/>
+      </node>
+      <node id="2716">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeFilter.hpp</label>
+        <link refid="_lattice_filter_8hpp"/>
+        <childnode refid="2717" relation="include">
+        </childnode>
+        <childnode refid="2718" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classtsa_1_1_lattice_filter" prot="public">tsa::LatticeFilter</innerclass>
+    <innernamespace refid="namespacetsa">tsa</innernamespace>
+    <briefdescription>
+<para>Implement a filter in the lattice structure. </para>    </briefdescription>
+    <detaileddescription>
+<para>Copyright (C) 2004 by Elena Cuoco <ulink url="mailto:elena.cuoco@ego-gw.it">elena.cuoco@ego-gw.it</ulink></para><para>This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</para><para>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</para><para>You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.</para><para><simplesect kind="author"><para>Elena Cuoco <ulink url="mailto:elena.cuoco@ego-gw.it">elena.cuoco@ego-gw.it</ulink> </para></simplesect>
+<simplesect kind="date"><para>2005 </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="27"><highlight class="preprocessor">#ifndef<sp/>__LATTICEFILTER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__LATTICEFILTER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_algo_base_8hpp" kindref="compound">AlgoBase.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_seq_view_8hpp" kindref="compound">SeqView.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_lattice_view_8hpp" kindref="compound">LatticeView.hpp</ref>&gt;</highlight></codeline>
+<codeline lineno="48"></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceboost_1_1numeric_1_1ublas" kindref="compound">boost::numeric::ublas</ref>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetsa" kindref="compound">tsa</ref><sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="classtsa_1_1_lattice_filter" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classtsa_1_1_lattice_filter" kindref="compound">LatticeFilter</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_algo_base" kindref="compound">AlgoBase</ref><sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_lattice_filter" kindref="compound">LatticeFilter</ref>(<ref refid="classtsa_1_1_lattice_view" kindref="compound">LatticeView</ref>&amp;<sp/>LV);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_lattice_filter" kindref="compound">LatticeFilter</ref>(<ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref>&amp;<sp/>ParcorF,<sp/><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref>&amp;<sp/>ParcorB,<sp/><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref>&amp;<sp/>ErrF,<sp/><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref>&amp;<sp/>ErrB);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classtsa_1_1_lattice_filter" kindref="compound">LatticeFilter</ref>();</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="classtsa_1_1_lattice_filter_1aa6be240d902449711c1925e464248a1d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_lattice_filter_1aa6be240d902449711c1925e464248a1d" kindref="member">Load</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*filename,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*fmt<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;txt&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classeternity_1_1xml__archive" kindref="compound">eternity::xml_archive</ref><sp/>fa;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fa.<ref refid="classeternity_1_1xml__archive_1acd5ef97a7b6a113e64e735270634bea1" kindref="member">open</ref>(filename,<sp/><ref refid="classeternity_1_1archive_1a8881f9ce8dbed2ee600c64b7925afef0a5b952c27ebe4ca2612e939a1aa19baf5" kindref="member">eternity::archive::load</ref>);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>xml_serialize(fa,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fa.<ref refid="classeternity_1_1xml__archive_1a9f27feeac62aa0c3370ef9bcc60d86c6" kindref="member">close</ref>();</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="classtsa_1_1_lattice_filter_1ac599ab3a2134d53e0685f91a0a673ed4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_lattice_filter_1ac599ab3a2134d53e0685f91a0a673ed4" kindref="member">Save</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*filename,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*fmt<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;txt&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classeternity_1_1xml__archive" kindref="compound">eternity::xml_archive</ref><sp/>fa;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fa.<ref refid="classeternity_1_1xml__archive_1acd5ef97a7b6a113e64e735270634bea1" kindref="member">open</ref>(filename,<sp/><ref refid="classeternity_1_1archive_1a8881f9ce8dbed2ee600c64b7925afef0a06c18c297779389cb1cb03a2a7590ca8" kindref="member">eternity::archive::store</ref>);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>xml_serialize(fa,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fa.<ref refid="classeternity_1_1xml__archive_1a9f27feeac62aa0c3370ef9bcc60d86c6" kindref="member">close</ref>();</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="classtsa_1_1_lattice_filter_1ae9bd581cbcd1183a0dd7c557fe687422" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_lattice_filter_1ae9bd581cbcd1183a0dd7c557fe687422" kindref="member">xml_serialize</ref>(<ref refid="classeternity_1_1xml__archive" kindref="compound">eternity::xml_archive</ref>&amp;<sp/>xml,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>p)<sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>buffer[1024];</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(xml.<ref refid="classeternity_1_1archive_1af1ced5c2f5cd028d88033c40ac98cc71" kindref="member">is_loading</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>snprintf(buffer,<sp/>1024,<sp/></highlight><highlight class="stringliteral">&quot;%s.mOrder&quot;</highlight><highlight class="normal">,<sp/>p);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>xml.<ref refid="classeternity_1_1xml__archive_1a2e0b9a16f4b02b391967718f18175fc2" kindref="member">read</ref>(buffer,<sp/>mOrder,<sp/>0);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>snprintf(buffer,<sp/>1024,<sp/></highlight><highlight class="stringliteral">&quot;%s.mParcorF&quot;</highlight><highlight class="normal">,<sp/>p);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tsa_serialize_8hpp_1aaf0498af65933356e879bfe5cb36f088" kindref="member">DVECTOR_XML_SERIALIZE</ref>(mParcorF,<sp/>xml,<sp/>buffer);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>snprintf(buffer,<sp/>1024,<sp/></highlight><highlight class="stringliteral">&quot;%s.mParcorB&quot;</highlight><highlight class="normal">,<sp/>p);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tsa_serialize_8hpp_1aaf0498af65933356e879bfe5cb36f088" kindref="member">DVECTOR_XML_SERIALIZE</ref>(mParcorB,<sp/>xml,<sp/>buffer);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>snprintf(buffer,<sp/>1024,<sp/></highlight><highlight class="stringliteral">&quot;%s.mErrF&quot;</highlight><highlight class="normal">,<sp/>p);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tsa_serialize_8hpp_1a7140915a63a13e7a03994b23dba7cd84" kindref="member">DMATRIX_XML_SERIALIZE</ref>(mErrF,<sp/>xml,<sp/>buffer);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>snprintf(buffer,<sp/>1024,<sp/></highlight><highlight class="stringliteral">&quot;%s.mErrB&quot;</highlight><highlight class="normal">,<sp/>p);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tsa_serialize_8hpp_1a7140915a63a13e7a03994b23dba7cd84" kindref="member">DMATRIX_XML_SERIALIZE</ref>(mErrB,<sp/>xml,<sp/>buffer);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>snprintf(buffer,<sp/>1024,<sp/></highlight><highlight class="stringliteral">&quot;%s.mStatus&quot;</highlight><highlight class="normal">,<sp/>p);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>xml.<ref refid="classeternity_1_1xml__archive_1a2e0b9a16f4b02b391967718f18175fc2" kindref="member">read</ref>(buffer,<sp/>mStatus,<sp/>0);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>snprintf(buffer,<sp/>1024,<sp/></highlight><highlight class="stringliteral">&quot;%s.mOrder&quot;</highlight><highlight class="normal">,<sp/>p);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>xml.<ref refid="classeternity_1_1xml__archive_1ab64fb09677fff76fb2935930f73365a6" kindref="member">write</ref>(buffer,<sp/>mOrder);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>snprintf(buffer,<sp/>1024,<sp/></highlight><highlight class="stringliteral">&quot;%s.mParcorF&quot;</highlight><highlight class="normal">,<sp/>p);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tsa_serialize_8hpp_1aaf0498af65933356e879bfe5cb36f088" kindref="member">DVECTOR_XML_SERIALIZE</ref>(mParcorF,<sp/>xml,<sp/>buffer);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>snprintf(buffer,<sp/>1024,<sp/></highlight><highlight class="stringliteral">&quot;%s.mParcorB&quot;</highlight><highlight class="normal">,<sp/>p);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tsa_serialize_8hpp_1aaf0498af65933356e879bfe5cb36f088" kindref="member">DVECTOR_XML_SERIALIZE</ref>(mParcorB,<sp/>xml,<sp/>buffer);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>snprintf(buffer,<sp/>1024,<sp/></highlight><highlight class="stringliteral">&quot;%s.mErrF&quot;</highlight><highlight class="normal">,<sp/>p);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tsa_serialize_8hpp_1a7140915a63a13e7a03994b23dba7cd84" kindref="member">DMATRIX_XML_SERIALIZE</ref>(mErrF,<sp/>xml,<sp/>buffer);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>snprintf(buffer,<sp/>1024,<sp/></highlight><highlight class="stringliteral">&quot;%s.mErrB&quot;</highlight><highlight class="normal">,<sp/>p);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tsa_serialize_8hpp_1a7140915a63a13e7a03994b23dba7cd84" kindref="member">DMATRIX_XML_SERIALIZE</ref>(mErrB,<sp/>xml,<sp/>buffer);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>snprintf(buffer,<sp/>1024,<sp/></highlight><highlight class="stringliteral">&quot;%s.mStatus&quot;</highlight><highlight class="normal">,<sp/>p);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>xml.<ref refid="classeternity_1_1xml__archive_1ab64fb09677fff76fb2935930f73365a6" kindref="member">write</ref>(buffer,<sp/>mStatus);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"></codeline>
+<codeline lineno="163" refid="classtsa_1_1_lattice_filter_1a01071f8619620099315c1007c8980baf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_lattice_filter_1a01071f8619620099315c1007c8980baf" kindref="member">operator()</ref>(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>InputData,<sp/><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>WhitenedData)<sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref>*<sp/>in<sp/>=<sp/>InputData.GetData();</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref>*<sp/>out<sp/>=<sp/>WhitenedData.GetData();</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((in-&gt;size1()<sp/>!=<sp/>out-&gt;size1())<sp/>||<sp/>(in-&gt;size2()<sp/>!=<sp/>out-&gt;size2()))<sp/>{</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out-&gt;resize(in-&gt;size1(),<sp/>in-&gt;size2());</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1a91d266348bcf69ab00c97a253b0ec790" kindref="member">LogWarning</ref>(</highlight><highlight class="stringliteral">&quot;LatticeFilter:<sp/>resizing<sp/>output<sp/>view&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WhitenedData.SetStart(InputData.GetStart());</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WhitenedData.SetSampling(InputData.GetSampling());</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>r<sp/>=<sp/>0;<sp/>r<sp/>&lt;<sp/>in-&gt;size1();<sp/>r++)<sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>execute(row(*in,<sp/>r),<sp/>row(*out,<sp/>r));</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init(<ref refid="classtsa_1_1_lattice_view" kindref="compound">LatticeView</ref>&amp;<sp/>LV);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>execute(matrix_row&lt;Dmatrix&gt;<sp/>Input,<sp/>matrix_row&lt;Dmatrix&gt;<sp/>Output);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"></codeline>
+<codeline lineno="214"></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="221" refid="classtsa_1_1_lattice_filter_1aaff567ffb2c6b13538f138b8d49f3781" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_lattice_filter_1aaff567ffb2c6b13538f138b8d49f3781" kindref="member">mOrder</ref>;</highlight></codeline>
+<codeline lineno="222" refid="classtsa_1_1_lattice_filter_1a4a7f9d6020bc4d7cab3d6021bd5338db" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref><sp/><ref refid="classtsa_1_1_lattice_filter_1a4a7f9d6020bc4d7cab3d6021bd5338db" kindref="member">mParcorF</ref>;</highlight></codeline>
+<codeline lineno="223" refid="classtsa_1_1_lattice_filter_1a0e3a56f45a158477cef36e55cd2e5417" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref><sp/><ref refid="classtsa_1_1_lattice_filter_1a0e3a56f45a158477cef36e55cd2e5417" kindref="member">mParcorB</ref>;</highlight></codeline>
+<codeline lineno="224" refid="classtsa_1_1_lattice_filter_1a462c5cd31c438a924bfde88d08e12200" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref><sp/><ref refid="classtsa_1_1_lattice_filter_1a462c5cd31c438a924bfde88d08e12200" kindref="member">mErrF</ref>;</highlight></codeline>
+<codeline lineno="225" refid="classtsa_1_1_lattice_filter_1a0cd360b9836146c9296798337dd2ee0f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref><sp/><ref refid="classtsa_1_1_lattice_filter_1a0cd360b9836146c9296798337dd2ee0f" kindref="member">mErrB</ref>;</highlight></codeline>
+<codeline lineno="226" refid="classtsa_1_1_lattice_filter_1ab480cbe362a358df626bcd0758c0a7ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_lattice_filter_1ab480cbe362a358df626bcd0758c0a7ce" kindref="member">mStatus</ref>;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal">}<sp/></highlight><highlight class="comment">//end<sp/>namespace</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>___LATTICEFILTER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeFilter.hpp"/>
+  </compounddef>
+</doxygen>

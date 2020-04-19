@@ -1,0 +1,178 @@
+\hypertarget{classtsa_1_1_cs2_hann_window}{}\section{tsa\+:\+:Cs2\+Hann\+Window Class Reference}
+\label{classtsa_1_1_cs2_hann_window}\index{tsa\+::\+Cs2\+Hann\+Window@{tsa\+::\+Cs2\+Hann\+Window}}
+
+
+Cs2\+Hann windowing algorithm.  
+
+
+
+
+{\ttfamily \#include $<$Cs2\+Hann\+Window.\+hpp$>$}
+
+Inheritance diagram for tsa\+:\+:Cs2\+Hann\+Window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classtsa_1_1_cs2_hann_window}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtsa_1_1_cs2_hann_window_aaa914c46b51ba07093b04a473a164699}{Cs2\+Hann\+Window} (int size)
+\item 
+\hyperlink{classtsa_1_1_cs2_hann_window_ac32bd6fa3481fd94c0729d6a77ca52c7}{Cs2\+Hann\+Window} (int size, const std\+::string \&)
+\item 
+virtual \hyperlink{classtsa_1_1_cs2_hann_window_ae46ac2cfdbfc9bef375e0cab72e379e2}{$\sim$\+Cs2\+Hann\+Window} ()
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Operations}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtsa_1_1_cs2_hann_window_af896b6c2dc55a283b67c2b694926918a}{operator()} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&v1)
+\item 
+void \hyperlink{classtsa_1_1_cs2_hann_window_adc0b74ee1e5173f5de7f86cf714fe47f}{operator()} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&v1, \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&v2)
+\item 
+void \hyperlink{classtsa_1_1_cs2_hann_window_a540187b8c32000d00d3023e8f8418264}{Resize} (unsigned int size)
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtsa_1_1_cs2_hann_window_a0da151916492d8ab9504ee40872131a2}{Fill\+Window} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Cs2\+Hann windowing algorithm. 
+
+Definition at line 73 of file Cs2\+Hann\+Window.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtsa_1_1_cs2_hann_window_aaa914c46b51ba07093b04a473a164699}\label{classtsa_1_1_cs2_hann_window_aaa914c46b51ba07093b04a473a164699}} 
+\index{tsa\+::\+Cs2\+Hann\+Window@{tsa\+::\+Cs2\+Hann\+Window}!Cs2\+Hann\+Window@{Cs2\+Hann\+Window}}
+\index{Cs2\+Hann\+Window@{Cs2\+Hann\+Window}!tsa\+::\+Cs2\+Hann\+Window@{tsa\+::\+Cs2\+Hann\+Window}}
+\subsubsection{\texorpdfstring{Cs2\+Hann\+Window()}{Cs2HannWindow()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily tsa\+::\+Cs2\+Hann\+Window\+::\+Cs2\+Hann\+Window (\begin{DoxyParamCaption}\item[{int}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & the size of the window \\
+\hline
+{\em cached} & true if the window must be preevaluated in a buffer \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 82 of file Cs2\+Hann\+Window.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_cs2_hann_window_ac32bd6fa3481fd94c0729d6a77ca52c7}\label{classtsa_1_1_cs2_hann_window_ac32bd6fa3481fd94c0729d6a77ca52c7}} 
+\index{tsa\+::\+Cs2\+Hann\+Window@{tsa\+::\+Cs2\+Hann\+Window}!Cs2\+Hann\+Window@{Cs2\+Hann\+Window}}
+\index{Cs2\+Hann\+Window@{Cs2\+Hann\+Window}!tsa\+::\+Cs2\+Hann\+Window@{tsa\+::\+Cs2\+Hann\+Window}}
+\subsubsection{\texorpdfstring{Cs2\+Hann\+Window()}{Cs2HannWindow()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily tsa\+::\+Cs2\+Hann\+Window\+::\+Cs2\+Hann\+Window (\begin{DoxyParamCaption}\item[{int}]{size,  }\item[{const std\+::string \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 88 of file Cs2\+Hann\+Window.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_cs2_hann_window_ae46ac2cfdbfc9bef375e0cab72e379e2}\label{classtsa_1_1_cs2_hann_window_ae46ac2cfdbfc9bef375e0cab72e379e2}} 
+\index{tsa\+::\+Cs2\+Hann\+Window@{tsa\+::\+Cs2\+Hann\+Window}!````~Cs2\+Hann\+Window@{$\sim$\+Cs2\+Hann\+Window}}
+\index{````~Cs2\+Hann\+Window@{$\sim$\+Cs2\+Hann\+Window}!tsa\+::\+Cs2\+Hann\+Window@{tsa\+::\+Cs2\+Hann\+Window}}
+\subsubsection{\texorpdfstring{$\sim$\+Cs2\+Hann\+Window()}{~Cs2HannWindow()}}
+{\footnotesize\ttfamily virtual tsa\+::\+Cs2\+Hann\+Window\+::$\sim$\+Cs2\+Hann\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Destructor 
+
+Definition at line 97 of file Cs2\+Hann\+Window.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classtsa_1_1_cs2_hann_window_a0da151916492d8ab9504ee40872131a2}\label{classtsa_1_1_cs2_hann_window_a0da151916492d8ab9504ee40872131a2}} 
+\index{tsa\+::\+Cs2\+Hann\+Window@{tsa\+::\+Cs2\+Hann\+Window}!Fill\+Window@{Fill\+Window}}
+\index{Fill\+Window@{Fill\+Window}!tsa\+::\+Cs2\+Hann\+Window@{tsa\+::\+Cs2\+Hann\+Window}}
+\subsubsection{\texorpdfstring{Fill\+Window()}{FillWindow()}}
+{\footnotesize\ttfamily void tsa\+::\+Cs2\+Hann\+Window\+::\+Fill\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+Initialize the window with the correct values, given its actual size. This is a pure virtual function, which is redefined by each window class. 
+
+Reimplemented from \hyperlink{classtsa_1_1_base_window_aa74b29105d94caa521d308198e8e6643}{tsa\+::\+Base\+Window}.
+
+
+
+Definition at line 199 of file Cs2\+Hann\+Window.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_cs2_hann_window_af896b6c2dc55a283b67c2b694926918a}\label{classtsa_1_1_cs2_hann_window_af896b6c2dc55a283b67c2b694926918a}} 
+\index{tsa\+::\+Cs2\+Hann\+Window@{tsa\+::\+Cs2\+Hann\+Window}!operator()@{operator()}}
+\index{operator()@{operator()}!tsa\+::\+Cs2\+Hann\+Window@{tsa\+::\+Cs2\+Hann\+Window}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void tsa\+::\+Cs2\+Hann\+Window\+::operator() (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{v1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Apply the window to a given time view.
+
+
+\begin{DoxyParams}{Parameters}
+{\em v1} & the time view \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classtsa_1_1_base_window_a05d9edb95dc01840a1b2df78dfa3a8c1}{tsa\+::\+Base\+Window}.
+
+
+
+Definition at line 111 of file Cs2\+Hann\+Window.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_cs2_hann_window_adc0b74ee1e5173f5de7f86cf714fe47f}\label{classtsa_1_1_cs2_hann_window_adc0b74ee1e5173f5de7f86cf714fe47f}} 
+\index{tsa\+::\+Cs2\+Hann\+Window@{tsa\+::\+Cs2\+Hann\+Window}!operator()@{operator()}}
+\index{operator()@{operator()}!tsa\+::\+Cs2\+Hann\+Window@{tsa\+::\+Cs2\+Hann\+Window}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void tsa\+::\+Cs2\+Hann\+Window\+::operator() (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{v1,  }\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{v2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Apply a window to an input view and write the results on a output view.
+
+
+\begin{DoxyParams}{Parameters}
+{\em v1} & the input view \\
+\hline
+{\em v2} & the output view \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classtsa_1_1_base_window_afda50daa943527e09792b06e5ba69bcb}{tsa\+::\+Base\+Window}.
+
+
+
+Definition at line 133 of file Cs2\+Hann\+Window.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_cs2_hann_window_a540187b8c32000d00d3023e8f8418264}\label{classtsa_1_1_cs2_hann_window_a540187b8c32000d00d3023e8f8418264}} 
+\index{tsa\+::\+Cs2\+Hann\+Window@{tsa\+::\+Cs2\+Hann\+Window}!Resize@{Resize}}
+\index{Resize@{Resize}!tsa\+::\+Cs2\+Hann\+Window@{tsa\+::\+Cs2\+Hann\+Window}}
+\subsubsection{\texorpdfstring{Resize()}{Resize()}}
+{\footnotesize\ttfamily void tsa\+::\+Cs2\+Hann\+Window\+::\+Resize (\begin{DoxyParamCaption}\item[{unsigned int}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Resize the window dimension.
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & new size for the window \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classtsa_1_1_base_window_a8a2a3425f2915762d50fa57dd0e04f22}{tsa\+::\+Base\+Window}.
+
+
+
+Definition at line 161 of file Cs2\+Hann\+Window.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/include/\hyperlink{_cs2_hann_window_8hpp}{Cs2\+Hann\+Window.\+hpp}\end{DoxyCompactItemize}

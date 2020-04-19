@@ -1,0 +1,469 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_view_util_8hpp" kind="file" language="C++">
+    <compoundname>ViewUtil.hpp</compoundname>
+    <includes refid="_algo_base_8hpp" local="no">AlgoBase.hpp</includes>
+    <includedby refid="_view_util_8cpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/src/ViewUtil.cpp</includedby>
+    <includedby refid="tsa_8hpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/include/tsa.hpp</includedby>
+    <incdepgraph>
+      <node id="4225">
+        <label>tsaTraits.hpp</label>
+        <link refid="tsa_traits_8hpp"/>
+        <childnode refid="4226" relation="include">
+        </childnode>
+      </node>
+      <node id="4205">
+        <label>eternity.hpp</label>
+        <link refid="eternity_8hpp"/>
+        <childnode refid="4206" relation="include">
+        </childnode>
+        <childnode refid="4209" relation="include">
+        </childnode>
+        <childnode refid="4214" relation="include">
+        </childnode>
+        <childnode refid="4218" relation="include">
+        </childnode>
+      </node>
+      <node id="4211">
+        <label>stdlib.h</label>
+      </node>
+      <node id="4198">
+        <label>stdexcept</label>
+      </node>
+      <node id="4220">
+        <label>tsaTypes.hpp</label>
+        <link refid="tsa_types_8hpp"/>
+        <childnode refid="4200" relation="include">
+        </childnode>
+        <childnode refid="4201" relation="include">
+        </childnode>
+        <childnode refid="4221" relation="include">
+        </childnode>
+        <childnode refid="4202" relation="include">
+        </childnode>
+        <childnode refid="4205" relation="include">
+        </childnode>
+      </node>
+      <node id="4203">
+        <label>string</label>
+      </node>
+      <node id="4206">
+        <label>eternity/dynamic.hpp</label>
+        <link refid="dynamic_8hpp"/>
+        <childnode refid="4207" relation="include">
+        </childnode>
+        <childnode refid="4208" relation="include">
+        </childnode>
+        <childnode refid="4203" relation="include">
+        </childnode>
+      </node>
+      <node id="4216">
+        <label>map</label>
+      </node>
+      <node id="4222">
+        <label>tsaLog.hpp</label>
+        <link refid="tsa_log_8hpp"/>
+        <childnode refid="4199" relation="include">
+        </childnode>
+        <childnode refid="4200" relation="include">
+        </childnode>
+        <childnode refid="4223" relation="include">
+        </childnode>
+      </node>
+      <node id="4200">
+        <label>fstream</label>
+      </node>
+      <node id="4215">
+        <label>xmlscanner.hpp</label>
+        <link refid="xmlscanner_8hpp"/>
+        <childnode refid="4210" relation="include">
+        </childnode>
+        <childnode refid="4211" relation="include">
+        </childnode>
+        <childnode refid="4212" relation="include">
+        </childnode>
+        <childnode refid="4216" relation="include">
+        </childnode>
+        <childnode refid="4213" relation="include">
+        </childnode>
+        <childnode refid="4200" relation="include">
+        </childnode>
+        <childnode refid="4203" relation="include">
+        </childnode>
+        <childnode refid="4199" relation="include">
+        </childnode>
+      </node>
+      <node id="4204">
+        <label>tsaSerialize.hpp</label>
+        <link refid="tsa_serialize_8hpp"/>
+        <childnode refid="4198" relation="include">
+        </childnode>
+        <childnode refid="4199" relation="include">
+        </childnode>
+        <childnode refid="4200" relation="include">
+        </childnode>
+        <childnode refid="4205" relation="include">
+        </childnode>
+        <childnode refid="4220" relation="include">
+        </childnode>
+      </node>
+      <node id="4229">
+        <label>fparser.hpp</label>
+        <link refid="fparser_8hpp"/>
+        <childnode refid="4203" relation="include">
+        </childnode>
+        <childnode refid="4216" relation="include">
+        </childnode>
+        <childnode refid="4212" relation="include">
+        </childnode>
+      </node>
+      <node id="4197">
+        <label>AlgoBase.hpp</label>
+        <link refid="_algo_base_8hpp"/>
+        <childnode refid="4198" relation="include">
+        </childnode>
+        <childnode refid="4199" relation="include">
+        </childnode>
+        <childnode refid="4200" relation="include">
+        </childnode>
+        <childnode refid="4201" relation="include">
+        </childnode>
+        <childnode refid="4202" relation="include">
+        </childnode>
+        <childnode refid="4203" relation="include">
+        </childnode>
+        <childnode refid="4204" relation="include">
+        </childnode>
+        <childnode refid="4220" relation="include">
+        </childnode>
+        <childnode refid="4222" relation="include">
+        </childnode>
+        <childnode refid="4224" relation="include">
+        </childnode>
+        <childnode refid="4230" relation="include">
+        </childnode>
+        <childnode refid="4232" relation="include">
+        </childnode>
+      </node>
+      <node id="4209">
+        <label>eternity/persist.hpp</label>
+        <link refid="persist_8hpp"/>
+        <childnode refid="4206" relation="include">
+        </childnode>
+        <childnode refid="4210" relation="include">
+        </childnode>
+        <childnode refid="4211" relation="include">
+        </childnode>
+        <childnode refid="4212" relation="include">
+        </childnode>
+        <childnode refid="4213" relation="include">
+        </childnode>
+        <childnode refid="4200" relation="include">
+        </childnode>
+      </node>
+      <node id="4228">
+        <label>string.h</label>
+      </node>
+      <node id="4208">
+        <label>typeinfo</label>
+      </node>
+      <node id="4202">
+        <label>boost/numeric/ublas/io.hpp</label>
+      </node>
+      <node id="4196">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/ViewUtil.hpp</label>
+        <link refid="_view_util_8hpp"/>
+        <childnode refid="4197" relation="include">
+        </childnode>
+      </node>
+      <node id="4223">
+        <label>unistd.h</label>
+      </node>
+      <node id="4227">
+        <label>tsaUtilityFunctions.hpp</label>
+        <link refid="tsa_utility_functions_8hpp"/>
+        <childnode refid="4228" relation="include">
+        </childnode>
+        <childnode refid="4229" relation="include">
+        </childnode>
+        <childnode refid="4226" relation="include">
+        </childnode>
+        <childnode refid="4200" relation="include">
+        </childnode>
+      </node>
+      <node id="4212">
+        <label>vector</label>
+      </node>
+      <node id="4224">
+        <label>BaseView.hpp</label>
+        <link refid="_base_view_8hpp"/>
+        <childnode refid="4216" relation="include">
+        </childnode>
+        <childnode refid="4203" relation="include">
+        </childnode>
+        <childnode refid="4220" relation="include">
+        </childnode>
+        <childnode refid="4225" relation="include">
+        </childnode>
+        <childnode refid="4227" relation="include">
+        </childnode>
+        <childnode refid="4204" relation="include">
+        </childnode>
+        <childnode refid="4222" relation="include">
+        </childnode>
+      </node>
+      <node id="4221">
+        <label>boost/numeric/ublas/matrix_proxy.hpp</label>
+      </node>
+      <node id="4219">
+        <label>sstream</label>
+      </node>
+      <node id="4231">
+        <label>FrameL.h</label>
+      </node>
+      <node id="4232">
+        <label>AlgoExceptions.hpp</label>
+        <link refid="_algo_exceptions_8hpp"/>
+        <childnode refid="4198" relation="include">
+        </childnode>
+        <childnode refid="4203" relation="include">
+        </childnode>
+      </node>
+      <node id="4230">
+        <label>SeqView.hpp</label>
+        <link refid="_seq_view_8hpp"/>
+        <childnode refid="4201" relation="include">
+        </childnode>
+        <childnode refid="4221" relation="include">
+        </childnode>
+        <childnode refid="4202" relation="include">
+        </childnode>
+        <childnode refid="4224" relation="include">
+        </childnode>
+        <childnode refid="4231" relation="include">
+        </childnode>
+      </node>
+      <node id="4210">
+        <label>math.h</label>
+      </node>
+      <node id="4201">
+        <label>boost/numeric/ublas/matrix.hpp</label>
+      </node>
+      <node id="4199">
+        <label>iostream</label>
+      </node>
+      <node id="4217">
+        <label>deque</label>
+      </node>
+      <node id="4214">
+        <label>eternity/persist_xml.hpp</label>
+        <link refid="persist__xml_8hpp"/>
+        <childnode refid="4209" relation="include">
+        </childnode>
+        <childnode refid="4215" relation="include">
+        </childnode>
+        <childnode refid="4217" relation="include">
+        </childnode>
+      </node>
+      <node id="4226">
+        <label>complex</label>
+      </node>
+      <node id="4218">
+        <label>eternity/algorithms.hpp</label>
+        <link refid="algorithms_8hpp"/>
+        <childnode refid="4209" relation="include">
+        </childnode>
+        <childnode refid="4214" relation="include">
+        </childnode>
+        <childnode refid="4215" relation="include">
+        </childnode>
+        <childnode refid="4219" relation="include">
+        </childnode>
+      </node>
+      <node id="4213">
+        <label>algorithm</label>
+      </node>
+      <node id="4207">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4235">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/tsa.hpp</label>
+        <link refid="tsa_8hpp"/>
+      </node>
+      <node id="4233">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/ViewUtil.hpp</label>
+        <link refid="_view_util_8hpp"/>
+        <childnode refid="4234" relation="include">
+        </childnode>
+        <childnode refid="4235" relation="include">
+        </childnode>
+      </node>
+      <node id="4234">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/ViewUtil.cpp</label>
+        <link refid="_view_util_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classtsa_1_1_view_util" prot="public">tsa::ViewUtil</innerclass>
+    <innernamespace refid="namespacetsa">tsa</innernamespace>
+    <briefdescription>
+<para>Interface for ViewUtil. </para>    </briefdescription>
+    <detaileddescription>
+<para>Copyright (C) 2004 by Giancarlo Cella <ulink url="mailto:giancarlo.cella@pi.infn.it">giancarlo.cella@pi.infn.it</ulink></para><para>This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</para><para>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</para><para>You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.</para><para><simplesect kind="author"><para>Giancarlo Cella <ulink url="mailto:giancarlo.cella@pi.infn.it">giancarlo.cella@pi.infn.it</ulink> </para></simplesect>
+<simplesect kind="date"><para>Sat Nov 13 17:21:06 2004 </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="28"><highlight class="preprocessor">#ifndef<sp/>__VIEWUTIL_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__VIEWUTIL_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"></codeline>
+<codeline lineno="43"><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_algo_base_8hpp" kindref="compound">AlgoBase.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"></codeline>
+<codeline lineno="66"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetsa" kindref="compound">tsa</ref><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="classtsa_1_1_view_util" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classtsa_1_1_view_util" kindref="compound">ViewUtil</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_algo_base" kindref="compound">AlgoBase</ref><sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="classtsa_1_1_view_util_1a13cb83b6780a27612d34d893272e72f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_view_util_1a13cb83b6780a27612d34d893272e72f9" kindref="member">ViewUtil</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="classtsa_1_1_view_util_1a3c85be8329c8c4f7d60d8ba78b59b4e4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_view_util_1a3c85be8329c8c4f7d60d8ba78b59b4e4" kindref="member">~ViewUtil</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_view_util_1a1d1f00f3a3ae89b3ddef911bf9835049" kindref="member">Join</ref>(std::vector&lt;SeqViewComplex&gt;&amp;<sp/>sl,<sp/><ref refid="namespacetsa_1ab32775c889b53c40fa83939f22372b75" kindref="member">SeqViewComplex</ref>&amp;<sp/>joined,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>start,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sampling,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>length);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_view_util_1a1d1f00f3a3ae89b3ddef911bf9835049" kindref="member">Join</ref>(std::vector&lt;SeqViewDouble&gt;&amp;<sp/>sl,<sp/><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>joined,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>start,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sampling,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>length);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_view_util_1a1d1f00f3a3ae89b3ddef911bf9835049" kindref="member">Join</ref>(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>s1,<sp/><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>s2,<sp/><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>joined);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_view_util_1aef8807df1cb1fd091da9b13242a7f273" kindref="member">Append</ref>(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>s1,<sp/><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>s2);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_view_util_1a164858cf99bb21da58de6f7c34400a09" kindref="member">Print</ref>(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>s1,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*filename);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_view_util_1a164858cf99bb21da58de6f7c34400a09" kindref="member">Print</ref>(<ref refid="namespacetsa_1ab32775c889b53c40fa83939f22372b75" kindref="member">SeqViewComplex</ref>&amp;<sp/>s1,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*filename);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_view_util_1a164858cf99bb21da58de6f7c34400a09" kindref="member">Print</ref>(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>s1);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_view_util_1aee8e21e108474a2ca656868f1a32357f" kindref="member">Range</ref>(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>s1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>l,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_view_util_1aee8e21e108474a2ca656868f1a32357f" kindref="member">Range</ref>(<ref refid="namespacetsa_1ab32775c889b53c40fa83939f22372b75" kindref="member">SeqViewComplex</ref>&amp;<sp/>s1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>l,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_view_util_1aee8e21e108474a2ca656868f1a32357f" kindref="member">Range</ref>(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>s1,<sp/><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>s2,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>l,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_view_util_1a2b338186c5f8662d0b3c05706c35d54a" kindref="member">LeftShift</ref>(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>seq,<sp/><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>ins);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_view_util_1a98044d73147e95de0cd82fd4e131d3ca" kindref="member">PadLeft</ref>(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>src,<sp/><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>dst,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value<sp/>=<sp/>0.0);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_view_util_1a8593e792009543c7d21af6bdeea8f3d3" kindref="member">PadRight</ref>(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>src,<sp/><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>dst,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value<sp/>=<sp/>0.0);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_view_util_1a828f66a78c3084e7e0a56b7e05e3b0fc" kindref="member">Dot</ref>(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>s1,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ch1,<sp/><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>s2,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ch2);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_view_util_1ae115581e15bfd8b5039e88a0685580b2" kindref="member">SumChannels</ref>(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>s1,<sp/><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>sum);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_view_util_1ae115581e15bfd8b5039e88a0685580b2" kindref="member">SumChannels</ref>(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>s1,<sp/><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>sum,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>wfirst,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>wothers);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_view_util_1a82cc2f70f00bab7f0a9a39de47f24ce5" kindref="member">Fill</ref>(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>ts,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_view_util_1a7f0e2c3c9c8acbfc6f6e04182f6b126c" kindref="member">FillSeq</ref>(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>ts,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_view_util_1a6b5c89f0dee5e5c4f28243bf9cd7cc6d" kindref="member">PeekRange</ref>(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>src,<sp/><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>dst,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>tstart,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>tend);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_view_util_1afeeb25836288a1f484cb2ea6968b19dc" kindref="member">Apply</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>(*func)(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">),<sp/><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>ts);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_view_util_1afeeb25836288a1f484cb2ea6968b19dc" kindref="member">Apply</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>(*func)(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">),<sp/><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>ts,<sp/><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>res);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_view_util_1ab0581113b72809931eecd046aade4bba" kindref="member">BinOp</ref>(std::complex&lt;double&gt;<sp/>(*func)(std::complex&lt;double&gt;,<sp/>std::complex&lt;double&gt;),<sp/><ref refid="namespacetsa_1ab32775c889b53c40fa83939f22372b75" kindref="member">SeqViewComplex</ref>&amp;<sp/>ts1,<sp/><ref refid="namespacetsa_1ab32775c889b53c40fa83939f22372b75" kindref="member">SeqViewComplex</ref>&amp;<sp/>ts2,<sp/><ref refid="namespacetsa_1ab32775c889b53c40fa83939f22372b75" kindref="member">SeqViewComplex</ref>&amp;<sp/>res);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_view_util_1ab0581113b72809931eecd046aade4bba" kindref="member">BinOp</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>(*func)(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">),<sp/><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>ts1,<sp/><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>ts2,<sp/><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>res);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_view_util_1afeeb25836288a1f484cb2ea6968b19dc" kindref="member">Apply</ref>(std::complex&lt;double&gt;<sp/>(*func)(std::complex&lt;double&gt;),<sp/><ref refid="namespacetsa_1ab32775c889b53c40fa83939f22372b75" kindref="member">SeqViewComplex</ref>&amp;<sp/>fs);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_view_util_1afeeb25836288a1f484cb2ea6968b19dc" kindref="member">Apply</ref>(std::complex&lt;double&gt;<sp/>(*func)(std::complex&lt;double&gt;),<sp/><ref refid="namespacetsa_1ab32775c889b53c40fa83939f22372b75" kindref="member">SeqViewComplex</ref>&amp;<sp/>fs,<sp/><ref refid="namespacetsa_1ab32775c889b53c40fa83939f22372b75" kindref="member">SeqViewComplex</ref>&amp;<sp/>res);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_view_util_1a9e41750dd9f5f087db64175b4a50f87d" kindref="member">Sum</ref>(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>res,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>scale,<sp/><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>ts);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_view_util_1a9e41750dd9f5f087db64175b4a50f87d" kindref="member">Sum</ref>(<ref refid="namespacetsa_1ab32775c889b53c40fa83939f22372b75" kindref="member">SeqViewComplex</ref>&amp;<sp/>res,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>scale,<sp/><ref refid="namespacetsa_1ab32775c889b53c40fa83939f22372b75" kindref="member">SeqViewComplex</ref>&amp;<sp/>ts);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_view_util_1a39c49e23ff6a7ea64aa1ced4fc453c53" kindref="member">Inverse</ref>(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>ts1,<sp/><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>res);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_view_util_1a41ec224b9de8ca38affb8a83589c93c7" kindref="member">AffineTransformation</ref>(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>ts1,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>a,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>b,<sp/><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>res);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_view_util_1a7472defdb289abc1904d985e284d51a7" kindref="member">Ratio</ref>(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>ts1,<sp/><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>ts2,<sp/><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>res);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_view_util_1a7472defdb289abc1904d985e284d51a7" kindref="member">Ratio</ref>(<ref refid="namespacetsa_1ab32775c889b53c40fa83939f22372b75" kindref="member">SeqViewComplex</ref>&amp;<sp/>ts1,<sp/><ref refid="namespacetsa_1ab32775c889b53c40fa83939f22372b75" kindref="member">SeqViewComplex</ref>&amp;<sp/>ts2,<sp/><ref refid="namespacetsa_1ab32775c889b53c40fa83939f22372b75" kindref="member">SeqViewComplex</ref>&amp;<sp/>res);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_view_util_1a7472defdb289abc1904d985e284d51a7" kindref="member">Ratio</ref>(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>ts1,<sp/><ref refid="namespacetsa_1ab32775c889b53c40fa83939f22372b75" kindref="member">SeqViewComplex</ref>&amp;<sp/>ts2,<sp/><ref refid="namespacetsa_1ab32775c889b53c40fa83939f22372b75" kindref="member">SeqViewComplex</ref>&amp;<sp/>res);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_view_util_1a7472defdb289abc1904d985e284d51a7" kindref="member">Ratio</ref>(<ref refid="namespacetsa_1ab32775c889b53c40fa83939f22372b75" kindref="member">SeqViewComplex</ref>&amp;<sp/>ts1,<sp/><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>ts2,<sp/><ref refid="namespacetsa_1ab32775c889b53c40fa83939f22372b75" kindref="member">SeqViewComplex</ref>&amp;<sp/>res);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_view_util_1a3ae34d28562d6ff11069e28442ddf4ab" kindref="member">ComplexToPolar</ref>(<ref refid="namespacetsa_1ab32775c889b53c40fa83939f22372b75" kindref="member">SeqViewComplex</ref>&amp;<sp/>ts1,<sp/><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>ts2);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_view_util_1a2db516bb45aff911805ac0e918235dec" kindref="member">Norm</ref>(<ref refid="namespacetsa_1ab32775c889b53c40fa83939f22372b75" kindref="member">SeqViewComplex</ref>&amp;<sp/>ts1,<sp/><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>res);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_view_util_1ad297c324daf336cab231821a72770cc6" kindref="member">Abs</ref>(<ref refid="namespacetsa_1ab32775c889b53c40fa83939f22372b75" kindref="member">SeqViewComplex</ref>&amp;<sp/>ts1,<sp/><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>res);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_view_util_1a287fcc46c379b13cb9e309e4d1113cef" kindref="member">Abs2</ref>(<ref refid="namespacetsa_1ab32775c889b53c40fa83939f22372b75" kindref="member">SeqViewComplex</ref>&amp;<sp/>ts1,<sp/><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>res);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_view_util_1afd5abb9a4e1b52991858e82299f1dd0a" kindref="member">Prod</ref>(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>ts1,<sp/><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>ts2,<sp/><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>res);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_view_util_1afd5abb9a4e1b52991858e82299f1dd0a" kindref="member">Prod</ref>(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>ts1,<sp/><ref refid="namespacetsa_1ab32775c889b53c40fa83939f22372b75" kindref="member">SeqViewComplex</ref>&amp;<sp/>ts2,<sp/><ref refid="namespacetsa_1ab32775c889b53c40fa83939f22372b75" kindref="member">SeqViewComplex</ref>&amp;<sp/>res);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_view_util_1aa459fc722f2de53f9c8a5fae665053fa" kindref="member">ProdConj</ref>(<ref refid="namespacetsa_1ab32775c889b53c40fa83939f22372b75" kindref="member">SeqViewComplex</ref>&amp;<sp/>ts1,<sp/><ref refid="namespacetsa_1ab32775c889b53c40fa83939f22372b75" kindref="member">SeqViewComplex</ref>&amp;<sp/>ts2,<sp/><ref refid="namespacetsa_1ab32775c889b53c40fa83939f22372b75" kindref="member">SeqViewComplex</ref>&amp;<sp/>res);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_view_util_1aaffeb0990bd91866c40a10f25cda7f5c" kindref="member">Phase</ref>(<ref refid="namespacetsa_1ab32775c889b53c40fa83939f22372b75" kindref="member">SeqViewComplex</ref>&amp;<sp/>ts1,<sp/><ref refid="namespacetsa_1ab32775c889b53c40fa83939f22372b75" kindref="member">SeqViewComplex</ref>&amp;<sp/>ts2,<sp/><ref refid="namespacetsa_1ab32775c889b53c40fa83939f22372b75" kindref="member">SeqViewComplex</ref>&amp;<sp/>res);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_view_util_1acc21d93e9a9f6c6522adade5fd6e6f1f" kindref="member">BlockSum</ref>(<ref refid="namespacetsa_1ab32775c889b53c40fa83939f22372b75" kindref="member">SeqViewComplex</ref>&amp;<sp/>in,<sp/><ref refid="namespacetsa_1ab32775c889b53c40fa83939f22372b75" kindref="member">SeqViewComplex</ref>&amp;<sp/>out,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bsize);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::complex&lt;double&gt;<sp/><ref refid="classtsa_1_1_view_util_1a6ce61da5cef5306cc1cbbf715c39871c" kindref="member">Integrate</ref>(<ref refid="namespacetsa_1ab32775c889b53c40fa83939f22372b75" kindref="member">SeqViewComplex</ref>&amp;<sp/>data,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>f1,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>f2);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_view_util_1a6ce61da5cef5306cc1cbbf715c39871c" kindref="member">Integrate</ref>(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>data,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>f1,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>f2);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::complex&lt;double&gt;<sp/><ref refid="classtsa_1_1_view_util_1afdc977e523a31a8f009fb338d7f9937f" kindref="member">DelayIntegrate</ref>(<ref refid="namespacetsa_1ab32775c889b53c40fa83939f22372b75" kindref="member">SeqViewComplex</ref>&amp;<sp/>data,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>tau,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>f1,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>f2);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::complex&lt;double&gt;<sp/><ref refid="classtsa_1_1_view_util_1afdc977e523a31a8f009fb338d7f9937f" kindref="member">DelayIntegrate</ref>(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>data,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>tau,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>f1,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>f2);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_view_util_1ad9984dcf61bae9647aac60f0d3141d71" kindref="member">Multiply</ref>(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>in1,<sp/><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>in2,<sp/><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>res);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_view_util_1ad9984dcf61bae9647aac60f0d3141d71" kindref="member">Multiply</ref>(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>in1,<sp/><ref refid="namespacetsa_1ab32775c889b53c40fa83939f22372b75" kindref="member">SeqViewComplex</ref>&amp;<sp/>in2,<sp/><ref refid="namespacetsa_1ab32775c889b53c40fa83939f22372b75" kindref="member">SeqViewComplex</ref>&amp;<sp/>res);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_view_util_1ad9984dcf61bae9647aac60f0d3141d71" kindref="member">Multiply</ref>(<ref refid="namespacetsa_1ab32775c889b53c40fa83939f22372b75" kindref="member">SeqViewComplex</ref>&amp;<sp/>in1,<sp/><ref refid="namespacetsa_1ab32775c889b53c40fa83939f22372b75" kindref="member">SeqViewComplex</ref>&amp;<sp/>in2,<sp/><ref refid="namespacetsa_1ab32775c889b53c40fa83939f22372b75" kindref="member">SeqViewComplex</ref>&amp;<sp/>res);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"></codeline>
+<codeline lineno="215"></codeline>
+<codeline lineno="217"></codeline>
+<codeline lineno="222"></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>end<sp/>namespace<sp/>tsa</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>__VIEWUTIL_HPP</highlight></codeline>
+    </programlisting>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ViewUtil.hpp"/>
+  </compounddef>
+</doxygen>

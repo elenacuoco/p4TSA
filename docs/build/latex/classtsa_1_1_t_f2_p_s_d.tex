@@ -1,0 +1,189 @@
+\hypertarget{classtsa_1_1_t_f2_p_s_d}{}\section{tsa\+:\+:T\+F2\+P\+SD Class Reference}
+\label{classtsa_1_1_t_f2_p_s_d}\index{tsa\+::\+T\+F2\+P\+SD@{tsa\+::\+T\+F2\+P\+SD}}
+
+
+{\ttfamily \#include $<$T\+F2\+Psd.\+hpp$>$}
+
+Inheritance diagram for tsa\+:\+:T\+F2\+P\+SD\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classtsa_1_1_t_f2_p_s_d}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtsa_1_1_t_f2_p_s_d_a0557e0572905d9c92cec5c42851f00f9}{T\+F2\+P\+SD} (bool squared=false)
+\item 
+\hyperlink{classtsa_1_1_t_f2_p_s_d_a180ccd6544ef862a0b63a962e4c3e9b6}{T\+F2\+P\+SD} (const \hyperlink{classtsa_1_1_t_f2_p_s_d}{T\+F2\+P\+SD} \&from)
+\item 
+virtual \hyperlink{classtsa_1_1_t_f2_p_s_d_a99c083327989d11f095fb2194f02c852}{$\sim$\+T\+F2\+P\+SD} ()
+\item 
+\hyperlink{classtsa_1_1_t_f2_p_s_d}{T\+F2\+P\+SD} \& \hyperlink{classtsa_1_1_t_f2_p_s_d_a27a169e96e34605ccd463ca3f66e2cd1}{operator=} (const \hyperlink{classtsa_1_1_t_f2_p_s_d}{T\+F2\+P\+SD} \&from)
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Operations}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtsa_1_1_t_f2_p_s_d_a9dbd9ccbc11e2b02dd7e187cfbcab8fa}{execute} (\hyperlink{namespacetsa_a86348fef1603a135fe5fba9e5f5486ee}{Cmatrix} \&tf, \hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&psd)  throw (bad\+\_\+matrix\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Brief documentation for the execute method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Getters}\par
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classtsa_1_1_t_f2_p_s_d_a1299b56268f7c194f605e497b0d3faae}{Get\+Squared} ()
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Setters}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtsa_1_1_t_f2_p_s_d_ac290dcfd9dc0a822c0df47eceee73692}{Set\+Squared} (bool squared=true)
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classtsa_1_1_t_f2_p_s_d_a9f8b0c7e90cf9e22c994313e5e92cabe}{m\+Squared\+Flag}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Convert a transfer function to a P\+SD 
+
+Definition at line 71 of file T\+F2\+Psd.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtsa_1_1_t_f2_p_s_d_a0557e0572905d9c92cec5c42851f00f9}\label{classtsa_1_1_t_f2_p_s_d_a0557e0572905d9c92cec5c42851f00f9}} 
+\index{tsa\+::\+T\+F2\+P\+SD@{tsa\+::\+T\+F2\+P\+SD}!T\+F2\+P\+SD@{T\+F2\+P\+SD}}
+\index{T\+F2\+P\+SD@{T\+F2\+P\+SD}!tsa\+::\+T\+F2\+P\+SD@{tsa\+::\+T\+F2\+P\+SD}}
+\subsubsection{\texorpdfstring{T\+F2\+P\+S\+D()}{TF2PSD()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily tsa\+::\+T\+F2\+P\+S\+D\+::\+T\+F2\+P\+SD (\begin{DoxyParamCaption}\item[{bool}]{squared = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor 
+
+Definition at line 77 of file T\+F2\+Psd.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_t_f2_p_s_d_a180ccd6544ef862a0b63a962e4c3e9b6}\label{classtsa_1_1_t_f2_p_s_d_a180ccd6544ef862a0b63a962e4c3e9b6}} 
+\index{tsa\+::\+T\+F2\+P\+SD@{tsa\+::\+T\+F2\+P\+SD}!T\+F2\+P\+SD@{T\+F2\+P\+SD}}
+\index{T\+F2\+P\+SD@{T\+F2\+P\+SD}!tsa\+::\+T\+F2\+P\+SD@{tsa\+::\+T\+F2\+P\+SD}}
+\subsubsection{\texorpdfstring{T\+F2\+P\+S\+D()}{TF2PSD()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily tsa\+::\+T\+F2\+P\+S\+D\+::\+T\+F2\+P\+SD (\begin{DoxyParamCaption}\item[{const \hyperlink{classtsa_1_1_t_f2_p_s_d}{T\+F2\+P\+SD} \&}]{from }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Copy constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & The instance that must be copied \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 86 of file T\+F2\+Psd.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_t_f2_p_s_d_a99c083327989d11f095fb2194f02c852}\label{classtsa_1_1_t_f2_p_s_d_a99c083327989d11f095fb2194f02c852}} 
+\index{tsa\+::\+T\+F2\+P\+SD@{tsa\+::\+T\+F2\+P\+SD}!````~T\+F2\+P\+SD@{$\sim$\+T\+F2\+P\+SD}}
+\index{````~T\+F2\+P\+SD@{$\sim$\+T\+F2\+P\+SD}!tsa\+::\+T\+F2\+P\+SD@{tsa\+::\+T\+F2\+P\+SD}}
+\subsubsection{\texorpdfstring{$\sim$\+T\+F2\+P\+S\+D()}{~TF2PSD()}}
+{\footnotesize\ttfamily virtual tsa\+::\+T\+F2\+P\+S\+D\+::$\sim$\+T\+F2\+P\+SD (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Destructor 
+
+Definition at line 93 of file T\+F2\+Psd.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classtsa_1_1_t_f2_p_s_d_a9dbd9ccbc11e2b02dd7e187cfbcab8fa}\label{classtsa_1_1_t_f2_p_s_d_a9dbd9ccbc11e2b02dd7e187cfbcab8fa}} 
+\index{tsa\+::\+T\+F2\+P\+SD@{tsa\+::\+T\+F2\+P\+SD}!execute@{execute}}
+\index{execute@{execute}!tsa\+::\+T\+F2\+P\+SD@{tsa\+::\+T\+F2\+P\+SD}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void tsa\+::\+T\+F2\+P\+S\+D\+::execute (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_a86348fef1603a135fe5fba9e5f5486ee}{Cmatrix} \&}]{tf,  }\item[{\hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&}]{psd }\end{DoxyParamCaption}) throw  \hyperlink{classtsa_1_1bad__matrix__size}{bad\+\_\+matrix\+\_\+size}) \hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Brief documentation for the execute method. 
+
+Start of the long documentation for execute method.
+
+\begin{DoxyPrecond}{Precondition}
+A precondition 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+A postcondition 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em An} & exception\\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}{Parameters}
+{\em a} & parameter\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a returned value 
+\end{DoxyReturn}
+
+
+Definition at line 127 of file T\+F2\+Psd.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_t_f2_p_s_d_a1299b56268f7c194f605e497b0d3faae}\label{classtsa_1_1_t_f2_p_s_d_a1299b56268f7c194f605e497b0d3faae}} 
+\index{tsa\+::\+T\+F2\+P\+SD@{tsa\+::\+T\+F2\+P\+SD}!Get\+Squared@{Get\+Squared}}
+\index{Get\+Squared@{Get\+Squared}!tsa\+::\+T\+F2\+P\+SD@{tsa\+::\+T\+F2\+P\+SD}}
+\subsubsection{\texorpdfstring{Get\+Squared()}{GetSquared()}}
+{\footnotesize\ttfamily bool tsa\+::\+T\+F2\+P\+S\+D\+::\+Get\+Squared (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 162 of file T\+F2\+Psd.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_t_f2_p_s_d_a27a169e96e34605ccd463ca3f66e2cd1}\label{classtsa_1_1_t_f2_p_s_d_a27a169e96e34605ccd463ca3f66e2cd1}} 
+\index{tsa\+::\+T\+F2\+P\+SD@{tsa\+::\+T\+F2\+P\+SD}!operator=@{operator=}}
+\index{operator=@{operator=}!tsa\+::\+T\+F2\+P\+SD@{tsa\+::\+T\+F2\+P\+SD}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{classtsa_1_1_t_f2_p_s_d}{T\+F2\+P\+SD}\& tsa\+::\+T\+F2\+P\+S\+D\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{classtsa_1_1_t_f2_p_s_d}{T\+F2\+P\+SD} \&}]{from }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Assignement operator
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & The instance to be assigned from\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a reference to a new object 
+\end{DoxyReturn}
+
+
+Definition at line 104 of file T\+F2\+Psd.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_t_f2_p_s_d_ac290dcfd9dc0a822c0df47eceee73692}\label{classtsa_1_1_t_f2_p_s_d_ac290dcfd9dc0a822c0df47eceee73692}} 
+\index{tsa\+::\+T\+F2\+P\+SD@{tsa\+::\+T\+F2\+P\+SD}!Set\+Squared@{Set\+Squared}}
+\index{Set\+Squared@{Set\+Squared}!tsa\+::\+T\+F2\+P\+SD@{tsa\+::\+T\+F2\+P\+SD}}
+\subsubsection{\texorpdfstring{Set\+Squared()}{SetSquared()}}
+{\footnotesize\ttfamily void tsa\+::\+T\+F2\+P\+S\+D\+::\+Set\+Squared (\begin{DoxyParamCaption}\item[{bool}]{squared = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 173 of file T\+F2\+Psd.\+hpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classtsa_1_1_t_f2_p_s_d_a9f8b0c7e90cf9e22c994313e5e92cabe}\label{classtsa_1_1_t_f2_p_s_d_a9f8b0c7e90cf9e22c994313e5e92cabe}} 
+\index{tsa\+::\+T\+F2\+P\+SD@{tsa\+::\+T\+F2\+P\+SD}!m\+Squared\+Flag@{m\+Squared\+Flag}}
+\index{m\+Squared\+Flag@{m\+Squared\+Flag}!tsa\+::\+T\+F2\+P\+SD@{tsa\+::\+T\+F2\+P\+SD}}
+\subsubsection{\texorpdfstring{m\+Squared\+Flag}{mSquaredFlag}}
+{\footnotesize\ttfamily bool tsa\+::\+T\+F2\+P\+S\+D\+::m\+Squared\+Flag\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 175 of file T\+F2\+Psd.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/include/\hyperlink{_t_f2_psd_8hpp}{T\+F2\+Psd.\+hpp}\end{DoxyCompactItemize}

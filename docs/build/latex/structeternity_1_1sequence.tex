@@ -1,0 +1,83 @@
+\hypertarget{structeternity_1_1sequence}{}\section{eternity\+:\+:sequence$<$ Collection\+Content $>$ Struct Template Reference}
+\label{structeternity_1_1sequence}\index{eternity\+::sequence$<$ Collection\+Content $>$@{eternity\+::sequence$<$ Collection\+Content $>$}}
+
+
+{\ttfamily \#include $<$algorithms.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Input\+Iterator , class Archive $>$ }\\size\+\_\+t \hyperlink{structeternity_1_1sequence_a4e7cf210d285c8b3f72faa3d81ef9bad}{xml\+\_\+write} (Input\+Iterator first, Input\+Iterator last, Archive \&\hyperlink{classeternity_1_1archive}{archive})
+\item 
+{\footnotesize template$<$class Container , class Input\+Iterator , class Archive $>$ }\\void \hyperlink{structeternity_1_1sequence_ae510997cf3ed034443737ca0f05e9a34}{xml\+\_\+read} (Container \&container, Input\+Iterator insert, size\+\_\+t len, Archive \&\hyperlink{classeternity_1_1archive}{archive})
+\item 
+{\footnotesize template$<$class Input\+Iterator , class Archive $>$ }\\size\+\_\+t \hyperlink{structeternity_1_1sequence_a5339872e64fcb9636ef080e5b932658a}{write} (Input\+Iterator first, Input\+Iterator last, Archive \&\hyperlink{classeternity_1_1archive}{archive})
+\item 
+{\footnotesize template$<$class Container , class Input\+Iterator , class Archive $>$ }\\void \hyperlink{structeternity_1_1sequence_ac0bc259640bda1d30744b14c59539d20}{read} (Container \&container, Input\+Iterator insert, size\+\_\+t len, Archive \&\hyperlink{classeternity_1_1archive}{archive})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class Collection\+Content$>$\newline
+struct eternity\+::sequence$<$ Collection\+Content $>$}
+
+Manage persistence of sequence containers (e.\+g. vector, list). Use template parameter to specify contents type (e.\+g. primitives, objects or pointers). This struct is not intended to direct use but must be passed as template parameter of xml\+\_\+serialize() or serialize() algorithms. 
+
+Definition at line 158 of file algorithms.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structeternity_1_1sequence_ac0bc259640bda1d30744b14c59539d20}\label{structeternity_1_1sequence_ac0bc259640bda1d30744b14c59539d20}} 
+\index{eternity\+::sequence@{eternity\+::sequence}!read@{read}}
+\index{read@{read}!eternity\+::sequence@{eternity\+::sequence}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily template$<$class Collection\+Content $>$ \\
+template$<$class Container , class Input\+Iterator , class Archive $>$ \\
+void \hyperlink{structeternity_1_1sequence}{eternity\+::sequence}$<$ Collection\+Content $>$\+::read (\begin{DoxyParamCaption}\item[{Container \&}]{container,  }\item[{Input\+Iterator}]{insert,  }\item[{size\+\_\+t}]{len,  }\item[{Archive \&}]{archive }\end{DoxyParamCaption})}
+
+
+
+Definition at line 209 of file algorithms.\+hpp.
+
+\mbox{\Hypertarget{structeternity_1_1sequence_a5339872e64fcb9636ef080e5b932658a}\label{structeternity_1_1sequence_a5339872e64fcb9636ef080e5b932658a}} 
+\index{eternity\+::sequence@{eternity\+::sequence}!write@{write}}
+\index{write@{write}!eternity\+::sequence@{eternity\+::sequence}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily template$<$class Collection\+Content $>$ \\
+template$<$class Input\+Iterator , class Archive $>$ \\
+size\+\_\+t \hyperlink{structeternity_1_1sequence}{eternity\+::sequence}$<$ Collection\+Content $>$\+::write (\begin{DoxyParamCaption}\item[{Input\+Iterator}]{first,  }\item[{Input\+Iterator}]{last,  }\item[{Archive \&}]{archive }\end{DoxyParamCaption})}
+
+
+
+Definition at line 197 of file algorithms.\+hpp.
+
+\mbox{\Hypertarget{structeternity_1_1sequence_ae510997cf3ed034443737ca0f05e9a34}\label{structeternity_1_1sequence_ae510997cf3ed034443737ca0f05e9a34}} 
+\index{eternity\+::sequence@{eternity\+::sequence}!xml\+\_\+read@{xml\+\_\+read}}
+\index{xml\+\_\+read@{xml\+\_\+read}!eternity\+::sequence@{eternity\+::sequence}}
+\subsubsection{\texorpdfstring{xml\+\_\+read()}{xml\_read()}}
+{\footnotesize\ttfamily template$<$class Collection\+Content $>$ \\
+template$<$class Container , class Input\+Iterator , class Archive $>$ \\
+void \hyperlink{structeternity_1_1sequence}{eternity\+::sequence}$<$ Collection\+Content $>$\+::xml\+\_\+read (\begin{DoxyParamCaption}\item[{Container \&}]{container,  }\item[{Input\+Iterator}]{insert,  }\item[{size\+\_\+t}]{len,  }\item[{Archive \&}]{archive }\end{DoxyParamCaption})}
+
+
+
+Definition at line 185 of file algorithms.\+hpp.
+
+\mbox{\Hypertarget{structeternity_1_1sequence_a4e7cf210d285c8b3f72faa3d81ef9bad}\label{structeternity_1_1sequence_a4e7cf210d285c8b3f72faa3d81ef9bad}} 
+\index{eternity\+::sequence@{eternity\+::sequence}!xml\+\_\+write@{xml\+\_\+write}}
+\index{xml\+\_\+write@{xml\+\_\+write}!eternity\+::sequence@{eternity\+::sequence}}
+\subsubsection{\texorpdfstring{xml\+\_\+write()}{xml\_write()}}
+{\footnotesize\ttfamily template$<$class Collection\+Content $>$ \\
+template$<$class Input\+Iterator , class Archive $>$ \\
+size\+\_\+t \hyperlink{structeternity_1_1sequence}{eternity\+::sequence}$<$ Collection\+Content $>$\+::xml\+\_\+write (\begin{DoxyParamCaption}\item[{Input\+Iterator}]{first,  }\item[{Input\+Iterator}]{last,  }\item[{Archive \&}]{archive }\end{DoxyParamCaption})}
+
+
+
+Definition at line 173 of file algorithms.\+hpp.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/include/eternity/\hyperlink{algorithms_8hpp}{algorithms.\+hpp}\end{DoxyCompactItemize}

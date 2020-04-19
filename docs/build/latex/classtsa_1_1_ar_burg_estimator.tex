@@ -1,0 +1,434 @@
+\hypertarget{classtsa_1_1_ar_burg_estimator}{}\section{tsa\+:\+:Ar\+Burg\+Estimator Class Reference}
+\label{classtsa_1_1_ar_burg_estimator}\index{tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}}
+
+
+Estimate the Parcor and AR parameters on a sequence of data.  
+
+
+
+
+{\ttfamily \#include $<$Ar\+Burg\+Estimator.\+hpp$>$}
+
+Inheritance diagram for tsa\+:\+:Ar\+Burg\+Estimator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classtsa_1_1_ar_burg_estimator}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtsa_1_1_ar_burg_estimator_a6204df3016ce1f4aabf95fe4e05b27c4}{Ar\+Burg\+Estimator} (unsigned int Ar\+Order)
+\item 
+virtual \hyperlink{classtsa_1_1_ar_burg_estimator_a4b72f798ee5330d446366c4296aec27b}{$\sim$\+Ar\+Burg\+Estimator} ()
+\item 
+void \hyperlink{classtsa_1_1_ar_burg_estimator_a909ccc5f3ec7155ca60fb23122a8edfd}{Load} (const char $\ast$filename, const char $\ast$fmt=\char`\"{}txt\char`\"{})
+\item 
+void \hyperlink{classtsa_1_1_ar_burg_estimator_a5f666a51727cfd49d748973b8f050763}{Save} (const char $\ast$filename, const char $\ast$fmt=\char`\"{}txt\char`\"{})
+\item 
+void \hyperlink{classtsa_1_1_ar_burg_estimator_a2760a49fb1837ff81061ebf7431de0ef}{xml\+\_\+serialize} (\hyperlink{classeternity_1_1xml__archive}{eternity\+::xml\+\_\+archive} \&xml, const char $\ast$prefix)
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Operations}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtsa_1_1_ar_burg_estimator_a904c4776668339798aa429622989dae6}{operator()} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&Input\+Data, \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&Whitened\+Data)
+\item 
+void \hyperlink{classtsa_1_1_ar_burg_estimator_a4c318ac037fabbad13f506e97576034a}{Color} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&Whitened\+Data, \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&Colored\+Data)
+\item 
+void \hyperlink{classtsa_1_1_ar_burg_estimator_a84c6368cebbbe6965e28769e406d4310}{operator()} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&Input\+Data)
+\item 
+void \hyperlink{classtsa_1_1_ar_burg_estimator_aab366c108b53cb7d4ac5b76d5f6ac465}{execute} (matrix\+\_\+row$<$ \hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} $>$ Input\+Data)
+\begin{DoxyCompactList}\small\item\em Estimate the Parcor and AR parameters on a sequence of data. \end{DoxyCompactList}\item 
+void \hyperlink{classtsa_1_1_ar_burg_estimator_a3b6d9a2e792b5cd1abb9c8daadc15cac}{color} (matrix\+\_\+row$<$ \hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} $>$ Whitened\+Data, matrix\+\_\+row$<$ \hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} $>$ Colored\+Data)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Getters}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtsa_1_1_ar_burg_estimator_a06b9a3daeecfcc31d6c5e617848ee200}{Get\+Lattice\+View} (\hyperlink{classtsa_1_1_lattice_view}{Lattice\+View} \&LV)
+\item 
+unsigned int \hyperlink{classtsa_1_1_ar_burg_estimator_a61a8a96608a0d354a1dd942cdf71c669}{Get\+Ar\+Order} ()
+\item 
+double \hyperlink{classtsa_1_1_ar_burg_estimator_abfbc945d2915208835f1bce7062a14c4}{Get\+Parcor} (unsigned int j)
+\item 
+double \hyperlink{classtsa_1_1_ar_burg_estimator_ae896885d9fcc18375eb2d3c00f3ceec7}{Get\+AR} (unsigned int j)
+\item 
+double \hyperlink{classtsa_1_1_ar_burg_estimator_a63e4fbfbd1245e1a899cc783c77f5bfd}{Get\+Error\+Forward} (unsigned int j)
+\item 
+double \hyperlink{classtsa_1_1_ar_burg_estimator_ae12190c986e02299da186dc29e97cded}{Get\+Error\+Backward} (unsigned int j)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Setters}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtsa_1_1_ar_burg_estimator_acbf9046f1ff3d7e2852ec4daa30ac8af}{Set\+Ar\+Order} (unsigned int P)
+\begin{DoxyCompactList}\small\item\em setters \end{DoxyCompactList}\item 
+void \hyperlink{classtsa_1_1_ar_burg_estimator_ae3873be61a19beab0b5b6e915c594889}{Set\+AR} (unsigned int j, double value)
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{classtsa_1_1_ar_burg_estimator_a918baccfeb2101848018b6abcf1e9b19}{m\+Ar\+Order}
+\item 
+\hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} \hyperlink{classtsa_1_1_ar_burg_estimator_a51cbda2be55098f65e4d710cfe1153b7}{m\+Parcor}
+\item 
+\hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} \hyperlink{classtsa_1_1_ar_burg_estimator_a6d0a5657630ecd64c33761a8f0c835e1}{m\+AR}
+\item 
+\hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} \hyperlink{classtsa_1_1_ar_burg_estimator_a3ff0b47d541f89567d177a42103a95a2}{m\+Error\+Forward}
+\item 
+\hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} \hyperlink{classtsa_1_1_ar_burg_estimator_abe77e4f47e6eb9e1f39e22f99331c981}{m\+Error\+Backward}
+\item 
+\hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} \hyperlink{classtsa_1_1_ar_burg_estimator_a3d033517e7242d079e14038dcd50556c}{m\+Whitened\+Data}
+\item 
+\hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} \hyperlink{classtsa_1_1_ar_burg_estimator_a7b50a6b230b2236500f54f9561d9ef7d}{m\+Colored\+Data}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Estimate the Parcor and AR parameters on a sequence of data. 
+
+Definition at line 77 of file Ar\+Burg\+Estimator.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtsa_1_1_ar_burg_estimator_a6204df3016ce1f4aabf95fe4e05b27c4}\label{classtsa_1_1_ar_burg_estimator_a6204df3016ce1f4aabf95fe4e05b27c4}} 
+\index{tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}!Ar\+Burg\+Estimator@{Ar\+Burg\+Estimator}}
+\index{Ar\+Burg\+Estimator@{Ar\+Burg\+Estimator}!tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}}
+\subsubsection{\texorpdfstring{Ar\+Burg\+Estimator()}{ArBurgEstimator()}}
+{\footnotesize\ttfamily tsa\+::\+Ar\+Burg\+Estimator\+::\+Ar\+Burg\+Estimator (\begin{DoxyParamCaption}\item[{unsigned int}]{Ar\+Order }\end{DoxyParamCaption})}
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em Ar\+Order} & order of the AR model \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 20 of file Ar\+Burg\+Estimator.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_ar_burg_estimator_a4b72f798ee5330d446366c4296aec27b}\label{classtsa_1_1_ar_burg_estimator_a4b72f798ee5330d446366c4296aec27b}} 
+\index{tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}!````~Ar\+Burg\+Estimator@{$\sim$\+Ar\+Burg\+Estimator}}
+\index{````~Ar\+Burg\+Estimator@{$\sim$\+Ar\+Burg\+Estimator}!tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}}
+\subsubsection{\texorpdfstring{$\sim$\+Ar\+Burg\+Estimator()}{~ArBurgEstimator()}}
+{\footnotesize\ttfamily tsa\+::\+Ar\+Burg\+Estimator\+::$\sim$\+Ar\+Burg\+Estimator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destructor 
+
+Definition at line 29 of file Ar\+Burg\+Estimator.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classtsa_1_1_ar_burg_estimator_a4c318ac037fabbad13f506e97576034a}\label{classtsa_1_1_ar_burg_estimator_a4c318ac037fabbad13f506e97576034a}} 
+\index{tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}!Color@{Color}}
+\index{Color@{Color}!tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}}
+\subsubsection{\texorpdfstring{Color()}{Color()}}
+{\footnotesize\ttfamily void tsa\+::\+Ar\+Burg\+Estimator\+::\+Color (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{Whitened\+Data,  }\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{Colored\+Data }\end{DoxyParamCaption})}
+
+Implements the estimation of the AR paramenters using the Burg method.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Input\+Data} & Input data time series \\
+\hline
+{\em Whitened\+Data} & Whitened time series \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 54 of file Ar\+Burg\+Estimator.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_ar_burg_estimator_a3b6d9a2e792b5cd1abb9c8daadc15cac}\label{classtsa_1_1_ar_burg_estimator_a3b6d9a2e792b5cd1abb9c8daadc15cac}} 
+\index{tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}!color@{color}}
+\index{color@{color}!tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}}
+\subsubsection{\texorpdfstring{color()}{color()}}
+{\footnotesize\ttfamily void tsa\+::\+Ar\+Burg\+Estimator\+::color (\begin{DoxyParamCaption}\item[{matrix\+\_\+row$<$ \hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} $>$}]{Whitened\+Data,  }\item[{matrix\+\_\+row$<$ \hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} $>$}]{Colored\+Data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 142 of file Ar\+Burg\+Estimator.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_ar_burg_estimator_aab366c108b53cb7d4ac5b76d5f6ac465}\label{classtsa_1_1_ar_burg_estimator_aab366c108b53cb7d4ac5b76d5f6ac465}} 
+\index{tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}!execute@{execute}}
+\index{execute@{execute}!tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void tsa\+::\+Ar\+Burg\+Estimator\+::execute (\begin{DoxyParamCaption}\item[{matrix\+\_\+row$<$ \hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} $>$}]{Input\+Data }\end{DoxyParamCaption})}
+
+
+
+Estimate the Parcor and AR parameters on a sequence of data. 
+
+\begin{DoxyPrecond}{Precondition}
+The lenght of the input sequence must be greater then the AR order 
+\end{DoxyPrecond}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000002}{Todo}]Add execption\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em Input\+Data} & is the input sequences of data \\
+\hline
+\end{DoxyParams}
+contain the norm of the input data 
+
+Definition at line 79 of file Ar\+Burg\+Estimator.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_ar_burg_estimator_ae896885d9fcc18375eb2d3c00f3ceec7}\label{classtsa_1_1_ar_burg_estimator_ae896885d9fcc18375eb2d3c00f3ceec7}} 
+\index{tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}!Get\+AR@{Get\+AR}}
+\index{Get\+AR@{Get\+AR}!tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}}
+\subsubsection{\texorpdfstring{Get\+A\+R()}{GetAR()}}
+{\footnotesize\ttfamily double tsa\+::\+Ar\+Burg\+Estimator\+::\+Get\+AR (\begin{DoxyParamCaption}\item[{unsigned int}]{j }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Get The AR values 
+\end{DoxyReturn}
+
+
+Definition at line 193 of file Ar\+Burg\+Estimator.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_ar_burg_estimator_a61a8a96608a0d354a1dd942cdf71c669}\label{classtsa_1_1_ar_burg_estimator_a61a8a96608a0d354a1dd942cdf71c669}} 
+\index{tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}!Get\+Ar\+Order@{Get\+Ar\+Order}}
+\index{Get\+Ar\+Order@{Get\+Ar\+Order}!tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}}
+\subsubsection{\texorpdfstring{Get\+Ar\+Order()}{GetArOrder()}}
+{\footnotesize\ttfamily unsigned int tsa\+::\+Ar\+Burg\+Estimator\+::\+Get\+Ar\+Order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+the Ar Order 
+\end{DoxyReturn}
+
+
+Definition at line 185 of file Ar\+Burg\+Estimator.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_ar_burg_estimator_ae12190c986e02299da186dc29e97cded}\label{classtsa_1_1_ar_burg_estimator_ae12190c986e02299da186dc29e97cded}} 
+\index{tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}!Get\+Error\+Backward@{Get\+Error\+Backward}}
+\index{Get\+Error\+Backward@{Get\+Error\+Backward}!tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}}
+\subsubsection{\texorpdfstring{Get\+Error\+Backward()}{GetErrorBackward()}}
+{\footnotesize\ttfamily double tsa\+::\+Ar\+Burg\+Estimator\+::\+Get\+Error\+Backward (\begin{DoxyParamCaption}\item[{unsigned int}]{j }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Get the Error\+Backward values 
+\end{DoxyReturn}
+
+
+Definition at line 201 of file Ar\+Burg\+Estimator.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_ar_burg_estimator_a63e4fbfbd1245e1a899cc783c77f5bfd}\label{classtsa_1_1_ar_burg_estimator_a63e4fbfbd1245e1a899cc783c77f5bfd}} 
+\index{tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}!Get\+Error\+Forward@{Get\+Error\+Forward}}
+\index{Get\+Error\+Forward@{Get\+Error\+Forward}!tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}}
+\subsubsection{\texorpdfstring{Get\+Error\+Forward()}{GetErrorForward()}}
+{\footnotesize\ttfamily double tsa\+::\+Ar\+Burg\+Estimator\+::\+Get\+Error\+Forward (\begin{DoxyParamCaption}\item[{unsigned int}]{j }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Get the Error\+Forward values 
+\end{DoxyReturn}
+
+
+Definition at line 197 of file Ar\+Burg\+Estimator.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_ar_burg_estimator_a06b9a3daeecfcc31d6c5e617848ee200}\label{classtsa_1_1_ar_burg_estimator_a06b9a3daeecfcc31d6c5e617848ee200}} 
+\index{tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}!Get\+Lattice\+View@{Get\+Lattice\+View}}
+\index{Get\+Lattice\+View@{Get\+Lattice\+View}!tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}}
+\subsubsection{\texorpdfstring{Get\+Lattice\+View()}{GetLatticeView()}}
+{\footnotesize\ttfamily void tsa\+::\+Ar\+Burg\+Estimator\+::\+Get\+Lattice\+View (\begin{DoxyParamCaption}\item[{\hyperlink{classtsa_1_1_lattice_view}{Lattice\+View} \&}]{LV }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em LV} & the target lattice view \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 168 of file Ar\+Burg\+Estimator.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_ar_burg_estimator_abfbc945d2915208835f1bce7062a14c4}\label{classtsa_1_1_ar_burg_estimator_abfbc945d2915208835f1bce7062a14c4}} 
+\index{tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}!Get\+Parcor@{Get\+Parcor}}
+\index{Get\+Parcor@{Get\+Parcor}!tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}}
+\subsubsection{\texorpdfstring{Get\+Parcor()}{GetParcor()}}
+{\footnotesize\ttfamily double tsa\+::\+Ar\+Burg\+Estimator\+::\+Get\+Parcor (\begin{DoxyParamCaption}\item[{unsigned int}]{j }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Get The Parcor values 
+\end{DoxyReturn}
+
+
+Definition at line 189 of file Ar\+Burg\+Estimator.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_ar_burg_estimator_a909ccc5f3ec7155ca60fb23122a8edfd}\label{classtsa_1_1_ar_burg_estimator_a909ccc5f3ec7155ca60fb23122a8edfd}} 
+\index{tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}!Load@{Load}}
+\index{Load@{Load}!tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}}
+\subsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily void tsa\+::\+Ar\+Burg\+Estimator\+::\+Load (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{const char $\ast$}]{fmt = {\ttfamily \char`\"{}txt\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 91 of file Ar\+Burg\+Estimator.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_ar_burg_estimator_a904c4776668339798aa429622989dae6}\label{classtsa_1_1_ar_burg_estimator_a904c4776668339798aa429622989dae6}} 
+\index{tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}!operator()@{operator()}}
+\index{operator()@{operator()}!tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void tsa\+::\+Ar\+Burg\+Estimator\+::operator() (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{Input\+Data,  }\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{Whitened\+Data }\end{DoxyParamCaption})}
+
+Implements the estimation of the AR paramenters using the Burg method.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Input\+Data} & Input data time series \\
+\hline
+{\em Whitened\+Data} & Whitened time series \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 32 of file Ar\+Burg\+Estimator.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_ar_burg_estimator_a84c6368cebbbe6965e28769e406d4310}\label{classtsa_1_1_ar_burg_estimator_a84c6368cebbbe6965e28769e406d4310}} 
+\index{tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}!operator()@{operator()}}
+\index{operator()@{operator()}!tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void tsa\+::\+Ar\+Burg\+Estimator\+::operator() (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{Input\+Data }\end{DoxyParamCaption})}
+
+Implements the estimation of the AR paramenters using the Burg method.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Input\+Data} & Input data time series \\
+\hline
+{\em Parcor} & Parcor coefficients \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 70 of file Ar\+Burg\+Estimator.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_ar_burg_estimator_a5f666a51727cfd49d748973b8f050763}\label{classtsa_1_1_ar_burg_estimator_a5f666a51727cfd49d748973b8f050763}} 
+\index{tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}!Save@{Save}}
+\index{Save@{Save}!tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}}
+\subsubsection{\texorpdfstring{Save()}{Save()}}
+{\footnotesize\ttfamily void tsa\+::\+Ar\+Burg\+Estimator\+::\+Save (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{const char $\ast$}]{fmt = {\ttfamily \char`\"{}txt\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 98 of file Ar\+Burg\+Estimator.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_ar_burg_estimator_ae3873be61a19beab0b5b6e915c594889}\label{classtsa_1_1_ar_burg_estimator_ae3873be61a19beab0b5b6e915c594889}} 
+\index{tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}!Set\+AR@{Set\+AR}}
+\index{Set\+AR@{Set\+AR}!tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}}
+\subsubsection{\texorpdfstring{Set\+A\+R()}{SetAR()}}
+{\footnotesize\ttfamily void tsa\+::\+Ar\+Burg\+Estimator\+::\+Set\+AR (\begin{DoxyParamCaption}\item[{unsigned int}]{j,  }\item[{double}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line 211 of file Ar\+Burg\+Estimator.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_ar_burg_estimator_acbf9046f1ff3d7e2852ec4daa30ac8af}\label{classtsa_1_1_ar_burg_estimator_acbf9046f1ff3d7e2852ec4daa30ac8af}} 
+\index{tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}!Set\+Ar\+Order@{Set\+Ar\+Order}}
+\index{Set\+Ar\+Order@{Set\+Ar\+Order}!tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}}
+\subsubsection{\texorpdfstring{Set\+Ar\+Order()}{SetArOrder()}}
+{\footnotesize\ttfamily void tsa\+::\+Ar\+Burg\+Estimator\+::\+Set\+Ar\+Order (\begin{DoxyParamCaption}\item[{unsigned int}]{P }\end{DoxyParamCaption})}
+
+
+
+setters 
+
+
+\begin{DoxyParams}{Parameters}
+{\em P} & the Ar order \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 207 of file Ar\+Burg\+Estimator.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_ar_burg_estimator_a2760a49fb1837ff81061ebf7431de0ef}\label{classtsa_1_1_ar_burg_estimator_a2760a49fb1837ff81061ebf7431de0ef}} 
+\index{tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}!xml\+\_\+serialize@{xml\+\_\+serialize}}
+\index{xml\+\_\+serialize@{xml\+\_\+serialize}!tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}}
+\subsubsection{\texorpdfstring{xml\+\_\+serialize()}{xml\_serialize()}}
+{\footnotesize\ttfamily void tsa\+::\+Ar\+Burg\+Estimator\+::xml\+\_\+serialize (\begin{DoxyParamCaption}\item[{\hyperlink{classeternity_1_1xml__archive}{eternity\+::xml\+\_\+archive} \&}]{xml,  }\item[{const char $\ast$}]{prefix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 105 of file Ar\+Burg\+Estimator.\+hpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classtsa_1_1_ar_burg_estimator_a6d0a5657630ecd64c33761a8f0c835e1}\label{classtsa_1_1_ar_burg_estimator_a6d0a5657630ecd64c33761a8f0c835e1}} 
+\index{tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}!m\+AR@{m\+AR}}
+\index{m\+AR@{m\+AR}!tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}}
+\subsubsection{\texorpdfstring{m\+AR}{mAR}}
+{\footnotesize\ttfamily \hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} tsa\+::\+Ar\+Burg\+Estimator\+::m\+AR\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 233 of file Ar\+Burg\+Estimator.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_ar_burg_estimator_a918baccfeb2101848018b6abcf1e9b19}\label{classtsa_1_1_ar_burg_estimator_a918baccfeb2101848018b6abcf1e9b19}} 
+\index{tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}!m\+Ar\+Order@{m\+Ar\+Order}}
+\index{m\+Ar\+Order@{m\+Ar\+Order}!tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}}
+\subsubsection{\texorpdfstring{m\+Ar\+Order}{mArOrder}}
+{\footnotesize\ttfamily unsigned int tsa\+::\+Ar\+Burg\+Estimator\+::m\+Ar\+Order\hspace{0.3cm}{\ttfamily [private]}}
+
+the Order of the AR model 
+
+Definition at line 231 of file Ar\+Burg\+Estimator.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_ar_burg_estimator_a7b50a6b230b2236500f54f9561d9ef7d}\label{classtsa_1_1_ar_burg_estimator_a7b50a6b230b2236500f54f9561d9ef7d}} 
+\index{tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}!m\+Colored\+Data@{m\+Colored\+Data}}
+\index{m\+Colored\+Data@{m\+Colored\+Data}!tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}}
+\subsubsection{\texorpdfstring{m\+Colored\+Data}{mColoredData}}
+{\footnotesize\ttfamily \hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} tsa\+::\+Ar\+Burg\+Estimator\+::m\+Colored\+Data\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 237 of file Ar\+Burg\+Estimator.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_ar_burg_estimator_abe77e4f47e6eb9e1f39e22f99331c981}\label{classtsa_1_1_ar_burg_estimator_abe77e4f47e6eb9e1f39e22f99331c981}} 
+\index{tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}!m\+Error\+Backward@{m\+Error\+Backward}}
+\index{m\+Error\+Backward@{m\+Error\+Backward}!tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}}
+\subsubsection{\texorpdfstring{m\+Error\+Backward}{mErrorBackward}}
+{\footnotesize\ttfamily \hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} tsa\+::\+Ar\+Burg\+Estimator\+::m\+Error\+Backward\hspace{0.3cm}{\ttfamily [private]}}
+
+the error backward 
+
+Definition at line 235 of file Ar\+Burg\+Estimator.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_ar_burg_estimator_a3ff0b47d541f89567d177a42103a95a2}\label{classtsa_1_1_ar_burg_estimator_a3ff0b47d541f89567d177a42103a95a2}} 
+\index{tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}!m\+Error\+Forward@{m\+Error\+Forward}}
+\index{m\+Error\+Forward@{m\+Error\+Forward}!tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}}
+\subsubsection{\texorpdfstring{m\+Error\+Forward}{mErrorForward}}
+{\footnotesize\ttfamily \hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} tsa\+::\+Ar\+Burg\+Estimator\+::m\+Error\+Forward\hspace{0.3cm}{\ttfamily [private]}}
+
+the error forward 
+
+Definition at line 234 of file Ar\+Burg\+Estimator.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_ar_burg_estimator_a51cbda2be55098f65e4d710cfe1153b7}\label{classtsa_1_1_ar_burg_estimator_a51cbda2be55098f65e4d710cfe1153b7}} 
+\index{tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}!m\+Parcor@{m\+Parcor}}
+\index{m\+Parcor@{m\+Parcor}!tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}}
+\subsubsection{\texorpdfstring{m\+Parcor}{mParcor}}
+{\footnotesize\ttfamily \hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} tsa\+::\+Ar\+Burg\+Estimator\+::m\+Parcor\hspace{0.3cm}{\ttfamily [private]}}
+
+the vector of reflection coefficients 
+
+Definition at line 232 of file Ar\+Burg\+Estimator.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_ar_burg_estimator_a3d033517e7242d079e14038dcd50556c}\label{classtsa_1_1_ar_burg_estimator_a3d033517e7242d079e14038dcd50556c}} 
+\index{tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}!m\+Whitened\+Data@{m\+Whitened\+Data}}
+\index{m\+Whitened\+Data@{m\+Whitened\+Data}!tsa\+::\+Ar\+Burg\+Estimator@{tsa\+::\+Ar\+Burg\+Estimator}}
+\subsubsection{\texorpdfstring{m\+Whitened\+Data}{mWhitenedData}}
+{\footnotesize\ttfamily \hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} tsa\+::\+Ar\+Burg\+Estimator\+::m\+Whitened\+Data\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 236 of file Ar\+Burg\+Estimator.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/include/\hyperlink{_ar_burg_estimator_8hpp}{Ar\+Burg\+Estimator.\+hpp}\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/src/\hyperlink{_ar_burg_estimator_8cpp}{Ar\+Burg\+Estimator.\+cpp}\end{DoxyCompactItemize}

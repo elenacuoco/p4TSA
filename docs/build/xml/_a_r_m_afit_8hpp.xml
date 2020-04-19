@@ -1,0 +1,394 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_a_r_m_afit_8hpp" kind="file" language="C++">
+    <compoundname>ARMAfit.hpp</compoundname>
+    <includes refid="_algo_base_8hpp" local="no">AlgoBase.hpp</includes>
+    <includes refid="_m_y_w_e_8hpp" local="no">MYWE.hpp</includes>
+    <includedby refid="_a_r_m_afit_8cpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/src/ARMAfit.cpp</includedby>
+    <includedby refid="tsa_8hpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/include/tsa.hpp</includedby>
+    <incdepgraph>
+      <node id="548">
+        <label>tsaTraits.hpp</label>
+        <link refid="tsa_traits_8hpp"/>
+        <childnode refid="549" relation="include">
+        </childnode>
+      </node>
+      <node id="528">
+        <label>eternity.hpp</label>
+        <link refid="eternity_8hpp"/>
+        <childnode refid="529" relation="include">
+        </childnode>
+        <childnode refid="532" relation="include">
+        </childnode>
+        <childnode refid="537" relation="include">
+        </childnode>
+        <childnode refid="541" relation="include">
+        </childnode>
+      </node>
+      <node id="534">
+        <label>stdlib.h</label>
+      </node>
+      <node id="521">
+        <label>stdexcept</label>
+      </node>
+      <node id="543">
+        <label>tsaTypes.hpp</label>
+        <link refid="tsa_types_8hpp"/>
+        <childnode refid="523" relation="include">
+        </childnode>
+        <childnode refid="524" relation="include">
+        </childnode>
+        <childnode refid="544" relation="include">
+        </childnode>
+        <childnode refid="525" relation="include">
+        </childnode>
+        <childnode refid="528" relation="include">
+        </childnode>
+      </node>
+      <node id="526">
+        <label>string</label>
+      </node>
+      <node id="529">
+        <label>eternity/dynamic.hpp</label>
+        <link refid="dynamic_8hpp"/>
+        <childnode refid="530" relation="include">
+        </childnode>
+        <childnode refid="531" relation="include">
+        </childnode>
+        <childnode refid="526" relation="include">
+        </childnode>
+      </node>
+      <node id="539">
+        <label>map</label>
+      </node>
+      <node id="545">
+        <label>tsaLog.hpp</label>
+        <link refid="tsa_log_8hpp"/>
+        <childnode refid="522" relation="include">
+        </childnode>
+        <childnode refid="523" relation="include">
+        </childnode>
+        <childnode refid="546" relation="include">
+        </childnode>
+      </node>
+      <node id="523">
+        <label>fstream</label>
+      </node>
+      <node id="538">
+        <label>xmlscanner.hpp</label>
+        <link refid="xmlscanner_8hpp"/>
+        <childnode refid="533" relation="include">
+        </childnode>
+        <childnode refid="534" relation="include">
+        </childnode>
+        <childnode refid="535" relation="include">
+        </childnode>
+        <childnode refid="539" relation="include">
+        </childnode>
+        <childnode refid="536" relation="include">
+        </childnode>
+        <childnode refid="523" relation="include">
+        </childnode>
+        <childnode refid="526" relation="include">
+        </childnode>
+        <childnode refid="522" relation="include">
+        </childnode>
+      </node>
+      <node id="527">
+        <label>tsaSerialize.hpp</label>
+        <link refid="tsa_serialize_8hpp"/>
+        <childnode refid="521" relation="include">
+        </childnode>
+        <childnode refid="522" relation="include">
+        </childnode>
+        <childnode refid="523" relation="include">
+        </childnode>
+        <childnode refid="528" relation="include">
+        </childnode>
+        <childnode refid="543" relation="include">
+        </childnode>
+      </node>
+      <node id="552">
+        <label>fparser.hpp</label>
+        <link refid="fparser_8hpp"/>
+        <childnode refid="526" relation="include">
+        </childnode>
+        <childnode refid="539" relation="include">
+        </childnode>
+        <childnode refid="535" relation="include">
+        </childnode>
+      </node>
+      <node id="556">
+        <label>MYWE.hpp</label>
+        <link refid="_m_y_w_e_8hpp"/>
+        <childnode refid="520" relation="include">
+        </childnode>
+      </node>
+      <node id="520">
+        <label>AlgoBase.hpp</label>
+        <link refid="_algo_base_8hpp"/>
+        <childnode refid="521" relation="include">
+        </childnode>
+        <childnode refid="522" relation="include">
+        </childnode>
+        <childnode refid="523" relation="include">
+        </childnode>
+        <childnode refid="524" relation="include">
+        </childnode>
+        <childnode refid="525" relation="include">
+        </childnode>
+        <childnode refid="526" relation="include">
+        </childnode>
+        <childnode refid="527" relation="include">
+        </childnode>
+        <childnode refid="543" relation="include">
+        </childnode>
+        <childnode refid="545" relation="include">
+        </childnode>
+        <childnode refid="547" relation="include">
+        </childnode>
+        <childnode refid="553" relation="include">
+        </childnode>
+        <childnode refid="555" relation="include">
+        </childnode>
+      </node>
+      <node id="532">
+        <label>eternity/persist.hpp</label>
+        <link refid="persist_8hpp"/>
+        <childnode refid="529" relation="include">
+        </childnode>
+        <childnode refid="533" relation="include">
+        </childnode>
+        <childnode refid="534" relation="include">
+        </childnode>
+        <childnode refid="535" relation="include">
+        </childnode>
+        <childnode refid="536" relation="include">
+        </childnode>
+        <childnode refid="523" relation="include">
+        </childnode>
+      </node>
+      <node id="551">
+        <label>string.h</label>
+      </node>
+      <node id="531">
+        <label>typeinfo</label>
+      </node>
+      <node id="525">
+        <label>boost/numeric/ublas/io.hpp</label>
+      </node>
+      <node id="519">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/ARMAfit.hpp</label>
+        <link refid="_a_r_m_afit_8hpp"/>
+        <childnode refid="520" relation="include">
+        </childnode>
+        <childnode refid="556" relation="include">
+        </childnode>
+      </node>
+      <node id="546">
+        <label>unistd.h</label>
+      </node>
+      <node id="550">
+        <label>tsaUtilityFunctions.hpp</label>
+        <link refid="tsa_utility_functions_8hpp"/>
+        <childnode refid="551" relation="include">
+        </childnode>
+        <childnode refid="552" relation="include">
+        </childnode>
+        <childnode refid="549" relation="include">
+        </childnode>
+        <childnode refid="523" relation="include">
+        </childnode>
+      </node>
+      <node id="535">
+        <label>vector</label>
+      </node>
+      <node id="547">
+        <label>BaseView.hpp</label>
+        <link refid="_base_view_8hpp"/>
+        <childnode refid="539" relation="include">
+        </childnode>
+        <childnode refid="526" relation="include">
+        </childnode>
+        <childnode refid="543" relation="include">
+        </childnode>
+        <childnode refid="548" relation="include">
+        </childnode>
+        <childnode refid="550" relation="include">
+        </childnode>
+        <childnode refid="527" relation="include">
+        </childnode>
+        <childnode refid="545" relation="include">
+        </childnode>
+      </node>
+      <node id="544">
+        <label>boost/numeric/ublas/matrix_proxy.hpp</label>
+      </node>
+      <node id="542">
+        <label>sstream</label>
+      </node>
+      <node id="554">
+        <label>FrameL.h</label>
+      </node>
+      <node id="555">
+        <label>AlgoExceptions.hpp</label>
+        <link refid="_algo_exceptions_8hpp"/>
+        <childnode refid="521" relation="include">
+        </childnode>
+        <childnode refid="526" relation="include">
+        </childnode>
+      </node>
+      <node id="553">
+        <label>SeqView.hpp</label>
+        <link refid="_seq_view_8hpp"/>
+        <childnode refid="524" relation="include">
+        </childnode>
+        <childnode refid="544" relation="include">
+        </childnode>
+        <childnode refid="525" relation="include">
+        </childnode>
+        <childnode refid="547" relation="include">
+        </childnode>
+        <childnode refid="554" relation="include">
+        </childnode>
+      </node>
+      <node id="533">
+        <label>math.h</label>
+      </node>
+      <node id="524">
+        <label>boost/numeric/ublas/matrix.hpp</label>
+      </node>
+      <node id="522">
+        <label>iostream</label>
+      </node>
+      <node id="540">
+        <label>deque</label>
+      </node>
+      <node id="537">
+        <label>eternity/persist_xml.hpp</label>
+        <link refid="persist__xml_8hpp"/>
+        <childnode refid="532" relation="include">
+        </childnode>
+        <childnode refid="538" relation="include">
+        </childnode>
+        <childnode refid="540" relation="include">
+        </childnode>
+      </node>
+      <node id="549">
+        <label>complex</label>
+      </node>
+      <node id="541">
+        <label>eternity/algorithms.hpp</label>
+        <link refid="algorithms_8hpp"/>
+        <childnode refid="532" relation="include">
+        </childnode>
+        <childnode refid="537" relation="include">
+        </childnode>
+        <childnode refid="538" relation="include">
+        </childnode>
+        <childnode refid="542" relation="include">
+        </childnode>
+      </node>
+      <node id="536">
+        <label>algorithm</label>
+      </node>
+      <node id="530">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="558">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/ARMAfit.cpp</label>
+        <link refid="_a_r_m_afit_8cpp"/>
+      </node>
+      <node id="559">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/tsa.hpp</label>
+        <link refid="tsa_8hpp"/>
+      </node>
+      <node id="557">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/ARMAfit.hpp</label>
+        <link refid="_a_r_m_afit_8hpp"/>
+        <childnode refid="558" relation="include">
+        </childnode>
+        <childnode refid="559" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classtsa_1_1_a_r_m_afit" prot="public">tsa::ARMAfit</innerclass>
+    <innernamespace refid="namespacetsa">tsa</innernamespace>
+    <briefdescription>
+<para>implement the ARMA fit to a PSD </para>    </briefdescription>
+    <detaileddescription>
+<para>Copyright (C) 2004 by Elena Cuoco <ulink url="mailto:elena.cuoco@ego-gw.it">elena.cuoco@ego-gw.it</ulink></para><para>This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</para><para>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</para><para>You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.</para><para><simplesect kind="author"><para>Elena Cuoco <ulink url="mailto:elena.cuoco@ego-gw.it">elena.cuoco@ego-gw.it</ulink> </para></simplesect>
+<simplesect kind="date"><para>2006 </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>__ARMAFIT_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__ARMAFIT_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"></codeline>
+<codeline lineno="41"></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_algo_base_8hpp" kindref="compound">AlgoBase.hpp</ref>&gt;</highlight></codeline>
+<codeline lineno="45"></codeline>
+<codeline lineno="49"></codeline>
+<codeline lineno="50"><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_m_y_w_e_8hpp" kindref="compound">MYWE.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"></codeline>
+<codeline lineno="57"></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"></codeline>
+<codeline lineno="65"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetsa" kindref="compound">tsa</ref><sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="classtsa_1_1_a_r_m_afit" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classtsa_1_1_a_r_m_afit" kindref="compound">ARMAfit</ref><sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_a_r_m_afit_1ad55e4fccddc92e18f99276486d281ba8" kindref="member">ARMAfit</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>P,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Q);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_a_r_m_afit_1a3e41abe33c5bdbd657ce48bbe1e21fe8" kindref="member">~ARMAfit</ref>();</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_a_r_m_afit" kindref="compound">ARMAfit</ref>&amp;<sp/><ref refid="classtsa_1_1_a_r_m_afit_1a985bddf4c53ff0d8ceef060348baeb8c" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_a_r_m_afit" kindref="compound">ARMAfit</ref>&amp;<sp/>from);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_a_r_m_afit_1a4ad977172d957bbcfee5a2eeba0ccdec" kindref="member">execute</ref>(<ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref>&amp;<sp/>PSD);</highlight></codeline>
+<codeline lineno="118"></codeline>
+<codeline lineno="122"></codeline>
+<codeline lineno="123"></codeline>
+<codeline lineno="125"></codeline>
+<codeline lineno="129"></codeline>
+<codeline lineno="130"></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="137" refid="classtsa_1_1_a_r_m_afit_1a3662ce6508ec15a23142d30b44d08d8f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_a_r_m_afit_1a3662ce6508ec15a23142d30b44d08d8f" kindref="member">mP</ref>;</highlight></codeline>
+<codeline lineno="138" refid="classtsa_1_1_a_r_m_afit_1abd0fb899f5347f145662e0fa53a1a0ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_a_r_m_afit_1abd0fb899f5347f145662e0fa53a1a0ba" kindref="member">mQ</ref>;</highlight></codeline>
+<codeline lineno="139" refid="classtsa_1_1_a_r_m_afit_1a7aae186f74f8278099f8affc538baaf0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref><sp/><ref refid="classtsa_1_1_a_r_m_afit_1a7aae186f74f8278099f8affc538baaf0" kindref="member">mAR</ref>;</highlight></codeline>
+<codeline lineno="140" refid="classtsa_1_1_a_r_m_afit_1a3d7c0d01ce395406f72e6b17390a0a50" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref><sp/><ref refid="classtsa_1_1_a_r_m_afit_1a3d7c0d01ce395406f72e6b17390a0a50" kindref="member">mMA</ref>;</highlight></codeline>
+<codeline lineno="141" refid="classtsa_1_1_a_r_m_afit_1ae5d14a43af0447f8f64361e050631919" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_m_y_w_e" kindref="compound">MYWE</ref><sp/><ref refid="classtsa_1_1_a_r_m_afit_1ae5d14a43af0447f8f64361e050631919" kindref="member">mMethod</ref>;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"></codeline>
+<codeline lineno="149"></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"></codeline>
+<codeline lineno="157"></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal">}<sp/></highlight><highlight class="comment">//end<sp/>namespace</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>__ARMAFIT_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ARMAfit.hpp"/>
+  </compounddef>
+</doxygen>

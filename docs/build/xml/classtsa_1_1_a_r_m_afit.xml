@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classtsa_1_1_a_r_m_afit" kind="class" language="C++" prot="public">
+    <compoundname>tsa::ARMAfit</compoundname>
+    <includes refid="_a_r_m_afit_8hpp" local="no">ARMAfit.hpp</includes>
+      <sectiondef kind="user-defined">
+      <header>Operations</header>
+      <memberdef kind="function" id="classtsa_1_1_a_r_m_afit_1a4ad977172d957bbcfee5a2eeba0ccdec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::ARMAfit::execute</definition>
+        <argsstring>(Dvector &amp;PSD)</argsstring>
+        <name>execute</name>
+        <param>
+          <type><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref> &amp;</type>
+          <declname>PSD</declname>
+        </param>
+        <briefdescription>
+<para>Brief documentation for the execute method. </para>        </briefdescription>
+        <detaileddescription>
+<para>Start of the long documentation for execute method.</para><para><simplesect kind="pre"><para>A precondition </para></simplesect>
+<simplesect kind="post"><para>A postcondition </para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>An</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>exception</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>parameter</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a returned value</para></simplesect>
+Declaration of execute operation </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ARMAfit.hpp" line="116" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/ARMAfit.cpp" bodystart="50" bodyend="52"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtsa_1_1_a_r_m_afit_1a3662ce6508ec15a23142d30b44d08d8f" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int tsa::ARMAfit::mP</definition>
+        <argsstring></argsstring>
+        <name>mP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ARMAfit.hpp" line="137" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/ARMAfit.hpp" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_a_r_m_afit_1abd0fb899f5347f145662e0fa53a1a0ba" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int tsa::ARMAfit::mQ</definition>
+        <argsstring></argsstring>
+        <name>mQ</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ARMAfit.hpp" line="138" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/ARMAfit.hpp" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_a_r_m_afit_1a7aae186f74f8278099f8affc538baaf0" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref></type>
+        <definition>Dvector tsa::ARMAfit::mAR</definition>
+        <argsstring></argsstring>
+        <name>mAR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ARMAfit.hpp" line="139" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/ARMAfit.hpp" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_a_r_m_afit_1a3d7c0d01ce395406f72e6b17390a0a50" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref></type>
+        <definition>Dvector tsa::ARMAfit::mMA</definition>
+        <argsstring></argsstring>
+        <name>mMA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ARMAfit.hpp" line="140" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/ARMAfit.hpp" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_a_r_m_afit_1ae5d14a43af0447f8f64361e050631919" prot="private" static="no" mutable="no">
+        <type><ref refid="classtsa_1_1_m_y_w_e" kindref="compound">MYWE</ref></type>
+        <definition>MYWE tsa::ARMAfit::mMethod</definition>
+        <argsstring></argsstring>
+        <name>mMethod</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ARMAfit.hpp" line="141" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/ARMAfit.hpp" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtsa_1_1_a_r_m_afit_1ad55e4fccddc92e18f99276486d281ba8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tsa::ARMAfit::ARMAfit</definition>
+        <argsstring>(unsigned int P, unsigned int Q)</argsstring>
+        <name>ARMAfit</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>P</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>Q</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ARMAfit.hpp" line="81" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/ARMAfit.cpp" bodystart="19" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_a_r_m_afit_1a3e41abe33c5bdbd657ce48bbe1e21fe8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tsa::ARMAfit::~ARMAfit</definition>
+        <argsstring>()</argsstring>
+        <name>~ARMAfit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ARMAfit.hpp" line="87" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/ARMAfit.cpp" bodystart="35" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_a_r_m_afit_1a985bddf4c53ff0d8ceef060348baeb8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classtsa_1_1_a_r_m_afit" kindref="compound">ARMAfit</ref> &amp;</type>
+        <definition>ARMAfit &amp; tsa::ARMAfit::operator=</definition>
+        <argsstring>(const ARMAfit &amp;from)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classtsa_1_1_a_r_m_afit" kindref="compound">ARMAfit</ref> &amp;</type>
+          <declname>from</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assignement operator</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>from</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The instance to be assigned from</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a reference to a new object </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ARMAfit.hpp" line="95" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/ARMAfit.cpp" bodystart="46" bodyend="48"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>implement the ARMA fit to a PSD </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="95">
+        <label>tsa::MYWE</label>
+        <link refid="classtsa_1_1_m_y_w_e"/>
+      </node>
+      <node id="94">
+        <label>tsa::ARMAfit</label>
+        <link refid="classtsa_1_1_a_r_m_afit"/>
+        <childnode refid="95" relation="usage">
+          <edgelabel>mMethod</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/ARMAfit.hpp" line="75" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/ARMAfit.hpp" bodystart="75" bodyend="143"/>
+    <listofallmembers>
+      <member refid="classtsa_1_1_a_r_m_afit_1ad55e4fccddc92e18f99276486d281ba8" prot="public" virt="non-virtual"><scope>tsa::ARMAfit</scope><name>ARMAfit</name></member>
+      <member refid="classtsa_1_1_a_r_m_afit_1a4ad977172d957bbcfee5a2eeba0ccdec" prot="public" virt="non-virtual"><scope>tsa::ARMAfit</scope><name>execute</name></member>
+      <member refid="classtsa_1_1_a_r_m_afit_1a7aae186f74f8278099f8affc538baaf0" prot="private" virt="non-virtual"><scope>tsa::ARMAfit</scope><name>mAR</name></member>
+      <member refid="classtsa_1_1_a_r_m_afit_1a3d7c0d01ce395406f72e6b17390a0a50" prot="private" virt="non-virtual"><scope>tsa::ARMAfit</scope><name>mMA</name></member>
+      <member refid="classtsa_1_1_a_r_m_afit_1ae5d14a43af0447f8f64361e050631919" prot="private" virt="non-virtual"><scope>tsa::ARMAfit</scope><name>mMethod</name></member>
+      <member refid="classtsa_1_1_a_r_m_afit_1a3662ce6508ec15a23142d30b44d08d8f" prot="private" virt="non-virtual"><scope>tsa::ARMAfit</scope><name>mP</name></member>
+      <member refid="classtsa_1_1_a_r_m_afit_1abd0fb899f5347f145662e0fa53a1a0ba" prot="private" virt="non-virtual"><scope>tsa::ARMAfit</scope><name>mQ</name></member>
+      <member refid="classtsa_1_1_a_r_m_afit_1a985bddf4c53ff0d8ceef060348baeb8c" prot="public" virt="non-virtual"><scope>tsa::ARMAfit</scope><name>operator=</name></member>
+      <member refid="classtsa_1_1_a_r_m_afit_1a3e41abe33c5bdbd657ce48bbe1e21fe8" prot="public" virt="non-virtual"><scope>tsa::ARMAfit</scope><name>~ARMAfit</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

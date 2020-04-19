@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>P4TSA (package for Time Series Analysis)</title>
+    <detaileddescription>
+<para><ulink url="http://p4tsa.readthedocs.io/en/latest/?badge=latest"></ulink> <ulink url="https://travis-ci.org/elenacuoco/p4TSA"></ulink></para><para>(<ulink url="mailto:info@elenacuoco.com">info@elenacuoco.com</ulink>) <ulink url="https://www.elenacuoco.com">https://www.elenacuoco.com</ulink></para><para>This library is a &apos;spin-off&apos; of C++ Noise Analysis Package (NAP) written together with Giancarlo Cella (<ulink url="mailto:giancarlo.cella@pi.infn.it">giancarlo.cella@pi.infn.it</ulink>)</para><para>The core library is written in C++ and should be compiled before using the python interface.</para><para>The Python interface to the library is pyTSA (you can call it pi&apos;za)</para><para><heading level="3">What is this repository for?</heading>
+</para><para>p4TSA is a minimal package containing ad hoc function to work with time series. It includes<itemizedlist>
+<listitem><para>Whitening in time domain</para></listitem><listitem><para>Wavelet decomposition</para></listitem><listitem><para>Wavelet Detection Filter</para></listitem></itemizedlist>
+</para><para><heading level="3">How do I get set up?</heading>
+</para><para><itemizedlist>
+<listitem><para>You need to have a python environment setup and some extralibrary (boost, FramLib,gsl,fftw3 installed)</para></listitem><listitem><para>You should run cmake CMakeList.txt</para></listitem><listitem><para>Dependencies: gsl, fftw3, gslcblas, Framelib</para></listitem><listitem><para>Python Binding: it depends on binder and pybind11 which should be installed</para></listitem><listitem><para>Database configuration: none</para></listitem><listitem><para>How to run tests: under dir test run</para><para><computeroutput>python test.py</computeroutput></para></listitem><listitem><para>Deployment instructions: under python-wrapper directory run</para><para><computeroutput>python setup.py install</computeroutput></para></listitem></itemizedlist>
+</para><para><heading level="3">Contribution guidelines</heading>
+</para><para><itemizedlist>
+<listitem><para>Writing tests</para></listitem><listitem><para>Code review</para></listitem><listitem><para>Other guidelines</para></listitem></itemizedlist>
+</para><para><heading level="3">Who do I talk to?</heading>
+</para><para><itemizedlist>
+<listitem><para>Repo owner or admin (<ulink url="mailto:info@elenacuoco.com">info@elenacuoco.com</ulink>)</para></listitem><listitem><para>Other community or team contact (<ulink url="mailto:elena.cuoco@ego-gw.it">elena.cuoco@ego-gw.it</ulink>, <ulink url="mailto:giancarlo.cella@pi.infn.it">giancarlo.cella@pi.infn.it</ulink>) </para></listitem></itemizedlist>
+</para>    </detaileddescription>
+  </compounddef>
+</doxygen>

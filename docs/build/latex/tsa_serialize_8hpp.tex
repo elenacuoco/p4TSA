@@ -1,0 +1,135 @@
+\hypertarget{tsa_serialize_8hpp}{}\section{/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/include/tsa\+Serialize.hpp File Reference}
+\label{tsa_serialize_8hpp}\index{/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/include/tsa\+Serialize.\+hpp@{/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/include/tsa\+Serialize.\+hpp}}
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include \char`\"{}eternity.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tsa\+Types.\+hpp\char`\"{}}\newline
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacetsa}{tsa}
+\begin{DoxyCompactList}\small\item\em The main namespace of the library. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{tsa_serialize_8hpp_aaf0498af65933356e879bfe5cb36f088}{D\+V\+E\+C\+T\+O\+R\+\_\+\+X\+M\+L\+\_\+\+S\+E\+R\+I\+A\+L\+I\+ZE}(v,  xml,  tag)
+\item 
+\#define \hyperlink{tsa_serialize_8hpp_a7140915a63a13e7a03994b23dba7cd84}{D\+M\+A\+T\+R\+I\+X\+\_\+\+X\+M\+L\+\_\+\+S\+E\+R\+I\+A\+L\+I\+ZE}(m,  xml,  tag)
+\item 
+\#define \hyperlink{tsa_serialize_8hpp_adae2645bd4b6ee71def4a7abfa6b5b33}{B\+O\+O\+L\+\_\+\+X\+M\+L\+\_\+\+S\+E\+R\+I\+A\+L\+I\+ZE}(m,  xml,  tag)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{namespacetsa_afb13ed99dfd49fe21c248464155e8806}{tsa\+::\+Tag} (char $\ast$buffer, int n, const char $\ast$base, const char $\ast$rec)
+\item 
+char $\ast$ \hyperlink{namespacetsa_a1079ab07e72bc3aaa35f2a9fce42cbd9}{tsa\+::\+Tag} (char $\ast$buffer, int n, const char $\ast$base, const char $\ast$rec, unsigned int i)
+\item 
+char $\ast$ \hyperlink{namespacetsa_a1b02aafe1625f78174f56249e0ec5d34}{tsa\+::\+Tag} (char $\ast$buffer, int n, const char $\ast$base, const char $\ast$rec, unsigned int i, unsigned int j)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Copyright (C) 2004 by Giancarlo Cella \href{mailto:giancarlo.cella@pi.infn.it}{\tt giancarlo.\+cella@pi.\+infn.\+it}
+
+This program is free software; you can redistribute it and/or modify it under the terms of the G\+NU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but W\+I\+T\+H\+O\+UT A\+NY W\+A\+R\+R\+A\+N\+TY; without even the implied warranty of M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY or F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE. See the G\+NU General Public License for more details.
+
+You should have received a copy of the G\+NU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place -\/ Suite 330, Boston, MA 02111-\/1307, U\+SA.
+
+\begin{DoxyAuthor}{Author}
+Giancarlo Cella \href{mailto:giancarlo.cella@pi.infn.it}{\tt giancarlo.\+cella@pi.\+infn.\+it} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Sat Nov 13 17\+:21\+:06 2004 
+\end{DoxyDate}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{tsa_serialize_8hpp_adae2645bd4b6ee71def4a7abfa6b5b33}\label{tsa_serialize_8hpp_adae2645bd4b6ee71def4a7abfa6b5b33}} 
+\index{tsa\+Serialize.\+hpp@{tsa\+Serialize.\+hpp}!B\+O\+O\+L\+\_\+\+X\+M\+L\+\_\+\+S\+E\+R\+I\+A\+L\+I\+ZE@{B\+O\+O\+L\+\_\+\+X\+M\+L\+\_\+\+S\+E\+R\+I\+A\+L\+I\+ZE}}
+\index{B\+O\+O\+L\+\_\+\+X\+M\+L\+\_\+\+S\+E\+R\+I\+A\+L\+I\+ZE@{B\+O\+O\+L\+\_\+\+X\+M\+L\+\_\+\+S\+E\+R\+I\+A\+L\+I\+ZE}!tsa\+Serialize.\+hpp@{tsa\+Serialize.\+hpp}}
+\subsubsection{\texorpdfstring{B\+O\+O\+L\+\_\+\+X\+M\+L\+\_\+\+S\+E\+R\+I\+A\+L\+I\+ZE}{BOOL\_XML\_SERIALIZE}}
+{\footnotesize\ttfamily \#define B\+O\+O\+L\+\_\+\+X\+M\+L\+\_\+\+S\+E\+R\+I\+A\+L\+I\+ZE(\begin{DoxyParamCaption}\item[{}]{m,  }\item[{}]{xml,  }\item[{}]{tag }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{if}( (xml).is\_loading() )  \{           \(\backslash\)
+    int tmp;             \(\backslash\)
+    (xml).read(tag,tmp,0);         \(\backslash\)
+    m = bool(tmp); \(\backslash\)
+    \} \textcolor{keywordflow}{else} \{   \(\backslash\)
+    int tmp;   \(\backslash\)
+    tmp = int(m); \(\backslash\)
+    (xml).write(tag,tmp); \(\backslash\)
+  \}
+\end{DoxyCode}
+
+
+Definition at line 99 of file tsa\+Serialize.\+hpp.
+
+\mbox{\Hypertarget{tsa_serialize_8hpp_a7140915a63a13e7a03994b23dba7cd84}\label{tsa_serialize_8hpp_a7140915a63a13e7a03994b23dba7cd84}} 
+\index{tsa\+Serialize.\+hpp@{tsa\+Serialize.\+hpp}!D\+M\+A\+T\+R\+I\+X\+\_\+\+X\+M\+L\+\_\+\+S\+E\+R\+I\+A\+L\+I\+ZE@{D\+M\+A\+T\+R\+I\+X\+\_\+\+X\+M\+L\+\_\+\+S\+E\+R\+I\+A\+L\+I\+ZE}}
+\index{D\+M\+A\+T\+R\+I\+X\+\_\+\+X\+M\+L\+\_\+\+S\+E\+R\+I\+A\+L\+I\+ZE@{D\+M\+A\+T\+R\+I\+X\+\_\+\+X\+M\+L\+\_\+\+S\+E\+R\+I\+A\+L\+I\+ZE}!tsa\+Serialize.\+hpp@{tsa\+Serialize.\+hpp}}
+\subsubsection{\texorpdfstring{D\+M\+A\+T\+R\+I\+X\+\_\+\+X\+M\+L\+\_\+\+S\+E\+R\+I\+A\+L\+I\+ZE}{DMATRIX\_XML\_SERIALIZE}}
+{\footnotesize\ttfamily \#define D\+M\+A\+T\+R\+I\+X\+\_\+\+X\+M\+L\+\_\+\+S\+E\+R\+I\+A\+L\+I\+ZE(\begin{DoxyParamCaption}\item[{}]{m,  }\item[{}]{xml,  }\item[{}]{tag }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{if}( (xml).is\_loading() )  \{           \(\backslash\)
+    unsigned \textcolor{keywordtype}{int} sz1 = 0;           \(\backslash\)
+    unsigned \textcolor{keywordtype}{int} sz2 = 0;           \(\backslash\)
+    char b[1024]; \(\backslash\)
+    (xml).read(\hyperlink{namespacetsa_afb13ed99dfd49fe21c248464155e8806}{Tag}(b,1024,(tag),\textcolor{stringliteral}{"size1"}),sz1,0);         \(\backslash\)
+    (xml).read(\hyperlink{namespacetsa_afb13ed99dfd49fe21c248464155e8806}{Tag}(b,1024,(tag),\textcolor{stringliteral}{"size2"}),sz2,0);         \(\backslash\)
+    (m).resize(sz1,sz2);           \(\backslash\)
+    for(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i=0;i<sz1;i++) \{          \(\backslash\)
+      for(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} j=0;j<sz2;j++) \{          \(\backslash\)
+        (xml).read(\hyperlink{namespacetsa_afb13ed99dfd49fe21c248464155e8806}{Tag}(b,1024,(tag),\textcolor{stringliteral}{"e"},i,j),(m)(i,j),0);        \(\backslash\)
+      \}              \(\backslash\)
+    \}              \(\backslash\)
+  \} \textcolor{keywordflow}{else} \{             \(\backslash\)
+    char b[1024]; \(\backslash\)
+    (xml).write(\hyperlink{namespacetsa_afb13ed99dfd49fe21c248464155e8806}{Tag}(b,1024,(tag),\textcolor{stringliteral}{"size1"}),(m).size1());        \(\backslash\)
+    (xml).write(\hyperlink{namespacetsa_afb13ed99dfd49fe21c248464155e8806}{Tag}(b,1024,(tag),\textcolor{stringliteral}{"size2"}),(m).size2());        \(\backslash\)
+    for(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i=0;i<(m).size1();i++) \{         \(\backslash\)
+      for(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} j=0;j<(m).size2();j++) \{         \(\backslash\)
+        (xml).write(\hyperlink{namespacetsa_afb13ed99dfd49fe21c248464155e8806}{Tag}(b,1024,(tag),\textcolor{stringliteral}{"e"},i,j),(m)(i,j));        \(\backslash\)
+      \}              \(\backslash\)
+    \}              \(\backslash\)
+  \}
+\end{DoxyCode}
+
+
+Definition at line 73 of file tsa\+Serialize.\+hpp.
+
+\mbox{\Hypertarget{tsa_serialize_8hpp_aaf0498af65933356e879bfe5cb36f088}\label{tsa_serialize_8hpp_aaf0498af65933356e879bfe5cb36f088}} 
+\index{tsa\+Serialize.\+hpp@{tsa\+Serialize.\+hpp}!D\+V\+E\+C\+T\+O\+R\+\_\+\+X\+M\+L\+\_\+\+S\+E\+R\+I\+A\+L\+I\+ZE@{D\+V\+E\+C\+T\+O\+R\+\_\+\+X\+M\+L\+\_\+\+S\+E\+R\+I\+A\+L\+I\+ZE}}
+\index{D\+V\+E\+C\+T\+O\+R\+\_\+\+X\+M\+L\+\_\+\+S\+E\+R\+I\+A\+L\+I\+ZE@{D\+V\+E\+C\+T\+O\+R\+\_\+\+X\+M\+L\+\_\+\+S\+E\+R\+I\+A\+L\+I\+ZE}!tsa\+Serialize.\+hpp@{tsa\+Serialize.\+hpp}}
+\subsubsection{\texorpdfstring{D\+V\+E\+C\+T\+O\+R\+\_\+\+X\+M\+L\+\_\+\+S\+E\+R\+I\+A\+L\+I\+ZE}{DVECTOR\_XML\_SERIALIZE}}
+{\footnotesize\ttfamily \#define D\+V\+E\+C\+T\+O\+R\+\_\+\+X\+M\+L\+\_\+\+S\+E\+R\+I\+A\+L\+I\+ZE(\begin{DoxyParamCaption}\item[{}]{v,  }\item[{}]{xml,  }\item[{}]{tag }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{if}( (xml).is\_loading() ) \{           \(\backslash\)
+    unsigned \textcolor{keywordtype}{int} sz = 0;           \(\backslash\)
+    char b[1024]; \(\backslash\)
+    (xml).read(\hyperlink{namespacetsa_afb13ed99dfd49fe21c248464155e8806}{Tag}(b,1024,(tag),\textcolor{stringliteral}{"size"}),sz,0);          \(\backslash\)
+    (v).resize(sz);            \(\backslash\)
+    for(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i=0;i<sz;i++) \{          \(\backslash\)
+      (xml).read(\hyperlink{namespacetsa_afb13ed99dfd49fe21c248464155e8806}{Tag}(b,1024,(tag),\textcolor{stringliteral}{"e"},i),(v)(i),0);         \(\backslash\)
+    \}              \(\backslash\)
+  \} \textcolor{keywordflow}{else}   \{ \(\backslash\)
+    char b[1024];            \(\backslash\)
+    (xml).write(\hyperlink{namespacetsa_afb13ed99dfd49fe21c248464155e8806}{Tag}(b,1024,(tag),\textcolor{stringliteral}{"size"}),(v).size());         \(\backslash\)
+    for(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i=0;i<(v).size();i++) \{         \(\backslash\)
+      (xml).write(\hyperlink{namespacetsa_afb13ed99dfd49fe21c248464155e8806}{Tag}(b,1024,(tag),\textcolor{stringliteral}{"e"},i),(v)(i));         \(\backslash\)
+    \}              \(\backslash\)
+  \}
+\end{DoxyCode}
+
+
+Definition at line 53 of file tsa\+Serialize.\+hpp.
+

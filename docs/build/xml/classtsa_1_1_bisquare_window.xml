@@ -1,0 +1,245 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classtsa_1_1_bisquare_window" kind="class" language="C++" prot="public">
+    <compoundname>tsa::BisquareWindow</compoundname>
+    <basecompoundref refid="classtsa_1_1_base_window" prot="public" virt="non-virtual">tsa::BaseWindow</basecompoundref>
+    <includes refid="_bisquare_window_8hpp" local="no">BisquareWindow.hpp</includes>
+      <sectiondef kind="user-defined">
+      <header>Operations</header>
+      <memberdef kind="function" id="classtsa_1_1_bisquare_window_1a8ad862435b17d306997adbb8be9c9b4f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void tsa::BisquareWindow::operator()</definition>
+        <argsstring>(SeqViewDouble &amp;v1)</argsstring>
+        <name>operator()</name>
+        <reimplements refid="classtsa_1_1_base_window_1a05d9edb95dc01840a1b2df78dfa3a8c1">operator()</reimplements>
+        <param>
+          <type><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref> &amp;</type>
+          <declname>v1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Apply the window to a given time view.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the time view </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/BisquareWindow.hpp" line="107" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/BisquareWindow.hpp" bodystart="107" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_bisquare_window_1a18002b225ed630af739a983da72a4006" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void tsa::BisquareWindow::operator()</definition>
+        <argsstring>(SeqViewDouble &amp;v1, SeqViewDouble &amp;v2)</argsstring>
+        <name>operator()</name>
+        <reimplements refid="classtsa_1_1_base_window_1afda50daa943527e09792b06e5ba69bcb">operator()</reimplements>
+        <param>
+          <type><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref> &amp;</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref> &amp;</type>
+          <declname>v2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Apply a window to an input view and write the results on a output view.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the input view </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the output view </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/BisquareWindow.hpp" line="129" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/BisquareWindow.hpp" bodystart="129" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_bisquare_window_1a0970518373e007e0fdd95701ff744c6f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void tsa::BisquareWindow::Resize</definition>
+        <argsstring>(unsigned int size)</argsstring>
+        <name>Resize</name>
+        <reimplements refid="classtsa_1_1_base_window_1a8a2a3425f2915762d50fa57dd0e04f22">Resize</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Resize the window dimension.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new size for the window </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/BisquareWindow.hpp" line="158" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/BisquareWindow.hpp" bodystart="158" bodyend="161"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtsa_1_1_bisquare_window_1a6e5d4dbf8578ed2e9b516d9410c91156" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>tsa::BisquareWindow::BisquareWindow</definition>
+        <argsstring>(int size)</argsstring>
+        <name>BisquareWindow</name>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the size of the window </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cached</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if the window must be preevaluated in a buffer </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/BisquareWindow.hpp" line="78" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/BisquareWindow.hpp" bodystart="78" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_bisquare_window_1a3a76063272e48da547740c73de3c938e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>tsa::BisquareWindow::BisquareWindow</definition>
+        <argsstring>(int size, const std::string &amp;)</argsstring>
+        <name>BisquareWindow</name>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/BisquareWindow.hpp" line="84" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/BisquareWindow.hpp" bodystart="84" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_bisquare_window_1a050ef95c31279607ac93d854cbcf0670" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual tsa::BisquareWindow::~BisquareWindow</definition>
+        <argsstring>()</argsstring>
+        <name>~BisquareWindow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/BisquareWindow.hpp" line="93" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/BisquareWindow.hpp" bodystart="93" bodyend="95"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classtsa_1_1_bisquare_window_1a62ab3bab83dd4dd77090c7c49be24acb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void tsa::BisquareWindow::FillWindow</definition>
+        <argsstring>()</argsstring>
+        <name>FillWindow</name>
+        <reimplements refid="classtsa_1_1_base_window_1aa74b29105d94caa521d308198e8e6643">FillWindow</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialize the window with the correct values, given its actual size. This is a pure virtual function, which is redefined by each window class. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/BisquareWindow.hpp" line="196" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/BisquareWindow.hpp" bodystart="196" bodyend="203"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Bisquare windowing algorithm. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="155">
+        <label>tsa::BaseWindow</label>
+        <link refid="classtsa_1_1_base_window"/>
+        <childnode refid="156" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="154">
+        <label>tsa::BisquareWindow</label>
+        <link refid="classtsa_1_1_bisquare_window"/>
+        <childnode refid="155" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="156">
+        <label>tsa::AlgoBase</label>
+        <link refid="classtsa_1_1_algo_base"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="158">
+        <label>tsa::BaseWindow</label>
+        <link refid="classtsa_1_1_base_window"/>
+        <childnode refid="159" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="157">
+        <label>tsa::BisquareWindow</label>
+        <link refid="classtsa_1_1_bisquare_window"/>
+        <childnode refid="158" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="159">
+        <label>tsa::AlgoBase</label>
+        <link refid="classtsa_1_1_algo_base"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/BisquareWindow.hpp" line="69" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/BisquareWindow.hpp" bodystart="69" bodyend="206"/>
+    <listofallmembers>
+      <member refid="classtsa_1_1_base_window_1aea4dee45722299896913859d7b899d6f" prot="public" virt="non-virtual"><scope>tsa::BisquareWindow</scope><name>BaseWindow</name></member>
+      <member refid="classtsa_1_1_bisquare_window_1a6e5d4dbf8578ed2e9b516d9410c91156" prot="public" virt="non-virtual"><scope>tsa::BisquareWindow</scope><name>BisquareWindow</name></member>
+      <member refid="classtsa_1_1_bisquare_window_1a3a76063272e48da547740c73de3c938e" prot="public" virt="non-virtual"><scope>tsa::BisquareWindow</scope><name>BisquareWindow</name></member>
+      <member refid="classtsa_1_1_base_window_1a4bd3edc44a56103ac3f9112a55a10420" prot="public" virt="non-virtual"><scope>tsa::BisquareWindow</scope><name>CrossAverage</name></member>
+      <member refid="classtsa_1_1_base_window_1a31f86887f9ccbddd97bdca903c506606" prot="public" virt="non-virtual"><scope>tsa::BisquareWindow</scope><name>CrossSquareAverage</name></member>
+      <member refid="classtsa_1_1_base_window_1a15647cb85344c7e82ecde50675b07efd" prot="public" virt="non-virtual"><scope>tsa::BisquareWindow</scope><name>execute</name></member>
+      <member refid="classtsa_1_1_base_window_1a7e4b5f7d87bbe397332b4e506b0681c2" prot="public" virt="non-virtual"><scope>tsa::BisquareWindow</scope><name>execute</name></member>
+      <member refid="classtsa_1_1_base_window_1a34b933da998ba8137d0e0def7514d2cb" prot="public" virt="non-virtual"><scope>tsa::BisquareWindow</scope><name>execute</name></member>
+      <member refid="classtsa_1_1_base_window_1abadd3d1ef579310ab440a70d77e1d46d" prot="public" virt="non-virtual"><scope>tsa::BisquareWindow</scope><name>execute</name></member>
+      <member refid="classtsa_1_1_bisquare_window_1a62ab3bab83dd4dd77090c7c49be24acb" prot="private" virt="virtual"><scope>tsa::BisquareWindow</scope><name>FillWindow</name></member>
+      <member refid="classtsa_1_1_base_window_1af3e45daf0401f06108c6634344532af8" prot="public" virt="non-virtual"><scope>tsa::BisquareWindow</scope><name>GetSize</name></member>
+      <member refid="classtsa_1_1_base_window_1a182b397ac3f3c409bfcb3a39d9c1575a" prot="protected" virt="non-virtual"><scope>tsa::BisquareWindow</scope><name>mWindow</name></member>
+      <member refid="classtsa_1_1_base_window_1ad6681a5cb29414a97af6be1ea7805a81" prot="public" virt="virtual"><scope>tsa::BisquareWindow</scope><name>Normalize</name></member>
+      <member refid="classtsa_1_1_bisquare_window_1a8ad862435b17d306997adbb8be9c9b4f" prot="public" virt="virtual"><scope>tsa::BisquareWindow</scope><name>operator()</name></member>
+      <member refid="classtsa_1_1_bisquare_window_1a18002b225ed630af739a983da72a4006" prot="public" virt="virtual"><scope>tsa::BisquareWindow</scope><name>operator()</name></member>
+      <member refid="classtsa_1_1_base_window_1ab9dc5e39e09701b60b9e160837f059df" prot="public" virt="non-virtual" ambiguityscope="tsa::BaseWindow::"><scope>tsa::BisquareWindow</scope><name>operator()</name></member>
+      <member refid="classtsa_1_1_bisquare_window_1a0970518373e007e0fdd95701ff744c6f" prot="public" virt="virtual"><scope>tsa::BisquareWindow</scope><name>Resize</name></member>
+      <member refid="classtsa_1_1_base_window_1a0e99ffa3d84e8c7a05f7de437bfd6241" prot="public" virt="virtual"><scope>tsa::BisquareWindow</scope><name>~BaseWindow</name></member>
+      <member refid="classtsa_1_1_bisquare_window_1a050ef95c31279607ac93d854cbcf0670" prot="public" virt="virtual"><scope>tsa::BisquareWindow</scope><name>~BisquareWindow</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

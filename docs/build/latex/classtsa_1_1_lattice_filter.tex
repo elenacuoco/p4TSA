@@ -1,0 +1,281 @@
+\hypertarget{classtsa_1_1_lattice_filter}{}\section{tsa\+:\+:Lattice\+Filter Class Reference}
+\label{classtsa_1_1_lattice_filter}\index{tsa\+::\+Lattice\+Filter@{tsa\+::\+Lattice\+Filter}}
+
+
+Implement the lattice filter.  
+
+
+
+
+{\ttfamily \#include $<$Lattice\+Filter.\+hpp$>$}
+
+Inheritance diagram for tsa\+:\+:Lattice\+Filter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classtsa_1_1_lattice_filter}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtsa_1_1_lattice_filter_a2cd66baf212f1b3824016c1e589b014a}{Lattice\+Filter} (\hyperlink{classtsa_1_1_lattice_view}{Lattice\+View} \&LV)
+\item 
+\hyperlink{classtsa_1_1_lattice_filter_af2e6c3e8d7fb7399f564f47c060bccc3}{Lattice\+Filter} (\hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} \&ParcorF, \hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} \&ParcorB, \hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&ErrF, \hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&ErrB)
+\item 
+virtual \hyperlink{classtsa_1_1_lattice_filter_a8a7c4763fe464837766a5beff88d36d5}{$\sim$\+Lattice\+Filter} ()
+\item 
+void \hyperlink{classtsa_1_1_lattice_filter_aa6be240d902449711c1925e464248a1d}{Load} (const char $\ast$filename, const char $\ast$fmt=\char`\"{}txt\char`\"{})
+\item 
+void \hyperlink{classtsa_1_1_lattice_filter_ac599ab3a2134d53e0685f91a0a673ed4}{Save} (const char $\ast$filename, const char $\ast$fmt=\char`\"{}txt\char`\"{})
+\item 
+void \hyperlink{classtsa_1_1_lattice_filter_ae9bd581cbcd1183a0dd7c557fe687422}{xml\+\_\+serialize} (\hyperlink{classeternity_1_1xml__archive}{eternity\+::xml\+\_\+archive} \&xml, const char $\ast$p)
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Operations}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtsa_1_1_lattice_filter_a01071f8619620099315c1007c8980baf}{operator()} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&Input\+Data, \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&Whitened\+Data)
+\item 
+void \hyperlink{classtsa_1_1_lattice_filter_a08187ed236faefa36a0993190c6b0162}{init} (\hyperlink{classtsa_1_1_lattice_view}{Lattice\+View} \&LV)
+\begin{DoxyCompactList}\small\item\em Initialization function. \end{DoxyCompactList}\item 
+void \hyperlink{classtsa_1_1_lattice_filter_a09ebe977a54eed4453db605ab742f771}{execute} (matrix\+\_\+row$<$ \hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} $>$ Input, matrix\+\_\+row$<$ \hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} $>$ Output)
+\begin{DoxyCompactList}\small\item\em The execute method implemts the filter in the lattice form. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{classtsa_1_1_lattice_filter_aaff567ffb2c6b13538f138b8d49f3781}{m\+Order}
+\item 
+\hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} \hyperlink{classtsa_1_1_lattice_filter_a4a7f9d6020bc4d7cab3d6021bd5338db}{m\+ParcorF}
+\item 
+\hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} \hyperlink{classtsa_1_1_lattice_filter_a0e3a56f45a158477cef36e55cd2e5417}{m\+ParcorB}
+\item 
+\hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \hyperlink{classtsa_1_1_lattice_filter_a462c5cd31c438a924bfde88d08e12200}{m\+ErrF}
+\item 
+\hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \hyperlink{classtsa_1_1_lattice_filter_a0cd360b9836146c9296798337dd2ee0f}{m\+ErrB}
+\item 
+int \hyperlink{classtsa_1_1_lattice_filter_ab480cbe362a358df626bcd0758c0a7ce}{m\+Status}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implement the lattice filter. 
+
+Definition at line 77 of file Lattice\+Filter.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtsa_1_1_lattice_filter_a2cd66baf212f1b3824016c1e589b014a}\label{classtsa_1_1_lattice_filter_a2cd66baf212f1b3824016c1e589b014a}} 
+\index{tsa\+::\+Lattice\+Filter@{tsa\+::\+Lattice\+Filter}!Lattice\+Filter@{Lattice\+Filter}}
+\index{Lattice\+Filter@{Lattice\+Filter}!tsa\+::\+Lattice\+Filter@{tsa\+::\+Lattice\+Filter}}
+\subsubsection{\texorpdfstring{Lattice\+Filter()}{LatticeFilter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily tsa\+::\+Lattice\+Filter\+::\+Lattice\+Filter (\begin{DoxyParamCaption}\item[{\hyperlink{classtsa_1_1_lattice_view}{Lattice\+View} \&}]{LV }\end{DoxyParamCaption})}
+
+Constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em LV} & is the view containg the parameters for the Lattice Filter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 29 of file Lattice\+Filter.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_lattice_filter_af2e6c3e8d7fb7399f564f47c060bccc3}\label{classtsa_1_1_lattice_filter_af2e6c3e8d7fb7399f564f47c060bccc3}} 
+\index{tsa\+::\+Lattice\+Filter@{tsa\+::\+Lattice\+Filter}!Lattice\+Filter@{Lattice\+Filter}}
+\index{Lattice\+Filter@{Lattice\+Filter}!tsa\+::\+Lattice\+Filter@{tsa\+::\+Lattice\+Filter}}
+\subsubsection{\texorpdfstring{Lattice\+Filter()}{LatticeFilter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily tsa\+::\+Lattice\+Filter\+::\+Lattice\+Filter (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} \&}]{ParcorF,  }\item[{\hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} \&}]{ParcorB,  }\item[{\hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&}]{ErrF,  }\item[{\hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&}]{ErrB }\end{DoxyParamCaption})}
+
+Constructor 
+
+Definition at line 19 of file Lattice\+Filter.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_lattice_filter_a8a7c4763fe464837766a5beff88d36d5}\label{classtsa_1_1_lattice_filter_a8a7c4763fe464837766a5beff88d36d5}} 
+\index{tsa\+::\+Lattice\+Filter@{tsa\+::\+Lattice\+Filter}!````~Lattice\+Filter@{$\sim$\+Lattice\+Filter}}
+\index{````~Lattice\+Filter@{$\sim$\+Lattice\+Filter}!tsa\+::\+Lattice\+Filter@{tsa\+::\+Lattice\+Filter}}
+\subsubsection{\texorpdfstring{$\sim$\+Lattice\+Filter()}{~LatticeFilter()}}
+{\footnotesize\ttfamily tsa\+::\+Lattice\+Filter\+::$\sim$\+Lattice\+Filter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destructor 
+
+Definition at line 39 of file Lattice\+Filter.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classtsa_1_1_lattice_filter_a09ebe977a54eed4453db605ab742f771}\label{classtsa_1_1_lattice_filter_a09ebe977a54eed4453db605ab742f771}} 
+\index{tsa\+::\+Lattice\+Filter@{tsa\+::\+Lattice\+Filter}!execute@{execute}}
+\index{execute@{execute}!tsa\+::\+Lattice\+Filter@{tsa\+::\+Lattice\+Filter}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void tsa\+::\+Lattice\+Filter\+::execute (\begin{DoxyParamCaption}\item[{matrix\+\_\+row$<$ \hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} $>$}]{Input,  }\item[{matrix\+\_\+row$<$ \hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} $>$}]{Output }\end{DoxyParamCaption})}
+
+
+
+The execute method implemts the filter in the lattice form. 
+
+\begin{DoxyPrecond}{Precondition}
+
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+A postcondition 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em An} & exception\\
+\hline
+\end{DoxyExceptions}
+Declaration of execute operation
+
+
+\begin{DoxyParams}{Parameters}
+{\em Input} & is the input vector of data \\
+\hline
+{\em Output} & is the output (whitened) data \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 51 of file Lattice\+Filter.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_lattice_filter_a08187ed236faefa36a0993190c6b0162}\label{classtsa_1_1_lattice_filter_a08187ed236faefa36a0993190c6b0162}} 
+\index{tsa\+::\+Lattice\+Filter@{tsa\+::\+Lattice\+Filter}!init@{init}}
+\index{init@{init}!tsa\+::\+Lattice\+Filter@{tsa\+::\+Lattice\+Filter}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void tsa\+::\+Lattice\+Filter\+::init (\begin{DoxyParamCaption}\item[{\hyperlink{classtsa_1_1_lattice_view}{Lattice\+View} \&}]{LV }\end{DoxyParamCaption})}
+
+
+
+Initialization function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em LV} & lattice view \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 42 of file Lattice\+Filter.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_lattice_filter_aa6be240d902449711c1925e464248a1d}\label{classtsa_1_1_lattice_filter_aa6be240d902449711c1925e464248a1d}} 
+\index{tsa\+::\+Lattice\+Filter@{tsa\+::\+Lattice\+Filter}!Load@{Load}}
+\index{Load@{Load}!tsa\+::\+Lattice\+Filter@{tsa\+::\+Lattice\+Filter}}
+\subsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily void tsa\+::\+Lattice\+Filter\+::\+Load (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{const char $\ast$}]{fmt = {\ttfamily \char`\"{}txt\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 98 of file Lattice\+Filter.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_lattice_filter_a01071f8619620099315c1007c8980baf}\label{classtsa_1_1_lattice_filter_a01071f8619620099315c1007c8980baf}} 
+\index{tsa\+::\+Lattice\+Filter@{tsa\+::\+Lattice\+Filter}!operator()@{operator()}}
+\index{operator()@{operator()}!tsa\+::\+Lattice\+Filter@{tsa\+::\+Lattice\+Filter}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily void tsa\+::\+Lattice\+Filter\+::operator() (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{Input\+Data,  }\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{Whitened\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Declaration of execute operation
+
+
+\begin{DoxyParams}{Parameters}
+{\em Input\+Data} & Matrix containing Time Series \\
+\hline
+{\em Whitened\+Data} & Matrix containing the Whitened\+Data \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 163 of file Lattice\+Filter.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_lattice_filter_ac599ab3a2134d53e0685f91a0a673ed4}\label{classtsa_1_1_lattice_filter_ac599ab3a2134d53e0685f91a0a673ed4}} 
+\index{tsa\+::\+Lattice\+Filter@{tsa\+::\+Lattice\+Filter}!Save@{Save}}
+\index{Save@{Save}!tsa\+::\+Lattice\+Filter@{tsa\+::\+Lattice\+Filter}}
+\subsubsection{\texorpdfstring{Save()}{Save()}}
+{\footnotesize\ttfamily void tsa\+::\+Lattice\+Filter\+::\+Save (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{const char $\ast$}]{fmt = {\ttfamily \char`\"{}txt\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 105 of file Lattice\+Filter.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_lattice_filter_ae9bd581cbcd1183a0dd7c557fe687422}\label{classtsa_1_1_lattice_filter_ae9bd581cbcd1183a0dd7c557fe687422}} 
+\index{tsa\+::\+Lattice\+Filter@{tsa\+::\+Lattice\+Filter}!xml\+\_\+serialize@{xml\+\_\+serialize}}
+\index{xml\+\_\+serialize@{xml\+\_\+serialize}!tsa\+::\+Lattice\+Filter@{tsa\+::\+Lattice\+Filter}}
+\subsubsection{\texorpdfstring{xml\+\_\+serialize()}{xml\_serialize()}}
+{\footnotesize\ttfamily void tsa\+::\+Lattice\+Filter\+::xml\+\_\+serialize (\begin{DoxyParamCaption}\item[{\hyperlink{classeternity_1_1xml__archive}{eternity\+::xml\+\_\+archive} \&}]{xml,  }\item[{const char $\ast$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 112 of file Lattice\+Filter.\+hpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classtsa_1_1_lattice_filter_a0cd360b9836146c9296798337dd2ee0f}\label{classtsa_1_1_lattice_filter_a0cd360b9836146c9296798337dd2ee0f}} 
+\index{tsa\+::\+Lattice\+Filter@{tsa\+::\+Lattice\+Filter}!m\+ErrB@{m\+ErrB}}
+\index{m\+ErrB@{m\+ErrB}!tsa\+::\+Lattice\+Filter@{tsa\+::\+Lattice\+Filter}}
+\subsubsection{\texorpdfstring{m\+ErrB}{mErrB}}
+{\footnotesize\ttfamily \hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} tsa\+::\+Lattice\+Filter\+::m\+ErrB\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 225 of file Lattice\+Filter.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_lattice_filter_a462c5cd31c438a924bfde88d08e12200}\label{classtsa_1_1_lattice_filter_a462c5cd31c438a924bfde88d08e12200}} 
+\index{tsa\+::\+Lattice\+Filter@{tsa\+::\+Lattice\+Filter}!m\+ErrF@{m\+ErrF}}
+\index{m\+ErrF@{m\+ErrF}!tsa\+::\+Lattice\+Filter@{tsa\+::\+Lattice\+Filter}}
+\subsubsection{\texorpdfstring{m\+ErrF}{mErrF}}
+{\footnotesize\ttfamily \hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} tsa\+::\+Lattice\+Filter\+::m\+ErrF\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 224 of file Lattice\+Filter.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_lattice_filter_aaff567ffb2c6b13538f138b8d49f3781}\label{classtsa_1_1_lattice_filter_aaff567ffb2c6b13538f138b8d49f3781}} 
+\index{tsa\+::\+Lattice\+Filter@{tsa\+::\+Lattice\+Filter}!m\+Order@{m\+Order}}
+\index{m\+Order@{m\+Order}!tsa\+::\+Lattice\+Filter@{tsa\+::\+Lattice\+Filter}}
+\subsubsection{\texorpdfstring{m\+Order}{mOrder}}
+{\footnotesize\ttfamily unsigned int tsa\+::\+Lattice\+Filter\+::m\+Order\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 221 of file Lattice\+Filter.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_lattice_filter_a0e3a56f45a158477cef36e55cd2e5417}\label{classtsa_1_1_lattice_filter_a0e3a56f45a158477cef36e55cd2e5417}} 
+\index{tsa\+::\+Lattice\+Filter@{tsa\+::\+Lattice\+Filter}!m\+ParcorB@{m\+ParcorB}}
+\index{m\+ParcorB@{m\+ParcorB}!tsa\+::\+Lattice\+Filter@{tsa\+::\+Lattice\+Filter}}
+\subsubsection{\texorpdfstring{m\+ParcorB}{mParcorB}}
+{\footnotesize\ttfamily \hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} tsa\+::\+Lattice\+Filter\+::m\+ParcorB\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 223 of file Lattice\+Filter.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_lattice_filter_a4a7f9d6020bc4d7cab3d6021bd5338db}\label{classtsa_1_1_lattice_filter_a4a7f9d6020bc4d7cab3d6021bd5338db}} 
+\index{tsa\+::\+Lattice\+Filter@{tsa\+::\+Lattice\+Filter}!m\+ParcorF@{m\+ParcorF}}
+\index{m\+ParcorF@{m\+ParcorF}!tsa\+::\+Lattice\+Filter@{tsa\+::\+Lattice\+Filter}}
+\subsubsection{\texorpdfstring{m\+ParcorF}{mParcorF}}
+{\footnotesize\ttfamily \hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} tsa\+::\+Lattice\+Filter\+::m\+ParcorF\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 222 of file Lattice\+Filter.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_lattice_filter_ab480cbe362a358df626bcd0758c0a7ce}\label{classtsa_1_1_lattice_filter_ab480cbe362a358df626bcd0758c0a7ce}} 
+\index{tsa\+::\+Lattice\+Filter@{tsa\+::\+Lattice\+Filter}!m\+Status@{m\+Status}}
+\index{m\+Status@{m\+Status}!tsa\+::\+Lattice\+Filter@{tsa\+::\+Lattice\+Filter}}
+\subsubsection{\texorpdfstring{m\+Status}{mStatus}}
+{\footnotesize\ttfamily int tsa\+::\+Lattice\+Filter\+::m\+Status\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 226 of file Lattice\+Filter.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/include/\hyperlink{_lattice_filter_8hpp}{Lattice\+Filter.\+hpp}\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/src/\hyperlink{_lattice_filter_8cpp}{Lattice\+Filter.\+cpp}\end{DoxyCompactItemize}

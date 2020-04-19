@@ -1,0 +1,395 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_r_l_s_canceler_8hpp" kind="file" language="C++">
+    <compoundname>RLSCanceler.hpp</compoundname>
+    <includes refid="_algo_base_8hpp" local="no">AlgoBase.hpp</includes>
+    <includedby refid="_r_l_s_canceler_8cpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/src/RLSCanceler.cpp</includedby>
+    <includedby refid="tsa_8hpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/include/tsa.hpp</includedby>
+    <incdepgraph>
+      <node id="3093">
+        <label>tsaTraits.hpp</label>
+        <link refid="tsa_traits_8hpp"/>
+        <childnode refid="3094" relation="include">
+        </childnode>
+      </node>
+      <node id="3073">
+        <label>eternity.hpp</label>
+        <link refid="eternity_8hpp"/>
+        <childnode refid="3074" relation="include">
+        </childnode>
+        <childnode refid="3077" relation="include">
+        </childnode>
+        <childnode refid="3082" relation="include">
+        </childnode>
+        <childnode refid="3086" relation="include">
+        </childnode>
+      </node>
+      <node id="3079">
+        <label>stdlib.h</label>
+      </node>
+      <node id="3066">
+        <label>stdexcept</label>
+      </node>
+      <node id="3088">
+        <label>tsaTypes.hpp</label>
+        <link refid="tsa_types_8hpp"/>
+        <childnode refid="3068" relation="include">
+        </childnode>
+        <childnode refid="3069" relation="include">
+        </childnode>
+        <childnode refid="3089" relation="include">
+        </childnode>
+        <childnode refid="3070" relation="include">
+        </childnode>
+        <childnode refid="3073" relation="include">
+        </childnode>
+      </node>
+      <node id="3071">
+        <label>string</label>
+      </node>
+      <node id="3074">
+        <label>eternity/dynamic.hpp</label>
+        <link refid="dynamic_8hpp"/>
+        <childnode refid="3075" relation="include">
+        </childnode>
+        <childnode refid="3076" relation="include">
+        </childnode>
+        <childnode refid="3071" relation="include">
+        </childnode>
+      </node>
+      <node id="3084">
+        <label>map</label>
+      </node>
+      <node id="3090">
+        <label>tsaLog.hpp</label>
+        <link refid="tsa_log_8hpp"/>
+        <childnode refid="3067" relation="include">
+        </childnode>
+        <childnode refid="3068" relation="include">
+        </childnode>
+        <childnode refid="3091" relation="include">
+        </childnode>
+      </node>
+      <node id="3068">
+        <label>fstream</label>
+      </node>
+      <node id="3083">
+        <label>xmlscanner.hpp</label>
+        <link refid="xmlscanner_8hpp"/>
+        <childnode refid="3078" relation="include">
+        </childnode>
+        <childnode refid="3079" relation="include">
+        </childnode>
+        <childnode refid="3080" relation="include">
+        </childnode>
+        <childnode refid="3084" relation="include">
+        </childnode>
+        <childnode refid="3081" relation="include">
+        </childnode>
+        <childnode refid="3068" relation="include">
+        </childnode>
+        <childnode refid="3071" relation="include">
+        </childnode>
+        <childnode refid="3067" relation="include">
+        </childnode>
+      </node>
+      <node id="3072">
+        <label>tsaSerialize.hpp</label>
+        <link refid="tsa_serialize_8hpp"/>
+        <childnode refid="3066" relation="include">
+        </childnode>
+        <childnode refid="3067" relation="include">
+        </childnode>
+        <childnode refid="3068" relation="include">
+        </childnode>
+        <childnode refid="3073" relation="include">
+        </childnode>
+        <childnode refid="3088" relation="include">
+        </childnode>
+      </node>
+      <node id="3097">
+        <label>fparser.hpp</label>
+        <link refid="fparser_8hpp"/>
+        <childnode refid="3071" relation="include">
+        </childnode>
+        <childnode refid="3084" relation="include">
+        </childnode>
+        <childnode refid="3080" relation="include">
+        </childnode>
+      </node>
+      <node id="3065">
+        <label>AlgoBase.hpp</label>
+        <link refid="_algo_base_8hpp"/>
+        <childnode refid="3066" relation="include">
+        </childnode>
+        <childnode refid="3067" relation="include">
+        </childnode>
+        <childnode refid="3068" relation="include">
+        </childnode>
+        <childnode refid="3069" relation="include">
+        </childnode>
+        <childnode refid="3070" relation="include">
+        </childnode>
+        <childnode refid="3071" relation="include">
+        </childnode>
+        <childnode refid="3072" relation="include">
+        </childnode>
+        <childnode refid="3088" relation="include">
+        </childnode>
+        <childnode refid="3090" relation="include">
+        </childnode>
+        <childnode refid="3092" relation="include">
+        </childnode>
+        <childnode refid="3098" relation="include">
+        </childnode>
+        <childnode refid="3100" relation="include">
+        </childnode>
+      </node>
+      <node id="3064">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/RLSCanceler.hpp</label>
+        <link refid="_r_l_s_canceler_8hpp"/>
+        <childnode refid="3065" relation="include">
+        </childnode>
+      </node>
+      <node id="3077">
+        <label>eternity/persist.hpp</label>
+        <link refid="persist_8hpp"/>
+        <childnode refid="3074" relation="include">
+        </childnode>
+        <childnode refid="3078" relation="include">
+        </childnode>
+        <childnode refid="3079" relation="include">
+        </childnode>
+        <childnode refid="3080" relation="include">
+        </childnode>
+        <childnode refid="3081" relation="include">
+        </childnode>
+        <childnode refid="3068" relation="include">
+        </childnode>
+      </node>
+      <node id="3096">
+        <label>string.h</label>
+      </node>
+      <node id="3076">
+        <label>typeinfo</label>
+      </node>
+      <node id="3070">
+        <label>boost/numeric/ublas/io.hpp</label>
+      </node>
+      <node id="3091">
+        <label>unistd.h</label>
+      </node>
+      <node id="3095">
+        <label>tsaUtilityFunctions.hpp</label>
+        <link refid="tsa_utility_functions_8hpp"/>
+        <childnode refid="3096" relation="include">
+        </childnode>
+        <childnode refid="3097" relation="include">
+        </childnode>
+        <childnode refid="3094" relation="include">
+        </childnode>
+        <childnode refid="3068" relation="include">
+        </childnode>
+      </node>
+      <node id="3080">
+        <label>vector</label>
+      </node>
+      <node id="3092">
+        <label>BaseView.hpp</label>
+        <link refid="_base_view_8hpp"/>
+        <childnode refid="3084" relation="include">
+        </childnode>
+        <childnode refid="3071" relation="include">
+        </childnode>
+        <childnode refid="3088" relation="include">
+        </childnode>
+        <childnode refid="3093" relation="include">
+        </childnode>
+        <childnode refid="3095" relation="include">
+        </childnode>
+        <childnode refid="3072" relation="include">
+        </childnode>
+        <childnode refid="3090" relation="include">
+        </childnode>
+      </node>
+      <node id="3089">
+        <label>boost/numeric/ublas/matrix_proxy.hpp</label>
+      </node>
+      <node id="3087">
+        <label>sstream</label>
+      </node>
+      <node id="3099">
+        <label>FrameL.h</label>
+      </node>
+      <node id="3100">
+        <label>AlgoExceptions.hpp</label>
+        <link refid="_algo_exceptions_8hpp"/>
+        <childnode refid="3066" relation="include">
+        </childnode>
+        <childnode refid="3071" relation="include">
+        </childnode>
+      </node>
+      <node id="3098">
+        <label>SeqView.hpp</label>
+        <link refid="_seq_view_8hpp"/>
+        <childnode refid="3069" relation="include">
+        </childnode>
+        <childnode refid="3089" relation="include">
+        </childnode>
+        <childnode refid="3070" relation="include">
+        </childnode>
+        <childnode refid="3092" relation="include">
+        </childnode>
+        <childnode refid="3099" relation="include">
+        </childnode>
+      </node>
+      <node id="3078">
+        <label>math.h</label>
+      </node>
+      <node id="3069">
+        <label>boost/numeric/ublas/matrix.hpp</label>
+      </node>
+      <node id="3067">
+        <label>iostream</label>
+      </node>
+      <node id="3085">
+        <label>deque</label>
+      </node>
+      <node id="3082">
+        <label>eternity/persist_xml.hpp</label>
+        <link refid="persist__xml_8hpp"/>
+        <childnode refid="3077" relation="include">
+        </childnode>
+        <childnode refid="3083" relation="include">
+        </childnode>
+        <childnode refid="3085" relation="include">
+        </childnode>
+      </node>
+      <node id="3094">
+        <label>complex</label>
+      </node>
+      <node id="3086">
+        <label>eternity/algorithms.hpp</label>
+        <link refid="algorithms_8hpp"/>
+        <childnode refid="3077" relation="include">
+        </childnode>
+        <childnode refid="3082" relation="include">
+        </childnode>
+        <childnode refid="3083" relation="include">
+        </childnode>
+        <childnode refid="3087" relation="include">
+        </childnode>
+      </node>
+      <node id="3081">
+        <label>algorithm</label>
+      </node>
+      <node id="3075">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3102">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/RLSCanceler.cpp</label>
+        <link refid="_r_l_s_canceler_8cpp"/>
+      </node>
+      <node id="3101">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/RLSCanceler.hpp</label>
+        <link refid="_r_l_s_canceler_8hpp"/>
+        <childnode refid="3102" relation="include">
+        </childnode>
+        <childnode refid="3103" relation="include">
+        </childnode>
+      </node>
+      <node id="3103">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/tsa.hpp</label>
+        <link refid="tsa_8hpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classtsa_1_1_r_l_s_canceler" prot="public">tsa::RLSCanceler</innerclass>
+    <innernamespace refid="namespacetsa">tsa</innernamespace>
+    <briefdescription>
+<para>Implement the Recursive Least Squares wieghts estimation. </para>    </briefdescription>
+    <detaileddescription>
+<para>Copyright (C) 2004 by Elena Cuoco <ulink url="mailto:elena.cuoco@ego-gw.it">elena.cuoco@ego-gw.it</ulink></para><para>This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</para><para>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</para><para>You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.</para><para><simplesect kind="author"><para>Elena Cuoco <ulink url="mailto:elena.cuoco@ego-gw.it">elena.cuoco@ego-gw.it</ulink> </para></simplesect>
+<simplesect kind="date"><para>2005 </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="27"><highlight class="preprocessor">#ifndef<sp/>__RLSCANCELER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__RLSCANCELER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_algo_base_8hpp" kindref="compound">AlgoBase.hpp</ref>&gt;</highlight></codeline>
+<codeline lineno="46"></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"></codeline>
+<codeline lineno="66"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetsa" kindref="compound">tsa</ref><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="classtsa_1_1_r_l_s_canceler" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classtsa_1_1_r_l_s_canceler" kindref="compound">RLSCanceler</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_algo_base" kindref="compound">AlgoBase</ref><sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_r_l_s_canceler_1aab2d9be86611bc4b0f2912e7f673e478" kindref="member">RLSCanceler</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Order,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>delta,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>lambda,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Channels);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_r_l_s_canceler_1aab2d9be86611bc4b0f2912e7f673e478" kindref="member">RLSCanceler</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_r_l_s_canceler" kindref="compound">RLSCanceler</ref>&amp;<sp/>from);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_r_l_s_canceler_1a3aadd00151305795177bf2b2e394f140" kindref="member">~RLSCanceler</ref>();</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_r_l_s_canceler" kindref="compound">RLSCanceler</ref>&amp;<sp/><ref refid="classtsa_1_1_r_l_s_canceler_1ad37c41807b26bb323a1fc044b17a5ca9" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_r_l_s_canceler" kindref="compound">RLSCanceler</ref>&amp;<sp/>from);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_r_l_s_canceler_1aa83e2ee91b1e68b54099455dc6e5f3c6" kindref="member">operator()</ref>(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>InputData,<sp/><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>CleanedData);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_r_l_s_canceler_1aa83e2ee91b1e68b54099455dc6e5f3c6" kindref="member">operator()</ref>(<ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>InputData,<sp/><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>CleanedData,<sp/><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref>&amp;<sp/>ReferenceSignal);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_r_l_s_canceler_1ab6cb776cf208561a60840498626965dd" kindref="member">execute</ref>(<ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref>&amp;<sp/>Input,<sp/><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref>&amp;<sp/>Output,<sp/><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref>&amp;<sp/>ReferenceSigna);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_r_l_s_canceler_1ab6cb776cf208561a60840498626965dd" kindref="member">execute</ref>(<ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref>&amp;<sp/>Input,<sp/><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref>&amp;<sp/>Output);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"></codeline>
+<codeline lineno="147"></codeline>
+<codeline lineno="152" refid="classtsa_1_1_r_l_s_canceler_1a4387e7c608cb5f32932286caac5f3b43" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_r_l_s_canceler_1a4387e7c608cb5f32932286caac5f3b43" kindref="member">Getlstart</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_r_l_s_canceler_1a68cb1250ac509a8f038e6541b5b14c99" kindref="member">mlstart</ref>;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162" refid="classtsa_1_1_r_l_s_canceler_1abcff7cc0ecfe6fda9be3f0c4a698ecb4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_r_l_s_canceler_1abcff7cc0ecfe6fda9be3f0c4a698ecb4" kindref="member">GetWeights</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>channel)<sp/>{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_r_l_s_canceler_1a9abd498386c6750bfa22910242ace12e" kindref="member">mWeights</ref>(channel,<sp/>j);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"></codeline>
+<codeline lineno="172"></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="179" refid="classtsa_1_1_r_l_s_canceler_1ac96db09b7154fb657b33325c7dcb0ba9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_r_l_s_canceler_1ac96db09b7154fb657b33325c7dcb0ba9" kindref="member">mP</ref>;<sp/></highlight></codeline>
+<codeline lineno="180" refid="classtsa_1_1_r_l_s_canceler_1a689a06e01e97d29f98be6f37c2ac229d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_r_l_s_canceler_1a689a06e01e97d29f98be6f37c2ac229d" kindref="member">mdelta</ref>;<sp/></highlight></codeline>
+<codeline lineno="181" refid="classtsa_1_1_r_l_s_canceler_1a3c2ce539583693961306866f2d0d0b40" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_r_l_s_canceler_1a3c2ce539583693961306866f2d0d0b40" kindref="member">mlambda</ref>;<sp/></highlight></codeline>
+<codeline lineno="182" refid="classtsa_1_1_r_l_s_canceler_1a9abd498386c6750bfa22910242ace12e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref><sp/><ref refid="classtsa_1_1_r_l_s_canceler_1a9abd498386c6750bfa22910242ace12e" kindref="member">mWeights</ref>;<sp/></highlight></codeline>
+<codeline lineno="183" refid="classtsa_1_1_r_l_s_canceler_1a5f45c202fd98fb28fc600747bda6d8e3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref><sp/><ref refid="classtsa_1_1_r_l_s_canceler_1a5f45c202fd98fb28fc600747bda6d8e3" kindref="member">mC</ref>;<sp/></highlight></codeline>
+<codeline lineno="184" refid="classtsa_1_1_r_l_s_canceler_1ac555ed3641b607e0818eb0d55d09e024" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref><sp/><ref refid="classtsa_1_1_r_l_s_canceler_1ac555ed3641b607e0818eb0d55d09e024" kindref="member">mX</ref>;<sp/></highlight></codeline>
+<codeline lineno="185" refid="classtsa_1_1_r_l_s_canceler_1ab23f9b24f1909251587df0ec11218a4e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref><sp/><ref refid="classtsa_1_1_r_l_s_canceler_1ab23f9b24f1909251587df0ec11218a4e" kindref="member">mM</ref>;<sp/></highlight></codeline>
+<codeline lineno="186" refid="classtsa_1_1_r_l_s_canceler_1aca9845a6e34fb8ce588d9b8e7e44b489" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref><sp/><ref refid="classtsa_1_1_r_l_s_canceler_1aca9845a6e34fb8ce588d9b8e7e44b489" kindref="member">mG</ref>;<sp/></highlight></codeline>
+<codeline lineno="187" refid="classtsa_1_1_r_l_s_canceler_1a68cb1250ac509a8f038e6541b5b14c99" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_r_l_s_canceler_1a68cb1250ac509a8f038e6541b5b14c99" kindref="member">mlstart</ref>;<sp/></highlight></codeline>
+<codeline lineno="188" refid="classtsa_1_1_r_l_s_canceler_1a290c458da793dc228fb0a2c2fc0cfd8a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_r_l_s_canceler_1a290c458da793dc228fb0a2c2fc0cfd8a" kindref="member">msigma</ref>;<sp/></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal">}<sp/></highlight><highlight class="comment">//end<sp/>namespace</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>___RLSCANCELER_HPP</highlight></codeline>
+    </programlisting>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/RLSCanceler.hpp"/>
+  </compounddef>
+</doxygen>

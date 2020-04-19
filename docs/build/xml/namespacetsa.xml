@@ -1,0 +1,785 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespacetsa" kind="namespace" language="C++">
+    <compoundname>tsa</compoundname>
+    <innerclass refid="classtsa_1_1_a_d_c___channel" prot="public">tsa::ADC_Channel</innerclass>
+    <innerclass refid="classtsa_1_1_algo_base" prot="public">tsa::AlgoBase</innerclass>
+    <innerclass refid="classtsa_1_1_a_r2" prot="public">tsa::AR2</innerclass>
+    <innerclass refid="classtsa_1_1_a_r2_parcor" prot="public">tsa::AR2Parcor</innerclass>
+    <innerclass refid="classtsa_1_1_ar_burg_estimator" prot="public">tsa::ArBurgEstimator</innerclass>
+    <innerclass refid="classtsa_1_1_ar_durbin_estimator" prot="public">tsa::ArDurbinEstimator</innerclass>
+    <innerclass refid="classtsa_1_1_arma2_psd" prot="public">tsa::Arma2Psd</innerclass>
+    <innerclass refid="classtsa_1_1_arma2_t_f" prot="public">tsa::Arma2TF</innerclass>
+    <innerclass refid="classtsa_1_1_a_r_m_a_filter" prot="public">tsa::ARMAFilter</innerclass>
+    <innerclass refid="classtsa_1_1_a_r_m_afit" prot="public">tsa::ARMAfit</innerclass>
+    <innerclass refid="classtsa_1_1_a_r_m_a_view" prot="public">tsa::ARMAView</innerclass>
+    <innerclass refid="classtsa_1_1bad__matrix__size" prot="public">tsa::bad_matrix_size</innerclass>
+    <innerclass refid="classtsa_1_1bad__value" prot="public">tsa::bad_value</innerclass>
+    <innerclass refid="classtsa_1_1bad__vector__size" prot="public">tsa::bad_vector_size</innerclass>
+    <innerclass refid="classtsa_1_1_bartlett_window" prot="public">tsa::BartlettWindow</innerclass>
+    <innerclass refid="classtsa_1_1_base_f_f_t" prot="public">tsa::BaseFFT</innerclass>
+    <innerclass refid="classtsa_1_1_base_view" prot="public">tsa::BaseView</innerclass>
+    <innerclass refid="classtsa_1_1_base_window" prot="public">tsa::BaseWindow</innerclass>
+    <innerclass refid="classtsa_1_1_bisquare_window" prot="public">tsa::BisquareWindow</innerclass>
+    <innerclass refid="classtsa_1_1_b_l_interpolation" prot="public">tsa::BLInterpolation</innerclass>
+    <innerclass refid="classtsa_1_1_butterworth_filter" prot="public">tsa::ButterworthFilter</innerclass>
+    <innerclass refid="classtsa_1_1_channel_descriptor" prot="public">tsa::ChannelDescriptor</innerclass>
+    <innerclass refid="classtsa_1_1_cholesky" prot="public">tsa::Cholesky</innerclass>
+    <innerclass refid="classtsa_1_1_clusterized_event" prot="public">tsa::ClusterizedEvent</innerclass>
+    <innerclass refid="classtsa_1_1_clusterized_event_full" prot="public">tsa::ClusterizedEventFull</innerclass>
+    <innerclass refid="classtsa_1_1_clusterized_event_full_featured" prot="public">tsa::ClusterizedEventFullFeatured</innerclass>
+    <innerclass refid="classtsa_1_1_complex_f_f_t" prot="public">tsa::ComplexFFT</innerclass>
+    <innerclass refid="classtsa_1_1_cs2_hamming_window" prot="public">tsa::Cs2HammingWindow</innerclass>
+    <innerclass refid="classtsa_1_1_cs2_hann_window" prot="public">tsa::Cs2HannWindow</innerclass>
+    <innerclass refid="structtsa_1_1_data_exception" prot="public">tsa::DataException</innerclass>
+    <innerclass refid="classtsa_1_1_d_c_t" prot="public">tsa::DCT</innerclass>
+    <innerclass refid="classtsa_1_1_double_whitening" prot="public">tsa::DoubleWhitening</innerclass>
+    <innerclass refid="classtsa_1_1_d_s_t" prot="public">tsa::DST</innerclass>
+    <innerclass refid="classtsa_1_1_event" prot="public">tsa::Event</innerclass>
+    <innerclass refid="classtsa_1_1_event_full" prot="public">tsa::EventFull</innerclass>
+    <innerclass refid="classtsa_1_1_event_full_featured" prot="public">tsa::EventFullFeatured</innerclass>
+    <innerclass refid="classtsa_1_1_fifo_buffer" prot="public">tsa::FifoBuffer</innerclass>
+    <innerclass refid="classtsa_1_1_f_r_a_m_e_h___channel" prot="public">tsa::FRAMEH_Channel</innerclass>
+    <innerclass refid="classtsa_1_1_frame_i_channel" prot="public">tsa::FrameIChannel</innerclass>
+    <innerclass refid="classtsa_1_1_frame_i_stream" prot="public">tsa::FrameIStream</innerclass>
+    <innerclass refid="classtsa_1_1_get_abs" prot="public">tsa::GetAbs</innerclass>
+    <innerclass refid="classtsa_1_1_get_abs2" prot="public">tsa::GetAbs2</innerclass>
+    <innerclass refid="classtsa_1_1_get_im" prot="public">tsa::GetIm</innerclass>
+    <innerclass refid="classtsa_1_1_get_phase" prot="public">tsa::GetPhase</innerclass>
+    <innerclass refid="classtsa_1_1_get_re" prot="public">tsa::GetRe</innerclass>
+    <innerclass refid="classtsa_1_1_i_d_c_t" prot="public">tsa::IDCT</innerclass>
+    <innerclass refid="classtsa_1_1_inverse_real_f_f_t" prot="public">tsa::InverseRealFFT</innerclass>
+    <innerclass refid="classtsa_1_1_kaiser_window" prot="public">tsa::KaiserWindow</innerclass>
+    <innerclass refid="classtsa_1_1_lattice_filter" prot="public">tsa::LatticeFilter</innerclass>
+    <innerclass refid="classtsa_1_1_lattice_view" prot="public">tsa::LatticeView</innerclass>
+    <innerclass refid="classtsa_1_1_least_squares_lattice" prot="public">tsa::LeastSquaresLattice</innerclass>
+    <innerclass refid="classtsa_1_1_lower_triangular" prot="public">tsa::LowerTriangular</innerclass>
+    <innerclass refid="classtsa_1_1_l_s_lfilter" prot="public">tsa::LSLfilter</innerclass>
+    <innerclass refid="classtsa_1_1_l_s_l_learning" prot="public">tsa::LSLLearning</innerclass>
+    <innerclass refid="classtsa_1_1_math_utils" prot="public">tsa::MathUtils</innerclass>
+    <innerclass refid="classtsa_1_1missing__data" prot="public">tsa::missing_data</innerclass>
+    <innerclass refid="classtsa_1_1_m_y_w_e" prot="public">tsa::MYWE</innerclass>
+    <innerclass refid="classtsa_1_1no__data__available" prot="public">tsa::no_data_available</innerclass>
+    <innerclass refid="classtsa_1_1_notch_widrow" prot="public">tsa::NotchWidrow</innerclass>
+    <innerclass refid="classtsa_1_1_parcor2_a_r" prot="public">tsa::Parcor2AR</innerclass>
+    <innerclass refid="classtsa_1_1_parse_parameter_string" prot="public">tsa::ParseParameterString</innerclass>
+    <innerclass refid="classtsa_1_1_p_r_o_c___channel" prot="public">tsa::PROC_Channel</innerclass>
+    <innerclass refid="classtsa_1_1quality__change" prot="public">tsa::quality_change</innerclass>
+    <innerclass refid="classtsa_1_1_real_f_f_t" prot="public">tsa::RealFFT</innerclass>
+    <innerclass refid="classtsa_1_1_r_l_s_canceler" prot="public">tsa::RLSCanceler</innerclass>
+    <innerclass refid="classtsa_1_1_selection_order_criteria" prot="public">tsa::SelectionOrderCriteria</innerclass>
+    <innerclass refid="classtsa_1_1_seq_view" prot="public">tsa::SeqView</innerclass>
+    <innerclass refid="classtsa_1_1_s_e_r___channel" prot="public">tsa::SER_Channel</innerclass>
+    <innerclass refid="classtsa_1_1_s_i_m___channel" prot="public">tsa::SIM_Channel</innerclass>
+    <innerclass refid="classtsa_1_1_square" prot="public">tsa::Square</innerclass>
+    <innerclass refid="classtsa_1_1_strict_lower_triangular" prot="public">tsa::StrictLowerTriangular</innerclass>
+    <innerclass refid="classtsa_1_1_strict_upper_triangular" prot="public">tsa::StrictUpperTriangular</innerclass>
+    <innerclass refid="classtsa_1_1_t_f2_p_s_d" prot="public">tsa::TF2PSD</innerclass>
+    <innerclass refid="classtsa_1_1_t_f_view" prot="public">tsa::TFView</innerclass>
+    <innerclass refid="classtsa_1_1_tukey_hann_window" prot="public">tsa::TukeyHannWindow</innerclass>
+    <innerclass refid="classtsa_1_1_tukey_window" prot="public">tsa::TukeyWindow</innerclass>
+    <innerclass refid="classtsa_1_1_type_traits" prot="public">tsa::TypeTraits</innerclass>
+    <innerclass refid="classtsa_1_1_type_traits_3_01double_01_4" prot="public">tsa::TypeTraits&lt; double &gt;</innerclass>
+    <innerclass refid="classtsa_1_1_type_traits_3_01std_1_1complex_3_01double_01_4_01_4" prot="public">tsa::TypeTraits&lt; std::complex&lt; double &gt; &gt;</innerclass>
+    <innerclass refid="classtsa_1_1_upper_triangular" prot="public">tsa::UpperTriangular</innerclass>
+    <innerclass refid="classtsa_1_1_util" prot="public">tsa::Util</innerclass>
+    <innerclass refid="classtsa_1_1_v_arma2_t_f" prot="public">tsa::VArma2TF</innerclass>
+    <innerclass refid="classtsa_1_1_view_traits" prot="public">tsa::ViewTraits</innerclass>
+    <innerclass refid="classtsa_1_1_view_util" prot="public">tsa::ViewUtil</innerclass>
+    <innerclass refid="classtsa_1_1_wavelet_threshold" prot="public">tsa::WaveletThreshold</innerclass>
+    <innerclass refid="classtsa_1_1_wavelet_transform" prot="public">tsa::WaveletTransform</innerclass>
+    <innerclass refid="classtsa_1_1_wav_reconstruction" prot="public">tsa::WavReconstruction</innerclass>
+    <innerclass refid="classtsa_1_1_w_d_f2_classify" prot="public">tsa::WDF2Classify</innerclass>
+    <innerclass refid="classtsa_1_1_w_d_f2_reconstruct" prot="public">tsa::WDF2Reconstruct</innerclass>
+    <innerclass refid="classtsa_1_1_welch_window" prot="public">tsa::WelchWindow</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespacetsa_1a217e07ef78939f88b22c8428ac96b1ae" prot="public" static="no">
+        <name>FFTPlanningMode</name>
+        <enumvalue id="namespacetsa_1a217e07ef78939f88b22c8428ac96b1aea2762be66fb6f3e4772c7f4cc162b9750" prot="public">
+          <name>ESTIMATE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacetsa_1a217e07ef78939f88b22c8428ac96b1aea80ceffb25eed9ce8d5feb206e07e4bf7" prot="public">
+          <name>MEASURE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacetsa_1a217e07ef78939f88b22c8428ac96b1aea77edd9a03467f5b216486d40b0b5f3c5" prot="public">
+          <name>PATIENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacetsa_1a217e07ef78939f88b22c8428ac96b1aea47f96dc544971b3c53115a87a8fd8e02" prot="public">
+          <name>EXHAUSTIVE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Planning modes. They describe the way in which the planning is done. See the fftw documentation. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/BaseFFT.hpp" line="71" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/BaseFFT.hpp" bodystart="71" bodyend="76"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" prot="public" static="no">
+        <type>class <ref refid="classtsa_1_1_seq_view" kindref="compound">SeqView</ref>&lt; double &gt;</type>
+        <definition>typedef class SeqView&lt; double &gt; tsa::SeqViewDouble</definition>
+        <argsstring></argsstring>
+        <name>SeqViewDouble</name>
+        <briefdescription>
+<para>Double precision histogram. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/SeqView.hpp" line="187" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/SeqView.hpp" bodystart="549" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetsa_1ab32775c889b53c40fa83939f22372b75" prot="public" static="no">
+        <type>class <ref refid="classtsa_1_1_seq_view" kindref="compound">SeqView</ref>&lt; std::complex&lt; double &gt; &gt;</type>
+        <definition>typedef class SeqView&lt; std::complex&lt; double &gt; &gt; tsa::SeqViewComplex</definition>
+        <argsstring></argsstring>
+        <name>SeqViewComplex</name>
+        <briefdescription>
+<para>Complex histogram. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/SeqView.hpp" line="187" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/SeqView.hpp" bodystart="550" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetsa_1a0da725604861f3b1b20bbaa371e77d67" prot="public" static="no">
+        <type>class <ref refid="classtsa_1_1_t_f_view" kindref="compound">TFView</ref>&lt; double &gt;</type>
+        <definition>typedef class TFView&lt; double &gt; tsa::TFViewDouble</definition>
+        <argsstring></argsstring>
+        <name>TFViewDouble</name>
+        <briefdescription>
+<para>Double precision histogram. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" line="183" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" bodystart="208" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetsa_1ac27fece838548b661b9d7b73f36b61d5" prot="public" static="no">
+        <type>class <ref refid="classtsa_1_1_t_f_view" kindref="compound">TFView</ref>&lt; std::complex&lt; double &gt; &gt;</type>
+        <definition>typedef class TFView&lt; std::complex&lt; double &gt; &gt; tsa::TFViewComplex</definition>
+        <argsstring></argsstring>
+        <name>TFViewComplex</name>
+        <briefdescription>
+<para>Complex histogram. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" line="183" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/TFView.hpp" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetsa_1a7b1f40fa90474b78dd0ab472b7c37547" prot="public" static="no">
+        <type>std::complex&lt; double &gt;</type>
+        <definition>typedef std::complex&lt;double&gt; tsa::Cdouble</definition>
+        <argsstring></argsstring>
+        <name>Cdouble</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTypes.hpp" line="70" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTypes.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetsa_1aad3ff4a1af568c2cf9258474cecb868f" prot="public" static="no">
+        <type>boost::numeric::ublas::matrix&lt; int &gt;</type>
+        <definition>typedef boost::numeric::ublas::matrix&lt;int&gt; tsa::Imatrix</definition>
+        <argsstring></argsstring>
+        <name>Imatrix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTypes.hpp" line="73" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTypes.hpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetsa_1ad9cc6c0ebe447f2d49102804a7d7a6f6" prot="public" static="no">
+        <type>boost::numeric::ublas::matrix&lt; unsigned int &gt;</type>
+        <definition>typedef boost::numeric::ublas::matrix&lt;unsigned int&gt; tsa::UImatrix</definition>
+        <argsstring></argsstring>
+        <name>UImatrix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTypes.hpp" line="74" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTypes.hpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" prot="public" static="no">
+        <type>boost::numeric::ublas::matrix&lt; double &gt;</type>
+        <definition>typedef boost::numeric::ublas::matrix&lt;double&gt; tsa::Dmatrix</definition>
+        <argsstring></argsstring>
+        <name>Dmatrix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTypes.hpp" line="75" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTypes.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetsa_1a86348fef1603a135fe5fba9e5f5486ee" prot="public" static="no">
+        <type>boost::numeric::ublas::matrix&lt; std::complex&lt; double &gt; &gt;</type>
+        <definition>typedef boost::numeric::ublas::matrix&lt; std::complex&lt;double&gt; &gt; tsa::Cmatrix</definition>
+        <argsstring></argsstring>
+        <name>Cmatrix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTypes.hpp" line="78" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTypes.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetsa_1ac73258f98dd6a665991e1c9a71df691f" prot="public" static="no">
+        <type>boost::numeric::ublas::vector&lt; int &gt;</type>
+        <definition>typedef boost::numeric::ublas::vector&lt;int&gt; tsa::Ivector</definition>
+        <argsstring></argsstring>
+        <name>Ivector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTypes.hpp" line="81" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTypes.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetsa_1abed2840bd46d70e5aa1122cf7d06a6ed" prot="public" static="no">
+        <type>boost::numeric::ublas::vector&lt; unsigned int &gt;</type>
+        <definition>typedef boost::numeric::ublas::vector&lt;unsigned int&gt; tsa::UIvector</definition>
+        <argsstring></argsstring>
+        <name>UIvector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTypes.hpp" line="82" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTypes.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" prot="public" static="no">
+        <type>boost::numeric::ublas::vector&lt; double &gt;</type>
+        <definition>typedef boost::numeric::ublas::vector&lt; double &gt; tsa::Dvector</definition>
+        <argsstring></argsstring>
+        <name>Dvector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTypes.hpp" line="85" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTypes.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetsa_1ad1e65e148c1b8be13ee4da5b246b5adf" prot="public" static="no">
+        <type>boost::numeric::ublas::vector&lt; long double &gt;</type>
+        <definition>typedef boost::numeric::ublas::vector&lt; long double &gt; tsa::LDvector</definition>
+        <argsstring></argsstring>
+        <name>LDvector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTypes.hpp" line="86" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTypes.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetsa_1a054d1045ead95a65819e9e5722baf600" prot="public" static="no">
+        <type>boost::numeric::ublas::vector&lt; std::complex&lt; double &gt; &gt;</type>
+        <definition>typedef boost::numeric::ublas::vector&lt; std::complex&lt;double&gt; &gt; tsa::Cvector</definition>
+        <argsstring></argsstring>
+        <name>Cvector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTypes.hpp" line="91" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTypes.hpp" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetsa_1a58da96b64dcaa37bc6d90a20f38220c9" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="namespacetsa_1a86348fef1603a135fe5fba9e5f5486ee" kindref="member">Cmatrix</ref> &gt;</type>
+        <definition>typedef std::vector&lt; Cmatrix &gt; tsa::VCmatrix</definition>
+        <argsstring></argsstring>
+        <name>VCmatrix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTypes.hpp" line="94" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTypes.hpp" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetsa_1a6dd7105c3202ef00a213d7c029f5b248" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref> &gt;</type>
+        <definition>typedef std::vector&lt; Dmatrix &gt; tsa::VDmatrix</definition>
+        <argsstring></argsstring>
+        <name>VDmatrix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTypes.hpp" line="95" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTypes.hpp" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetsa_1aeaf3be962a114beef3d9e89b0fb49bf4" prot="public" static="no">
+        <type>boost::numeric::ublas::matrix_row&lt; <ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref> &gt;</type>
+        <definition>typedef boost::numeric::ublas::matrix_row&lt;Dmatrix&gt; tsa::DmatrixRow</definition>
+        <argsstring></argsstring>
+        <name>DmatrixRow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTypes.hpp" line="98" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTypes.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetsa_1a9903622809f0f8f0a38a520859ed5090" prot="public" static="no">
+        <type>boost::numeric::ublas::matrix_column&lt; <ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref> &gt;</type>
+        <definition>typedef boost::numeric::ublas::matrix_column&lt;Dmatrix&gt; tsa::DmatrixCol</definition>
+        <argsstring></argsstring>
+        <name>DmatrixCol</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTypes.hpp" line="99" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTypes.hpp" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetsa_1ad294f56c16152a1618cbe2f19b768e2e" prot="public" static="no">
+        <type>boost::numeric::ublas::matrix_row&lt; <ref refid="namespacetsa_1a86348fef1603a135fe5fba9e5f5486ee" kindref="member">Cmatrix</ref> &gt;</type>
+        <definition>typedef boost::numeric::ublas::matrix_row&lt;Cmatrix&gt; tsa::CmatrixRow</definition>
+        <argsstring></argsstring>
+        <name>CmatrixRow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTypes.hpp" line="101" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTypes.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetsa_1a8516debea26c2f85600d808e777d39d2" prot="public" static="no">
+        <type>boost::numeric::ublas::matrix_column&lt; <ref refid="namespacetsa_1a86348fef1603a135fe5fba9e5f5486ee" kindref="member">Cmatrix</ref> &gt;</type>
+        <definition>typedef boost::numeric::ublas::matrix_column&lt;Cmatrix&gt; tsa::CmatrixCol</definition>
+        <argsstring></argsstring>
+        <name>CmatrixCol</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTypes.hpp" line="102" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaTypes.hpp" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacetsa_1a1f1681e991b47cfe3bc50282c96bd744" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref></type>
+        <definition>Dvector tsa::create_dvector</definition>
+        <argsstring>(int size)</argsstring>
+        <name>create_dvector</name>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/src/CreateDvector.cpp" line="19" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/CreateDvector.cpp" bodystart="19" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetsa_1a08952ac2e7ac6e538c83692501aed4e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::LogInfo</definition>
+        <argsstring>(const std::string &amp;s,...)</argsstring>
+        <name>LogInfo</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/src/tsaLog.cpp" line="10" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/tsaLog.cpp" bodystart="10" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetsa_1a91d266348bcf69ab00c97a253b0ec790" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::LogWarning</definition>
+        <argsstring>(const std::string &amp;s,...)</argsstring>
+        <name>LogWarning</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/src/tsaLog.cpp" line="13" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/tsaLog.cpp" bodystart="13" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetsa_1a3bce10382fbb41b48aca0e5b8afeb896" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::LogSevere</definition>
+        <argsstring>(const std::string &amp;s,...)</argsstring>
+        <name>LogSevere</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/src/tsaLog.cpp" line="16" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/tsaLog.cpp" bodystart="16" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetsa_1aeff53394d3502127b84380cceb41cba8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::LogSevere</definition>
+        <argsstring>(int lvl, const std::string &amp;s,...)</argsstring>
+        <name>LogSevere</name>
+        <param>
+          <type>int</type>
+          <declname>lvl</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/src/tsaLog.cpp" line="19" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/tsaLog.cpp" bodystart="19" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetsa_1a0314b9c30387b942a5de0ec7ff3026e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::LogFatal</definition>
+        <argsstring>(const std::string &amp;s,...)</argsstring>
+        <name>LogFatal</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/src/tsaLog.cpp" line="22" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/tsaLog.cpp" bodystart="22" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetsa_1a2a922785b9b967a8e92ded5a1540688f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::LogDebug</definition>
+        <argsstring>(int lvl, const std::string &amp;s,...)</argsstring>
+        <name>LogDebug</name>
+        <param>
+          <type>int</type>
+          <declname>lvl</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/src/tsaLog.cpp" line="25" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/tsaLog.cpp" bodystart="25" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetsa_1afb13ed99dfd49fe21c248464155e8806" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char * tsa::Tag</definition>
+        <argsstring>(char *buffer, int n, const char *base, const char *rec)</argsstring>
+        <name>Tag</name>
+        <param>
+          <type>char *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>rec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/src/tsaSerialize.cpp" line="5" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/tsaSerialize.cpp" bodystart="5" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetsa_1a1079ab07e72bc3aaa35f2a9fce42cbd9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char * tsa::Tag</definition>
+        <argsstring>(char *buffer, int n, const char *base, const char *rec, unsigned int i)</argsstring>
+        <name>Tag</name>
+        <param>
+          <type>char *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>rec</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/src/tsaSerialize.cpp" line="10" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/tsaSerialize.cpp" bodystart="10" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetsa_1a1b02aafe1625f78174f56249e0ec5d34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char * tsa::Tag</definition>
+        <argsstring>(char *buffer, int n, const char *base, const char *rec, unsigned int i, unsigned int j)</argsstring>
+        <name>Tag</name>
+        <param>
+          <type>char *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>rec</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/src/tsaSerialize.cpp" line="15" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/tsaSerialize.cpp" bodystart="15" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetsa_1a13bdf484592d9055ad57ffbb8f5b1b7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string tsa::tsaVersion</definition>
+        <argsstring>()</argsstring>
+        <name>tsaVersion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/src/tsaUtilityFunctions.cpp" line="10" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/tsaUtilityFunctions.cpp" bodystart="10" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetsa_1a0aaa10e21d0123ff3f13680f0c125e19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::complex&lt; double &gt;</type>
+        <definition>std::complex&lt; double &gt; tsa::CRATIO</definition>
+        <argsstring>(std::complex&lt; double &gt; v1, std::complex&lt; double &gt; v2)</argsstring>
+        <name>CRATIO</name>
+        <param>
+          <type>std::complex&lt; double &gt;</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type>std::complex&lt; double &gt;</type>
+          <declname>v2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/src/tsaUtilityFunctions.cpp" line="14" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/tsaUtilityFunctions.cpp" bodystart="14" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetsa_1ae15dd89a370a611b23e85adea9ed416d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::DmatrixPrint</definition>
+        <argsstring>(const Dmatrix &amp;m, const char *filename, bool transpose=false)</argsstring>
+        <name>DmatrixPrint</name>
+        <param>
+          <type>const <ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref> &amp;</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>transpose</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/src/tsaUtilityFunctions.cpp" line="18" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/tsaUtilityFunctions.cpp" bodystart="18" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetsa_1a98f39538beaf84d9f18635e0062f6b3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; std::string &gt; tsa::GetWindowList</definition>
+        <argsstring>()</argsstring>
+        <name>GetWindowList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/src/WindowFactory.cpp" line="5" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/WindowFactory.cpp" bodystart="5" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetsa_1ad40921629f819f9f2907db1fc8c1b63a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classtsa_1_1_base_window" kindref="compound">BaseWindow</ref> *</type>
+        <definition>BaseWindow * tsa::WindowFactory</definition>
+        <argsstring>(const std::string &amp;name, unsigned int size)</argsstring>
+        <name>WindowFactory</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/src/WindowFactory.cpp" line="21" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/WindowFactory.cpp" bodystart="21" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetsa_1a1fe617a1ebaccc86dac0d06ccb16372e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classtsa_1_1_base_window" kindref="compound">BaseWindow</ref> *</type>
+        <definition>BaseWindow * tsa::WindowFactory</definition>
+        <argsstring>(const std::string &amp;name, const std::string &amp;parameters, unsigned int size)</argsstring>
+        <name>WindowFactory</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>parameters</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/src/WindowFactory.cpp" line="48" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/WindowFactory.cpp" bodystart="48" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetsa_1ab56a65a614e542cef8536f461fc185a5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int tsa::FFTsize</definition>
+        <argsstring>(int n)</argsstring>
+        <name>FFTsize</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/BaseFFT.hpp" line="78" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/BaseFFT.hpp" bodystart="78" bodyend="80"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The main namespace of the library. </para>    </briefdescription>
+    <detaileddescription>
+<para>tsa namespace</para><para>namespace </para>    </detaileddescription>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/src/AR2.cpp" line="3" column="1"/>
+  </compounddef>
+</doxygen>

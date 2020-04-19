@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structeternity_1_1pointers" kind="struct" language="C++" prot="public">
+    <compoundname>eternity::pointers</compoundname>
+    <includes refid="algorithms_8hpp" local="no">algorithms.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structeternity_1_1pointers_1a9ac5397bcf7d4e363f80c325b86e7966" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+          <param>
+            <type>class Archive</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void eternity::pointers::xml_write</definition>
+        <argsstring>(Archive &amp;archive, std::string key, T &amp;x)</argsstring>
+        <name>xml_write</name>
+        <param>
+          <type>Archive &amp;</type>
+          <declname>archive</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>T &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/algorithms.hpp" line="120" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/algorithms.hpp" bodystart="133" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="structeternity_1_1pointers_1a82633874b86bdf07241befe07601fa10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class ValueType</type>
+          </param>
+          <param>
+            <type>class Archive</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void eternity::pointers::xml_read</definition>
+        <argsstring>(Archive &amp;archive, std::string key, ValueType *var, size_t pos)</argsstring>
+        <name>xml_read</name>
+        <param>
+          <type>Archive &amp;</type>
+          <declname>archive</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>ValueType *</type>
+          <declname>var</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/algorithms.hpp" line="123" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/algorithms.hpp" bodystart="138" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="structeternity_1_1pointers_1a5b2f7a5240aa5f6b19b3e615886ae5a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+          <param>
+            <type>class Archive</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void eternity::pointers::write</definition>
+        <argsstring>(Archive &amp;archive, T &amp;x)</argsstring>
+        <name>write</name>
+        <param>
+          <type>Archive &amp;</type>
+          <declname>archive</declname>
+        </param>
+        <param>
+          <type>T &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/algorithms.hpp" line="126" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/algorithms.hpp" bodystart="143" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="structeternity_1_1pointers_1a393c2b0b219bf16b8fcc372aaa19f185" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class ValueType</type>
+          </param>
+          <param>
+            <type>class Archive</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void eternity::pointers::read</definition>
+        <argsstring>(Archive &amp;archive, ValueType *var)</argsstring>
+        <name>read</name>
+        <param>
+          <type>Archive &amp;</type>
+          <declname>archive</declname>
+        </param>
+        <param>
+          <type>ValueType *</type>
+          <declname>var</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/algorithms.hpp" line="129" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/algorithms.hpp" bodystart="148" bodyend="150"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Manage persistence of object pointers containers (e.g. collections of heap allocated objects) This struct is not intended to direct use but must be passed as template parameter of sequence struct. </para>    </detaileddescription>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/algorithms.hpp" line="118" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/eternity/algorithms.hpp" bodystart="118" bodyend="130"/>
+    <listofallmembers>
+      <member refid="structeternity_1_1pointers_1a393c2b0b219bf16b8fcc372aaa19f185" prot="public" virt="non-virtual"><scope>eternity::pointers</scope><name>read</name></member>
+      <member refid="structeternity_1_1pointers_1a5b2f7a5240aa5f6b19b3e615886ae5a3" prot="public" virt="non-virtual"><scope>eternity::pointers</scope><name>write</name></member>
+      <member refid="structeternity_1_1pointers_1a82633874b86bdf07241befe07601fa10" prot="public" virt="non-virtual"><scope>eternity::pointers</scope><name>xml_read</name></member>
+      <member refid="structeternity_1_1pointers_1a9ac5397bcf7d4e363f80c325b86e7966" prot="public" virt="non-virtual"><scope>eternity::pointers</scope><name>xml_write</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

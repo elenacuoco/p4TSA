@@ -1,0 +1,173 @@
+\hypertarget{classeternity_1_1file__archive}{}\section{eternity\+:\+:file\+\_\+archive Class Reference}
+\label{classeternity_1_1file__archive}\index{eternity\+::file\+\_\+archive@{eternity\+::file\+\_\+archive}}
+
+
+{\ttfamily \#include $<$persist.\+hpp$>$}
+
+Inheritance diagram for eternity\+:\+:file\+\_\+archive\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classeternity_1_1file__archive}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classeternity_1_1file__archive_ab2a892aad41300e922115115b76b7754}{file\+\_\+archive} ()
+\item 
+\hyperlink{classeternity_1_1file__archive_a6f7dd96ce65d0be588f31286313a4b5a}{file\+\_\+archive} (std\+::string file\+\_\+name, \hyperlink{classeternity_1_1archive_a8881f9ce8dbed2ee600c64b7925afef0}{opening\+\_\+mode} mode)
+\item 
+\hyperlink{classeternity_1_1file__archive_a122b37e9949cd1a2f6279ed23d01d97f}{$\sim$file\+\_\+archive} ()
+\item 
+void \hyperlink{classeternity_1_1file__archive_aa42b3bfaf4e595f61ec07bec48676d46}{close} ()
+\begin{DoxyCompactList}\small\item\em close the archive file and release memory used. \end{DoxyCompactList}\item 
+void \hyperlink{classeternity_1_1file__archive_a64a17edf2cea4f1582a5a3c44eb86fa4}{open} (std\+::string file\+\_\+name, \hyperlink{classeternity_1_1archive_a8881f9ce8dbed2ee600c64b7925afef0}{opening\+\_\+mode} mode)
+\item 
+void \hyperlink{classeternity_1_1file__archive_a5f97e0b816c5d9406f675b25f34c21f8}{open} (std\+::string s\+Name, bool loading=true)
+\begin{DoxyCompactList}\small\item\em open the archive file and update this for the serialization \end{DoxyCompactList}\item 
+virtual size\+\_\+t \hyperlink{classeternity_1_1file__archive_a0eaf4b5937b3ff46df3627f64efc19e8}{write} (const void $\ast$buffer, size\+\_\+t size, size\+\_\+t count)
+\begin{DoxyCompactList}\small\item\em write a buffer of a certain legnth n time in the archive \end{DoxyCompactList}\item 
+virtual size\+\_\+t \hyperlink{classeternity_1_1file__archive_a307b43ac9f06c7077ac0f7e48dc0d7ab}{read} (void $\ast$buffer, size\+\_\+t size, size\+\_\+t count)
+\begin{DoxyCompactList}\small\item\em read a buffer of a certain legnth n time in the archive \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::fstream \hyperlink{classeternity_1_1file__archive_ac702d57d9633f8695476da8a7d55dd9d}{stream}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Realize an binary archive using the common file like stream. 
+
+Definition at line 193 of file persist.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classeternity_1_1file__archive_ab2a892aad41300e922115115b76b7754}\label{classeternity_1_1file__archive_ab2a892aad41300e922115115b76b7754}} 
+\index{eternity\+::file\+\_\+archive@{eternity\+::file\+\_\+archive}!file\+\_\+archive@{file\+\_\+archive}}
+\index{file\+\_\+archive@{file\+\_\+archive}!eternity\+::file\+\_\+archive@{eternity\+::file\+\_\+archive}}
+\subsubsection{\texorpdfstring{file\+\_\+archive()}{file\_archive()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily eternity\+::file\+\_\+archive\+::file\+\_\+archive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 197 of file persist.\+hpp.
+
+\mbox{\Hypertarget{classeternity_1_1file__archive_a6f7dd96ce65d0be588f31286313a4b5a}\label{classeternity_1_1file__archive_a6f7dd96ce65d0be588f31286313a4b5a}} 
+\index{eternity\+::file\+\_\+archive@{eternity\+::file\+\_\+archive}!file\+\_\+archive@{file\+\_\+archive}}
+\index{file\+\_\+archive@{file\+\_\+archive}!eternity\+::file\+\_\+archive@{eternity\+::file\+\_\+archive}}
+\subsubsection{\texorpdfstring{file\+\_\+archive()}{file\_archive()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily eternity\+::file\+\_\+archive\+::file\+\_\+archive (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+\_\+name,  }\item[{\hyperlink{classeternity_1_1archive_a8881f9ce8dbed2ee600c64b7925afef0}{opening\+\_\+mode}}]{mode }\end{DoxyParamCaption})}
+
+
+
+Definition at line 73 of file persist.\+cpp.
+
+\mbox{\Hypertarget{classeternity_1_1file__archive_a122b37e9949cd1a2f6279ed23d01d97f}\label{classeternity_1_1file__archive_a122b37e9949cd1a2f6279ed23d01d97f}} 
+\index{eternity\+::file\+\_\+archive@{eternity\+::file\+\_\+archive}!````~file\+\_\+archive@{$\sim$file\+\_\+archive}}
+\index{````~file\+\_\+archive@{$\sim$file\+\_\+archive}!eternity\+::file\+\_\+archive@{eternity\+::file\+\_\+archive}}
+\subsubsection{\texorpdfstring{$\sim$file\+\_\+archive()}{~file\_archive()}}
+{\footnotesize\ttfamily eternity\+::file\+\_\+archive\+::$\sim$file\+\_\+archive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 203 of file persist.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classeternity_1_1file__archive_aa42b3bfaf4e595f61ec07bec48676d46}\label{classeternity_1_1file__archive_aa42b3bfaf4e595f61ec07bec48676d46}} 
+\index{eternity\+::file\+\_\+archive@{eternity\+::file\+\_\+archive}!close@{close}}
+\index{close@{close}!eternity\+::file\+\_\+archive@{eternity\+::file\+\_\+archive}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void eternity\+::file\+\_\+archive\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+close the archive file and release memory used. 
+
+
+
+Definition at line 209 of file persist.\+hpp.
+
+\mbox{\Hypertarget{classeternity_1_1file__archive_a64a17edf2cea4f1582a5a3c44eb86fa4}\label{classeternity_1_1file__archive_a64a17edf2cea4f1582a5a3c44eb86fa4}} 
+\index{eternity\+::file\+\_\+archive@{eternity\+::file\+\_\+archive}!open@{open}}
+\index{open@{open}!eternity\+::file\+\_\+archive@{eternity\+::file\+\_\+archive}}
+\subsubsection{\texorpdfstring{open()}{open()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void eternity\+::file\+\_\+archive\+::open (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+\_\+name,  }\item[{\hyperlink{classeternity_1_1archive_a8881f9ce8dbed2ee600c64b7925afef0}{opening\+\_\+mode}}]{mode }\end{DoxyParamCaption})}
+
+initialize the \hyperlink{classeternity_1_1file__archive}{file\+\_\+archive} using the file named file\+\_\+name. If mode is load create the file. Anyway init update archive to begin persistence operations. 
+
+Definition at line 99 of file persist.\+cpp.
+
+\mbox{\Hypertarget{classeternity_1_1file__archive_a5f97e0b816c5d9406f675b25f34c21f8}\label{classeternity_1_1file__archive_a5f97e0b816c5d9406f675b25f34c21f8}} 
+\index{eternity\+::file\+\_\+archive@{eternity\+::file\+\_\+archive}!open@{open}}
+\index{open@{open}!eternity\+::file\+\_\+archive@{eternity\+::file\+\_\+archive}}
+\subsubsection{\texorpdfstring{open()}{open()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void eternity\+::file\+\_\+archive\+::open (\begin{DoxyParamCaption}\item[{std\+::string}]{s\+Name,  }\item[{bool}]{loading = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+open the archive file and update this for the serialization 
+
+
+
+Definition at line 105 of file persist.\+cpp.
+
+\mbox{\Hypertarget{classeternity_1_1file__archive_a307b43ac9f06c7077ac0f7e48dc0d7ab}\label{classeternity_1_1file__archive_a307b43ac9f06c7077ac0f7e48dc0d7ab}} 
+\index{eternity\+::file\+\_\+archive@{eternity\+::file\+\_\+archive}!read@{read}}
+\index{read@{read}!eternity\+::file\+\_\+archive@{eternity\+::file\+\_\+archive}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily size\+\_\+t eternity\+::file\+\_\+archive\+::read (\begin{DoxyParamCaption}\item[{void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size,  }\item[{size\+\_\+t}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+read a buffer of a certain legnth n time in the archive 
+
+
+
+Implements \hyperlink{classeternity_1_1bin__archive_a5d67b032541f5a1e104d2fcd0eaa7a55}{eternity\+::bin\+\_\+archive}.
+
+
+
+Definition at line 86 of file persist.\+cpp.
+
+\mbox{\Hypertarget{classeternity_1_1file__archive_a0eaf4b5937b3ff46df3627f64efc19e8}\label{classeternity_1_1file__archive_a0eaf4b5937b3ff46df3627f64efc19e8}} 
+\index{eternity\+::file\+\_\+archive@{eternity\+::file\+\_\+archive}!write@{write}}
+\index{write@{write}!eternity\+::file\+\_\+archive@{eternity\+::file\+\_\+archive}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily size\+\_\+t eternity\+::file\+\_\+archive\+::write (\begin{DoxyParamCaption}\item[{const void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size,  }\item[{size\+\_\+t}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+write a buffer of a certain legnth n time in the archive 
+
+
+
+Implements \hyperlink{classeternity_1_1bin__archive_acbe041b0815f2721ee18ad042557b14e}{eternity\+::bin\+\_\+archive}.
+
+
+
+Definition at line 77 of file persist.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classeternity_1_1file__archive_ac702d57d9633f8695476da8a7d55dd9d}\label{classeternity_1_1file__archive_ac702d57d9633f8695476da8a7d55dd9d}} 
+\index{eternity\+::file\+\_\+archive@{eternity\+::file\+\_\+archive}!stream@{stream}}
+\index{stream@{stream}!eternity\+::file\+\_\+archive@{eternity\+::file\+\_\+archive}}
+\subsubsection{\texorpdfstring{stream}{stream}}
+{\footnotesize\ttfamily std\+::fstream eternity\+::file\+\_\+archive\+::stream\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 194 of file persist.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/include/eternity/\hyperlink{persist_8hpp}{persist.\+hpp}\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/include/eternity/\hyperlink{persist_8cpp}{persist.\+cpp}\end{DoxyCompactItemize}

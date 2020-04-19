@@ -1,0 +1,726 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classtsa_1_1_l_s_l_learning" kind="class" language="C++" prot="public">
+    <compoundname>tsa::LSLLearning</compoundname>
+    <basecompoundref refid="classtsa_1_1_algo_base" prot="public" virt="non-virtual">tsa::AlgoBase</basecompoundref>
+    <includes refid="_l_s_l_learning_8hpp" local="no">LSLLearning.hpp</includes>
+      <sectiondef kind="user-defined">
+      <header>Operations</header>
+      <memberdef kind="function" id="classtsa_1_1_l_s_l_learning_1ac703af8aec35bece47d8b5dd5da96125" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::LSLLearning::operator()</definition>
+        <argsstring>(SeqViewDouble &amp;InputData, SeqViewDouble &amp;WhitenedData)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref> &amp;</type>
+          <declname>InputData</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref> &amp;</type>
+          <declname>WhitenedData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>InputData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time series </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>WhitenedData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Whitened Time series </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" line="119" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/LSLLearning.cpp" bodystart="47" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_l_s_l_learning_1a8a3c4b73d36808f940cd37fe8520d76f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::LSLLearning::operator()</definition>
+        <argsstring>(SeqViewDouble &amp;InputData, LatticeView &amp;LatView)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref> &amp;</type>
+          <declname>InputData</declname>
+        </param>
+        <param>
+          <type><ref refid="classtsa_1_1_lattice_view" kindref="compound">LatticeView</ref> &amp;</type>
+          <declname>LatView</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>InputData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>LatView</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" line="126" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/LSLLearning.cpp" bodystart="63" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_l_s_l_learning_1adaf7049997744cc383427c0c673549f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::LSLLearning::operator()</definition>
+        <argsstring>(SeqViewDouble &amp;InputData, Dvector &amp;Parcor)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref> &amp;</type>
+          <declname>InputData</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref> &amp;</type>
+          <declname>Parcor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>InputData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Parcor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" line="133" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/LSLLearning.cpp" bodystart="84" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_l_s_l_learning_1a9ec866ab1a8d8173e77519ce9f9855d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::LSLLearning::execute</definition>
+        <argsstring>(matrix_row&lt; Dmatrix &gt; InputData, matrix_row&lt; Dmatrix &gt; OutputData)</argsstring>
+        <name>execute</name>
+        <param>
+          <type>matrix_row&lt; <ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref> &gt;</type>
+          <declname>InputData</declname>
+        </param>
+        <param>
+          <type>matrix_row&lt; <ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref> &gt;</type>
+          <declname>OutputData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>InputData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input data </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>OutputData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output data </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" line="142" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/LSLLearning.cpp" bodystart="101" bodyend="134"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Getters</header>
+      <memberdef kind="function" id="classtsa_1_1_l_s_l_learning_1ae442a68a9f2f455d86ce56342288381c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int tsa::LSLLearning::GetOrder</definition>
+        <argsstring>()</argsstring>
+        <name>GetOrder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" line="150" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" bodystart="150" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_l_s_l_learning_1acc051c6ae5281e916083fb80a21779e8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double tsa::LSLLearning::GetParcorForward</definition>
+        <argsstring>(unsigned int j)</argsstring>
+        <name>GetParcorForward</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" line="154" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" bodystart="154" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_l_s_l_learning_1a276e9d2206da6c6ac89cdca1cd6c4560" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double tsa::LSLLearning::GetParcorBackward</definition>
+        <argsstring>(unsigned int j)</argsstring>
+        <name>GetParcorBackward</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" line="161" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" bodystart="161" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_l_s_l_learning_1ae012adf2bd5b2540f1a757113968a0d4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double tsa::LSLLearning::GetErrorForward</definition>
+        <argsstring>(unsigned int i, unsigned int j)</argsstring>
+        <name>GetErrorForward</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" line="165" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" bodystart="165" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_l_s_l_learning_1af7f7b4d2830f2bdd66ab8210ef104480" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double tsa::LSLLearning::GetErrorBackward</definition>
+        <argsstring>(unsigned int i, unsigned int j)</argsstring>
+        <name>GetErrorBackward</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" line="171" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" bodystart="171" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_l_s_l_learning_1adaca2870907d65690fcaec01f4d96c95" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double tsa::LSLLearning::GetEpf</definition>
+        <argsstring>(unsigned int i, unsigned int j)</argsstring>
+        <name>GetEpf</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" line="175" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" bodystart="175" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_l_s_l_learning_1ad05ee328f1a40de4fc73bd9770ae08c2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double tsa::LSLLearning::GetEpb</definition>
+        <argsstring>(unsigned int i, unsigned int j)</argsstring>
+        <name>GetEpb</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" line="181" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" bodystart="181" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_l_s_l_learning_1a41c8d09f732ae6fed7edaed61cd73ca2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double tsa::LSLLearning::GetGamma</definition>
+        <argsstring>(unsigned int j)</argsstring>
+        <name>GetGamma</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" line="185" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" bodystart="185" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_l_s_l_learning_1a03684c0760835f7cc8460561ea183f7e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int tsa::LSLLearning::GetStatus</definition>
+        <argsstring>()</argsstring>
+        <name>GetStatus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" line="189" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" bodystart="189" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_l_s_l_learning_1ac6f60dc86d296c35cba1582472d11d27" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double tsa::LSLLearning::GetSigma</definition>
+        <argsstring>()</argsstring>
+        <name>GetSigma</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" line="195" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" bodystart="195" bodyend="197"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtsa_1_1_l_s_l_learning_1ae1e400504ab5fc285b4b2d740e4bde72" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int tsa::LSLLearning::mOrder</definition>
+        <argsstring></argsstring>
+        <name>mOrder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Order of the filter </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" line="264" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" bodystart="264" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_l_s_l_learning_1a6ba93296df7efc898844ff3ef645b287" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double tsa::LSLLearning::mSigma</definition>
+        <argsstring></argsstring>
+        <name>mSigma</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The estimated rms </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" line="265" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" bodystart="265" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_l_s_l_learning_1abc6dbb01c7f1a1b4c1d6ee5cb6ba14e8" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref></type>
+        <definition>Dmatrix tsa::LSLLearning::mEF</definition>
+        <argsstring></argsstring>
+        <name>mEF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ErrorForward </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" line="266" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" bodystart="266" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_l_s_l_learning_1aee8f5369206276f3a7faaaaa048485fb" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref></type>
+        <definition>Dmatrix tsa::LSLLearning::mEB</definition>
+        <argsstring></argsstring>
+        <name>mEB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ErrorBackward </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" line="267" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" bodystart="267" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_l_s_l_learning_1a5cd2595571d70a64dfefbdd48dd96eb5" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref></type>
+        <definition>Dmatrix tsa::LSLLearning::mEpf</definition>
+        <argsstring></argsstring>
+        <name>mEpf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Mean <ref refid="classtsa_1_1_square" kindref="compound">Square</ref> Error Forward </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" line="268" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" bodystart="268" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_l_s_l_learning_1a4ccb655fdbbebb1a9875c6bc8238b373" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref></type>
+        <definition>Dmatrix tsa::LSLLearning::mEpb</definition>
+        <argsstring></argsstring>
+        <name>mEpb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Mean <ref refid="classtsa_1_1_square" kindref="compound">Square</ref> Error Backward </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" line="269" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" bodystart="269" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_l_s_l_learning_1ad651adf83f8b9e770446ccf7f41fe61d" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref></type>
+        <definition>Dvector tsa::LSLLearning::mKf</definition>
+        <argsstring></argsstring>
+        <name>mKf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Forward Parcor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" line="270" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" bodystart="270" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_l_s_l_learning_1ac895dcbb7407c99df7c8703e27b53ca4" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref></type>
+        <definition>Dvector tsa::LSLLearning::mKb</definition>
+        <argsstring></argsstring>
+        <name>mKb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Backward Parcor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" line="271" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" bodystart="271" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_l_s_l_learning_1a4dc069522ea6f00876e144b7c26a8056" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref></type>
+        <definition>Dvector tsa::LSLLearning::mG</definition>
+        <argsstring></argsstring>
+        <name>mG</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Angle parameter </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" line="272" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" bodystart="272" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_l_s_l_learning_1a15b3df249118e9c6699a39a4b4add1db" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double tsa::LSLLearning::mLambda</definition>
+        <argsstring></argsstring>
+        <name>mLambda</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Forgetting Factor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" line="273" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" bodystart="273" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_l_s_l_learning_1ab1e86d5df54de8730402c123caccfd30" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int tsa::LSLLearning::mF0</definition>
+        <argsstring></argsstring>
+        <name>mF0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>index for the status of the Lattice filter </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" line="274" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" bodystart="274" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtsa_1_1_l_s_l_learning_1ab1065fd9f61b44f25c4a9ee67e95dc1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tsa::LSLLearning::LSLLearning</definition>
+        <argsstring>(unsigned int Order, double sigma, double lambda=1.0)</argsstring>
+        <name>LSLLearning</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>Order</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>sigma</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>lambda</declname>
+          <defval>1.0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Order</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Order of the filter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sigma</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>guessed value for the initial sigma </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Lwsp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Lenght of workspace </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lambda</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>forgetting factor </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" line="86" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/LSLLearning.cpp" bodystart="19" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_l_s_l_learning_1ae1d9f9ea754c88bf19365c680ea2415a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tsa::LSLLearning::LSLLearning</definition>
+        <argsstring>(const LSLLearning &amp;from)</argsstring>
+        <name>LSLLearning</name>
+        <param>
+          <type>const <ref refid="classtsa_1_1_l_s_l_learning" kindref="compound">LSLLearning</ref> &amp;</type>
+          <declname>from</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Copy constructor</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>from</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The instance that must be copied </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" line="93" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/LSLLearning.cpp" bodystart="141" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_l_s_l_learning_1aab97f819bb4e1537621d9e84ee0bf140" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tsa::LSLLearning::~LSLLearning</definition>
+        <argsstring>()</argsstring>
+        <name>~LSLLearning</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" line="98" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/LSLLearning.cpp" bodystart="44" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_l_s_l_learning_1a8b2b47d740bd2207f612e9c4aadaf220" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classtsa_1_1_l_s_l_learning" kindref="compound">LSLLearning</ref> &amp;</type>
+        <definition>LSLLearning &amp; tsa::LSLLearning::operator=</definition>
+        <argsstring>(const LSLLearning &amp;from)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classtsa_1_1_l_s_l_learning" kindref="compound">LSLLearning</ref> &amp;</type>
+          <declname>from</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assignement operator</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>from</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The instance to be assigned from</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a reference to a new object </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" line="107" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/LSLLearning.cpp" bodystart="152" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_l_s_l_learning_1a0faa13eb2f31988b73c4740c3e1c4085" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::LSLLearning::Load</definition>
+        <argsstring>(const char *filename, const char *fmt=&quot;txt&quot;)</argsstring>
+        <name>Load</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+          <defval>&quot;txt&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" line="208" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" bodystart="208" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_l_s_l_learning_1aa3397a1d3944fb4ce19c612d74e7018a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::LSLLearning::Save</definition>
+        <argsstring>(const char *filename, const char *fmt=&quot;txt&quot;)</argsstring>
+        <name>Save</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+          <defval>&quot;txt&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" line="215" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" bodystart="215" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_l_s_l_learning_1a54c30966b4ddf0327ef5f4b9a8b774f1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::LSLLearning::xml_serialize</definition>
+        <argsstring>(eternity::xml_archive &amp;xml, const char *p)</argsstring>
+        <name>xml_serialize</name>
+        <param>
+          <type><ref refid="classeternity_1_1xml__archive" kindref="compound">eternity::xml_archive</ref> &amp;</type>
+          <declname>xml</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" line="222" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" bodystart="222" bodyend="258"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>rithm for the learning phase of the Adaptive Least Squares Lattice </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="320">
+        <label>tsa::LSLLearning</label>
+        <link refid="classtsa_1_1_l_s_l_learning"/>
+        <childnode refid="321" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="321">
+        <label>tsa::AlgoBase</label>
+        <link refid="classtsa_1_1_algo_base"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="322">
+        <label>tsa::LSLLearning</label>
+        <link refid="classtsa_1_1_l_s_l_learning"/>
+        <childnode refid="323" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="323">
+        <label>tsa::AlgoBase</label>
+        <link refid="classtsa_1_1_algo_base"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" line="74" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LSLLearning.hpp" bodystart="74" bodyend="276"/>
+    <listofallmembers>
+      <member refid="classtsa_1_1_l_s_l_learning_1a9ec866ab1a8d8173e77519ce9f9855d5" prot="public" virt="non-virtual"><scope>tsa::LSLLearning</scope><name>execute</name></member>
+      <member refid="classtsa_1_1_l_s_l_learning_1ad05ee328f1a40de4fc73bd9770ae08c2" prot="public" virt="non-virtual"><scope>tsa::LSLLearning</scope><name>GetEpb</name></member>
+      <member refid="classtsa_1_1_l_s_l_learning_1adaca2870907d65690fcaec01f4d96c95" prot="public" virt="non-virtual"><scope>tsa::LSLLearning</scope><name>GetEpf</name></member>
+      <member refid="classtsa_1_1_l_s_l_learning_1af7f7b4d2830f2bdd66ab8210ef104480" prot="public" virt="non-virtual"><scope>tsa::LSLLearning</scope><name>GetErrorBackward</name></member>
+      <member refid="classtsa_1_1_l_s_l_learning_1ae012adf2bd5b2540f1a757113968a0d4" prot="public" virt="non-virtual"><scope>tsa::LSLLearning</scope><name>GetErrorForward</name></member>
+      <member refid="classtsa_1_1_l_s_l_learning_1a41c8d09f732ae6fed7edaed61cd73ca2" prot="public" virt="non-virtual"><scope>tsa::LSLLearning</scope><name>GetGamma</name></member>
+      <member refid="classtsa_1_1_l_s_l_learning_1ae442a68a9f2f455d86ce56342288381c" prot="public" virt="non-virtual"><scope>tsa::LSLLearning</scope><name>GetOrder</name></member>
+      <member refid="classtsa_1_1_l_s_l_learning_1a276e9d2206da6c6ac89cdca1cd6c4560" prot="public" virt="non-virtual"><scope>tsa::LSLLearning</scope><name>GetParcorBackward</name></member>
+      <member refid="classtsa_1_1_l_s_l_learning_1acc051c6ae5281e916083fb80a21779e8" prot="public" virt="non-virtual"><scope>tsa::LSLLearning</scope><name>GetParcorForward</name></member>
+      <member refid="classtsa_1_1_l_s_l_learning_1ac6f60dc86d296c35cba1582472d11d27" prot="public" virt="non-virtual"><scope>tsa::LSLLearning</scope><name>GetSigma</name></member>
+      <member refid="classtsa_1_1_l_s_l_learning_1a03684c0760835f7cc8460561ea183f7e" prot="public" virt="non-virtual"><scope>tsa::LSLLearning</scope><name>GetStatus</name></member>
+      <member refid="classtsa_1_1_l_s_l_learning_1a0faa13eb2f31988b73c4740c3e1c4085" prot="public" virt="non-virtual"><scope>tsa::LSLLearning</scope><name>Load</name></member>
+      <member refid="classtsa_1_1_l_s_l_learning_1ab1065fd9f61b44f25c4a9ee67e95dc1e" prot="public" virt="non-virtual"><scope>tsa::LSLLearning</scope><name>LSLLearning</name></member>
+      <member refid="classtsa_1_1_l_s_l_learning_1ae1d9f9ea754c88bf19365c680ea2415a" prot="public" virt="non-virtual"><scope>tsa::LSLLearning</scope><name>LSLLearning</name></member>
+      <member refid="classtsa_1_1_l_s_l_learning_1aee8f5369206276f3a7faaaaa048485fb" prot="private" virt="non-virtual"><scope>tsa::LSLLearning</scope><name>mEB</name></member>
+      <member refid="classtsa_1_1_l_s_l_learning_1abc6dbb01c7f1a1b4c1d6ee5cb6ba14e8" prot="private" virt="non-virtual"><scope>tsa::LSLLearning</scope><name>mEF</name></member>
+      <member refid="classtsa_1_1_l_s_l_learning_1a4ccb655fdbbebb1a9875c6bc8238b373" prot="private" virt="non-virtual"><scope>tsa::LSLLearning</scope><name>mEpb</name></member>
+      <member refid="classtsa_1_1_l_s_l_learning_1a5cd2595571d70a64dfefbdd48dd96eb5" prot="private" virt="non-virtual"><scope>tsa::LSLLearning</scope><name>mEpf</name></member>
+      <member refid="classtsa_1_1_l_s_l_learning_1ab1e86d5df54de8730402c123caccfd30" prot="private" virt="non-virtual"><scope>tsa::LSLLearning</scope><name>mF0</name></member>
+      <member refid="classtsa_1_1_l_s_l_learning_1a4dc069522ea6f00876e144b7c26a8056" prot="private" virt="non-virtual"><scope>tsa::LSLLearning</scope><name>mG</name></member>
+      <member refid="classtsa_1_1_l_s_l_learning_1ac895dcbb7407c99df7c8703e27b53ca4" prot="private" virt="non-virtual"><scope>tsa::LSLLearning</scope><name>mKb</name></member>
+      <member refid="classtsa_1_1_l_s_l_learning_1ad651adf83f8b9e770446ccf7f41fe61d" prot="private" virt="non-virtual"><scope>tsa::LSLLearning</scope><name>mKf</name></member>
+      <member refid="classtsa_1_1_l_s_l_learning_1a15b3df249118e9c6699a39a4b4add1db" prot="private" virt="non-virtual"><scope>tsa::LSLLearning</scope><name>mLambda</name></member>
+      <member refid="classtsa_1_1_l_s_l_learning_1ae1e400504ab5fc285b4b2d740e4bde72" prot="private" virt="non-virtual"><scope>tsa::LSLLearning</scope><name>mOrder</name></member>
+      <member refid="classtsa_1_1_l_s_l_learning_1a6ba93296df7efc898844ff3ef645b287" prot="private" virt="non-virtual"><scope>tsa::LSLLearning</scope><name>mSigma</name></member>
+      <member refid="classtsa_1_1_l_s_l_learning_1ac703af8aec35bece47d8b5dd5da96125" prot="public" virt="non-virtual"><scope>tsa::LSLLearning</scope><name>operator()</name></member>
+      <member refid="classtsa_1_1_l_s_l_learning_1a8a3c4b73d36808f940cd37fe8520d76f" prot="public" virt="non-virtual"><scope>tsa::LSLLearning</scope><name>operator()</name></member>
+      <member refid="classtsa_1_1_l_s_l_learning_1adaf7049997744cc383427c0c673549f7" prot="public" virt="non-virtual"><scope>tsa::LSLLearning</scope><name>operator()</name></member>
+      <member refid="classtsa_1_1_l_s_l_learning_1a8b2b47d740bd2207f612e9c4aadaf220" prot="public" virt="non-virtual"><scope>tsa::LSLLearning</scope><name>operator=</name></member>
+      <member refid="classtsa_1_1_l_s_l_learning_1aa3397a1d3944fb4ce19c612d74e7018a" prot="public" virt="non-virtual"><scope>tsa::LSLLearning</scope><name>Save</name></member>
+      <member refid="classtsa_1_1_l_s_l_learning_1a54c30966b4ddf0327ef5f4b9a8b774f1" prot="public" virt="non-virtual"><scope>tsa::LSLLearning</scope><name>xml_serialize</name></member>
+      <member refid="classtsa_1_1_l_s_l_learning_1aab97f819bb4e1537621d9e84ee0bf140" prot="public" virt="non-virtual"><scope>tsa::LSLLearning</scope><name>~LSLLearning</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

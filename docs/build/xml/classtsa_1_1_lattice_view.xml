@@ -1,0 +1,529 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classtsa_1_1_lattice_view" kind="class" language="C++" prot="public">
+    <compoundname>tsa::LatticeView</compoundname>
+    <basecompoundref refid="classtsa_1_1_base_view" prot="public" virt="non-virtual">tsa::BaseView</basecompoundref>
+    <includes refid="_lattice_view_8hpp" local="no">LatticeView.hpp</includes>
+      <sectiondef kind="user-defined">
+      <header>Getters</header>
+      <memberdef kind="function" id="classtsa_1_1_lattice_view_1a9aedf999a2129ae0b000ba6caded4b6b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int tsa::LatticeView::GetOrder</definition>
+        <argsstring>()</argsstring>
+        <name>GetOrder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Order of the <ref refid="classtsa_1_1_lattice_view" kindref="compound">LatticeView</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" line="153" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" bodystart="153" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_lattice_view_1a0549c29576047fa4e0c4871a23904951" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double tsa::LatticeView::GetParcor</definition>
+        <argsstring>(unsigned int j)</argsstring>
+        <name>GetParcor</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of the vector </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The Parcor parameter </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" line="164" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" bodystart="164" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_lattice_view_1a302999b98f7af945965749026dc655f9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref> *</type>
+        <definition>Dvector* tsa::LatticeView::GetParcorF</definition>
+        <argsstring>()</argsstring>
+        <name>GetParcorF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" line="169" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" bodystart="169" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_lattice_view_1a166491c83511a3c64ec63c1aa5e2cbbd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref> *</type>
+        <definition>Dvector* tsa::LatticeView::GetParcorB</definition>
+        <argsstring>()</argsstring>
+        <name>GetParcorB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" line="173" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" bodystart="173" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_lattice_view_1a941542e69cf15f8a41cfc17253cd5d48" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double tsa::LatticeView::GetParcorF</definition>
+        <argsstring>(unsigned int j)</argsstring>
+        <name>GetParcorF</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of the vector </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The Parcor parameter </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" line="183" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" bodystart="183" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_lattice_view_1a14148e7fdd220c61791732bc14130bd9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double tsa::LatticeView::GetParcorB</definition>
+        <argsstring>(unsigned int j)</argsstring>
+        <name>GetParcorB</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of the vector </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The Parcor parameter </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" line="193" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" bodystart="193" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_lattice_view_1a893dd18c7f1d423a8478a786c3c731c5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref> *</type>
+        <definition>Dmatrix* tsa::LatticeView::GetErrorForward</definition>
+        <argsstring>()</argsstring>
+        <name>GetErrorForward</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" line="197" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" bodystart="197" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_lattice_view_1a8b682c3db5bcce323d107e4ba889795f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref> *</type>
+        <definition>Dmatrix* tsa::LatticeView::GetErrorBackward</definition>
+        <argsstring>()</argsstring>
+        <name>GetErrorBackward</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" line="201" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" bodystart="201" bodyend="203"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_lattice_view_1ac9a4c9e01891d9c7c2ba5139c23ac86e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double tsa::LatticeView::GetErrorForward</definition>
+        <argsstring>(unsigned int i, unsigned int j)</argsstring>
+        <name>GetErrorForward</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" line="210" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" bodystart="210" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_lattice_view_1ae0bdb3cfb70274cf21c8681393d92a45" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double tsa::LatticeView::GetErrorBackward</definition>
+        <argsstring>(unsigned int i, unsigned int j)</argsstring>
+        <name>GetErrorBackward</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" line="217" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" bodystart="217" bodyend="219"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Setters</header>
+      <memberdef kind="function" id="classtsa_1_1_lattice_view_1a0d555a7ff35604537e4391d4debd2d9a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::LatticeView::SetOrder</definition>
+        <argsstring>(unsigned int v)</argsstring>
+        <name>SetOrder</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" line="229" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" bodystart="229" bodyend="231"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_lattice_view_1a0e099a0196edb96d4e9265ea2901e6b9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::LatticeView::SetParcorF</definition>
+        <argsstring>(unsigned int j, double v)</argsstring>
+        <name>SetParcorF</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" line="233" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" bodystart="233" bodyend="235"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_lattice_view_1ae2bb756238fc6873839459097717f3dc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::LatticeView::SetParcorB</definition>
+        <argsstring>(unsigned int j, double v)</argsstring>
+        <name>SetParcorB</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" line="237" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" bodystart="237" bodyend="239"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_lattice_view_1a5d40a6a9e27b0ede53e2735983a83c6e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::LatticeView::SetErrorForward</definition>
+        <argsstring>(unsigned int j, double v)</argsstring>
+        <name>SetErrorForward</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" line="241" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" bodystart="241" bodyend="244"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_lattice_view_1a80b37195a303625d69009cba7f8a0156" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::LatticeView::SetErrorBackward</definition>
+        <argsstring>(unsigned int j, double v)</argsstring>
+        <name>SetErrorBackward</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" line="246" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" bodystart="246" bodyend="249"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtsa_1_1_lattice_view_1acb69a220044c95ee2b32d90ce4ee2f7c" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int tsa::LatticeView::mOrder</definition>
+        <argsstring></argsstring>
+        <name>mOrder</name>
+        <briefdescription>
+<para>the Order of the View </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" line="257" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" bodystart="257" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_lattice_view_1ac7976d0ac256453229dec51c14da0c26" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref></type>
+        <definition>Dmatrix tsa::LatticeView::mErrorForward</definition>
+        <argsstring></argsstring>
+        <name>mErrorForward</name>
+        <briefdescription>
+<para>the Error Forward for the Lattice Filter </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" line="258" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" bodystart="258" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_lattice_view_1a9bbdb82e6aee17385ed9cd45da26c6ea" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref></type>
+        <definition>Dmatrix tsa::LatticeView::mErrorBackward</definition>
+        <argsstring></argsstring>
+        <name>mErrorBackward</name>
+        <briefdescription>
+<para>the Error Backward for the Lattice Filter </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" line="259" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" bodystart="259" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_lattice_view_1a3fbd93734d9b37488687840609c93e7a" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref></type>
+        <definition>Dvector tsa::LatticeView::mParcorF</definition>
+        <argsstring></argsstring>
+        <name>mParcorF</name>
+        <briefdescription>
+<para>the vector of forward Parcor </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" line="260" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" bodystart="260" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_lattice_view_1a07aba04a75f98622d97ef4baac7a95e6" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref></type>
+        <definition>Dvector tsa::LatticeView::mParcorB</definition>
+        <argsstring></argsstring>
+        <name>mParcorB</name>
+        <briefdescription>
+<para>the vector of backward Parcor </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" line="261" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" bodystart="261" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtsa_1_1_lattice_view_1ab06c208ec07241d525afa95112a49a61" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>tsa::LatticeView::LatticeView</definition>
+        <argsstring>(unsigned int ArOrder=1)</argsstring>
+        <name>LatticeView</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>ArOrder</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" line="81" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" bodystart="81" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_lattice_view_1a2c5158bb8d09c4742906a4eb1c2b8caf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>tsa::LatticeView::~LatticeView</definition>
+        <argsstring>()</argsstring>
+        <name>~LatticeView</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" line="96" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" bodystart="96" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_lattice_view_1a4a8f6b4faf4a5c61cbd66aab056e18ab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::LatticeView::Load</definition>
+        <argsstring>(const char *filename, const char *fmt=&quot;txt&quot;)</argsstring>
+        <name>Load</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+          <defval>&quot;txt&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" line="99" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" bodystart="99" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_lattice_view_1a911eefc09c14ed78dee42fffe237ac3a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::LatticeView::Save</definition>
+        <argsstring>(const char *filename, const char *fmt=&quot;txt&quot;)</argsstring>
+        <name>Save</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+          <defval>&quot;txt&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" line="106" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" bodystart="106" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_lattice_view_1a9040c52c4481b0e47346aa39f150c3b2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::LatticeView::xml_serialize</definition>
+        <argsstring>(eternity::xml_archive &amp;xml, const char *prefix)</argsstring>
+        <name>xml_serialize</name>
+        <param>
+          <type><ref refid="classeternity_1_1xml__archive" kindref="compound">eternity::xml_archive</ref> &amp;</type>
+          <declname>xml</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>prefix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" line="113" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" bodystart="113" bodyend="140"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Define the object needed to implement the Lattice filter. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="305">
+        <label>tsa::BaseView</label>
+        <link refid="classtsa_1_1_base_view"/>
+      </node>
+      <node id="304">
+        <label>tsa::LatticeView</label>
+        <link refid="classtsa_1_1_lattice_view"/>
+        <childnode refid="305" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="307">
+        <label>tsa::BaseView</label>
+        <link refid="classtsa_1_1_base_view"/>
+      </node>
+      <node id="306">
+        <label>tsa::LatticeView</label>
+        <link refid="classtsa_1_1_lattice_view"/>
+        <childnode refid="307" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" line="75" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/LatticeView.hpp" bodystart="75" bodyend="263"/>
+    <listofallmembers>
+      <member refid="classtsa_1_1_base_view_1a87ba8f0c139190b95f8b1c5486b342d1" prot="public" virt="non-virtual"><scope>tsa::LatticeView</scope><name>BaseView</name></member>
+      <member refid="classtsa_1_1_base_view_1a21d825daa5ede62830f69e0ea7275008" prot="public" virt="non-virtual"><scope>tsa::LatticeView</scope><name>BaseView</name></member>
+      <member refid="classtsa_1_1_lattice_view_1a8b682c3db5bcce323d107e4ba889795f" prot="public" virt="non-virtual"><scope>tsa::LatticeView</scope><name>GetErrorBackward</name></member>
+      <member refid="classtsa_1_1_lattice_view_1ae0bdb3cfb70274cf21c8681393d92a45" prot="public" virt="non-virtual"><scope>tsa::LatticeView</scope><name>GetErrorBackward</name></member>
+      <member refid="classtsa_1_1_lattice_view_1a893dd18c7f1d423a8478a786c3c731c5" prot="public" virt="non-virtual"><scope>tsa::LatticeView</scope><name>GetErrorForward</name></member>
+      <member refid="classtsa_1_1_lattice_view_1ac9a4c9e01891d9c7c2ba5139c23ac86e" prot="public" virt="non-virtual"><scope>tsa::LatticeView</scope><name>GetErrorForward</name></member>
+      <member refid="classtsa_1_1_base_view_1ac6e0354eb1ec24205ff893440ff561b9" prot="public" virt="non-virtual"><scope>tsa::LatticeView</scope><name>GetName</name></member>
+      <member refid="classtsa_1_1_lattice_view_1a9aedf999a2129ae0b000ba6caded4b6b" prot="public" virt="non-virtual"><scope>tsa::LatticeView</scope><name>GetOrder</name></member>
+      <member refid="classtsa_1_1_lattice_view_1a0549c29576047fa4e0c4871a23904951" prot="public" virt="non-virtual"><scope>tsa::LatticeView</scope><name>GetParcor</name></member>
+      <member refid="classtsa_1_1_lattice_view_1a166491c83511a3c64ec63c1aa5e2cbbd" prot="public" virt="non-virtual"><scope>tsa::LatticeView</scope><name>GetParcorB</name></member>
+      <member refid="classtsa_1_1_lattice_view_1a14148e7fdd220c61791732bc14130bd9" prot="public" virt="non-virtual"><scope>tsa::LatticeView</scope><name>GetParcorB</name></member>
+      <member refid="classtsa_1_1_lattice_view_1a302999b98f7af945965749026dc655f9" prot="public" virt="non-virtual"><scope>tsa::LatticeView</scope><name>GetParcorF</name></member>
+      <member refid="classtsa_1_1_lattice_view_1a941542e69cf15f8a41cfc17253cd5d48" prot="public" virt="non-virtual"><scope>tsa::LatticeView</scope><name>GetParcorF</name></member>
+      <member refid="classtsa_1_1_lattice_view_1ab06c208ec07241d525afa95112a49a61" prot="public" virt="non-virtual"><scope>tsa::LatticeView</scope><name>LatticeView</name></member>
+      <member refid="classtsa_1_1_lattice_view_1a4a8f6b4faf4a5c61cbd66aab056e18ab" prot="public" virt="non-virtual"><scope>tsa::LatticeView</scope><name>Load</name></member>
+      <member refid="classtsa_1_1_lattice_view_1a9bbdb82e6aee17385ed9cd45da26c6ea" prot="private" virt="non-virtual"><scope>tsa::LatticeView</scope><name>mErrorBackward</name></member>
+      <member refid="classtsa_1_1_lattice_view_1ac7976d0ac256453229dec51c14da0c26" prot="private" virt="non-virtual"><scope>tsa::LatticeView</scope><name>mErrorForward</name></member>
+      <member refid="classtsa_1_1_base_view_1a91429dee1249c140160bfca20e783019" prot="protected" virt="non-virtual"><scope>tsa::LatticeView</scope><name>mName</name></member>
+      <member refid="classtsa_1_1_lattice_view_1acb69a220044c95ee2b32d90ce4ee2f7c" prot="private" virt="non-virtual"><scope>tsa::LatticeView</scope><name>mOrder</name></member>
+      <member refid="classtsa_1_1_lattice_view_1a07aba04a75f98622d97ef4baac7a95e6" prot="private" virt="non-virtual"><scope>tsa::LatticeView</scope><name>mParcorB</name></member>
+      <member refid="classtsa_1_1_lattice_view_1a3fbd93734d9b37488687840609c93e7a" prot="private" virt="non-virtual"><scope>tsa::LatticeView</scope><name>mParcorF</name></member>
+      <member refid="classtsa_1_1_base_view_1a29e213aae81ad55e146a5e41ad5a1ce9" prot="public" virt="non-virtual"><scope>tsa::LatticeView</scope><name>operator=</name></member>
+      <member refid="classtsa_1_1_lattice_view_1a911eefc09c14ed78dee42fffe237ac3a" prot="public" virt="non-virtual"><scope>tsa::LatticeView</scope><name>Save</name></member>
+      <member refid="classtsa_1_1_lattice_view_1a80b37195a303625d69009cba7f8a0156" prot="public" virt="non-virtual"><scope>tsa::LatticeView</scope><name>SetErrorBackward</name></member>
+      <member refid="classtsa_1_1_lattice_view_1a5d40a6a9e27b0ede53e2735983a83c6e" prot="public" virt="non-virtual"><scope>tsa::LatticeView</scope><name>SetErrorForward</name></member>
+      <member refid="classtsa_1_1_base_view_1abcfce2c227a5826093e7cb86a02765f9" prot="public" virt="non-virtual"><scope>tsa::LatticeView</scope><name>SetName</name></member>
+      <member refid="classtsa_1_1_lattice_view_1a0d555a7ff35604537e4391d4debd2d9a" prot="public" virt="non-virtual"><scope>tsa::LatticeView</scope><name>SetOrder</name></member>
+      <member refid="classtsa_1_1_lattice_view_1ae2bb756238fc6873839459097717f3dc" prot="public" virt="non-virtual"><scope>tsa::LatticeView</scope><name>SetParcorB</name></member>
+      <member refid="classtsa_1_1_lattice_view_1a0e099a0196edb96d4e9265ea2901e6b9" prot="public" virt="non-virtual"><scope>tsa::LatticeView</scope><name>SetParcorF</name></member>
+      <member refid="classtsa_1_1_lattice_view_1a9040c52c4481b0e47346aa39f150c3b2" prot="public" virt="non-virtual"><scope>tsa::LatticeView</scope><name>xml_serialize</name></member>
+      <member refid="classtsa_1_1_base_view_1ad3e2d3032a8efe2bd2dc7a9a9c7636d6" prot="public" virt="non-virtual"><scope>tsa::LatticeView</scope><name>~BaseView</name></member>
+      <member refid="classtsa_1_1_lattice_view_1a2c5158bb8d09c4742906a4eb1c2b8caf" prot="public" virt="non-virtual"><scope>tsa::LatticeView</scope><name>~LatticeView</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,674 @@
+\hypertarget{classtsa_1_1_view_util}{}\section{tsa\+:\+:View\+Util Class Reference}
+\label{classtsa_1_1_view_util}\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+
+
+This is a short description of the class \hyperlink{classtsa_1_1_view_util}{View\+Util}.  
+
+
+
+
+{\ttfamily \#include $<$View\+Util.\+hpp$>$}
+
+Inheritance diagram for tsa\+:\+:View\+Util\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classtsa_1_1_view_util}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtsa_1_1_view_util_a13cb83b6780a27612d34d893272e72f9}{View\+Util} ()
+\item 
+\hyperlink{classtsa_1_1_view_util_a3c85be8329c8c4f7d60d8ba78b59b4e4}{$\sim$\+View\+Util} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{Indent}\textbf{ User interface}\par
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classtsa_1_1_view_util_a1d1f00f3a3ae89b3ddef911bf9835049}{Join} (std\+::vector$<$ \hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} $>$ \&sl, \hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&joined, double start, double sampling, unsigned int length)
+\item 
+static void \hyperlink{classtsa_1_1_view_util_ad8728d95442741e7dd5f3d74cc917c0c}{Join} (std\+::vector$<$ \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} $>$ \&sl, \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&joined, double start, double sampling, unsigned int length)
+\item 
+static void \hyperlink{classtsa_1_1_view_util_a0f75acac9a11c4eaeda04d5256fad5ed}{Join} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&s1, \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&s2, \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&joined)
+\item 
+static void \hyperlink{classtsa_1_1_view_util_aef8807df1cb1fd091da9b13242a7f273}{Append} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&s1, \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&s2)
+\item 
+static void \hyperlink{classtsa_1_1_view_util_a164858cf99bb21da58de6f7c34400a09}{Print} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&s1, char $\ast$filename)
+\item 
+static void \hyperlink{classtsa_1_1_view_util_a9669abbb59a08c0b36cdee2b478f5c95}{Print} (\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&s1, char $\ast$filename)
+\item 
+static void \hyperlink{classtsa_1_1_view_util_aae610aa81fa557062de40594c246f54e}{Print} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&s1)
+\item 
+static void \hyperlink{classtsa_1_1_view_util_aee8e21e108474a2ca656868f1a32357f}{Range} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&s1, int l, int m)
+\item 
+static void \hyperlink{classtsa_1_1_view_util_a71ef0446b7182b629144446bf25c0301}{Range} (\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&s1, int l, int m)
+\item 
+static void \hyperlink{classtsa_1_1_view_util_afd5ccdb844e5e7b0d3b6ff6668b1114f}{Range} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&s1, \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&s2, int l, int m)
+\item 
+static void \hyperlink{classtsa_1_1_view_util_a2b338186c5f8662d0b3c05706c35d54a}{Left\+Shift} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&seq, \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&ins)
+\item 
+static void \hyperlink{classtsa_1_1_view_util_a98044d73147e95de0cd82fd4e131d3ca}{Pad\+Left} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&src, \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&dst, unsigned int size, double value=0.\+0)
+\item 
+static void \hyperlink{classtsa_1_1_view_util_a8593e792009543c7d21af6bdeea8f3d3}{Pad\+Right} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&src, \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&dst, unsigned int size, double value=0.\+0)
+\item 
+static double \hyperlink{classtsa_1_1_view_util_a828f66a78c3084e7e0a56b7e05e3b0fc}{Dot} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&s1, unsigned int ch1, \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&s2, unsigned int ch2)
+\item 
+static void \hyperlink{classtsa_1_1_view_util_ae115581e15bfd8b5039e88a0685580b2}{Sum\+Channels} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&s1, \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&sum)
+\item 
+static void \hyperlink{classtsa_1_1_view_util_a5e5e15a409ca42fa35967f682fd73894}{Sum\+Channels} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&s1, \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&sum, double wfirst, double wothers)
+\item 
+static void \hyperlink{classtsa_1_1_view_util_a82cc2f70f00bab7f0a9a39de47f24ce5}{Fill} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&ts, double value)
+\item 
+static void \hyperlink{classtsa_1_1_view_util_a7f0e2c3c9c8acbfc6f6e04182f6b126c}{Fill\+Seq} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&ts, unsigned int i, unsigned int j, double value)
+\item 
+static bool \hyperlink{classtsa_1_1_view_util_a6b5c89f0dee5e5c4f28243bf9cd7cc6d}{Peek\+Range} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&src, \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&dst, double tstart, double tend)
+\item 
+static void \hyperlink{classtsa_1_1_view_util_afeeb25836288a1f484cb2ea6968b19dc}{Apply} (double($\ast$func)(double), \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&ts)
+\item 
+static void \hyperlink{classtsa_1_1_view_util_a23f737c5807ed1972d1855e02008bc68}{Apply} (double($\ast$func)(double), \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&ts, \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&res)
+\item 
+static void \hyperlink{classtsa_1_1_view_util_ab0581113b72809931eecd046aade4bba}{Bin\+Op} (std\+::complex$<$ double $>$($\ast$func)(std\+::complex$<$ double $>$, std\+::complex$<$ double $>$), \hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&ts1, \hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&ts2, \hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&res)
+\item 
+static void \hyperlink{classtsa_1_1_view_util_af8b92069d5fa30c169f4dcb34e675972}{Bin\+Op} (double($\ast$func)(double, double), \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&ts1, \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&ts2, \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&res)
+\item 
+static void \hyperlink{classtsa_1_1_view_util_ad0b99f095c828395b1637da1d60564a4}{Apply} (std\+::complex$<$ double $>$($\ast$func)(std\+::complex$<$ double $>$), \hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&fs)
+\item 
+static void \hyperlink{classtsa_1_1_view_util_a3c240b727d35554e0e2f59ae30ca776c}{Apply} (std\+::complex$<$ double $>$($\ast$func)(std\+::complex$<$ double $>$), \hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&fs, \hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&res)
+\item 
+static void \hyperlink{classtsa_1_1_view_util_a9e41750dd9f5f087db64175b4a50f87d}{Sum} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&res, double scale, \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&ts)
+\item 
+static void \hyperlink{classtsa_1_1_view_util_a9647a25c2db49cdd25b864f4465491f1}{Sum} (\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&res, double scale, \hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&ts)
+\item 
+static void \hyperlink{classtsa_1_1_view_util_a39c49e23ff6a7ea64aa1ced4fc453c53}{Inverse} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&ts1, \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&res)
+\item 
+static void \hyperlink{classtsa_1_1_view_util_a41ec224b9de8ca38affb8a83589c93c7}{Affine\+Transformation} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&ts1, double a, double b, \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&res)
+\item 
+static void \hyperlink{classtsa_1_1_view_util_a7472defdb289abc1904d985e284d51a7}{Ratio} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&ts1, \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&ts2, \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&res)
+\item 
+static void \hyperlink{classtsa_1_1_view_util_a64ba1355162435b8ac44936c5957f2b8}{Ratio} (\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&ts1, \hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&ts2, \hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&res)
+\item 
+static void \hyperlink{classtsa_1_1_view_util_a93b25c30e8e78f0392eec2d09eb3e8fe}{Ratio} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&ts1, \hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&ts2, \hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&res)
+\item 
+static void \hyperlink{classtsa_1_1_view_util_a0850a008ea672b836c640b7211b074d1}{Ratio} (\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&ts1, \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&ts2, \hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&res)
+\item 
+static void \hyperlink{classtsa_1_1_view_util_a3ae34d28562d6ff11069e28442ddf4ab}{Complex\+To\+Polar} (\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&ts1, \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&ts2)
+\item 
+static void \hyperlink{classtsa_1_1_view_util_a2db516bb45aff911805ac0e918235dec}{Norm} (\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&ts1, \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&res)
+\item 
+static void \hyperlink{classtsa_1_1_view_util_ad297c324daf336cab231821a72770cc6}{Abs} (\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&ts1, \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&res)
+\item 
+static void \hyperlink{classtsa_1_1_view_util_a287fcc46c379b13cb9e309e4d1113cef}{Abs2} (\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&ts1, \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&res)
+\item 
+static void \hyperlink{classtsa_1_1_view_util_afd5abb9a4e1b52991858e82299f1dd0a}{Prod} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&ts1, \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&ts2, \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&res)
+\item 
+static void \hyperlink{classtsa_1_1_view_util_a9770830b9f778753ca53d8381e8e3d62}{Prod} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&ts1, \hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&ts2, \hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&res)
+\item 
+static void \hyperlink{classtsa_1_1_view_util_aa459fc722f2de53f9c8a5fae665053fa}{Prod\+Conj} (\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&ts1, \hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&ts2, \hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&res)
+\item 
+static void \hyperlink{classtsa_1_1_view_util_aaffeb0990bd91866c40a10f25cda7f5c}{Phase} (\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&ts1, \hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&ts2, \hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&res)
+\item 
+static void \hyperlink{classtsa_1_1_view_util_acc21d93e9a9f6c6522adade5fd6e6f1f}{Block\+Sum} (\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&in, \hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&out, int bsize)
+\item 
+static std\+::complex$<$ double $>$ \hyperlink{classtsa_1_1_view_util_a6ce61da5cef5306cc1cbbf715c39871c}{Integrate} (\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&data, double f1, double f2)
+\item 
+static double \hyperlink{classtsa_1_1_view_util_af4179aaa62db551eebda4a49e0232c12}{Integrate} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&data, double f1, double f2)
+\item 
+static std\+::complex$<$ double $>$ \hyperlink{classtsa_1_1_view_util_afdc977e523a31a8f009fb338d7f9937f}{Delay\+Integrate} (\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&data, double tau, double f1, double f2)
+\item 
+static std\+::complex$<$ double $>$ \hyperlink{classtsa_1_1_view_util_a05ade4e87492c28990eaa5d59f023e74}{Delay\+Integrate} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&data, double tau, double f1, double f2)
+\item 
+static void \hyperlink{classtsa_1_1_view_util_ad9984dcf61bae9647aac60f0d3141d71}{Multiply} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&in1, \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&in2, \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&res)
+\item 
+static void \hyperlink{classtsa_1_1_view_util_a3428ec74c858edbdea18d034f9afb761}{Multiply} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&in1, \hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&in2, \hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&res)
+\item 
+static void \hyperlink{classtsa_1_1_view_util_adb65d5e06f5ed0bec2bad29ca314aefc}{Multiply} (\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&in1, \hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&in2, \hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&res)
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\subsection{Detailed Description}
+This is a short description of the class \hyperlink{classtsa_1_1_view_util}{View\+Util}. 
+
+A more detailed description of \hyperlink{classtsa_1_1_view_util}{View\+Util} start here 
+
+Definition at line 73 of file View\+Util.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtsa_1_1_view_util_a13cb83b6780a27612d34d893272e72f9}\label{classtsa_1_1_view_util_a13cb83b6780a27612d34d893272e72f9}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!View\+Util@{View\+Util}}
+\index{View\+Util@{View\+Util}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{View\+Util()}{ViewUtil()}}
+{\footnotesize\ttfamily tsa\+::\+View\+Util\+::\+View\+Util (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor 
+
+Definition at line 79 of file View\+Util.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_a3c85be8329c8c4f7d60d8ba78b59b4e4}\label{classtsa_1_1_view_util_a3c85be8329c8c4f7d60d8ba78b59b4e4}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!````~View\+Util@{$\sim$\+View\+Util}}
+\index{````~View\+Util@{$\sim$\+View\+Util}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{$\sim$\+View\+Util()}{~ViewUtil()}}
+{\footnotesize\ttfamily tsa\+::\+View\+Util\+::$\sim$\+View\+Util (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Destructor 
+
+Definition at line 85 of file View\+Util.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classtsa_1_1_view_util_ad297c324daf336cab231821a72770cc6}\label{classtsa_1_1_view_util_ad297c324daf336cab231821a72770cc6}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Abs@{Abs}}
+\index{Abs@{Abs}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Abs()}{Abs()}}
+{\footnotesize\ttfamily void tsa\+::\+View\+Util\+::\+Abs (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&}]{ts1,  }\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 953 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_a287fcc46c379b13cb9e309e4d1113cef}\label{classtsa_1_1_view_util_a287fcc46c379b13cb9e309e4d1113cef}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Abs2@{Abs2}}
+\index{Abs2@{Abs2}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Abs2()}{Abs2()}}
+{\footnotesize\ttfamily void tsa\+::\+View\+Util\+::\+Abs2 (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&}]{ts1,  }\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 979 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_a41ec224b9de8ca38affb8a83589c93c7}\label{classtsa_1_1_view_util_a41ec224b9de8ca38affb8a83589c93c7}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Affine\+Transformation@{Affine\+Transformation}}
+\index{Affine\+Transformation@{Affine\+Transformation}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Affine\+Transformation()}{AffineTransformation()}}
+{\footnotesize\ttfamily void tsa\+::\+View\+Util\+::\+Affine\+Transformation (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{ts1,  }\item[{double}]{a,  }\item[{double}]{b,  }\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 693 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_aef8807df1cb1fd091da9b13242a7f273}\label{classtsa_1_1_view_util_aef8807df1cb1fd091da9b13242a7f273}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Append@{Append}}
+\index{Append@{Append}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Append()}{Append()}}
+{\footnotesize\ttfamily void tsa\+::\+View\+Util\+::\+Append (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{s1,  }\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{s2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 385 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_afeeb25836288a1f484cb2ea6968b19dc}\label{classtsa_1_1_view_util_afeeb25836288a1f484cb2ea6968b19dc}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Apply@{Apply}}
+\index{Apply@{Apply}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Apply()}{Apply()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily void tsa\+::\+View\+Util\+::\+Apply (\begin{DoxyParamCaption}\item[{double($\ast$)(double)}]{func,  }\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{ts }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 664 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_a23f737c5807ed1972d1855e02008bc68}\label{classtsa_1_1_view_util_a23f737c5807ed1972d1855e02008bc68}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Apply@{Apply}}
+\index{Apply@{Apply}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Apply()}{Apply()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily void tsa\+::\+View\+Util\+::\+Apply (\begin{DoxyParamCaption}\item[{double($\ast$)(double)}]{func,  }\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{ts,  }\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 676 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_ad0b99f095c828395b1637da1d60564a4}\label{classtsa_1_1_view_util_ad0b99f095c828395b1637da1d60564a4}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Apply@{Apply}}
+\index{Apply@{Apply}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Apply()}{Apply()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily void tsa\+::\+View\+Util\+::\+Apply (\begin{DoxyParamCaption}\item[{std\+::complex$<$ double $>$($\ast$)(std\+::complex$<$ double $>$)}]{func,  }\item[{\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&}]{fs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 754 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_a3c240b727d35554e0e2f59ae30ca776c}\label{classtsa_1_1_view_util_a3c240b727d35554e0e2f59ae30ca776c}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Apply@{Apply}}
+\index{Apply@{Apply}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Apply()}{Apply()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily void tsa\+::\+View\+Util\+::\+Apply (\begin{DoxyParamCaption}\item[{std\+::complex$<$ double $>$($\ast$)(std\+::complex$<$ double $>$)}]{func,  }\item[{\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&}]{fs,  }\item[{\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&}]{res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 792 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_ab0581113b72809931eecd046aade4bba}\label{classtsa_1_1_view_util_ab0581113b72809931eecd046aade4bba}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Bin\+Op@{Bin\+Op}}
+\index{Bin\+Op@{Bin\+Op}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Bin\+Op()}{BinOp()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void tsa\+::\+View\+Util\+::\+Bin\+Op (\begin{DoxyParamCaption}\item[{std\+::complex$<$ double $>$($\ast$)(std\+::complex$<$ double $>$, std\+::complex$<$ double $>$)}]{func,  }\item[{\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&}]{ts1,  }\item[{\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&}]{ts2,  }\item[{\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&}]{res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 710 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_af8b92069d5fa30c169f4dcb34e675972}\label{classtsa_1_1_view_util_af8b92069d5fa30c169f4dcb34e675972}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Bin\+Op@{Bin\+Op}}
+\index{Bin\+Op@{Bin\+Op}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Bin\+Op()}{BinOp()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void tsa\+::\+View\+Util\+::\+Bin\+Op (\begin{DoxyParamCaption}\item[{double($\ast$)(double, double)}]{func,  }\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{ts1,  }\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{ts2,  }\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 732 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_acc21d93e9a9f6c6522adade5fd6e6f1f}\label{classtsa_1_1_view_util_acc21d93e9a9f6c6522adade5fd6e6f1f}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Block\+Sum@{Block\+Sum}}
+\index{Block\+Sum@{Block\+Sum}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Block\+Sum()}{BlockSum()}}
+{\footnotesize\ttfamily void tsa\+::\+View\+Util\+::\+Block\+Sum (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&}]{in,  }\item[{\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&}]{out,  }\item[{int}]{bsize }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 1167 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_a3ae34d28562d6ff11069e28442ddf4ab}\label{classtsa_1_1_view_util_a3ae34d28562d6ff11069e28442ddf4ab}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Complex\+To\+Polar@{Complex\+To\+Polar}}
+\index{Complex\+To\+Polar@{Complex\+To\+Polar}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Complex\+To\+Polar()}{ComplexToPolar()}}
+{\footnotesize\ttfamily void tsa\+::\+View\+Util\+::\+Complex\+To\+Polar (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&}]{ts1,  }\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{ts2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 766 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_afdc977e523a31a8f009fb338d7f9937f}\label{classtsa_1_1_view_util_afdc977e523a31a8f009fb338d7f9937f}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Delay\+Integrate@{Delay\+Integrate}}
+\index{Delay\+Integrate@{Delay\+Integrate}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Delay\+Integrate()}{DelayIntegrate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::complex$<$ double $>$ tsa\+::\+View\+Util\+::\+Delay\+Integrate (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&}]{data,  }\item[{double}]{tau,  }\item[{double}]{f1,  }\item[{double}]{f2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 6 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_a05ade4e87492c28990eaa5d59f023e74}\label{classtsa_1_1_view_util_a05ade4e87492c28990eaa5d59f023e74}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Delay\+Integrate@{Delay\+Integrate}}
+\index{Delay\+Integrate@{Delay\+Integrate}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Delay\+Integrate()}{DelayIntegrate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::complex$<$ double $>$ tsa\+::\+View\+Util\+::\+Delay\+Integrate (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{data,  }\item[{double}]{tau,  }\item[{double}]{f1,  }\item[{double}]{f2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 20 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_a828f66a78c3084e7e0a56b7e05e3b0fc}\label{classtsa_1_1_view_util_a828f66a78c3084e7e0a56b7e05e3b0fc}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Dot@{Dot}}
+\index{Dot@{Dot}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Dot()}{Dot()}}
+{\footnotesize\ttfamily double tsa\+::\+View\+Util\+::\+Dot (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{s1,  }\item[{unsigned int}]{ch1,  }\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{s2,  }\item[{unsigned int}]{ch2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 525 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_a82cc2f70f00bab7f0a9a39de47f24ce5}\label{classtsa_1_1_view_util_a82cc2f70f00bab7f0a9a39de47f24ce5}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Fill@{Fill}}
+\index{Fill@{Fill}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Fill()}{Fill()}}
+{\footnotesize\ttfamily void tsa\+::\+View\+Util\+::\+Fill (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{ts,  }\item[{double}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 640 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_a7f0e2c3c9c8acbfc6f6e04182f6b126c}\label{classtsa_1_1_view_util_a7f0e2c3c9c8acbfc6f6e04182f6b126c}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Fill\+Seq@{Fill\+Seq}}
+\index{Fill\+Seq@{Fill\+Seq}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Fill\+Seq()}{FillSeq()}}
+{\footnotesize\ttfamily void tsa\+::\+View\+Util\+::\+Fill\+Seq (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{ts,  }\item[{unsigned int}]{i,  }\item[{unsigned int}]{j,  }\item[{double}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 653 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_a6ce61da5cef5306cc1cbbf715c39871c}\label{classtsa_1_1_view_util_a6ce61da5cef5306cc1cbbf715c39871c}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Integrate@{Integrate}}
+\index{Integrate@{Integrate}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Integrate()}{Integrate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::complex$<$ double $>$ tsa\+::\+View\+Util\+::\+Integrate (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&}]{data,  }\item[{double}]{f1,  }\item[{double}]{f2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 34 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_af4179aaa62db551eebda4a49e0232c12}\label{classtsa_1_1_view_util_af4179aaa62db551eebda4a49e0232c12}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Integrate@{Integrate}}
+\index{Integrate@{Integrate}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Integrate()}{Integrate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily double tsa\+::\+View\+Util\+::\+Integrate (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{data,  }\item[{double}]{f1,  }\item[{double}]{f2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 47 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_a39c49e23ff6a7ea64aa1ced4fc453c53}\label{classtsa_1_1_view_util_a39c49e23ff6a7ea64aa1ced4fc453c53}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Inverse@{Inverse}}
+\index{Inverse@{Inverse}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Inverse()}{Inverse()}}
+{\footnotesize\ttfamily void tsa\+::\+View\+Util\+::\+Inverse (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{ts1,  }\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 843 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_a1d1f00f3a3ae89b3ddef911bf9835049}\label{classtsa_1_1_view_util_a1d1f00f3a3ae89b3ddef911bf9835049}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Join@{Join}}
+\index{Join@{Join}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Join()}{Join()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void tsa\+::\+View\+Util\+::\+Join (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} $>$ \&}]{sl,  }\item[{\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&}]{joined,  }\item[{double}]{start,  }\item[{double}]{sampling,  }\item[{unsigned int}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 246 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_ad8728d95442741e7dd5f3d74cc917c0c}\label{classtsa_1_1_view_util_ad8728d95442741e7dd5f3d74cc917c0c}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Join@{Join}}
+\index{Join@{Join}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Join()}{Join()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void tsa\+::\+View\+Util\+::\+Join (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} $>$ \&}]{sl,  }\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{joined,  }\item[{double}]{start,  }\item[{double}]{sampling,  }\item[{unsigned int}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 287 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_a0f75acac9a11c4eaeda04d5256fad5ed}\label{classtsa_1_1_view_util_a0f75acac9a11c4eaeda04d5256fad5ed}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Join@{Join}}
+\index{Join@{Join}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Join()}{Join()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void tsa\+::\+View\+Util\+::\+Join (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{s1,  }\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{s2,  }\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{joined }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 328 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_a2b338186c5f8662d0b3c05706c35d54a}\label{classtsa_1_1_view_util_a2b338186c5f8662d0b3c05706c35d54a}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Left\+Shift@{Left\+Shift}}
+\index{Left\+Shift@{Left\+Shift}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Left\+Shift()}{LeftShift()}}
+{\footnotesize\ttfamily void tsa\+::\+View\+Util\+::\+Left\+Shift (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{seq,  }\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{ins }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 431 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_ad9984dcf61bae9647aac60f0d3141d71}\label{classtsa_1_1_view_util_ad9984dcf61bae9647aac60f0d3141d71}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Multiply()}{Multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void tsa\+::\+View\+Util\+::\+Multiply (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{in1,  }\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{in2,  }\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 1223 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_a3428ec74c858edbdea18d034f9afb761}\label{classtsa_1_1_view_util_a3428ec74c858edbdea18d034f9afb761}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Multiply()}{Multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void tsa\+::\+View\+Util\+::\+Multiply (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{in1,  }\item[{\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&}]{in2,  }\item[{\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&}]{res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 1250 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_adb65d5e06f5ed0bec2bad29ca314aefc}\label{classtsa_1_1_view_util_adb65d5e06f5ed0bec2bad29ca314aefc}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Multiply()}{Multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void tsa\+::\+View\+Util\+::\+Multiply (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&}]{in1,  }\item[{\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&}]{in2,  }\item[{\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&}]{res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 1274 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_a2db516bb45aff911805ac0e918235dec}\label{classtsa_1_1_view_util_a2db516bb45aff911805ac0e918235dec}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Norm@{Norm}}
+\index{Norm@{Norm}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Norm()}{Norm()}}
+{\footnotesize\ttfamily void tsa\+::\+View\+Util\+::\+Norm (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&}]{ts1,  }\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 927 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_a98044d73147e95de0cd82fd4e131d3ca}\label{classtsa_1_1_view_util_a98044d73147e95de0cd82fd4e131d3ca}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Pad\+Left@{Pad\+Left}}
+\index{Pad\+Left@{Pad\+Left}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Pad\+Left()}{PadLeft()}}
+{\footnotesize\ttfamily void tsa\+::\+View\+Util\+::\+Pad\+Left (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{src,  }\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{dst,  }\item[{unsigned int}]{size,  }\item[{double}]{value = {\ttfamily 0.0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 468 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_a8593e792009543c7d21af6bdeea8f3d3}\label{classtsa_1_1_view_util_a8593e792009543c7d21af6bdeea8f3d3}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Pad\+Right@{Pad\+Right}}
+\index{Pad\+Right@{Pad\+Right}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Pad\+Right()}{PadRight()}}
+{\footnotesize\ttfamily void tsa\+::\+View\+Util\+::\+Pad\+Right (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{src,  }\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{dst,  }\item[{unsigned int}]{size,  }\item[{double}]{value = {\ttfamily 0.0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 496 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_a6b5c89f0dee5e5c4f28243bf9cd7cc6d}\label{classtsa_1_1_view_util_a6b5c89f0dee5e5c4f28243bf9cd7cc6d}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Peek\+Range@{Peek\+Range}}
+\index{Peek\+Range@{Peek\+Range}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Peek\+Range()}{PeekRange()}}
+{\footnotesize\ttfamily bool tsa\+::\+View\+Util\+::\+Peek\+Range (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{src,  }\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{dst,  }\item[{double}]{tstart,  }\item[{double}]{tend }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Extract from the src view the data included in a given time range, tstart$<$=t$<$=tend, and put it in the dst view.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & the source view \\
+\hline
+{\em dst} & the destination view \\
+\hline
+{\em tstart} & start time of the range \\
+\hline
+{\em tend} & end time for the range\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the range is fully inside src, false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 594 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_aaffeb0990bd91866c40a10f25cda7f5c}\label{classtsa_1_1_view_util_aaffeb0990bd91866c40a10f25cda7f5c}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Phase@{Phase}}
+\index{Phase@{Phase}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Phase()}{Phase()}}
+{\footnotesize\ttfamily void tsa\+::\+View\+Util\+::\+Phase (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&}]{ts1,  }\item[{\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&}]{ts2,  }\item[{\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&}]{res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 1070 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_a164858cf99bb21da58de6f7c34400a09}\label{classtsa_1_1_view_util_a164858cf99bb21da58de6f7c34400a09}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Print@{Print}}
+\index{Print@{Print}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Print()}{Print()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void tsa\+::\+View\+Util\+::\+Print (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{s1,  }\item[{char $\ast$}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 60 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_a9669abbb59a08c0b36cdee2b478f5c95}\label{classtsa_1_1_view_util_a9669abbb59a08c0b36cdee2b478f5c95}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Print@{Print}}
+\index{Print@{Print}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Print()}{Print()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void tsa\+::\+View\+Util\+::\+Print (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&}]{s1,  }\item[{char $\ast$}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 84 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_aae610aa81fa557062de40594c246f54e}\label{classtsa_1_1_view_util_aae610aa81fa557062de40594c246f54e}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Print@{Print}}
+\index{Print@{Print}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Print()}{Print()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void tsa\+::\+View\+Util\+::\+Print (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{s1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 108 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_afd5abb9a4e1b52991858e82299f1dd0a}\label{classtsa_1_1_view_util_afd5abb9a4e1b52991858e82299f1dd0a}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Prod@{Prod}}
+\index{Prod@{Prod}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Prod()}{Prod()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void tsa\+::\+View\+Util\+::\+Prod (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{ts1,  }\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{ts2,  }\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 1005 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_a9770830b9f778753ca53d8381e8e3d62}\label{classtsa_1_1_view_util_a9770830b9f778753ca53d8381e8e3d62}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Prod@{Prod}}
+\index{Prod@{Prod}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Prod()}{Prod()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void tsa\+::\+View\+Util\+::\+Prod (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{ts1,  }\item[{\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&}]{ts2,  }\item[{\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&}]{res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 1038 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_aa459fc722f2de53f9c8a5fae665053fa}\label{classtsa_1_1_view_util_aa459fc722f2de53f9c8a5fae665053fa}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Prod\+Conj@{Prod\+Conj}}
+\index{Prod\+Conj@{Prod\+Conj}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Prod\+Conj()}{ProdConj()}}
+{\footnotesize\ttfamily void tsa\+::\+View\+Util\+::\+Prod\+Conj (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&}]{ts1,  }\item[{\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&}]{ts2,  }\item[{\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&}]{res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 1102 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_aee8e21e108474a2ca656868f1a32357f}\label{classtsa_1_1_view_util_aee8e21e108474a2ca656868f1a32357f}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Range@{Range}}
+\index{Range@{Range}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Range()}{Range()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void tsa\+::\+View\+Util\+::\+Range (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{s1,  }\item[{int}]{l,  }\item[{int}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 129 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_a71ef0446b7182b629144446bf25c0301}\label{classtsa_1_1_view_util_a71ef0446b7182b629144446bf25c0301}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Range@{Range}}
+\index{Range@{Range}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Range()}{Range()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void tsa\+::\+View\+Util\+::\+Range (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&}]{s1,  }\item[{int}]{l,  }\item[{int}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 166 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_afd5ccdb844e5e7b0d3b6ff6668b1114f}\label{classtsa_1_1_view_util_afd5ccdb844e5e7b0d3b6ff6668b1114f}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Range@{Range}}
+\index{Range@{Range}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Range()}{Range()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void tsa\+::\+View\+Util\+::\+Range (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{s1,  }\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{s2,  }\item[{int}]{l,  }\item[{int}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 202 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_a7472defdb289abc1904d985e284d51a7}\label{classtsa_1_1_view_util_a7472defdb289abc1904d985e284d51a7}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Ratio@{Ratio}}
+\index{Ratio@{Ratio}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Ratio()}{Ratio()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily void tsa\+::\+View\+Util\+::\+Ratio (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{ts1,  }\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{ts2,  }\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 865 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_a64ba1355162435b8ac44936c5957f2b8}\label{classtsa_1_1_view_util_a64ba1355162435b8ac44936c5957f2b8}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Ratio@{Ratio}}
+\index{Ratio@{Ratio}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Ratio()}{Ratio()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily void tsa\+::\+View\+Util\+::\+Ratio (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&}]{ts1,  }\item[{\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&}]{ts2,  }\item[{\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&}]{res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 896 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_a93b25c30e8e78f0392eec2d09eb3e8fe}\label{classtsa_1_1_view_util_a93b25c30e8e78f0392eec2d09eb3e8fe}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Ratio@{Ratio}}
+\index{Ratio@{Ratio}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Ratio()}{Ratio()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily void tsa\+::\+View\+Util\+::\+Ratio (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{ts1,  }\item[{\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&}]{ts2,  }\item[{\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&}]{res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 1136 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_a0850a008ea672b836c640b7211b074d1}\label{classtsa_1_1_view_util_a0850a008ea672b836c640b7211b074d1}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Ratio@{Ratio}}
+\index{Ratio@{Ratio}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Ratio()}{Ratio()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily void tsa\+::\+View\+Util\+::\+Ratio (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&}]{ts1,  }\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{ts2,  }\item[{\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&}]{res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 1192 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_a9e41750dd9f5f087db64175b4a50f87d}\label{classtsa_1_1_view_util_a9e41750dd9f5f087db64175b4a50f87d}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Sum@{Sum}}
+\index{Sum@{Sum}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Sum()}{Sum()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void tsa\+::\+View\+Util\+::\+Sum (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{res,  }\item[{double}]{scale,  }\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{ts }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 809 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_a9647a25c2db49cdd25b864f4465491f1}\label{classtsa_1_1_view_util_a9647a25c2db49cdd25b864f4465491f1}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Sum@{Sum}}
+\index{Sum@{Sum}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Sum()}{Sum()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void tsa\+::\+View\+Util\+::\+Sum (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&}]{res,  }\item[{double}]{scale,  }\item[{\hyperlink{namespacetsa_ab32775c889b53c40fa83939f22372b75}{Seq\+View\+Complex} \&}]{ts }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 826 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_ae115581e15bfd8b5039e88a0685580b2}\label{classtsa_1_1_view_util_ae115581e15bfd8b5039e88a0685580b2}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Sum\+Channels@{Sum\+Channels}}
+\index{Sum\+Channels@{Sum\+Channels}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Sum\+Channels()}{SumChannels()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void tsa\+::\+View\+Util\+::\+Sum\+Channels (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{s1,  }\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{sum }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 548 of file View\+Util.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_view_util_a5e5e15a409ca42fa35967f682fd73894}\label{classtsa_1_1_view_util_a5e5e15a409ca42fa35967f682fd73894}} 
+\index{tsa\+::\+View\+Util@{tsa\+::\+View\+Util}!Sum\+Channels@{Sum\+Channels}}
+\index{Sum\+Channels@{Sum\+Channels}!tsa\+::\+View\+Util@{tsa\+::\+View\+Util}}
+\subsubsection{\texorpdfstring{Sum\+Channels()}{SumChannels()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void tsa\+::\+View\+Util\+::\+Sum\+Channels (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{s1,  }\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{sum,  }\item[{double}]{wfirst,  }\item[{double}]{wothers }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 571 of file View\+Util.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/include/\hyperlink{_view_util_8hpp}{View\+Util.\+hpp}\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/src/\hyperlink{_view_util_8cpp}{View\+Util.\+cpp}\end{DoxyCompactItemize}

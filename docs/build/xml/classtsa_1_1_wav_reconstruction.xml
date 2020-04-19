@@ -1,0 +1,241 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classtsa_1_1_wav_reconstruction" kind="class" language="C++" prot="public">
+    <compoundname>tsa::WavReconstruction</compoundname>
+    <basecompoundref refid="classtsa_1_1_algo_base" prot="public" virt="non-virtual">tsa::AlgoBase</basecompoundref>
+    <includes refid="_wav_reconstruction_8hpp" local="no">WavReconstruction.hpp</includes>
+      <sectiondef kind="user-defined">
+      <header>Operations</header>
+      <memberdef kind="function" id="classtsa_1_1_wav_reconstruction_1abf80b87f146d0557af51f4e5ec60580e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::WavReconstruction::execute</definition>
+        <argsstring>(Dmatrix &amp;buffer)</argsstring>
+        <name>execute</name>
+        <param>
+          <type><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref> &amp;</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+<para>Brief documentation for the execute method. </para>        </briefdescription>
+        <detaileddescription>
+<para>Start of the long documentation for execute method.</para><para><simplesect kind="pre"><para>A precondition </para></simplesect>
+<simplesect kind="post"><para>A postcondition </para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>An</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>exception</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>parameter</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a returned value</para></simplesect>
+Declaration of execute operation </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WavReconstruction.hpp" line="113" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/WavReconstruction.cpp" bodystart="36" bodyend="41"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtsa_1_1_wav_reconstruction_1a27b9eb7cb4914273f4551579aba645a6" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int tsa::WavReconstruction::mN</definition>
+        <argsstring></argsstring>
+        <name>mN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WavReconstruction.hpp" line="134" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/WavReconstruction.hpp" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_wav_reconstruction_1a12d1f32ebdce8967bc9faacc7be2bad2" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref></type>
+        <definition>Dmatrix tsa::WavReconstruction::mBuff</definition>
+        <argsstring></argsstring>
+        <name>mBuff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WavReconstruction.hpp" line="135" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/WavReconstruction.hpp" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_wav_reconstruction_1ad97d775e3186bf6b642526359fa88580" prot="private" static="no" mutable="no">
+        <type>enum <ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7" kindref="member">WaveletTransform::WaveletType</ref></type>
+        <definition>enum WaveletTransform::WaveletType tsa::WavReconstruction::mWt</definition>
+        <argsstring></argsstring>
+        <name>mWt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WavReconstruction.hpp" line="135" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/WavReconstruction.hpp" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_wav_reconstruction_1a23f1a718111dd2028f82b954e85115b6" prot="private" static="no" mutable="no">
+        <type><ref refid="classtsa_1_1_wavelet_transform" kindref="compound">WaveletTransform</ref></type>
+        <definition>WaveletTransform tsa::WavReconstruction::mWT</definition>
+        <argsstring></argsstring>
+        <name>mWT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WavReconstruction.hpp" line="137" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/WavReconstruction.hpp" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_wav_reconstruction_1a79826cf2c35973c054b45fa1e0e0a8f7" prot="private" static="no" mutable="no">
+        <type>enum <ref refid="classtsa_1_1_wavelet_threshold_1a50c42c95dae960986a985157ca038fae" kindref="member">WaveletThreshold::WaveletThresholding</ref></type>
+        <definition>enum WaveletThreshold::WaveletThresholding tsa::WavReconstruction::mT</definition>
+        <argsstring></argsstring>
+        <name>mT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WavReconstruction.hpp" line="137" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/WavReconstruction.hpp" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtsa_1_1_wav_reconstruction_1a487dbe8b4e390594631931f6bf7c60db" prot="private" static="no" mutable="no">
+        <type><ref refid="classtsa_1_1_wavelet_threshold" kindref="compound">WaveletThreshold</ref></type>
+        <definition>WaveletThreshold tsa::WavReconstruction::mWavThres</definition>
+        <argsstring></argsstring>
+        <name>mWavThres</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WavReconstruction.hpp" line="139" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/WavReconstruction.hpp" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtsa_1_1_wav_reconstruction_1a30e49dd92bc216fdc8a8411914bac3da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tsa::WavReconstruction::WavReconstruction</definition>
+        <argsstring>(unsigned int N, enum WaveletTransform::WaveletType F, double Th)</argsstring>
+        <name>WavReconstruction</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>N</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="classtsa_1_1_wavelet_transform_1a5a529de70e0004333fcf23b9cca88ce7" kindref="member">WaveletTransform::WaveletType</ref></type>
+          <declname>F</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>Th</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WavReconstruction.hpp" line="84" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/WavReconstruction.cpp" bodystart="19" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_wav_reconstruction_1a98992576615196547b63822980a1c9d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tsa::WavReconstruction::~WavReconstruction</definition>
+        <argsstring>()</argsstring>
+        <name>~WavReconstruction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WavReconstruction.hpp" line="90" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/WavReconstruction.cpp" bodystart="28" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_wav_reconstruction_1af5a0010f467f436732548165315efeb0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::WavReconstruction::operator()</definition>
+        <argsstring>(SeqViewDouble &amp;InputData)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref> &amp;</type>
+          <declname>InputData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WavReconstruction.hpp" line="93" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/WavReconstruction.cpp" bodystart="31" bodyend="34"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Reconstructed the wavelet transformed signal. </para>    </briefdescription>
+    <detaileddescription>
+<para>A more detailed description of <ref refid="classtsa_1_1_wav_reconstruction" kindref="compound">WavReconstruction</ref> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="461">
+        <label>tsa::WavReconstruction</label>
+        <link refid="classtsa_1_1_wav_reconstruction"/>
+        <childnode refid="462" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="462">
+        <label>tsa::AlgoBase</label>
+        <link refid="classtsa_1_1_algo_base"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="465">
+        <label>tsa::WaveletThreshold</label>
+        <link refid="classtsa_1_1_wavelet_threshold"/>
+      </node>
+      <node id="463">
+        <label>tsa::WavReconstruction</label>
+        <link refid="classtsa_1_1_wav_reconstruction"/>
+        <childnode refid="464" relation="public-inheritance">
+        </childnode>
+        <childnode refid="465" relation="usage">
+          <edgelabel>mWavThres</edgelabel>
+        </childnode>
+        <childnode refid="466" relation="usage">
+          <edgelabel>mWT</edgelabel>
+        </childnode>
+      </node>
+      <node id="464">
+        <label>tsa::AlgoBase</label>
+        <link refid="classtsa_1_1_algo_base"/>
+      </node>
+      <node id="466">
+        <label>tsa::WaveletTransform</label>
+        <link refid="classtsa_1_1_wavelet_transform"/>
+        <childnode refid="464" relation="private-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/WavReconstruction.hpp" line="78" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/WavReconstruction.hpp" bodystart="78" bodyend="141"/>
+    <listofallmembers>
+      <member refid="classtsa_1_1_wav_reconstruction_1abf80b87f146d0557af51f4e5ec60580e" prot="public" virt="non-virtual"><scope>tsa::WavReconstruction</scope><name>execute</name></member>
+      <member refid="classtsa_1_1_wav_reconstruction_1a12d1f32ebdce8967bc9faacc7be2bad2" prot="private" virt="non-virtual"><scope>tsa::WavReconstruction</scope><name>mBuff</name></member>
+      <member refid="classtsa_1_1_wav_reconstruction_1a27b9eb7cb4914273f4551579aba645a6" prot="private" virt="non-virtual"><scope>tsa::WavReconstruction</scope><name>mN</name></member>
+      <member refid="classtsa_1_1_wav_reconstruction_1a79826cf2c35973c054b45fa1e0e0a8f7" prot="private" virt="non-virtual"><scope>tsa::WavReconstruction</scope><name>mT</name></member>
+      <member refid="classtsa_1_1_wav_reconstruction_1a487dbe8b4e390594631931f6bf7c60db" prot="private" virt="non-virtual"><scope>tsa::WavReconstruction</scope><name>mWavThres</name></member>
+      <member refid="classtsa_1_1_wav_reconstruction_1a23f1a718111dd2028f82b954e85115b6" prot="private" virt="non-virtual"><scope>tsa::WavReconstruction</scope><name>mWT</name></member>
+      <member refid="classtsa_1_1_wav_reconstruction_1ad97d775e3186bf6b642526359fa88580" prot="private" virt="non-virtual"><scope>tsa::WavReconstruction</scope><name>mWt</name></member>
+      <member refid="classtsa_1_1_wav_reconstruction_1af5a0010f467f436732548165315efeb0" prot="public" virt="non-virtual"><scope>tsa::WavReconstruction</scope><name>operator()</name></member>
+      <member refid="classtsa_1_1_wav_reconstruction_1a30e49dd92bc216fdc8a8411914bac3da" prot="public" virt="non-virtual"><scope>tsa::WavReconstruction</scope><name>WavReconstruction</name></member>
+      <member refid="classtsa_1_1_wav_reconstruction_1a98992576615196547b63822980a1c9d3" prot="public" virt="non-virtual"><scope>tsa::WavReconstruction</scope><name>~WavReconstruction</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

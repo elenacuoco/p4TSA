@@ -1,0 +1,296 @@
+\hypertarget{classtsa_1_1_base_window}{}\section{tsa\+:\+:Base\+Window Class Reference}
+\label{classtsa_1_1_base_window}\index{tsa\+::\+Base\+Window@{tsa\+::\+Base\+Window}}
+
+
+Base class for various windowing algorithms.  
+
+
+
+
+{\ttfamily \#include $<$Base\+Window.\+hpp$>$}
+
+Inheritance diagram for tsa\+:\+:Base\+Window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=10.000000cm]{classtsa_1_1_base_window}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtsa_1_1_base_window_aea4dee45722299896913859d7b899d6f}{Base\+Window} (unsigned int size)
+\item 
+virtual \hyperlink{classtsa_1_1_base_window_a0e99ffa3d84e8c7a05f7de437bfd6241}{$\sim$\+Base\+Window} ()
+\item 
+virtual void \hyperlink{classtsa_1_1_base_window_ad6681a5cb29414a97af6be1ea7805a81}{Normalize} ()
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Getters}\par
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{classtsa_1_1_base_window_af3e45daf0401f06108c6634344532af8}{Get\+Size} ()
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classtsa_1_1_base_window_aa74b29105d94caa521d308198e8e6643}{Fill\+Window} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} \hyperlink{classtsa_1_1_base_window_a182b397ac3f3c409bfcb3a39d9c1575a}{m\+Window}
+\end{DoxyCompactItemize}
+\subsection*{Operations}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classtsa_1_1_base_window_a05d9edb95dc01840a1b2df78dfa3a8c1}{operator()} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&v1)
+\item 
+virtual void \hyperlink{classtsa_1_1_base_window_afda50daa943527e09792b06e5ba69bcb}{operator()} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&v1, \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&v2)
+\item 
+void \hyperlink{classtsa_1_1_base_window_a15647cb85344c7e82ecde50675b07efd}{execute} (\hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&in, \hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&out)
+\item 
+void \hyperlink{classtsa_1_1_base_window_a7e4b5f7d87bbe397332b4e506b0681c2}{execute} (\hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&in, \hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&out, unsigned int offset)
+\item 
+void \hyperlink{classtsa_1_1_base_window_a34b933da998ba8137d0e0def7514d2cb}{execute} (\hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&inout)
+\item 
+void \hyperlink{classtsa_1_1_base_window_abadd3d1ef579310ab440a70d77e1d46d}{execute} (\hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} \&inout)
+\item 
+double \hyperlink{classtsa_1_1_base_window_ab9dc5e39e09701b60b9e160837f059df}{operator()} (int i)
+\item 
+virtual void \hyperlink{classtsa_1_1_base_window_a8a2a3425f2915762d50fa57dd0e04f22}{Resize} (unsigned int size)
+\item 
+static double \hyperlink{classtsa_1_1_base_window_a4bd3edc44a56103ac3f9112a55a10420}{Cross\+Average} (\hyperlink{classtsa_1_1_base_window}{Base\+Window} \&w1, \hyperlink{classtsa_1_1_base_window}{Base\+Window} \&w2)
+\item 
+static double \hyperlink{classtsa_1_1_base_window_a31f86887f9ccbddd97bdca903c506606}{Cross\+Square\+Average} (\hyperlink{classtsa_1_1_base_window}{Base\+Window} \&w1, \hyperlink{classtsa_1_1_base_window}{Base\+Window} \&w2)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class for various windowing algorithms. 
+
+Definition at line 74 of file Base\+Window.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtsa_1_1_base_window_aea4dee45722299896913859d7b899d6f}\label{classtsa_1_1_base_window_aea4dee45722299896913859d7b899d6f}} 
+\index{tsa\+::\+Base\+Window@{tsa\+::\+Base\+Window}!Base\+Window@{Base\+Window}}
+\index{Base\+Window@{Base\+Window}!tsa\+::\+Base\+Window@{tsa\+::\+Base\+Window}}
+\subsubsection{\texorpdfstring{Base\+Window()}{BaseWindow()}}
+{\footnotesize\ttfamily tsa\+::\+Base\+Window\+::\+Base\+Window (\begin{DoxyParamCaption}\item[{unsigned int}]{size }\end{DoxyParamCaption})}
+
+Constructor 
+
+Definition at line 5 of file Base\+Window.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_base_window_a0e99ffa3d84e8c7a05f7de437bfd6241}\label{classtsa_1_1_base_window_a0e99ffa3d84e8c7a05f7de437bfd6241}} 
+\index{tsa\+::\+Base\+Window@{tsa\+::\+Base\+Window}!````~Base\+Window@{$\sim$\+Base\+Window}}
+\index{````~Base\+Window@{$\sim$\+Base\+Window}!tsa\+::\+Base\+Window@{tsa\+::\+Base\+Window}}
+\subsubsection{\texorpdfstring{$\sim$\+Base\+Window()}{~BaseWindow()}}
+{\footnotesize\ttfamily tsa\+::\+Base\+Window\+::$\sim$\+Base\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destructor 
+
+Definition at line 10 of file Base\+Window.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classtsa_1_1_base_window_a4bd3edc44a56103ac3f9112a55a10420}\label{classtsa_1_1_base_window_a4bd3edc44a56103ac3f9112a55a10420}} 
+\index{tsa\+::\+Base\+Window@{tsa\+::\+Base\+Window}!Cross\+Average@{Cross\+Average}}
+\index{Cross\+Average@{Cross\+Average}!tsa\+::\+Base\+Window@{tsa\+::\+Base\+Window}}
+\subsubsection{\texorpdfstring{Cross\+Average()}{CrossAverage()}}
+{\footnotesize\ttfamily double tsa\+::\+Base\+Window\+::\+Cross\+Average (\begin{DoxyParamCaption}\item[{\hyperlink{classtsa_1_1_base_window}{Base\+Window} \&}]{w1,  }\item[{\hyperlink{classtsa_1_1_base_window}{Base\+Window} \&}]{w2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 83 of file Base\+Window.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_base_window_a31f86887f9ccbddd97bdca903c506606}\label{classtsa_1_1_base_window_a31f86887f9ccbddd97bdca903c506606}} 
+\index{tsa\+::\+Base\+Window@{tsa\+::\+Base\+Window}!Cross\+Square\+Average@{Cross\+Square\+Average}}
+\index{Cross\+Square\+Average@{Cross\+Square\+Average}!tsa\+::\+Base\+Window@{tsa\+::\+Base\+Window}}
+\subsubsection{\texorpdfstring{Cross\+Square\+Average()}{CrossSquareAverage()}}
+{\footnotesize\ttfamily double tsa\+::\+Base\+Window\+::\+Cross\+Square\+Average (\begin{DoxyParamCaption}\item[{\hyperlink{classtsa_1_1_base_window}{Base\+Window} \&}]{w1,  }\item[{\hyperlink{classtsa_1_1_base_window}{Base\+Window} \&}]{w2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 106 of file Base\+Window.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_base_window_a15647cb85344c7e82ecde50675b07efd}\label{classtsa_1_1_base_window_a15647cb85344c7e82ecde50675b07efd}} 
+\index{tsa\+::\+Base\+Window@{tsa\+::\+Base\+Window}!execute@{execute}}
+\index{execute@{execute}!tsa\+::\+Base\+Window@{tsa\+::\+Base\+Window}}
+\subsubsection{\texorpdfstring{execute()}{execute()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily void tsa\+::\+Base\+Window\+::execute (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&}]{in,  }\item[{\hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&}]{out }\end{DoxyParamCaption})}
+
+Apply the window to each row of the input data matrix, writing the result on the output data matrix.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & input matrix of data \\
+\hline
+{\em out} & output matrix of data \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 22 of file Base\+Window.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_base_window_a7e4b5f7d87bbe397332b4e506b0681c2}\label{classtsa_1_1_base_window_a7e4b5f7d87bbe397332b4e506b0681c2}} 
+\index{tsa\+::\+Base\+Window@{tsa\+::\+Base\+Window}!execute@{execute}}
+\index{execute@{execute}!tsa\+::\+Base\+Window@{tsa\+::\+Base\+Window}}
+\subsubsection{\texorpdfstring{execute()}{execute()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily void tsa\+::\+Base\+Window\+::execute (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&}]{in,  }\item[{\hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&}]{out,  }\item[{unsigned int}]{offset }\end{DoxyParamCaption})}
+
+
+
+Definition at line 31 of file Base\+Window.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_base_window_a34b933da998ba8137d0e0def7514d2cb}\label{classtsa_1_1_base_window_a34b933da998ba8137d0e0def7514d2cb}} 
+\index{tsa\+::\+Base\+Window@{tsa\+::\+Base\+Window}!execute@{execute}}
+\index{execute@{execute}!tsa\+::\+Base\+Window@{tsa\+::\+Base\+Window}}
+\subsubsection{\texorpdfstring{execute()}{execute()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily void tsa\+::\+Base\+Window\+::execute (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \&}]{inout }\end{DoxyParamCaption})}
+
+Apply the window to each row of the data matrix, writing the result on the matrix itself.
+
+
+\begin{DoxyParams}{Parameters}
+{\em inout} & data matrix \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 40 of file Base\+Window.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_base_window_abadd3d1ef579310ab440a70d77e1d46d}\label{classtsa_1_1_base_window_abadd3d1ef579310ab440a70d77e1d46d}} 
+\index{tsa\+::\+Base\+Window@{tsa\+::\+Base\+Window}!execute@{execute}}
+\index{execute@{execute}!tsa\+::\+Base\+Window@{tsa\+::\+Base\+Window}}
+\subsubsection{\texorpdfstring{execute()}{execute()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily void tsa\+::\+Base\+Window\+::execute (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} \&}]{inout }\end{DoxyParamCaption})}
+
+
+
+Definition at line 49 of file Base\+Window.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_base_window_aa74b29105d94caa521d308198e8e6643}\label{classtsa_1_1_base_window_aa74b29105d94caa521d308198e8e6643}} 
+\index{tsa\+::\+Base\+Window@{tsa\+::\+Base\+Window}!Fill\+Window@{Fill\+Window}}
+\index{Fill\+Window@{Fill\+Window}!tsa\+::\+Base\+Window@{tsa\+::\+Base\+Window}}
+\subsubsection{\texorpdfstring{Fill\+Window()}{FillWindow()}}
+{\footnotesize\ttfamily void tsa\+::\+Base\+Window\+::\+Fill\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Initialize the window with the correct values, given its actual size. This is a pure virtual function, which is redefined by each window class. 
+
+Reimplemented in \hyperlink{classtsa_1_1_tukey_window_a9c44b527df2c303511322face00a5d33}{tsa\+::\+Tukey\+Window}, \hyperlink{classtsa_1_1_kaiser_window_a4799ed39290a058eea9d44df73f764ea}{tsa\+::\+Kaiser\+Window}, \hyperlink{classtsa_1_1_cs2_hamming_window_a269a092db403a2bd7bb93456dc39be60}{tsa\+::\+Cs2\+Hamming\+Window}, \hyperlink{classtsa_1_1_welch_window_aa5dd01231aa4a33fb43473209a679309}{tsa\+::\+Welch\+Window}, \hyperlink{classtsa_1_1_tukey_hann_window_a041a98810aa841fd88d19139bf0e977f}{tsa\+::\+Tukey\+Hann\+Window}, \hyperlink{classtsa_1_1_cs2_hann_window_a0da151916492d8ab9504ee40872131a2}{tsa\+::\+Cs2\+Hann\+Window}, \hyperlink{classtsa_1_1_bisquare_window_a62ab3bab83dd4dd77090c7c49be24acb}{tsa\+::\+Bisquare\+Window}, and \hyperlink{classtsa_1_1_bartlett_window_afb3c6c8aa249db673da8dd625ffbb8a5}{tsa\+::\+Bartlett\+Window}.
+
+
+
+Definition at line 68 of file Base\+Window.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_base_window_af3e45daf0401f06108c6634344532af8}\label{classtsa_1_1_base_window_af3e45daf0401f06108c6634344532af8}} 
+\index{tsa\+::\+Base\+Window@{tsa\+::\+Base\+Window}!Get\+Size@{Get\+Size}}
+\index{Get\+Size@{Get\+Size}!tsa\+::\+Base\+Window@{tsa\+::\+Base\+Window}}
+\subsubsection{\texorpdfstring{Get\+Size()}{GetSize()}}
+{\footnotesize\ttfamily unsigned int tsa\+::\+Base\+Window\+::\+Get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the actual size of the window.
+
+\begin{DoxyReturn}{Returns}
+the actual size of the window 
+\end{DoxyReturn}
+
+
+Definition at line 64 of file Base\+Window.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_base_window_ad6681a5cb29414a97af6be1ea7805a81}\label{classtsa_1_1_base_window_ad6681a5cb29414a97af6be1ea7805a81}} 
+\index{tsa\+::\+Base\+Window@{tsa\+::\+Base\+Window}!Normalize@{Normalize}}
+\index{Normalize@{Normalize}!tsa\+::\+Base\+Window@{tsa\+::\+Base\+Window}}
+\subsubsection{\texorpdfstring{Normalize()}{Normalize()}}
+{\footnotesize\ttfamily void tsa\+::\+Base\+Window\+::\+Normalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 71 of file Base\+Window.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_base_window_a05d9edb95dc01840a1b2df78dfa3a8c1}\label{classtsa_1_1_base_window_a05d9edb95dc01840a1b2df78dfa3a8c1}} 
+\index{tsa\+::\+Base\+Window@{tsa\+::\+Base\+Window}!operator()@{operator()}}
+\index{operator()@{operator()}!tsa\+::\+Base\+Window@{tsa\+::\+Base\+Window}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void tsa\+::\+Base\+Window\+::operator() (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{v1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \hyperlink{classtsa_1_1_tukey_window_a3a68173adce5cbbebefbadb0d7084847}{tsa\+::\+Tukey\+Window}, \hyperlink{classtsa_1_1_welch_window_a4a3b7999c9d75b916d682dc0f94c87db}{tsa\+::\+Welch\+Window}, \hyperlink{classtsa_1_1_kaiser_window_a02d18a272d16d54fa4f7c9e8b227356e}{tsa\+::\+Kaiser\+Window}, \hyperlink{classtsa_1_1_tukey_hann_window_a2a10c0c94b2c5ebbc1db201371074295}{tsa\+::\+Tukey\+Hann\+Window}, \hyperlink{classtsa_1_1_cs2_hamming_window_a41281794f2587c56ed52459fe0a106a2}{tsa\+::\+Cs2\+Hamming\+Window}, \hyperlink{classtsa_1_1_cs2_hann_window_af896b6c2dc55a283b67c2b694926918a}{tsa\+::\+Cs2\+Hann\+Window}, \hyperlink{classtsa_1_1_bisquare_window_a8ad862435b17d306997adbb8be9c9b4f}{tsa\+::\+Bisquare\+Window}, and \hyperlink{classtsa_1_1_bartlett_window_a9bad239fb8fbaa295713c904e3d9d92e}{tsa\+::\+Bartlett\+Window}.
+
+
+
+Definition at line 14 of file Base\+Window.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_base_window_afda50daa943527e09792b06e5ba69bcb}\label{classtsa_1_1_base_window_afda50daa943527e09792b06e5ba69bcb}} 
+\index{tsa\+::\+Base\+Window@{tsa\+::\+Base\+Window}!operator()@{operator()}}
+\index{operator()@{operator()}!tsa\+::\+Base\+Window@{tsa\+::\+Base\+Window}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void tsa\+::\+Base\+Window\+::operator() (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{v1,  }\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{v2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \hyperlink{classtsa_1_1_tukey_window_ad38a8c9b6fa12b65d3f7c7b37f4b19a8}{tsa\+::\+Tukey\+Window}, \hyperlink{classtsa_1_1_welch_window_af6d14e181526f94d8ad6f1a2176db98a}{tsa\+::\+Welch\+Window}, \hyperlink{classtsa_1_1_kaiser_window_a94b99f1c961eadad783e44ccce9629e7}{tsa\+::\+Kaiser\+Window}, \hyperlink{classtsa_1_1_tukey_hann_window_af889453b564781f9eca6993f2fd95646}{tsa\+::\+Tukey\+Hann\+Window}, \hyperlink{classtsa_1_1_cs2_hamming_window_a98046f7488d9126a9041b16852491dd9}{tsa\+::\+Cs2\+Hamming\+Window}, \hyperlink{classtsa_1_1_cs2_hann_window_adc0b74ee1e5173f5de7f86cf714fe47f}{tsa\+::\+Cs2\+Hann\+Window}, \hyperlink{classtsa_1_1_bisquare_window_a18002b225ed630af739a983da72a4006}{tsa\+::\+Bisquare\+Window}, and \hyperlink{classtsa_1_1_bartlett_window_a44d722552ca5281e28a28eadbed2099e}{tsa\+::\+Bartlett\+Window}.
+
+
+
+Definition at line 18 of file Base\+Window.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_base_window_ab9dc5e39e09701b60b9e160837f059df}\label{classtsa_1_1_base_window_ab9dc5e39e09701b60b9e160837f059df}} 
+\index{tsa\+::\+Base\+Window@{tsa\+::\+Base\+Window}!operator()@{operator()}}
+\index{operator()@{operator()}!tsa\+::\+Base\+Window@{tsa\+::\+Base\+Window}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily double tsa\+::\+Base\+Window\+::operator() (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+Get the value of the window at a given index.
+
+\begin{DoxyReturn}{Returns}
+the value of the window at the given plage 
+\end{DoxyReturn}
+
+
+Definition at line 55 of file Base\+Window.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_base_window_a8a2a3425f2915762d50fa57dd0e04f22}\label{classtsa_1_1_base_window_a8a2a3425f2915762d50fa57dd0e04f22}} 
+\index{tsa\+::\+Base\+Window@{tsa\+::\+Base\+Window}!Resize@{Resize}}
+\index{Resize@{Resize}!tsa\+::\+Base\+Window@{tsa\+::\+Base\+Window}}
+\subsubsection{\texorpdfstring{Resize()}{Resize()}}
+{\footnotesize\ttfamily void tsa\+::\+Base\+Window\+::\+Resize (\begin{DoxyParamCaption}\item[{unsigned int}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Resize the window dimension.
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & new size for the window \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classtsa_1_1_tukey_window_acfb62239e47e5faa44210407c7c7f42f}{tsa\+::\+Tukey\+Window}, \hyperlink{classtsa_1_1_kaiser_window_ae573c5ab979c3292d10feddc5180b6b4}{tsa\+::\+Kaiser\+Window}, \hyperlink{classtsa_1_1_welch_window_a5ad861714524733e648660d817e219d6}{tsa\+::\+Welch\+Window}, \hyperlink{classtsa_1_1_tukey_hann_window_a253c1786cef6ec7b5e7ef700f4238496}{tsa\+::\+Tukey\+Hann\+Window}, \hyperlink{classtsa_1_1_cs2_hamming_window_aa455906419c91055a59da8381c3a7588}{tsa\+::\+Cs2\+Hamming\+Window}, \hyperlink{classtsa_1_1_cs2_hann_window_a540187b8c32000d00d3023e8f8418264}{tsa\+::\+Cs2\+Hann\+Window}, \hyperlink{classtsa_1_1_bisquare_window_a0970518373e007e0fdd95701ff744c6f}{tsa\+::\+Bisquare\+Window}, and \hyperlink{classtsa_1_1_bartlett_window_af63f6fdd7e2a10d77db1c7363e9963f5}{tsa\+::\+Bartlett\+Window}.
+
+
+
+Definition at line 59 of file Base\+Window.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classtsa_1_1_base_window_a182b397ac3f3c409bfcb3a39d9c1575a}\label{classtsa_1_1_base_window_a182b397ac3f3c409bfcb3a39d9c1575a}} 
+\index{tsa\+::\+Base\+Window@{tsa\+::\+Base\+Window}!m\+Window@{m\+Window}}
+\index{m\+Window@{m\+Window}!tsa\+::\+Base\+Window@{tsa\+::\+Base\+Window}}
+\subsubsection{\texorpdfstring{m\+Window}{mWindow}}
+{\footnotesize\ttfamily \hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} tsa\+::\+Base\+Window\+::m\+Window\hspace{0.3cm}{\ttfamily [protected]}}
+
+Window data 
+
+Definition at line 179 of file Base\+Window.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/include/\hyperlink{_base_window_8hpp}{Base\+Window.\+hpp}\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/src/\hyperlink{_base_window_8cpp}{Base\+Window.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,408 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_least_squares_lattice_8hpp" kind="file" language="C++">
+    <compoundname>LeastSquaresLattice.hpp</compoundname>
+    <includes refid="_algo_base_8hpp" local="no">AlgoBase.hpp</includes>
+    <includes refid="_l_s_l_learning_8hpp" local="no">LSLLearning.hpp</includes>
+    <includedby refid="_least_squares_lattice_8cpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/src/LeastSquaresLattice.cpp</includedby>
+    <includedby refid="tsa_8hpp" local="no">/home/filip/PhD/WDFPipe_test/p4TSA/include/tsa.hpp</includedby>
+    <incdepgraph>
+      <node id="2795">
+        <label>tsaTraits.hpp</label>
+        <link refid="tsa_traits_8hpp"/>
+        <childnode refid="2796" relation="include">
+        </childnode>
+      </node>
+      <node id="2775">
+        <label>eternity.hpp</label>
+        <link refid="eternity_8hpp"/>
+        <childnode refid="2776" relation="include">
+        </childnode>
+        <childnode refid="2779" relation="include">
+        </childnode>
+        <childnode refid="2784" relation="include">
+        </childnode>
+        <childnode refid="2788" relation="include">
+        </childnode>
+      </node>
+      <node id="2781">
+        <label>stdlib.h</label>
+      </node>
+      <node id="2768">
+        <label>stdexcept</label>
+      </node>
+      <node id="2790">
+        <label>tsaTypes.hpp</label>
+        <link refid="tsa_types_8hpp"/>
+        <childnode refid="2770" relation="include">
+        </childnode>
+        <childnode refid="2771" relation="include">
+        </childnode>
+        <childnode refid="2791" relation="include">
+        </childnode>
+        <childnode refid="2772" relation="include">
+        </childnode>
+        <childnode refid="2775" relation="include">
+        </childnode>
+      </node>
+      <node id="2773">
+        <label>string</label>
+      </node>
+      <node id="2776">
+        <label>eternity/dynamic.hpp</label>
+        <link refid="dynamic_8hpp"/>
+        <childnode refid="2777" relation="include">
+        </childnode>
+        <childnode refid="2778" relation="include">
+        </childnode>
+        <childnode refid="2773" relation="include">
+        </childnode>
+      </node>
+      <node id="2786">
+        <label>map</label>
+      </node>
+      <node id="2792">
+        <label>tsaLog.hpp</label>
+        <link refid="tsa_log_8hpp"/>
+        <childnode refid="2769" relation="include">
+        </childnode>
+        <childnode refid="2770" relation="include">
+        </childnode>
+        <childnode refid="2793" relation="include">
+        </childnode>
+      </node>
+      <node id="2770">
+        <label>fstream</label>
+      </node>
+      <node id="2785">
+        <label>xmlscanner.hpp</label>
+        <link refid="xmlscanner_8hpp"/>
+        <childnode refid="2780" relation="include">
+        </childnode>
+        <childnode refid="2781" relation="include">
+        </childnode>
+        <childnode refid="2782" relation="include">
+        </childnode>
+        <childnode refid="2786" relation="include">
+        </childnode>
+        <childnode refid="2783" relation="include">
+        </childnode>
+        <childnode refid="2770" relation="include">
+        </childnode>
+        <childnode refid="2773" relation="include">
+        </childnode>
+        <childnode refid="2769" relation="include">
+        </childnode>
+      </node>
+      <node id="2774">
+        <label>tsaSerialize.hpp</label>
+        <link refid="tsa_serialize_8hpp"/>
+        <childnode refid="2768" relation="include">
+        </childnode>
+        <childnode refid="2769" relation="include">
+        </childnode>
+        <childnode refid="2770" relation="include">
+        </childnode>
+        <childnode refid="2775" relation="include">
+        </childnode>
+        <childnode refid="2790" relation="include">
+        </childnode>
+      </node>
+      <node id="2799">
+        <label>fparser.hpp</label>
+        <link refid="fparser_8hpp"/>
+        <childnode refid="2773" relation="include">
+        </childnode>
+        <childnode refid="2786" relation="include">
+        </childnode>
+        <childnode refid="2782" relation="include">
+        </childnode>
+      </node>
+      <node id="2767">
+        <label>AlgoBase.hpp</label>
+        <link refid="_algo_base_8hpp"/>
+        <childnode refid="2768" relation="include">
+        </childnode>
+        <childnode refid="2769" relation="include">
+        </childnode>
+        <childnode refid="2770" relation="include">
+        </childnode>
+        <childnode refid="2771" relation="include">
+        </childnode>
+        <childnode refid="2772" relation="include">
+        </childnode>
+        <childnode refid="2773" relation="include">
+        </childnode>
+        <childnode refid="2774" relation="include">
+        </childnode>
+        <childnode refid="2790" relation="include">
+        </childnode>
+        <childnode refid="2792" relation="include">
+        </childnode>
+        <childnode refid="2794" relation="include">
+        </childnode>
+        <childnode refid="2800" relation="include">
+        </childnode>
+        <childnode refid="2802" relation="include">
+        </childnode>
+      </node>
+      <node id="2779">
+        <label>eternity/persist.hpp</label>
+        <link refid="persist_8hpp"/>
+        <childnode refid="2776" relation="include">
+        </childnode>
+        <childnode refid="2780" relation="include">
+        </childnode>
+        <childnode refid="2781" relation="include">
+        </childnode>
+        <childnode refid="2782" relation="include">
+        </childnode>
+        <childnode refid="2783" relation="include">
+        </childnode>
+        <childnode refid="2770" relation="include">
+        </childnode>
+      </node>
+      <node id="2798">
+        <label>string.h</label>
+      </node>
+      <node id="2778">
+        <label>typeinfo</label>
+      </node>
+      <node id="2772">
+        <label>boost/numeric/ublas/io.hpp</label>
+      </node>
+      <node id="2793">
+        <label>unistd.h</label>
+      </node>
+      <node id="2797">
+        <label>tsaUtilityFunctions.hpp</label>
+        <link refid="tsa_utility_functions_8hpp"/>
+        <childnode refid="2798" relation="include">
+        </childnode>
+        <childnode refid="2799" relation="include">
+        </childnode>
+        <childnode refid="2796" relation="include">
+        </childnode>
+        <childnode refid="2770" relation="include">
+        </childnode>
+      </node>
+      <node id="2782">
+        <label>vector</label>
+      </node>
+      <node id="2794">
+        <label>BaseView.hpp</label>
+        <link refid="_base_view_8hpp"/>
+        <childnode refid="2786" relation="include">
+        </childnode>
+        <childnode refid="2773" relation="include">
+        </childnode>
+        <childnode refid="2790" relation="include">
+        </childnode>
+        <childnode refid="2795" relation="include">
+        </childnode>
+        <childnode refid="2797" relation="include">
+        </childnode>
+        <childnode refid="2774" relation="include">
+        </childnode>
+        <childnode refid="2792" relation="include">
+        </childnode>
+      </node>
+      <node id="2791">
+        <label>boost/numeric/ublas/matrix_proxy.hpp</label>
+      </node>
+      <node id="2803">
+        <label>LSLLearning.hpp</label>
+        <link refid="_l_s_l_learning_8hpp"/>
+        <childnode refid="2767" relation="include">
+        </childnode>
+        <childnode refid="2800" relation="include">
+        </childnode>
+        <childnode refid="2804" relation="include">
+        </childnode>
+      </node>
+      <node id="2789">
+        <label>sstream</label>
+      </node>
+      <node id="2801">
+        <label>FrameL.h</label>
+      </node>
+      <node id="2802">
+        <label>AlgoExceptions.hpp</label>
+        <link refid="_algo_exceptions_8hpp"/>
+        <childnode refid="2768" relation="include">
+        </childnode>
+        <childnode refid="2773" relation="include">
+        </childnode>
+      </node>
+      <node id="2800">
+        <label>SeqView.hpp</label>
+        <link refid="_seq_view_8hpp"/>
+        <childnode refid="2771" relation="include">
+        </childnode>
+        <childnode refid="2791" relation="include">
+        </childnode>
+        <childnode refid="2772" relation="include">
+        </childnode>
+        <childnode refid="2794" relation="include">
+        </childnode>
+        <childnode refid="2801" relation="include">
+        </childnode>
+      </node>
+      <node id="2780">
+        <label>math.h</label>
+      </node>
+      <node id="2771">
+        <label>boost/numeric/ublas/matrix.hpp</label>
+      </node>
+      <node id="2769">
+        <label>iostream</label>
+      </node>
+      <node id="2787">
+        <label>deque</label>
+      </node>
+      <node id="2766">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/LeastSquaresLattice.hpp</label>
+        <link refid="_least_squares_lattice_8hpp"/>
+        <childnode refid="2767" relation="include">
+        </childnode>
+        <childnode refid="2803" relation="include">
+        </childnode>
+      </node>
+      <node id="2804">
+        <label>LatticeView.hpp</label>
+        <link refid="_lattice_view_8hpp"/>
+        <childnode refid="2771" relation="include">
+        </childnode>
+        <childnode refid="2772" relation="include">
+        </childnode>
+        <childnode refid="2775" relation="include">
+        </childnode>
+        <childnode refid="2794" relation="include">
+        </childnode>
+      </node>
+      <node id="2784">
+        <label>eternity/persist_xml.hpp</label>
+        <link refid="persist__xml_8hpp"/>
+        <childnode refid="2779" relation="include">
+        </childnode>
+        <childnode refid="2785" relation="include">
+        </childnode>
+        <childnode refid="2787" relation="include">
+        </childnode>
+      </node>
+      <node id="2796">
+        <label>complex</label>
+      </node>
+      <node id="2788">
+        <label>eternity/algorithms.hpp</label>
+        <link refid="algorithms_8hpp"/>
+        <childnode refid="2779" relation="include">
+        </childnode>
+        <childnode refid="2784" relation="include">
+        </childnode>
+        <childnode refid="2785" relation="include">
+        </childnode>
+        <childnode refid="2789" relation="include">
+        </childnode>
+      </node>
+      <node id="2783">
+        <label>algorithm</label>
+      </node>
+      <node id="2777">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2806">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/LeastSquaresLattice.cpp</label>
+        <link refid="_least_squares_lattice_8cpp"/>
+      </node>
+      <node id="2807">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/tsa.hpp</label>
+        <link refid="tsa_8hpp"/>
+      </node>
+      <node id="2805">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/include/LeastSquaresLattice.hpp</label>
+        <link refid="_least_squares_lattice_8hpp"/>
+        <childnode refid="2806" relation="include">
+        </childnode>
+        <childnode refid="2807" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classtsa_1_1_least_squares_lattice" prot="public">tsa::LeastSquaresLattice</innerclass>
+    <innernamespace refid="namespacetsa">tsa</innernamespace>
+    <briefdescription>
+<para>The LeastSquaresLattice is the algorithm to estimate in adaptive way the parameters for the whitening filter. </para>    </briefdescription>
+    <detaileddescription>
+<para>Copyright (C) 2004 by Elena Cuoco <ulink url="mailto:elena.cuoco@ego-gw.it">elena.cuoco@ego-gw.it</ulink></para><para>This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</para><para>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</para><para>You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.</para><para><simplesect kind="author"><para>Elena Cuoco <ulink url="mailto:elena.cuoco@ego-gw.it">elena.cuoco@ego-gw.it</ulink> </para></simplesect>
+<simplesect kind="date"><para>17 January 2005 </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="27"><highlight class="preprocessor">#ifndef<sp/>__LEASTSQUARESLATTICE_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__LEASTSQUARESLATTICE_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_algo_base_8hpp" kindref="compound">AlgoBase.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_l_s_l_learning_8hpp" kindref="compound">LSLLearning.hpp</ref>&gt;</highlight></codeline>
+<codeline lineno="47"></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceboost_1_1numeric_1_1ublas" kindref="compound">boost::numeric::ublas</ref>;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetsa" kindref="compound">tsa</ref><sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="classtsa_1_1_least_squares_lattice" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classtsa_1_1_least_squares_lattice" kindref="compound">LeastSquaresLattice</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_algo_base" kindref="compound">AlgoBase</ref><sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_least_squares_lattice" kindref="compound">LeastSquaresLattice</ref>(matrix_row&lt;Dmatrix&gt;&amp;<sp/>LearnData,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>matrix_row&lt;Dmatrix&gt;&amp;<sp/>WhitenData,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>P,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>lambda,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>D);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classtsa_1_1_least_squares_lattice" kindref="compound">LeastSquaresLattice</ref>();</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_least_squares_lattice" kindref="compound">LeastSquaresLattice</ref>&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_least_squares_lattice" kindref="compound">LeastSquaresLattice</ref>&amp;<sp/>from);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>execute(<ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref>&amp;<sp/>Input,<sp/><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref>&amp;<sp/>Output);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"></codeline>
+<codeline lineno="122"></codeline>
+<codeline lineno="124"></codeline>
+<codeline lineno="129"></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="135" refid="classtsa_1_1_least_squares_lattice_1a714e35374ee38156cf0fa4816340a6df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_least_squares_lattice_1a714e35374ee38156cf0fa4816340a6df" kindref="member">mOrder</ref>;</highlight></codeline>
+<codeline lineno="136" refid="classtsa_1_1_least_squares_lattice_1a00bb9716623be7c8a035c9947023dcda" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_least_squares_lattice_1a00bb9716623be7c8a035c9947023dcda" kindref="member">mLwsp</ref>;</highlight></codeline>
+<codeline lineno="137" refid="classtsa_1_1_least_squares_lattice_1a4b1315dc119c22efae15dd97168a5701" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_least_squares_lattice_1a4b1315dc119c22efae15dd97168a5701" kindref="member">mLambda</ref>;</highlight></codeline>
+<codeline lineno="138" refid="classtsa_1_1_least_squares_lattice_1a3170c018ba5b3dcfb91c9490e11e6199" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref><sp/><ref refid="classtsa_1_1_least_squares_lattice_1a3170c018ba5b3dcfb91c9490e11e6199" kindref="member">mLast</ref>;</highlight></codeline>
+<codeline lineno="139" refid="classtsa_1_1_least_squares_lattice_1a40b578afe8b8e4523cc827337177412c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_least_squares_lattice_1a40b578afe8b8e4523cc827337177412c" kindref="member">mDirection</ref>;</highlight></codeline>
+<codeline lineno="140" refid="classtsa_1_1_least_squares_lattice_1a17c54dba21bbf5ae79d6687f554eceb9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_least_squares_lattice_1a17c54dba21bbf5ae79d6687f554eceb9" kindref="member">mStep</ref>;</highlight></codeline>
+<codeline lineno="141" refid="classtsa_1_1_least_squares_lattice_1a720cbccb82705799e96c4053cd1963af" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_l_learning" kindref="compound">LSLLearning</ref><sp/><ref refid="classtsa_1_1_least_squares_lattice_1a720cbccb82705799e96c4053cd1963af" kindref="member">mLSLlearn</ref>;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal">}<sp/></highlight><highlight class="comment">//end<sp/>namespace</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>___LEASTSQUARESLATTICE_HPP</highlight></codeline>
+    </programlisting>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/LeastSquaresLattice.hpp"/>
+  </compounddef>
+</doxygen>

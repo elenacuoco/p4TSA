@@ -1,0 +1,217 @@
+\hypertarget{classtsa_1_1_kaiser_window}{}\section{tsa\+:\+:Kaiser\+Window Class Reference}
+\label{classtsa_1_1_kaiser_window}\index{tsa\+::\+Kaiser\+Window@{tsa\+::\+Kaiser\+Window}}
+
+
+Kaiser windowing algorithm Harris, F. J. \char`\"{}\+On the Use of Windows for Harmonic Analysis with the Discrete Fourier Transform.\char`\"{} Proceedings of the I\+E\+EE. Vol. 66 (January 1978). pp. 66-\/67.  
+
+
+
+
+{\ttfamily \#include $<$Kaiser\+Window.\+hpp$>$}
+
+Inheritance diagram for tsa\+:\+:Kaiser\+Window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classtsa_1_1_kaiser_window}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtsa_1_1_kaiser_window_a1435f80a21b198c05d60be076fa152b1}{Kaiser\+Window} (int size)
+\item 
+\hyperlink{classtsa_1_1_kaiser_window_ae1de2ef14d0c6b80161d0456502b4753}{Kaiser\+Window} (int size, const std\+::string \&par)
+\item 
+virtual \hyperlink{classtsa_1_1_kaiser_window_a98965a07384b404238a53bf9d66e8c77}{$\sim$\+Kaiser\+Window} ()
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Operations}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtsa_1_1_kaiser_window_a02d18a272d16d54fa4f7c9e8b227356e}{operator()} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&v1)
+\item 
+void \hyperlink{classtsa_1_1_kaiser_window_a94b99f1c961eadad783e44ccce9629e7}{operator()} (\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&v1, \hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&v2)
+\item 
+void \hyperlink{classtsa_1_1_kaiser_window_ae573c5ab979c3292d10feddc5180b6b4}{Resize} (unsigned int size)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Getters}\par
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classtsa_1_1_kaiser_window_a12dbee6e0639e3f8b7bc1191c46d9798}{operator()} (int i)
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtsa_1_1_kaiser_window_a4799ed39290a058eea9d44df73f764ea}{Fill\+Window} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classtsa_1_1_kaiser_window_a92c5708ea950eaf9845b13f2272cf43f}{m\+Alpha}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Kaiser windowing algorithm Harris, F. J. \char`\"{}\+On the Use of Windows for Harmonic Analysis with the Discrete Fourier Transform.\char`\"{} Proceedings of the I\+E\+EE. Vol. 66 (January 1978). pp. 66-\/67. 
+
+Definition at line 77 of file Kaiser\+Window.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtsa_1_1_kaiser_window_a1435f80a21b198c05d60be076fa152b1}\label{classtsa_1_1_kaiser_window_a1435f80a21b198c05d60be076fa152b1}} 
+\index{tsa\+::\+Kaiser\+Window@{tsa\+::\+Kaiser\+Window}!Kaiser\+Window@{Kaiser\+Window}}
+\index{Kaiser\+Window@{Kaiser\+Window}!tsa\+::\+Kaiser\+Window@{tsa\+::\+Kaiser\+Window}}
+\subsubsection{\texorpdfstring{Kaiser\+Window()}{KaiserWindow()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily tsa\+::\+Kaiser\+Window\+::\+Kaiser\+Window (\begin{DoxyParamCaption}\item[{int}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & the size of the window \\
+\hline
+{\em cached} & true if the window must be preevaluated in a buffer \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 86 of file Kaiser\+Window.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_kaiser_window_ae1de2ef14d0c6b80161d0456502b4753}\label{classtsa_1_1_kaiser_window_ae1de2ef14d0c6b80161d0456502b4753}} 
+\index{tsa\+::\+Kaiser\+Window@{tsa\+::\+Kaiser\+Window}!Kaiser\+Window@{Kaiser\+Window}}
+\index{Kaiser\+Window@{Kaiser\+Window}!tsa\+::\+Kaiser\+Window@{tsa\+::\+Kaiser\+Window}}
+\subsubsection{\texorpdfstring{Kaiser\+Window()}{KaiserWindow()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily tsa\+::\+Kaiser\+Window\+::\+Kaiser\+Window (\begin{DoxyParamCaption}\item[{int}]{size,  }\item[{const std\+::string \&}]{par }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 93 of file Kaiser\+Window.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_kaiser_window_a98965a07384b404238a53bf9d66e8c77}\label{classtsa_1_1_kaiser_window_a98965a07384b404238a53bf9d66e8c77}} 
+\index{tsa\+::\+Kaiser\+Window@{tsa\+::\+Kaiser\+Window}!````~Kaiser\+Window@{$\sim$\+Kaiser\+Window}}
+\index{````~Kaiser\+Window@{$\sim$\+Kaiser\+Window}!tsa\+::\+Kaiser\+Window@{tsa\+::\+Kaiser\+Window}}
+\subsubsection{\texorpdfstring{$\sim$\+Kaiser\+Window()}{~KaiserWindow()}}
+{\footnotesize\ttfamily virtual tsa\+::\+Kaiser\+Window\+::$\sim$\+Kaiser\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Destructor 
+
+Definition at line 104 of file Kaiser\+Window.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classtsa_1_1_kaiser_window_a4799ed39290a058eea9d44df73f764ea}\label{classtsa_1_1_kaiser_window_a4799ed39290a058eea9d44df73f764ea}} 
+\index{tsa\+::\+Kaiser\+Window@{tsa\+::\+Kaiser\+Window}!Fill\+Window@{Fill\+Window}}
+\index{Fill\+Window@{Fill\+Window}!tsa\+::\+Kaiser\+Window@{tsa\+::\+Kaiser\+Window}}
+\subsubsection{\texorpdfstring{Fill\+Window()}{FillWindow()}}
+{\footnotesize\ttfamily void tsa\+::\+Kaiser\+Window\+::\+Fill\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+Initialize the window with the correct values, given its actual size. This is a pure virtual function, which is redefined by each window class. 
+
+Reimplemented from \hyperlink{classtsa_1_1_base_window_aa74b29105d94caa521d308198e8e6643}{tsa\+::\+Base\+Window}.
+
+
+
+Definition at line 217 of file Kaiser\+Window.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_kaiser_window_a02d18a272d16d54fa4f7c9e8b227356e}\label{classtsa_1_1_kaiser_window_a02d18a272d16d54fa4f7c9e8b227356e}} 
+\index{tsa\+::\+Kaiser\+Window@{tsa\+::\+Kaiser\+Window}!operator()@{operator()}}
+\index{operator()@{operator()}!tsa\+::\+Kaiser\+Window@{tsa\+::\+Kaiser\+Window}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void tsa\+::\+Kaiser\+Window\+::operator() (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{v1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Apply the window to a given time view.
+
+
+\begin{DoxyParams}{Parameters}
+{\em v1} & the time view \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classtsa_1_1_base_window_a05d9edb95dc01840a1b2df78dfa3a8c1}{tsa\+::\+Base\+Window}.
+
+
+
+Definition at line 118 of file Kaiser\+Window.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_kaiser_window_a94b99f1c961eadad783e44ccce9629e7}\label{classtsa_1_1_kaiser_window_a94b99f1c961eadad783e44ccce9629e7}} 
+\index{tsa\+::\+Kaiser\+Window@{tsa\+::\+Kaiser\+Window}!operator()@{operator()}}
+\index{operator()@{operator()}!tsa\+::\+Kaiser\+Window@{tsa\+::\+Kaiser\+Window}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void tsa\+::\+Kaiser\+Window\+::operator() (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{v1,  }\item[{\hyperlink{namespacetsa_ac599574bcc094eda25613724b8f3ca9e}{Seq\+View\+Double} \&}]{v2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Apply a window to an input view and write the results on a output view.
+
+
+\begin{DoxyParams}{Parameters}
+{\em v1} & the input view \\
+\hline
+{\em v2} & the output view \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classtsa_1_1_base_window_afda50daa943527e09792b06e5ba69bcb}{tsa\+::\+Base\+Window}.
+
+
+
+Definition at line 140 of file Kaiser\+Window.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_kaiser_window_a12dbee6e0639e3f8b7bc1191c46d9798}\label{classtsa_1_1_kaiser_window_a12dbee6e0639e3f8b7bc1191c46d9798}} 
+\index{tsa\+::\+Kaiser\+Window@{tsa\+::\+Kaiser\+Window}!operator()@{operator()}}
+\index{operator()@{operator()}!tsa\+::\+Kaiser\+Window@{tsa\+::\+Kaiser\+Window}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily double tsa\+::\+Kaiser\+Window\+::operator() (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the value of the window at a given index.
+
+\begin{DoxyReturn}{Returns}
+the value of the window at the given plage 
+\end{DoxyReturn}
+
+
+Definition at line 188 of file Kaiser\+Window.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_kaiser_window_ae573c5ab979c3292d10feddc5180b6b4}\label{classtsa_1_1_kaiser_window_ae573c5ab979c3292d10feddc5180b6b4}} 
+\index{tsa\+::\+Kaiser\+Window@{tsa\+::\+Kaiser\+Window}!Resize@{Resize}}
+\index{Resize@{Resize}!tsa\+::\+Kaiser\+Window@{tsa\+::\+Kaiser\+Window}}
+\subsubsection{\texorpdfstring{Resize()}{Resize()}}
+{\footnotesize\ttfamily void tsa\+::\+Kaiser\+Window\+::\+Resize (\begin{DoxyParamCaption}\item[{unsigned int}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Resize the window dimension.
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & new size for the window \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classtsa_1_1_base_window_a8a2a3425f2915762d50fa57dd0e04f22}{tsa\+::\+Base\+Window}.
+
+
+
+Definition at line 169 of file Kaiser\+Window.\+hpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classtsa_1_1_kaiser_window_a92c5708ea950eaf9845b13f2272cf43f}\label{classtsa_1_1_kaiser_window_a92c5708ea950eaf9845b13f2272cf43f}} 
+\index{tsa\+::\+Kaiser\+Window@{tsa\+::\+Kaiser\+Window}!m\+Alpha@{m\+Alpha}}
+\index{m\+Alpha@{m\+Alpha}!tsa\+::\+Kaiser\+Window@{tsa\+::\+Kaiser\+Window}}
+\subsubsection{\texorpdfstring{m\+Alpha}{mAlpha}}
+{\footnotesize\ttfamily double tsa\+::\+Kaiser\+Window\+::m\+Alpha\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 209 of file Kaiser\+Window.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/include/\hyperlink{_kaiser_window_8hpp}{Kaiser\+Window.\+hpp}\end{DoxyCompactItemize}

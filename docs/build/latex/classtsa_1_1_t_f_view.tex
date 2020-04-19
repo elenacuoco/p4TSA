@@ -1,0 +1,515 @@
+\hypertarget{classtsa_1_1_t_f_view}{}\section{tsa\+:\+:T\+F\+View$<$ T $>$ Class Template Reference}
+\label{classtsa_1_1_t_f_view}\index{tsa\+::\+T\+F\+View$<$ T $>$@{tsa\+::\+T\+F\+View$<$ T $>$}}
+
+
+Time view\+: container for time series.  
+
+
+
+
+{\ttfamily \#include $<$T\+F\+View.\+hpp$>$}
+
+Inheritance diagram for tsa\+:\+:T\+F\+View$<$ T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classtsa_1_1_t_f_view}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef T \hyperlink{classtsa_1_1_t_f_view_a9dcd740f5d29edefd0a181917a9c700b}{numeric\+Type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtsa_1_1_t_f_view_a03015be7d08c3aa9ac9fa82210706990}{T\+F\+View} (unsigned int Frequency\+Size, unsigned int Time\+Size, double a\+StartT=0.\+0, double a\+SamplingT=1.\+0, double a\+StartF=0.\+0, double a\+SamplingF=1.\+0)
+\item 
+\hyperlink{classtsa_1_1_t_f_view_abdab74797261823f5f66dc8faf53373f}{$\sim$\+T\+F\+View} ()
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Operations}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtsa_1_1_t_f_view_a5c152e1753388d15dae7215ec9951595}{Clear} ()
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Data access}\par
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtsa_1_1_t_f_view_a9dcd740f5d29edefd0a181917a9c700b}{numeric\+Type} \& \hyperlink{classtsa_1_1_t_f_view_a6f20d608542849e71c31a1abd56a92a6}{operator()} (unsigned int i, unsigned int j)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Getters}\par
+\begin{DoxyCompactItemize}
+\item 
+boost\+::numeric\+::ublas\+::matrix$<$ \hyperlink{classtsa_1_1_t_f_view_a9dcd740f5d29edefd0a181917a9c700b}{numeric\+Type} $>$ $\ast$ \hyperlink{classtsa_1_1_t_f_view_a4dbb5d10597478b8440429e1a9842eab}{Get\+Data} ()
+\item 
+unsigned int \hyperlink{classtsa_1_1_t_f_view_a7dcdf5430baeedfb3170f4dcfbf9cd09}{Get\+Frequency\+Size} ()
+\item 
+unsigned int \hyperlink{classtsa_1_1_t_f_view_ac8b74db7ad7e2aacd1d92b5da737ee3e}{Get\+Time\+Size} ()
+\item 
+double \hyperlink{classtsa_1_1_t_f_view_ad8f53724f34669fee2ee12d656c43d51}{Get\+StartT} ()
+\item 
+double \hyperlink{classtsa_1_1_t_f_view_acb07eb67f2ef12f13b4f91941bda15d5}{Get\+StartF} ()
+\item 
+double \hyperlink{classtsa_1_1_t_f_view_a13f50c0e460377632ccc771e196df064}{Get\+Frequency} (unsigned int k)
+\item 
+double \hyperlink{classtsa_1_1_t_f_view_ab5041c986c79f6daac52fa248ec050cf}{Get\+Time} (unsigned int k)
+\item 
+double \hyperlink{classtsa_1_1_t_f_view_a0dcfff88b1560da2c7999cce2d636fd7}{Get\+EndF} ()
+\item 
+double \hyperlink{classtsa_1_1_t_f_view_a61bc73548b5e9e568a5b5e692dfecde7}{Get\+EndT} ()
+\item 
+double \hyperlink{classtsa_1_1_t_f_view_abd84518db70471ee4dc9e1d19fd532ca}{Get\+Frequency\+Slice} ()
+\item 
+double \hyperlink{classtsa_1_1_t_f_view_adcf936687b668125c123aae1ae31bb94}{Get\+Time\+Slice} ()
+\item 
+double \hyperlink{classtsa_1_1_t_f_view_aca01f57f4015fa85e1b70e244d635eec}{Get\+SamplingF} ()
+\item 
+double \hyperlink{classtsa_1_1_t_f_view_a3f014481f5ed76c12a3ab831952e4e3d}{Get\+SamplingT} ()
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Setters}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtsa_1_1_t_f_view_a19ae1d94585e16c5580d2459a30384a5}{Set\+StartT} (double v)
+\item 
+void \hyperlink{classtsa_1_1_t_f_view_a8a3ef3daaaab4d9836f32140079c747f}{Set\+StartF} (double v)
+\item 
+void \hyperlink{classtsa_1_1_t_f_view_a1f77299b852922b33ffae367df01988c}{Set\+SamplingT} (double v)
+\item 
+void \hyperlink{classtsa_1_1_t_f_view_abb1df435da547728dbb1ff762c3a38be}{Set\+SamplingF} (double v)
+\item 
+void \hyperlink{classtsa_1_1_t_f_view_a4926dbef93856a5b642c83ad6c60a178}{Set\+Scale} (double a\+Scale)
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtsa_1_1_t_f_view_ac93678cadb31386dfffd7e9e0ce2fb0b}{Rescale} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+boost\+::numeric\+::ublas\+::matrix$<$ \hyperlink{classtsa_1_1_t_f_view_a9dcd740f5d29edefd0a181917a9c700b}{numeric\+Type} $>$ \hyperlink{classtsa_1_1_t_f_view_a2681e1d8a18806d0add738068a43bf11}{m\+Data}
+\begin{DoxyCompactList}\small\item\em The data array. \end{DoxyCompactList}\item 
+double \hyperlink{classtsa_1_1_t_f_view_a1f7ed10cd264a12d99744197c134e1bf}{m\+Scale}
+\begin{DoxyCompactList}\small\item\em The auxiliary scale. \end{DoxyCompactList}\item 
+double \hyperlink{classtsa_1_1_t_f_view_a42d5dc9edb5b4d6c746d5c1a1614abb4}{m\+StartT}
+\begin{DoxyCompactList}\small\item\em The start time. \end{DoxyCompactList}\item 
+double \hyperlink{classtsa_1_1_t_f_view_a0195d10ff8a0c865975f81ea67c64816}{m\+SamplingT}
+\begin{DoxyCompactList}\small\item\em The sampling in time. \end{DoxyCompactList}\item 
+double \hyperlink{classtsa_1_1_t_f_view_afd3043fa47a3c337b1eedcb5cad1aa63}{m\+StartF}
+\begin{DoxyCompactList}\small\item\em The start frequency. \end{DoxyCompactList}\item 
+double \hyperlink{classtsa_1_1_t_f_view_a7c966f8d9d2e2f2e4790ed5067f46f40}{m\+SamplingF}
+\begin{DoxyCompactList}\small\item\em The sampling in frequency. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class tsa\+::\+T\+F\+View$<$ T $>$}
+
+Time view\+: container for time series. 
+
+Definition at line 24 of file T\+F\+View.\+hpp.
+
+
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classtsa_1_1_t_f_view_a9dcd740f5d29edefd0a181917a9c700b}\label{classtsa_1_1_t_f_view_a9dcd740f5d29edefd0a181917a9c700b}} 
+\index{tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}!numeric\+Type@{numeric\+Type}}
+\index{numeric\+Type@{numeric\+Type}!tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}}
+\subsubsection{\texorpdfstring{numeric\+Type}{numericType}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+typedef T \hyperlink{classtsa_1_1_t_f_view}{tsa\+::\+T\+F\+View}$<$ T $>$\+::\hyperlink{classtsa_1_1_t_f_view_a9dcd740f5d29edefd0a181917a9c700b}{numeric\+Type}}
+
+
+
+Definition at line 26 of file T\+F\+View.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtsa_1_1_t_f_view_a03015be7d08c3aa9ac9fa82210706990}\label{classtsa_1_1_t_f_view_a03015be7d08c3aa9ac9fa82210706990}} 
+\index{tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}!T\+F\+View@{T\+F\+View}}
+\index{T\+F\+View@{T\+F\+View}!tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}}
+\subsubsection{\texorpdfstring{T\+F\+View()}{TFView()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\hyperlink{classtsa_1_1_t_f_view}{tsa\+::\+T\+F\+View}$<$ T $>$\+::\hyperlink{classtsa_1_1_t_f_view}{T\+F\+View} (\begin{DoxyParamCaption}\item[{unsigned int}]{Frequency\+Size,  }\item[{unsigned int}]{Time\+Size,  }\item[{double}]{a\+StartT = {\ttfamily 0.0},  }\item[{double}]{a\+SamplingT = {\ttfamily 1.0},  }\item[{double}]{a\+StartF = {\ttfamily 0.0},  }\item[{double}]{a\+SamplingF = {\ttfamily 1.0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Frequency\+Size} & the number of data on frequency axis \\
+\hline
+{\em Time\+Size} & the number of data on time axis \\
+\hline
+{\em a\+StartT} & start time \\
+\hline
+{\em a\+SamplingT} & time step \\
+\hline
+{\em a\+StartF} & start frequency \\
+\hline
+{\em a\+SamplingF} & frequency step \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 39 of file T\+F\+View.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_t_f_view_abdab74797261823f5f66dc8faf53373f}\label{classtsa_1_1_t_f_view_abdab74797261823f5f66dc8faf53373f}} 
+\index{tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}!````~T\+F\+View@{$\sim$\+T\+F\+View}}
+\index{````~T\+F\+View@{$\sim$\+T\+F\+View}!tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}}
+\subsubsection{\texorpdfstring{$\sim$\+T\+F\+View()}{~TFView()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\hyperlink{classtsa_1_1_t_f_view}{tsa\+::\+T\+F\+View}$<$ T $>$\+::$\sim$\hyperlink{classtsa_1_1_t_f_view}{T\+F\+View} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Destructor 
+
+Definition at line 62 of file T\+F\+View.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classtsa_1_1_t_f_view_a5c152e1753388d15dae7215ec9951595}\label{classtsa_1_1_t_f_view_a5c152e1753388d15dae7215ec9951595}} 
+\index{tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}!Clear@{Clear}}
+\index{Clear@{Clear}!tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}}
+\subsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \hyperlink{classtsa_1_1_t_f_view}{tsa\+::\+T\+F\+View}$<$ T $>$\+::Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Clear the data in the view, which are all initialized to zero. 
+
+Definition at line 75 of file T\+F\+View.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_t_f_view_a4dbb5d10597478b8440429e1a9842eab}\label{classtsa_1_1_t_f_view_a4dbb5d10597478b8440429e1a9842eab}} 
+\index{tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}!Get\+Data@{Get\+Data}}
+\index{Get\+Data@{Get\+Data}!tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}}
+\subsubsection{\texorpdfstring{Get\+Data()}{GetData()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+boost\+::numeric\+::ublas\+::matrix$<$\hyperlink{classtsa_1_1_t_f_view_a9dcd740f5d29edefd0a181917a9c700b}{numeric\+Type}$>$$\ast$ \hyperlink{classtsa_1_1_t_f_view}{tsa\+::\+T\+F\+View}$<$ T $>$\+::Get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 107 of file T\+F\+View.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_t_f_view_a0dcfff88b1560da2c7999cce2d636fd7}\label{classtsa_1_1_t_f_view_a0dcfff88b1560da2c7999cce2d636fd7}} 
+\index{tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}!Get\+EndF@{Get\+EndF}}
+\index{Get\+EndF@{Get\+EndF}!tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}}
+\subsubsection{\texorpdfstring{Get\+End\+F()}{GetEndF()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+double \hyperlink{classtsa_1_1_t_f_view}{tsa\+::\+T\+F\+View}$<$ T $>$\+::Get\+EndF (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 135 of file T\+F\+View.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_t_f_view_a61bc73548b5e9e568a5b5e692dfecde7}\label{classtsa_1_1_t_f_view_a61bc73548b5e9e568a5b5e692dfecde7}} 
+\index{tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}!Get\+EndT@{Get\+EndT}}
+\index{Get\+EndT@{Get\+EndT}!tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}}
+\subsubsection{\texorpdfstring{Get\+End\+T()}{GetEndT()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+double \hyperlink{classtsa_1_1_t_f_view}{tsa\+::\+T\+F\+View}$<$ T $>$\+::Get\+EndT (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 139 of file T\+F\+View.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_t_f_view_a13f50c0e460377632ccc771e196df064}\label{classtsa_1_1_t_f_view_a13f50c0e460377632ccc771e196df064}} 
+\index{tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}!Get\+Frequency@{Get\+Frequency}}
+\index{Get\+Frequency@{Get\+Frequency}!tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}}
+\subsubsection{\texorpdfstring{Get\+Frequency()}{GetFrequency()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+double \hyperlink{classtsa_1_1_t_f_view}{tsa\+::\+T\+F\+View}$<$ T $>$\+::Get\+Frequency (\begin{DoxyParamCaption}\item[{unsigned int}]{k }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 127 of file T\+F\+View.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_t_f_view_a7dcdf5430baeedfb3170f4dcfbf9cd09}\label{classtsa_1_1_t_f_view_a7dcdf5430baeedfb3170f4dcfbf9cd09}} 
+\index{tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}!Get\+Frequency\+Size@{Get\+Frequency\+Size}}
+\index{Get\+Frequency\+Size@{Get\+Frequency\+Size}!tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}}
+\subsubsection{\texorpdfstring{Get\+Frequency\+Size()}{GetFrequencySize()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+unsigned int \hyperlink{classtsa_1_1_t_f_view}{tsa\+::\+T\+F\+View}$<$ T $>$\+::Get\+Frequency\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 111 of file T\+F\+View.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_t_f_view_abd84518db70471ee4dc9e1d19fd532ca}\label{classtsa_1_1_t_f_view_abd84518db70471ee4dc9e1d19fd532ca}} 
+\index{tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}!Get\+Frequency\+Slice@{Get\+Frequency\+Slice}}
+\index{Get\+Frequency\+Slice@{Get\+Frequency\+Slice}!tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}}
+\subsubsection{\texorpdfstring{Get\+Frequency\+Slice()}{GetFrequencySlice()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+double \hyperlink{classtsa_1_1_t_f_view}{tsa\+::\+T\+F\+View}$<$ T $>$\+::Get\+Frequency\+Slice (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 143 of file T\+F\+View.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_t_f_view_aca01f57f4015fa85e1b70e244d635eec}\label{classtsa_1_1_t_f_view_aca01f57f4015fa85e1b70e244d635eec}} 
+\index{tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}!Get\+SamplingF@{Get\+SamplingF}}
+\index{Get\+SamplingF@{Get\+SamplingF}!tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}}
+\subsubsection{\texorpdfstring{Get\+Sampling\+F()}{GetSamplingF()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+double \hyperlink{classtsa_1_1_t_f_view}{tsa\+::\+T\+F\+View}$<$ T $>$\+::Get\+SamplingF (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 151 of file T\+F\+View.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_t_f_view_a3f014481f5ed76c12a3ab831952e4e3d}\label{classtsa_1_1_t_f_view_a3f014481f5ed76c12a3ab831952e4e3d}} 
+\index{tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}!Get\+SamplingT@{Get\+SamplingT}}
+\index{Get\+SamplingT@{Get\+SamplingT}!tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}}
+\subsubsection{\texorpdfstring{Get\+Sampling\+T()}{GetSamplingT()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+double \hyperlink{classtsa_1_1_t_f_view}{tsa\+::\+T\+F\+View}$<$ T $>$\+::Get\+SamplingT (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 155 of file T\+F\+View.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_t_f_view_acb07eb67f2ef12f13b4f91941bda15d5}\label{classtsa_1_1_t_f_view_acb07eb67f2ef12f13b4f91941bda15d5}} 
+\index{tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}!Get\+StartF@{Get\+StartF}}
+\index{Get\+StartF@{Get\+StartF}!tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}}
+\subsubsection{\texorpdfstring{Get\+Start\+F()}{GetStartF()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+double \hyperlink{classtsa_1_1_t_f_view}{tsa\+::\+T\+F\+View}$<$ T $>$\+::Get\+StartF (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 123 of file T\+F\+View.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_t_f_view_ad8f53724f34669fee2ee12d656c43d51}\label{classtsa_1_1_t_f_view_ad8f53724f34669fee2ee12d656c43d51}} 
+\index{tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}!Get\+StartT@{Get\+StartT}}
+\index{Get\+StartT@{Get\+StartT}!tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}}
+\subsubsection{\texorpdfstring{Get\+Start\+T()}{GetStartT()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+double \hyperlink{classtsa_1_1_t_f_view}{tsa\+::\+T\+F\+View}$<$ T $>$\+::Get\+StartT (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 119 of file T\+F\+View.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_t_f_view_ab5041c986c79f6daac52fa248ec050cf}\label{classtsa_1_1_t_f_view_ab5041c986c79f6daac52fa248ec050cf}} 
+\index{tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}!Get\+Time@{Get\+Time}}
+\index{Get\+Time@{Get\+Time}!tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}}
+\subsubsection{\texorpdfstring{Get\+Time()}{GetTime()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+double \hyperlink{classtsa_1_1_t_f_view}{tsa\+::\+T\+F\+View}$<$ T $>$\+::Get\+Time (\begin{DoxyParamCaption}\item[{unsigned int}]{k }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 131 of file T\+F\+View.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_t_f_view_ac8b74db7ad7e2aacd1d92b5da737ee3e}\label{classtsa_1_1_t_f_view_ac8b74db7ad7e2aacd1d92b5da737ee3e}} 
+\index{tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}!Get\+Time\+Size@{Get\+Time\+Size}}
+\index{Get\+Time\+Size@{Get\+Time\+Size}!tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}}
+\subsubsection{\texorpdfstring{Get\+Time\+Size()}{GetTimeSize()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+unsigned int \hyperlink{classtsa_1_1_t_f_view}{tsa\+::\+T\+F\+View}$<$ T $>$\+::Get\+Time\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 115 of file T\+F\+View.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_t_f_view_adcf936687b668125c123aae1ae31bb94}\label{classtsa_1_1_t_f_view_adcf936687b668125c123aae1ae31bb94}} 
+\index{tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}!Get\+Time\+Slice@{Get\+Time\+Slice}}
+\index{Get\+Time\+Slice@{Get\+Time\+Slice}!tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}}
+\subsubsection{\texorpdfstring{Get\+Time\+Slice()}{GetTimeSlice()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+double \hyperlink{classtsa_1_1_t_f_view}{tsa\+::\+T\+F\+View}$<$ T $>$\+::Get\+Time\+Slice (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 147 of file T\+F\+View.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_t_f_view_a6f20d608542849e71c31a1abd56a92a6}\label{classtsa_1_1_t_f_view_a6f20d608542849e71c31a1abd56a92a6}} 
+\index{tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}!operator()@{operator()}}
+\index{operator()@{operator()}!tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\hyperlink{classtsa_1_1_t_f_view_a9dcd740f5d29edefd0a181917a9c700b}{numeric\+Type}\& \hyperlink{classtsa_1_1_t_f_view}{tsa\+::\+T\+F\+View}$<$ T $>$\+::operator() (\begin{DoxyParamCaption}\item[{unsigned int}]{i,  }\item[{unsigned int}]{j }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get a value in a given channel at a given index.
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & index on the time axis \\
+\hline
+{\em j} & index on the frequency axis\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the data value 
+\end{DoxyReturn}
+
+
+Definition at line 95 of file T\+F\+View.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_t_f_view_ac93678cadb31386dfffd7e9e0ce2fb0b}\label{classtsa_1_1_t_f_view_ac93678cadb31386dfffd7e9e0ce2fb0b}} 
+\index{tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}!Rescale@{Rescale}}
+\index{Rescale@{Rescale}!tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}}
+\subsubsection{\texorpdfstring{Rescale()}{Rescale()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \hyperlink{classtsa_1_1_t_f_view}{tsa\+::\+T\+F\+View}$<$ T $>$\+::Rescale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Rescale the data, setting the auxiliary scale to one. 
+
+Definition at line 194 of file T\+F\+View.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_t_f_view_abb1df435da547728dbb1ff762c3a38be}\label{classtsa_1_1_t_f_view_abb1df435da547728dbb1ff762c3a38be}} 
+\index{tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}!Set\+SamplingF@{Set\+SamplingF}}
+\index{Set\+SamplingF@{Set\+SamplingF}!tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}}
+\subsubsection{\texorpdfstring{Set\+Sampling\+F()}{SetSamplingF()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \hyperlink{classtsa_1_1_t_f_view}{tsa\+::\+T\+F\+View}$<$ T $>$\+::Set\+SamplingF (\begin{DoxyParamCaption}\item[{double}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 179 of file T\+F\+View.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_t_f_view_a1f77299b852922b33ffae367df01988c}\label{classtsa_1_1_t_f_view_a1f77299b852922b33ffae367df01988c}} 
+\index{tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}!Set\+SamplingT@{Set\+SamplingT}}
+\index{Set\+SamplingT@{Set\+SamplingT}!tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}}
+\subsubsection{\texorpdfstring{Set\+Sampling\+T()}{SetSamplingT()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \hyperlink{classtsa_1_1_t_f_view}{tsa\+::\+T\+F\+View}$<$ T $>$\+::Set\+SamplingT (\begin{DoxyParamCaption}\item[{double}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 175 of file T\+F\+View.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_t_f_view_a4926dbef93856a5b642c83ad6c60a178}\label{classtsa_1_1_t_f_view_a4926dbef93856a5b642c83ad6c60a178}} 
+\index{tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}!Set\+Scale@{Set\+Scale}}
+\index{Set\+Scale@{Set\+Scale}!tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}}
+\subsubsection{\texorpdfstring{Set\+Scale()}{SetScale()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \hyperlink{classtsa_1_1_t_f_view}{tsa\+::\+T\+F\+View}$<$ T $>$\+::Set\+Scale (\begin{DoxyParamCaption}\item[{double}]{a\+Scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 183 of file T\+F\+View.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_t_f_view_a8a3ef3daaaab4d9836f32140079c747f}\label{classtsa_1_1_t_f_view_a8a3ef3daaaab4d9836f32140079c747f}} 
+\index{tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}!Set\+StartF@{Set\+StartF}}
+\index{Set\+StartF@{Set\+StartF}!tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}}
+\subsubsection{\texorpdfstring{Set\+Start\+F()}{SetStartF()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \hyperlink{classtsa_1_1_t_f_view}{tsa\+::\+T\+F\+View}$<$ T $>$\+::Set\+StartF (\begin{DoxyParamCaption}\item[{double}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 171 of file T\+F\+View.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_t_f_view_a19ae1d94585e16c5580d2459a30384a5}\label{classtsa_1_1_t_f_view_a19ae1d94585e16c5580d2459a30384a5}} 
+\index{tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}!Set\+StartT@{Set\+StartT}}
+\index{Set\+StartT@{Set\+StartT}!tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}}
+\subsubsection{\texorpdfstring{Set\+Start\+T()}{SetStartT()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \hyperlink{classtsa_1_1_t_f_view}{tsa\+::\+T\+F\+View}$<$ T $>$\+::Set\+StartT (\begin{DoxyParamCaption}\item[{double}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 167 of file T\+F\+View.\+hpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classtsa_1_1_t_f_view_a2681e1d8a18806d0add738068a43bf11}\label{classtsa_1_1_t_f_view_a2681e1d8a18806d0add738068a43bf11}} 
+\index{tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}!m\+Data@{m\+Data}}
+\index{m\+Data@{m\+Data}!tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}}
+\subsubsection{\texorpdfstring{m\+Data}{mData}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+boost\+::numeric\+::ublas\+::matrix$<$\hyperlink{classtsa_1_1_t_f_view_a9dcd740f5d29edefd0a181917a9c700b}{numeric\+Type}$>$ \hyperlink{classtsa_1_1_t_f_view}{tsa\+::\+T\+F\+View}$<$ T $>$\+::m\+Data\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The data array. 
+
+
+
+Definition at line 197 of file T\+F\+View.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_t_f_view_a7c966f8d9d2e2f2e4790ed5067f46f40}\label{classtsa_1_1_t_f_view_a7c966f8d9d2e2f2e4790ed5067f46f40}} 
+\index{tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}!m\+SamplingF@{m\+SamplingF}}
+\index{m\+SamplingF@{m\+SamplingF}!tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}}
+\subsubsection{\texorpdfstring{m\+SamplingF}{mSamplingF}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+double \hyperlink{classtsa_1_1_t_f_view}{tsa\+::\+T\+F\+View}$<$ T $>$\+::m\+SamplingF\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The sampling in frequency. 
+
+
+
+Definition at line 204 of file T\+F\+View.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_t_f_view_a0195d10ff8a0c865975f81ea67c64816}\label{classtsa_1_1_t_f_view_a0195d10ff8a0c865975f81ea67c64816}} 
+\index{tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}!m\+SamplingT@{m\+SamplingT}}
+\index{m\+SamplingT@{m\+SamplingT}!tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}}
+\subsubsection{\texorpdfstring{m\+SamplingT}{mSamplingT}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+double \hyperlink{classtsa_1_1_t_f_view}{tsa\+::\+T\+F\+View}$<$ T $>$\+::m\+SamplingT\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The sampling in time. 
+
+
+
+Definition at line 202 of file T\+F\+View.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_t_f_view_a1f7ed10cd264a12d99744197c134e1bf}\label{classtsa_1_1_t_f_view_a1f7ed10cd264a12d99744197c134e1bf}} 
+\index{tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}!m\+Scale@{m\+Scale}}
+\index{m\+Scale@{m\+Scale}!tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}}
+\subsubsection{\texorpdfstring{m\+Scale}{mScale}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+double \hyperlink{classtsa_1_1_t_f_view}{tsa\+::\+T\+F\+View}$<$ T $>$\+::m\+Scale\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The auxiliary scale. 
+
+
+
+Definition at line 200 of file T\+F\+View.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_t_f_view_afd3043fa47a3c337b1eedcb5cad1aa63}\label{classtsa_1_1_t_f_view_afd3043fa47a3c337b1eedcb5cad1aa63}} 
+\index{tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}!m\+StartF@{m\+StartF}}
+\index{m\+StartF@{m\+StartF}!tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}}
+\subsubsection{\texorpdfstring{m\+StartF}{mStartF}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+double \hyperlink{classtsa_1_1_t_f_view}{tsa\+::\+T\+F\+View}$<$ T $>$\+::m\+StartF\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The start frequency. 
+
+
+
+Definition at line 203 of file T\+F\+View.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_t_f_view_a42d5dc9edb5b4d6c746d5c1a1614abb4}\label{classtsa_1_1_t_f_view_a42d5dc9edb5b4d6c746d5c1a1614abb4}} 
+\index{tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}!m\+StartT@{m\+StartT}}
+\index{m\+StartT@{m\+StartT}!tsa\+::\+T\+F\+View@{tsa\+::\+T\+F\+View}}
+\subsubsection{\texorpdfstring{m\+StartT}{mStartT}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+double \hyperlink{classtsa_1_1_t_f_view}{tsa\+::\+T\+F\+View}$<$ T $>$\+::m\+StartT\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The start time. 
+
+
+
+Definition at line 201 of file T\+F\+View.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/include/\hyperlink{_t_f_view_8hpp}{T\+F\+View.\+hpp}\end{DoxyCompactItemize}

@@ -1,0 +1,217 @@
+\hypertarget{classtsa_1_1_cholesky}{}\section{tsa\+:\+:Cholesky Class Reference}
+\label{classtsa_1_1_cholesky}\index{tsa\+::\+Cholesky@{tsa\+::\+Cholesky}}
+
+
+{\ttfamily \#include $<$Cholesky.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtsa_1_1_cholesky_a19dfa3cb6bf14721a91ec6fdcb26dbcf}{Cholesky} (unsigned int N, double eps)
+\item 
+\hyperlink{classtsa_1_1_cholesky_a86a264d92076daba27859959741b3627}{Cholesky} (const \hyperlink{classtsa_1_1_cholesky}{Cholesky} \&from)
+\item 
+\hyperlink{classtsa_1_1_cholesky_a45d30ca313f3949504716bacb5036b6d}{$\sim$\+Cholesky} ()
+\item 
+\hyperlink{classtsa_1_1_cholesky}{Cholesky} \& \hyperlink{classtsa_1_1_cholesky_a3c86b3ab61a3dd759b067ce685e6f51e}{operator=} (const \hyperlink{classtsa_1_1_cholesky}{Cholesky} \&from)
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Operations}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtsa_1_1_cholesky_ac04746ca67f2fb532dc060a35a1ba4d8}{execute} (\hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} \&A, \hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} \&B)
+\begin{DoxyCompactList}\small\item\em Brief documentation for the execute method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{classtsa_1_1_cholesky_aeebdfa1ac318dceb73fccfe75f3928bc}{mN}
+\item 
+\hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} \hyperlink{classtsa_1_1_cholesky_afb8463f2c148c8ae2ef2c2914074718a}{mD}
+\item 
+\hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} \hyperlink{classtsa_1_1_cholesky_a71ce7b253e3824f3629ca31ba049f58e}{mY}
+\item 
+\hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} \hyperlink{classtsa_1_1_cholesky_a56d3135a9c56e030e9cf876fd99dbbc3}{m\+XL}
+\item 
+int \hyperlink{classtsa_1_1_cholesky_afc88d4ebf8b5a163a77ef3e3dd90f99d}{m\+Iflag}
+\item 
+double \hyperlink{classtsa_1_1_cholesky_aa49812e981a177f6792389d0d760db52}{m\+Eps}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Perform the \hyperlink{classtsa_1_1_cholesky}{Cholesky} decomposition
+
+\begin{DoxyAuthor}{Author}
+Elena Cuoco \href{mailto:elena.cuoco@ego-gw.it}{\tt elena.\+cuoco@ego-\/gw.\+it} 
+\end{DoxyAuthor}
+
+
+Definition at line 78 of file Cholesky.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtsa_1_1_cholesky_a19dfa3cb6bf14721a91ec6fdcb26dbcf}\label{classtsa_1_1_cholesky_a19dfa3cb6bf14721a91ec6fdcb26dbcf}} 
+\index{tsa\+::\+Cholesky@{tsa\+::\+Cholesky}!Cholesky@{Cholesky}}
+\index{Cholesky@{Cholesky}!tsa\+::\+Cholesky@{tsa\+::\+Cholesky}}
+\subsubsection{\texorpdfstring{Cholesky()}{Cholesky()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily tsa\+::\+Cholesky\+::\+Cholesky (\begin{DoxyParamCaption}\item[{unsigned int}]{N,  }\item[{double}]{eps }\end{DoxyParamCaption})}
+
+Constructor 
+
+Definition at line 19 of file Cholesky.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_cholesky_a86a264d92076daba27859959741b3627}\label{classtsa_1_1_cholesky_a86a264d92076daba27859959741b3627}} 
+\index{tsa\+::\+Cholesky@{tsa\+::\+Cholesky}!Cholesky@{Cholesky}}
+\index{Cholesky@{Cholesky}!tsa\+::\+Cholesky@{tsa\+::\+Cholesky}}
+\subsubsection{\texorpdfstring{Cholesky()}{Cholesky()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily tsa\+::\+Cholesky\+::\+Cholesky (\begin{DoxyParamCaption}\item[{const \hyperlink{classtsa_1_1_cholesky}{Cholesky} \&}]{from }\end{DoxyParamCaption})}
+
+Copy constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & The instance that must be copied \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 36 of file Cholesky.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_cholesky_a45d30ca313f3949504716bacb5036b6d}\label{classtsa_1_1_cholesky_a45d30ca313f3949504716bacb5036b6d}} 
+\index{tsa\+::\+Cholesky@{tsa\+::\+Cholesky}!````~Cholesky@{$\sim$\+Cholesky}}
+\index{````~Cholesky@{$\sim$\+Cholesky}!tsa\+::\+Cholesky@{tsa\+::\+Cholesky}}
+\subsubsection{\texorpdfstring{$\sim$\+Cholesky()}{~Cholesky()}}
+{\footnotesize\ttfamily tsa\+::\+Cholesky\+::$\sim$\+Cholesky (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor 
+
+Definition at line 44 of file Cholesky.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classtsa_1_1_cholesky_ac04746ca67f2fb532dc060a35a1ba4d8}\label{classtsa_1_1_cholesky_ac04746ca67f2fb532dc060a35a1ba4d8}} 
+\index{tsa\+::\+Cholesky@{tsa\+::\+Cholesky}!execute@{execute}}
+\index{execute@{execute}!tsa\+::\+Cholesky@{tsa\+::\+Cholesky}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void tsa\+::\+Cholesky\+::execute (\begin{DoxyParamCaption}\item[{\hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} \&}]{A,  }\item[{\hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} \&}]{B }\end{DoxyParamCaption})}
+
+
+
+Brief documentation for the execute method. 
+
+Start of the long documentation for execute method.
+
+\begin{DoxyPrecond}{Precondition}
+A precondition 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+A postcondition 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em An} & exception\\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}{Parameters}
+{\em a} & parameter\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a returned value
+\end{DoxyReturn}
+Declaration of execute operation 
+
+Definition at line 59 of file Cholesky.\+cpp.
+
+\mbox{\Hypertarget{classtsa_1_1_cholesky_a3c86b3ab61a3dd759b067ce685e6f51e}\label{classtsa_1_1_cholesky_a3c86b3ab61a3dd759b067ce685e6f51e}} 
+\index{tsa\+::\+Cholesky@{tsa\+::\+Cholesky}!operator=@{operator=}}
+\index{operator=@{operator=}!tsa\+::\+Cholesky@{tsa\+::\+Cholesky}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{classtsa_1_1_cholesky}{Cholesky} \& tsa\+::\+Cholesky\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{classtsa_1_1_cholesky}{Cholesky} \&}]{from }\end{DoxyParamCaption})}
+
+Assignement operator
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & The instance to be assigned from\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a reference to a new object 
+\end{DoxyReturn}
+
+
+Definition at line 55 of file Cholesky.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classtsa_1_1_cholesky_afb8463f2c148c8ae2ef2c2914074718a}\label{classtsa_1_1_cholesky_afb8463f2c148c8ae2ef2c2914074718a}} 
+\index{tsa\+::\+Cholesky@{tsa\+::\+Cholesky}!mD@{mD}}
+\index{mD@{mD}!tsa\+::\+Cholesky@{tsa\+::\+Cholesky}}
+\subsubsection{\texorpdfstring{mD}{mD}}
+{\footnotesize\ttfamily \hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} tsa\+::\+Cholesky\+::mD\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 146 of file Cholesky.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_cholesky_aa49812e981a177f6792389d0d760db52}\label{classtsa_1_1_cholesky_aa49812e981a177f6792389d0d760db52}} 
+\index{tsa\+::\+Cholesky@{tsa\+::\+Cholesky}!m\+Eps@{m\+Eps}}
+\index{m\+Eps@{m\+Eps}!tsa\+::\+Cholesky@{tsa\+::\+Cholesky}}
+\subsubsection{\texorpdfstring{m\+Eps}{mEps}}
+{\footnotesize\ttfamily double tsa\+::\+Cholesky\+::m\+Eps\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 150 of file Cholesky.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_cholesky_afc88d4ebf8b5a163a77ef3e3dd90f99d}\label{classtsa_1_1_cholesky_afc88d4ebf8b5a163a77ef3e3dd90f99d}} 
+\index{tsa\+::\+Cholesky@{tsa\+::\+Cholesky}!m\+Iflag@{m\+Iflag}}
+\index{m\+Iflag@{m\+Iflag}!tsa\+::\+Cholesky@{tsa\+::\+Cholesky}}
+\subsubsection{\texorpdfstring{m\+Iflag}{mIflag}}
+{\footnotesize\ttfamily int tsa\+::\+Cholesky\+::m\+Iflag\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 149 of file Cholesky.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_cholesky_aeebdfa1ac318dceb73fccfe75f3928bc}\label{classtsa_1_1_cholesky_aeebdfa1ac318dceb73fccfe75f3928bc}} 
+\index{tsa\+::\+Cholesky@{tsa\+::\+Cholesky}!mN@{mN}}
+\index{mN@{mN}!tsa\+::\+Cholesky@{tsa\+::\+Cholesky}}
+\subsubsection{\texorpdfstring{mN}{mN}}
+{\footnotesize\ttfamily unsigned int tsa\+::\+Cholesky\+::mN\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 145 of file Cholesky.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_cholesky_a56d3135a9c56e030e9cf876fd99dbbc3}\label{classtsa_1_1_cholesky_a56d3135a9c56e030e9cf876fd99dbbc3}} 
+\index{tsa\+::\+Cholesky@{tsa\+::\+Cholesky}!m\+XL@{m\+XL}}
+\index{m\+XL@{m\+XL}!tsa\+::\+Cholesky@{tsa\+::\+Cholesky}}
+\subsubsection{\texorpdfstring{m\+XL}{mXL}}
+{\footnotesize\ttfamily \hyperlink{namespacetsa_ad260cd21c1891c4ed391fe788569aba4}{Dmatrix} tsa\+::\+Cholesky\+::m\+XL\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 148 of file Cholesky.\+hpp.
+
+\mbox{\Hypertarget{classtsa_1_1_cholesky_a71ce7b253e3824f3629ca31ba049f58e}\label{classtsa_1_1_cholesky_a71ce7b253e3824f3629ca31ba049f58e}} 
+\index{tsa\+::\+Cholesky@{tsa\+::\+Cholesky}!mY@{mY}}
+\index{mY@{mY}!tsa\+::\+Cholesky@{tsa\+::\+Cholesky}}
+\subsubsection{\texorpdfstring{mY}{mY}}
+{\footnotesize\ttfamily \hyperlink{namespacetsa_a8900fb03d849baf447a1a0efe2561fb2}{Dvector} tsa\+::\+Cholesky\+::mY\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 147 of file Cholesky.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/include/\hyperlink{_cholesky_8hpp}{Cholesky.\+hpp}\item 
+/home/filip/\+Ph\+D/\+W\+D\+F\+Pipe\+\_\+test/p4\+T\+S\+A/src/\hyperlink{_cholesky_8cpp}{Cholesky.\+cpp}\end{DoxyCompactItemize}

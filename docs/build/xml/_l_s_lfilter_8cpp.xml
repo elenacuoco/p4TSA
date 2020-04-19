@@ -1,0 +1,466 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_l_s_lfilter_8cpp" kind="file" language="C++">
+    <compoundname>LSLfilter.cpp</compoundname>
+    <includes refid="_l_s_lfilter_8hpp" local="no">LSLfilter.hpp</includes>
+    <incdepgraph>
+      <node id="5747">
+        <label>queue</label>
+      </node>
+      <node id="5737">
+        <label>tsaTraits.hpp</label>
+        <link refid="tsa_traits_8hpp"/>
+        <childnode refid="5738" relation="include">
+        </childnode>
+      </node>
+      <node id="5717">
+        <label>eternity.hpp</label>
+        <link refid="eternity_8hpp"/>
+        <childnode refid="5718" relation="include">
+        </childnode>
+        <childnode refid="5721" relation="include">
+        </childnode>
+        <childnode refid="5726" relation="include">
+        </childnode>
+        <childnode refid="5730" relation="include">
+        </childnode>
+      </node>
+      <node id="5723">
+        <label>stdlib.h</label>
+      </node>
+      <node id="5708">
+        <label>LSLfilter.hpp</label>
+        <link refid="_l_s_lfilter_8hpp"/>
+        <childnode refid="5709" relation="include">
+        </childnode>
+        <childnode refid="5742" relation="include">
+        </childnode>
+        <childnode refid="5745" relation="include">
+        </childnode>
+        <childnode refid="5746" relation="include">
+        </childnode>
+        <childnode refid="5748" relation="include">
+        </childnode>
+      </node>
+      <node id="5710">
+        <label>stdexcept</label>
+      </node>
+      <node id="5732">
+        <label>tsaTypes.hpp</label>
+        <link refid="tsa_types_8hpp"/>
+        <childnode refid="5712" relation="include">
+        </childnode>
+        <childnode refid="5713" relation="include">
+        </childnode>
+        <childnode refid="5733" relation="include">
+        </childnode>
+        <childnode refid="5714" relation="include">
+        </childnode>
+        <childnode refid="5717" relation="include">
+        </childnode>
+      </node>
+      <node id="5715">
+        <label>string</label>
+      </node>
+      <node id="5718">
+        <label>eternity/dynamic.hpp</label>
+        <link refid="dynamic_8hpp"/>
+        <childnode refid="5719" relation="include">
+        </childnode>
+        <childnode refid="5720" relation="include">
+        </childnode>
+        <childnode refid="5715" relation="include">
+        </childnode>
+      </node>
+      <node id="5728">
+        <label>map</label>
+      </node>
+      <node id="5734">
+        <label>tsaLog.hpp</label>
+        <link refid="tsa_log_8hpp"/>
+        <childnode refid="5711" relation="include">
+        </childnode>
+        <childnode refid="5712" relation="include">
+        </childnode>
+        <childnode refid="5735" relation="include">
+        </childnode>
+      </node>
+      <node id="5712">
+        <label>fstream</label>
+      </node>
+      <node id="5727">
+        <label>xmlscanner.hpp</label>
+        <link refid="xmlscanner_8hpp"/>
+        <childnode refid="5722" relation="include">
+        </childnode>
+        <childnode refid="5723" relation="include">
+        </childnode>
+        <childnode refid="5724" relation="include">
+        </childnode>
+        <childnode refid="5728" relation="include">
+        </childnode>
+        <childnode refid="5725" relation="include">
+        </childnode>
+        <childnode refid="5712" relation="include">
+        </childnode>
+        <childnode refid="5715" relation="include">
+        </childnode>
+        <childnode refid="5711" relation="include">
+        </childnode>
+      </node>
+      <node id="5716">
+        <label>tsaSerialize.hpp</label>
+        <link refid="tsa_serialize_8hpp"/>
+        <childnode refid="5710" relation="include">
+        </childnode>
+        <childnode refid="5711" relation="include">
+        </childnode>
+        <childnode refid="5712" relation="include">
+        </childnode>
+        <childnode refid="5717" relation="include">
+        </childnode>
+        <childnode refid="5732" relation="include">
+        </childnode>
+      </node>
+      <node id="5741">
+        <label>fparser.hpp</label>
+        <link refid="fparser_8hpp"/>
+        <childnode refid="5715" relation="include">
+        </childnode>
+        <childnode refid="5728" relation="include">
+        </childnode>
+        <childnode refid="5724" relation="include">
+        </childnode>
+      </node>
+      <node id="5709">
+        <label>AlgoBase.hpp</label>
+        <link refid="_algo_base_8hpp"/>
+        <childnode refid="5710" relation="include">
+        </childnode>
+        <childnode refid="5711" relation="include">
+        </childnode>
+        <childnode refid="5712" relation="include">
+        </childnode>
+        <childnode refid="5713" relation="include">
+        </childnode>
+        <childnode refid="5714" relation="include">
+        </childnode>
+        <childnode refid="5715" relation="include">
+        </childnode>
+        <childnode refid="5716" relation="include">
+        </childnode>
+        <childnode refid="5732" relation="include">
+        </childnode>
+        <childnode refid="5734" relation="include">
+        </childnode>
+        <childnode refid="5736" relation="include">
+        </childnode>
+        <childnode refid="5742" relation="include">
+        </childnode>
+        <childnode refid="5744" relation="include">
+        </childnode>
+      </node>
+      <node id="5721">
+        <label>eternity/persist.hpp</label>
+        <link refid="persist_8hpp"/>
+        <childnode refid="5718" relation="include">
+        </childnode>
+        <childnode refid="5722" relation="include">
+        </childnode>
+        <childnode refid="5723" relation="include">
+        </childnode>
+        <childnode refid="5724" relation="include">
+        </childnode>
+        <childnode refid="5725" relation="include">
+        </childnode>
+        <childnode refid="5712" relation="include">
+        </childnode>
+      </node>
+      <node id="5746">
+        <label>FifoBuffer.hpp</label>
+        <link refid="_fifo_buffer_8hpp"/>
+        <childnode refid="5747" relation="include">
+        </childnode>
+        <childnode refid="5729" relation="include">
+        </childnode>
+        <childnode refid="5717" relation="include">
+        </childnode>
+        <childnode refid="5732" relation="include">
+        </childnode>
+        <childnode refid="5716" relation="include">
+        </childnode>
+      </node>
+      <node id="5740">
+        <label>string.h</label>
+      </node>
+      <node id="5720">
+        <label>typeinfo</label>
+      </node>
+      <node id="5714">
+        <label>boost/numeric/ublas/io.hpp</label>
+      </node>
+      <node id="5735">
+        <label>unistd.h</label>
+      </node>
+      <node id="5739">
+        <label>tsaUtilityFunctions.hpp</label>
+        <link refid="tsa_utility_functions_8hpp"/>
+        <childnode refid="5740" relation="include">
+        </childnode>
+        <childnode refid="5741" relation="include">
+        </childnode>
+        <childnode refid="5738" relation="include">
+        </childnode>
+        <childnode refid="5712" relation="include">
+        </childnode>
+      </node>
+      <node id="5724">
+        <label>vector</label>
+      </node>
+      <node id="5736">
+        <label>BaseView.hpp</label>
+        <link refid="_base_view_8hpp"/>
+        <childnode refid="5728" relation="include">
+        </childnode>
+        <childnode refid="5715" relation="include">
+        </childnode>
+        <childnode refid="5732" relation="include">
+        </childnode>
+        <childnode refid="5737" relation="include">
+        </childnode>
+        <childnode refid="5739" relation="include">
+        </childnode>
+        <childnode refid="5716" relation="include">
+        </childnode>
+        <childnode refid="5734" relation="include">
+        </childnode>
+      </node>
+      <node id="5733">
+        <label>boost/numeric/ublas/matrix_proxy.hpp</label>
+      </node>
+      <node id="5748">
+        <label>LSLLearning.hpp</label>
+        <link refid="_l_s_l_learning_8hpp"/>
+        <childnode refid="5709" relation="include">
+        </childnode>
+        <childnode refid="5742" relation="include">
+        </childnode>
+        <childnode refid="5745" relation="include">
+        </childnode>
+      </node>
+      <node id="5731">
+        <label>sstream</label>
+      </node>
+      <node id="5743">
+        <label>FrameL.h</label>
+      </node>
+      <node id="5744">
+        <label>AlgoExceptions.hpp</label>
+        <link refid="_algo_exceptions_8hpp"/>
+        <childnode refid="5710" relation="include">
+        </childnode>
+        <childnode refid="5715" relation="include">
+        </childnode>
+      </node>
+      <node id="5742">
+        <label>SeqView.hpp</label>
+        <link refid="_seq_view_8hpp"/>
+        <childnode refid="5713" relation="include">
+        </childnode>
+        <childnode refid="5733" relation="include">
+        </childnode>
+        <childnode refid="5714" relation="include">
+        </childnode>
+        <childnode refid="5736" relation="include">
+        </childnode>
+        <childnode refid="5743" relation="include">
+        </childnode>
+      </node>
+      <node id="5722">
+        <label>math.h</label>
+      </node>
+      <node id="5713">
+        <label>boost/numeric/ublas/matrix.hpp</label>
+      </node>
+      <node id="5711">
+        <label>iostream</label>
+      </node>
+      <node id="5729">
+        <label>deque</label>
+      </node>
+      <node id="5745">
+        <label>LatticeView.hpp</label>
+        <link refid="_lattice_view_8hpp"/>
+        <childnode refid="5713" relation="include">
+        </childnode>
+        <childnode refid="5714" relation="include">
+        </childnode>
+        <childnode refid="5717" relation="include">
+        </childnode>
+        <childnode refid="5736" relation="include">
+        </childnode>
+      </node>
+      <node id="5726">
+        <label>eternity/persist_xml.hpp</label>
+        <link refid="persist__xml_8hpp"/>
+        <childnode refid="5721" relation="include">
+        </childnode>
+        <childnode refid="5727" relation="include">
+        </childnode>
+        <childnode refid="5729" relation="include">
+        </childnode>
+      </node>
+      <node id="5738">
+        <label>complex</label>
+      </node>
+      <node id="5730">
+        <label>eternity/algorithms.hpp</label>
+        <link refid="algorithms_8hpp"/>
+        <childnode refid="5721" relation="include">
+        </childnode>
+        <childnode refid="5726" relation="include">
+        </childnode>
+        <childnode refid="5727" relation="include">
+        </childnode>
+        <childnode refid="5731" relation="include">
+        </childnode>
+      </node>
+      <node id="5725">
+        <label>algorithm</label>
+      </node>
+      <node id="5719">
+        <label>stdio.h</label>
+      </node>
+      <node id="5707">
+        <label>/home/filip/PhD/WDFPipe_test/p4TSA/src/LSLfilter.cpp</label>
+        <link refid="_l_s_lfilter_8cpp"/>
+        <childnode refid="5708" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacetsa">tsa</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>C++<sp/>Implementation:<sp/>LSLLearning.cpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Description:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/>Elena<sp/>Cuoco<sp/>&lt;elena.cuoco@ego-gw.it&gt;,<sp/>(C)<sp/>2005</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Copyright:<sp/>See<sp/>COPYING<sp/>file<sp/>that<sp/>comes<sp/>with<sp/>this<sp/>distribution</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_l_s_lfilter_8hpp" kindref="compound">LSLfilter.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetsa" kindref="compound">tsa</ref><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="classtsa_1_1_l_s_lfilter_1a7f49b52bb9e1b935f957e04166bf7c8c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_lfilter_1a7f49b52bb9e1b935f957e04166bf7c8c" kindref="member">LSLfilter::LSLfilter</ref>(<ref refid="classtsa_1_1_l_s_l_learning" kindref="compound">LSLLearning</ref>&amp;<sp/>LSL,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>lambda,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Norm)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>:</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>mBuffer(1),</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>mWinSize(size),</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>mOrder(LSL.GetOrder()<sp/>+<sp/>1),</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>mLambda(lambda),</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>mSigma(size),</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>mNorm(Norm),</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>mSigma0(LSL.GetSigma()),</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>mFirstCall(true)<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_lfilter_1a980bad9cc152c400df6f4e1e8c25c111" kindref="member">mEF</ref>.resize(2,<sp/><ref refid="classtsa_1_1_l_s_lfilter_1aa25b337e262a868101f68d8437f162c1" kindref="member">mOrder</ref>);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_lfilter_1a24ad0a2f6a2b79b01b1e99ef9c663d1e" kindref="member">mEB</ref>.resize(2,<sp/><ref refid="classtsa_1_1_l_s_lfilter_1aa25b337e262a868101f68d8437f162c1" kindref="member">mOrder</ref>);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_lfilter_1a571c1d1b411aad2417ce23579a8da9ac" kindref="member">mEpf</ref>.resize(2,<sp/><ref refid="classtsa_1_1_l_s_lfilter_1aa25b337e262a868101f68d8437f162c1" kindref="member">mOrder</ref>);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_lfilter_1a067ccd52ecffc15945fdcb73fa515244" kindref="member">mEpb</ref>.resize(2,<sp/><ref refid="classtsa_1_1_l_s_lfilter_1aa25b337e262a868101f68d8437f162c1" kindref="member">mOrder</ref>);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_lfilter_1a83a3095a513fda5efd6b75aaa77495df" kindref="member">mKf</ref>.resize(<ref refid="classtsa_1_1_l_s_lfilter_1aa25b337e262a868101f68d8437f162c1" kindref="member">mOrder</ref>);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_lfilter_1ae3b9ac48debc547e1aa69ae0ade36408" kindref="member">mKb</ref>.resize(<ref refid="classtsa_1_1_l_s_lfilter_1aa25b337e262a868101f68d8437f162c1" kindref="member">mOrder</ref>);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_lfilter_1a0a2ad9e25528879045483500ff6401b0" kindref="member">mG</ref>.resize(<ref refid="classtsa_1_1_l_s_lfilter_1aa25b337e262a868101f68d8437f162c1" kindref="member">mOrder</ref>);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_lfilter_1a490187ff893b2ff71a5f36f9b4efe7f3" kindref="member">mF0</ref><sp/>=<sp/>LSL.<ref refid="classtsa_1_1_l_s_l_learning_1a03684c0760835f7cc8460561ea183f7e" kindref="member">GetStatus</ref>();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>0;<sp/>k<sp/>&lt;<sp/><ref refid="classtsa_1_1_l_s_lfilter_1aa25b337e262a868101f68d8437f162c1" kindref="member">mOrder</ref>;<sp/>k++)<sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_lfilter_1a24ad0a2f6a2b79b01b1e99ef9c663d1e" kindref="member">mEB</ref>(<ref refid="classtsa_1_1_l_s_lfilter_1a490187ff893b2ff71a5f36f9b4efe7f3" kindref="member">mF0</ref>,<sp/>k)<sp/>=<sp/>LSL.<ref refid="classtsa_1_1_l_s_l_learning_1af7f7b4d2830f2bdd66ab8210ef104480" kindref="member">GetErrorBackward</ref>(<ref refid="classtsa_1_1_l_s_lfilter_1a490187ff893b2ff71a5f36f9b4efe7f3" kindref="member">mF0</ref>,<sp/>k);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_lfilter_1a83a3095a513fda5efd6b75aaa77495df" kindref="member">mKf</ref>(k)<sp/>=<sp/>LSL.<ref refid="classtsa_1_1_l_s_l_learning_1acc051c6ae5281e916083fb80a21779e8" kindref="member">GetParcorForward</ref>(k);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_lfilter_1ae3b9ac48debc547e1aa69ae0ade36408" kindref="member">mKb</ref>(k)<sp/>=<sp/>LSL.<ref refid="classtsa_1_1_l_s_l_learning_1a276e9d2206da6c6ac89cdca1cd6c4560" kindref="member">GetParcorBackward</ref>(k);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_lfilter_1a0a2ad9e25528879045483500ff6401b0" kindref="member">mG</ref>(k)<sp/>=<sp/>LSL.<ref refid="classtsa_1_1_l_s_l_learning_1a41c8d09f732ae6fed7edaed61cd73ca2" kindref="member">GetGamma</ref>(k);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_lfilter_1a571c1d1b411aad2417ce23579a8da9ac" kindref="member">mEpf</ref>(<ref refid="classtsa_1_1_l_s_lfilter_1a490187ff893b2ff71a5f36f9b4efe7f3" kindref="member">mF0</ref>,<sp/>k)<sp/>=<sp/>LSL.<ref refid="classtsa_1_1_l_s_l_learning_1adaca2870907d65690fcaec01f4d96c95" kindref="member">GetEpf</ref>(<ref refid="classtsa_1_1_l_s_lfilter_1a490187ff893b2ff71a5f36f9b4efe7f3" kindref="member">mF0</ref>,<sp/>k);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_lfilter_1a067ccd52ecffc15945fdcb73fa515244" kindref="member">mEpb</ref>(<ref refid="classtsa_1_1_l_s_lfilter_1a490187ff893b2ff71a5f36f9b4efe7f3" kindref="member">mF0</ref>,<sp/>k)<sp/>=<sp/>LSL.<ref refid="classtsa_1_1_l_s_l_learning_1ad05ee328f1a40de4fc73bd9770ae08c2" kindref="member">GetEpb</ref>(<ref refid="classtsa_1_1_l_s_lfilter_1a490187ff893b2ff71a5f36f9b4efe7f3" kindref="member">mF0</ref>,<sp/>k);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="classtsa_1_1_l_s_lfilter_1addf16b957be6c848ad1c59ee7cb4dd4e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_lfilter_1addf16b957be6c848ad1c59ee7cb4dd4e" kindref="member">LSLfilter::~LSLfilter</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="classtsa_1_1_l_s_lfilter_1ab01da31972cf54c49a28920c8235e8c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_l_s_lfilter_1ab01da31972cf54c49a28920c8235e8c9" kindref="member">LSLfilter::SetData</ref>(<ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref>&amp;<sp/>Data,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>scale)<sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_lfilter_1a95e5134738dd70857cf6c7ac52b11639" kindref="member">mBuffer</ref>.<ref refid="classtsa_1_1_fifo_buffer_1ab70c4b3ba1a5356ab5384cd7f8638b0d" kindref="member">AddPoints</ref>(Data,<sp/>scale);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="classtsa_1_1_l_s_lfilter_1a236a35327bce862b6c4f8a9245af7b9c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_l_s_lfilter_1a236a35327bce862b6c4f8a9245af7b9c" kindref="member">LSLfilter::GetDataNeeded</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_l_s_lfilter_1a95e5134738dd70857cf6c7ac52b11639" kindref="member">mBuffer</ref>.<ref refid="classtsa_1_1_fifo_buffer_1a7c14d2ae86c581d1ccc427dccb3f1213" kindref="member">Size</ref>()<sp/>-<sp/><ref refid="classtsa_1_1_l_s_lfilter_1a015aba5b8378277ee5cda011ba6b4fe1" kindref="member">mWinSize</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="classtsa_1_1_l_s_lfilter_1ad577b856b131f49de4e29eb2406560e9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtsa_1_1_l_s_lfilter_1ad577b856b131f49de4e29eb2406560e9" kindref="member">LSLfilter::GetData</ref>(<ref refid="namespacetsa_1ad260cd21c1891c4ed391fe788569aba4" kindref="member">Dmatrix</ref>&amp;<sp/>OutputData)<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>f_0<sp/>=<sp/><ref refid="classtsa_1_1_l_s_lfilter_1a490187ff893b2ff71a5f36f9b4efe7f3" kindref="member">mF0</ref>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>f_1<sp/>=<sp/>1<sp/>-<sp/><ref refid="classtsa_1_1_l_s_lfilter_1a490187ff893b2ff71a5f36f9b4efe7f3" kindref="member">mF0</ref>;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*--Recursive<sp/>relation-----------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>End<sp/>=<sp/><ref refid="classtsa_1_1_l_s_lfilter_1aa25b337e262a868101f68d8437f162c1" kindref="member">mOrder</ref><sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>End2<sp/>=<sp/>End<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>l<sp/>=<sp/>0;<sp/>l<sp/>&lt;<sp/><ref refid="classtsa_1_1_l_s_lfilter_1a015aba5b8378277ee5cda011ba6b4fe1" kindref="member">mWinSize</ref>;<sp/>l++)<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_lfilter_1a24ad0a2f6a2b79b01b1e99ef9c663d1e" kindref="member">mEB</ref>(f_1,<sp/>0)<sp/>=<sp/><ref refid="classtsa_1_1_l_s_lfilter_1a95e5134738dd70857cf6c7ac52b11639" kindref="member">mBuffer</ref>(0,<sp/>l);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_lfilter_1a980bad9cc152c400df6f4e1e8c25c111" kindref="member">mEF</ref>(f_1,<sp/>0)<sp/>=<sp/><ref refid="classtsa_1_1_l_s_lfilter_1a95e5134738dd70857cf6c7ac52b11639" kindref="member">mBuffer</ref>(0,<sp/>l);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_lfilter_1a571c1d1b411aad2417ce23579a8da9ac" kindref="member">mEpf</ref>(f_1,<sp/>0)<sp/>=<sp/><ref refid="classtsa_1_1_l_s_lfilter_1aeae300f77e90ba968cc9c5c0eea38a96" kindref="member">mLambda</ref><sp/>*<sp/><ref refid="classtsa_1_1_l_s_lfilter_1a571c1d1b411aad2417ce23579a8da9ac" kindref="member">mEpf</ref>(f_0,<sp/>0)<sp/>+<sp/><ref refid="classtsa_1_1_l_s_lfilter_1a95e5134738dd70857cf6c7ac52b11639" kindref="member">mBuffer</ref>(0,<sp/>l)<sp/>*<sp/><ref refid="classtsa_1_1_l_s_lfilter_1a95e5134738dd70857cf6c7ac52b11639" kindref="member">mBuffer</ref>(0,<sp/>l);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_lfilter_1a067ccd52ecffc15945fdcb73fa515244" kindref="member">mEpb</ref>(f_1,<sp/>0)<sp/>=<sp/><ref refid="classtsa_1_1_l_s_lfilter_1aeae300f77e90ba968cc9c5c0eea38a96" kindref="member">mLambda</ref><sp/>*<sp/><ref refid="classtsa_1_1_l_s_lfilter_1a571c1d1b411aad2417ce23579a8da9ac" kindref="member">mEpf</ref>(f_0,<sp/>0)<sp/>+<sp/><ref refid="classtsa_1_1_l_s_lfilter_1a95e5134738dd70857cf6c7ac52b11639" kindref="member">mBuffer</ref>(0,<sp/>l)<sp/>*<sp/><ref refid="classtsa_1_1_l_s_lfilter_1a95e5134738dd70857cf6c7ac52b11639" kindref="member">mBuffer</ref>(0,<sp/>l);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_lfilter_1a0a2ad9e25528879045483500ff6401b0" kindref="member">mG</ref>(0)<sp/>=<sp/>1.0;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*--------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>1;<sp/>k<sp/>&lt;<sp/><ref refid="classtsa_1_1_l_s_lfilter_1aa25b337e262a868101f68d8437f162c1" kindref="member">mOrder</ref>;<sp/>k++)<sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>t<sp/>=<sp/>k<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_lfilter_1a571c1d1b411aad2417ce23579a8da9ac" kindref="member">mEpf</ref>(f_1,<sp/>t)<sp/>=<sp/><ref refid="classtsa_1_1_l_s_lfilter_1aeae300f77e90ba968cc9c5c0eea38a96" kindref="member">mLambda</ref><sp/>*<sp/><ref refid="classtsa_1_1_l_s_lfilter_1a571c1d1b411aad2417ce23579a8da9ac" kindref="member">mEpf</ref>(f_0,<sp/>t)<sp/>+<sp/><ref refid="classtsa_1_1_l_s_lfilter_1a0a2ad9e25528879045483500ff6401b0" kindref="member">mG</ref>(t)<sp/>*<sp/><ref refid="classtsa_1_1_l_s_lfilter_1a980bad9cc152c400df6f4e1e8c25c111" kindref="member">mEF</ref>(f_1,<sp/>t)<sp/>*<sp/><ref refid="classtsa_1_1_l_s_lfilter_1a980bad9cc152c400df6f4e1e8c25c111" kindref="member">mEF</ref>(f_1,<sp/>t);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_lfilter_1a067ccd52ecffc15945fdcb73fa515244" kindref="member">mEpb</ref>(f_1,<sp/>t)<sp/>=<sp/><ref refid="classtsa_1_1_l_s_lfilter_1aeae300f77e90ba968cc9c5c0eea38a96" kindref="member">mLambda</ref><sp/>*<sp/><ref refid="classtsa_1_1_l_s_lfilter_1a067ccd52ecffc15945fdcb73fa515244" kindref="member">mEpb</ref>(f_0,<sp/>t)<sp/>+<sp/><ref refid="classtsa_1_1_l_s_lfilter_1a0a2ad9e25528879045483500ff6401b0" kindref="member">mG</ref>(t)<sp/>*<sp/><ref refid="classtsa_1_1_l_s_lfilter_1a24ad0a2f6a2b79b01b1e99ef9c663d1e" kindref="member">mEB</ref>(f_0,<sp/>t)<sp/>*<sp/><ref refid="classtsa_1_1_l_s_lfilter_1a24ad0a2f6a2b79b01b1e99ef9c663d1e" kindref="member">mEB</ref>(f_0,<sp/>t);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_lfilter_1a980bad9cc152c400df6f4e1e8c25c111" kindref="member">mEF</ref>(f_1,<sp/>k)<sp/>=<sp/><ref refid="classtsa_1_1_l_s_lfilter_1a980bad9cc152c400df6f4e1e8c25c111" kindref="member">mEF</ref>(f_1,<sp/>t)<sp/>+<sp/><ref refid="classtsa_1_1_l_s_lfilter_1a83a3095a513fda5efd6b75aaa77495df" kindref="member">mKf</ref>(k)<sp/>*<sp/><ref refid="classtsa_1_1_l_s_lfilter_1a24ad0a2f6a2b79b01b1e99ef9c663d1e" kindref="member">mEB</ref>(f_0,<sp/>t);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_lfilter_1a24ad0a2f6a2b79b01b1e99ef9c663d1e" kindref="member">mEB</ref>(f_1,<sp/>k)<sp/>=<sp/><ref refid="classtsa_1_1_l_s_lfilter_1a24ad0a2f6a2b79b01b1e99ef9c663d1e" kindref="member">mEB</ref>(f_0,<sp/>t)<sp/>+<sp/><ref refid="classtsa_1_1_l_s_lfilter_1ae3b9ac48debc547e1aa69ae0ade36408" kindref="member">mKb</ref>(k)<sp/>*<sp/><ref refid="classtsa_1_1_l_s_lfilter_1a980bad9cc152c400df6f4e1e8c25c111" kindref="member">mEF</ref>(f_1,<sp/>t);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_lfilter_1a83a3095a513fda5efd6b75aaa77495df" kindref="member">mKf</ref>(k)<sp/>=<sp/><ref refid="classtsa_1_1_l_s_lfilter_1a83a3095a513fda5efd6b75aaa77495df" kindref="member">mKf</ref>(k)<sp/>-<sp/><ref refid="classtsa_1_1_l_s_lfilter_1a0a2ad9e25528879045483500ff6401b0" kindref="member">mG</ref>(t)<sp/>*<sp/><ref refid="classtsa_1_1_l_s_lfilter_1a24ad0a2f6a2b79b01b1e99ef9c663d1e" kindref="member">mEB</ref>(f_0,<sp/>t)<sp/>*<sp/><ref refid="classtsa_1_1_l_s_lfilter_1a980bad9cc152c400df6f4e1e8c25c111" kindref="member">mEF</ref>(f_1,<sp/>k)<sp/>/<sp/><ref refid="classtsa_1_1_l_s_lfilter_1a067ccd52ecffc15945fdcb73fa515244" kindref="member">mEpb</ref>(f_1,<sp/>t);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_lfilter_1ae3b9ac48debc547e1aa69ae0ade36408" kindref="member">mKb</ref>(k)<sp/>=<sp/><ref refid="classtsa_1_1_l_s_lfilter_1ae3b9ac48debc547e1aa69ae0ade36408" kindref="member">mKb</ref>(k)<sp/>-<sp/><ref refid="classtsa_1_1_l_s_lfilter_1a0a2ad9e25528879045483500ff6401b0" kindref="member">mG</ref>(t)<sp/>*<sp/><ref refid="classtsa_1_1_l_s_lfilter_1a980bad9cc152c400df6f4e1e8c25c111" kindref="member">mEF</ref>(f_1,<sp/>t)<sp/>*<sp/><ref refid="classtsa_1_1_l_s_lfilter_1a24ad0a2f6a2b79b01b1e99ef9c663d1e" kindref="member">mEB</ref>(f_1,<sp/>k)<sp/>/<sp/><ref refid="classtsa_1_1_l_s_lfilter_1a571c1d1b411aad2417ce23579a8da9ac" kindref="member">mEpf</ref>(f_1,<sp/>t);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_lfilter_1a0a2ad9e25528879045483500ff6401b0" kindref="member">mG</ref>(k)<sp/>=<sp/><ref refid="classtsa_1_1_l_s_lfilter_1a0a2ad9e25528879045483500ff6401b0" kindref="member">mG</ref>(t)<sp/>-<sp/>(<ref refid="classtsa_1_1_l_s_lfilter_1a0a2ad9e25528879045483500ff6401b0" kindref="member">mG</ref>(t)<sp/>*<sp/><ref refid="classtsa_1_1_l_s_lfilter_1a0a2ad9e25528879045483500ff6401b0" kindref="member">mG</ref>(t))<sp/>*<sp/>(<ref refid="classtsa_1_1_l_s_lfilter_1a24ad0a2f6a2b79b01b1e99ef9c663d1e" kindref="member">mEB</ref>(f_0,<sp/>t)<sp/>*<sp/><ref refid="classtsa_1_1_l_s_lfilter_1a24ad0a2f6a2b79b01b1e99ef9c663d1e" kindref="member">mEB</ref>(f_0,<sp/>t))<sp/>/<sp/><ref refid="classtsa_1_1_l_s_lfilter_1a067ccd52ecffc15945fdcb73fa515244" kindref="member">mEpb</ref>(f_1,<sp/>t);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OutputData(0,<sp/>l)<sp/>=<sp/><ref refid="classtsa_1_1_l_s_lfilter_1a980bad9cc152c400df6f4e1e8c25c111" kindref="member">mEF</ref>(f_1,<sp/>End);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_lfilter_1aa620a0738568ad5360806ad189aa70c2" kindref="member">mSigma</ref>(l)<sp/>=<sp/>sqrt(<ref refid="classtsa_1_1_l_s_lfilter_1a571c1d1b411aad2417ce23579a8da9ac" kindref="member">mEpf</ref>(f_1,<sp/>End2));</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f_1<sp/>=<sp/>1<sp/>-<sp/>f_1;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f_0<sp/>=<sp/>1<sp/>-<sp/>f_0;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>---<sp/>Normalization</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/>if(mNorm)<sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>double<sp/>mean=0.0;</highlight></codeline>
+<codeline lineno="101"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for(unsigned<sp/>int<sp/>l<sp/>=<sp/>0;<sp/>l<sp/>&lt;<sp/>mWinSize;<sp/>l++)</highlight></codeline>
+<codeline lineno="102"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mean+=OutputData(0,l);</highlight></codeline>
+<codeline lineno="103"><highlight class="comment"></highlight></codeline>
+<codeline lineno="104"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mean=mean/mWinSize;</highlight></codeline>
+<codeline lineno="105"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for(unsigned<sp/>int<sp/>l<sp/>=<sp/>0;<sp/>l<sp/>&lt;<sp/>mWinSize;<sp/>l++)<sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OutputData(0,l)=<sp/>(OutputData(0,l)-mean)/mSigma(l);</highlight></codeline>
+<codeline lineno="107"><highlight class="comment"></highlight></codeline>
+<codeline lineno="108"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classtsa_1_1_l_s_lfilter_1a68dda41fd3d7be90171213425541ea2a" kindref="member">mNorm</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>l<sp/>=<sp/>0;<sp/>l<sp/>&lt;<sp/><ref refid="classtsa_1_1_l_s_lfilter_1a015aba5b8378277ee5cda011ba6b4fe1" kindref="member">mWinSize</ref>;<sp/>l++)</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OutputData(0,<sp/>l)<sp/>/=<sp/>(<ref refid="classtsa_1_1_l_s_lfilter_1aa620a0738568ad5360806ad189aa70c2" kindref="member">mSigma</ref>(l)<sp/>/<sp/>(1.0<sp/>/<sp/>(1.0<sp/>-<sp/><ref refid="classtsa_1_1_l_s_lfilter_1aeae300f77e90ba968cc9c5c0eea38a96" kindref="member">mLambda</ref>)));</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_lfilter_1a490187ff893b2ff71a5f36f9b4efe7f3" kindref="member">mF0</ref><sp/>=<sp/>f_0;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtsa_1_1_l_s_lfilter_1a95e5134738dd70857cf6c7ac52b11639" kindref="member">mBuffer</ref>.<ref refid="classtsa_1_1_fifo_buffer_1a17acb27e83ab4af3667974660b58cb4e" kindref="member">DelPoints</ref>(mWinSize);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/src/LSLfilter.cpp"/>
+  </compounddef>
+</doxygen>

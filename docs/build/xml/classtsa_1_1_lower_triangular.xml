@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classtsa_1_1_lower_triangular" kind="class" language="C++" prot="public">
+    <compoundname>tsa::LowerTriangular</compoundname>
+    <includes refid="tsa_utility_functions_8hpp" local="no">tsaUtilityFunctions.hpp</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classtsa_1_1_lower_triangular_1a968298d0e21e8eff3959fe9eb69eee8a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>static unsigned int tsa::LowerTriangular::Map</definition>
+        <argsstring>(unsigned int i, unsigned int j, unsigned int)</argsstring>
+        <name>Map</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>int</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaUtilityFunctions.hpp" line="214" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaUtilityFunctions.hpp" bodystart="214" bodyend="216"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_lower_triangular_1a553ac56eb5320ef223c61951290429d0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>static unsigned int tsa::LowerTriangular::Size</definition>
+        <argsstring>(unsigned int dim)</argsstring>
+        <name>Size</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>dim</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaUtilityFunctions.hpp" line="218" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaUtilityFunctions.hpp" bodystart="218" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_lower_triangular_1ae0be1ed16dc6f469852699898aa16df3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>static unsigned int tsa::LowerTriangular::Dimension</definition>
+        <argsstring>(unsigned int sz)</argsstring>
+        <name>Dimension</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>sz</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaUtilityFunctions.hpp" line="222" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaUtilityFunctions.hpp" bodystart="222" bodyend="224"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaUtilityFunctions.hpp" line="211" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/tsaUtilityFunctions.hpp" bodystart="211" bodyend="227"/>
+    <listofallmembers>
+      <member refid="classtsa_1_1_lower_triangular_1ae0be1ed16dc6f469852699898aa16df3" prot="public" virt="non-virtual"><scope>tsa::LowerTriangular</scope><name>Dimension</name></member>
+      <member refid="classtsa_1_1_lower_triangular_1a968298d0e21e8eff3959fe9eb69eee8a" prot="public" virt="non-virtual"><scope>tsa::LowerTriangular</scope><name>Map</name></member>
+      <member refid="classtsa_1_1_lower_triangular_1a553ac56eb5320ef223c61951290429d0" prot="public" virt="non-virtual"><scope>tsa::LowerTriangular</scope><name>Size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

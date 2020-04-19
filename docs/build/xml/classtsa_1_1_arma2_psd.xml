@@ -1,0 +1,205 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classtsa_1_1_arma2_psd" kind="class" language="C++" prot="public">
+    <compoundname>tsa::Arma2Psd</compoundname>
+    <basecompoundref refid="classtsa_1_1_algo_base" prot="public" virt="non-virtual">tsa::AlgoBase</basecompoundref>
+    <includes refid="_arma2_psd_8hpp" local="no">Arma2Psd.hpp</includes>
+      <sectiondef kind="user-defined">
+      <header>Operations</header>
+      <memberdef kind="function" id="classtsa_1_1_arma2_psd_1a345f2bf999cad8a585d7fff389bbefa4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::Arma2Psd::operator()</definition>
+        <argsstring>(ARMAView &amp;arma, SeqViewDouble &amp;Psd)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type><ref refid="classtsa_1_1_a_r_m_a_view" kindref="compound">ARMAView</ref> &amp;</type>
+          <declname>arma</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetsa_1ac599574bcc094eda25613724b8f3ca9e" kindref="member">SeqViewDouble</ref> &amp;</type>
+          <declname>Psd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="pre"><para>The P or the Q order must be greater than 0</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>arma</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the Arma View</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Psd the Power Spectral density </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/Arma2Psd.hpp" line="113" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/Arma2Psd.cpp" bodystart="49" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_arma2_psd_1afb147e11ba8e3ddef347fdf121cac5e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsa::Arma2Psd::execute</definition>
+        <argsstring>(Dvector &amp;AR, Dvector &amp;MA, Dvector &amp;psd)</argsstring>
+        <name>execute</name>
+        <param>
+          <type><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref> &amp;</type>
+          <declname>AR</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref> &amp;</type>
+          <declname>MA</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetsa_1a8900fb03d849baf447a1a0efe2561fb2" kindref="member">Dvector</ref> &amp;</type>
+          <declname>psd</declname>
+        </param>
+        <briefdescription>
+<para>Estimate the PSD for a ARMA model. </para>        </briefdescription>
+        <detaileddescription>
+<para>It has been implemented a fast recurrence algorithm fot the estimation of sin and cos, by A. Vicere&apos;.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>AR</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the autoregressive part </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>MA</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the moving average aprt </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>psd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the Power Spectral Density </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/Arma2Psd.hpp" line="124" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/Arma2Psd.cpp" bodystart="78" bodyend="129"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtsa_1_1_arma2_psd_1a3488311932cc240d99a8e40c124da91d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tsa::Arma2Psd::Arma2Psd</definition>
+        <argsstring>()</argsstring>
+        <name>Arma2Psd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/Arma2Psd.hpp" line="78" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/Arma2Psd.cpp" bodystart="19" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_arma2_psd_1aa3a79a62709efcfdbb3268cf253837e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tsa::Arma2Psd::Arma2Psd</definition>
+        <argsstring>(const Arma2Psd &amp;from)</argsstring>
+        <name>Arma2Psd</name>
+        <param>
+          <type>const <ref refid="classtsa_1_1_arma2_psd" kindref="compound">Arma2Psd</ref> &amp;</type>
+          <declname>from</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Copy constructor</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>from</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The instance that must be copied </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/Arma2Psd.hpp" line="85" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/Arma2Psd.cpp" bodystart="26" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_arma2_psd_1aef3535e694289be52365ded1f83b7599" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>tsa::Arma2Psd::~Arma2Psd</definition>
+        <argsstring>()</argsstring>
+        <name>~Arma2Psd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/Arma2Psd.hpp" line="90" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/Arma2Psd.cpp" bodystart="34" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classtsa_1_1_arma2_psd_1a85b4577ccb8331c63c004eb2e917b59b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classtsa_1_1_arma2_psd" kindref="compound">Arma2Psd</ref> &amp;</type>
+        <definition>Arma2Psd &amp; tsa::Arma2Psd::operator=</definition>
+        <argsstring>(const Arma2Psd &amp;from)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classtsa_1_1_arma2_psd" kindref="compound">Arma2Psd</ref> &amp;</type>
+          <declname>from</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assignement operator</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>from</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The instance to be assigned from</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a reference to a new object </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/Arma2Psd.hpp" line="99" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/src/Arma2Psd.cpp" bodystart="45" bodyend="47"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Estimate the PSD for a ARMA model. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="81">
+        <label>tsa::Arma2Psd</label>
+        <link refid="classtsa_1_1_arma2_psd"/>
+        <childnode refid="82" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="82">
+        <label>tsa::AlgoBase</label>
+        <link refid="classtsa_1_1_algo_base"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="83">
+        <label>tsa::Arma2Psd</label>
+        <link refid="classtsa_1_1_arma2_psd"/>
+        <childnode refid="84" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="84">
+        <label>tsa::AlgoBase</label>
+        <link refid="classtsa_1_1_algo_base"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/filip/PhD/WDFPipe_test/p4TSA/include/Arma2Psd.hpp" line="72" column="1" bodyfile="/home/filip/PhD/WDFPipe_test/p4TSA/include/Arma2Psd.hpp" bodystart="72" bodyend="147"/>
+    <listofallmembers>
+      <member refid="classtsa_1_1_arma2_psd_1a3488311932cc240d99a8e40c124da91d" prot="public" virt="non-virtual"><scope>tsa::Arma2Psd</scope><name>Arma2Psd</name></member>
+      <member refid="classtsa_1_1_arma2_psd_1aa3a79a62709efcfdbb3268cf253837e1" prot="public" virt="non-virtual"><scope>tsa::Arma2Psd</scope><name>Arma2Psd</name></member>
+      <member refid="classtsa_1_1_arma2_psd_1afb147e11ba8e3ddef347fdf121cac5e1" prot="public" virt="non-virtual"><scope>tsa::Arma2Psd</scope><name>execute</name></member>
+      <member refid="classtsa_1_1_arma2_psd_1a345f2bf999cad8a585d7fff389bbefa4" prot="public" virt="non-virtual"><scope>tsa::Arma2Psd</scope><name>operator()</name></member>
+      <member refid="classtsa_1_1_arma2_psd_1a85b4577ccb8331c63c004eb2e917b59b" prot="public" virt="non-virtual"><scope>tsa::Arma2Psd</scope><name>operator=</name></member>
+      <member refid="classtsa_1_1_arma2_psd_1aef3535e694289be52365ded1f83b7599" prot="public" virt="virtual"><scope>tsa::Arma2Psd</scope><name>~Arma2Psd</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
