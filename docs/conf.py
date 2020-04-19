@@ -171,5 +171,5 @@ import subprocess
 
 #if read_the_docs_build:
 
-subprocess.call('doxygen ./Doxyfile', shell=True)
+subprocess.call('doxygen', shell=True)
 html_extra_path = ['./build/html']
