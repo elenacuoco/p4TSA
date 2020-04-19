@@ -70,3 +70,8 @@ link_libraries(gsl fftw3  gslcblas Frame)
 add_library(p4TSA SHARED ${SOURCE_FILES})
 install (TARGETS p4TSA DESTINATION $ENV{ENV_ROOT}/lib)
 install (FILES include/tsa.hpp DESTINATION $ENV{ENV_ROOT}/include)
+
+# Add the cmake folder so the FindSphinx module is found
+set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake" ${CMAKE_MODULE_PATH})
+
+add_subdirectory ("docs")

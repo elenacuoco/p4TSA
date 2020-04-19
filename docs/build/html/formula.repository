@@ -1,4 +1,0 @@
-\form#0:\[ \sum_{k=0}^{p} A^{(k)} \vec{y}_{n-k} = \sum_{k=0}^{q} B^{(k)} \vec{x}_{n-k} \]
-\form#1:$A^{(0)}$
-\form#2:$A^{(i)}_{jk}$
-\form#3:$B^{(i)}_{jk}$
