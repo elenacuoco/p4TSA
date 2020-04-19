@@ -32,4 +32,4 @@ series. It contains
    structure/installation
    structure/contact
    structure/source_code
-   WDFpipe <https://wdfpipe.gitlab.io/en/latest/>
+   WDFpipe <https://wdfpipe.gitlab.io>
