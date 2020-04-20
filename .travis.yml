@@ -31,7 +31,5 @@ script:
   - cmake CMakeLists.txt
   - make
   - make install
-### install python package
-install:
-  - pip install -r sphinx breathe
+ 
   
