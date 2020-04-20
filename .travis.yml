@@ -15,7 +15,7 @@ sudo: required
 before_install:
   - export ENV_ROOT="${TRAVIS_BUILD_DIR}/NewEnv"
   - export ENV_TMP="${TRAVIS_BUILD_DIR}/tmp"
-  - sudo apt-get install libboost-dev libfftw3-dev cmake
+  - sudo apt-get install libboost-dev libfftw3-dev doxygen 
   - cd ${TRAVIS_BUILD_DIR}
   - ./install_dependencies.sh
 
