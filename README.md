@@ -28,6 +28,7 @@ It includes
 * How to run tests: under dir test run 
 
     <code>python test.py</code>
+    
 * Deployment instructions: under python-wrapper directory run
 
     <code>python setup.py install</code>
@@ -42,4 +43,5 @@ It includes
 
 * Repo owner or admin (info@elenacuoco.com)
 * Other community or team contact (elena.cuoco@ego-gw.it, giancarlo.cella@pi.infn.it)
+
                                                                
