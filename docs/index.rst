@@ -6,8 +6,7 @@
 Welcome to p4TSA and pyTSA documentation
 ==========================================
 
-This library is a 'spin-off' of C++ Noise Analysis Package (NAP) written together
-with Giancarlo Cella (giancarlo.cella@pi.infn.it)
+This library is a 'spin-off' of C++ Noise Analysis Package (NAP). 
 
 The core library is written in C++ and should be compiled before using the python interface.
 
