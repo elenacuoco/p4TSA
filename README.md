@@ -4,9 +4,7 @@
 
  (info@elenacuoco.com) https://www.elenacuoco.com
 
-This library is a 'spin-off' of C++ Noise Analysis Package (NAP) written together 
-with Giancarlo Cella (giancarlo.cella@pi.infn.it)
-
+This library is a 'spin-off' of C++ Noise Analysis Package (NAP).
 The core library is written in C++ and should be compiled before using the python interface.
 
 The Python interface to the library is pyTSA (you can call it pi'za)
@@ -42,6 +40,6 @@ It includes
 ### Who do I talk to? ###
 
 * Repo owner or admin (info@elenacuoco.com)
-* Other community or team contact (elena.cuoco@ego-gw.it, giancarlo.cella@pi.infn.it)
+* Other community or team contact (elena.cuoco@ego-gw.it, giancarlo.cella@pi.infn.it, fmorawski@camk.edu.pl)
 
                                                                
