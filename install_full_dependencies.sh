@@ -116,9 +116,9 @@ cp -fr boost/${ENV_ROOT}/include
 #################gsl
 pushd $ENV_TMP
 
-wget ftp://ftp.gnu.org/gnu/gsl/gsl-2.6.tar.gz
-tar xzf gsl-2.6.tar.gz
-cd gsl-2.6
+wget ftp://ftp.gnu.org/gnu/gsl/gsl-2.3.tar.gz
+tar xzf gsl-2.3.tar.gz
+cd gsl-2.3
 ./configure --prefix=${ENV_ROOT}
 make -j7
 make install
