@@ -38,7 +38,7 @@ void bind_eternity_persist(std::function< pybind11::module &(std::string const &
 		cl.def("assign", (class eternity::archive & (eternity::archive::*)(const class eternity::archive &)) &eternity::archive::operator=, "C++: eternity::archive::operator=(const class eternity::archive &) --> class eternity::archive &", pybind11::return_value_policy::automatic, pybind11::arg(""));
 	}
 }
-// File:Create.cpp
+// File:CreateDvector.cpp
 #include <AlgoBase.hpp>
 #include <CreateDvector.hpp>
 #include <pybind11/pybind11.h>
@@ -47,8 +47,9 @@ void bind_eternity_persist(std::function< pybind11::module &(std::string const &
 	PYBIND11_DECLARE_HOLDER_TYPE(T, std::shared_ptr<T>);
 	PYBIND11_DECLARE_HOLDER_TYPE(T, T*);
 #endif
-void bind_Dvector(create_dvector(int size),&M)
-{}
+bind_create_dvector(std::function< pybind11::module &(std::string const &namespace_) > &M)
+	 
+ 
 
  
   
