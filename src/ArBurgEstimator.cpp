@@ -155,7 +155,7 @@ namespace tsa {
         }
         for (unsigned int j = mArOrder; j < WhitenedData.size(); j++) {
             double sum = 0.0;
-            for (unsigned int k = 1; k <= j; k++)
+            for (unsigned int k = 1; k <= mArOrder; k++)
                 sum += mAR(k) * mColoredData(j - k);
 
             mColoredData(j) = sum + WhitenedData(j);
