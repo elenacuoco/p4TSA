@@ -145,7 +145,7 @@ namespace tsa {
         mColoredData.resize(WhitenedData.size(), false);
         mColoredData(0) = WhitenedData(0);
 
-        for (unsigned int j = 1; j <= mArOrder; j++) {
+        for (unsigned int j = 1; j < mArOrder; j++) {
             double sum = 0.0;
             for (unsigned int k = 1; k <= j; k++)
                 sum += mAR(k) * mColoredData(j - k);
@@ -153,9 +153,9 @@ namespace tsa {
             mColoredData(j) = sum + WhitenedData(j);
 
         }
-        for (unsigned int j = mArOrder+1; j < WhitenedData.size(); j++) {
+        for (unsigned int j = mArOrder; j < WhitenedData.size(); j++) {
             double sum = 0.0;
-            for (unsigned int k = 1; k <= mArOrder; k++)
+            for (unsigned int k = 1; k < mArOrder; k++)
                 sum += mAR(k) * mColoredData(j - k);
 
             mColoredData(j) = sum + WhitenedData(j);
