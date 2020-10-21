@@ -1,5 +1,6 @@
 // File: eternity/persist.cpp
 #include <eternity/persist.hpp>
+#include <functional>
 #include <initializer_list>
 #include <iterator>
 #include <memory>
