@@ -358,7 +358,7 @@ namespace tsa {
             return mStart + mSampling*k;
         };
 
-        double GetY(unsigned int channel, unsigned int f) {
+        numericType& GetY(unsigned int channel, unsigned int f) {
 
             return mData(channel, f);
         };

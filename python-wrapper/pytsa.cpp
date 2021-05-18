@@ -1,3 +1,397 @@
+// File: std/exception.cpp
+#include <exception>
+#include <sstream> // __str__
+
+#include <pybind11/pybind11.h>
+#include <functional>
+#include <string>
+
+#ifndef BINDER_PYBIND11_TYPE_CASTER
+	#define BINDER_PYBIND11_TYPE_CASTER
+	PYBIND11_DECLARE_HOLDER_TYPE(T, std::shared_ptr<T>)
+	PYBIND11_DECLARE_HOLDER_TYPE(T, T*)
+	PYBIND11_MAKE_OPAQUE(std::shared_ptr<void>)
+#endif
+
+// std::exception file:bits/exception.h line:60
+struct PyCallBack_std_exception : public std::exception {
+	using std::exception::exception;
+
+	const char * what() const throw() override {
+		pybind11::gil_scoped_acquire gil;
+		pybind11::function overload = pybind11::get_overload(static_cast<const std::exception *>(this), "what");
+		if (overload) {
+			auto o = overload.operator()<pybind11::return_value_policy::reference>();
+			if (pybind11::detail::cast_is_temporary_value_reference<const char *>::value) {
+				static pybind11::detail::override_caster_t<const char *> caster;
+				return pybind11::detail::cast_ref<const char *>(std::move(o), caster);
+			}
+			else return pybind11::detail::cast_safe<const char *>(std::move(o));
+		}
+		return exception::what();
+	}
+};
+
+void bind_std_exception(std::function< pybind11::module &(std::string const &namespace_) > &M)
+{
+	{ // std::exception file:bits/exception.h line:60
+		pybind11::class_<std::exception, std::shared_ptr<std::exception>, PyCallBack_std_exception> cl(M("std"), "exception", "");
+		cl.def( pybind11::init( [](){ return new std::exception(); }, [](){ return new PyCallBack_std_exception(); } ) );
+		cl.def( pybind11::init( [](PyCallBack_std_exception const &o){ return new PyCallBack_std_exception(o); } ) );
+		cl.def( pybind11::init( [](std::exception const &o){ return new std::exception(o); } ) );
+		cl.def("assign", (class std::exception & (std::exception::*)(const class std::exception &)) &std::exception::operator=, "C++: std::exception::operator=(const class std::exception &) --> class std::exception &", pybind11::return_value_policy::automatic, pybind11::arg(""));
+		cl.def("what", (const char * (std::exception::*)() const) &std::exception::what, "C++: std::exception::what() const --> const char *", pybind11::return_value_policy::automatic);
+	}
+}
+
+
+// File: std/stl_vector.cpp
+#include <FrameIStream.hpp>
+#include <SeqView.hpp>
+#include <functional>
+#include <iterator>
+#include <memory>
+#include <sstream> // __str__
+#include <string>
+#include <vector>
+
+#include <pybind11/pybind11.h>
+#include <functional>
+#include <string>
+
+#ifndef BINDER_PYBIND11_TYPE_CASTER
+	#define BINDER_PYBIND11_TYPE_CASTER
+	PYBIND11_DECLARE_HOLDER_TYPE(T, std::shared_ptr<T>)
+	PYBIND11_DECLARE_HOLDER_TYPE(T, T*)
+	PYBIND11_MAKE_OPAQUE(std::shared_ptr<void>)
+#endif
+
+void bind_std_stl_vector(std::function< pybind11::module &(std::string const &namespace_) > &M)
+{
+	{ // std::vector file:bits/stl_vector.h line:389
+		pybind11::class_<std::vector<std::string,std::allocator<std::string >>, std::shared_ptr<std::vector<std::string,std::allocator<std::string >>>> cl(M("std"), "vector_std_string_std_allocator_std_string_t", "");
+		cl.def( pybind11::init( [](){ return new std::vector<std::string,std::allocator<std::string >>(); } ) );
+		cl.def( pybind11::init<const class std::allocator<std::string > &>(), pybind11::arg("__a") );
+
+		cl.def( pybind11::init( [](unsigned long const & a0){ return new std::vector<std::string,std::allocator<std::string >>(a0); } ), "doc" , pybind11::arg("__n"));
+		cl.def( pybind11::init<unsigned long, const class std::allocator<std::string > &>(), pybind11::arg("__n"), pybind11::arg("__a") );
+
+		cl.def( pybind11::init( [](unsigned long const & a0, const class std::basic_string<char> & a1){ return new std::vector<std::string,std::allocator<std::string >>(a0, a1); } ), "doc" , pybind11::arg("__n"), pybind11::arg("__value"));
+		cl.def( pybind11::init<unsigned long, const std::string &, const class std::allocator<std::string > &>(), pybind11::arg("__n"), pybind11::arg("__value"), pybind11::arg("__a") );
+
+		cl.def( pybind11::init( [](std::vector<std::string,std::allocator<std::string >> const &o){ return new std::vector<std::string,std::allocator<std::string >>(o); } ) );
+		cl.def( pybind11::init<const class std::vector<std::string > &, const class std::allocator<std::string > &>(), pybind11::arg("__x"), pybind11::arg("__a") );
+
+		cl.def("assign", (class std::vector<std::string > & (std::vector<std::string,std::allocator<std::string >>::*)(const class std::vector<std::string > &)) &std::vector<std::string>::operator=, "C++: std::vector<std::string>::operator=(const class std::vector<std::string > &) --> class std::vector<std::string > &", pybind11::return_value_policy::automatic, pybind11::arg("__x"));
+		cl.def("assign", (void (std::vector<std::string,std::allocator<std::string >>::*)(unsigned long, const std::string &)) &std::vector<std::string>::assign, "C++: std::vector<std::string>::assign(unsigned long, const std::string &) --> void", pybind11::arg("__n"), pybind11::arg("__val"));
+		cl.def("begin", (class __gnu_cxx::__normal_iterator<std::string *, class std::vector<std::string > > (std::vector<std::string,std::allocator<std::string >>::*)()) &std::vector<std::string>::begin, "C++: std::vector<std::string>::begin() --> class __gnu_cxx::__normal_iterator<std::string *, class std::vector<std::string > >");
+		cl.def("end", (class __gnu_cxx::__normal_iterator<std::string *, class std::vector<std::string > > (std::vector<std::string,std::allocator<std::string >>::*)()) &std::vector<std::string>::end, "C++: std::vector<std::string>::end() --> class __gnu_cxx::__normal_iterator<std::string *, class std::vector<std::string > >");
+		cl.def("cbegin", (class __gnu_cxx::__normal_iterator<const std::string *, class std::vector<std::string > > (std::vector<std::string,std::allocator<std::string >>::*)() const) &std::vector<std::string>::cbegin, "C++: std::vector<std::string>::cbegin() const --> class __gnu_cxx::__normal_iterator<const std::string *, class std::vector<std::string > >");
+		cl.def("cend", (class __gnu_cxx::__normal_iterator<const std::string *, class std::vector<std::string > > (std::vector<std::string,std::allocator<std::string >>::*)() const) &std::vector<std::string>::cend, "C++: std::vector<std::string>::cend() const --> class __gnu_cxx::__normal_iterator<const std::string *, class std::vector<std::string > >");
+		cl.def("size", (unsigned long (std::vector<std::string,std::allocator<std::string >>::*)() const) &std::vector<std::string>::size, "C++: std::vector<std::string>::size() const --> unsigned long");
+		cl.def("max_size", (unsigned long (std::vector<std::string,std::allocator<std::string >>::*)() const) &std::vector<std::string>::max_size, "C++: std::vector<std::string>::max_size() const --> unsigned long");
+		cl.def("resize", (void (std::vector<std::string,std::allocator<std::string >>::*)(unsigned long)) &std::vector<std::string>::resize, "C++: std::vector<std::string>::resize(unsigned long) --> void", pybind11::arg("__new_size"));
+		cl.def("resize", (void (std::vector<std::string,std::allocator<std::string >>::*)(unsigned long, const std::string &)) &std::vector<std::string>::resize, "C++: std::vector<std::string>::resize(unsigned long, const std::string &) --> void", pybind11::arg("__new_size"), pybind11::arg("__x"));
+		cl.def("shrink_to_fit", (void (std::vector<std::string,std::allocator<std::string >>::*)()) &std::vector<std::string>::shrink_to_fit, "C++: std::vector<std::string>::shrink_to_fit() --> void");
+		cl.def("capacity", (unsigned long (std::vector<std::string,std::allocator<std::string >>::*)() const) &std::vector<std::string>::capacity, "C++: std::vector<std::string>::capacity() const --> unsigned long");
+		cl.def("empty", (bool (std::vector<std::string,std::allocator<std::string >>::*)() const) &std::vector<std::string>::empty, "C++: std::vector<std::string>::empty() const --> bool");
+		cl.def("reserve", (void (std::vector<std::string,std::allocator<std::string >>::*)(unsigned long)) &std::vector<std::string>::reserve, "C++: std::vector<std::string>::reserve(unsigned long) --> void", pybind11::arg("__n"));
+		cl.def("__getitem__", (std::string & (std::vector<std::string,std::allocator<std::string >>::*)(unsigned long)) &std::vector<std::string>::operator[], "C++: std::vector<std::string>::operator[](unsigned long) --> std::string &", pybind11::return_value_policy::automatic, pybind11::arg("__n"));
+		cl.def("at", (std::string & (std::vector<std::string,std::allocator<std::string >>::*)(unsigned long)) &std::vector<std::string>::at, "C++: std::vector<std::string>::at(unsigned long) --> std::string &", pybind11::return_value_policy::automatic, pybind11::arg("__n"));
+		cl.def("front", (std::string & (std::vector<std::string,std::allocator<std::string >>::*)()) &std::vector<std::string>::front, "C++: std::vector<std::string>::front() --> std::string &", pybind11::return_value_policy::automatic);
+		cl.def("back", (std::string & (std::vector<std::string,std::allocator<std::string >>::*)()) &std::vector<std::string>::back, "C++: std::vector<std::string>::back() --> std::string &", pybind11::return_value_policy::automatic);
+		cl.def("data", (std::string * (std::vector<std::string,std::allocator<std::string >>::*)()) &std::vector<std::string>::data, "C++: std::vector<std::string>::data() --> std::string *", pybind11::return_value_policy::automatic);
+		cl.def("push_back", (void (std::vector<std::string,std::allocator<std::string >>::*)(const std::string &)) &std::vector<std::string>::push_back, "C++: std::vector<std::string>::push_back(const std::string &) --> void", pybind11::arg("__x"));
+		cl.def("pop_back", (void (std::vector<std::string,std::allocator<std::string >>::*)()) &std::vector<std::string>::pop_back, "C++: std::vector<std::string>::pop_back() --> void");
+		cl.def("insert", (class __gnu_cxx::__normal_iterator<std::string *, class std::vector<std::string > > (std::vector<std::string,std::allocator<std::string >>::*)(class __gnu_cxx::__normal_iterator<const std::string *, class std::vector<std::string > >, const std::string &)) &std::vector<std::string>::insert, "C++: std::vector<std::string>::insert(class __gnu_cxx::__normal_iterator<const std::string *, class std::vector<std::string > >, const std::string &) --> class __gnu_cxx::__normal_iterator<std::string *, class std::vector<std::string > >", pybind11::arg("__position"), pybind11::arg("__x"));
+		cl.def("insert", (class __gnu_cxx::__normal_iterator<std::string *, class std::vector<std::string > > (std::vector<std::string,std::allocator<std::string >>::*)(class __gnu_cxx::__normal_iterator<const std::string *, class std::vector<std::string > >, unsigned long, const std::string &)) &std::vector<std::string>::insert, "C++: std::vector<std::string>::insert(class __gnu_cxx::__normal_iterator<const std::string *, class std::vector<std::string > >, unsigned long, const std::string &) --> class __gnu_cxx::__normal_iterator<std::string *, class std::vector<std::string > >", pybind11::arg("__position"), pybind11::arg("__n"), pybind11::arg("__x"));
+		cl.def("erase", (class __gnu_cxx::__normal_iterator<std::string *, class std::vector<std::string > > (std::vector<std::string,std::allocator<std::string >>::*)(class __gnu_cxx::__normal_iterator<const std::string *, class std::vector<std::string > >)) &std::vector<std::string>::erase, "C++: std::vector<std::string>::erase(class __gnu_cxx::__normal_iterator<const std::string *, class std::vector<std::string > >) --> class __gnu_cxx::__normal_iterator<std::string *, class std::vector<std::string > >", pybind11::arg("__position"));
+		cl.def("erase", (class __gnu_cxx::__normal_iterator<std::string *, class std::vector<std::string > > (std::vector<std::string,std::allocator<std::string >>::*)(class __gnu_cxx::__normal_iterator<const std::string *, class std::vector<std::string > >, class __gnu_cxx::__normal_iterator<const std::string *, class std::vector<std::string > >)) &std::vector<std::string>::erase, "C++: std::vector<std::string>::erase(class __gnu_cxx::__normal_iterator<const std::string *, class std::vector<std::string > >, class __gnu_cxx::__normal_iterator<const std::string *, class std::vector<std::string > >) --> class __gnu_cxx::__normal_iterator<std::string *, class std::vector<std::string > >", pybind11::arg("__first"), pybind11::arg("__last"));
+		cl.def("swap", (void (std::vector<std::string,std::allocator<std::string >>::*)(class std::vector<std::string > &)) &std::vector<std::string>::swap, "C++: std::vector<std::string>::swap(class std::vector<std::string > &) --> void", pybind11::arg("__x"));
+		cl.def("clear", (void (std::vector<std::string,std::allocator<std::string >>::*)()) &std::vector<std::string>::clear, "C++: std::vector<std::string>::clear() --> void");
+	}
+}
+
+
+// File: std/stl_map.cpp
+#include <functional>
+#include <iterator>
+#include <map>
+#include <memory>
+#include <sstream> // __str__
+#include <string>
+#include <utility>
+
+#include <pybind11/pybind11.h>
+#include <functional>
+#include <string>
+
+#ifndef BINDER_PYBIND11_TYPE_CASTER
+	#define BINDER_PYBIND11_TYPE_CASTER
+	PYBIND11_DECLARE_HOLDER_TYPE(T, std::shared_ptr<T>)
+	PYBIND11_DECLARE_HOLDER_TYPE(T, T*)
+	PYBIND11_MAKE_OPAQUE(std::shared_ptr<void>)
+#endif
+
+void bind_std_stl_map(std::function< pybind11::module &(std::string const &namespace_) > &M)
+{
+	{ // std::map file:bits/stl_map.h line:100
+		pybind11::class_<std::map<std::string,std::string,std::less<std::string >,std::allocator<std::pair<const std::string, std::string > >>, std::shared_ptr<std::map<std::string,std::string,std::less<std::string >,std::allocator<std::pair<const std::string, std::string > >>>> cl(M("std"), "map_std_string_std_string_std_less_std_string_std_allocator_std_pair_const_std_string_std_string_t", "");
+		cl.def( pybind11::init( [](){ return new std::map<std::string,std::string,std::less<std::string >,std::allocator<std::pair<const std::string, std::string > >>(); } ) );
+		cl.def( pybind11::init( [](const struct std::less<class std::basic_string<char> > & a0){ return new std::map<std::string,std::string,std::less<std::string >,std::allocator<std::pair<const std::string, std::string > >>(a0); } ), "doc" , pybind11::arg("__comp"));
+		cl.def( pybind11::init<const struct std::less<std::string > &, const class std::allocator<struct std::pair<const std::string, std::string > > &>(), pybind11::arg("__comp"), pybind11::arg("__a") );
+
+		cl.def( pybind11::init( [](std::map<std::string,std::string,std::less<std::string >,std::allocator<std::pair<const std::string, std::string > >> const &o){ return new std::map<std::string,std::string,std::less<std::string >,std::allocator<std::pair<const std::string, std::string > >>(o); } ) );
+		cl.def( pybind11::init<const class std::allocator<struct std::pair<const std::string, std::string > > &>(), pybind11::arg("__a") );
+
+		cl.def( pybind11::init<const class std::map<std::string, std::string > &, const class std::allocator<struct std::pair<const std::string, std::string > > &>(), pybind11::arg("__m"), pybind11::arg("__a") );
+
+		cl.def("assign", (class std::map<std::string, std::string > & (std::map<std::string,std::string,std::less<std::string >,std::allocator<std::pair<const std::string, std::string > >>::*)(const class std::map<std::string, std::string > &)) &std::map<std::string, std::string>::operator=, "C++: std::map<std::string, std::string>::operator=(const class std::map<std::string, std::string > &) --> class std::map<std::string, std::string > &", pybind11::return_value_policy::automatic, pybind11::arg(""));
+		cl.def("get_allocator", (class std::allocator<struct std::pair<const std::string, std::string > > (std::map<std::string,std::string,std::less<std::string >,std::allocator<std::pair<const std::string, std::string > >>::*)() const) &std::map<std::string, std::string>::get_allocator, "C++: std::map<std::string, std::string>::get_allocator() const --> class std::allocator<struct std::pair<const std::string, std::string > >");
+		cl.def("empty", (bool (std::map<std::string,std::string,std::less<std::string >,std::allocator<std::pair<const std::string, std::string > >>::*)() const) &std::map<std::string, std::string>::empty, "C++: std::map<std::string, std::string>::empty() const --> bool");
+		cl.def("size", (unsigned long (std::map<std::string,std::string,std::less<std::string >,std::allocator<std::pair<const std::string, std::string > >>::*)() const) &std::map<std::string, std::string>::size, "C++: std::map<std::string, std::string>::size() const --> unsigned long");
+		cl.def("max_size", (unsigned long (std::map<std::string,std::string,std::less<std::string >,std::allocator<std::pair<const std::string, std::string > >>::*)() const) &std::map<std::string, std::string>::max_size, "C++: std::map<std::string, std::string>::max_size() const --> unsigned long");
+		cl.def("__getitem__", (std::string & (std::map<std::string,std::string,std::less<std::string >,std::allocator<std::pair<const std::string, std::string > >>::*)(const std::string &)) &std::map<std::string, std::string>::operator[], "C++: std::map<std::string, std::string>::operator[](const std::string &) --> std::string &", pybind11::return_value_policy::automatic, pybind11::arg("__k"));
+		cl.def("at", (std::string & (std::map<std::string,std::string,std::less<std::string >,std::allocator<std::pair<const std::string, std::string > >>::*)(const std::string &)) &std::map<std::string, std::string>::at, "C++: std::map<std::string, std::string>::at(const std::string &) --> std::string &", pybind11::return_value_policy::automatic, pybind11::arg("__k"));
+		cl.def("insert", (struct std::pair<struct std::_Rb_tree_iterator<struct std::pair<const std::string, std::string > >, bool> (std::map<std::string,std::string,std::less<std::string >,std::allocator<std::pair<const std::string, std::string > >>::*)(const struct std::pair<const std::string, std::string > &)) &std::map<std::string, std::string>::insert, "C++: std::map<std::string, std::string>::insert(const struct std::pair<const std::string, std::string > &) --> struct std::pair<struct std::_Rb_tree_iterator<struct std::pair<const std::string, std::string > >, bool>", pybind11::arg("__x"));
+		cl.def("erase", (unsigned long (std::map<std::string,std::string,std::less<std::string >,std::allocator<std::pair<const std::string, std::string > >>::*)(const std::string &)) &std::map<std::string, std::string>::erase, "C++: std::map<std::string, std::string>::erase(const std::string &) --> unsigned long", pybind11::arg("__x"));
+		cl.def("swap", (void (std::map<std::string,std::string,std::less<std::string >,std::allocator<std::pair<const std::string, std::string > >>::*)(class std::map<std::string, std::string > &)) &std::map<std::string, std::string>::swap, "C++: std::map<std::string, std::string>::swap(class std::map<std::string, std::string > &) --> void", pybind11::arg("__x"));
+		cl.def("clear", (void (std::map<std::string,std::string,std::less<std::string >,std::allocator<std::pair<const std::string, std::string > >>::*)()) &std::map<std::string, std::string>::clear, "C++: std::map<std::string, std::string>::clear() --> void");
+		cl.def("key_comp", (struct std::less<std::string > (std::map<std::string,std::string,std::less<std::string >,std::allocator<std::pair<const std::string, std::string > >>::*)() const) &std::map<std::string, std::string>::key_comp, "C++: std::map<std::string, std::string>::key_comp() const --> struct std::less<std::string >");
+		cl.def("count", (unsigned long (std::map<std::string,std::string,std::less<std::string >,std::allocator<std::pair<const std::string, std::string > >>::*)(const std::string &) const) &std::map<std::string, std::string>::count, "C++: std::map<std::string, std::string>::count(const std::string &) const --> unsigned long", pybind11::arg("__x"));
+		cl.def("equal_range", (struct std::pair<struct std::_Rb_tree_iterator<struct std::pair<const std::string, std::string > >, struct std::_Rb_tree_iterator<struct std::pair<const std::string, std::string > > > (std::map<std::string,std::string,std::less<std::string >,std::allocator<std::pair<const std::string, std::string > >>::*)(const std::string &)) &std::map<std::string, std::string>::equal_range, "C++: std::map<std::string, std::string>::equal_range(const std::string &) --> struct std::pair<struct std::_Rb_tree_iterator<struct std::pair<const std::string, std::string > >, struct std::_Rb_tree_iterator<struct std::pair<const std::string, std::string > > >", pybind11::arg("__x"));
+	}
+}
+
+
+// File: std/stdexcept.cpp
+#include <boost/numeric/ublas/functional.hpp>
+#include <boost/numeric/ublas/matrix.hpp>
+#include <boost/numeric/ublas/storage.hpp>
+#include <ios>
+#include <iterator>
+#include <locale>
+#include <memory>
+#include <sstream> // __str__
+#include <stdexcept>
+#include <streambuf>
+#include <string>
+#include <system_error>
+#include <typeinfo>
+#include <vector>
+
+#include <pybind11/pybind11.h>
+#include <functional>
+#include <string>
+
+#ifndef BINDER_PYBIND11_TYPE_CASTER
+	#define BINDER_PYBIND11_TYPE_CASTER
+	PYBIND11_DECLARE_HOLDER_TYPE(T, std::shared_ptr<T>)
+	PYBIND11_DECLARE_HOLDER_TYPE(T, T*)
+	PYBIND11_MAKE_OPAQUE(std::shared_ptr<void>)
+#endif
+
+// std::logic_error file:stdexcept line:113
+struct PyCallBack_std_logic_error : public std::logic_error {
+	using std::logic_error::logic_error;
+
+	const char * what() const throw() override {
+		pybind11::gil_scoped_acquire gil;
+		pybind11::function overload = pybind11::get_overload(static_cast<const std::logic_error *>(this), "what");
+		if (overload) {
+			auto o = overload.operator()<pybind11::return_value_policy::reference>();
+			if (pybind11::detail::cast_is_temporary_value_reference<const char *>::value) {
+				static pybind11::detail::override_caster_t<const char *> caster;
+				return pybind11::detail::cast_ref<const char *>(std::move(o), caster);
+			}
+			else return pybind11::detail::cast_safe<const char *>(std::move(o));
+		}
+		return logic_error::what();
+	}
+};
+
+// std::invalid_argument file:stdexcept line:168
+struct PyCallBack_std_invalid_argument : public std::invalid_argument {
+	using std::invalid_argument::invalid_argument;
+
+	const char * what() const throw() override {
+		pybind11::gil_scoped_acquire gil;
+		pybind11::function overload = pybind11::get_overload(static_cast<const std::invalid_argument *>(this), "what");
+		if (overload) {
+			auto o = overload.operator()<pybind11::return_value_policy::reference>();
+			if (pybind11::detail::cast_is_temporary_value_reference<const char *>::value) {
+				static pybind11::detail::override_caster_t<const char *> caster;
+				return pybind11::detail::cast_ref<const char *>(std::move(o), caster);
+			}
+			else return pybind11::detail::cast_safe<const char *>(std::move(o));
+		}
+		return logic_error::what();
+	}
+};
+
+// std::runtime_error file:stdexcept line:219
+struct PyCallBack_std_runtime_error : public std::runtime_error {
+	using std::runtime_error::runtime_error;
+
+	const char * what() const throw() override {
+		pybind11::gil_scoped_acquire gil;
+		pybind11::function overload = pybind11::get_overload(static_cast<const std::runtime_error *>(this), "what");
+		if (overload) {
+			auto o = overload.operator()<pybind11::return_value_policy::reference>();
+			if (pybind11::detail::cast_is_temporary_value_reference<const char *>::value) {
+				static pybind11::detail::override_caster_t<const char *> caster;
+				return pybind11::detail::cast_ref<const char *>(std::move(o), caster);
+			}
+			else return pybind11::detail::cast_safe<const char *>(std::move(o));
+		}
+		return runtime_error::what();
+	}
+};
+
+void bind_std_stdexcept(std::function< pybind11::module &(std::string const &namespace_) > &M)
+{
+	{ // std::logic_error file:stdexcept line:113
+		pybind11::class_<std::logic_error, std::shared_ptr<std::logic_error>, PyCallBack_std_logic_error, std::exception> cl(M("std"), "logic_error", "");
+		cl.def( pybind11::init<const std::string &>(), pybind11::arg("__arg") );
+
+		cl.def( pybind11::init<const char *>(), pybind11::arg("") );
+
+		cl.def( pybind11::init( [](PyCallBack_std_logic_error const &o){ return new PyCallBack_std_logic_error(o); } ) );
+		cl.def( pybind11::init( [](std::logic_error const &o){ return new std::logic_error(o); } ) );
+		cl.def("assign", (class std::logic_error & (std::logic_error::*)(const class std::logic_error &)) &std::logic_error::operator=, "C++: std::logic_error::operator=(const class std::logic_error &) --> class std::logic_error &", pybind11::return_value_policy::automatic, pybind11::arg(""));
+		cl.def("what", (const char * (std::logic_error::*)() const) &std::logic_error::what, "C++: std::logic_error::what() const --> const char *", pybind11::return_value_policy::automatic);
+	}
+	{ // std::invalid_argument file:stdexcept line:168
+		pybind11::class_<std::invalid_argument, std::shared_ptr<std::invalid_argument>, PyCallBack_std_invalid_argument, std::logic_error> cl(M("std"), "invalid_argument", "");
+		cl.def( pybind11::init<const std::string &>(), pybind11::arg("__arg") );
+
+		cl.def( pybind11::init<const char *>(), pybind11::arg("") );
+
+		cl.def( pybind11::init( [](PyCallBack_std_invalid_argument const &o){ return new PyCallBack_std_invalid_argument(o); } ) );
+		cl.def( pybind11::init( [](std::invalid_argument const &o){ return new std::invalid_argument(o); } ) );
+		cl.def("assign", (class std::invalid_argument & (std::invalid_argument::*)(const class std::invalid_argument &)) &std::invalid_argument::operator=, "C++: std::invalid_argument::operator=(const class std::invalid_argument &) --> class std::invalid_argument &", pybind11::return_value_policy::automatic, pybind11::arg(""));
+	}
+	{ // std::runtime_error file:stdexcept line:219
+		pybind11::class_<std::runtime_error, std::shared_ptr<std::runtime_error>, PyCallBack_std_runtime_error, std::exception> cl(M("std"), "runtime_error", "");
+		cl.def( pybind11::init<const std::string &>(), pybind11::arg("__arg") );
+
+		cl.def( pybind11::init<const char *>(), pybind11::arg("") );
+
+		cl.def( pybind11::init( [](PyCallBack_std_runtime_error const &o){ return new PyCallBack_std_runtime_error(o); } ) );
+		cl.def( pybind11::init( [](std::runtime_error const &o){ return new std::runtime_error(o); } ) );
+		cl.def("assign", (class std::runtime_error & (std::runtime_error::*)(const class std::runtime_error &)) &std::runtime_error::operator=, "C++: std::runtime_error::operator=(const class std::runtime_error &) --> class std::runtime_error &", pybind11::return_value_policy::automatic, pybind11::arg(""));
+		cl.def("what", (const char * (std::runtime_error::*)() const) &std::runtime_error::what, "C++: std::runtime_error::what() const --> const char *", pybind11::return_value_policy::automatic);
+	}
+}
+
+
+// File: std/complex.cpp
+#include <complex>
+#include <ios>
+#include <locale>
+#include <ostream>
+#include <sstream> // __str__
+#include <streambuf>
+#include <string>
+
+#include <pybind11/pybind11.h>
+#include <functional>
+#include <string>
+
+#ifndef BINDER_PYBIND11_TYPE_CASTER
+	#define BINDER_PYBIND11_TYPE_CASTER
+	PYBIND11_DECLARE_HOLDER_TYPE(T, std::shared_ptr<T>)
+	PYBIND11_DECLARE_HOLDER_TYPE(T, T*)
+	PYBIND11_MAKE_OPAQUE(std::shared_ptr<void>)
+#endif
+
+void bind_std_complex(std::function< pybind11::module &(std::string const &namespace_) > &M)
+{
+	{ // std::complex file:complex line:1082
+		pybind11::class_<std::complex<float>, std::shared_ptr<std::complex<float>>> cl(M("std"), "complex_float_t", "");
+		cl.def( pybind11::init<_Complex float>(), pybind11::arg("__z") );
+
+		cl.def( pybind11::init( [](){ return new std::complex<float>(); } ), "doc" );
+		cl.def( pybind11::init( [](float const & a0){ return new std::complex<float>(a0); } ), "doc" , pybind11::arg("__r"));
+		cl.def( pybind11::init<float, float>(), pybind11::arg("__r"), pybind11::arg("__i") );
+
+		cl.def( pybind11::init<const struct std::complex<double> &>(), pybind11::arg("") );
+
+		cl.def( pybind11::init<const struct std::complex<long double> &>(), pybind11::arg("") );
+
+		cl.def( pybind11::init( [](std::complex<float> const &o){ return new std::complex<float>(o); } ) );
+		cl.def("real", (float (std::complex<float>::*)() const) &std::complex<float>::real, "C++: std::complex<float>::real() const --> float");
+		cl.def("imag", (float (std::complex<float>::*)() const) &std::complex<float>::imag, "C++: std::complex<float>::imag() const --> float");
+		cl.def("real", (void (std::complex<float>::*)(float)) &std::complex<float>::real, "C++: std::complex<float>::real(float) --> void", pybind11::arg("__val"));
+		cl.def("imag", (void (std::complex<float>::*)(float)) &std::complex<float>::imag, "C++: std::complex<float>::imag(float) --> void", pybind11::arg("__val"));
+		cl.def("assign", (struct std::complex<float> & (std::complex<float>::*)(float)) &std::complex<float>::operator=, "C++: std::complex<float>::operator=(float) --> struct std::complex<float> &", pybind11::return_value_policy::automatic, pybind11::arg("__f"));
+		cl.def("__iadd__", (struct std::complex<float> & (std::complex<float>::*)(float)) &std::complex<float>::operator+=, "C++: std::complex<float>::operator+=(float) --> struct std::complex<float> &", pybind11::return_value_policy::automatic, pybind11::arg("__f"));
+		cl.def("__isub__", (struct std::complex<float> & (std::complex<float>::*)(float)) &std::complex<float>::operator-=, "C++: std::complex<float>::operator-=(float) --> struct std::complex<float> &", pybind11::return_value_policy::automatic, pybind11::arg("__f"));
+		cl.def("__imul__", (struct std::complex<float> & (std::complex<float>::*)(float)) &std::complex<float>::operator*=, "C++: std::complex<float>::operator*=(float) --> struct std::complex<float> &", pybind11::return_value_policy::automatic, pybind11::arg("__f"));
+		cl.def("__idiv__", (struct std::complex<float> & (std::complex<float>::*)(float)) &std::complex<float>::operator/=, "C++: std::complex<float>::operator/=(float) --> struct std::complex<float> &", pybind11::return_value_policy::automatic, pybind11::arg("__f"));
+		cl.def("assign", (struct std::complex<float> & (std::complex<float>::*)(const struct std::complex<float> &)) &std::complex<float>::operator=, "C++: std::complex<float>::operator=(const struct std::complex<float> &) --> struct std::complex<float> &", pybind11::return_value_policy::automatic, pybind11::arg(""));
+		cl.def("__rep", (_Complex float (std::complex<float>::*)() const) &std::complex<float>::__rep, "C++: std::complex<float>::__rep() const --> _Complex float");
+
+		cl.def("__str__", [](std::complex<float> const &o) -> std::string { std::ostringstream s; s << o; return s.str(); } );
+	}
+	{ // std::complex file:complex line:1227
+		pybind11::class_<std::complex<double>, std::shared_ptr<std::complex<double>>> cl(M("std"), "complex_double_t", "");
+		cl.def( pybind11::init<_Complex double>(), pybind11::arg("__z") );
+
+		cl.def( pybind11::init( [](){ return new std::complex<double>(); } ), "doc" );
+		cl.def( pybind11::init( [](double const & a0){ return new std::complex<double>(a0); } ), "doc" , pybind11::arg("__r"));
+		cl.def( pybind11::init<double, double>(), pybind11::arg("__r"), pybind11::arg("__i") );
+
+		cl.def( pybind11::init<const struct std::complex<float> &>(), pybind11::arg("__z") );
+
+		cl.def( pybind11::init<const struct std::complex<long double> &>(), pybind11::arg("") );
+
+		cl.def( pybind11::init( [](std::complex<double> const &o){ return new std::complex<double>(o); } ) );
+		cl.def("assign", (struct std::complex<double> & (std::complex<double>::*)(const struct std::complex<double> &)) &std::complex<double>::operator=<double>, "C++: std::complex<double>::operator=(const struct std::complex<double> &) --> struct std::complex<double> &", pybind11::return_value_policy::automatic, pybind11::arg("__z"));
+		cl.def("real", (double (std::complex<double>::*)() const) &std::complex<double>::real, "C++: std::complex<double>::real() const --> double");
+		cl.def("imag", (double (std::complex<double>::*)() const) &std::complex<double>::imag, "C++: std::complex<double>::imag() const --> double");
+		cl.def("real", (void (std::complex<double>::*)(double)) &std::complex<double>::real, "C++: std::complex<double>::real(double) --> void", pybind11::arg("__val"));
+		cl.def("imag", (void (std::complex<double>::*)(double)) &std::complex<double>::imag, "C++: std::complex<double>::imag(double) --> void", pybind11::arg("__val"));
+		cl.def("assign", (struct std::complex<double> & (std::complex<double>::*)(double)) &std::complex<double>::operator=, "C++: std::complex<double>::operator=(double) --> struct std::complex<double> &", pybind11::return_value_policy::automatic, pybind11::arg("__d"));
+		cl.def("__iadd__", (struct std::complex<double> & (std::complex<double>::*)(double)) &std::complex<double>::operator+=, "C++: std::complex<double>::operator+=(double) --> struct std::complex<double> &", pybind11::return_value_policy::automatic, pybind11::arg("__d"));
+		cl.def("__isub__", (struct std::complex<double> & (std::complex<double>::*)(double)) &std::complex<double>::operator-=, "C++: std::complex<double>::operator-=(double) --> struct std::complex<double> &", pybind11::return_value_policy::automatic, pybind11::arg("__d"));
+		cl.def("__imul__", (struct std::complex<double> & (std::complex<double>::*)(double)) &std::complex<double>::operator*=, "C++: std::complex<double>::operator*=(double) --> struct std::complex<double> &", pybind11::return_value_policy::automatic, pybind11::arg("__d"));
+		cl.def("__idiv__", (struct std::complex<double> & (std::complex<double>::*)(double)) &std::complex<double>::operator/=, "C++: std::complex<double>::operator/=(double) --> struct std::complex<double> &", pybind11::return_value_policy::automatic, pybind11::arg("__d"));
+		cl.def("assign", (struct std::complex<double> & (std::complex<double>::*)(const struct std::complex<double> &)) &std::complex<double>::operator=, "C++: std::complex<double>::operator=(const struct std::complex<double> &) --> struct std::complex<double> &", pybind11::return_value_policy::automatic, pybind11::arg(""));
+		cl.def("__rep", (_Complex double (std::complex<double>::*)() const) &std::complex<double>::__rep, "C++: std::complex<double>::__rep() const --> _Complex double");
+
+		cl.def("__str__", [](std::complex<double> const &o) -> std::string { std::ostringstream s; s << o; return s.str(); } );
+	}
+	{ // std::complex file:complex line:1372
+		pybind11::class_<std::complex<long double>, std::shared_ptr<std::complex<long double>>> cl(M("std"), "complex_long_double_t", "");
+		cl.def( pybind11::init<_Complex long double>(), pybind11::arg("__z") );
+
+		cl.def( pybind11::init( [](){ return new std::complex<long double>(); } ), "doc" );
+		cl.def( pybind11::init( [](long double const & a0){ return new std::complex<long double>(a0); } ), "doc" , pybind11::arg("__r"));
+		cl.def( pybind11::init<long double, long double>(), pybind11::arg("__r"), pybind11::arg("__i") );
+
+		cl.def( pybind11::init<const struct std::complex<float> &>(), pybind11::arg("__z") );
+
+		cl.def( pybind11::init<const struct std::complex<double> &>(), pybind11::arg("__z") );
+
+		cl.def( pybind11::init( [](std::complex<long double> const &o){ return new std::complex<long double>(o); } ) );
+		cl.def("real", (long double (std::complex<long double>::*)() const) &std::complex<long double>::real, "C++: std::complex<long double>::real() const --> long double");
+		cl.def("imag", (long double (std::complex<long double>::*)() const) &std::complex<long double>::imag, "C++: std::complex<long double>::imag() const --> long double");
+		cl.def("real", (void (std::complex<long double>::*)(long double)) &std::complex<long double>::real, "C++: std::complex<long double>::real(long double) --> void", pybind11::arg("__val"));
+		cl.def("imag", (void (std::complex<long double>::*)(long double)) &std::complex<long double>::imag, "C++: std::complex<long double>::imag(long double) --> void", pybind11::arg("__val"));
+		cl.def("assign", (struct std::complex<long double> & (std::complex<long double>::*)(long double)) &std::complex<long double>::operator=, "C++: std::complex<long double>::operator=(long double) --> struct std::complex<long double> &", pybind11::return_value_policy::automatic, pybind11::arg("__r"));
+		cl.def("__iadd__", (struct std::complex<long double> & (std::complex<long double>::*)(long double)) &std::complex<long double>::operator+=, "C++: std::complex<long double>::operator+=(long double) --> struct std::complex<long double> &", pybind11::return_value_policy::automatic, pybind11::arg("__r"));
+		cl.def("__isub__", (struct std::complex<long double> & (std::complex<long double>::*)(long double)) &std::complex<long double>::operator-=, "C++: std::complex<long double>::operator-=(long double) --> struct std::complex<long double> &", pybind11::return_value_policy::automatic, pybind11::arg("__r"));
+		cl.def("__imul__", (struct std::complex<long double> & (std::complex<long double>::*)(long double)) &std::complex<long double>::operator*=, "C++: std::complex<long double>::operator*=(long double) --> struct std::complex<long double> &", pybind11::return_value_policy::automatic, pybind11::arg("__r"));
+		cl.def("__idiv__", (struct std::complex<long double> & (std::complex<long double>::*)(long double)) &std::complex<long double>::operator/=, "C++: std::complex<long double>::operator/=(long double) --> struct std::complex<long double> &", pybind11::return_value_policy::automatic, pybind11::arg("__r"));
+		cl.def("assign", (struct std::complex<long double> & (std::complex<long double>::*)(const struct std::complex<long double> &)) &std::complex<long double>::operator=, "C++: std::complex<long double>::operator=(const struct std::complex<long double> &) --> struct std::complex<long double> &", pybind11::return_value_policy::automatic, pybind11::arg(""));
+		cl.def("__rep", (_Complex long double (std::complex<long double>::*)() const) &std::complex<long double>::__rep, "C++: std::complex<long double>::__rep() const --> _Complex long double");
+
+		cl.def("__str__", [](std::complex<long double> const &o) -> std::string { std::ostringstream s; s << o; return s.str(); } );
+	}
+}
+
+
 // File: eternity/persist.cpp
 #include <eternity/persist.hpp>
 #include <iterator>
@@ -66,9 +460,23 @@ void bind_eternity_persist_xml(std::function< pybind11::module &(std::string con
 	{ // eternity::xml_archive file:eternity/persist_xml.hpp line:39
 		pybind11::class_<eternity::xml_archive, std::shared_ptr<eternity::xml_archive>, eternity::archive> cl(M("eternity"), "xml_archive", "xml_archive is the specialization of class archive able\n        to manage XML persistence.");
 		cl.def( pybind11::init( [](){ return new eternity::xml_archive(); } ) );
+		cl.def("write", (void (eternity::xml_archive::*)(std::string, unsigned int)) &eternity::xml_archive::write<unsigned int>, "C++: eternity::xml_archive::write(std::string, unsigned int) --> void", pybind11::arg("key"), pybind11::arg("value"));
+		cl.def("write", (void (eternity::xml_archive::*)(std::string, unsigned long)) &eternity::xml_archive::write<unsigned long>, "C++: eternity::xml_archive::write(std::string, unsigned long) --> void", pybind11::arg("key"), pybind11::arg("value"));
+		cl.def("write", (void (eternity::xml_archive::*)(std::string, double)) &eternity::xml_archive::write<double>, "C++: eternity::xml_archive::write(std::string, double) --> void", pybind11::arg("key"), pybind11::arg("value"));
+		cl.def("write", (void (eternity::xml_archive::*)(std::string, int)) &eternity::xml_archive::write<int>, "C++: eternity::xml_archive::write(std::string, int) --> void", pybind11::arg("key"), pybind11::arg("value"));
+		cl.def("open", (void (eternity::xml_archive::*)(std::string, enum eternity::archive::opening_mode)) &eternity::xml_archive::open, "initialize and XML archive using the file\n      named file_name. If mode is load create\n      the file. Anyway init update archive to\n      begin persistence operations.\n\nC++: eternity::xml_archive::open(std::string, enum eternity::archive::opening_mode) --> void", pybind11::arg("file_name"), pybind11::arg("mode"));
+		cl.def("init", (void (eternity::xml_archive::*)(std::string, bool)) &eternity::xml_archive::init, "initialize and XML archive using the file\n      named file_name. If loading is true create\n      the file. Anyway init update archive to\n      begin persistence operations.\n          Deprecated: use open instead\n\nC++: eternity::xml_archive::init(std::string, bool) --> void", pybind11::arg("file_name"), pybind11::arg("loading"));
 		cl.def("close", (void (eternity::xml_archive::*)()) &eternity::xml_archive::close, "End the persistence operation, release the file\n      handle and clear all allocated buffers.\n\nC++: eternity::xml_archive::close() --> void");
 		cl.def("done", (void (eternity::xml_archive::*)()) &eternity::xml_archive::done, "End the persistence operation, release the file\n      handle and clear all allocated buffers.\n          Deprecated: use close instead\n\nC++: eternity::xml_archive::done() --> void");
 		cl.def("formatting", (void (eternity::xml_archive::*)()) &eternity::xml_archive::formatting, "Indent XML output for nested class persistence\n\nC++: eternity::xml_archive::formatting() --> void");
+		cl.def("read", (std::string (eternity::xml_archive::*)(std::string, int)) &eternity::xml_archive::read, "read (and return) a string with label key at position pos\n deprecated, use read(std::string key, std::string &value, int pos) instead\n\nC++: eternity::xml_archive::read(std::string, int) --> std::string", pybind11::arg("key"), pybind11::arg("pos"));
+		cl.def("read", (void (eternity::xml_archive::*)(std::string, std::string &, int)) &eternity::xml_archive::read, "read (and put in value) a string with label key at position pos\n\nC++: eternity::xml_archive::read(std::string, std::string &, int) --> void", pybind11::arg("key"), pybind11::arg("value"), pybind11::arg("pos"));
+		cl.def("read", (void (eternity::xml_archive::*)(std::string, int &, int)) &eternity::xml_archive::read, "read (and put in value) a int with label key at position pos\n\nC++: eternity::xml_archive::read(std::string, int &, int) --> void", pybind11::arg("key"), pybind11::arg("value"), pybind11::arg("pos"));
+		cl.def("read", (void (eternity::xml_archive::*)(std::string, unsigned int &, int)) &eternity::xml_archive::read, "read (and put in value) a int with label key at position pos\n\nC++: eternity::xml_archive::read(std::string, unsigned int &, int) --> void", pybind11::arg("key"), pybind11::arg("value"), pybind11::arg("pos"));
+		cl.def("read", (void (eternity::xml_archive::*)(std::string, float &, int)) &eternity::xml_archive::read, "read (and put in value) a float with label key at position pos\n\nC++: eternity::xml_archive::read(std::string, float &, int) --> void", pybind11::arg("key"), pybind11::arg("value"), pybind11::arg("pos"));
+		cl.def("read", (void (eternity::xml_archive::*)(std::string, double &, int)) &eternity::xml_archive::read, "read (and put in value) a double with label key at position pos\n\nC++: eternity::xml_archive::read(std::string, double &, int) --> void", pybind11::arg("key"), pybind11::arg("value"), pybind11::arg("pos"));
+		cl.def("make_branch", (void (eternity::xml_archive::*)(std::string, class std::map<std::string, std::string >)) &eternity::xml_archive::make_branch, "Create a node (e.g. <name attributes>) and set it as current one (enter branch)\n\nC++: eternity::xml_archive::make_branch(std::string, class std::map<std::string, std::string >) --> void", pybind11::arg("name"), pybind11::arg("attributes"));
+		cl.def("enter_branch", (class std::map<std::string, std::string > (eternity::xml_archive::*)(std::string, unsigned long)) &eternity::xml_archive::enter_branch, "Enter in the node with tag equals to name and return its attributes\n\nC++: eternity::xml_archive::enter_branch(std::string, unsigned long) --> class std::map<std::string, std::string >", pybind11::arg("name"), pybind11::arg("pos"));
 		cl.def("leave_current_branch", (void (eternity::xml_archive::*)()) &eternity::xml_archive::leave_current_branch, "Leaves current node and returns to its parent\n\nC++: eternity::xml_archive::leave_current_branch() --> void");
 	}
 }
@@ -77,6 +485,10 @@ void bind_eternity_persist_xml(std::function< pybind11::module &(std::string con
 // File: tsaUtilityFunctions.cpp
 #include <ARMAView.hpp>
 #include <BaseView.hpp>
+#include <boost/numeric/ublas/functional.hpp>
+#include <boost/numeric/ublas/matrix.hpp>
+#include <boost/numeric/ublas/storage.hpp>
+#include <complex>
 #include <eternity/persist.hpp>
 #include <eternity/persist_xml.hpp>
 #include <functional>
@@ -103,11 +515,20 @@ void bind_eternity_persist_xml(std::function< pybind11::module &(std::string con
 
 void bind_tsaUtilityFunctions(std::function< pybind11::module &(std::string const &namespace_) > &M)
 {
+	// tsa::tsaVersion() file:tsaUtilityFunctions.hpp line:68
+	M("tsa").def("tsaVersion", (std::string (*)()) &tsa::tsaVersion, "C++: tsa::tsaVersion() --> std::string");
+
+	// tsa::CRATIO(struct std::complex<double>, struct std::complex<double>) file:tsaUtilityFunctions.hpp line:70
+	M("tsa").def("CRATIO", (struct std::complex<double> (*)(struct std::complex<double>, struct std::complex<double>)) &tsa::CRATIO, "C++: tsa::CRATIO(struct std::complex<double>, struct std::complex<double>) --> struct std::complex<double>", pybind11::arg("v1"), pybind11::arg("v2"));
+
 	{ // tsa::ParseParameterString file:tsaUtilityFunctions.hpp line:74
 		pybind11::class_<tsa::ParseParameterString, std::shared_ptr<tsa::ParseParameterString>> cl(M("tsa"), "ParseParameterString", "");
+		cl.def( pybind11::init<const std::string &>(), pybind11::arg("parlist") );
+
 		cl.def( pybind11::init( [](tsa::ParseParameterString const &o){ return new tsa::ParseParameterString(o); } ) );
 		cl.def("GetFloat", (double (tsa::ParseParameterString::*)(int)) &tsa::ParseParameterString::GetFloat, "C++: tsa::ParseParameterString::GetFloat(int) --> double", pybind11::arg("n"));
 		cl.def("GetInt", (int (tsa::ParseParameterString::*)(int)) &tsa::ParseParameterString::GetInt, "C++: tsa::ParseParameterString::GetInt(int) --> int", pybind11::arg("n"));
+		cl.def("GetString", (std::string (tsa::ParseParameterString::*)(int)) &tsa::ParseParameterString::GetString, "C++: tsa::ParseParameterString::GetString(int) --> std::string", pybind11::arg("n"));
 		cl.def("assign", (class tsa::ParseParameterString & (tsa::ParseParameterString::*)(const class tsa::ParseParameterString &)) &tsa::ParseParameterString::operator=, "C++: tsa::ParseParameterString::operator=(const class tsa::ParseParameterString &) --> class tsa::ParseParameterString &", pybind11::return_value_policy::automatic, pybind11::arg(""));
 	}
 	{ // tsa::MathUtils file:tsaUtilityFunctions.hpp line:140
@@ -182,10 +603,33 @@ void bind_tsaUtilityFunctions(std::function< pybind11::module &(std::string cons
 	// tsa::Tag(char *, int, const char *, const char *, unsigned int, unsigned int) file:tsaSerialize.hpp line:49
 	M("tsa").def("Tag", (char * (*)(char *, int, const char *, const char *, unsigned int, unsigned int)) &tsa::Tag, "C++: tsa::Tag(char *, int, const char *, const char *, unsigned int, unsigned int) --> char *", pybind11::return_value_policy::automatic, pybind11::arg("buffer"), pybind11::arg("n"), pybind11::arg("base"), pybind11::arg("rec"), pybind11::arg("i"), pybind11::arg("j"));
 
+	// tsa::LogInfo(const std::string &) file:tsaLog.hpp line:76
+	M("tsa").def("LogInfo", [](const class std::basic_string<char> & a0) -> void { return tsa::LogInfo(a0); }, "", pybind11::arg("s"));
+
+	// tsa::LogWarning(const std::string &) file:tsaLog.hpp line:78
+	M("tsa").def("LogWarning", [](const class std::basic_string<char> & a0) -> void { return tsa::LogWarning(a0); }, "", pybind11::arg("s"));
+
+	// tsa::LogSevere(const std::string &) file:tsaLog.hpp line:80
+	M("tsa").def("LogSevere", [](const class std::basic_string<char> & a0) -> void { return tsa::LogSevere(a0); }, "", pybind11::arg("s"));
+
+	// tsa::LogSevere(int, const std::string &) file:tsaLog.hpp line:81
+	M("tsa").def("LogSevere", [](int const & a0, const class std::basic_string<char> & a1) -> void { return tsa::LogSevere(a0, a1); }, "", pybind11::arg("lvl"), pybind11::arg("s"));
+
+	// tsa::LogFatal(const std::string &) file:tsaLog.hpp line:84
+	M("tsa").def("LogFatal", [](const class std::basic_string<char> & a0) -> void { return tsa::LogFatal(a0); }, "", pybind11::arg("s"));
+
+	// tsa::LogDebug(int, const std::string &) file:tsaLog.hpp line:85
+	M("tsa").def("LogDebug", [](int const & a0, const class std::basic_string<char> & a1) -> void { return tsa::LogDebug(a0, a1); }, "", pybind11::arg("lvl"), pybind11::arg("s"));
+
 	{ // tsa::BaseView file:BaseView.hpp line:73
 		pybind11::class_<tsa::BaseView, std::shared_ptr<tsa::BaseView>> cl(M("tsa"), "BaseView", "");
+		cl.def( pybind11::init( [](){ return new tsa::BaseView(); } ), "doc" );
+		cl.def( pybind11::init<const std::string &>(), pybind11::arg("aName") );
+
 		cl.def( pybind11::init( [](tsa::BaseView const &o){ return new tsa::BaseView(o); } ) );
 		cl.def("assign", (class tsa::BaseView & (tsa::BaseView::*)(const class tsa::BaseView &)) &tsa::BaseView::operator=, "Assignement operator\n\n \n The instance to be assigned from\n\n \n a reference to a new object\n\nC++: tsa::BaseView::operator=(const class tsa::BaseView &) --> class tsa::BaseView &", pybind11::return_value_policy::automatic, pybind11::arg("from"));
+		cl.def("GetName", (std::string (tsa::BaseView::*)()) &tsa::BaseView::GetName, "C++: tsa::BaseView::GetName() --> std::string");
+		cl.def("SetName", (void (tsa::BaseView::*)(const std::string &)) &tsa::BaseView::SetName, "C++: tsa::BaseView::SetName(const std::string &) --> void", pybind11::arg("aName"));
 	}
 	{ // tsa::ARMAView file:ARMAView.hpp line:83
 		pybind11::class_<tsa::ARMAView, std::shared_ptr<tsa::ARMAView>, tsa::BaseView> cl(M("tsa"), "ARMAView", "ARMA view: container for (vectorial) ARMA processes\n\n A view for ARMA parametrization. It defines a general (V)ARMA process, which\n can be written as\n \n\n\n\n where A,B are square matrix of dimension d equal to the dimension of the input\n and output vectors x,y.\n If the order of the part MA q is equal to zero the process is an AR process.\n If the order of the AR part p is equal to zero the process is an MA process.\n Note that the matrix \n\n is assumed to be the identity.");
@@ -293,7 +737,7 @@ void bind_LatticeView(std::function< pybind11::module &(std::string const &names
 
 void bind_FrameL(std::function< pybind11::module &(std::string const &namespace_) > &M)
 {
-	{ // FrameH file:FrameL.h line:161
+	{ // FrameH file:FrameL.h line:154
 		pybind11::class_<FrameH, std::shared_ptr<FrameH>> cl(M(""), "FrameH", "");
 		cl.def( pybind11::init( [](){ return new FrameH(); } ) );
 		cl.def_readwrite("run", &FrameH::run);
@@ -304,7 +748,7 @@ void bind_FrameL(std::function< pybind11::module &(std::string const &namespace_
 		cl.def_readwrite("ULeapS", &FrameH::ULeapS);
 		cl.def_readwrite("dt", &FrameH::dt);
 	}
-	{ // FrAdcData file:FrameL.h line:293
+	{ // FrAdcData file:FrameL.h line:287
 		pybind11::class_<FrAdcData, std::shared_ptr<FrAdcData>> cl(M(""), "FrAdcData", "");
 		cl.def( pybind11::init( [](){ return new FrAdcData(); } ) );
 		cl.def_readwrite("channelGroup", &FrAdcData::channelGroup);
@@ -318,7 +762,7 @@ void bind_FrameL(std::function< pybind11::module &(std::string const &namespace_
 		cl.def_readwrite("phase", &FrAdcData::phase);
 		cl.def_readwrite("dataValid", &FrAdcData::dataValid);
 	}
-	{ // FrFile file:FrameL.h line:510
+	{ // FrFile file:FrameL.h line:504
 		pybind11::class_<FrFile, std::shared_ptr<FrFile>> cl(M(""), "FrFile", "");
 		cl.def( pybind11::init( [](){ return new FrFile(); } ) );
 		cl.def_readwrite("inMemory", &FrFile::inMemory);
@@ -369,7 +813,7 @@ void bind_FrameL(std::function< pybind11::module &(std::string const &namespace_
 		cl.def_readwrite("lastSlope", &FrFile::lastSlope);
 		cl.def_readwrite("lastBias", &FrFile::lastBias);
 	}
-	{ // FrProcData file:FrameL.h line:749
+	{ // FrProcData file:FrameL.h line:744
 		pybind11::class_<FrProcData, std::shared_ptr<FrProcData>> cl(M(""), "FrProcData", "");
 		cl.def( pybind11::init( [](){ return new FrProcData(); } ) );
 		cl.def_readwrite("type", &FrProcData::type);
@@ -382,7 +826,7 @@ void bind_FrameL(std::function< pybind11::module &(std::string const &namespace_
 		cl.def_readwrite("BW", &FrProcData::BW);
 		cl.def_readwrite("nAuxParam", &FrProcData::nAuxParam);
 	}
-	{ // FrSimData file:FrameL.h line:908
+	{ // FrSimData file:FrameL.h line:903
 		pybind11::class_<FrSimData, std::shared_ptr<FrSimData>> cl(M(""), "FrSimData", "");
 		cl.def( pybind11::init( [](){ return new FrSimData(); } ) );
 		cl.def_readwrite("sampleRate", &FrSimData::sampleRate);
@@ -410,10 +854,8 @@ void bind_FrameL(std::function< pybind11::module &(std::string const &namespace_
 
 
 // File: SeqView.cpp
-#include <AlgoBase.hpp>
 #include <AlgoExceptions.hpp>
 #include <SeqView.hpp>
-#include <ViewUtil.hpp>
 #include <boost/numeric/ublas/functional.hpp>
 #include <boost/numeric/ublas/matrix.hpp>
 #include <boost/numeric/ublas/storage.hpp>
@@ -421,6 +863,7 @@ void bind_FrameL(std::function< pybind11::module &(std::string const &namespace_
 #include <iterator>
 #include <memory>
 #include <sstream> // __str__
+#include <stdexcept>
 #include <string>
 
 #include <pybind11/pybind11.h>
@@ -438,36 +881,19 @@ void bind_FrameL(std::function< pybind11::module &(std::string const &namespace_
 struct PyCallBack_tsa_bad_matrix_size : public tsa::bad_matrix_size {
 	using tsa::bad_matrix_size::bad_matrix_size;
 
-};
-
-// tsa::bad_vector_size file:AlgoExceptions.hpp line:98
-struct PyCallBack_tsa_bad_vector_size : public tsa::bad_vector_size {
-	using tsa::bad_vector_size::bad_vector_size;
-
-};
-
-// tsa::no_data_available file:AlgoExceptions.hpp line:122
-struct PyCallBack_tsa_no_data_available : public tsa::no_data_available {
-	using tsa::no_data_available::no_data_available;
-
-};
-
-// tsa::bad_value file:AlgoExceptions.hpp line:145
-struct PyCallBack_tsa_bad_value : public tsa::bad_value {
-	using tsa::bad_value::bad_value;
-
-};
-
-// tsa::missing_data file:AlgoExceptions.hpp line:168
-struct PyCallBack_tsa_missing_data : public tsa::missing_data {
-	using tsa::missing_data::missing_data;
-
-};
-
-// tsa::quality_change file:AlgoExceptions.hpp line:207
-struct PyCallBack_tsa_quality_change : public tsa::quality_change {
-	using tsa::quality_change::quality_change;
-
+	const char * what() const throw() override {
+		pybind11::gil_scoped_acquire gil;
+		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::bad_matrix_size *>(this), "what");
+		if (overload) {
+			auto o = overload.operator()<pybind11::return_value_policy::reference>();
+			if (pybind11::detail::cast_is_temporary_value_reference<const char *>::value) {
+				static pybind11::detail::override_caster_t<const char *> caster;
+				return pybind11::detail::cast_ref<const char *>(std::move(o), caster);
+			}
+			else return pybind11::detail::cast_safe<const char *>(std::move(o));
+		}
+		return logic_error::what();
+	}
 };
 
 void bind_SeqView(std::function< pybind11::module &(std::string const &namespace_) > &M)
@@ -475,6 +901,10 @@ void bind_SeqView(std::function< pybind11::module &(std::string const &namespace
 	{ // tsa::SeqView file:SeqView.hpp line:25
 		pybind11::class_<tsa::SeqView<double>, std::shared_ptr<tsa::SeqView<double>>, tsa::BaseView> cl(M("tsa"), "SeqView_double_t", "");
 		cl.def( pybind11::init( [](){ return new tsa::SeqView<double>(); } ) );
+		cl.def( pybind11::init( [](double const & a0, double const & a1, unsigned int const & a2){ return new tsa::SeqView<double>(a0, a1, a2); } ), "doc" , pybind11::arg("aStart"), pybind11::arg("aSampling"), pybind11::arg("ChannelSize"));
+		cl.def( pybind11::init( [](double const & a0, double const & a1, unsigned int const & a2, const class std::basic_string<char> & a3){ return new tsa::SeqView<double>(a0, a1, a2, a3); } ), "doc" , pybind11::arg("aStart"), pybind11::arg("aSampling"), pybind11::arg("ChannelSize"), pybind11::arg("aName"));
+		cl.def( pybind11::init<double, double, unsigned int, const std::string &, unsigned int>(), pybind11::arg("aStart"), pybind11::arg("aSampling"), pybind11::arg("ChannelSize"), pybind11::arg("aName"), pybind11::arg("ColumnDim") );
+
 		cl.def( pybind11::init( [](tsa::SeqView<double> const &o){ return new tsa::SeqView<double>(o); } ) );
 		cl.def("assign", (class tsa::SeqView<double> & (tsa::SeqView<double>::*)(const class tsa::SeqView<double> &)) &tsa::SeqView<double>::operator=, "C++: tsa::SeqView<double>::operator=(const class tsa::SeqView<double> &) --> class tsa::SeqView<double> &", pybind11::return_value_policy::automatic, pybind11::arg("from"));
 		cl.def("Clear", (void (tsa::SeqView<double>::*)()) &tsa::SeqView<double>::Clear, "C++: tsa::SeqView<double>::Clear() --> void");
@@ -492,7 +922,7 @@ void bind_SeqView(std::function< pybind11::module &(std::string const &namespace
 		cl.def("GetSize", (unsigned int (tsa::SeqView<double>::*)()) &tsa::SeqView<double>::GetSize, "C++: tsa::SeqView<double>::GetSize() --> unsigned int");
 		cl.def("GetChannels", (unsigned int (tsa::SeqView<double>::*)()) &tsa::SeqView<double>::GetChannels, "C++: tsa::SeqView<double>::GetChannels() --> unsigned int");
 		cl.def("GetX", (double (tsa::SeqView<double>::*)(unsigned int)) &tsa::SeqView<double>::GetX, "C++: tsa::SeqView<double>::GetX(unsigned int) --> double", pybind11::arg("k"));
-		cl.def("GetY", (double (tsa::SeqView<double>::*)(unsigned int, unsigned int)) &tsa::SeqView<double>::GetY, "C++: tsa::SeqView<double>::GetY(unsigned int, unsigned int) --> double", pybind11::arg("channel"), pybind11::arg("f"));
+		cl.def("GetY", (double & (tsa::SeqView<double>::*)(unsigned int, unsigned int)) &tsa::SeqView<double>::GetY, "C++: tsa::SeqView<double>::GetY(unsigned int, unsigned int) --> double &", pybind11::return_value_policy::automatic, pybind11::arg("channel"), pybind11::arg("f"));
 		cl.def("GetEnd", (double (tsa::SeqView<double>::*)()) &tsa::SeqView<double>::GetEnd, "C++: tsa::SeqView<double>::GetEnd() --> double");
 		cl.def("GetSlice", (double (tsa::SeqView<double>::*)()) &tsa::SeqView<double>::GetSlice, "C++: tsa::SeqView<double>::GetSlice() --> double");
 		cl.def("GetIndex", (int (tsa::SeqView<double>::*)(double)) &tsa::SeqView<double>::GetIndex, "C++: tsa::SeqView<double>::GetIndex(double) --> int", pybind11::arg("x"));
@@ -504,34 +934,209 @@ void bind_SeqView(std::function< pybind11::module &(std::string const &namespace
 		cl.def("SetData", (void (tsa::SeqView<double>::*)(struct FrVect *)) &tsa::SeqView<double>::SetData, "C++: tsa::SeqView<double>::SetData(struct FrVect *) --> void", pybind11::arg("frv"));
 		cl.def("SetDataF", (void (tsa::SeqView<double>::*)(struct FrVect *, double)) &tsa::SeqView<double>::SetDataF, "C++: tsa::SeqView<double>::SetDataF(struct FrVect *, double) --> void", pybind11::arg("frv"), pybind11::arg("offset"));
 		cl.def("assign", (class tsa::BaseView & (tsa::BaseView::*)(const class tsa::BaseView &)) &tsa::BaseView::operator=, "Assignement operator\n\n \n The instance to be assigned from\n\n \n a reference to a new object\n\nC++: tsa::BaseView::operator=(const class tsa::BaseView &) --> class tsa::BaseView &", pybind11::return_value_policy::automatic, pybind11::arg("from"));
+		cl.def("GetName", (std::string (tsa::BaseView::*)()) &tsa::BaseView::GetName, "C++: tsa::BaseView::GetName() --> std::string");
+		cl.def("SetName", (void (tsa::BaseView::*)(const std::string &)) &tsa::BaseView::SetName, "C++: tsa::BaseView::SetName(const std::string &) --> void", pybind11::arg("aName"));
+	}
+	{ // tsa::SeqView file:SeqView.hpp line:25
+		pybind11::class_<tsa::SeqView<std::complex<double>>, std::shared_ptr<tsa::SeqView<std::complex<double>>>, tsa::BaseView> cl(M("tsa"), "SeqView_std_complex_double_t", "");
+		cl.def( pybind11::init( [](){ return new tsa::SeqView<std::complex<double>>(); } ) );
+		cl.def( pybind11::init( [](double const & a0, double const & a1, unsigned int const & a2){ return new tsa::SeqView<std::complex<double>>(a0, a1, a2); } ), "doc" , pybind11::arg("aStart"), pybind11::arg("aSampling"), pybind11::arg("ChannelSize"));
+		cl.def( pybind11::init( [](double const & a0, double const & a1, unsigned int const & a2, const class std::basic_string<char> & a3){ return new tsa::SeqView<std::complex<double>>(a0, a1, a2, a3); } ), "doc" , pybind11::arg("aStart"), pybind11::arg("aSampling"), pybind11::arg("ChannelSize"), pybind11::arg("aName"));
+		cl.def( pybind11::init<double, double, unsigned int, const std::string &, unsigned int>(), pybind11::arg("aStart"), pybind11::arg("aSampling"), pybind11::arg("ChannelSize"), pybind11::arg("aName"), pybind11::arg("ColumnDim") );
+
+		cl.def( pybind11::init( [](tsa::SeqView<std::complex<double>> const &o){ return new tsa::SeqView<std::complex<double>>(o); } ) );
+		cl.def("assign", (class tsa::SeqView<struct std::complex<double> > & (tsa::SeqView<std::complex<double>>::*)(const class tsa::SeqView<struct std::complex<double> > &)) &tsa::SeqView<std::complex<double>>::operator=, "C++: tsa::SeqView<std::complex<double>>::operator=(const class tsa::SeqView<struct std::complex<double> > &) --> class tsa::SeqView<struct std::complex<double> > &", pybind11::return_value_policy::automatic, pybind11::arg("from"));
+		cl.def("Clear", (void (tsa::SeqView<std::complex<double>>::*)()) &tsa::SeqView<std::complex<double>>::Clear, "C++: tsa::SeqView<std::complex<double>>::Clear() --> void");
+		cl.def("MoveFrame", (void (tsa::SeqView<std::complex<double>>::*)(int)) &tsa::SeqView<std::complex<double>>::MoveFrame, "C++: tsa::SeqView<std::complex<double>>::MoveFrame(int) --> void", pybind11::arg("n"));
+		cl.def("Write", (void (tsa::SeqView<std::complex<double>>::*)(int)) &tsa::SeqView<std::complex<double>>::Write, "C++: tsa::SeqView<std::complex<double>>::Write(int) --> void", pybind11::arg("fd"));
+		cl.def("Read", (void (tsa::SeqView<std::complex<double>>::*)(int)) &tsa::SeqView<std::complex<double>>::Read, "C++: tsa::SeqView<std::complex<double>>::Read(int) --> void", pybind11::arg("fd"));
+		cl.def("__call__", (struct std::complex<double> & (tsa::SeqView<std::complex<double>>::*)(unsigned int)) &tsa::SeqView<std::complex<double>>::operator(), "C++: tsa::SeqView<std::complex<double>>::operator()(unsigned int) --> struct std::complex<double> &", pybind11::return_value_policy::automatic, pybind11::arg("f"));
+		cl.def("get", (struct std::complex<double> (tsa::SeqView<std::complex<double>>::*)(double)) &tsa::SeqView<std::complex<double>>::get, "C++: tsa::SeqView<std::complex<double>>::get(double) --> struct std::complex<double>", pybind11::arg("x"));
+		cl.def("get", (struct std::complex<double> (tsa::SeqView<std::complex<double>>::*)(unsigned int, double)) &tsa::SeqView<std::complex<double>>::get, "C++: tsa::SeqView<std::complex<double>>::get(unsigned int, double) --> struct std::complex<double>", pybind11::arg("c"), pybind11::arg("x"));
+		cl.def("__call__", (struct std::complex<double> & (tsa::SeqView<std::complex<double>>::*)(unsigned int, unsigned int)) &tsa::SeqView<std::complex<double>>::operator(), "C++: tsa::SeqView<std::complex<double>>::operator()(unsigned int, unsigned int) --> struct std::complex<double> &", pybind11::return_value_policy::automatic, pybind11::arg("channel"), pybind11::arg("f"));
+		cl.def("asVector", (struct std::complex<double> & (tsa::SeqView<std::complex<double>>::*)(unsigned int, unsigned int)) &tsa::SeqView<std::complex<double>>::asVector, "C++: tsa::SeqView<std::complex<double>>::asVector(unsigned int, unsigned int) --> struct std::complex<double> &", pybind11::return_value_policy::automatic, pybind11::arg("channel"), pybind11::arg("f"));
+		cl.def("GetScale", (double (tsa::SeqView<std::complex<double>>::*)()) &tsa::SeqView<std::complex<double>>::GetScale, "C++: tsa::SeqView<std::complex<double>>::GetScale() --> double");
+		cl.def("GetStart", (double (tsa::SeqView<std::complex<double>>::*)()) &tsa::SeqView<std::complex<double>>::GetStart, "C++: tsa::SeqView<std::complex<double>>::GetStart() --> double");
+		cl.def("GetSampling", (double (tsa::SeqView<std::complex<double>>::*)()) &tsa::SeqView<std::complex<double>>::GetSampling, "C++: tsa::SeqView<std::complex<double>>::GetSampling() --> double");
+		cl.def("GetSize", (unsigned int (tsa::SeqView<std::complex<double>>::*)()) &tsa::SeqView<std::complex<double>>::GetSize, "C++: tsa::SeqView<std::complex<double>>::GetSize() --> unsigned int");
+		cl.def("GetChannels", (unsigned int (tsa::SeqView<std::complex<double>>::*)()) &tsa::SeqView<std::complex<double>>::GetChannels, "C++: tsa::SeqView<std::complex<double>>::GetChannels() --> unsigned int");
+		cl.def("GetX", (double (tsa::SeqView<std::complex<double>>::*)(unsigned int)) &tsa::SeqView<std::complex<double>>::GetX, "C++: tsa::SeqView<std::complex<double>>::GetX(unsigned int) --> double", pybind11::arg("k"));
+		cl.def("GetY", (struct std::complex<double> & (tsa::SeqView<std::complex<double>>::*)(unsigned int, unsigned int)) &tsa::SeqView<std::complex<double>>::GetY, "C++: tsa::SeqView<std::complex<double>>::GetY(unsigned int, unsigned int) --> struct std::complex<double> &", pybind11::return_value_policy::automatic, pybind11::arg("channel"), pybind11::arg("f"));
+		cl.def("GetEnd", (double (tsa::SeqView<std::complex<double>>::*)()) &tsa::SeqView<std::complex<double>>::GetEnd, "C++: tsa::SeqView<std::complex<double>>::GetEnd() --> double");
+		cl.def("GetSlice", (double (tsa::SeqView<std::complex<double>>::*)()) &tsa::SeqView<std::complex<double>>::GetSlice, "C++: tsa::SeqView<std::complex<double>>::GetSlice() --> double");
+		cl.def("GetIndex", (int (tsa::SeqView<std::complex<double>>::*)(double)) &tsa::SeqView<std::complex<double>>::GetIndex, "C++: tsa::SeqView<std::complex<double>>::GetIndex(double) --> int", pybind11::arg("x"));
+		cl.def("SetScale", (double (tsa::SeqView<std::complex<double>>::*)(double)) &tsa::SeqView<std::complex<double>>::SetScale, "C++: tsa::SeqView<std::complex<double>>::SetScale(double) --> double", pybind11::arg("scale"));
+		cl.def("SetStart", (double (tsa::SeqView<std::complex<double>>::*)(double)) &tsa::SeqView<std::complex<double>>::SetStart, "C++: tsa::SeqView<std::complex<double>>::SetStart(double) --> double", pybind11::arg("start"));
+		cl.def("SetSampling", (double (tsa::SeqView<std::complex<double>>::*)(double)) &tsa::SeqView<std::complex<double>>::SetSampling, "C++: tsa::SeqView<std::complex<double>>::SetSampling(double) --> double", pybind11::arg("sampling"));
+		cl.def("Fill", (void (tsa::SeqView<std::complex<double>>::*)(struct std::complex<double>)) &tsa::SeqView<std::complex<double>>::Fill, "C++: tsa::SeqView<std::complex<double>>::Fill(struct std::complex<double>) --> void", pybind11::arg("v"));
+		cl.def("FillPoint", (void (tsa::SeqView<std::complex<double>>::*)(unsigned int, unsigned int, struct std::complex<double>)) &tsa::SeqView<std::complex<double>>::FillPoint, "C++: tsa::SeqView<std::complex<double>>::FillPoint(unsigned int, unsigned int, struct std::complex<double>) --> void", pybind11::arg("i"), pybind11::arg("j"), pybind11::arg("v"));
+		cl.def("SetData", (void (tsa::SeqView<std::complex<double>>::*)(struct FrVect *)) &tsa::SeqView<std::complex<double>>::SetData, "C++: tsa::SeqView<std::complex<double>>::SetData(struct FrVect *) --> void", pybind11::arg("frv"));
+		cl.def("SetDataF", (void (tsa::SeqView<std::complex<double>>::*)(struct FrVect *, double)) &tsa::SeqView<std::complex<double>>::SetDataF, "C++: tsa::SeqView<std::complex<double>>::SetDataF(struct FrVect *, double) --> void", pybind11::arg("frv"), pybind11::arg("offset"));
+		cl.def("assign", (class tsa::BaseView & (tsa::BaseView::*)(const class tsa::BaseView &)) &tsa::BaseView::operator=, "Assignement operator\n\n \n The instance to be assigned from\n\n \n a reference to a new object\n\nC++: tsa::BaseView::operator=(const class tsa::BaseView &) --> class tsa::BaseView &", pybind11::return_value_policy::automatic, pybind11::arg("from"));
+		cl.def("GetName", (std::string (tsa::BaseView::*)()) &tsa::BaseView::GetName, "C++: tsa::BaseView::GetName() --> std::string");
+		cl.def("SetName", (void (tsa::BaseView::*)(const std::string &)) &tsa::BaseView::SetName, "C++: tsa::BaseView::SetName(const std::string &) --> void", pybind11::arg("aName"));
 	}
 	{ // tsa::bad_matrix_size file:AlgoExceptions.hpp line:72
-		pybind11::class_<tsa::bad_matrix_size, std::shared_ptr<tsa::bad_matrix_size>, PyCallBack_tsa_bad_matrix_size> cl(M("tsa"), "bad_matrix_size", "This exception should be used when a matrix argument of an algorithm\n   has an incorrect size. It contains information about the correct expected size.");
+		pybind11::class_<tsa::bad_matrix_size, std::shared_ptr<tsa::bad_matrix_size>, PyCallBack_tsa_bad_matrix_size, std::invalid_argument> cl(M("tsa"), "bad_matrix_size", "This exception should be used when a matrix argument of an algorithm\n   has an incorrect size. It contains information about the correct expected size.");
+		cl.def( pybind11::init<const std::string &>(), pybind11::arg("msg") );
+
 		cl.def( pybind11::init( [](PyCallBack_tsa_bad_matrix_size const &o){ return new PyCallBack_tsa_bad_matrix_size(o); } ) );
 		cl.def( pybind11::init( [](tsa::bad_matrix_size const &o){ return new tsa::bad_matrix_size(o); } ) );
 		cl.def("assign", (class tsa::bad_matrix_size & (tsa::bad_matrix_size::*)(const class tsa::bad_matrix_size &)) &tsa::bad_matrix_size::operator=, "C++: tsa::bad_matrix_size::operator=(const class tsa::bad_matrix_size &) --> class tsa::bad_matrix_size &", pybind11::return_value_policy::automatic, pybind11::arg(""));
 	}
+}
+
+
+// File: AlgoExceptions.cpp
+#include <AlgoBase.hpp>
+#include <AlgoExceptions.hpp>
+#include <SeqView.hpp>
+#include <ViewUtil.hpp>
+#include <boost/numeric/ublas/functional.hpp>
+#include <boost/numeric/ublas/matrix.hpp>
+#include <boost/numeric/ublas/storage.hpp>
+#include <complex>
+#include <iterator>
+#include <memory>
+#include <sstream> // __str__
+#include <stdexcept>
+#include <string>
+
+#include <pybind11/pybind11.h>
+#include <functional>
+#include <string>
+
+#ifndef BINDER_PYBIND11_TYPE_CASTER
+	#define BINDER_PYBIND11_TYPE_CASTER
+	PYBIND11_DECLARE_HOLDER_TYPE(T, std::shared_ptr<T>)
+	PYBIND11_DECLARE_HOLDER_TYPE(T, T*)
+	PYBIND11_MAKE_OPAQUE(std::shared_ptr<void>)
+#endif
+
+// tsa::bad_vector_size file:AlgoExceptions.hpp line:98
+struct PyCallBack_tsa_bad_vector_size : public tsa::bad_vector_size {
+	using tsa::bad_vector_size::bad_vector_size;
+
+	const char * what() const throw() override {
+		pybind11::gil_scoped_acquire gil;
+		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::bad_vector_size *>(this), "what");
+		if (overload) {
+			auto o = overload.operator()<pybind11::return_value_policy::reference>();
+			if (pybind11::detail::cast_is_temporary_value_reference<const char *>::value) {
+				static pybind11::detail::override_caster_t<const char *> caster;
+				return pybind11::detail::cast_ref<const char *>(std::move(o), caster);
+			}
+			else return pybind11::detail::cast_safe<const char *>(std::move(o));
+		}
+		return logic_error::what();
+	}
+};
+
+// tsa::no_data_available file:AlgoExceptions.hpp line:122
+struct PyCallBack_tsa_no_data_available : public tsa::no_data_available {
+	using tsa::no_data_available::no_data_available;
+
+	const char * what() const throw() override {
+		pybind11::gil_scoped_acquire gil;
+		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::no_data_available *>(this), "what");
+		if (overload) {
+			auto o = overload.operator()<pybind11::return_value_policy::reference>();
+			if (pybind11::detail::cast_is_temporary_value_reference<const char *>::value) {
+				static pybind11::detail::override_caster_t<const char *> caster;
+				return pybind11::detail::cast_ref<const char *>(std::move(o), caster);
+			}
+			else return pybind11::detail::cast_safe<const char *>(std::move(o));
+		}
+		return runtime_error::what();
+	}
+};
+
+// tsa::bad_value file:AlgoExceptions.hpp line:145
+struct PyCallBack_tsa_bad_value : public tsa::bad_value {
+	using tsa::bad_value::bad_value;
+
+	const char * what() const throw() override {
+		pybind11::gil_scoped_acquire gil;
+		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::bad_value *>(this), "what");
+		if (overload) {
+			auto o = overload.operator()<pybind11::return_value_policy::reference>();
+			if (pybind11::detail::cast_is_temporary_value_reference<const char *>::value) {
+				static pybind11::detail::override_caster_t<const char *> caster;
+				return pybind11::detail::cast_ref<const char *>(std::move(o), caster);
+			}
+			else return pybind11::detail::cast_safe<const char *>(std::move(o));
+		}
+		return runtime_error::what();
+	}
+};
+
+// tsa::missing_data file:AlgoExceptions.hpp line:168
+struct PyCallBack_tsa_missing_data : public tsa::missing_data {
+	using tsa::missing_data::missing_data;
+
+	const char * what() const throw() override {
+		pybind11::gil_scoped_acquire gil;
+		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::missing_data *>(this), "what");
+		if (overload) {
+			auto o = overload.operator()<pybind11::return_value_policy::reference>();
+			if (pybind11::detail::cast_is_temporary_value_reference<const char *>::value) {
+				static pybind11::detail::override_caster_t<const char *> caster;
+				return pybind11::detail::cast_ref<const char *>(std::move(o), caster);
+			}
+			else return pybind11::detail::cast_safe<const char *>(std::move(o));
+		}
+		return runtime_error::what();
+	}
+};
+
+// tsa::quality_change file:AlgoExceptions.hpp line:207
+struct PyCallBack_tsa_quality_change : public tsa::quality_change {
+	using tsa::quality_change::quality_change;
+
+	const char * what() const throw() override {
+		pybind11::gil_scoped_acquire gil;
+		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::quality_change *>(this), "what");
+		if (overload) {
+			auto o = overload.operator()<pybind11::return_value_policy::reference>();
+			if (pybind11::detail::cast_is_temporary_value_reference<const char *>::value) {
+				static pybind11::detail::override_caster_t<const char *> caster;
+				return pybind11::detail::cast_ref<const char *>(std::move(o), caster);
+			}
+			else return pybind11::detail::cast_safe<const char *>(std::move(o));
+		}
+		return runtime_error::what();
+	}
+};
+
+void bind_AlgoExceptions(std::function< pybind11::module &(std::string const &namespace_) > &M)
+{
 	{ // tsa::bad_vector_size file:AlgoExceptions.hpp line:98
-		pybind11::class_<tsa::bad_vector_size, std::shared_ptr<tsa::bad_vector_size>, PyCallBack_tsa_bad_vector_size> cl(M("tsa"), "bad_vector_size", "This exception should be used when a vector argument of an algorithm\n   has an incorrect size. It contains information about the correct expected size.");
+		pybind11::class_<tsa::bad_vector_size, std::shared_ptr<tsa::bad_vector_size>, PyCallBack_tsa_bad_vector_size, std::invalid_argument> cl(M("tsa"), "bad_vector_size", "This exception should be used when a vector argument of an algorithm\n   has an incorrect size. It contains information about the correct expected size.");
+		cl.def( pybind11::init<const std::string &>(), pybind11::arg("msg") );
+
 		cl.def( pybind11::init( [](PyCallBack_tsa_bad_vector_size const &o){ return new PyCallBack_tsa_bad_vector_size(o); } ) );
 		cl.def( pybind11::init( [](tsa::bad_vector_size const &o){ return new tsa::bad_vector_size(o); } ) );
 		cl.def("assign", (class tsa::bad_vector_size & (tsa::bad_vector_size::*)(const class tsa::bad_vector_size &)) &tsa::bad_vector_size::operator=, "C++: tsa::bad_vector_size::operator=(const class tsa::bad_vector_size &) --> class tsa::bad_vector_size &", pybind11::return_value_policy::automatic, pybind11::arg(""));
 	}
 	{ // tsa::no_data_available file:AlgoExceptions.hpp line:122
-		pybind11::class_<tsa::no_data_available, std::shared_ptr<tsa::no_data_available>, PyCallBack_tsa_no_data_available> cl(M("tsa"), "no_data_available", "This exception should be used when some processed data cannot be returned");
+		pybind11::class_<tsa::no_data_available, std::shared_ptr<tsa::no_data_available>, PyCallBack_tsa_no_data_available, std::runtime_error> cl(M("tsa"), "no_data_available", "This exception should be used when some processed data cannot be returned");
+		cl.def( pybind11::init<const std::string &>(), pybind11::arg("msg") );
+
 		cl.def( pybind11::init( [](PyCallBack_tsa_no_data_available const &o){ return new PyCallBack_tsa_no_data_available(o); } ) );
 		cl.def( pybind11::init( [](tsa::no_data_available const &o){ return new tsa::no_data_available(o); } ) );
 		cl.def("assign", (class tsa::no_data_available & (tsa::no_data_available::*)(const class tsa::no_data_available &)) &tsa::no_data_available::operator=, "C++: tsa::no_data_available::operator=(const class tsa::no_data_available &) --> class tsa::no_data_available &", pybind11::return_value_policy::automatic, pybind11::arg(""));
 	}
 	{ // tsa::bad_value file:AlgoExceptions.hpp line:145
-		pybind11::class_<tsa::bad_value, std::shared_ptr<tsa::bad_value>, PyCallBack_tsa_bad_value> cl(M("tsa"), "bad_value", "This exception should be used when some processed data cannot be returned");
+		pybind11::class_<tsa::bad_value, std::shared_ptr<tsa::bad_value>, PyCallBack_tsa_bad_value, std::runtime_error> cl(M("tsa"), "bad_value", "This exception should be used when some processed data cannot be returned");
 		cl.def( pybind11::init( [](){ return new tsa::bad_value(); }, [](){ return new PyCallBack_tsa_bad_value(); } ) );
 		cl.def( pybind11::init( [](PyCallBack_tsa_bad_value const &o){ return new PyCallBack_tsa_bad_value(o); } ) );
 		cl.def( pybind11::init( [](tsa::bad_value const &o){ return new tsa::bad_value(o); } ) );
 		cl.def("assign", (class tsa::bad_value & (tsa::bad_value::*)(const class tsa::bad_value &)) &tsa::bad_value::operator=, "C++: tsa::bad_value::operator=(const class tsa::bad_value &) --> class tsa::bad_value &", pybind11::return_value_policy::automatic, pybind11::arg(""));
 	}
 	{ // tsa::missing_data file:AlgoExceptions.hpp line:168
-		pybind11::class_<tsa::missing_data, std::shared_ptr<tsa::missing_data>, PyCallBack_tsa_missing_data> cl(M("tsa"), "missing_data", "This exception should be used when some frames are missing");
+		pybind11::class_<tsa::missing_data, std::shared_ptr<tsa::missing_data>, PyCallBack_tsa_missing_data, std::runtime_error> cl(M("tsa"), "missing_data", "This exception should be used when some frames are missing");
+		cl.def( pybind11::init<const std::string &, double, double, unsigned int>(), pybind11::arg("msg"), pybind11::arg("miss_start"), pybind11::arg("miss_end"), pybind11::arg("channel") );
+
 		cl.def( pybind11::init( [](PyCallBack_tsa_missing_data const &o){ return new PyCallBack_tsa_missing_data(o); } ) );
 		cl.def( pybind11::init( [](tsa::missing_data const &o){ return new tsa::missing_data(o); } ) );
 		cl.def("Start", (double (tsa::missing_data::*)()) &tsa::missing_data::Start, "C++: tsa::missing_data::Start() --> double");
@@ -540,7 +1145,9 @@ void bind_SeqView(std::function< pybind11::module &(std::string const &namespace
 		cl.def("assign", (class tsa::missing_data & (tsa::missing_data::*)(const class tsa::missing_data &)) &tsa::missing_data::operator=, "C++: tsa::missing_data::operator=(const class tsa::missing_data &) --> class tsa::missing_data &", pybind11::return_value_policy::automatic, pybind11::arg(""));
 	}
 	{ // tsa::quality_change file:AlgoExceptions.hpp line:207
-		pybind11::class_<tsa::quality_change, std::shared_ptr<tsa::quality_change>, PyCallBack_tsa_quality_change> cl(M("tsa"), "quality_change", "This exception should be used when data quality change");
+		pybind11::class_<tsa::quality_change, std::shared_ptr<tsa::quality_change>, PyCallBack_tsa_quality_change, std::runtime_error> cl(M("tsa"), "quality_change", "This exception should be used when data quality change");
+		cl.def( pybind11::init<const std::string &, double, unsigned int, unsigned int>(), pybind11::arg("msg"), pybind11::arg("change_time"), pybind11::arg("old_flag"), pybind11::arg("new_flag") );
+
 		cl.def( pybind11::init( [](PyCallBack_tsa_quality_change const &o){ return new PyCallBack_tsa_quality_change(o); } ) );
 		cl.def( pybind11::init( [](tsa::quality_change const &o){ return new tsa::quality_change(o); } ) );
 		cl.def("EventTime", (double (tsa::quality_change::*)()) &tsa::quality_change::EventTime, "C++: tsa::quality_change::EventTime() --> double");
@@ -560,8 +1167,10 @@ void bind_SeqView(std::function< pybind11::module &(std::string const &namespace
 		cl.def_static("Join", (void (*)(class tsa::SeqView<double> &, class tsa::SeqView<double> &, class tsa::SeqView<double> &)) &tsa::ViewUtil::Join, "C++: tsa::ViewUtil::Join(class tsa::SeqView<double> &, class tsa::SeqView<double> &, class tsa::SeqView<double> &) --> void", pybind11::arg("s1"), pybind11::arg("s2"), pybind11::arg("joined"));
 		cl.def_static("Append", (void (*)(class tsa::SeqView<double> &, class tsa::SeqView<double> &)) &tsa::ViewUtil::Append, "C++: tsa::ViewUtil::Append(class tsa::SeqView<double> &, class tsa::SeqView<double> &) --> void", pybind11::arg("s1"), pybind11::arg("s2"));
 		cl.def_static("Print", (void (*)(class tsa::SeqView<double> &, char *)) &tsa::ViewUtil::Print, "C++: tsa::ViewUtil::Print(class tsa::SeqView<double> &, char *) --> void", pybind11::arg("s1"), pybind11::arg("filename"));
+		cl.def_static("Print", (void (*)(class tsa::SeqView<struct std::complex<double> > &, char *)) &tsa::ViewUtil::Print, "C++: tsa::ViewUtil::Print(class tsa::SeqView<struct std::complex<double> > &, char *) --> void", pybind11::arg("s1"), pybind11::arg("filename"));
 		cl.def_static("Print", (void (*)(class tsa::SeqView<double> &)) &tsa::ViewUtil::Print, "C++: tsa::ViewUtil::Print(class tsa::SeqView<double> &) --> void", pybind11::arg("s1"));
 		cl.def_static("Range", (void (*)(class tsa::SeqView<double> &, int, int)) &tsa::ViewUtil::Range, "C++: tsa::ViewUtil::Range(class tsa::SeqView<double> &, int, int) --> void", pybind11::arg("s1"), pybind11::arg("l"), pybind11::arg("m"));
+		cl.def_static("Range", (void (*)(class tsa::SeqView<struct std::complex<double> > &, int, int)) &tsa::ViewUtil::Range, "C++: tsa::ViewUtil::Range(class tsa::SeqView<struct std::complex<double> > &, int, int) --> void", pybind11::arg("s1"), pybind11::arg("l"), pybind11::arg("m"));
 		cl.def_static("Range", (void (*)(class tsa::SeqView<double> &, class tsa::SeqView<double> &, int, int)) &tsa::ViewUtil::Range, "C++: tsa::ViewUtil::Range(class tsa::SeqView<double> &, class tsa::SeqView<double> &, int, int) --> void", pybind11::arg("s1"), pybind11::arg("s2"), pybind11::arg("l"), pybind11::arg("m"));
 		cl.def_static("LeftShift", (void (*)(class tsa::SeqView<double> &, class tsa::SeqView<double> &)) &tsa::ViewUtil::LeftShift, "C++: tsa::ViewUtil::LeftShift(class tsa::SeqView<double> &, class tsa::SeqView<double> &) --> void", pybind11::arg("seq"), pybind11::arg("ins"));
 		cl.def_static("PadLeft", [](class tsa::SeqView<double> & a0, class tsa::SeqView<double> & a1, unsigned int const & a2) -> void { return tsa::ViewUtil::PadLeft(a0, a1, a2); }, "", pybind11::arg("src"), pybind11::arg("dst"), pybind11::arg("size"));
@@ -575,12 +1184,29 @@ void bind_SeqView(std::function< pybind11::module &(std::string const &namespace
 		cl.def_static("FillSeq", (void (*)(class tsa::SeqView<double> &, unsigned int, unsigned int, double)) &tsa::ViewUtil::FillSeq, "C++: tsa::ViewUtil::FillSeq(class tsa::SeqView<double> &, unsigned int, unsigned int, double) --> void", pybind11::arg("ts"), pybind11::arg("i"), pybind11::arg("j"), pybind11::arg("value"));
 		cl.def_static("PeekRange", (bool (*)(class tsa::SeqView<double> &, class tsa::SeqView<double> &, double, double)) &tsa::ViewUtil::PeekRange, "Extract from the src view the data included in a given time range, tstart<=t<=tend,\n and put it in the dst view. \n\n \n the source view\n \n\n the destination view\n \n\n start time of the range\n \n\n end time for the range\n\n \n true if the range is fully inside src, false otherwise\n\nC++: tsa::ViewUtil::PeekRange(class tsa::SeqView<double> &, class tsa::SeqView<double> &, double, double) --> bool", pybind11::arg("src"), pybind11::arg("dst"), pybind11::arg("tstart"), pybind11::arg("tend"));
 		cl.def_static("Sum", (void (*)(class tsa::SeqView<double> &, double, class tsa::SeqView<double> &)) &tsa::ViewUtil::Sum, "C++: tsa::ViewUtil::Sum(class tsa::SeqView<double> &, double, class tsa::SeqView<double> &) --> void", pybind11::arg("res"), pybind11::arg("scale"), pybind11::arg("ts"));
+		cl.def_static("Sum", (void (*)(class tsa::SeqView<struct std::complex<double> > &, double, class tsa::SeqView<struct std::complex<double> > &)) &tsa::ViewUtil::Sum, "C++: tsa::ViewUtil::Sum(class tsa::SeqView<struct std::complex<double> > &, double, class tsa::SeqView<struct std::complex<double> > &) --> void", pybind11::arg("res"), pybind11::arg("scale"), pybind11::arg("ts"));
 		cl.def_static("Inverse", (void (*)(class tsa::SeqView<double> &, class tsa::SeqView<double> &)) &tsa::ViewUtil::Inverse, "C++: tsa::ViewUtil::Inverse(class tsa::SeqView<double> &, class tsa::SeqView<double> &) --> void", pybind11::arg("ts1"), pybind11::arg("res"));
 		cl.def_static("AffineTransformation", (void (*)(class tsa::SeqView<double> &, double, double, class tsa::SeqView<double> &)) &tsa::ViewUtil::AffineTransformation, "C++: tsa::ViewUtil::AffineTransformation(class tsa::SeqView<double> &, double, double, class tsa::SeqView<double> &) --> void", pybind11::arg("ts1"), pybind11::arg("a"), pybind11::arg("b"), pybind11::arg("res"));
 		cl.def_static("Ratio", (void (*)(class tsa::SeqView<double> &, class tsa::SeqView<double> &, class tsa::SeqView<double> &)) &tsa::ViewUtil::Ratio, "C++: tsa::ViewUtil::Ratio(class tsa::SeqView<double> &, class tsa::SeqView<double> &, class tsa::SeqView<double> &) --> void", pybind11::arg("ts1"), pybind11::arg("ts2"), pybind11::arg("res"));
+		cl.def_static("Ratio", (void (*)(class tsa::SeqView<struct std::complex<double> > &, class tsa::SeqView<struct std::complex<double> > &, class tsa::SeqView<struct std::complex<double> > &)) &tsa::ViewUtil::Ratio, "C++: tsa::ViewUtil::Ratio(class tsa::SeqView<struct std::complex<double> > &, class tsa::SeqView<struct std::complex<double> > &, class tsa::SeqView<struct std::complex<double> > &) --> void", pybind11::arg("ts1"), pybind11::arg("ts2"), pybind11::arg("res"));
+		cl.def_static("Ratio", (void (*)(class tsa::SeqView<double> &, class tsa::SeqView<struct std::complex<double> > &, class tsa::SeqView<struct std::complex<double> > &)) &tsa::ViewUtil::Ratio, "C++: tsa::ViewUtil::Ratio(class tsa::SeqView<double> &, class tsa::SeqView<struct std::complex<double> > &, class tsa::SeqView<struct std::complex<double> > &) --> void", pybind11::arg("ts1"), pybind11::arg("ts2"), pybind11::arg("res"));
+		cl.def_static("Ratio", (void (*)(class tsa::SeqView<struct std::complex<double> > &, class tsa::SeqView<double> &, class tsa::SeqView<struct std::complex<double> > &)) &tsa::ViewUtil::Ratio, "C++: tsa::ViewUtil::Ratio(class tsa::SeqView<struct std::complex<double> > &, class tsa::SeqView<double> &, class tsa::SeqView<struct std::complex<double> > &) --> void", pybind11::arg("ts1"), pybind11::arg("ts2"), pybind11::arg("res"));
+		cl.def_static("ComplexToPolar", (void (*)(class tsa::SeqView<struct std::complex<double> > &, class tsa::SeqView<double> &)) &tsa::ViewUtil::ComplexToPolar, "C++: tsa::ViewUtil::ComplexToPolar(class tsa::SeqView<struct std::complex<double> > &, class tsa::SeqView<double> &) --> void", pybind11::arg("ts1"), pybind11::arg("ts2"));
+		cl.def_static("Norm", (void (*)(class tsa::SeqView<struct std::complex<double> > &, class tsa::SeqView<double> &)) &tsa::ViewUtil::Norm, "C++: tsa::ViewUtil::Norm(class tsa::SeqView<struct std::complex<double> > &, class tsa::SeqView<double> &) --> void", pybind11::arg("ts1"), pybind11::arg("res"));
+		cl.def_static("Abs", (void (*)(class tsa::SeqView<struct std::complex<double> > &, class tsa::SeqView<double> &)) &tsa::ViewUtil::Abs, "C++: tsa::ViewUtil::Abs(class tsa::SeqView<struct std::complex<double> > &, class tsa::SeqView<double> &) --> void", pybind11::arg("ts1"), pybind11::arg("res"));
+		cl.def_static("Abs2", (void (*)(class tsa::SeqView<struct std::complex<double> > &, class tsa::SeqView<double> &)) &tsa::ViewUtil::Abs2, "C++: tsa::ViewUtil::Abs2(class tsa::SeqView<struct std::complex<double> > &, class tsa::SeqView<double> &) --> void", pybind11::arg("ts1"), pybind11::arg("res"));
 		cl.def_static("Prod", (void (*)(class tsa::SeqView<double> &, class tsa::SeqView<double> &, class tsa::SeqView<double> &)) &tsa::ViewUtil::Prod, "C++: tsa::ViewUtil::Prod(class tsa::SeqView<double> &, class tsa::SeqView<double> &, class tsa::SeqView<double> &) --> void", pybind11::arg("ts1"), pybind11::arg("ts2"), pybind11::arg("res"));
+		cl.def_static("Prod", (void (*)(class tsa::SeqView<double> &, class tsa::SeqView<struct std::complex<double> > &, class tsa::SeqView<struct std::complex<double> > &)) &tsa::ViewUtil::Prod, "C++: tsa::ViewUtil::Prod(class tsa::SeqView<double> &, class tsa::SeqView<struct std::complex<double> > &, class tsa::SeqView<struct std::complex<double> > &) --> void", pybind11::arg("ts1"), pybind11::arg("ts2"), pybind11::arg("res"));
+		cl.def_static("ProdConj", (void (*)(class tsa::SeqView<struct std::complex<double> > &, class tsa::SeqView<struct std::complex<double> > &, class tsa::SeqView<struct std::complex<double> > &)) &tsa::ViewUtil::ProdConj, "C++: tsa::ViewUtil::ProdConj(class tsa::SeqView<struct std::complex<double> > &, class tsa::SeqView<struct std::complex<double> > &, class tsa::SeqView<struct std::complex<double> > &) --> void", pybind11::arg("ts1"), pybind11::arg("ts2"), pybind11::arg("res"));
+		cl.def_static("Phase", (void (*)(class tsa::SeqView<struct std::complex<double> > &, class tsa::SeqView<struct std::complex<double> > &, class tsa::SeqView<struct std::complex<double> > &)) &tsa::ViewUtil::Phase, "C++: tsa::ViewUtil::Phase(class tsa::SeqView<struct std::complex<double> > &, class tsa::SeqView<struct std::complex<double> > &, class tsa::SeqView<struct std::complex<double> > &) --> void", pybind11::arg("ts1"), pybind11::arg("ts2"), pybind11::arg("res"));
+		cl.def_static("BlockSum", (void (*)(class tsa::SeqView<struct std::complex<double> > &, class tsa::SeqView<struct std::complex<double> > &, int)) &tsa::ViewUtil::BlockSum, "C++: tsa::ViewUtil::BlockSum(class tsa::SeqView<struct std::complex<double> > &, class tsa::SeqView<struct std::complex<double> > &, int) --> void", pybind11::arg("in"), pybind11::arg("out"), pybind11::arg("bsize"));
+		cl.def_static("Integrate", (struct std::complex<double> (*)(class tsa::SeqView<struct std::complex<double> > &, double, double)) &tsa::ViewUtil::Integrate, "C++: tsa::ViewUtil::Integrate(class tsa::SeqView<struct std::complex<double> > &, double, double) --> struct std::complex<double>", pybind11::arg("data"), pybind11::arg("f1"), pybind11::arg("f2"));
 		cl.def_static("Integrate", (double (*)(class tsa::SeqView<double> &, double, double)) &tsa::ViewUtil::Integrate, "C++: tsa::ViewUtil::Integrate(class tsa::SeqView<double> &, double, double) --> double", pybind11::arg("data"), pybind11::arg("f1"), pybind11::arg("f2"));
+		cl.def_static("DelayIntegrate", (struct std::complex<double> (*)(class tsa::SeqView<struct std::complex<double> > &, double, double, double)) &tsa::ViewUtil::DelayIntegrate, "C++: tsa::ViewUtil::DelayIntegrate(class tsa::SeqView<struct std::complex<double> > &, double, double, double) --> struct std::complex<double>", pybind11::arg("data"), pybind11::arg("tau"), pybind11::arg("f1"), pybind11::arg("f2"));
+		cl.def_static("DelayIntegrate", (struct std::complex<double> (*)(class tsa::SeqView<double> &, double, double, double)) &tsa::ViewUtil::DelayIntegrate, "C++: tsa::ViewUtil::DelayIntegrate(class tsa::SeqView<double> &, double, double, double) --> struct std::complex<double>", pybind11::arg("data"), pybind11::arg("tau"), pybind11::arg("f1"), pybind11::arg("f2"));
 		cl.def_static("Multiply", (void (*)(class tsa::SeqView<double> &, class tsa::SeqView<double> &, class tsa::SeqView<double> &)) &tsa::ViewUtil::Multiply, "C++: tsa::ViewUtil::Multiply(class tsa::SeqView<double> &, class tsa::SeqView<double> &, class tsa::SeqView<double> &) --> void", pybind11::arg("in1"), pybind11::arg("in2"), pybind11::arg("res"));
+		cl.def_static("Multiply", (void (*)(class tsa::SeqView<double> &, class tsa::SeqView<struct std::complex<double> > &, class tsa::SeqView<struct std::complex<double> > &)) &tsa::ViewUtil::Multiply, "C++: tsa::ViewUtil::Multiply(class tsa::SeqView<double> &, class tsa::SeqView<struct std::complex<double> > &, class tsa::SeqView<struct std::complex<double> > &) --> void", pybind11::arg("in1"), pybind11::arg("in2"), pybind11::arg("res"));
+		cl.def_static("Multiply", (void (*)(class tsa::SeqView<struct std::complex<double> > &, class tsa::SeqView<struct std::complex<double> > &, class tsa::SeqView<struct std::complex<double> > &)) &tsa::ViewUtil::Multiply, "C++: tsa::ViewUtil::Multiply(class tsa::SeqView<struct std::complex<double> > &, class tsa::SeqView<struct std::complex<double> > &, class tsa::SeqView<struct std::complex<double> > &) --> void", pybind11::arg("in1"), pybind11::arg("in2"), pybind11::arg("res"));
 	}
 }
 
@@ -821,6 +1447,7 @@ void bind_Parcor2AR(std::function< pybind11::module &(std::string const &namespa
 		cl.def( pybind11::init( [](){ return new tsa::Arma2TF(); } ) );
 		cl.def( pybind11::init( [](tsa::Arma2TF const &o){ return new tsa::Arma2TF(o); } ) );
 		cl.def("assign", (class tsa::Arma2TF & (tsa::Arma2TF::*)(const class tsa::Arma2TF &)) &tsa::Arma2TF::operator=, "Assignement operator\n\n \n The instance to be assigned from\n\n \n a reference to a new object\n\nC++: tsa::Arma2TF::operator=(const class tsa::Arma2TF &) --> class tsa::Arma2TF &", pybind11::return_value_policy::automatic, pybind11::arg("from"));
+		cl.def("__call__", (void (tsa::Arma2TF::*)(class tsa::ARMAView &, class tsa::SeqView<struct std::complex<double> > &)) &tsa::Arma2TF::operator(), "Brief documentation for the execute method.\n\n Start of the long documentation for execute method.\n\n \n A precondition\n \n\n A postcondition\n \n\n An exception\n\n \n parameter\n\n \n a returned value\n\nC++: tsa::Arma2TF::operator()(class tsa::ARMAView &, class tsa::SeqView<struct std::complex<double> > &) --> void", pybind11::arg("arma"), pybind11::arg("TF"));
 	}
 	{ // tsa::AR2 file:AR2.hpp line:70
 		pybind11::class_<tsa::AR2, std::shared_ptr<tsa::AR2>, tsa::AlgoBase> cl(M("tsa"), "AR2", "");
@@ -873,6 +1500,8 @@ void bind_Parcor2AR(std::function< pybind11::module &(std::string const &namespa
 	{ // tsa::BartlettWindow file:BartlettWindow.hpp line:68
 		pybind11::class_<tsa::BartlettWindow, std::shared_ptr<tsa::BartlettWindow>, PyCallBack_tsa_BartlettWindow, tsa::BaseWindow> cl(M("tsa"), "BartlettWindow", "Bartlett windowing algorithm");
 		cl.def( pybind11::init<int>(), pybind11::arg("size") );
+
+		cl.def( pybind11::init<int, const std::string &>(), pybind11::arg("size"), pybind11::arg("") );
 
 		cl.def( pybind11::init( [](PyCallBack_tsa_BartlettWindow const &o){ return new PyCallBack_tsa_BartlettWindow(o); } ) );
 		cl.def( pybind11::init( [](tsa::BartlettWindow const &o){ return new tsa::BartlettWindow(o); } ) );
@@ -1020,6 +1649,8 @@ void bind_BaseFFT(std::function< pybind11::module &(std::string const &namespace
 		cl.def( pybind11::init<int, enum tsa::FFTPlanningMode, bool>(), pybind11::arg("size"), pybind11::arg("mode"), pybind11::arg("PreserveInput") );
 
 		cl.def(pybind11::init<PyCallBack_tsa_BaseFFT const &>());
+		cl.def_static("SaveWisdomOnFile", (void (*)(std::string)) &tsa::BaseFFT::SaveWisdomOnFile, "Save the actual wisdom for plan generation on a file\n\n \n the name of the file\n\nC++: tsa::BaseFFT::SaveWisdomOnFile(std::string) --> void", pybind11::arg("filename"));
+		cl.def_static("LoadWisdomFromFile", (void (*)(std::string)) &tsa::BaseFFT::LoadWisdomFromFile, "Load the actual wisdom for plan generation from a file\n\n \n the name of the file\n\nC++: tsa::BaseFFT::LoadWisdomFromFile(std::string) --> void", pybind11::arg("filename"));
 		cl.def_static("ForgetWisdom", (void (*)()) &tsa::BaseFFT::ForgetWisdom, "Forget wisdom\n\nC++: tsa::BaseFFT::ForgetWisdom() --> void");
 		cl.def("MakePlan", (void (tsa::BaseFFT::*)()) &tsa::BaseFFT::MakePlan, "Make a new plan, with the current parameters.\n\nC++: tsa::BaseFFT::MakePlan() --> void");
 		cl.def("SetPlanningMode", (void (tsa::BaseFFT::*)(enum tsa::FFTPlanningMode)) &tsa::BaseFFT::SetPlanningMode, "Set the way in which the plan is constructed. No new plan is generated.\n\n \n the requested planning mode.\n\nC++: tsa::BaseFFT::SetPlanningMode(enum tsa::FFTPlanningMode) --> void", pybind11::arg("mode"));
@@ -1030,6 +1661,8 @@ void bind_BaseFFT(std::function< pybind11::module &(std::string const &namespace
 	{ // tsa::BisquareWindow file:BisquareWindow.hpp line:69
 		pybind11::class_<tsa::BisquareWindow, std::shared_ptr<tsa::BisquareWindow>, PyCallBack_tsa_BisquareWindow, tsa::BaseWindow> cl(M("tsa"), "BisquareWindow", "Bisquare windowing algorithm\n\n ");
 		cl.def( pybind11::init<int>(), pybind11::arg("size") );
+
+		cl.def( pybind11::init<int, const std::string &>(), pybind11::arg("size"), pybind11::arg("") );
 
 		cl.def( pybind11::init( [](PyCallBack_tsa_BisquareWindow const &o){ return new PyCallBack_tsa_BisquareWindow(o); } ) );
 		cl.def( pybind11::init( [](tsa::BisquareWindow const &o){ return new tsa::BisquareWindow(o); } ) );
@@ -1042,6 +1675,8 @@ void bind_BaseFFT(std::function< pybind11::module &(std::string const &namespace
 		pybind11::class_<tsa::ButterworthFilter, std::shared_ptr<tsa::ButterworthFilter>, tsa::AlgoBase> cl(M("tsa"), "ButterworthFilter", "A generator of random normal numbers.\n\n     ");
 		cl.def( pybind11::init<double, int>(), pybind11::arg("freq"), pybind11::arg("order") );
 
+		cl.def("__call__", (void (tsa::ButterworthFilter::*)(class tsa::SeqView<struct std::complex<double> > &)) &tsa::ButterworthFilter::operator(), "Write the filter on a view\n\n         \n\nC++: tsa::ButterworthFilter::operator()(class tsa::SeqView<struct std::complex<double> > &) --> void", pybind11::arg("data"));
+		cl.def("__call__", (void (tsa::ButterworthFilter::*)(class tsa::SeqView<struct std::complex<double> > &, class tsa::SeqView<struct std::complex<double> > &)) &tsa::ButterworthFilter::operator(), "Apply the filter on a view\n\n         \n\nC++: tsa::ButterworthFilter::operator()(class tsa::SeqView<struct std::complex<double> > &, class tsa::SeqView<struct std::complex<double> > &) --> void", pybind11::arg("datain"), pybind11::arg("dataout"));
 		cl.def("assign", (class tsa::ButterworthFilter & (tsa::ButterworthFilter::*)(const class tsa::ButterworthFilter &)) &tsa::ButterworthFilter::operator=, "C++: tsa::ButterworthFilter::operator=(const class tsa::ButterworthFilter &) --> class tsa::ButterworthFilter &", pybind11::return_value_policy::automatic, pybind11::arg(""));
 	}
 }
@@ -1307,6 +1942,8 @@ void bind_BLInterpolation(std::function< pybind11::module &(std::string const &n
 		pybind11::class_<tsa::Cs2HammingWindow, std::shared_ptr<tsa::Cs2HammingWindow>, PyCallBack_tsa_Cs2HammingWindow, tsa::BaseWindow> cl(M("tsa"), "Cs2HammingWindow", "Cs2Hamming windowing algorithm");
 		cl.def( pybind11::init<int>(), pybind11::arg("size") );
 
+		cl.def( pybind11::init<int, const std::string &>(), pybind11::arg("size"), pybind11::arg("") );
+
 		cl.def( pybind11::init( [](PyCallBack_tsa_Cs2HammingWindow const &o){ return new PyCallBack_tsa_Cs2HammingWindow(o); } ) );
 		cl.def( pybind11::init( [](tsa::Cs2HammingWindow const &o){ return new tsa::Cs2HammingWindow(o); } ) );
 		cl.def("__call__", (void (tsa::Cs2HammingWindow::*)(class tsa::SeqView<double> &)) &tsa::Cs2HammingWindow::operator(), "Apply the window to a given time view.\n\n \n the time view \n\nC++: tsa::Cs2HammingWindow::operator()(class tsa::SeqView<double> &) --> void", pybind11::arg("v1"));
@@ -1318,6 +1955,8 @@ void bind_BLInterpolation(std::function< pybind11::module &(std::string const &n
 	{ // tsa::Cs2HannWindow file:Cs2HannWindow.hpp line:73
 		pybind11::class_<tsa::Cs2HannWindow, std::shared_ptr<tsa::Cs2HannWindow>, PyCallBack_tsa_Cs2HannWindow, tsa::BaseWindow> cl(M("tsa"), "Cs2HannWindow", "Cs2Hann windowing algorithm");
 		cl.def( pybind11::init<int>(), pybind11::arg("size") );
+
+		cl.def( pybind11::init<int, const std::string &>(), pybind11::arg("size"), pybind11::arg("") );
 
 		cl.def( pybind11::init( [](PyCallBack_tsa_Cs2HannWindow const &o){ return new PyCallBack_tsa_Cs2HannWindow(o); } ) );
 		cl.def( pybind11::init( [](tsa::Cs2HannWindow const &o){ return new tsa::Cs2HannWindow(o); } ) );
@@ -1619,12 +2258,15 @@ void bind_DoubleWhitening(std::function< pybind11::module &(std::string const &n
 
 		cl.def( pybind11::init( [](PyCallBack_tsa_InverseRealFFT const &o){ return new PyCallBack_tsa_InverseRealFFT(o); } ) );
 		cl.def( pybind11::init( [](tsa::InverseRealFFT const &o){ return new tsa::InverseRealFFT(o); } ) );
+		cl.def("__call__", (void (tsa::InverseRealFFT::*)(class tsa::SeqView<struct std::complex<double> > &, class tsa::SeqView<double> &)) &tsa::InverseRealFFT::operator(), "Apply the transformation on the data\n\n \n a reference to the buffer containing the input data\n \n\n a reference to the buffer containing the input data\n\n \n a reference to this instance of the class\n\nC++: tsa::InverseRealFFT::operator()(class tsa::SeqView<struct std::complex<double> > &, class tsa::SeqView<double> &) --> void", pybind11::arg("in"), pybind11::arg("out"));
 		cl.def("MakePlan", (void (tsa::InverseRealFFT::*)()) &tsa::InverseRealFFT::MakePlan, "Make a new plan, with the current parameters.\n\n \n std::runtime_error The new plan cannot be created\n\nC++: tsa::InverseRealFFT::MakePlan() --> void");
 		cl.def("assign", (class tsa::InverseRealFFT & (tsa::InverseRealFFT::*)(const class tsa::InverseRealFFT &)) &tsa::InverseRealFFT::operator=, "C++: tsa::InverseRealFFT::operator=(const class tsa::InverseRealFFT &) --> class tsa::InverseRealFFT &", pybind11::return_value_policy::automatic, pybind11::arg(""));
 	}
 	{ // tsa::KaiserWindow file:KaiserWindow.hpp line:77
 		pybind11::class_<tsa::KaiserWindow, std::shared_ptr<tsa::KaiserWindow>, PyCallBack_tsa_KaiserWindow, tsa::BaseWindow> cl(M("tsa"), "KaiserWindow", "Kaiser windowing algorithm\n Harris, F. J. \"On the Use of Windows for Harmonic Analysis with the Discrete Fourier Transform.\" \n Proceedings of the IEEE. Vol. 66 (January 1978). pp. 66-67.");
 		cl.def( pybind11::init<int>(), pybind11::arg("size") );
+
+		cl.def( pybind11::init<int, const std::string &>(), pybind11::arg("size"), pybind11::arg("par") );
 
 		cl.def( pybind11::init( [](PyCallBack_tsa_KaiserWindow const &o){ return new PyCallBack_tsa_KaiserWindow(o); } ) );
 		cl.def( pybind11::init( [](tsa::KaiserWindow const &o){ return new tsa::KaiserWindow(o); } ) );
@@ -1781,6 +2423,7 @@ void bind_LSLLearning(std::function< pybind11::module &(std::string const &names
 
 		cl.def( pybind11::init( [](PyCallBack_tsa_RealFFT const &o){ return new PyCallBack_tsa_RealFFT(o); } ) );
 		cl.def( pybind11::init( [](tsa::RealFFT const &o){ return new tsa::RealFFT(o); } ) );
+		cl.def("__call__", (void (tsa::RealFFT::*)(class tsa::SeqView<double> &, class tsa::SeqView<struct std::complex<double> > &)) &tsa::RealFFT::operator(), "Apply the transformation on the data\n\n \n a reference to the buffer containing the input data\n \n\n a reference to the buffer containing the input data\n\n \n a reference to this instance of the class\n\nC++: tsa::RealFFT::operator()(class tsa::SeqView<double> &, class tsa::SeqView<struct std::complex<double> > &) --> void", pybind11::arg("in"), pybind11::arg("out"));
 		cl.def("MakePlan", (void (tsa::RealFFT::*)()) &tsa::RealFFT::MakePlan, "Make a new plan, with the current parameters.\n\n \n std::runtime_error The new plan cannot be created\n\nC++: tsa::RealFFT::MakePlan() --> void");
 		cl.def("assign", (class tsa::RealFFT & (tsa::RealFFT::*)(const class tsa::RealFFT &)) &tsa::RealFFT::operator=, "C++: tsa::RealFFT::operator=(const class tsa::RealFFT &) --> class tsa::RealFFT &", pybind11::return_value_policy::automatic, pybind11::arg(""));
 	}
@@ -1999,6 +2642,8 @@ void bind_TF2Psd(std::function< pybind11::module &(std::string const &namespace_
 		pybind11::class_<tsa::TukeyWindow, std::shared_ptr<tsa::TukeyWindow>, PyCallBack_tsa_TukeyWindow, tsa::BaseWindow> cl(M("tsa"), "TukeyWindow", "Tukey windowing algorithm\n Harris, F. J. \"On the Use of Windows for Harmonic Analysis with the Discrete Fourier Transform.\" \n Proceedings of the IEEE. Vol. 66 (January 1978). pp. 66-67.");
 		cl.def( pybind11::init<int>(), pybind11::arg("size") );
 
+		cl.def( pybind11::init<int, const std::string &>(), pybind11::arg("size"), pybind11::arg("par") );
+
 		cl.def( pybind11::init( [](PyCallBack_tsa_TukeyWindow const &o){ return new PyCallBack_tsa_TukeyWindow(o); } ) );
 		cl.def( pybind11::init( [](tsa::TukeyWindow const &o){ return new tsa::TukeyWindow(o); } ) );
 		cl.def("__call__", (void (tsa::TukeyWindow::*)(class tsa::SeqView<double> &)) &tsa::TukeyWindow::operator(), "Apply the window to a given time view.\n\n \n the time view \n\nC++: tsa::TukeyWindow::operator()(class tsa::SeqView<double> &) --> void", pybind11::arg("v1"));
@@ -2010,6 +2655,8 @@ void bind_TF2Psd(std::function< pybind11::module &(std::string const &namespace_
 	{ // tsa::TukeyHannWindow file:TukeyHannWindow.hpp line:68
 		pybind11::class_<tsa::TukeyHannWindow, std::shared_ptr<tsa::TukeyHannWindow>, PyCallBack_tsa_TukeyHannWindow, tsa::BaseWindow> cl(M("tsa"), "TukeyHannWindow", "TukeyHann windowing algorithm\n\n     ");
 		cl.def( pybind11::init<int>(), pybind11::arg("size") );
+
+		cl.def( pybind11::init<int, const std::string &>(), pybind11::arg("size"), pybind11::arg("p") );
 
 		cl.def( pybind11::init( [](PyCallBack_tsa_TukeyHannWindow const &o){ return new PyCallBack_tsa_TukeyHannWindow(o); } ) );
 		cl.def( pybind11::init( [](tsa::TukeyHannWindow const &o){ return new tsa::TukeyHannWindow(o); } ) );
@@ -2247,6 +2894,8 @@ void bind_WaveletThreshold(std::function< pybind11::module &(std::string const &
 		pybind11::class_<tsa::WelchWindow, std::shared_ptr<tsa::WelchWindow>, PyCallBack_tsa_WelchWindow, tsa::BaseWindow> cl(M("tsa"), "WelchWindow", "Welch windowing algorithm\n\n ");
 		cl.def( pybind11::init<int>(), pybind11::arg("size") );
 
+		cl.def( pybind11::init<int, const std::string &>(), pybind11::arg("size"), pybind11::arg("p") );
+
 		cl.def( pybind11::init( [](PyCallBack_tsa_WelchWindow const &o){ return new PyCallBack_tsa_WelchWindow(o); } ) );
 		cl.def( pybind11::init( [](tsa::WelchWindow const &o){ return new tsa::WelchWindow(o); } ) );
 		cl.def("__call__", (void (tsa::WelchWindow::*)(class tsa::SeqView<double> &)) &tsa::WelchWindow::operator(), "Apply the window to a given time view.\n\n \n the time view \n\nC++: tsa::WelchWindow::operator()(class tsa::SeqView<double> &) --> void", pybind11::arg("v1"));
@@ -2254,6 +2903,15 @@ void bind_WaveletThreshold(std::function< pybind11::module &(std::string const &
 		cl.def("Resize", (void (tsa::WelchWindow::*)(unsigned int)) &tsa::WelchWindow::Resize, "Resize the window dimension.\n\n \n new size for the window\n\nC++: tsa::WelchWindow::Resize(unsigned int) --> void", pybind11::arg("size"));
 		cl.def("assign", (class tsa::WelchWindow & (tsa::WelchWindow::*)(const class tsa::WelchWindow &)) &tsa::WelchWindow::operator=, "C++: tsa::WelchWindow::operator=(const class tsa::WelchWindow &) --> class tsa::WelchWindow &", pybind11::return_value_policy::automatic, pybind11::arg(""));
 	}
+	// tsa::GetWindowList() file:WindowFactory.hpp line:69
+	M("tsa").def("GetWindowList", (class std::vector<std::string > (*)()) &tsa::GetWindowList, "C++: tsa::GetWindowList() --> class std::vector<std::string >");
+
+	// tsa::WindowFactory(const std::string &, unsigned int) file:WindowFactory.hpp line:71
+	M("tsa").def("WindowFactory", (class tsa::BaseWindow * (*)(const std::string &, unsigned int)) &tsa::WindowFactory, "C++: tsa::WindowFactory(const std::string &, unsigned int) --> class tsa::BaseWindow *", pybind11::return_value_policy::automatic, pybind11::arg("name"), pybind11::arg("size"));
+
+	// tsa::WindowFactory(const std::string &, const std::string &, unsigned int) file:WindowFactory.hpp line:74
+	M("tsa").def("WindowFactory", (class tsa::BaseWindow * (*)(const std::string &, const std::string &, unsigned int)) &tsa::WindowFactory, "C++: tsa::WindowFactory(const std::string &, const std::string &, unsigned int) --> class tsa::BaseWindow *", pybind11::return_value_policy::automatic, pybind11::arg("name"), pybind11::arg("parameters"), pybind11::arg("size"));
+
 	{ // tsa::Util file:Util.hpp line:64
 		pybind11::class_<tsa::Util, std::shared_ptr<tsa::Util>, tsa::AlgoBase> cl(M("tsa"), "Util", "");
 		cl.def( pybind11::init( [](){ return new tsa::Util(); } ) );
@@ -2889,9 +3547,17 @@ void bind_FrameIStream(std::function< pybind11::module &(std::string const &name
 	}
 	{ // tsa::FrameIStream file:FrameIStream.hpp line:536
 		pybind11::class_<tsa::FrameIStream, std::shared_ptr<tsa::FrameIStream>, tsa::AlgoBase> cl(M("tsa"), "FrameIStream", "A source of data taken from a Frame file\n\n This class can be used to read data from a frame file. \n A set of channels can be specified, which are returned together.\n\n \n\n Ser data:\n\n Channel:Parameter:Frequency:Default");
+		cl.def( pybind11::init<const std::string &, const double &>(), pybind11::arg("fileName"), pybind11::arg("StartTime") );
+
+		cl.def( pybind11::init<const std::string &, const double &, const double &, const class std::vector<std::string > &>(), pybind11::arg("fileName"), pybind11::arg("StartTime"), pybind11::arg("TimeLength"), pybind11::arg("channelNames") );
+
 		cl.def( pybind11::init( [](tsa::FrameIStream const &o){ return new tsa::FrameIStream(o); } ) );
 		cl.def("Init", (void (tsa::FrameIStream::*)()) &tsa::FrameIStream::Init, "C++: tsa::FrameIStream::Init() --> void");
 		cl.def("FillView", (void (tsa::FrameIStream::*)(class tsa::SeqView<double> &, double, double)) &tsa::FrameIStream::FillView, "C++: tsa::FrameIStream::FillView(class tsa::SeqView<double> &, double, double) --> void", pybind11::arg("rSeqView"), pybind11::arg("tstart"), pybind11::arg("tend"));
+		cl.def("GetInfo", [](tsa::FrameIStream &o) -> std::string { return o.GetInfo(); }, "");
+		cl.def("GetInfo", (std::string (tsa::FrameIStream::*)(int)) &tsa::FrameIStream::GetInfo, "C++: tsa::FrameIStream::GetInfo(int) --> std::string", pybind11::arg("gtime"));
+		cl.def("GetFileName", (const std::string & (tsa::FrameIStream::*)() const) &tsa::FrameIStream::GetFileName, "Get the file name of the frame file used.\n\n \n the file name of the frame file\n\nC++: tsa::FrameIStream::GetFileName() const --> const std::string &", pybind11::return_value_policy::automatic);
+		cl.def("GetChannelNames", (const class std::vector<std::string > & (tsa::FrameIStream::*)() const) &tsa::FrameIStream::GetChannelNames, "Get the list of the channel's names.\n\n \n a list of channel's names\n\nC++: tsa::FrameIStream::GetChannelNames() const --> const class std::vector<std::string > &", pybind11::return_value_policy::automatic);
 		cl.def("GetStartTime", (double (tsa::FrameIStream::*)() const) &tsa::FrameIStream::GetStartTime, "Get the actual start time, which is the start time\n of the next data chunk that will be read.\n\n \n the actual start time\n\nC++: tsa::FrameIStream::GetStartTime() const --> double");
 		cl.def("GetEndTime", (double (tsa::FrameIStream::*)() const) &tsa::FrameIStream::GetEndTime, "Get the actual end time, which is the end time\n of the next data chunk that will be read.\n\n \n the actual end time\n\nC++: tsa::FrameIStream::GetEndTime() const --> double");
 		cl.def("GetSampling", (double (tsa::FrameIStream::*)(unsigned int) const) &tsa::FrameIStream::GetSampling, "Get the sampling time of a channel\n\n \n the channel's name\n\n \n the channel's sampling time\n\nC++: tsa::FrameIStream::GetSampling(unsigned int) const --> double", pybind11::arg("cn"));
@@ -2899,9 +3565,11 @@ void bind_FrameIStream(std::function< pybind11::module &(std::string const &name
 		cl.def("GetFrame", (struct FrameH * (tsa::FrameIStream::*)()) &tsa::FrameIStream::GetFrame, "Get a pointer to the current FrameH structure.\n\n \n \n\n a pointer to the current FrameH\n\nC++: tsa::FrameIStream::GetFrame() --> struct FrameH *", pybind11::return_value_policy::automatic);
 		cl.def("GetFrameFile", (struct FrFile * (tsa::FrameIStream::*)()) &tsa::FrameIStream::GetFrameFile, "C++: tsa::FrameIStream::GetFrameFile() --> struct FrFile *", pybind11::return_value_policy::automatic);
 		cl.def("GetDataLossFlag", (bool (tsa::FrameIStream::*)()) &tsa::FrameIStream::GetDataLossFlag, "Get the value of the data loss flag. It is\n true if a data loss event is occurred.\n\n \n the data loss flag value\n\nC++: tsa::FrameIStream::GetDataLossFlag() --> bool");
+		cl.def("SetChannels", (void (tsa::FrameIStream::*)(const class std::vector<std::string > &)) &tsa::FrameIStream::SetChannels, "Set the channels which should be opened\n\n \n vector of names for the channels\n\nC++: tsa::FrameIStream::SetChannels(const class std::vector<std::string > &) --> void", pybind11::arg("channelNames"));
 		cl.def("SetTimeLength", (void (tsa::FrameIStream::*)(double)) &tsa::FrameIStream::SetTimeLength, "Set the length of the data buffer that will be returned from now on\n \n\n the new length\n\nC++: tsa::FrameIStream::SetTimeLength(double) --> void", pybind11::arg("length"));
 		cl.def("ResetValidationView", (void (tsa::FrameIStream::*)()) &tsa::FrameIStream::ResetValidationView, "Set to zero the validation view. No validation data are\n written.\n\nC++: tsa::FrameIStream::ResetValidationView() --> void");
 		cl.def("SetDataLossFlag", (void (tsa::FrameIStream::*)(bool)) &tsa::FrameIStream::SetDataLossFlag, "Set the value of the data loss flag.\n\n \n new value of the data loss flag\n\nC++: tsa::FrameIStream::SetDataLossFlag(bool) --> void", pybind11::arg("status"));
+		cl.def("AddException", (void (tsa::FrameIStream::*)(const std::string &, double, double, unsigned int)) &tsa::FrameIStream::AddException, "Ad an exception to the set of data losses.\n\n \n exception textual message\n \n\n start time for data loss\n \n\n end time for data loss (excluded)\n \n\n channel where the data loss occurred\n\nC++: tsa::FrameIStream::AddException(const std::string &, double, double, unsigned int) --> void", pybind11::arg("msg"), pybind11::arg("miss_start"), pybind11::arg("miss_end"), pybind11::arg("channel"));
 		cl.def("assign", (class tsa::FrameIStream & (tsa::FrameIStream::*)(const class tsa::FrameIStream &)) &tsa::FrameIStream::operator=, "C++: tsa::FrameIStream::operator=(const class tsa::FrameIStream &) --> class tsa::FrameIStream &", pybind11::return_value_policy::automatic, pybind11::arg(""));
 	}
 }
@@ -2933,10 +3601,16 @@ void bind_FrameIChannel(std::function< pybind11::module &(std::string const &nam
 {
 	{ // tsa::FrameIChannel file:FrameIChannel.hpp line:82
 		pybind11::class_<tsa::FrameIChannel, std::shared_ptr<tsa::FrameIChannel>, tsa::AlgoBase> cl(M("tsa"), "FrameIChannel", "A source of data taken from a Frame file\n\n This class can be used to read data from a frame file, in a single channel. ");
+		cl.def( pybind11::init( [](const class std::basic_string<char> & a0, const class std::basic_string<char> & a1){ return new tsa::FrameIChannel(a0, a1); } ), "doc" , pybind11::arg("fileName"), pybind11::arg("channelName"));
+		cl.def( pybind11::init( [](const class std::basic_string<char> & a0, const class std::basic_string<char> & a1, double const & a2){ return new tsa::FrameIChannel(a0, a1, a2); } ), "doc" , pybind11::arg("fileName"), pybind11::arg("channelName"), pybind11::arg("dLength"));
+		cl.def( pybind11::init<const std::string &, const std::string &, double, double>(), pybind11::arg("fileName"), pybind11::arg("channelName"), pybind11::arg("dLength"), pybind11::arg("tStart") );
+
 		cl.def( pybind11::init( [](tsa::FrameIChannel const &o){ return new tsa::FrameIChannel(o); } ) );
 		cl.def("NextSlice", (double (tsa::FrameIChannel::*)()) &tsa::FrameIChannel::NextSlice, "C++: tsa::FrameIChannel::NextSlice() --> double");
 		cl.def("GetData", (bool (tsa::FrameIChannel::*)(class tsa::SeqView<double> &, double, double)) &tsa::FrameIChannel::GetData, "Get a specified slice of data. After this call, start time will be\n set to tStart+dLength and data length to dLength\n\n \n the view to fill with data\n \n\n start time of the data returned \n \n\n length of data returned by \n\nC++: tsa::FrameIChannel::GetData(class tsa::SeqView<double> &, double, double) --> bool", pybind11::arg("rSeqView"), pybind11::arg("tStart"), pybind11::arg("dLength"));
 		cl.def("GetData", (bool (tsa::FrameIChannel::*)(class tsa::SeqView<double> &)) &tsa::FrameIChannel::GetData, "Get a slice of data the current data length, starting \n from the current start time.\n\n \n the view to fill with data\n\nC++: tsa::FrameIChannel::GetData(class tsa::SeqView<double> &) --> bool", pybind11::arg("rSeqView"));
+		cl.def_static("GetChannelList", [](const class std::basic_string<char> & a0) -> std::string { return tsa::FrameIChannel::GetChannelList(a0); }, "", pybind11::arg("fileName"));
+		cl.def_static("GetChannelList", (std::string (*)(const std::string &, int)) &tsa::FrameIChannel::GetChannelList, "C++: tsa::FrameIChannel::GetChannelList(const std::string &, int) --> std::string", pybind11::arg("fileName"), pybind11::arg("gtime"));
 		cl.def("SetStartTime", (void (tsa::FrameIChannel::*)(double)) &tsa::FrameIChannel::SetStartTime, "C++: tsa::FrameIChannel::SetStartTime(double) --> void", pybind11::arg("tStart"));
 		cl.def("SetDataLength", (void (tsa::FrameIChannel::*)(double)) &tsa::FrameIChannel::SetDataLength, "C++: tsa::FrameIChannel::SetDataLength(double) --> void", pybind11::arg("dLength"));
 		cl.def("SetAutoIncrement", (void (tsa::FrameIChannel::*)(bool)) &tsa::FrameIChannel::SetAutoIncrement, "C++: tsa::FrameIChannel::SetAutoIncrement(bool) --> void", pybind11::arg("status"));
@@ -2955,12 +3629,18 @@ void bind_FrameIChannel(std::function< pybind11::module &(std::string const &nam
 
 typedef std::function< pybind11::module & (std::string const &) > ModuleGetter;
 
+void bind_std_exception(std::function< pybind11::module &(std::string const &namespace_) > &M);
+void bind_std_stl_vector(std::function< pybind11::module &(std::string const &namespace_) > &M);
+void bind_std_stl_map(std::function< pybind11::module &(std::string const &namespace_) > &M);
+void bind_std_stdexcept(std::function< pybind11::module &(std::string const &namespace_) > &M);
+void bind_std_complex(std::function< pybind11::module &(std::string const &namespace_) > &M);
 void bind_eternity_persist(std::function< pybind11::module &(std::string const &namespace_) > &M);
 void bind_eternity_persist_xml(std::function< pybind11::module &(std::string const &namespace_) > &M);
 void bind_tsaUtilityFunctions(std::function< pybind11::module &(std::string const &namespace_) > &M);
 void bind_LatticeView(std::function< pybind11::module &(std::string const &namespace_) > &M);
 void bind_FrameL(std::function< pybind11::module &(std::string const &namespace_) > &M);
 void bind_SeqView(std::function< pybind11::module &(std::string const &namespace_) > &M);
+void bind_AlgoExceptions(std::function< pybind11::module &(std::string const &namespace_) > &M);
 void bind_Parcor2AR(std::function< pybind11::module &(std::string const &namespace_) > &M);
 void bind_BaseFFT(std::function< pybind11::module &(std::string const &namespace_) > &M);
 void bind_BLInterpolation(std::function< pybind11::module &(std::string const &namespace_) > &M);
@@ -2986,18 +3666,25 @@ PYBIND11_MODULE(pytsa, root_module) {
 
 	std::vector< std::pair<std::string, std::string> > sub_modules {
 		{"", "eternity"},
+		{"", "std"},
 		{"", "tsa"},
 	};
 	for(auto &p : sub_modules ) modules[p.first.size() ? p.first+"::"+p.second : p.second] = modules[p.first].def_submodule(p.second.c_str(), ("Bindings for " + p.first + "::" + p.second + " namespace").c_str() );
 
 	//pybind11::class_<std::shared_ptr<void>>(M(""), "_encapsulated_data_");
 
+	bind_std_exception(M);
+	bind_std_stl_vector(M);
+	bind_std_stl_map(M);
+	bind_std_stdexcept(M);
+	bind_std_complex(M);
 	bind_eternity_persist(M);
 	bind_eternity_persist_xml(M);
 	bind_tsaUtilityFunctions(M);
 	bind_LatticeView(M);
 	bind_FrameL(M);
 	bind_SeqView(M);
+	bind_AlgoExceptions(M);
 	bind_Parcor2AR(M);
 	bind_BaseFFT(M);
 	bind_BLInterpolation(M);
@@ -3012,12 +3699,18 @@ PYBIND11_MODULE(pytsa, root_module) {
 
 // Source list file: ./python-wrapper//pytsa.sources
 // pytsa.cpp
+// std/exception.cpp
+// std/stl_vector.cpp
+// std/stl_map.cpp
+// std/stdexcept.cpp
+// std/complex.cpp
 // eternity/persist.cpp
 // eternity/persist_xml.cpp
 // tsaUtilityFunctions.cpp
 // LatticeView.cpp
 // FrameL.cpp
 // SeqView.cpp
+// AlgoExceptions.cpp
 // Parcor2AR.cpp
 // BaseFFT.cpp
 // BLInterpolation.cpp
@@ -3029,4 +3722,4 @@ PYBIND11_MODULE(pytsa, root_module) {
 // FrameIChannel.cpp
 
 // Modules list file: ./python-wrapper//pytsa.modules
-// eternity tsa 
+// eternity std tsa 
