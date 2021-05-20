@@ -109,6 +109,7 @@ namespace tsa {
             mCmax = from.mCmax;
             mlevel = from.mlevel;
             mWave = from.mWave;
+            return *this;
         }
 
     };
@@ -143,6 +144,7 @@ namespace tsa {
             mTime = from.mTime;
             mSNR = from.mSNR;
             mWave = from.mWave;
+            return *this;
 
         }
 
@@ -173,6 +175,7 @@ namespace tsa {
             mSNR = from.mSNR;
             mLenght = from.mLenght;
             mWave = from.mWave;
+            return *this;
         }
     };
 
@@ -208,7 +211,8 @@ namespace tsa {
             mCmax = from.mCmax;
             mlevel = from.mlevel;
             mWave = from.mWave;
-        }
+            return *this;
+        };
     };
 
 

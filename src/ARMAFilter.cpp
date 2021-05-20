@@ -2,32 +2,35 @@
 
 namespace tsa {
 
-    ARMAFilter::ARMAFilter(const std::vector<double>& AR, const std::vector<double>& MA, double gain)
-    :
-    mAR(AR.size()),
-    mMA(MA.size()),
-    mGain(1.0 / gain),
-    mInPointer(0),
-    mOutPointer(0),
-    mInBuffer(MA.size()),
-    mOutBuffer(AR.size()) {
-        for (unsigned int i = 0; i < mAR.size(); i++) {
-            mAR(i) = AR[i] / AR[0];
-        }
-
-        for (unsigned int i = 0; i < mMA.size(); i++) {
-            mMA(i) = MA[i];
-        }
-
+        ARMAFilter::ARMAFilter(unsigned int ARorder, unsigned int MAorder, double gain):
+        mAR(ARorder),
+        mMA(MAorder),
+        mGain(1.0 / gain),
+        mInPointer(0),
+        mOutPointer(0),
+        mInBuffer(mMA.size()),
+        mOutBuffer(mAR.size())
+        {
         mInBuffer.clear();
         mOutBuffer.clear();
+        };
 
-    }
+         
+
 
     ARMAFilter::~ARMAFilter() {
 
     }
-
+    void ARMAFilter::SetARFilter( unsigned int i, double AR)
+    {
+         mAR(i) = AR ;
+         
+    }
+    void ARMAFilter::SetMAFilter( unsigned int i, double MA)
+    {
+          mMA(i) = MA;
+         
+    }
     void ARMAFilter::operator()(SeqViewDouble& in, SeqViewDouble& out) {
         Dmatrix* data_in = in.GetData();
         Dmatrix* data_out = out.GetData();
@@ -67,26 +70,7 @@ namespace tsa {
         }
     }
 
-    void ARMAFilter::SetFilter(const std::vector<double>& AR, const std::vector<double>& MA, double gain) {
-        mAR.resize(AR.size());
-        mMA.resize(MA.size());
-        mInPointer = 0;
-        mOutPointer = 0;
-        mInBuffer(MA.size());
-        mOutBuffer(AR.size());
-        mGain = 1.0 / gain;
-
-        for (unsigned int i = 0; i < mAR.size(); i++) {
-            mAR(i) = AR[i] / AR[0];
-        }
-
-        for (unsigned int i = 0; i < mMA.size(); i++) {
-            mMA(i) = MA[i];
-        }
-
-        mInBuffer.clear();
-        mOutBuffer.clear();
-    }
+   
 
 
 }

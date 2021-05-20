@@ -23,8 +23,8 @@
 /// 
 /// @brief  Define the  tsa Traits
 /// 
-#ifndef __NAPTRAITS_HPP
-#define __NAPTRAITS_HPP
+#ifndef __TSATRAITS_HPP
+#define __TSATRAITS_HPP
 
 ///
 /// @name System includes
@@ -134,4 +134,4 @@ namespace tsa {
 
 } // end namespace tsa
 
-#endif // __NAPTRAITS_HPP
+#endif // __TSATRAITS_HPP

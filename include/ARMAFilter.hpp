@@ -1,7 +1,6 @@
 /**
  *
- *   Copyright (C) 2004 by Giancarlo Cella                                 
- *   giancarlo.cella@pi.infn.it                                            
+ *   Copyright (C) 2004
  *                                                                         
  *   This program is free software; you can redistribute it and/or modify  
  *   it under the terms of the GNU General Public License as published by  
@@ -19,7 +18,6 @@
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             
  *
  * @file   ARMAFilter.hpp
- * @author Giancarlo Cella <giancarlo.cella@pi.infn.it>
  * @date   Sat Nov 13 17:21:06 2004
  * 
  * @brief  Implement an ARMA filter
@@ -77,12 +75,17 @@ namespace tsa {
      */
     class ARMAFilter : public AlgoBase {
     public:
+          
+         
+        
 
+        
         /**
          * Constructor
          */
-        ARMAFilter(const std::vector<double>& mAR, const std::vector<double>& mMA, double gain);
-
+        ARMAFilter(unsigned int ARorder, unsigned int MAorder, double gain);
+        
+        
 
         /**
          * Destructor
@@ -94,6 +97,8 @@ namespace tsa {
          * @name Operations
          */
         //@{
+        void SetARFilter( unsigned int i, double AR);
+        void SetMAFilter( unsigned int i, double MA);    
 
         void operator()(SeqViewDouble& in, SeqViewDouble& out);
 
@@ -121,9 +126,8 @@ namespace tsa {
          */
         //@{
 
-        void SetFilter(const std::vector<double>& mAR, const std::vector<double>& mMA, double gain);
-
-
+       
+       
         //@}
 
 

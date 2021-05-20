@@ -23,8 +23,8 @@
 /// 
 /// @brief  Define some tsa Utility Functions
 /// 
-#ifndef __NAPUTILITYFUNCTIONS_HPP
-#define __NAPUTILITYFUNCTIONS_HPP
+#ifndef __TSAUTILITYFUNCTIONS_HPP
+#define __TSAUTILITYFUNCTIONS_HPP
 
 ///
 /// @name System includes
@@ -332,4 +332,4 @@ namespace tsa {
 
 } // end namespace tsa
 
-#endif // __NAPUTILITYFUNCTIONS_HPP
+#endif // __TSAUTILITYFUNCTIONS_HPP

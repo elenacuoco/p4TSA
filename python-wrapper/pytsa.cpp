@@ -1155,7 +1155,7 @@ void bind_AlgoExceptions(std::function< pybind11::module &(std::string const &na
 		cl.def("NewFlag", (unsigned int (tsa::quality_change::*)()) &tsa::quality_change::NewFlag, "C++: tsa::quality_change::NewFlag() --> unsigned int");
 		cl.def("assign", (class tsa::quality_change & (tsa::quality_change::*)(const class tsa::quality_change &)) &tsa::quality_change::operator=, "C++: tsa::quality_change::operator=(const class tsa::quality_change &) --> class tsa::quality_change &", pybind11::return_value_policy::automatic, pybind11::arg(""));
 	}
-	{ // tsa::AlgoBase file:AlgoBase.hpp line:64
+	{ // tsa::AlgoBase file:AlgoBase.hpp line:65
 		pybind11::class_<tsa::AlgoBase, std::shared_ptr<tsa::AlgoBase>> cl(M("tsa"), "AlgoBase", "AlgoBase is the abstract base class for all algorithm.\n\n AlgoBase is the abstract base class for all the algorithm classes.\n It contain the definition of the common methods. An algorithm is a class\n with one or more execute() methods, with a variable number of parameters.");
 		cl.def( pybind11::init( [](){ return new tsa::AlgoBase(); } ) );
 		cl.def( pybind11::init( [](tsa::AlgoBase const &o){ return new tsa::AlgoBase(o); } ) );
@@ -1461,9 +1461,13 @@ void bind_Parcor2AR(std::function< pybind11::module &(std::string const &namespa
 		cl.def( pybind11::init( [](){ return new tsa::AR2Parcor(); } ) );
 		cl.def("assign", (class tsa::AR2Parcor & (tsa::AR2Parcor::*)(const class tsa::AR2Parcor &)) &tsa::AR2Parcor::operator=, "C++: tsa::AR2Parcor::operator=(const class tsa::AR2Parcor &) --> class tsa::AR2Parcor &", pybind11::return_value_policy::automatic, pybind11::arg(""));
 	}
-	{ // tsa::ARMAFilter file:ARMAFilter.hpp line:78
+	{ // tsa::ARMAFilter file:ARMAFilter.hpp line:76
 		pybind11::class_<tsa::ARMAFilter, std::shared_ptr<tsa::ARMAFilter>, tsa::AlgoBase> cl(M("tsa"), "ARMAFilter", "Implement the   ARMA filtering\n\n This class implement a general ARMA filter. Given an input sequence x(n)\n and an output sequence y(n) an ARMA filter is defined by the relation\n (look at the signs definitions..)\n\n a(0) y(n) =  a(1) y(n-1) + ... + a(N) y(n-N) + b(0) x(n) + b(1) x(n-1) + .... + b(M) x(n-M)\n\n ");
+		cl.def( pybind11::init<unsigned int, unsigned int, double>(), pybind11::arg("ARorder"), pybind11::arg("MAorder"), pybind11::arg("gain") );
+
 		cl.def( pybind11::init( [](tsa::ARMAFilter const &o){ return new tsa::ARMAFilter(o); } ) );
+		cl.def("SetARFilter", (void (tsa::ARMAFilter::*)(unsigned int, double)) &tsa::ARMAFilter::SetARFilter, "C++: tsa::ARMAFilter::SetARFilter(unsigned int, double) --> void", pybind11::arg("i"), pybind11::arg("AR"));
+		cl.def("SetMAFilter", (void (tsa::ARMAFilter::*)(unsigned int, double)) &tsa::ARMAFilter::SetMAFilter, "C++: tsa::ARMAFilter::SetMAFilter(unsigned int, double) --> void", pybind11::arg("i"), pybind11::arg("MA"));
 		cl.def("__call__", (void (tsa::ARMAFilter::*)(class tsa::SeqView<double> &, class tsa::SeqView<double> &)) &tsa::ARMAFilter::operator(), "C++: tsa::ARMAFilter::operator()(class tsa::SeqView<double> &, class tsa::SeqView<double> &) --> void", pybind11::arg("in"), pybind11::arg("out"));
 		cl.def("assign", (class tsa::ARMAFilter & (tsa::ARMAFilter::*)(const class tsa::ARMAFilter &)) &tsa::ARMAFilter::operator=, "C++: tsa::ARMAFilter::operator=(const class tsa::ARMAFilter &) --> class tsa::ARMAFilter &", pybind11::return_value_policy::automatic, pybind11::arg(""));
 	}
@@ -2182,7 +2186,7 @@ void bind_DoubleWhitening(std::function< pybind11::module &(std::string const &n
 		cl.def_readwrite("mWave", &tsa::EventFull::mWave);
 		cl.def("assign", (class tsa::EventFull & (tsa::EventFull::*)(const class tsa::EventFull &)) &tsa::EventFull::operator=, "C++: tsa::EventFull::operator=(const class tsa::EventFull &) --> class tsa::EventFull &", pybind11::return_value_policy::automatic, pybind11::arg("from"));
 	}
-	{ // tsa::Event file:EventDescription.hpp line:116
+	{ // tsa::Event file:EventDescription.hpp line:117
 		pybind11::class_<tsa::Event, std::shared_ptr<tsa::Event>> cl(M("tsa"), "Event", "");
 		cl.def( pybind11::init( [](){ return new tsa::Event(); } ) );
 		cl.def( pybind11::init( [](tsa::Event const &o){ return new tsa::Event(o); } ) );
@@ -2191,7 +2195,7 @@ void bind_DoubleWhitening(std::function< pybind11::module &(std::string const &n
 		cl.def_readwrite("mWave", &tsa::Event::mWave);
 		cl.def("assign", (class tsa::Event & (tsa::Event::*)(const class tsa::Event &)) &tsa::Event::operator=, "C++: tsa::Event::operator=(const class tsa::Event &) --> class tsa::Event &", pybind11::return_value_policy::automatic, pybind11::arg("from"));
 	}
-	{ // tsa::ClusterizedEvent file:EventDescription.hpp line:151
+	{ // tsa::ClusterizedEvent file:EventDescription.hpp line:153
 		pybind11::class_<tsa::ClusterizedEvent, std::shared_ptr<tsa::ClusterizedEvent>> cl(M("tsa"), "ClusterizedEvent", "");
 		cl.def( pybind11::init( [](){ return new tsa::ClusterizedEvent(); } ) );
 		cl.def( pybind11::init( [](tsa::ClusterizedEvent const &o){ return new tsa::ClusterizedEvent(o); } ) );
@@ -2201,7 +2205,7 @@ void bind_DoubleWhitening(std::function< pybind11::module &(std::string const &n
 		cl.def_readwrite("mWave", &tsa::ClusterizedEvent::mWave);
 		cl.def("assign", (class tsa::ClusterizedEvent & (tsa::ClusterizedEvent::*)(const class tsa::ClusterizedEvent &)) &tsa::ClusterizedEvent::operator=, "C++: tsa::ClusterizedEvent::operator=(const class tsa::ClusterizedEvent &) --> class tsa::ClusterizedEvent &", pybind11::return_value_policy::automatic, pybind11::arg("from"));
 	}
-	{ // tsa::ClusterizedEventFull file:EventDescription.hpp line:179
+	{ // tsa::ClusterizedEventFull file:EventDescription.hpp line:182
 		pybind11::class_<tsa::ClusterizedEventFull, std::shared_ptr<tsa::ClusterizedEventFull>> cl(M("tsa"), "ClusterizedEventFull", "");
 		cl.def( pybind11::init( [](){ return new tsa::ClusterizedEventFull(); } ) );
 		cl.def( pybind11::init( [](tsa::ClusterizedEventFull const &o){ return new tsa::ClusterizedEventFull(o); } ) );

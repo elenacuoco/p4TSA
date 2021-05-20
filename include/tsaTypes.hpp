@@ -23,8 +23,8 @@
 ///
 /// @brief  Define the tsa types
 ///
-#ifndef __NAPTYPES_HPP
-#define __NAPTYPES_HPP
+#ifndef __TSATYPES_HPP
+#define __TSATYPES_HPP
 
 ///
 /// @name System includes
@@ -84,6 +84,8 @@ namespace tsa {
 
     typedef boost::numeric::ublas::vector< double > Dvector;
     typedef boost::numeric::ublas::vector< long double > LDvector;
+ 
+
 
 
 
@@ -93,6 +95,9 @@ namespace tsa {
     // Vectors of arrays
     typedef std::vector< Cmatrix > VCmatrix;
     typedef std::vector< Dmatrix > VDmatrix;
+    typedef std::vector< double > STDvector;
+    
+    
 
     // Matrix rows
     typedef boost::numeric::ublas::matrix_row<Dmatrix> DmatrixRow;
@@ -121,4 +126,4 @@ namespace tsa {
 
 } // end namespace tsa
 
-#endif // __NAPTYPES_HPP
+#endif // __TSATYPES_HPP
