@@ -32,7 +32,7 @@ ext_modules = [
             get_pybind_include(),
             get_pybind_include(user=True)
         ],
-        libraries=[ 'gsl', 'Frame', 'fftw3','fftw3f', 'fftw3l', 'gslcblas','p4TSA'],
+        libraries=[ 'gsl', 'framel', 'fftw3','fftw3f', 'fftw3l', 'gslcblas','p4TSA'],
         library_dirs = [ENV_LIB],
         language='c++'
     ),

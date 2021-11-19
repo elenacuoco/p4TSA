@@ -62,11 +62,11 @@ set(SOURCE_FILES
         src/WDF2Classify.cpp
         src/WDF2Reconstruct.cpp
         src/WindowFactory.cpp)
-include_directories(include include/eternity $ENV{ENV_ROOT}/include $ENV{ENV_ROOT}/include/gsl $ENV{ENV_ROOT}/include/boost)
+include_directories(include include/eternity $ENV{ENV_ROOT}/include $ENV{ENV_ROOT}/include/gsl) #$ENV{ENV_ROOT}/include/boost
 
 
 link_directories($ENV{ENV_ROOT}/lib)
-link_libraries(gsl fftw3  gslcblas Frame)
+link_libraries(gsl fftw3  gslcblas framel)
 add_library(p4TSA SHARED ${SOURCE_FILES})
 install (TARGETS p4TSA DESTINATION $ENV{ENV_ROOT}/lib)
 install (FILES include/tsa.hpp DESTINATION $ENV{ENV_ROOT}/include)
