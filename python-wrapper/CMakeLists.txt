@@ -13,4 +13,4 @@ link_directories(${P4TSA_ROOT} $ENV{ENV_ROOT}/lib)
 
 link_libraries(p4TSA gsl frame fftw3 fftw3f fftw3l gslcblas)
 
-#pybind11_add_module(pytsa pytsa.cpp)
+pybind11_add_module(pytsa pytsa.cpp)
