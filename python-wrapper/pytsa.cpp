@@ -672,7 +672,7 @@ void bind_LatticeView(std::function< pybind11::module &(std::string const &names
 
 void bind_FrameL(std::function< pybind11::module &(std::string const &namespace_) > &M)
 {
-	{ // FrameH file:FrameL.h line:161
+	{ // FrameH file:FrameL.h line:151
 		pybind11::class_<FrameH, std::shared_ptr<FrameH>> cl(M(""), "FrameH", "");
 		cl.def( pybind11::init( [](){ return new FrameH(); } ) );
 		cl.def_readwrite("run", &FrameH::run);
@@ -683,7 +683,7 @@ void bind_FrameL(std::function< pybind11::module &(std::string const &namespace_
 		cl.def_readwrite("ULeapS", &FrameH::ULeapS);
 		cl.def_readwrite("dt", &FrameH::dt);
 	}
-	{ // FrAdcData file:FrameL.h line:293
+	{ // FrAdcData file:FrameL.h line:287
 		pybind11::class_<FrAdcData, std::shared_ptr<FrAdcData>> cl(M(""), "FrAdcData", "");
 		cl.def( pybind11::init( [](){ return new FrAdcData(); } ) );
 		cl.def_readwrite("channelGroup", &FrAdcData::channelGroup);
@@ -697,7 +697,7 @@ void bind_FrameL(std::function< pybind11::module &(std::string const &namespace_
 		cl.def_readwrite("phase", &FrAdcData::phase);
 		cl.def_readwrite("dataValid", &FrAdcData::dataValid);
 	}
-	{ // FrFile file:FrameL.h line:510
+	{ // FrFile file:FrameL.h line:505
 		pybind11::class_<FrFile, std::shared_ptr<FrFile>> cl(M(""), "FrFile", "");
 		cl.def( pybind11::init( [](){ return new FrFile(); } ) );
 		cl.def_readwrite("inMemory", &FrFile::inMemory);
@@ -748,7 +748,7 @@ void bind_FrameL(std::function< pybind11::module &(std::string const &namespace_
 		cl.def_readwrite("lastSlope", &FrFile::lastSlope);
 		cl.def_readwrite("lastBias", &FrFile::lastBias);
 	}
-	{ // FrProcData file:FrameL.h line:749
+	{ // FrProcData file:FrameL.h line:746
 		pybind11::class_<FrProcData, std::shared_ptr<FrProcData>> cl(M(""), "FrProcData", "");
 		cl.def( pybind11::init( [](){ return new FrProcData(); } ) );
 		cl.def_readwrite("type", &FrProcData::type);
@@ -761,7 +761,7 @@ void bind_FrameL(std::function< pybind11::module &(std::string const &namespace_
 		cl.def_readwrite("BW", &FrProcData::BW);
 		cl.def_readwrite("nAuxParam", &FrProcData::nAuxParam);
 	}
-	{ // FrSimData file:FrameL.h line:908
+	{ // FrSimData file:FrameL.h line:905
 		pybind11::class_<FrSimData, std::shared_ptr<FrSimData>> cl(M(""), "FrSimData", "");
 		cl.def( pybind11::init( [](){ return new FrSimData(); } ) );
 		cl.def_readwrite("sampleRate", &FrSimData::sampleRate);
