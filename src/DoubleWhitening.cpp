@@ -56,7 +56,7 @@ namespace tsa {
         mErrF = *LV.GetErrorForward();
         mErrB = *LV.GetErrorBackward();
         mStatus = 0;
-        FirstCall=true;
+        mFirstCall=true;
     }
 
     DoubleWhitening::~DoubleWhitening() {
@@ -174,11 +174,11 @@ namespace tsa {
 
         SetData(*in, Data.GetScale());
 
-        if (FirstCall) {
+        if (mFirstCall) {
             mStartTime = Data.GetStart();
             mSampling = Data.GetSampling();
         }
-        FirstCall=false;
+       
         return *this;
 
     }
@@ -191,6 +191,7 @@ namespace tsa {
         outdata.SetSampling(mSampling);
         outdata.SetScale(1.0);
         mStartTime += mSampling * mOutputSize;
+        mFirstCall=false;
 
         return *this;
     }
