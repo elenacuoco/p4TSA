@@ -20,7 +20,6 @@ namespace tsa {
                                      unsigned int OutputSize, unsigned int ExtraSize)
             :
             mBuffer(1),
-            mFirstCall(true),
             mOutputSize(OutputSize),
             mTotSize(ExtraSize + OutputSize),
             mOrder(ParcorF.size()),
@@ -37,7 +36,6 @@ namespace tsa {
     DoubleWhitening::DoubleWhitening(LatticeView &LV, unsigned int OutputSize, unsigned int ExtraSize)
             :
             mBuffer(1),
-            mFirstCall(true),
             mOutputSize(OutputSize),
             mTotSize(ExtraSize + OutputSize),
             mOrder(LV.GetParcorF()->size()),
@@ -49,7 +47,7 @@ namespace tsa {
             mEf(2, mOrder),
             mEb(2, mOrder),
             mWhitened(1, mTotSize) {
-    }
+            }
 
     void DoubleWhitening::init(LatticeView &LV) {
         mOrder = LV.GetParcorF()->size();
@@ -58,6 +56,7 @@ namespace tsa {
         mErrF = *LV.GetErrorForward();
         mErrB = *LV.GetErrorBackward();
         mStatus = 0;
+        FirstCall=true;
     }
 
     DoubleWhitening::~DoubleWhitening() {
@@ -175,11 +174,11 @@ namespace tsa {
 
         SetData(*in, Data.GetScale());
 
-        if (mFirstCall) {
-            mFirstCall = false;
+        if (FirstCall) {
             mStartTime = Data.GetStart();
             mSampling = Data.GetSampling();
         }
+        FirstCall=false;
         return *this;
 
     }
