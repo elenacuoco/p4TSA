@@ -117,7 +117,6 @@ namespace tsa {
             SetData(*in, Data.GetScale());
 
             if (mFirstCall) {
-                mFirstCall = false;
                 mStartTime = Data.GetStart();
                 mSampling = Data.GetSampling();
             }
@@ -131,6 +130,7 @@ namespace tsa {
             outdata.SetSampling(mSampling);
             outdata.SetScale(1.0);
             mStartTime += mSampling * mOutputSize;
+            mFirstCall=false;
         }
 
         DoubleWhitening& Input(SeqViewDouble &Data);
