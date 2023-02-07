@@ -177,7 +177,7 @@ namespace tsa {
 
             SetData(*in, InputData.GetScale());
             mSampling = InputData.GetSampling(); 
-            OutDataData.SetSampling(InputData.GetSampling());  
+            OutData.SetSampling(InputData.GetSampling());  
 
             if (mFirstCall){
             mStartTime = InputData.GetStart();     
@@ -186,7 +186,7 @@ namespace tsa {
             GetData(*out);
                
             OutData.SetStart(mStartTime);
-            OutDataData.SetSampling(InputData.GetSampling());  
+            OutData.SetSampling(InputData.GetSampling());  
             mSampling = InputData.GetSampling(); 
             OutData.SetScale(1.0);
             mStartTime += InputData.GetSampling()* mOutputSize;
