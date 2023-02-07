@@ -166,37 +166,7 @@ namespace tsa {
         mBuffer.DelPoints(mOutputSize);
     }
 
-    DoubleWhitening& DoubleWhitening::Input(SeqViewDouble &Data) {
-        Dmatrix *in = Data.GetData();
-
-        if (in->size1() != 1) {
-            LogSevere("DoubleWhitening: multichannels not implemented resize");
-            throw bad_matrix_size("Wrong Matrix size");
-        }
-
-        SetData(*in, Data.GetScale());
-
-        if (mFirstCall) {
-            mStartTime = Data.GetStart();
-            mSampling = Data.GetSampling();
-        }
-       
-        return *this;
-
-    }
-
-    DoubleWhitening& DoubleWhitening::Output(SeqViewDouble &outdata) {
-        Dmatrix *out = outdata.GetData();
-        out->resize(1, mOutputSize);
-        GetData(*out);
-        outdata.SetStart(mStartTime);
-        outdata.SetSampling(mSampling);
-        outdata.SetScale(1.0);
-        mStartTime += mSampling * mOutputSize;
-        mFirstCall=false;
-
-        return *this;
-    }
+   
 
 
 }
