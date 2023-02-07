@@ -85,10 +85,10 @@ namespace tsa {
         /// Constructor
         ///@param LV is the view containg the parameters for the Lattice Filter
 
-        DoubleWhitening(LatticeView &LV, unsigned int OutputSize, unsigned int ExtraSize, double sampling);
+        DoubleWhitening(LatticeView &LV, unsigned int OutputSize, unsigned int ExtraSize);
 
         DoubleWhitening(Dvector &ParcorF, Dvector &ParcorB, Dmatrix &ErrF, Dmatrix &ErrB, unsigned int OutputSize,
-                        unsigned int ExtraSize, double sampling);
+                        unsigned int ExtraSize);
 
 
         void init(LatticeView &LV);
