@@ -132,8 +132,8 @@ namespace tsa {
             mStartTime += mSampling * mOutputSize;
             mFirstCall=false;
         }
-        
-        DoubleWhitening& DoubleWhitening::Input(SeqViewDouble &Data) {
+         
+        DoubleWhitening& Input(SeqViewDouble &Data) {
         Dmatrix *in = Data.GetData();
 
         if (in->size1() != 1) {
@@ -150,9 +150,9 @@ namespace tsa {
        
         return *this;
 
-    }
+        }
 
-    DoubleWhitening& DoubleWhitening::Output(SeqViewDouble &outdata) {
+        DoubleWhitening& Output(SeqViewDouble &outdata) {
         Dmatrix *out = outdata.GetData();
         out->resize(1, mOutputSize);
         GetData(*out);
