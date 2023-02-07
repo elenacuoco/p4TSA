@@ -115,10 +115,11 @@ namespace tsa {
             }
 
             SetData(*in, Data.GetScale());
+            mSampling = Data.GetSampling();
 
             if (mFirstCall) {
                 mStartTime = Data.GetStart();
-                mSampling = Data.GetSampling();
+               
             }
         }
 
@@ -142,10 +143,12 @@ namespace tsa {
         }
 
         SetData(*in, Data.GetScale());
-
-       
-        mStartTime = Data.GetStart();
         mSampling = Data.GetSampling();
+
+        if (mFirstCall){
+        mStartTime = Data.GetStart();
+       
+        }
         
        
         return *this;
@@ -164,6 +167,31 @@ namespace tsa {
 
         return *this;
     }
+           void operator()(SeqViewDouble& InputData, SeqViewDouble& OutData) {
+            Dmatrix* in = InputData.GetData();
+            Dmatrix* out = OutData.GetData();
+            if (in->size1() != 1) {
+            LogSevere("DoubleWhitening: multichannels not implemented resize");
+            throw bad_matrix_size("Wrong Matrix size");
+            }
+
+            SetData(*in, InputData.GetScale());
+            mSampling = InputData.GetSampling();
+
+            if (mFirstCall){
+            mStartTime = InputData.GetStart();
+           
+            }
+             out->resize(1, mOutputSize);
+             GetData(*out);
+            OutData.SetStart(mStartTime);
+            OutData.SetSampling(mSampling);
+            OutData.SetScale(1.0);
+            mStartTime += mSampling * mOutputSize;
+            mFirstCall=false;              
+               
+            
+        }
 
        
 
