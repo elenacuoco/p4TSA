@@ -176,18 +176,20 @@ namespace tsa {
             }
 
             SetData(*in, InputData.GetScale());
-            mSampling = InputData.GetSampling();
+            mSampling = InputData.GetSampling(); 
+            OutDataData.SetSampling(InputData.GetSampling());  
 
             if (mFirstCall){
-            mStartTime = InputData.GetStart();
-           
+            mStartTime = InputData.GetStart();     
             }
-             out->resize(1, mOutputSize);
-             GetData(*out);
+            out->resize(1, mOutputSize);
+            GetData(*out);
+               
             OutData.SetStart(mStartTime);
-            OutData.SetSampling(mSampling);
+            OutDataData.SetSampling(InputData.GetSampling());  
+            mSampling = InputData.GetSampling(); 
             OutData.SetScale(1.0);
-            mStartTime += mSampling * mOutputSize;
+            mStartTime += InputData.GetSampling()* mOutputSize;
             mFirstCall=false;              
                
             
