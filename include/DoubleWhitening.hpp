@@ -143,10 +143,10 @@ namespace tsa {
 
         SetData(*in, Data.GetScale());
 
-        if (mFirstCall) {
-            mStartTime = Data.GetStart();
-            mSampling = Data.GetSampling();
-        }
+       
+        mStartTime = Data.GetStart();
+        mSampling = Data.GetSampling();
+        
        
         return *this;
 
