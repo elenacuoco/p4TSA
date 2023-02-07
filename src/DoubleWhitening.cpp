@@ -20,6 +20,7 @@ namespace tsa {
                                      unsigned int OutputSize, unsigned int ExtraSize)
             :
             mBuffer(1),
+            mFirstCall(true),
             mOutputSize(OutputSize),
             mTotSize(ExtraSize + OutputSize),
             mOrder(ParcorF.size()),
@@ -36,6 +37,7 @@ namespace tsa {
     DoubleWhitening::DoubleWhitening(LatticeView &LV, unsigned int OutputSize, unsigned int ExtraSize)
             :
             mBuffer(1),
+            mFirstCall(true),
             mOutputSize(OutputSize),
             mTotSize(ExtraSize + OutputSize),
             mOrder(LV.GetParcorF()->size()),
