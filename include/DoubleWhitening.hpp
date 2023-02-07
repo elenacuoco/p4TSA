@@ -85,10 +85,10 @@ namespace tsa {
         /// Constructor
         ///@param LV is the view containg the parameters for the Lattice Filter
 
-        DoubleWhitening(LatticeView &LV, unsigned int OutputSize, unsigned int ExtraSize);
+        DoubleWhitening(LatticeView &LV, unsigned int OutputSize, unsigned int ExtraSize, double sampling);
 
         DoubleWhitening(Dvector &ParcorF, Dvector &ParcorB, Dmatrix &ErrF, Dmatrix &ErrB, unsigned int OutputSize,
-                        unsigned int ExtraSize);
+                        unsigned int ExtraSize, double sampling);
 
 
         void init(LatticeView &LV);
@@ -132,10 +132,40 @@ namespace tsa {
             mStartTime += mSampling * mOutputSize;
             mFirstCall=false;
         }
+        
+        DoubleWhitening& DoubleWhitening::Input(SeqViewDouble &Data) {
+        Dmatrix *in = Data.GetData();
 
-        DoubleWhitening& Input(SeqViewDouble &Data);
+        if (in->size1() != 1) {
+            LogSevere("DoubleWhitening: multichannels not implemented resize");
+            throw bad_matrix_size("Wrong Matrix size");
+        }
 
-        DoubleWhitening& Output(SeqViewDouble &outdata);
+        SetData(*in, Data.GetScale());
+
+        if (mFirstCall) {
+            mStartTime = Data.GetStart();
+            mSampling = Data.GetSampling();
+        }
+       
+        return *this;
+
+    }
+
+    DoubleWhitening& DoubleWhitening::Output(SeqViewDouble &outdata) {
+        Dmatrix *out = outdata.GetData();
+        out->resize(1, mOutputSize);
+        GetData(*out);
+        outdata.SetStart(mStartTime);
+        outdata.SetSampling(mSampling);
+        outdata.SetScale(1.0);
+        mStartTime += mSampling * mOutputSize;
+        mFirstCall=false;
+
+        return *this;
+    }
+
+       
 
 
         void Load(const char *filename, const char *fmt = "txt") {
