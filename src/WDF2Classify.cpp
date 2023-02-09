@@ -449,21 +449,21 @@ namespace tsa {
         //
 
         if (mSigmaH>0) {
-            varH = sqrt(varH) / (2.0*mSigmaH);
+            varH = sqrt(varH/mWindow) / (mSigmaH);
         }
         else
         {
             varH=0;
         }
         if (mSigma4>0) {
-            var4 = sqrt(var4) / (2.0*mSigma4);
+            var4 = sqrt(var4/mWindow) / (mSigma4);
         }
         else
         {
             var4=0;
         }
         if (mSigmaC8>0) {
-            varC8 = sqrt(varC8) / (2.0*mSigmaC8);
+            varC8 = sqrt(varC8/mWindow) / (mSigmaC8);
         }
         else
         {
@@ -471,7 +471,7 @@ namespace tsa {
         }
 
         if (mSigma10>0) {
-            var10 = sqrt(var10) / (2.0*mSigma10);
+            var10 = sqrt(var10/mWindow) / (mSigma10);
         }
         else
         {
@@ -479,7 +479,7 @@ namespace tsa {
         }
 
         if (mSigma12>0) {
-            var12 = sqrt(var12) / (2.0*mSigma12);
+            var12 = sqrt(var12/mWindow) / (mSigma12);
         }
         else
         {
@@ -487,28 +487,28 @@ namespace tsa {
         }
 
         if (mSigmaC16>0) {
-            varC16 = sqrt(varC16) / (2.0*mSigmaC16);
+            varC16 = sqrt(varC16/mWindow) / (mSigmaC16);
         }
         else
         {
             varC16=0;
         }
         if (mSigma20>0) {
-            var20 = sqrt(var20) / (2.0*mSigma20);
+            var20 = sqrt(var20/mWindow) / (mSigma20);
         }
         else
         {
             var20=0;
         }
         if (mSigmaC20>0) {
-            varC20 = sqrt(varC20) / (2.0*mSigmaC20);
+            varC20 = sqrt(varC20/mWindow) / (mSigmaC20);
         }
         else
         {
             varC20=0;
         }
         if (mSigmaBsC206>0) {
-            varBsC206 = sqrt(varBsC206) / (2.0*mSigmaBsC206);
+            varBsC206 = sqrt(varBsC206/mWindow) / (mSigmaBsC206);
         }
         else
         {
@@ -516,21 +516,21 @@ namespace tsa {
         }
 
         if (mSigmaBsC103>0) {
-            varBsC103 = sqrt(varBsC103) / (2.0*mSigmaBsC103);
+            varBsC103 = sqrt(varBsC103/mWindow) / (mSigmaBsC103);
         }
         else
         {
             varBsC103=0;
         }
         if (mSigmaBsC309>0) {
-            varBsC309 = sqrt(varBsC309) / (2.0*mSigmaBsC309);
+            varBsC309 = sqrt(varBsC309/mWindow) / (mSigmaBsC309);
         }
         else
         {
             varBsC309=0;
         }
         if (mSigmaDCT>0) {
-            varDCT = sqrt(varDCT) / (2.0*mSigmaDCT);
+            varDCT = sqrt(varDCT/mWindow) / (mSigmaDCT);
         }
         else
         {
