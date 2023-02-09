@@ -1,6 +1,5 @@
 // File: std/exception.cpp
 #include <exception>
-#include <new>
 #include <sstream> // __str__
 
 #include <functional>
@@ -47,9 +46,6 @@ void bind_std_exception(std::function< pybind11::module &(std::string const &nam
 
 
 // File: std/stl_vector.cpp
-#include <FrameIStream.hpp>
-#include <SeqView.hpp>
-#include <functional>
 #include <iterator>
 #include <memory>
 #include <sstream> // __str__
@@ -69,7 +65,7 @@ void bind_std_exception(std::function< pybind11::module &(std::string const &nam
 
 void bind_std_stl_vector(std::function< pybind11::module &(std::string const &namespace_) > &M)
 {
-	{ // std::vector file:bits/stl_vector.h line:389
+	{ // std::vector file:bits/stl_vector.h line:423
 		pybind11::class_<std::vector<std::string>, std::shared_ptr<std::vector<std::string>>> cl(M("std"), "vector_std_string_t", "");
 		cl.def( pybind11::init( [](){ return new std::vector<std::string>(); } ) );
 		cl.def( pybind11::init<const class std::allocator<std::string > &>(), pybind11::arg("__a") );
@@ -166,20 +162,11 @@ void bind_std_stl_map(std::function< pybind11::module &(std::string const &names
 
 
 // File: std/stdexcept.cpp
-#include <boost/numeric/ublas/functional.hpp>
-#include <boost/numeric/ublas/matrix.hpp>
-#include <boost/numeric/ublas/storage.hpp>
-#include <ios>
 #include <iterator>
-#include <locale>
 #include <memory>
 #include <sstream> // __str__
 #include <stdexcept>
-#include <streambuf>
 #include <string>
-#include <system_error>
-#include <typeinfo>
-#include <vector>
 
 #include <functional>
 #include <pybind11/pybind11.h>
@@ -288,10 +275,7 @@ void bind_std_stdexcept(std::function< pybind11::module &(std::string const &nam
 
 // File: eternity/persist.cpp
 #include <eternity/persist.hpp>
-#include <iterator>
-#include <memory>
 #include <sstream> // __str__
-#include <string>
 
 #include <functional>
 #include <pybind11/pybind11.h>
@@ -327,7 +311,6 @@ void bind_eternity_persist(std::function< pybind11::module &(std::string const &
 
 
 // File: eternity/persist_xml.cpp
-#include <eternity/algorithms.hpp>
 #include <eternity/persist.hpp>
 #include <eternity/persist_xml.hpp>
 #include <functional>
@@ -420,9 +403,6 @@ void bind_tsaTraits(std::function< pybind11::module &(std::string const &namespa
 // File: tsaUtilityFunctions.cpp
 #include <ARMAView.hpp>
 #include <BaseView.hpp>
-#include <boost/numeric/ublas/functional.hpp>
-#include <boost/numeric/ublas/matrix.hpp>
-#include <boost/numeric/ublas/storage.hpp>
 #include <complex>
 #include <eternity/persist.hpp>
 #include <eternity/persist_xml.hpp>
@@ -656,7 +636,6 @@ void bind_LatticeView(std::function< pybind11::module &(std::string const &names
 
 // File: FrameL.cpp
 #include <FrameL.h>
-#include <cstdio>
 #include <sstream> // __str__
 
 #include <functional>
@@ -2101,8 +2080,11 @@ void bind_DoubleWhitening(std::function< pybind11::module &(std::string const &n
 
 		cl.def( pybind11::init( [](tsa::DoubleWhitening const &o){ return new tsa::DoubleWhitening(o); } ) );
 		cl.def("init", (void (tsa::DoubleWhitening::*)(class tsa::LatticeView &)) &tsa::DoubleWhitening::init, "C++: tsa::DoubleWhitening::init(class tsa::LatticeView &) --> void", pybind11::arg("LV"));
+		cl.def("__lshift__", (void (tsa::DoubleWhitening::*)(class tsa::SeqView<double> &)) &tsa::DoubleWhitening::operator<<, "Declaration of execute operation\n\n \n Matrix containing Time Series\n \n\n Matrix containing the WhitenedData\n\nC++: tsa::DoubleWhitening::operator<<(class tsa::SeqView<double> &) --> void", pybind11::arg("Data"));
+		cl.def("__rshift__", (void (tsa::DoubleWhitening::*)(class tsa::SeqView<double> &)) &tsa::DoubleWhitening::operator>>, "C++: tsa::DoubleWhitening::operator>>(class tsa::SeqView<double> &) --> void", pybind11::arg("outdata"));
 		cl.def("Input", (class tsa::DoubleWhitening & (tsa::DoubleWhitening::*)(class tsa::SeqView<double> &)) &tsa::DoubleWhitening::Input, "C++: tsa::DoubleWhitening::Input(class tsa::SeqView<double> &) --> class tsa::DoubleWhitening &", pybind11::return_value_policy::automatic, pybind11::arg("Data"));
 		cl.def("Output", (class tsa::DoubleWhitening & (tsa::DoubleWhitening::*)(class tsa::SeqView<double> &)) &tsa::DoubleWhitening::Output, "C++: tsa::DoubleWhitening::Output(class tsa::SeqView<double> &) --> class tsa::DoubleWhitening &", pybind11::return_value_policy::automatic, pybind11::arg("outdata"));
+		cl.def("__call__", (void (tsa::DoubleWhitening::*)(class tsa::SeqView<double> &, class tsa::SeqView<double> &)) &tsa::DoubleWhitening::operator(), "C++: tsa::DoubleWhitening::operator()(class tsa::SeqView<double> &, class tsa::SeqView<double> &) --> void", pybind11::arg("InputData"), pybind11::arg("OutData"));
 		cl.def("Load", [](tsa::DoubleWhitening &o, const char * a0) -> void { return o.Load(a0); }, "", pybind11::arg("filename"));
 		cl.def("Load", (void (tsa::DoubleWhitening::*)(const char *, const char *)) &tsa::DoubleWhitening::Load, "C++: tsa::DoubleWhitening::Load(const char *, const char *) --> void", pybind11::arg("filename"), pybind11::arg("fmt"));
 		cl.def("Save", [](tsa::DoubleWhitening &o, const char * a0) -> void { return o.Save(a0); }, "", pybind11::arg("filename"));
@@ -2334,6 +2316,8 @@ void bind_LSLLearning(std::function< pybind11::module &(std::string const &names
 		cl.def("Save", [](tsa::LSLfilter &o, const char * a0) -> void { return o.Save(a0); }, "", pybind11::arg("filename"));
 		cl.def("Save", (void (tsa::LSLfilter::*)(const char *, const char *)) &tsa::LSLfilter::Save, "C++: tsa::LSLfilter::Save(const char *, const char *) --> void", pybind11::arg("filename"), pybind11::arg("fmt"));
 		cl.def("xml_serialize", (void (tsa::LSLfilter::*)(class eternity::xml_archive &, const char *)) &tsa::LSLfilter::xml_serialize, "C++: tsa::LSLfilter::xml_serialize(class eternity::xml_archive &, const char *) --> void", pybind11::arg("xml"), pybind11::arg("p"));
+		cl.def("__lshift__", (void (tsa::LSLfilter::*)(class tsa::SeqView<double> &)) &tsa::LSLfilter::operator<<, "Declaration of execute operation\n\n \n Matrix containing Time Series\n \n\n Matrix containing the WhitenedData\n \n\n to be used only when data are contiguos (offline analysis)\n\nC++: tsa::LSLfilter::operator<<(class tsa::SeqView<double> &) --> void", pybind11::arg("Data"));
+		cl.def("__rshift__", (void (tsa::LSLfilter::*)(class tsa::SeqView<double> &)) &tsa::LSLfilter::operator>>, "C++: tsa::LSLfilter::operator>>(class tsa::SeqView<double> &) --> void", pybind11::arg("outdata"));
 		cl.def("__call__", (void (tsa::LSLfilter::*)(class tsa::SeqView<double> &, class tsa::SeqView<double> &)) &tsa::LSLfilter::operator(), "for online process\n\nC++: tsa::LSLfilter::operator()(class tsa::SeqView<double> &, class tsa::SeqView<double> &) --> void", pybind11::arg("Data"), pybind11::arg("outdata"));
 		cl.def("GetDataNeeded", (int (tsa::LSLfilter::*)()) &tsa::LSLfilter::GetDataNeeded, "Get the number of data needed in order to be able to \n call GetData successfully. If the returned value is less or \n equal than zero no data are needed.\n\n \n the needed data\n\nC++: tsa::LSLfilter::GetDataNeeded() --> int");
 		cl.def("GetOrder", (unsigned int (tsa::LSLfilter::*)()) &tsa::LSLfilter::GetOrder, "C++: tsa::LSLfilter::GetOrder() --> unsigned int");
@@ -2611,7 +2595,6 @@ void bind_TF2Psd(std::function< pybind11::module &(std::string const &namespace_
 #include <BaseWindow.hpp>
 #include <EventFullFeatured.hpp>
 #include <SeqView.hpp>
-#include <Util.hpp>
 #include <WDF2Classify.hpp>
 #include <WDF2Reconstruct.hpp>
 #include <WavReconstruction.hpp>
@@ -2811,6 +2794,7 @@ void bind_WaveletThreshold(std::function< pybind11::module &(std::string const &
 		cl.def( pybind11::init<unsigned int, unsigned int, double, double, unsigned int, enum tsa::WaveletThreshold::WaveletThresholding>(), pybind11::arg("window"), pybind11::arg("overlap"), pybind11::arg("thresh"), pybind11::arg("sigma"), pybind11::arg("ncoeff"), pybind11::arg("WTh") );
 
 		cl.def( pybind11::init( [](tsa::WDF2Classify const &o){ return new tsa::WDF2Classify(o); } ) );
+		cl.def("__lshift__", (void (tsa::WDF2Classify::*)(class tsa::SeqView<double> &)) &tsa::WDF2Classify::operator<<, "@{\n\nC++: tsa::WDF2Classify::operator<<(class tsa::SeqView<double> &) --> void", pybind11::arg("Data"));
 		cl.def("__call__", (void (tsa::WDF2Classify::*)(class tsa::SeqView<double> &, double)) &tsa::WDF2Classify::operator(), "C++: tsa::WDF2Classify::operator()(class tsa::SeqView<double> &, double) --> void", pybind11::arg("Data"), pybind11::arg("sigma"));
 		cl.def("__call__", (int (tsa::WDF2Classify::*)(class tsa::EventFullFeatured &)) &tsa::WDF2Classify::operator(), "C++: tsa::WDF2Classify::operator()(class tsa::EventFullFeatured &) --> int", pybind11::arg("Ev"));
 		cl.def("GetEvent", (void (tsa::WDF2Classify::*)(class tsa::EventFullFeatured &)) &tsa::WDF2Classify::GetEvent, "C++: tsa::WDF2Classify::GetEvent(class tsa::EventFullFeatured &) --> void", pybind11::arg("Ev"));
@@ -2823,6 +2807,7 @@ void bind_WaveletThreshold(std::function< pybind11::module &(std::string const &
 		cl.def( pybind11::init<unsigned int, unsigned int, double, double, unsigned int, enum tsa::WaveletThreshold::WaveletThresholding>(), pybind11::arg("window"), pybind11::arg("overlap"), pybind11::arg("thresh"), pybind11::arg("sigma"), pybind11::arg("ncoeff"), pybind11::arg("WTh") );
 
 		cl.def( pybind11::init( [](tsa::WDF2Reconstruct const &o){ return new tsa::WDF2Reconstruct(o); } ) );
+		cl.def("__lshift__", (void (tsa::WDF2Reconstruct::*)(class tsa::SeqView<double> &)) &tsa::WDF2Reconstruct::operator<<, "@{\n\nC++: tsa::WDF2Reconstruct::operator<<(class tsa::SeqView<double> &) --> void", pybind11::arg("Data"));
 		cl.def("__call__", (void (tsa::WDF2Reconstruct::*)(class tsa::SeqView<double> &, double)) &tsa::WDF2Reconstruct::operator(), "C++: tsa::WDF2Reconstruct::operator()(class tsa::SeqView<double> &, double) --> void", pybind11::arg("Data"), pybind11::arg("sigma"));
 		cl.def("__call__", (int (tsa::WDF2Reconstruct::*)(class tsa::EventFullFeatured &)) &tsa::WDF2Reconstruct::operator(), "C++: tsa::WDF2Reconstruct::operator()(class tsa::EventFullFeatured &) --> int", pybind11::arg("Ev"));
 		cl.def("GetEvent", (void (tsa::WDF2Reconstruct::*)(class tsa::EventFullFeatured &)) &tsa::WDF2Reconstruct::GetEvent, "C++: tsa::WDF2Reconstruct::GetEvent(class tsa::EventFullFeatured &) --> void", pybind11::arg("Ev"));
@@ -2851,6 +2836,32 @@ void bind_WaveletThreshold(std::function< pybind11::module &(std::string const &
 	// tsa::WindowFactory(const std::string &, const std::string &, unsigned int) file:WindowFactory.hpp line:74
 	M("tsa").def("WindowFactory", (class tsa::BaseWindow * (*)(const std::string &, const std::string &, unsigned int)) &tsa::WindowFactory, "C++: tsa::WindowFactory(const std::string &, const std::string &, unsigned int) --> class tsa::BaseWindow *", pybind11::return_value_policy::automatic, pybind11::arg("name"), pybind11::arg("parameters"), pybind11::arg("size"));
 
+}
+
+
+// File: Util.cpp
+#include <SeqView.hpp>
+#include <Util.hpp>
+#include <boost/numeric/ublas/functional.hpp>
+#include <boost/numeric/ublas/matrix.hpp>
+#include <boost/numeric/ublas/storage.hpp>
+#include <memory>
+#include <sstream> // __str__
+#include <string>
+
+#include <functional>
+#include <pybind11/pybind11.h>
+#include <string>
+
+#ifndef BINDER_PYBIND11_TYPE_CASTER
+	#define BINDER_PYBIND11_TYPE_CASTER
+	PYBIND11_DECLARE_HOLDER_TYPE(T, std::shared_ptr<T>)
+	PYBIND11_DECLARE_HOLDER_TYPE(T, T*)
+	PYBIND11_MAKE_OPAQUE(std::shared_ptr<void>)
+#endif
+
+void bind_Util(std::function< pybind11::module &(std::string const &namespace_) > &M)
+{
 	{ // tsa::Util file:Util.hpp line:64
 		pybind11::class_<tsa::Util, std::shared_ptr<tsa::Util>, tsa::AlgoBase> cl(M("tsa"), "Util", "");
 		cl.def( pybind11::init( [](){ return new tsa::Util(); } ) );
@@ -3492,6 +3503,7 @@ void bind_FrameIStream(std::function< pybind11::module &(std::string const &name
 
 		cl.def( pybind11::init( [](tsa::FrameIStream const &o){ return new tsa::FrameIStream(o); } ) );
 		cl.def("Init", (void (tsa::FrameIStream::*)()) &tsa::FrameIStream::Init, "C++: tsa::FrameIStream::Init() --> void");
+		cl.def("__rshift__", (class tsa::FrameIStream & (tsa::FrameIStream::*)(class tsa::SeqView<double> &)) &tsa::FrameIStream::operator>>, "Read data from the frame file. \n\n \n A list a time view to fill with data.  It contains a single channel.\n\n \n a reference to the instance of the class\n\nC++: tsa::FrameIStream::operator>>(class tsa::SeqView<double> &) --> class tsa::FrameIStream &", pybind11::return_value_policy::automatic, pybind11::arg("rSeqView"));
 		cl.def("FillView", (void (tsa::FrameIStream::*)(class tsa::SeqView<double> &, double, double)) &tsa::FrameIStream::FillView, "C++: tsa::FrameIStream::FillView(class tsa::SeqView<double> &, double, double) --> void", pybind11::arg("rSeqView"), pybind11::arg("tstart"), pybind11::arg("tend"));
 		cl.def("GetInfo", [](tsa::FrameIStream &o) -> std::string { return o.GetInfo(); }, "");
 		cl.def("GetInfo", (std::string (tsa::FrameIStream::*)(int)) &tsa::FrameIStream::GetInfo, "C++: tsa::FrameIStream::GetInfo(int) --> std::string", pybind11::arg("gtime"));
@@ -3588,6 +3600,7 @@ void bind_DoubleWhitening(std::function< pybind11::module &(std::string const &n
 void bind_LSLLearning(std::function< pybind11::module &(std::string const &namespace_) > &M);
 void bind_TF2Psd(std::function< pybind11::module &(std::string const &namespace_) > &M);
 void bind_WaveletThreshold(std::function< pybind11::module &(std::string const &namespace_) > &M);
+void bind_Util(std::function< pybind11::module &(std::string const &namespace_) > &M);
 void bind_FrameIStream(std::function< pybind11::module &(std::string const &namespace_) > &M);
 void bind_FrameIChannel(std::function< pybind11::module &(std::string const &namespace_) > &M);
 
@@ -3641,6 +3654,7 @@ PYBIND11_MODULE(pytsa, root_module) {
 	bind_LSLLearning(M);
 	bind_TF2Psd(M);
 	bind_WaveletThreshold(M);
+	bind_Util(M);
 	bind_FrameIStream(M);
 	bind_FrameIChannel(M);
 
@@ -3667,6 +3681,7 @@ PYBIND11_MODULE(pytsa, root_module) {
 // LSLLearning.cpp
 // TF2Psd.cpp
 // WaveletThreshold.cpp
+// Util.cpp
 // FrameIStream.cpp
 // FrameIChannel.cpp
 
