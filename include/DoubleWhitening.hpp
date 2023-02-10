@@ -119,6 +119,7 @@ namespace tsa {
 
             if (mFirstCall) {
                 mStartTime = Data.GetStart();
+                mFirstCall=false;
                
             }
         }
@@ -131,7 +132,7 @@ namespace tsa {
             outdata.SetSampling(mSampling);
             outdata.SetScale(1.0);
             mStartTime += mSampling * mOutputSize;
-            mFirstCall=false;
+            
         }
          
         DoubleWhitening& Input(SeqViewDouble &Data) {
@@ -147,6 +148,7 @@ namespace tsa {
 
         if (mFirstCall){
         mStartTime = Data.GetStart();
+        mFirstCall=false;
        
         }
         
@@ -163,7 +165,7 @@ namespace tsa {
         outdata.SetSampling(mSampling);
         outdata.SetScale(1.0);
         mStartTime += mSampling * mOutputSize;
-        mFirstCall=false;
+    
 
         return *this;
     }
@@ -180,7 +182,8 @@ namespace tsa {
             OutData.SetSampling(InputData.GetSampling());  
 
             if (mFirstCall){
-            mStartTime = InputData.GetStart();     
+            mStartTime = InputData.GetStart();
+            mFirstCall=false;
             }
             out->resize(1, mOutputSize);
             GetData(*out);
@@ -190,7 +193,7 @@ namespace tsa {
             mSampling = InputData.GetSampling(); 
             OutData.SetScale(1.0);
             mStartTime += InputData.GetSampling()* mOutputSize;
-            mFirstCall=false;              
+                         
                
             
         }
