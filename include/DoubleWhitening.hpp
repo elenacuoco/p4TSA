@@ -313,7 +313,10 @@ namespace tsa {
         ///
         //@{
         void SetData(Dmatrix &Data, double scale);
-        void SetOutputSize(unsigned int OutputSize);
+        void SetOutputSize(unsigned int OutputSize)
+        {
+            mOutputSize=OutputSize;
+        }
         //@}
 
 
