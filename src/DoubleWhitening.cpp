@@ -68,6 +68,9 @@ namespace tsa {
     void DoubleWhitening::SetData(Dmatrix &Data, double scale) {
         mBuffer.AddPoints(Data, scale);
     }
+    void DoubleWhitening::SetOutputSize(int OutputSize) {
+        mOutputSize(OutputSize);
+    }
 
     void DoubleWhitening::GetData(Dmatrix &DWOutput) {
         int F0 = mStatus;
