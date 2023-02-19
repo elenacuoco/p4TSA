@@ -68,7 +68,7 @@ namespace tsa {
     void DoubleWhitening::SetData(Dmatrix &Data, double scale) {
         mBuffer.AddPoints(Data, scale);
     }
-    void DoubleWhitening::SetOutputSize(int OutputSize) {
+    void DoubleWhitening::SetOutputSize(unsigned int OutputSize) {
         mOutputSize=OutputSize;
     }
 
