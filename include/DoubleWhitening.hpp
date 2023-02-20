@@ -317,7 +317,7 @@ namespace tsa {
             mOutputSize=OutputSize;
             mTotSize=OutputSize+ExtraSize;
             mWhitened(1, mTotSize);
-            mBuffer.AddPoints(mOutputSize);
+            mBuffer.AddPoint();
         }
       
         //@}
