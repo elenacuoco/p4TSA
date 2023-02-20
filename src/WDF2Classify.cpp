@@ -37,9 +37,9 @@ namespace tsa {
             mSigmaBsC206(sigma),
             mSigmaBsC103(sigma),
             mSigmaBsC309(sigma),
-            mSigmaDCT(sigma),
-            mDct(mWindow),
-            mBuffDct(1, mWindow),
+           // mSigmaDCT(sigma),
+            //mDct(mWindow),
+           // mBuffDct(1, mWindow),
             mBuffer(1),
             mBuff(1, mWindow),
             mWtH(WaveletTransform::Haar),
@@ -121,7 +121,7 @@ namespace tsa {
         double varBsC206;
         double varBsC103;
         double varBsC309;
-        double varDCT;
+        //double varDCT;
         int levelH;
         int level4;
         int levelC8;
@@ -133,7 +133,7 @@ namespace tsa {
         int levelBsC206;
         int levelBsC103;
         int levelBsC309;
-        int levelDCT;
+        //int levelDCT;
         Dvector cH(mNCoeff);
         Dvector c4(mNCoeff);
         Dvector cC8(mNCoeff);
@@ -145,7 +145,7 @@ namespace tsa {
         Dvector cBsC206(mNCoeff);
         Dvector cBsC103(mNCoeff);
         Dvector cBsC309(mNCoeff);
-        Dvector cDCT(mNCoeff);
+       // Dvector cDCT(mNCoeff);
         Cmax.resize(mNCoeff);
 
         if ((mWindow) > mBuffer.Size()) {
@@ -414,7 +414,7 @@ namespace tsa {
         }
         //
         //
-        for (unsigned int i = 0; i < mWindow; i++) {
+        /*for (unsigned int i = 0; i < mWindow; i++) {
             mBuffDct(0, i) = mBuffer(0, i);
         }
 
@@ -443,7 +443,7 @@ namespace tsa {
         for (unsigned int i = 0; i < mNCoeff; i++) {
             cDCT[i] = mBuff(0, i);
 
-        }
+        }}*/
 
         //
         //
@@ -529,13 +529,13 @@ namespace tsa {
         {
             varBsC309=0;
         }
-        if (mSigmaDCT>0) {
+       /* if (mSigmaDCT>0) {
             varDCT = sqrt(varDCT/mWindow) / (mSigmaDCT);
         }
         else
         {
             varDCT=0;
-        }
+        }*/
 
         varmax = varH;
         for (unsigned int i = 0; i < mNCoeff; i++) {
@@ -635,7 +635,7 @@ namespace tsa {
             level = levelBsC309;
             Wave = "BsplineC309";
         }
-        if (varDCT >= varmax) {
+       /* if (varDCT >= varmax) {
             varmax = varDCT;
             for (unsigned int i = 0; i < mNCoeff; i++) {
                 cmax[i] = cDCT[i];
@@ -643,7 +643,7 @@ namespace tsa {
 
             level = levelDCT;
             Wave = "DCT";
-        }
+        }}*/
 
         mBuffer.DelPoints(mStep);
 
