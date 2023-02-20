@@ -317,6 +317,7 @@ namespace tsa {
         {
             mOutputSize=OutputSize;
             mTotSize=OutputSize+ExtraSize;
+            mWhitened->resize(1, mOutputSize);
         }
         //@}
 
