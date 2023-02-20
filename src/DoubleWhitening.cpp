@@ -167,12 +167,7 @@ namespace tsa {
         mBuffer.DelPoints(mOutputSize);
     }
     
- void DoubleWhitening::SetOutputSize(unsigned int OutputSize,unsigned int ExtraSize)
-        {
-            mOutputSize=OutputSize;
-            mTotSize=OutputSize+ExtraSize;
-            mWhitened(1, mOutputSize);
-        }
+
    
 
 
