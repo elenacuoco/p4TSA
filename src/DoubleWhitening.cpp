@@ -64,7 +64,7 @@ namespace tsa {
     DoubleWhitening::~DoubleWhitening() {
 
     }
-    void DoubleWhitening::SetOutputSize(unsigned int OutputSize,unsigned int ExtraSize){
+    void DoubleWhitening::SetOutputSize(unsigned int OutputSize,unsigned int ExtraSize)
         {
             mOutputSize=OutputSize;
             mTotSize=OutputSize+ExtraSize;
