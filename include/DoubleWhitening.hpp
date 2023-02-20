@@ -316,7 +316,7 @@ namespace tsa {
         void SetOutputSize(unsigned int OutputSize,unsigned int ExtraSize){
             mOutputSize=OutputSize;
             mTotSize=OutputSize+ExtraSize;
-            mWhitened(1, mOutputSize);
+            mWhitened(1, mTotSize);
         }
       
         //@}
