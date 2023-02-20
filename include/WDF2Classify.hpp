@@ -54,7 +54,7 @@
 #include <EventFullFeatured.hpp>
 #include <WaveletTransform.hpp>
 #include <WaveletThreshold.hpp>
-#include <DCT.hpp>
+//#include <DCT.hpp>
 #include <Cs2HammingWindow.hpp>
 #include <BaseView.hpp>
 #include <math.h>
@@ -226,7 +226,7 @@ namespace tsa {
         double mSigmaBsC206;
         double mSigmaBsC103;
         double mSigmaBsC309;
-        double mSigmaDCT;
+       // double mSigmaDCT;
         FifoBuffer mBuffer;
 
         double mStartTime;
@@ -258,8 +258,8 @@ namespace tsa {
         WaveletTransform mWTBsC309;
         enum WaveletThreshold::WaveletThresholding mT;
         WaveletThreshold mWavThres;
-        DCT mDct;
-        Dmatrix mBuffDct;
+       // DCT mDct;
+        //Dmatrix mBuffDct;
         Cs2HammingWindow mWindowing;
 
     };
