@@ -339,7 +339,7 @@ namespace tsa {
         int mStatus;
         Dmatrix mEf;
         Dmatrix mEb;
-        Dmatrix mWhitened;
+        Dmatrix *mWhitened;
 
     };
 
