@@ -68,8 +68,7 @@ namespace tsa {
         {
             mOutputSize=OutputSize;
             mTotSize=OutputSize+ExtraSize;
-            
-            *mWhitened->resize(1, mTotSize);
+            mWhitened.resize(1, mTotSize);
       
         }
 
