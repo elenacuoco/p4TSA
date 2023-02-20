@@ -317,7 +317,7 @@ namespace tsa {
         {
             mOutputSize=OutputSize;
             mTotSize=OutputSize+ExtraSize;
-            mWhitened->resize(1, mOutputSize);
+            mWhitened(1, mOutputSize);
         }
         //@}
 
@@ -339,7 +339,7 @@ namespace tsa {
         int mStatus;
         Dmatrix mEf;
         Dmatrix mEb;
-        Dmatrix *mWhitened;
+        Dmatrix mWhitened;
 
     };
 
