@@ -1,0 +1,9 @@
+pytsa.cpp
+setup.cfg
+setup.py
+pytsa.egg-info/PKG-INFO
+pytsa.egg-info/SOURCES.txt
+pytsa.egg-info/dependency_links.txt
+pytsa.egg-info/not-zip-safe
+pytsa.egg-info/requires.txt
+pytsa.egg-info/top_level.txt
