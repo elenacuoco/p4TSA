@@ -39,11 +39,11 @@ namespace tsa {
 
     }
 
-    void DCT::execute(Dmatrix& indata, Dmatrix& outdata) throw (bad_matrix_size) {
+    void DCT::execute(Dmatrix& indata, Dmatrix& outdata)  {
 
         if ((indata.size1() != outdata.size1()) || (indata.size2() != outdata.size2())) {
             LogSevere("DCT::execute - bad matrix size");
-            throw bad_matrix_size("DCT::execute");
+           
         }
 
         if (indata.size2() != mLogicalSize) {
@@ -68,11 +68,11 @@ namespace tsa {
 
     }
 
-    void DCT::execute(Dvector& indata, Dvector& outdata) throw (bad_vector_size) {
+    void DCT::execute(Dvector& indata, Dvector& outdata)  {
 
         if (indata.size() != outdata.size()) {
             LogSevere("DCT::execute - bad vector size");
-            throw bad_vector_size("DCT::execute");
+            
         }
 
         if (indata.size() != mLogicalSize) {
@@ -92,7 +92,7 @@ namespace tsa {
 
     }
 
-    void DCT::MakePlan() throw (std::runtime_error) {
+    void DCT::MakePlan(){
         LogInfo("DCT::MakePlan start");
         if (mPlan) {
             fftw_destroy_plan(mPlan);
@@ -103,7 +103,7 @@ namespace tsa {
         mPlan = fftw_plan_r2r_1d(mLogicalSize, in, out, FFTW_REDFT10, FFTW_UNALIGNED | mPlanningRigor | mPlanningRestriction);
         if (mPlan == NULL) {
             LogSevere("DCT::MakePlan - error");
-            throw std::runtime_error("DCT::MakePlan");
+          
         }
         fftw_free(in);
         fftw_free(out);

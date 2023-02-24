@@ -133,19 +133,19 @@ namespace tsa {
             l = data->size2() + l;
             if (l < 0) {
                 LogSevere("Bad index");
-                throw std::runtime_error("ViewUtil::Range - Bad index");
+                
             }
         }
         if (m < 0) {
             m = data->size2() + m;
             if (m < 0) {
                 LogSevere("Bad index");
-                throw std::runtime_error("ViewUtil::Range - Bad index");
+                 
             }
         }
         if (((unsigned int) l >= data->size2()) || ((unsigned int) m >= data->size2())) {
             LogSevere("Bad index");
-            throw std::runtime_error("ViewUtil::Range - Bad index");
+          
         }
 
 
@@ -170,19 +170,19 @@ namespace tsa {
             l = data->size2() + l;
             if (l < 0) {
                 LogSevere("Bad index");
-                throw std::runtime_error("ViewUtil::Range - Bad index");
+               
             }
         }
         if (m < 0) {
             m = data->size2() + m;
             if (m < 0) {
                 LogSevere("Bad index");
-                throw std::runtime_error("ViewUtil::Range - Bad index");
+                
             }
         }
         if (((unsigned int) l >= data->size2()) || ((unsigned int) m >= data->size2())) {
             LogSevere("Bad index");
-            throw std::runtime_error("ViewUtil::Range - Bad index");
+             
         }
 
         unsigned int ch = data->size1();
@@ -206,19 +206,19 @@ namespace tsa {
             l = data->size2() + l;
             if (l < 0) {
                 LogSevere("Bad index");
-                throw std::runtime_error("ViewUtil::Range - Bad index");
+                
             }
         }
         if (m < 0) {
             m = data->size2() + m;
             if (m < 0) {
                 LogSevere("Bad index");
-                throw std::runtime_error("ViewUtil::Range - Bad index");
+                 
             }
         }
         if (((unsigned int) l >= data->size2()) || ((unsigned int) m >= data->size2())) {
             LogSevere("Bad index");
-            throw std::runtime_error("ViewUtil::Range - Bad index");
+            
         }
 
 
@@ -336,7 +336,7 @@ namespace tsa {
 
         if (data1->size2() != data2->size2()) {
             LogSevere("Views of different length");
-            throw std::runtime_error("ViewUtil::Join");
+          
         }
 
         Dmatrix tmp(data1->size1() + data2->size1(), data1->size2());
@@ -392,7 +392,7 @@ namespace tsa {
 
         if (data1->size2() != data2->size2()) {
             LogSevere("Views of different length");
-            throw std::runtime_error("ViewUtil::Append");
+           
         }
 
         data1->resize(data1->size1() + data2->size1(), data1->size2(), true);
@@ -436,7 +436,7 @@ namespace tsa {
 
         if (data1->size1() != data2->size1()) {
             LogSevere("Views with different channels");
-            throw std::runtime_error("ViewUtil::LeftShift - Views with different channels");
+            
         }
 
         unsigned int channels = data1->size1();
@@ -528,7 +528,7 @@ namespace tsa {
 
         if ((data1->size1() <= ch1) || (data2->size1() <= ch2) || (data1->size2() != data2->size2())) {
             LogSevere("Dot: wrong parameters");
-            throw std::runtime_error("Dot: wrong parameters");
+            
         }
         double scale1 = s1.GetScale();
         double scale2 = s2.GetScale();
@@ -599,7 +599,7 @@ namespace tsa {
 
         if (tstart > tend) {
             LogSevere("ViewUtil::PeekRange - tsart>tend");
-            throw std::runtime_error("ViewUtil::PeekRange - tsart>tend");
+          
         }
 
         bool ans = true;
@@ -715,7 +715,7 @@ namespace tsa {
         unsigned int s2 = data2->size2();
         if ((data2->size1() != s1) || (data2->size2() != s2)) {
             LogSevere("Wrong size for input views");
-            throw std::runtime_error("Util::BinOp");
+           
         }
         rs->resize(s1, s2);
         res.SetStart(ts1.GetStart());
@@ -737,7 +737,7 @@ namespace tsa {
         unsigned int s2 = data2->size2();
         if ((data2->size1() != s1) || (data2->size2() != s2)) {
             LogSevere("Wrong size for input views");
-            throw std::runtime_error("Util::BinOp");
+           
         }
         rs->resize(s1, s2);
         res.SetStart(ts1.GetStart());
@@ -870,7 +870,7 @@ namespace tsa {
 
         if ((data2->size1() != s1)) {
             LogSevere("Wrong size for input views");
-            throw std::runtime_error("Util::BinOp");
+           
         }
 
         unsigned int s2 = (data1->size2() > data2->size2()) ? data2->size2() : data1->size2();
@@ -901,7 +901,7 @@ namespace tsa {
 
         if ((data2->size1() != s1)) {
             LogSevere("Wrong size for input views");
-            throw std::runtime_error("Util::BinOp");
+           
         }
 
         unsigned int s2 = (data1->size2() > data2->size2()) ? data2->size2() : data1->size2();
@@ -1011,7 +1011,7 @@ namespace tsa {
 
         if ((data2->size1() != s1)) {
             LogSevere("Wrong size for input views");
-            throw std::runtime_error("Util::BinOp");
+            
         }
 
         unsigned int s2 = (data1->size2() > data2->size2()) ? data2->size2() : data1->size2();
@@ -1044,7 +1044,7 @@ namespace tsa {
 
         if ((data2->size1() != s1)) {
             LogSevere("Wrong size for input views");
-            throw std::runtime_error("Util::Prod");
+            
         }
 
         unsigned int s2 = (data1->size2() > data2->size2()) ? data2->size2() : data1->size2();
@@ -1109,7 +1109,7 @@ namespace tsa {
         if (((unsigned int) data2->size1() != s1)) {
             fprintf(stderr, "%d %d\n", data1->size1(), data2->size1());
             LogSevere("Wrong size for input views");
-            throw std::runtime_error("Util::ProdConj");
+            
         }
 
         unsigned int s2 = (data1->size2() > data2->size2()) ? data2->size2() : data1->size2();
@@ -1141,7 +1141,7 @@ namespace tsa {
 
         if ((data2->size1() != s1)) {
             LogSevere("Wrong size for input views");
-            throw std::runtime_error("Util::BinOp");
+           
         }
 
         unsigned int s2 = (data1->size2() > data2->size2()) ? data2->size2() : data1->size2();
@@ -1197,7 +1197,7 @@ namespace tsa {
 
         if ((data2->size1() != s1)) {
             LogSevere("Wrong size for input views");
-            throw std::runtime_error("Util::BinOp");
+           
         }
 
         unsigned int s2 = (data1->size2() > data2->size2()) ? data2->size2() : data1->size2();
@@ -1229,7 +1229,7 @@ namespace tsa {
 
         if ((data2->size1() != s1) || (data2->size2() != s2)) {
             LogSevere("Wrong size for input views");
-            throw std::runtime_error("Util::Multiply");
+          
         }
 
         rs->resize(s1, s2);
@@ -1256,7 +1256,7 @@ namespace tsa {
 
         if ((data2->size1() != s1) || (data2->size2() != s2)) {
             LogSevere("Wrong size for input views");
-            throw std::runtime_error("Util::Multiply");
+            
         }
 
         rs->resize(s1, s2);
@@ -1280,7 +1280,7 @@ namespace tsa {
 
         if ((data2->size1() != s1) || (data2->size2() != s2)) {
             LogSevere("Wrong size for input views");
-            throw std::runtime_error("Util::Multiply");
+            
         }
 
         rs->resize(s1, s2);

@@ -18,7 +18,7 @@ namespace tsa {
                 s << "File " << mFileName << " open error";
                 std::string emsg = s.str();
                 LogSevere("%s", emsg.c_str());
-                throw std::runtime_error(emsg);
+               
             }
             LogDebug(3, "File %s opened", const_cast<char *> (mFileName.c_str()));
             return true;
@@ -32,7 +32,7 @@ namespace tsa {
                 s << "File " << mFileName << " open error";
                 std::string emsg = s.str();
                 LogSevere("%s", emsg.c_str());
-                throw std::runtime_error(emsg);
+               
             }
             LogDebug(3, "File %s reopened (changed)", const_cast<char *> (mFileName.c_str()));
             return true;
@@ -87,7 +87,7 @@ namespace tsa {
             std::string emsg = s.str();
             LogSevere("%s", emsg.c_str());
             mStartTime += mDataLength;
-            throw std::runtime_error(emsg);
+           
         }
         Dmatrix* data = rSeqView.GetData();
 
@@ -194,7 +194,7 @@ namespace tsa {
                 break;
             default:
                 LogSevere("FrVectCopy: unknown type");
-                throw std::runtime_error("FdChannel::Channel::PushFrVect - unknown type");
+               
         }
     }
 

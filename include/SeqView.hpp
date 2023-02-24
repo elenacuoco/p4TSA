@@ -158,14 +158,14 @@ namespace tsa {
             read(fd, &len, sizeof (unsigned int));
             if (len > 256) {
                 LogSevere("Read: header too large: %d", len);
-                throw std::runtime_error("Read: header too large");
+               
             }
             read(fd, name, len);
             if (strcmp(name, typeid (*this).name()) != 0) {
                 LogSevere("Read: expecting class %s, got class %s",
                         typeid (*this).name(),
                         name);
-                throw std::runtime_error("Read: got bad class");
+               
             }
 
             // Get data
@@ -517,7 +517,7 @@ namespace tsa {
                     break;
                 default:
                     LogSevere("FrVectCopy: unknown type");
-                    throw std::runtime_error("FdChannel::Channel::PushFrVect - unknown type");
+                  
             }
 
 

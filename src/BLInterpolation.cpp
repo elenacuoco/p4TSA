@@ -89,7 +89,7 @@ namespace tsa {
 
         if (ret == 0) {
             LogWarning("No resampled data available");
-            throw no_data_available("BLInterpolation::operator>>");
+           
         }
 
         outdata.SetStart(mStartTime);
@@ -113,11 +113,11 @@ namespace tsa {
         }
         if (output.size1() != mChannels) {
             LogSevere("Bad number of channels");
-            throw bad_matrix_size("BLInterpolation::GetData");
+           
         }
         if (output.size2() != mOutData) {
             LogSevere("Bad number of data");
-            throw bad_matrix_size("BLInterpolation::GetData");
+            
         }
 
         LogDebug(LOG_DEBUG_LEVEL_2, "Success: needed: %d Available: %ld", mOutData, resampled_available());
@@ -170,7 +170,7 @@ namespace tsa {
         LogDebug(LOG_DEBUG_LEVEL_2, "SetData");
         if (input.size1() != mChannels) {
             LogSevere("Bad number of channels");
-            throw bad_matrix_size("BLInterpolation::SetData");
+          
         }
         for (unsigned int i = 0; i < input.size2(); i++) {
 
@@ -199,7 +199,7 @@ namespace tsa {
         mFilter = new Dvector(mOrder * maxrate + 1);
         if (mFilter == 0) {
             LogSevere("Memory allocation error");
-            throw std::runtime_error("Memory allocation error");
+          
         }
 
         for (unsigned i = 0; i < mFilter->size(); i++) {
