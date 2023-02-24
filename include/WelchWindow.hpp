@@ -205,7 +205,6 @@ namespace tsa {
          * 
          */
         void FillWindow() {
-            double norm = 0.0;
             for (unsigned int i = 0; i < mWindow.size(); i++) {
                 double x = mWindow.size() - 1;
                 double q = (x - 2 * i) / x;
