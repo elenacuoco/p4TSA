@@ -4,7 +4,7 @@ import sys
 import setuptools
 import os
 
-__version__ = '1.0.0'
+__version__ = '2.0.0'
 
 ENV_INCLUDE=os.environ['ENV_ROOT']+'/include'
 ENV_LIB=os.environ['ENV_ROOT']+'/lib'

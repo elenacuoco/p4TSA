@@ -105,7 +105,7 @@ namespace tsa {
         ///
         //@{
 
-        double NextSlice();
+        void NextSlice();
 
 
         //@}

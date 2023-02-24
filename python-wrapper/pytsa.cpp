@@ -1782,7 +1782,7 @@ struct PyCallBack_tsa_Cs2HannWindow : public tsa::Cs2HannWindow {
 struct PyCallBack_tsa_DCT : public tsa::DCT {
 	using tsa::DCT::DCT;
 
-	void MakePlan() throw() override {
+	void MakePlan() override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::DCT *>(this), "MakePlan");
 		if (overload) {
@@ -1801,7 +1801,7 @@ struct PyCallBack_tsa_DCT : public tsa::DCT {
 struct PyCallBack_tsa_IDCT : public tsa::IDCT {
 	using tsa::IDCT::IDCT;
 
-	void MakePlan() throw() override {
+	void MakePlan() override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::IDCT *>(this), "MakePlan");
 		if (overload) {
@@ -1820,7 +1820,7 @@ struct PyCallBack_tsa_IDCT : public tsa::IDCT {
 struct PyCallBack_tsa_DST : public tsa::DST {
 	using tsa::DST::DST;
 
-	void MakePlan() throw() override {
+	void MakePlan() override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::DST *>(this), "MakePlan");
 		if (overload) {
@@ -1986,7 +1986,7 @@ void bind_BLInterpolation(std::function< pybind11::module &(std::string const &n
 struct PyCallBack_tsa_InverseRealFFT : public tsa::InverseRealFFT {
 	using tsa::InverseRealFFT::InverseRealFFT;
 
-	void MakePlan() throw() override {
+	void MakePlan() override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::InverseRealFFT *>(this), "MakePlan");
 		if (overload) {
@@ -2257,7 +2257,7 @@ void bind_DoubleWhitening(std::function< pybind11::module &(std::string const &n
 struct PyCallBack_tsa_RealFFT : public tsa::RealFFT {
 	using tsa::RealFFT::RealFFT;
 
-	void MakePlan() throw() override {
+	void MakePlan() override {
 		pybind11::gil_scoped_acquire gil;
 		pybind11::function overload = pybind11::get_overload(static_cast<const tsa::RealFFT *>(this), "MakePlan");
 		if (overload) {
@@ -3558,7 +3558,7 @@ void bind_FrameIChannel(std::function< pybind11::module &(std::string const &nam
 		cl.def( pybind11::init<const std::string &, const std::string &, double, double>(), pybind11::arg("fileName"), pybind11::arg("channelName"), pybind11::arg("dLength"), pybind11::arg("tStart") );
 
 		cl.def( pybind11::init( [](tsa::FrameIChannel const &o){ return new tsa::FrameIChannel(o); } ) );
-		cl.def("NextSlice", (double (tsa::FrameIChannel::*)()) &tsa::FrameIChannel::NextSlice, "C++: tsa::FrameIChannel::NextSlice() --> double");
+		cl.def("NextSlice", (void (tsa::FrameIChannel::*)()) &tsa::FrameIChannel::NextSlice, "C++: tsa::FrameIChannel::NextSlice() --> void");
 		cl.def("GetData", (bool (tsa::FrameIChannel::*)(class tsa::SeqView<double> &, double, double)) &tsa::FrameIChannel::GetData, "Get a specified slice of data. After this call, start time will be\n set to tStart+dLength and data length to dLength\n\n \n the view to fill with data\n \n\n start time of the data returned \n \n\n length of data returned by \n\nC++: tsa::FrameIChannel::GetData(class tsa::SeqView<double> &, double, double) --> bool", pybind11::arg("rSeqView"), pybind11::arg("tStart"), pybind11::arg("dLength"));
 		cl.def("GetData", (bool (tsa::FrameIChannel::*)(class tsa::SeqView<double> &)) &tsa::FrameIChannel::GetData, "Get a slice of data the current data length, starting \n from the current start time.\n\n \n the view to fill with data\n\nC++: tsa::FrameIChannel::GetData(class tsa::SeqView<double> &) --> bool", pybind11::arg("rSeqView"));
 		cl.def_static("GetChannelList", [](const std::string & a0) -> std::string { return tsa::FrameIChannel::GetChannelList(a0); }, "", pybind11::arg("fileName"));

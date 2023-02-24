@@ -132,8 +132,9 @@ namespace tsa {
         return tmp;
     }
 
-    double FrameIChannel::NextSlice() {
+    void FrameIChannel::NextSlice() {
         mStartTime += mDataLength;
+        
     }
 
     void FrameIChannel::SetAutoIncrement(bool status) {

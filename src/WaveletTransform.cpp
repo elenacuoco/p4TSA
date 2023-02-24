@@ -235,7 +235,6 @@ namespace tsa {
     }
     ///Getters
     ///
-
     void WaveletTransform::WaveletPrint() {
         size_t n = mW->nc;
         size_t i;
@@ -248,17 +247,18 @@ namespace tsa {
 
         for (i = 1; i < (n < 10 ? n : 10); i++) {
             printf
-                    (" h1(%d):%12.8f   g1(%d):%12.8f       h2(%d):%12.8f   g2(%d):%12.8f\n",
+                    (" h1(%ld):%12.8f   g1(%ld):%12.8f       h2(%ld):%12.8f   g2(%ld):%12.8f\n",
                     i, mW->h1[ i ], i, mW->g1[ i ], i, mW->h2[ i ], i, mW->g2[ i ]);
         }
 
         for (; i < n; i++) {
             printf
-                    ("h1(%d):%12.8f  g1(%d):%12.8f      h2(%d):%12.8f  g2(%d):%12.8f\n",
+                    ("h1(%ld):%12.8f  g1(%ld):%12.8f      h2(%ld):%12.8f  g2(%ld):%12.8f\n",
                     i, mW->h1[ i ], i, mW->g1[ i ], i, mW->h2[ i ], i, mW->g2[ i ]);
         }
     }
 
+   
     void WaveletTransform::WaveletWaveform(Dvector& V) {
         double* data = new double[ mN ];
         for (unsigned int i = 0; i < mN; i++) {

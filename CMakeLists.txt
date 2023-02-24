@@ -73,7 +73,6 @@ install (FILES include/tsa.hpp DESTINATION $ENV{ENV_ROOT}/include)
 
 # Add the cmake folder so the FindSphinx module is found
 set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake" ${CMAKE_MODULE_PATH})
-
 if(DEFINED ENV{READTHEDOCS})
   add_subdirectory ("docs")
 endif(DEFINED ENV{READTHEDOCS})

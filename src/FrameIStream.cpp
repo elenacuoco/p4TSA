@@ -118,7 +118,7 @@ namespace tsa {
                 break;
             default:
                 LogSevere("FrVectCopy: unknown type");
-              
+                throw std::runtime_error("ChannelDescriptor::PushFrVect - unknown type");
         }
     }
 
@@ -142,7 +142,7 @@ namespace tsa {
                 }
                 break;
             default:
-               
+                throw std::runtime_error("Unimplemented data exception");
         }
     }
 
@@ -299,7 +299,7 @@ namespace tsa {
         FrProcData *proc = FrProcDataReadT(mFIS->GetFrameFile(), mName, tstart);
         if (proc == NULL) {
             LogSevere("PROC_Channel::FillView - data not found");
-           
+            throw std::runtime_error("PROC_Channel::FillView - data not found");
         }
 
 
@@ -611,7 +611,7 @@ namespace tsa {
             s << "File " << mFileName << " open error";
             std::string emsg = s.str();
             LogSevere("%s", emsg.c_str());
-           
+            throw std::runtime_error(emsg);
         } else {
             LogDebug(3, "File %s opened", mFileName.c_str());
         }
@@ -626,14 +626,14 @@ namespace tsa {
                 s << "No frames inside file " << mFileName;
                 std::string emsg = s.str();
                 LogSevere("%s", emsg.c_str());
-             
+                throw std::runtime_error(emsg);
             }
             if (mpFrame->GTimeS > mStartTime) {
                 std::stringstream s;
                 s << "No frames at the given time inside file " << mFileName;
                 std::string emsg = s.str();
                 LogSevere("%s", emsg.c_str());
-               
+                throw std::runtime_error(emsg);
             }
             while (mpFrame->GTimeS + mpFrame->dt < mStartTime) {
                 FrameFree(mpFrame);
@@ -643,7 +643,7 @@ namespace tsa {
                     s << "No frames a the given time inside file " << mFileName;
                     std::string emsg = s.str();
                     LogSevere("%s", emsg.c_str());
-                   
+                    throw std::runtime_error(emsg);
                 }
             }
             LogDebug(3, "FrameRead: got frame starting at %f", mpFrame->GTimeS);
@@ -691,7 +691,7 @@ namespace tsa {
         while (DataRequired()) GetData();
 
         if (mChannelDescriptors.size() != 1) {
-          
+            throw std::runtime_error("not a single channel stream");
         }
 
         if (mValidationView) {
@@ -707,7 +707,7 @@ namespace tsa {
         mStartTime += mTimeLength;
 
         while (mMissExceptions.size() > 0) {
-          
+            throw mMissExceptions.front();
             mMissExceptions.pop_front();
         }
         return *this;
@@ -721,7 +721,8 @@ namespace tsa {
 
         if (mChannelDescriptors.size() != rSeqView.size()) {
 
-           
+            throw std::runtime_error("bad size input view vector");
+        }
 
         unsigned int sz = mChannelDescriptors.size();
 
@@ -743,7 +744,7 @@ namespace tsa {
         }
         mStartTime += mTimeLength;
         while (mMissExceptions.size() > 0) {
-          
+            throw mMissExceptions.front();
             mMissExceptions.pop_front();
         }
         return *this;
@@ -806,7 +807,7 @@ namespace tsa {
         mpFrame = FrameRead(mpFrameFile);
         if (mpFrame == NULL) {
 
-            LogSevere("end of file");
+            throw std::runtime_error("end of file");
         }
         LogDebug(3, "Reading frame %d", mpFrame->frame);
         for (std::vector<ChannelDescriptor*>::iterator cd = mChannelDescriptors.begin();
