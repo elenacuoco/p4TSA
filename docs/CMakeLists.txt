@@ -1,5 +1,3 @@
-cmake_minimum_required(VERSION 3.6)
-project(p4TSA)
 find_package(Doxygen REQUIRED)
 find_package(Sphinx REQUIRED)
 

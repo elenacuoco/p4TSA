@@ -15,7 +15,6 @@ The Python interface to the library is pyTSA (you can call it pi'za)
 p4TSA is a minimal package containing ad hoc function to work with time series.
 It includes
  * Whitening in time domain
- * Double Whitening (equivalent to divide by the inverse of power spectral density) in time domain
  * Wavelet decomposition
  * Wavelet Detection Filter
 
