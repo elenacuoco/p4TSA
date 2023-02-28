@@ -6,7 +6,8 @@
 Welcome to p4TSA and pyTSA documentation
 ==========================================
 
-This library is a 'spin-off' of C++ Noise Analysis Package (NAP). 
+This library is a 'spin-off' of C++ Noise Analysis Package (NAP). this library is specific for data analysis for Gravitational Wave signlas.
+In particulare it is designed to work on the frame format input from gravitational wave detector output.
 
 The core library is written in C++ and should be compiled before using the python interface.
 
@@ -21,7 +22,7 @@ series. It contains
 - Whitening in Time domain
 - Double Whitneing in Time domain
 - Wavelet Decomposition
-- Wavelet Detection Filter (WDF)
+- Wavelet Detection Filter (WDF)  <https://gitlab.com/wdfpipe/wdf>
 
 
 
