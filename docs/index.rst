@@ -22,7 +22,7 @@ series. It contains
 - Whitening in Time domain
 - Double Whitneing in Time domain
 - Wavelet Decomposition
-- Wavelet Detection Filter (WDF)  <https://gitlab.com/wdfpipe/wdf>
+- Wavelet Detection Filter (WDF) (https://gitlab.com/wdfpipe/wdf)
 
 
 
@@ -32,5 +32,4 @@ series. It contains
 
    structure/installation
    structure/contact
-   structure/source_code
    WDFpipe <https://wdfpipe.gitlab.io>
