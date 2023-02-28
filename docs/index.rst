@@ -19,6 +19,7 @@ series. It contains
 
 - Modern Spectral Analysis Estimators
 - Whitening in Time domain
+--Double whitening in time domain
 - Wavelet Decomposition
 - Wavelet Detection Filter (WDF)
 
@@ -31,4 +32,5 @@ series. It contains
    structure/installation
    structure/contact
    structure/source_code
+   structure/libs
    WDFpipe <https://wdfpipe.gitlab.io>
