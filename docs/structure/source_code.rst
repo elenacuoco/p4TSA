@@ -7,10 +7,6 @@ Documentation
      libs/ARMAView.rst
      libs/BaseView.rst
      libs/LatticeView.rst
-     libs/tsaLog.rst
-     libs/tsaTraits.rst
-     libs/tsaTypes.rst
-     libs/tsaUtilityFunctions.rst
      libs/SeqView.rst
      libs/TFView.rst
      libs/ViewUtil.rst
@@ -62,11 +58,6 @@ Documentation
      libs/WDF2Classify.rst
      libs/WDF2Reconstruct.rst
      libs/WelchWindow.rst
-     libs/WindowFactory.rst
      libs/Util.rst
-     libs/eternity.rst
-     libs/fparser.rst
-     libs/fpconfig.rst
-     libs/fptypes.rst
      libs/FrameIStream.rst
      libs/FrameIChannel.rst
