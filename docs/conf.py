@@ -19,7 +19,7 @@
 #
 import os
 import sys
-sys.path.insert(0, os.path.abspath('../python-wrapper/pyWDF/pyWDFml'))
+sys.path.insert(0, os.path.abspath('../python-wrapper'))
 sys.path.insert(0, os.path.abspath('../src'))
 
 
@@ -41,7 +41,7 @@ read_the_docs_build = os.environ.get('READTHEDOCS', None) == 'True'
 breathe_projects = {}
 
 if read_the_docs_build:
-    input_dir = '../include'
+    input_dir = '../include ../src'
     output_dir = 'build'
     configureDoxyfile(input_dir, output_dir)
     subprocess.call('doxygen', shell=True)
@@ -75,14 +75,14 @@ templates_path = ['_templates']
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
 #
-source_suffix = ['.rst', '.md','.cpp']
+source_suffix = ['.rst', '.md','.cpp' ,'.hpp', '.py']
 
 # The master toctree document.
 master_doc = 'index'
 
 # General information about the project.
 project = 'p4TSA'
-copyright = '2017, Elena Cuoco'
+copyright = '2023, Elena Cuoco'
 author = 'Elena Cuoco'
 
 # The version info for the project you're documenting, acts as replacement for
