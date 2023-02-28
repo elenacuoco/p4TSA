@@ -19,11 +19,12 @@
 #
  
 import sys
+
+import subprocess, os
 sys.path.insert(0, os.path.abspath('../python-wrapper'))
 sys.path.insert(0, os.path.abspath('../src'))
 sys.path.insert(0, os.path.abspath('../include'))
 
-import subprocess, os
 
 def configureDoxyfile(input_dir, output_dir):
     with open('Doxyfile.in', 'r') as file :
