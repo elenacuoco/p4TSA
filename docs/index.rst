@@ -19,6 +19,7 @@ series. It contains
 
 - Modern Spectral Analysis Estimators
 - Whitening in Time domain
+- Double Whitening (equivalent to divide by the inverse of power spectral density) in time domain
 - Wavelet Decomposition
 - Wavelet Detection Filter (WDF)
 
