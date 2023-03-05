@@ -1107,7 +1107,7 @@ namespace tsa {
         unsigned int s1 = data1->size1();
 
         if (((unsigned int) data2->size1() != s1)) {
-            fprintf(stderr, "%d %d\n", data1->size1(), data2->size1());
+            fprintf(stderr, "%ld %ld\n", data1->size1(), data2->size1());
             LogSevere("Wrong size for input views");
             throw std::runtime_error("Util::ProdConj");
         }

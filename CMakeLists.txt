@@ -3,10 +3,10 @@ project(p4TSA)
 # The version number.
 
 if(NOT p4TSA_VERSION)
-  SET(p4TSA_VERSION_MAJOR 1)
+  SET(p4TSA_VERSION_MAJOR 2)
   SET(p4TSA_VERSION_MINOR 0)
-  SET(p4TSA_VERSION_PATCH 0)
-  SET(p4TSA_VERSION 1.0.0)
+  SET(p4TSA_VERSION_PATCH 1)
+  SET(p4TSA_VERSION 2.0.1)
 endif(NOT p4TSA_VERSION)
 
 set(CMAKE_CXX_STANDARD 11)
@@ -70,7 +70,7 @@ link_libraries(gsl fftw3  gslcblas framel)
 add_library(p4TSA SHARED ${SOURCE_FILES})
 install (TARGETS p4TSA DESTINATION $ENV{ENV_ROOT}/lib)
 install (FILES include/tsa.hpp DESTINATION $ENV{ENV_ROOT}/include)
-
+ 
 # Add the cmake folder so the FindSphinx module is found
 set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake" ${CMAKE_MODULE_PATH})
 if(DEFINED ENV{READTHEDOCS})
