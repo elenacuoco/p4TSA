@@ -38,11 +38,11 @@ namespace tsa {
         out.SetScale(in.GetScale() * in.GetSampling());
     }
 
-    void RealFFT::execute(Dmatrix& indata, Cmatrix& outdata)   {
+    void RealFFT::execute(Dmatrix& indata, Cmatrix& outdata) throw (bad_matrix_size) {
 
         if ((indata.size1() != outdata.size1()) || (indata.size2() / 2 + 1 != outdata.size2())) {
             LogSevere("RealFFT::execute - bad matrix size");
-             
+            throw bad_matrix_size("RealFFT::execute");
         }
 
         if (indata.size2() != mLogicalSize) {
@@ -70,11 +70,11 @@ namespace tsa {
 
     }
 
-    void RealFFT::execute(Dmatrix& indata, Cmatrix& outdata, unsigned int size, unsigned int offset)   {
+    void RealFFT::execute(Dmatrix& indata, Cmatrix& outdata, unsigned int size, unsigned int offset) throw (bad_matrix_size) {
 
         if ((indata.size1() != outdata.size1()) || (size / 2 + 1 != outdata.size2())) {
             LogSevere("RealFFT::execute - bad matrix size");
-           
+            throw bad_matrix_size("RealFFT::execute");
         }
 
         if (size != mLogicalSize) {
@@ -100,11 +100,11 @@ namespace tsa {
 
     }
 
-    void RealFFT::execute(Dvector& indata, Cvector& outdata)  {
+    void RealFFT::execute(Dvector& indata, Cvector& outdata) throw (bad_vector_size) {
 
         if (indata.size() / 2 + 1 != outdata.size()) {
             LogSevere("RealFFT::execute - bad vector size");
-            
+            throw bad_vector_size("RealFFT::execute");
         }
 
         if (indata.size() != mLogicalSize) {
@@ -124,7 +124,7 @@ namespace tsa {
 
     }
 
-    void RealFFT::MakePlan()  {
+    void RealFFT::MakePlan() throw (std::runtime_error) {
         LogInfo("RealFFT::MakePlan start");
         if (mPlan) {
             fftw_destroy_plan(mPlan);
@@ -134,7 +134,7 @@ namespace tsa {
         mPlan = fftw_plan_dft_r2c_1d(mLogicalSize, in, out, FFTW_UNALIGNED | mPlanningRigor | mPlanningRestriction);
         if (mPlan == NULL) {
             LogSevere("RealFFT::MakePlan - error");
-           
+            throw std::runtime_error("RealFFT::MakePlan");
         }
         fftw_free(in);
         fftw_free(out);

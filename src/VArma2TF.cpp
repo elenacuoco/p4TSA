@@ -27,13 +27,13 @@ namespace tsa {
     void VArma2TF::execute(VDmatrix& AR, VDmatrix& MA, Cmatrix& TF) {
 
         if (MA.size() == 0) {
-            LogSevere( "VArma2TF::execute - no MA part");
+            throw "VArma2TF::execute - no MA part";
         }
 
         unsigned int channels = MA[0].size1();
 
         if (channels * (channels + 1) / 2 != TF.size1()) {
-            LogSevere("bad_matrix_size: VArma2TF::execute");
+            throw bad_matrix_size("VArma2TF::execute");
         }
 
         double p = 2.0 * M_PI / (2.0 * (TF.size2() - 1));

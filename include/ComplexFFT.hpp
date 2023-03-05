@@ -139,12 +139,12 @@ namespace tsa {
          * @param in reference to the input multichannel buffer
          * @param out reference to the output multichannel buffer
          */
-        void execute(Cmatrix& in, Cmatrix& out) ;
+        void execute(Cmatrix& in, Cmatrix& out) throw (bad_matrix_size);
 
         /**
          * Make a new plan, with the current parameters.
          */
-        void MakePlan();
+        void MakePlan() throw (std::runtime_error);
 
         //@}
 

@@ -111,7 +111,7 @@ namespace tsa {
 
             if (in->size1() != 1) {
                 LogSevere("DoubleWhitening: multichannels not implemented resize");
-                 
+                throw bad_matrix_size("Wrong Matrix size");
             }
 
             SetData(*in, Data.GetScale());
@@ -140,7 +140,7 @@ namespace tsa {
 
         if (in->size1() != 1) {
             LogSevere("DoubleWhitening: multichannels not implemented resize");
-             
+            throw bad_matrix_size("Wrong Matrix size");
         }
 
         SetData(*in, Data.GetScale());
@@ -174,7 +174,7 @@ namespace tsa {
             Dmatrix* out = OutData.GetData();
             if (in->size1() != 1) {
             LogSevere("DoubleWhitening: multichannels not implemented resize");
-           
+            throw bad_matrix_size("Wrong Matrix size");
             }
 
             SetData(*in, InputData.GetScale());

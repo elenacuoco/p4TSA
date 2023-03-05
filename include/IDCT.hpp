@@ -129,7 +129,7 @@ namespace tsa {
          * @param in reference to the input multichannel buffer
          * @param out reference to the output multichannel buffer
          **/
-        void execute(Dmatrix& in, Dmatrix& out) ;
+        void execute(Dmatrix& in, Dmatrix& out) throw (bad_matrix_size);
 
         /**
          * Execution of the fft of a single channel buffer of double.
@@ -145,7 +145,7 @@ namespace tsa {
          * @param in reference to the input buffer
          * @param out reference to the output buffer
          **/
-        void execute(Dvector& in, Dvector& out) ;
+        void execute(Dvector& in, Dvector& out) throw (bad_vector_size);
 
 
         /**
@@ -153,7 +153,7 @@ namespace tsa {
          * 
          * @exception std::runtime_error The new plan cannot be created
          **/
-        void MakePlan() ;
+        void MakePlan() throw (std::runtime_error);
 
 
         //@}

@@ -212,7 +212,7 @@ namespace tsa {
 
             if (in->size1() != 1) {
                 LogSevere("LSLfilter: multichannels not implemented resize");
-               
+                throw bad_matrix_size("Wrong Matrix size");
             }
 
             SetData(*in, Data.GetScale());
@@ -249,7 +249,7 @@ namespace tsa {
 
             if (in->size1() != 1) {
                 LogSevere("LSLfilter: multichannels not implemented resize");
-               
+                throw bad_matrix_size("Wrong Matrix size");
             }
 
             SetData(*in, Data.GetScale());

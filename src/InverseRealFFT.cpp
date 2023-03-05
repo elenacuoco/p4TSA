@@ -18,9 +18,9 @@ namespace tsa {
 
     }
 
-    void InverseRealFFT::execute(Cmatrix& indata, Dmatrix& outdata)  {
+    void InverseRealFFT::execute(Cmatrix& indata, Dmatrix& outdata) throw (bad_matrix_size) {
         if ((indata.size1() != outdata.size1()) || (outdata.size2() / 2 + 1 != indata.size2())) {
-            LogSevere("bad_matrix_size:InverseRealFFT::execute");
+            throw bad_matrix_size("InverseRealFFT::execute");
         }
 
         if (outdata.size2() != mLogicalSize) {
@@ -66,9 +66,9 @@ namespace tsa {
 
     }
 
-    void InverseRealFFT::execute(Cvector& indata, Dvector& outdata)  {
+    void InverseRealFFT::execute(Cvector& indata, Dvector& outdata) throw (bad_vector_size) {
         if ((indata.size() != outdata.size() / 2 + 1)) {
-            LogSevere("bad_vector_size:InverseRealFFT::execute");
+            throw bad_vector_size("InverseRealFFT::execute");
         }
         if (outdata.size() != mLogicalSize) {
             mPlanNeedsUpdate = true;
@@ -85,9 +85,9 @@ namespace tsa {
                 );
     }
 
-    void InverseRealFFT::execute(CmatrixRow& indata, DmatrixRow& outdata)  {
+    void InverseRealFFT::execute(CmatrixRow& indata, DmatrixRow& outdata) throw (bad_vector_size) {
         if ((indata.size() != outdata.size() / 2 + 1)) {
-            LogSevere("bad_vector_size: InverseRealFFT::execute");
+            throw bad_vector_size("InverseRealFFT::execute");
         }
         if (outdata.size() != mLogicalSize) {
             mPlanNeedsUpdate = true;
@@ -105,12 +105,12 @@ namespace tsa {
     }
 
     void InverseRealFFT::execute(CmatrixRow& indata, DmatrixRow& outdata, unsigned int insize)
-      {
+    throw (bad_vector_size) {
         if (insize > indata.size()) {
-            LogSevere( "bad_vector_size: InverseRealFFT::execute");
+            throw bad_vector_size("InverseRealFFT::execute");
         }
         if ((insize != outdata.size() / 2 + 1)) {
-            LogSevere("bad_vector_size: InverseRealFFT::execute");
+            throw bad_vector_size("InverseRealFFT::execute");
         }
         if (outdata.size() != mLogicalSize) {
             mPlanNeedsUpdate = true;
@@ -127,7 +127,7 @@ namespace tsa {
                 );
     }
 
-    void InverseRealFFT::MakePlan()  {
+    void InverseRealFFT::MakePlan() throw (std::runtime_error) {
         if (mPlan) {
             fftw_destroy_plan(mPlan);
         }
@@ -137,7 +137,7 @@ namespace tsa {
 
         mPlan = fftw_plan_dft_c2r_1d(mLogicalSize, in, out, FFTW_UNALIGNED | mPlanningRigor | mPlanningRestriction);
         if (mPlan == NULL) {
-            LogSevere("runtime_error: InverseRealFFT::MakePlan");
+            throw std::runtime_error("InverseRealFFT::MakePlan");
         }
         fftw_free(in);
         fftw_free(out);

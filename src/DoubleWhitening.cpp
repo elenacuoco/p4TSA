@@ -88,7 +88,7 @@ namespace tsa {
 
         if (mTotSize > mBuffer.Size()) {
             LogWarning("Not enough data points");
-           
+            throw no_data_available("DoubleWhitening::GetData ->No data available");
         }
 
 

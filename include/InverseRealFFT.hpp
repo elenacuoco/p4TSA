@@ -124,7 +124,7 @@ namespace tsa {
          * @param in reference to the input multichannel buffer
          * @param out reference to the output multichannel buffer
          */
-        void execute(Cmatrix& in, Dmatrix& out);
+        void execute(Cmatrix& in, Dmatrix& out) throw (bad_matrix_size);
 
 
         /**
@@ -142,11 +142,11 @@ namespace tsa {
          * @param in reference to the input vector
          * @param out reference to the output vector
          */
-        void execute(Cvector& in, Dvector& out);
+        void execute(Cvector& in, Dvector& out) throw (bad_vector_size);
 
-        void execute(CmatrixRow& in, DmatrixRow& out) ;
+        void execute(CmatrixRow& in, DmatrixRow& out) throw (bad_vector_size);
 
-        void execute(CmatrixRow& in, DmatrixRow& out, unsigned int insize);
+        void execute(CmatrixRow& in, DmatrixRow& out, unsigned int insize) throw (bad_vector_size);
 
 
         /**
@@ -154,7 +154,7 @@ namespace tsa {
          *
          * @exception std::runtime_error The new plan cannot be created
          */
-        void MakePlan() ;
+        void MakePlan() throw (std::runtime_error);
 
         //@}
 

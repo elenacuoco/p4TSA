@@ -20,9 +20,9 @@ namespace tsa {
 
     }
 
-    void ComplexFFT::execute(Cmatrix& indata, Cmatrix& outdata)  {
+    void ComplexFFT::execute(Cmatrix& indata, Cmatrix& outdata) throw (bad_matrix_size) {
         if ((indata.size1() != outdata.size1()) || (indata.size2() != outdata.size2())) {
-          
+            throw bad_matrix_size("ComplexFFT::execute");
         }
 
         if (indata.size2() != mLogicalSize) {
@@ -46,7 +46,7 @@ namespace tsa {
         }
     }
 
-    void ComplexFFT::MakePlan()  {
+    void ComplexFFT::MakePlan() throw (std::runtime_error) {
         if (mPlan) {
             fftw_destroy_plan(mPlan);
         }
@@ -54,7 +54,7 @@ namespace tsa {
         fftw_complex *out = (fftw_complex*) fftw_malloc(sizeof (fftw_complex) * mLogicalSize);
         mPlan = fftw_plan_dft_1d(mLogicalSize, in, out, mSign, FFTW_UNALIGNED | mPlanningRigor | mPlanningRestriction);
         if (mPlan == NULL) {
-           
+            throw std::runtime_error("ComplexFFT::MakePlan");
         }
         fftw_free(in);
         fftw_free(out);

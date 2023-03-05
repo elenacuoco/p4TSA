@@ -124,13 +124,13 @@ namespace tsa {
          *
          * @return a returned value
          */
-        void execute(Cmatrix& tf, Dmatrix& psd)  {
+        void execute(Cmatrix& tf, Dmatrix& psd) throw (bad_matrix_size) {
             if (
                     (tf.size1() != psd.size1())
                     ||
                     (tf.size2() != psd.size2())) {
 
-               
+                throw bad_matrix_size("TF2PSD::execute");
             }
 
             if (mSquaredFlag) {
