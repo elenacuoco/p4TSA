@@ -119,7 +119,11 @@ namespace tsa {
             SetData(*in, Data.GetScale());
             mStartTime = Data.GetStart();
             mSampling = Data.GetSampling();
-            //mStartTime -= mSampling * static_cast<double> (WDF2Classify::GetDataNeeded());
+            if (GetDataNeeded<0){
+                shift=abs(GetDataNeeded);
+                mStartTime -= mSampling * static_cast<double> shift;
+            }
+           
         }
 
         void operator()(SeqViewDouble& Data, double sigma) {
@@ -133,7 +137,10 @@ namespace tsa {
             SetData(*in, Data.GetScale());
             mStartTime = Data.GetStart();
             mSampling = Data.GetSampling();
-            mStartTime -= mSampling * abs(static_cast<double> (WDF2Classify::GetDataNeeded()));
+            if (GetDataNeeded<0){
+                shift=abs(GetDataNeeded);
+                mStartTime -= mSampling * static_cast<double> shift;
+            }
             mWavThres.SetSigma(sigma);
 
         }
