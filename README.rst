@@ -3,7 +3,7 @@ p4TSA (package for Time Series Analysis)
 
 
 
-by Elena Cuoco (info@elenacuoco.com) https://www.elenacuoco.com
+by Elena Cuoco (elena.cuoco@ego-gw.it) https://www.elenacuoco.com
 
 This library is a 'spin-off' of C++ Noise Analysis Package (NAP) written
 together with Giancarlo Cella (giancarlo.cella@pi.infn.it)
