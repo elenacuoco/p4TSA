@@ -25,6 +25,7 @@ namespace tsa {
             mOverlap(overlap),
             mStep(mWindow - mOverlap),
             mThresh(thresh),
+            mFirstCall(true),
             mSigma(sigma),
             mSigmaH(sigma),
             mSigma4(sigma),

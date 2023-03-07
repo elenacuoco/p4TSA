@@ -110,37 +110,35 @@ namespace tsa {
 
         void operator<<(SeqViewDouble& Data) {
             Dmatrix* in = Data.GetData();
-
+          
+           
+           
             if (in->size1() != 1) {
                 LogSevere("TransientDetection: multichannels not implemented resize");
                 throw bad_matrix_size("Wrong Matrix size");
             }
-
             SetData(*in, Data.GetScale());
-            mStartTime = Data.GetStart();
-            mSampling = Data.GetSampling();
-            if (GetDataNeeded<0){
-                shift=abs(GetDataNeeded);
-                mStartTime -= mSampling * static_cast<double> shift;
+            if (mFirstCall) {
+                mStartTime = Data.GetStart();
+                mFirstCall=false;
+               
             }
+            mSampling = Data.GetSampling();
            
         }
 
         void operator()(SeqViewDouble& Data, double sigma) {
-            Dmatrix* in = Data.GetData();
-
+            Dmatrix* in = Data.GetData();     
             if (in->size1() != 1) {
                 LogSevere("TransientDetection: multichannels not implemented resize");
                 throw bad_matrix_size("Wrong Matrix size");
             }
-
             SetData(*in, Data.GetScale());
-            mStartTime = Data.GetStart();
-            mSampling = Data.GetSampling();
-            if (GetDataNeeded<0){
-                shift=abs(GetDataNeeded);
-                mStartTime -= mSampling * static_cast<double> shift;
+            if (mFirstCall) {
+                mStartTime = Data.GetStart();
+                mFirstCall=false;
             }
+            mSampling = Data.GetSampling();
             mWavThres.SetSigma(sigma);
 
         }
@@ -157,7 +155,6 @@ namespace tsa {
             unsigned int res = GetDataVector(abov, Cmax, level, Wave);
 
             if (res == 1) {
-
                 mEvFF.mlevel = static_cast<double> (level);
 
                 for (unsigned int i = 0; i < mNCoeff; i++) {
@@ -168,7 +165,6 @@ namespace tsa {
                 mEvFF.mWave = Wave;
                 Ev = mEvFF;
             }
-
             mStartTime += mSampling * static_cast<double> (mStep);
             return res;
         }
@@ -239,6 +235,7 @@ namespace tsa {
 
         double mStartTime;
         double mSampling;
+        bool mFirstCall;
         Dmatrix mBuff;
         EventFullFeatured mEvFF;
 
