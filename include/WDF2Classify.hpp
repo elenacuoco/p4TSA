@@ -133,7 +133,7 @@ namespace tsa {
             SetData(*in, Data.GetScale());
             mStartTime = Data.GetStart();
             mSampling = Data.GetSampling();
-            mStartTime -= mSampling * static_cast<double> abs(WDF2Classify::GetDataNeeded());
+            mStartTime -= mSampling * abs(static_cast<double> (WDF2Classify::GetDataNeeded()));
             mWavThres.SetSigma(sigma);
 
         }
