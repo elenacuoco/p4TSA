@@ -298,6 +298,7 @@ namespace tsa {
         ///
         //@{
         void GetData(Dmatrix &DWOutput);
+        int GetDataNeeded();
 
         ///
         ///@return the whitened buffer
