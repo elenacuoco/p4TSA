@@ -64,6 +64,10 @@ namespace tsa {
     DoubleWhitening::~DoubleWhitening() {
 
     }
+    
+    int DoubleWhitening::GetDataNeeded() {
+        return mBuffer.Size() - mTotSize;
+    }
     void DoubleWhitening::SetOutputSize(unsigned int OutputSize,unsigned int ExtraSize)
         {
             mOutputSize=OutputSize;
