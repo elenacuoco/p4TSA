@@ -115,11 +115,12 @@ namespace tsa {
             }
 
             SetData(*in, Data.GetScale());
-            mSampling = Data.GetSampling();
+            
 
             if (mFirstCall) {
                 mStartTime = Data.GetStart();
                 mFirstCall=false;
+                mSampling = Data.GetSampling();
                
             }
         }
@@ -144,10 +145,11 @@ namespace tsa {
         }
 
         SetData(*in, Data.GetScale());
-        mSampling = Data.GetSampling();
+       
 
         if (mFirstCall){
         mStartTime = Data.GetStart();
+        mSampling = Data.GetSampling();
         mFirstCall=false;
        
         }
@@ -178,13 +180,14 @@ namespace tsa {
             }
 
             SetData(*in, InputData.GetScale());
-            mSampling = InputData.GetSampling(); 
-            OutData.SetSampling(mSampling);  
+        
 
             if (mFirstCall){
             mStartTime = InputData.GetStart();
             mFirstCall=false;
+            mSampling = InputData.GetSampling(); 
             }
+            OutData.SetSampling(mSampling);  
             out->resize(1, mOutputSize);
             GetData(*out);
                
