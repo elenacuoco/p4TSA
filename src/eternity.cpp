@@ -26,10 +26,10 @@
 
 #include <eternity.hpp>
 
-#include <dynamic.cpp>
-#include <persist.cpp>
-#include <persist_xml.cpp>
-#include <xmlscanner.cpp>
+#include <eternity/dynamic.hpp>
+#include <eternity/persist.hpp>
+#include <eternity/persist_xml.hpp>
+#include <eternity/xmlscanner.hpp>
 
 
 #endif // ETERNITY_CPP 
