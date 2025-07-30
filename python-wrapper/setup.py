@@ -6,8 +6,12 @@ import os
 
 __version__ = '2.1.0'
 
-ENV_INCLUDE=os.environ['ENV_ROOT']+'/include'
-ENV_LIB=os.environ['ENV_ROOT']+'/lib'
+# Try to get include/lib paths from ENV_ROOT (e.g. inside container),
+# fallback to sys.prefix for local builds
+env_root = os.environ.get('ENV_ROOT', sys.prefix)
+ENV_INCLUDE = os.path.join(env_root, 'include')
+ENV_LIB = os.path.join(env_root, 'lib')
+
 class get_pybind_include(object):
     """Helper class to determine the pybind11 include path
 
