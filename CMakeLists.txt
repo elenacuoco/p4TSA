@@ -1,78 +1,78 @@
-cmake_minimum_required(VERSION 3.6)
-project(p4TSA)
-# The version number.
+cmake_minimum_required(VERSION 3.15...3.29)
+project(pytsa LANGUAGES CXX)
 
-if(NOT p4TSA_VERSION)
-  SET(p4TSA_VERSION_MAJOR 2)
-  SET(p4TSA_VERSION_MINOR 0)
-  SET(p4TSA_VERSION_PATCH 1)
-  SET(p4TSA_VERSION 2.0.1)
-endif(NOT p4TSA_VERSION)
+# ---------------------------------------------------------------------------
+# Packaging build for p4TSA / pyTSA
+#
+# Unlike the original build (which produced a separate libp4TSA.so and then
+# dynamically linked the pytsa extension against it), this build compiles all
+# core C++ sources DIRECTLY into the pytsa extension module. The result is a
+# single self-contained .so that only needs the *external* shared libraries
+# (GSL, FFTW3, FrameL) at runtime -- no hunting for libp4TSA.so, no RPATH pain.
+# ---------------------------------------------------------------------------
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
-set(SOURCE_FILES
-        src/AR2.cpp
-        src/AR2Parcor.cpp
-        src/ArBurgEstimator.cpp
-        src/ArDurbinEstimator.cpp
-        src/Arma2Psd.cpp
-        src/Arma2TF.cpp
-        src/ARMAFilter.cpp
-        src/ARMAfit.cpp
-        src/BaseWindow.cpp
-        src/BLInterpolation.cpp
-        src/ButterworthFilter.cpp
-        src/Cholesky.cpp
-        src/ClusterizedEventFullFeatured.cpp
-        src/ComplexFFT.cpp
-        src/CreateDvector.cpp
-        src/DCT.cpp
-        src/DoubleWhitening.cpp
-        src/DST.cpp
-        src/eternity.cpp
-        src/EventDescription.cpp
-        src/EventFullFeatured.cpp
-        src/fparser.cpp
-        src/fpoptimizer.cpp
-        src/FrameIStream.cpp
-        src/FrameIChannel.cpp
-        src/eternity.cpp
-        src/FifoBuffer.cpp
-        src/IDCT.cpp
-        src/InverseRealFFT.cpp
-        src/LatticeFilter.cpp
-        src/LeastSquaresLattice.cpp
-        src/LSLfilter.cpp
-        src/LSLLearning.cpp
-        src/MYWE.cpp
-        src/tsaSerialize.cpp
-        src/tsaLog.cpp
-        src/tsaUtilityFunctions.cpp
-        src/NotchWidrow.cpp
-        src/Parcor2AR.cpp
-        src/RealFFT.cpp
-        src/RLSCanceler.cpp
-        src/SelectionOrderCriteria.cpp
-        src/VArma2TF.cpp
-        src/ViewUtil.cpp
-        src/WaveletThreshold.cpp
-        src/WaveletTransform.cpp
-        src/WavReconstruction.cpp
-        src/WDF2Classify.cpp
-        src/WDF2Reconstruct.cpp
-        src/WindowFactory.cpp)
-include_directories(include include/eternity $ENV{ENV_ROOT}/include $ENV{ENV_ROOT}/include/gsl) #$ENV{ENV_ROOT}/include/boost
+if(NOT CMAKE_BUILD_TYPE)
+  set(CMAKE_BUILD_TYPE Release CACHE STRING "" FORCE)
+endif()
 
+# --- pybind11 (provided by scikit-build-core / conda) ----------------------
+find_package(pybind11 CONFIG REQUIRED)
 
-link_directories($ENV{ENV_ROOT}/lib)
-link_libraries(gsl fftw3  gslcblas framel)
-add_library(p4TSA SHARED ${SOURCE_FILES})
-install (TARGETS p4TSA DESTINATION $ENV{ENV_ROOT}/lib)
-install (FILES include/tsa.hpp DESTINATION $ENV{ENV_ROOT}/include)
- 
-# Add the cmake folder so the FindSphinx module is found
-set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake" ${CMAKE_MODULE_PATH})
-if(DEFINED ENV{READTHEDOCS})
-  add_subdirectory ("docs")
-endif(DEFINED ENV{READTHEDOCS})
+# --- GSL (standard CMake module: gives GSL::gsl and GSL::gslcblas) ----------
+find_package(GSL REQUIRED)
+
+# --- FFTW3: no reliable CMake config across distros -> find_library ---------
+find_library(FFTW3_LIB  fftw3  REQUIRED)   # double precision
+find_library(FFTW3F_LIB fftw3f REQUIRED)   # single precision
+find_library(FFTW3L_LIB fftw3l)            # long double (optional)
+
+# --- FrameL / libframel (conda-forge: framel / libframel) ------------------
+find_path(FRAMEL_INCLUDE_DIR NAMES FrameL.h)
+find_library(FRAMEL_LIB NAMES framel frame REQUIRED)
+if(NOT FRAMEL_INCLUDE_DIR)
+  message(FATAL_ERROR "FrameL.h not found. Install framel (conda install -c conda-forge framel).")
+endif()
+
+# --- Boost (HEADER-ONLY: only Boost.uBLAS + boost/config.hpp are used) ------
+# We deliberately use find_path instead of find_package(Boost): the dependency
+# is header-only, so there is nothing to link, and this avoids the FindBoost /
+# CMP0167 policy churn in recent CMake. conda-forge: libboost-headers.
+find_path(BOOST_INCLUDE_DIR NAMES boost/numeric/ublas/matrix.hpp REQUIRED)
+if(NOT BOOST_INCLUDE_DIR)
+  message(FATAL_ERROR "Boost headers not found. Install libboost-headers "
+                      "(conda install -c conda-forge libboost-headers) or system libboost-dev.")
+endif()
+
+# --- core C++ sources ------------------------------------------------------
+file(GLOB CORE_SOURCES CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp")
+
+# --- the single extension module -------------------------------------------
+pybind11_add_module(pytsa
+  ${CMAKE_CURRENT_SOURCE_DIR}/python-wrapper/pytsa.cpp
+  ${CORE_SOURCES}
+)
+
+target_include_directories(pytsa PRIVATE
+  ${CMAKE_CURRENT_SOURCE_DIR}/include
+  ${CMAKE_CURRENT_SOURCE_DIR}/include/eternity
+  ${FRAMEL_INCLUDE_DIR}
+  ${BOOST_INCLUDE_DIR}
+)
+
+target_link_libraries(pytsa PRIVATE
+  GSL::gsl
+  GSL::gslcblas
+  ${FFTW3_LIB}
+  ${FFTW3F_LIB}
+  ${FRAMEL_LIB}
+)
+if(FFTW3L_LIB)
+  target_link_libraries(pytsa PRIVATE ${FFTW3L_LIB})
+endif()
+
+# scikit-build-core installs into the wheel root; conda into site-packages.
+install(TARGETS pytsa LIBRARY DESTINATION .)

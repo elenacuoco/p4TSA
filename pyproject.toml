@@ -1,0 +1,24 @@
+[build-system]
+requires = ["scikit-build-core>=0.10", "pybind11>=2.12"]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "p4tsa"
+version = "2.1.0"
+description = "p4TSA - package for Time Series Analysis (Python interface: pyTSA / import pytsa)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "GPL-3.0-or-later" }
+authors = [{ name = "Elena Cuoco", email = "info@elenacuoco.com" }]
+keywords = ["gravitational-waves", "time-series", "whitening", "wavelet", "virgo"]
+dependencies = ["numpy", "scipy"]
+
+[project.urls]
+Homepage = "https://github.com/elenacuoco/p4TSA"
+Documentation = "https://p4tsa.readthedocs.io"
+
+[tool.scikit-build]
+# scikit-build-core reads ./CMakeLists.txt (use the packaging one as the root).
+cmake.version = ">=3.15"
+build-dir = "build/{wheel_tag}"
+wheel.expand-macos-universal-tags = true

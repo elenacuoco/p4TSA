@@ -1,0 +1,55 @@
+{% set name = "p4tsa" %}
+{% set version = "2.1.0" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  # For local builds: point at the repo root.
+  path: ..
+  # For a release build, comment `path` above and use instead:
+  # git_url: https://github.com/elenacuoco/p4TSA.git
+  # git_rev: 2.1.0
+
+build:
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv --no-build-isolation
+
+requirements:
+  build:
+    - {{ compiler('cxx') }}
+    - cmake >=3.15
+    - make                      # [unix]
+  host:
+    - python
+    - pip
+    - scikit-build-core >=0.10
+    - pybind11 >=2.12
+    - numpy
+    - gsl
+    - fftw
+    - framel
+    - libboost-headers   # header-only (Boost.uBLAS); build-time only
+  run:
+    - python
+    - scipy
+    - {{ pin_compatible('numpy') }}
+    - gsl
+    - fftw
+    - framel
+
+test:
+  imports:
+    - pytsa
+
+about:
+  home: https://github.com/elenacuoco/p4TSA
+  license: GPL-3.0-or-later
+  license_file: LICENSE
+  summary: p4TSA - package for Time Series Analysis (Python interface pyTSA)
+  dev_url: https://github.com/elenacuoco/p4TSA
+
+extra:
+  recipe-maintainers:
+    - elenacuoco
