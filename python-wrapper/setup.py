@@ -1,13 +1,18 @@
 from setuptools import setup, Extension
 from setuptools.command.build_ext import build_ext
-import sys
-import setuptools
 import os
+import sys
+import sysconfig
+import setuptools
 
 __version__ = '2.1.0'
 
-ENV_INCLUDE=os.environ['ENV_ROOT']+'/include'
-ENV_LIB=os.environ['ENV_ROOT']+'/lib'
+ENV_ROOT = os.environ.get('CONDA_PREFIX') or os.environ.get('VIRTUAL_ENV') or sys.prefix
+ENV_INCLUDE = os.path.join(ENV_ROOT, 'include')
+ENV_LIB = os.path.join(ENV_ROOT, 'lib')
+PYTHON_INCLUDE = sysconfig.get_paths().get('include', ENV_INCLUDE)
+
+
 class get_pybind_include(object):
     """Helper class to determine the pybind11 include path
 
@@ -27,7 +32,7 @@ ext_modules = [
     Extension(
         'pytsa',
         ['pytsa.cpp'],
-        include_dirs=['../include',ENV_INCLUDE,
+        include_dirs=['../include', ENV_INCLUDE, PYTHON_INCLUDE,
             # Path to pybind11 headers
             get_pybind_include(),
             get_pybind_include(user=True)
@@ -56,9 +61,7 @@ def has_flag(compiler, flagname):
 
 
 def cpp_flag(compiler):
-    """Return the -std=c++[11/14] compiler flag.
-1
-    """
+    """Return the -std=c++[11/14] compiler flag."""
     if has_flag(compiler, '-std=c++14'):
         return '-std=c++14'
     elif has_flag(compiler, '-std=c++11'):

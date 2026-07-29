@@ -1,4 +1,4 @@
-# p4TSA — package for Time Series Analysis
+ # p4TSA — package for Time Series Analysis
 
 [![docs](https://img.shields.io/badge/docs-latest-brightgreen.svg?style=flat)](http://p4tsa.readthedocs.io/en/latest/?badge=latest)
 
@@ -88,6 +88,37 @@ conda install -c conda-forge --use-local p4tsa
 > provide builds of the dependencies — in that case use an environment with a
 > stable Python.
 
+
+## Build and install the `pytsa` Python module
+
+The C++ sources are compiled with CMake into a Python extension module named
+`pytsa`. Build and install it for the currently active Python environment with:
+
+```bash
+conda install -c conda-forge cmake make compilers pybind11 gsl fftw framel libboost-headers
+
+cmake -S . -B build \
+  -DCMAKE_BUILD_TYPE=Release \
+  -DCMAKE_INSTALL_PREFIX="$CONDA_PREFIX"
+
+cmake --build build -j"$(nproc)"
+cmake --install build
+```
+
+CMake may install the compiled extension in the environment prefix. Move it to
+the active Python `site-packages` directory if necessary:
+
+```bash
+PYTHON_SITE=$(python -c "import sysconfig; print(sysconfig.get_paths()['platlib'])")
+mv "$CONDA_PREFIX"/pytsa*.so "$PYTHON_SITE"/
+```
+
+Verify the installation with:
+
+```bash
+python -c "import pytsa; print(pytsa.__file__)"
+```
+
 ## Installation with pip
 
 `pip` builds the C++ extension from source, so the native libraries and the
@@ -122,8 +153,8 @@ python test.py
 ## Who do I talk to?
 
 - Repo owner / admin: info@elenacuoco.com
-- Team contacts: elena.cuoco@ego-gw.it, giancarlo.cella@pi.infn.it,
-  fmorawski@camk.edu.pl
+- Team contacts: elena.cuoco@unibo.it 
+
 
 ## License
 
