@@ -122,6 +122,7 @@ namespace tsa {
         Dvector mCoeff;
         double mlevel;
         std::string mWave;
+        double mSigma;
     private:
     protected:
 

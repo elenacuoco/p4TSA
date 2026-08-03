@@ -2147,6 +2147,7 @@ void bind_DoubleWhitening(std::function< pybind11::module &(std::string const &n
 		cl.def_readwrite("mCoeff", &tsa::EventFullFeatured::mCoeff);
 		cl.def_readwrite("mlevel", &tsa::EventFullFeatured::mlevel);
 		cl.def_readwrite("mWave", &tsa::EventFullFeatured::mWave);
+		cl.def_readwrite("mSigma", &tsa::EventFullFeatured::mSigma);
 		cl.def("assign", (void (tsa::EventFullFeatured::*)(const class tsa::EventFullFeatured &)) &tsa::EventFullFeatured::operator=, "C++: tsa::EventFullFeatured::operator=(const class tsa::EventFullFeatured &) --> void", pybind11::arg("from"));
 		cl.def("EVcopy", (void (tsa::EventFullFeatured::*)(const class tsa::EventFullFeatured &)) &tsa::EventFullFeatured::EVcopy, "C++: tsa::EventFullFeatured::EVcopy(const class tsa::EventFullFeatured &) --> void", pybind11::arg("from"));
 		cl.def("outprint", (void (tsa::EventFullFeatured::*)()) &tsa::EventFullFeatured::outprint, "C++: tsa::EventFullFeatured::outprint() --> void");

@@ -32,6 +32,9 @@
 ///
 //@{
 #include <string>
+#include <vector>
+#include <utility>
+#include <memory>
 
 //@}
 
@@ -91,6 +94,13 @@ namespace tsa {
                      unsigned int ncoeff, enum WaveletThreshold::WaveletThresholding WTh = WaveletThreshold::cuoco);
 
         ///
+        /// Copy constructor. Explicit (not compiler-generated): mBases holds
+        /// unique_ptr<WaveletTransform>, so a deep copy has to rebuild each
+        /// basis's WaveletTransform rather than copy the pointer.
+        ///
+        WDF2Reconstruct(const WDF2Reconstruct& from);
+
+        ///
         /// Destructor
         ///
         ~WDF2Reconstruct();
@@ -100,6 +110,7 @@ namespace tsa {
         ///
         /// @param from The instance to be assigned from
         ///
+        WDF2Reconstruct& operator=(const WDF2Reconstruct& from);
         /// @return a reference to a new object
 
         ///
@@ -142,10 +153,11 @@ namespace tsa {
 
         int operator()(EventFullFeatured& Ev) {
             double abov;
+            double sigmaWin;
             Dvector Cmax;
             int level;
             std::string Wave;
-            unsigned int res = GetDataVector(abov, Cmax, level, Wave);
+            unsigned int res = GetDataVector(abov, sigmaWin, Cmax, level, Wave);
 
             if (res == 1) {
 
@@ -157,6 +169,7 @@ namespace tsa {
                 mEvFF.mTime = mStartTime;
                 mEvFF.mSNR = abov;
                 mEvFF.mWave = Wave;
+                mEvFF.mSigma = sigmaWin;
                 Ev = mEvFF;
             }
 
@@ -171,7 +184,7 @@ namespace tsa {
         //@{
 
 
-        unsigned int GetDataVector(double& abov, Dvector& Cmax, int& levelR, std::string& Wave);
+        unsigned int GetDataVector(double& abov, double& sigmaWin, Dvector& Cmax, int& levelR, std::string& Wave);
 
         void GetEvent(EventFullFeatured &Ev) {
 
@@ -179,6 +192,7 @@ namespace tsa {
             Ev.mSNR = mEvFF.mSNR;
             Ev.mWave = mEvFF.mWave;
             Ev.mCoeff = mEvFF.mCoeff;
+            Ev.mSigma = mEvFF.mSigma;
         }
 
         /**
@@ -214,8 +228,6 @@ namespace tsa {
         unsigned int mNCoeff;
         double mThresh;
         double mSigma;
-        double mSigmaH;
-        double mSigmaBsC309;
         FifoBuffer mBuffer;
 
         double mStartTime;
@@ -223,10 +235,12 @@ namespace tsa {
         Dmatrix mBuff;
         EventFullFeatured mEvFF;
 
-        enum WaveletTransform::WaveletType mWtH;
-        WaveletTransform mWTH;
-        enum WaveletTransform::WaveletType mWtBsC309;
-        WaveletTransform mWTBsC309;
+        // Same candidate wavelet basis set as WDF2Classify -- see that
+        // class's GetDataVector for why the biorthogonal B-spline family is
+        // excluded. unique_ptr, not WaveletTransform by value: see the same
+        // member in WDF2Classify.hpp for why.
+        std::vector<std::unique_ptr<WaveletTransform>> mBases;
+        std::vector<std::string> mBaseNames;
         enum WaveletThreshold::WaveletThresholding mT;
         WaveletThreshold mWavThres;
         Cs2HammingWindow mWindowing;

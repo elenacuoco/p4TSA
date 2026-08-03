@@ -32,6 +32,9 @@
 ///
 //@{
 #include <string>
+#include <vector>
+#include <utility>
+#include <memory>
 
 //@}
 
@@ -92,6 +95,13 @@ namespace tsa {
                      unsigned int ncoeff, enum WaveletThreshold::WaveletThresholding WTh = WaveletThreshold::cuoco);
 
         ///
+        /// Copy constructor. Explicit (not compiler-generated): mBases holds
+        /// unique_ptr<WaveletTransform>, so a deep copy has to rebuild each
+        /// basis's WaveletTransform rather than copy the pointer.
+        ///
+        WDF2Classify(const WDF2Classify& from);
+
+        ///
         /// Destructor
         ///
         ~WDF2Classify();
@@ -102,6 +112,7 @@ namespace tsa {
         /// @param from The instance to be assigned from
         ///
         /// @return a reference to a new object
+        WDF2Classify& operator=(const WDF2Classify& from);
 
         ///
         /// @name Operations
@@ -149,10 +160,11 @@ namespace tsa {
 
         int operator()(EventFullFeatured& Ev) {
             double abov;
+            double sigmaWin;
             Dvector Cmax;
             int level;
             std::string Wave;
-            unsigned int res = GetDataVector(abov, Cmax, level, Wave);
+            unsigned int res = GetDataVector(abov, sigmaWin, Cmax, level, Wave);
 
             if (res == 1) {
                 mEvFF.mlevel = static_cast<double> (level);
@@ -163,6 +175,13 @@ namespace tsa {
                 mEvFF.mTime = mStartTime;
                 mEvFF.mSNR = abov;
                 mEvFF.mWave = Wave;
+                // Noise scale of the winning basis's own per-window MAD
+                // estimate (see WaveletThreshold::operator()), i.e. the same
+                // sigma that produced mSNR above -- carried through so a
+                // downstream SNR recomputation (wdf.processes.wavelet_energy)
+                // can use the convention that actually decided this trigger,
+                // instead of a separate, frozen, time-domain sigma.
+                mEvFF.mSigma = sigmaWin;
                 Ev = mEvFF;
             }
             mStartTime += mSampling * static_cast<double> (mStep);
@@ -176,7 +195,7 @@ namespace tsa {
         //@{
 
 
-        unsigned int GetDataVector(double& abov, Dvector& Cmax, int& levelR, std::string& Wave);
+        unsigned int GetDataVector(double& abov, double& sigmaWin, Dvector& Cmax, int& levelR, std::string& Wave);
 
         void GetEvent(EventFullFeatured &Ev) {
 
@@ -184,6 +203,7 @@ namespace tsa {
             Ev.mSNR = mEvFF.mSNR;
             Ev.mWave = mEvFF.mWave;
             Ev.mCoeff = mEvFF.mCoeff;
+            Ev.mSigma = mEvFF.mSigma;
         }
 
         /**
@@ -219,18 +239,6 @@ namespace tsa {
         unsigned int mNCoeff;
         double mThresh;
         double mSigma;
-        double mSigmaH;
-        double mSigma4;
-        double mSigmaC8;
-        double mSigma10;
-        double mSigma12;
-        double mSigmaC16;
-        double mSigma20;
-        double mSigmaC20;
-        double mSigmaBsC206;
-        double mSigmaBsC103;
-        double mSigmaBsC309;
-       // double mSigmaDCT;
         FifoBuffer mBuffer;
 
         double mStartTime;
@@ -239,28 +247,18 @@ namespace tsa {
         Dmatrix mBuff;
         EventFullFeatured mEvFF;
 
-        enum WaveletTransform::WaveletType mWtH;
-        WaveletTransform mWTH;
-        enum WaveletTransform::WaveletType mWt4;
-        WaveletTransform mWT4;
-        enum WaveletTransform::WaveletType mWtC8;
-        WaveletTransform mWTC8;
-        enum WaveletTransform::WaveletType mWt10;
-        WaveletTransform mWT10;
-        enum WaveletTransform::WaveletType mWt12;
-        WaveletTransform mWT12;
-        enum WaveletTransform::WaveletType mWtC16;
-        WaveletTransform mWTC16;
-        enum WaveletTransform::WaveletType mWt20;
-        WaveletTransform mWT20;
-        enum WaveletTransform::WaveletType mWtC20;
-        WaveletTransform mWTC20;
-        enum WaveletTransform::WaveletType mWtBsC206;
-        WaveletTransform mWTBsC206;
-        enum WaveletTransform::WaveletType mWtBsC103;
-        WaveletTransform mWTBsC103;
-        enum WaveletTransform::WaveletType mWtBsC309;
-        WaveletTransform mWTBsC309;
+        // Candidate wavelet bases for per-window basis selection: the full
+        // orthonormal GSL family (Haar + Daubechies/Daubechies-centered,
+        // every order it supports). The biorthogonal B-spline family is
+        // deliberately excluded -- see GetDataVector's implementation
+        // comment for why.
+        // unique_ptr, not WaveletTransform by value: WaveletTransform's
+        // copy constructor is a no-op that leaves its GSL handles
+        // uninitialized (see WaveletTransform.cpp) -- storing by value in a
+        // vector would silently corrupt every element on the first
+        // push_back. A vector of pointers only ever moves the pointer.
+        std::vector<std::unique_ptr<WaveletTransform>> mBases;
+        std::vector<std::string> mBaseNames;
         enum WaveletThreshold::WaveletThresholding mT;
         WaveletThreshold mWavThres;
        // DCT mDct;

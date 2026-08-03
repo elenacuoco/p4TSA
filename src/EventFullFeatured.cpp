@@ -33,6 +33,7 @@ namespace tsa {
     mSNR(0.0),
     mlevel(0.0),
     mWave("Haar"),
+    mSigma(0.0),
     mCoeff(NumCoeff) {
 
 
@@ -56,6 +57,7 @@ namespace tsa {
         }
         mlevel = from.mlevel;
         mWave = from.mWave;
+        mSigma = from.mSigma;
     }
 
     void EventFullFeatured::EVcopy(const EventFullFeatured& from) {
@@ -68,6 +70,7 @@ namespace tsa {
         }
         mlevel = from.mlevel;
         mWave = from.mWave;
+        mSigma = from.mSigma;
     }
 
 
