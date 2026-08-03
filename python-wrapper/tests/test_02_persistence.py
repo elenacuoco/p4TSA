@@ -15,8 +15,10 @@ from pytsa.tsa import ArBurgEstimator, LatticeView
 def _seqview(n, seed, fs=256.0, t0=0.0):
     rng = np.random.default_rng(seed)
     x = rng.normal(0.0, 1.0, n)
-    from wdf.structures.array2SeqView import array2SeqView
-    return array2SeqView(t0, fs, n).Fill(t0, x)
+    sv = pytsa.tsa.SeqView_double_t(t0, 1.0 / fs, n)
+    for i, v in enumerate(x):
+        sv.FillPoint(0, i, v)
+    return sv
 
 
 class TestPersistence(unittest.TestCase):
