@@ -76,6 +76,7 @@ extensions = [
     'sphinx.ext.ifconfig',
     'sphinx.ext.viewcode',
     'sphinx.ext.inheritance_diagram',
+    'myst_parser',
     'breathe'
 ]
 breathe_default_project = "p4TSA"
@@ -85,9 +86,14 @@ templates_path = ['_templates']
 highlight_language = 'c++'
 
 # The suffix(es) of source filenames.
-# You can specify multiple suffix as a list of string:
-#
-source_suffix = ['.rst', '.md','.cpp']
+# A plain list here gets Sphinx-auto-converted to map every suffix
+# (including .md) to 'restructuredtext' when no markdown parser is
+# registered, silently breaking Markdown rendering. myst_parser handles
+# .md; .cpp is dropped since no toctree references a .cpp file.
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.md': 'markdown',
+}
 
 # The master toctree document.
 master_doc = 'index'

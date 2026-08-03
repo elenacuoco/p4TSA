@@ -33,6 +33,7 @@ jobs:
           environment-name: p4tsa-ci
           init-shell: bash
           create-args: >-
+            -c conda-forge
             python=${{ matrix.python-version }}
             pip
             cxx-compiler
@@ -48,7 +49,6 @@ jobs:
             libboost-headers
             cereal
             pytest
-          channels: conda-forge
 
       - name: Build and install p4TSA (editable, no build isolation)
         shell: bash -el {0}
@@ -75,9 +75,9 @@ jobs:
           environment-name: p4tsa-docs-ci
           init-shell: bash
           create-args: >-
+            -c conda-forge
             python=3.11
             doxygen
-          channels: conda-forge
 
       - name: Install docs Python requirements
         shell: bash -el {0}
