@@ -1,5 +1,5 @@
 {% set name = "p4tsa" %}
-{% set version = "2.1.0" %}
+{% set version = "2.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -10,7 +10,7 @@ source:
   path: ..
   # For a release build, comment `path` above and use instead:
   # git_url: https://github.com/elenacuoco/p4TSA.git
-  # git_rev: 2.1.0
+  # git_rev: 2.2.0
 
 build:
   number: 0

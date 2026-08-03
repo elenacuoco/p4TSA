@@ -4,7 +4,7 @@ build-backend = "scikit_build_core.build"
 
 [project]
 name = "p4tsa"
-version = "2.1.0"
+version = "2.2.0"
 description = "p4TSA - package for Time Series Analysis (Python interface: pyTSA / import pytsa)"
 readme = "README.md"
 requires-python = ">=3.9"

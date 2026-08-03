@@ -147,7 +147,7 @@ To build a wheel instead of installing in place:
 
 ```bash
 pip install build
-python -m build --wheel        # -> dist/p4tsa-2.1.0-*.whl
+python -m build --wheel        # -> dist/p4tsa-2.2.0-*.whl
 ```
 
 ## Running the tests
@@ -161,8 +161,18 @@ Runs on every push/PR via [GitHub Actions](.github/workflows/ci.yml) (Python 3.1
 
 ## Changelog
 
-### 2026-08-03
+### 2.2.0 (2026-08-03)
 
+- **Contact info updated**: `elena.cuoco@unibo.it` replacing the retired `ego-gw.it` address
+  everywhere it appeared (source headers, README, docs); Giancarlo Cella dropped as a docs team
+  contact.
+- **Missing docs page added** for `ExtraWaveletFamilies.hpp` (Coiflet/Symlet bases below) —
+  it had doxygen comments but no Sphinx page since it was introduced.
+- **CI Node.js 20 deprecation cleared**: `actions/checkout` v4→v5, `mamba-org/setup-micromamba`
+  v1→v3 (both now Node 24-native).
+- **`test_02_persistence.py` no longer depends on `wdf`**: builds its `SeqView` fixture with
+  pytsa's own `SeqView_double_t`/`FillPoint` instead of `wdf.structures.array2SeqView`, which
+  isn't installed in this repo's CI.
 - **WDF trigger SNR statistic fixed**: `EventFullFeatured::mSigma` now exposes the winning
   wavelet basis's own per-window sigma across the C++/Python boundary (was previously
   recomputed downstream from a separate, staler sigma convention). The candidate wavelet-basis

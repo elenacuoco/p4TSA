@@ -5,7 +5,7 @@ import sys
 import sysconfig
 import setuptools
 
-__version__ = '2.1.0'
+__version__ = '2.2.0'
 
 ENV_ROOT = os.environ.get('CONDA_PREFIX') or os.environ.get('VIRTUAL_ENV') or sys.prefix
 ENV_INCLUDE = os.path.join(ENV_ROOT, 'include')
