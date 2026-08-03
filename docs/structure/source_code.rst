@@ -54,6 +54,7 @@ Documentation
      libs/TukeyHannWindow.rst
      libs/WaveletThreshold.rst
      libs/WaveletTransform.rst
+     libs/ExtraWaveletFamilies.rst
      libs/WavReconstruction.rst
      libs/WDF2Classify.rst
      libs/WDF2Reconstruct.rst

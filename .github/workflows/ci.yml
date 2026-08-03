@@ -22,12 +22,12 @@ jobs:
       matrix:
         python-version: ["3.10", "3.11", "3.12"]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       # Same dependency set as conda-recipe/meta.yaml's host/build
       # requirements -- keep the two in sync if either changes.
       - name: Set up build environment
-        uses: mamba-org/setup-micromamba@v1
+        uses: mamba-org/setup-micromamba@v3
         with:
           micromamba-version: latest
           environment-name: p4tsa-ci
@@ -66,10 +66,10 @@ jobs:
     name: Docs build check
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Set up build environment
-        uses: mamba-org/setup-micromamba@v1
+        uses: mamba-org/setup-micromamba@v3
         with:
           micromamba-version: latest
           environment-name: p4tsa-docs-ci

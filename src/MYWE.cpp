@@ -5,7 +5,7 @@
 // Description:
 //
 //
-// Author: Elena Cuoco <elena.cuoco@ego-gw.it>, (C) 2006
+// Author: Elena Cuoco <elena.cuoco@unibo.it>, (C) 2006
 //
 // Copyright: See COPYING file that comes with this distribution
 //

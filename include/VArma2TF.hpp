@@ -1,7 +1,7 @@
 /**
  *
  *   Copyright (C) 2004 by Elena Cuoco
- *   elena.cuoco@ego-gw.it
+ *   elena.cuoco@unibo.it
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU General Public License as published by
@@ -19,7 +19,7 @@
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  *
  * @file   VArma2TF.hpp
- * @author Elena Cuoco <elena.cuoco@ego-gw.it>
+ * @author Elena Cuoco <elena.cuoco@unibo.it>
  * @date   2004
  *
  * @brief  Estimate the Transfer function using the ARMA parametrization

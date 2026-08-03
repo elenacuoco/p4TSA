@@ -1,0 +1,4 @@
+ExtraWaveletFamilies
+========================================
+
+.. doxygenfile:: ExtraWaveletFamilies.hpp
