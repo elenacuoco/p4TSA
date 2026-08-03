@@ -20,35 +20,53 @@ namespace tsa {
 
     namespace {
         // Candidate wavelet bases for per-window basis selection in
-        // WDF2Classify/WDF2Reconstruct: the full orthonormal GSL family
-        // (Haar + every order of Daubechies/Daubechies-centered it
-        // supports, up to order 20 -- GSL's own maximum). The biorthogonal
-        // B-spline family (Bspline*/BsplineC*) is deliberately excluded:
-        // it does not preserve L2 energy (Parseval's theorem), so
+        // WDF2Classify/WDF2Reconstruct. All orthonormal (required -- see
+        // below), 10 total (2026-08-03, down from 19):
+        //
+        // - Daub4/8/12/16/20, centered only. Plain and centered Daubechies
+        //   of the same order are the same filter taps, just phase-shifted;
+        //   empirically their post-threshold RMS/sigma ratio agrees to
+        //   4-6% on real+injected data (verified 2026-08-03), so keeping
+        //   both wastes ~half this list's compute for no real diversity.
+        //   Centered kept over plain for its symmetric time support (more
+        //   consistent gpsPeak estimates). Every-other order (not all 9)
+        //   trims further while still spanning short- to long-support.
+        // - Sym4/Sym8 (symlet, centered -- see ExtraWaveletFamilies.hpp).
+        //   Sym2/Sym3 are excluded because they are numerically identical
+        //   to Daub4/Daub6 (verified against PyWavelets 2026-08-03) --
+        //   Symlets only start differing from Daubechies at order 4.
+        // - Coif1/Coif2 (coiflet, centered -- see ExtraWaveletFamilies.hpp):
+        //   unlike Daubechies/Symlet, has vanishing moments for the scaling
+        //   function too, not just the wavelet -- genuinely different
+        //   coefficient behavior on smooth/slowly-varying signal content,
+        //   not just a further Daubechies-family variant.
+        // - Haar.
+        //
+        // The biorthogonal B-spline family (Bspline*/BsplineC*) remains
+        // excluded: it does not preserve L2 energy (Parseval's theorem), so
         // WaveletThreshold's pooled-median sigma estimate -- which assumes
         // homoscedastic, orthonormal coefficients -- systematically
         // misestimates its per-level noise floor and let it win basis
-        // selection spuriously, even on pure Gaussian noise.
+        // selection spuriously, even on pure Gaussian noise. A plain
+        // (non-wavelet-packet) DCT was tried in this codebase's history and
+        // removed: DCT is a single global, non-multiresolution transform,
+        // structurally mismatched with the pyramidal-DWT-based downstream
+        // machinery (coeff_freq_bands/coeff_time_bounds assume a Mallat
+        // octave layout) and with WaveletThreshold's own per-level sigma
+        // assumptions -- reintroducing it needs a real cosine wavelet
+        // packet (tree-structured, like DWT), not a block DCT, plus its own
+        // downstream time-frequency mapping; not attempted here.
         const std::pair<enum WaveletTransform::WaveletType, const char*> kCandidateBases[] = {
             {WaveletTransform::Haar, "Haar"},
-            {WaveletTransform::Daub4, "Daub4"},
-            {WaveletTransform::Daub6, "Daub6"},
-            {WaveletTransform::Daub8, "Daub8"},
-            {WaveletTransform::Daub10, "Daub10"},
-            {WaveletTransform::Daub12, "Daub12"},
-            {WaveletTransform::Daub14, "Daub14"},
-            {WaveletTransform::Daub16, "Daub16"},
-            {WaveletTransform::Daub18, "Daub18"},
-            {WaveletTransform::Daub20, "Daub20"},
             {WaveletTransform::DaubC4, "DaubC4"},
-            {WaveletTransform::DaubC6, "DaubC6"},
             {WaveletTransform::DaubC8, "DaubC8"},
-            {WaveletTransform::DaubC10, "DaubC10"},
             {WaveletTransform::DaubC12, "DaubC12"},
-            {WaveletTransform::DaubC14, "DaubC14"},
             {WaveletTransform::DaubC16, "DaubC16"},
-            {WaveletTransform::DaubC18, "DaubC18"},
             {WaveletTransform::DaubC20, "DaubC20"},
+            {WaveletTransform::Sym4, "Sym4"},
+            {WaveletTransform::Sym8, "Sym8"},
+            {WaveletTransform::Coif1, "Coif1"},
+            {WaveletTransform::Coif2, "Coif2"},
         };
         const std::size_t kNumCandidateBases = sizeof(kCandidateBases) / sizeof(kCandidateBases[0]);
     }

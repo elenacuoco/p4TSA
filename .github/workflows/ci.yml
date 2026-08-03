@@ -1,0 +1,96 @@
+name: CI
+
+# Replaces the old .travis.yml (2026-08-03): Travis CI's free tier for open
+# source was retired years ago, and that config no longer matched this
+# repo's actual build (it predated the scikit-build-core/CMake packaging
+# build -- see CMakeLists.txt's own header comment). GitHub Actions runs on
+# every push/PR for free on a public repo, no separate service to configure.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build-and-test:
+    name: Build + test (Python ${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+
+      # Same dependency set as conda-recipe/meta.yaml's host/build
+      # requirements -- keep the two in sync if either changes.
+      - name: Set up build environment
+        uses: mamba-org/setup-micromamba@v1
+        with:
+          micromamba-version: latest
+          environment-name: p4tsa-ci
+          init-shell: bash
+          create-args: >-
+            python=${{ matrix.python-version }}
+            pip
+            cxx-compiler
+            cmake>=3.15
+            make
+            scikit-build-core>=0.10
+            pybind11>=2.12
+            numpy
+            scipy
+            gsl
+            fftw
+            framel
+            libboost-headers
+            cereal
+            pytest
+          channels: conda-forge
+
+      - name: Build and install p4TSA (editable, no build isolation)
+        shell: bash -el {0}
+        run: pip install -e . --no-build-isolation -v
+
+      - name: Import smoke test
+        shell: bash -el {0}
+        run: python -c "import pytsa; print('pytsa OK:', pytsa.__file__)"
+
+      - name: Run tests
+        shell: bash -el {0}
+        run: pytest python-wrapper/tests/ -v
+
+  docs:
+    name: Docs build check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up build environment
+        uses: mamba-org/setup-micromamba@v1
+        with:
+          micromamba-version: latest
+          environment-name: p4tsa-docs-ci
+          init-shell: bash
+          create-args: >-
+            python=3.11
+            doxygen
+          channels: conda-forge
+
+      - name: Install docs Python requirements
+        shell: bash -el {0}
+        run: pip install -r docs/requirements.txt
+
+      # Not -W: Breathe auto-generates one page per C++ symbol, most
+      # deliberately not added to a hand-curated toctree (an API reference,
+      # not a hard error) -- treating that as build-breaking would make CI
+      # fail on this project's normal, expected doc structure. Still catches
+      # real breakage (e.g. a Sphinx ConfigError, a bad directive) since
+      # those fail the build outright regardless of -W.
+      - name: Build Sphinx docs (Doxygen + Breathe)
+        shell: bash -el {0}
+        env:
+          READTHEDOCS: "True"
+        run: sphinx-build -b html docs docs/_build/html

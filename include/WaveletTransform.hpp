@@ -36,6 +36,13 @@
 //@}
 
 ///
+/// @name Local includes
+///
+//@{
+#include <ExtraWaveletFamilies.hpp>
+//@}
+
+///
 /// @name Project includes
 ///
 //@{
@@ -117,7 +124,11 @@ namespace tsa {
             BsplineC303,
             BsplineC305,
             BsplineC307,
-            BsplineC309
+            BsplineC309,
+            Coif1,
+            Coif2,
+            Sym4,
+            Sym8
         };
 
         ///

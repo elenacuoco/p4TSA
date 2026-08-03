@@ -47,6 +47,16 @@ if(NOT BOOST_INCLUDE_DIR)
                       "(conda install -c conda-forge libboost-headers) or system libboost-dev.")
 endif()
 
+# --- Cereal (HEADER-ONLY serialization, replaces the old vendored
+# `eternity` XML persistence framework as of 2026-08-03 -- see
+# CerealPersistence.hpp) -- same find_path pattern as Boost above.
+# conda-forge: cereal.
+find_path(CEREAL_INCLUDE_DIR NAMES cereal/cereal.hpp REQUIRED)
+if(NOT CEREAL_INCLUDE_DIR)
+  message(FATAL_ERROR "Cereal headers not found. Install cereal "
+                      "(conda install -c conda-forge cereal) or system libcereal-dev.")
+endif()
+
 # --- core C++ sources ------------------------------------------------------
 file(GLOB CORE_SOURCES CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp")
 
@@ -58,9 +68,9 @@ pybind11_add_module(pytsa
 
 target_include_directories(pytsa PRIVATE
   ${CMAKE_CURRENT_SOURCE_DIR}/include
-  ${CMAKE_CURRENT_SOURCE_DIR}/include/eternity
   ${FRAMEL_INCLUDE_DIR}
   ${BOOST_INCLUDE_DIR}
+  ${CEREAL_INCLUDE_DIR}
 )
 
 target_link_libraries(pytsa PRIVATE

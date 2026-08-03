@@ -21,27 +21,19 @@ namespace tsa {
     namespace {
         // Same candidate basis set as WDF2Classify (see that file's
         // GetDataVector for the rationale on excluding biorthogonal
-        // B-spline bases).
+        // B-spline bases, dropping plain/centered Daubechies duplicates,
+        // and the Coiflet/Symlet additions).
         const std::pair<enum WaveletTransform::WaveletType, const char*> kCandidateBases[] = {
             {WaveletTransform::Haar, "Haar"},
-            {WaveletTransform::Daub4, "Daub4"},
-            {WaveletTransform::Daub6, "Daub6"},
-            {WaveletTransform::Daub8, "Daub8"},
-            {WaveletTransform::Daub10, "Daub10"},
-            {WaveletTransform::Daub12, "Daub12"},
-            {WaveletTransform::Daub14, "Daub14"},
-            {WaveletTransform::Daub16, "Daub16"},
-            {WaveletTransform::Daub18, "Daub18"},
-            {WaveletTransform::Daub20, "Daub20"},
             {WaveletTransform::DaubC4, "DaubC4"},
-            {WaveletTransform::DaubC6, "DaubC6"},
             {WaveletTransform::DaubC8, "DaubC8"},
-            {WaveletTransform::DaubC10, "DaubC10"},
             {WaveletTransform::DaubC12, "DaubC12"},
-            {WaveletTransform::DaubC14, "DaubC14"},
             {WaveletTransform::DaubC16, "DaubC16"},
-            {WaveletTransform::DaubC18, "DaubC18"},
             {WaveletTransform::DaubC20, "DaubC20"},
+            {WaveletTransform::Sym4, "Sym4"},
+            {WaveletTransform::Sym8, "Sym8"},
+            {WaveletTransform::Coif1, "Coif1"},
+            {WaveletTransform::Coif2, "Coif2"},
         };
         const std::size_t kNumCandidateBases = sizeof(kCandidateBases) / sizeof(kCandidateBases[0]);
     }

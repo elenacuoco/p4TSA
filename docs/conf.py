@@ -222,7 +222,11 @@ texinfo_documents = [
 
 
 # Example configuration for intersphinx: refer to the Python standard library.
-intersphinx_mapping = {'https://docs.python.org/': None}
+# Modern Sphinx (confirmed broken on 9.0.4, 2026-08-03) requires a 2-tuple
+# (target, inventory) per mapping entry -- the old `: None` shorthand
+# silently worked on older Sphinx but is a hard ConfigError now, failing the
+# whole doc build.
+intersphinx_mapping = {'python': ('https://docs.python.org/3', None)}
 
 '''
 import subprocess

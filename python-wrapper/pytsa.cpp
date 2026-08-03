@@ -273,92 +273,6 @@ void bind_std_stdexcept(std::function< pybind11::module &(std::string const &nam
 }
 
 
-// File: eternity/persist.cpp
-#include <eternity/persist.hpp>
-#include <sstream> // __str__
-
-#include <functional>
-#include <pybind11/pybind11.h>
-#include <string>
-
-#ifndef BINDER_PYBIND11_TYPE_CASTER
-	#define BINDER_PYBIND11_TYPE_CASTER
-	PYBIND11_DECLARE_HOLDER_TYPE(T, std::shared_ptr<T>)
-	PYBIND11_DECLARE_HOLDER_TYPE(T, T*)
-	PYBIND11_MAKE_OPAQUE(std::shared_ptr<void>)
-#endif
-
-void bind_eternity_persist(std::function< pybind11::module &(std::string const &namespace_) > &M)
-{
-	{ // eternity::archive file:eternity/persist.hpp line:47
-		pybind11::class_<eternity::archive, std::shared_ptr<eternity::archive>> cl(M("eternity"), "archive", "This class supply common services for all\n        kind of persistence archives. The major one\n        is the ability to stored doubled pointers only\n        one time and so avoid circularity, broken links\n        and lost spaces on hard disks.");
-		cl.def( pybind11::init( [](){ return new eternity::archive(); } ) );
-		cl.def( pybind11::init( [](eternity::archive const &o){ return new eternity::archive(o); } ) );
-
-		pybind11::enum_<eternity::archive::opening_mode>(cl, "opening_mode", pybind11::arithmetic(), "")
-			.value("load", eternity::archive::load)
-			.value("store", eternity::archive::store)
-			.export_values();
-
-		cl.def("init", (void (eternity::archive::*)()) &eternity::archive::init, "C++: eternity::archive::init() --> void");
-		cl.def("put_pointer", (int (eternity::archive::*)(void *)) &eternity::archive::put_pointer, "Verify that object is stored only\n     once.\n\nC++: eternity::archive::put_pointer(void *) --> int", pybind11::arg("object"));
-		cl.def("set_loading", (bool (eternity::archive::*)(bool)) &eternity::archive::set_loading, "Set the archive mode (loading or storing)\n\nC++: eternity::archive::set_loading(bool) --> bool", pybind11::arg("val"));
-		cl.def("is_loading", (bool (eternity::archive::*)()) &eternity::archive::is_loading, "Verify the archive is in loading mode\n\nC++: eternity::archive::is_loading() --> bool");
-		cl.def("is_storing", (bool (eternity::archive::*)()) &eternity::archive::is_storing, "Verify the archive is in storing mode\n\nC++: eternity::archive::is_storing() --> bool");
-		cl.def("assign", (class eternity::archive & (eternity::archive::*)(const class eternity::archive &)) &eternity::archive::operator=, "C++: eternity::archive::operator=(const class eternity::archive &) --> class eternity::archive &", pybind11::return_value_policy::automatic, pybind11::arg(""));
-	}
-}
-
-
-// File: eternity/persist_xml.cpp
-#include <eternity/persist.hpp>
-#include <eternity/persist_xml.hpp>
-#include <functional>
-#include <iterator>
-#include <map>
-#include <memory>
-#include <sstream> // __str__
-#include <string>
-#include <utility>
-
-#include <functional>
-#include <pybind11/pybind11.h>
-#include <string>
-
-#ifndef BINDER_PYBIND11_TYPE_CASTER
-	#define BINDER_PYBIND11_TYPE_CASTER
-	PYBIND11_DECLARE_HOLDER_TYPE(T, std::shared_ptr<T>)
-	PYBIND11_DECLARE_HOLDER_TYPE(T, T*)
-	PYBIND11_MAKE_OPAQUE(std::shared_ptr<void>)
-#endif
-
-void bind_eternity_persist_xml(std::function< pybind11::module &(std::string const &namespace_) > &M)
-{
-	{ // eternity::xml_archive file:eternity/persist_xml.hpp line:39
-		pybind11::class_<eternity::xml_archive, std::shared_ptr<eternity::xml_archive>, eternity::archive> cl(M("eternity"), "xml_archive", "xml_archive is the specialization of class archive able\n        to manage XML persistence.");
-		cl.def( pybind11::init( [](){ return new eternity::xml_archive(); } ) );
-		cl.def("write", (void (eternity::xml_archive::*)(std::string, unsigned int)) &eternity::xml_archive::write<unsigned int>, "C++: eternity::xml_archive::write(std::string, unsigned int) --> void", pybind11::arg("key"), pybind11::arg("value"));
-		cl.def("write", (void (eternity::xml_archive::*)(std::string, unsigned long)) &eternity::xml_archive::write<unsigned long>, "C++: eternity::xml_archive::write(std::string, unsigned long) --> void", pybind11::arg("key"), pybind11::arg("value"));
-		cl.def("write", (void (eternity::xml_archive::*)(std::string, double)) &eternity::xml_archive::write<double>, "C++: eternity::xml_archive::write(std::string, double) --> void", pybind11::arg("key"), pybind11::arg("value"));
-		cl.def("write", (void (eternity::xml_archive::*)(std::string, int)) &eternity::xml_archive::write<int>, "C++: eternity::xml_archive::write(std::string, int) --> void", pybind11::arg("key"), pybind11::arg("value"));
-		cl.def("open", (void (eternity::xml_archive::*)(std::string, enum eternity::archive::opening_mode)) &eternity::xml_archive::open, "initialize and XML archive using the file\n      named file_name. If mode is load create\n      the file. Anyway init update archive to\n      begin persistence operations.\n\nC++: eternity::xml_archive::open(std::string, enum eternity::archive::opening_mode) --> void", pybind11::arg("file_name"), pybind11::arg("mode"));
-		cl.def("init", (void (eternity::xml_archive::*)(std::string, bool)) &eternity::xml_archive::init, "initialize and XML archive using the file\n      named file_name. If loading is true create\n      the file. Anyway init update archive to\n      begin persistence operations.\n          Deprecated: use open instead\n\nC++: eternity::xml_archive::init(std::string, bool) --> void", pybind11::arg("file_name"), pybind11::arg("loading"));
-		cl.def("close", (void (eternity::xml_archive::*)()) &eternity::xml_archive::close, "End the persistence operation, release the file\n      handle and clear all allocated buffers.\n\nC++: eternity::xml_archive::close() --> void");
-		cl.def("done", (void (eternity::xml_archive::*)()) &eternity::xml_archive::done, "End the persistence operation, release the file\n      handle and clear all allocated buffers.\n          Deprecated: use close instead\n\nC++: eternity::xml_archive::done() --> void");
-		cl.def("formatting", (void (eternity::xml_archive::*)()) &eternity::xml_archive::formatting, "Indent XML output for nested class persistence\n\nC++: eternity::xml_archive::formatting() --> void");
-		cl.def("read", (std::string (eternity::xml_archive::*)(std::string, int)) &eternity::xml_archive::read, "read (and return) a string with label key at position pos\n deprecated, use read(std::string key, std::string &value, int pos) instead\n\nC++: eternity::xml_archive::read(std::string, int) --> std::string", pybind11::arg("key"), pybind11::arg("pos"));
-		cl.def("read", (void (eternity::xml_archive::*)(std::string, std::string &, int)) &eternity::xml_archive::read, "read (and put in value) a string with label key at position pos\n\nC++: eternity::xml_archive::read(std::string, std::string &, int) --> void", pybind11::arg("key"), pybind11::arg("value"), pybind11::arg("pos"));
-		cl.def("read", (void (eternity::xml_archive::*)(std::string, int &, int)) &eternity::xml_archive::read, "read (and put in value) a int with label key at position pos\n\nC++: eternity::xml_archive::read(std::string, int &, int) --> void", pybind11::arg("key"), pybind11::arg("value"), pybind11::arg("pos"));
-		cl.def("read", (void (eternity::xml_archive::*)(std::string, unsigned int &, int)) &eternity::xml_archive::read, "read (and put in value) a int with label key at position pos\n\nC++: eternity::xml_archive::read(std::string, unsigned int &, int) --> void", pybind11::arg("key"), pybind11::arg("value"), pybind11::arg("pos"));
-		cl.def("read", (void (eternity::xml_archive::*)(std::string, float &, int)) &eternity::xml_archive::read, "read (and put in value) a float with label key at position pos\n\nC++: eternity::xml_archive::read(std::string, float &, int) --> void", pybind11::arg("key"), pybind11::arg("value"), pybind11::arg("pos"));
-		cl.def("read", (void (eternity::xml_archive::*)(std::string, double &, int)) &eternity::xml_archive::read, "read (and put in value) a double with label key at position pos\n\nC++: eternity::xml_archive::read(std::string, double &, int) --> void", pybind11::arg("key"), pybind11::arg("value"), pybind11::arg("pos"));
-		cl.def("make_branch", (void (eternity::xml_archive::*)(std::string, class std::map<std::string, std::string >)) &eternity::xml_archive::make_branch, "Create a node (e.g. <name attributes>) and set it as current one (enter branch)\n\nC++: eternity::xml_archive::make_branch(std::string, class std::map<std::string, std::string >) --> void", pybind11::arg("name"), pybind11::arg("attributes"));
-		cl.def("enter_branch", (class std::map<std::string, std::string > (eternity::xml_archive::*)(std::string, unsigned long)) &eternity::xml_archive::enter_branch, "Enter in the node with tag equals to name and return its attributes\n\nC++: eternity::xml_archive::enter_branch(std::string, unsigned long) --> class std::map<std::string, std::string >", pybind11::arg("name"), pybind11::arg("pos"));
-		cl.def("leave_current_branch", (void (eternity::xml_archive::*)()) &eternity::xml_archive::leave_current_branch, "Leaves current node and returns to its parent\n\nC++: eternity::xml_archive::leave_current_branch() --> void");
-	}
-}
-
-
 // File: tsaTraits.cpp
 #include <complex>
 #include <sstream> // __str__
@@ -404,8 +318,6 @@ void bind_tsaTraits(std::function< pybind11::module &(std::string const &namespa
 #include <ARMAView.hpp>
 #include <BaseView.hpp>
 #include <complex>
-#include <eternity/persist.hpp>
-#include <eternity/persist_xml.hpp>
 #include <functional>
 #include <iterator>
 #include <map>
@@ -556,7 +468,6 @@ void bind_tsaUtilityFunctions(std::function< pybind11::module &(std::string cons
 		cl.def("Load", (void (tsa::ARMAView::*)(const char *, const char *)) &tsa::ARMAView::Load, "C++: tsa::ARMAView::Load(const char *, const char *) --> void", pybind11::arg("filename"), pybind11::arg("fmt"));
 		cl.def("Save", [](tsa::ARMAView &o, const char * a0) -> void { return o.Save(a0); }, "", pybind11::arg("filename"));
 		cl.def("Save", (void (tsa::ARMAView::*)(const char *, const char *)) &tsa::ARMAView::Save, "C++: tsa::ARMAView::Save(const char *, const char *) --> void", pybind11::arg("filename"), pybind11::arg("fmt"));
-		cl.def("xml_serialize", (void (tsa::ARMAView::*)(class eternity::xml_archive &, const char *)) &tsa::ARMAView::xml_serialize, "C++: tsa::ARMAView::xml_serialize(class eternity::xml_archive &, const char *) --> void", pybind11::arg("xml"), pybind11::arg("prefix"));
 		cl.def("GetAR", [](tsa::ARMAView const &o, int const & a0) -> const double & { return o.GetAR(a0); }, "", pybind11::return_value_policy::automatic, pybind11::arg("i"));
 		cl.def("GetAR", (const double & (tsa::ARMAView::*)(int, unsigned int) const) &tsa::ARMAView::GetAR, "This method gives the value of the AR[i] coefficient for one of the channels.\n It is assumed that the VARMA process is diagonal, which means that there is\n and independent ARMA process for each channel.\n\n \n the index of the AR coefficient\n \n\n the channel\n\n \n the value of the AR[i] coefficient\n\nC++: tsa::ARMAView::GetAR(int, unsigned int) const --> const double &", pybind11::return_value_policy::automatic, pybind11::arg("i"), pybind11::arg("channel"));
 		cl.def("GetMA", [](tsa::ARMAView const &o, int const & a0) -> const double & { return o.GetMA(a0); }, "", pybind11::return_value_policy::automatic, pybind11::arg("i"));
@@ -585,8 +496,6 @@ void bind_tsaUtilityFunctions(std::function< pybind11::module &(std::string cons
 #include <boost/numeric/ublas/matrix.hpp>
 #include <boost/numeric/ublas/storage.hpp>
 #include <boost/numeric/ublas/vector.hpp>
-#include <eternity/persist.hpp>
-#include <eternity/persist_xml.hpp>
 #include <functional>
 #include <map>
 #include <memory>
@@ -617,7 +526,6 @@ void bind_LatticeView(std::function< pybind11::module &(std::string const &names
 		cl.def("Load", (void (tsa::LatticeView::*)(const char *, const char *)) &tsa::LatticeView::Load, "C++: tsa::LatticeView::Load(const char *, const char *) --> void", pybind11::arg("filename"), pybind11::arg("fmt"));
 		cl.def("Save", [](tsa::LatticeView &o, const char * a0) -> void { return o.Save(a0); }, "", pybind11::arg("filename"));
 		cl.def("Save", (void (tsa::LatticeView::*)(const char *, const char *)) &tsa::LatticeView::Save, "C++: tsa::LatticeView::Save(const char *, const char *) --> void", pybind11::arg("filename"), pybind11::arg("fmt"));
-		cl.def("xml_serialize", (void (tsa::LatticeView::*)(class eternity::xml_archive &, const char *)) &tsa::LatticeView::xml_serialize, "C++: tsa::LatticeView::xml_serialize(class eternity::xml_archive &, const char *) --> void", pybind11::arg("xml"), pybind11::arg("prefix"));
 		cl.def("GetOrder", (unsigned int (tsa::LatticeView::*)()) &tsa::LatticeView::GetOrder, "Order of the LatticeView \n\nC++: tsa::LatticeView::GetOrder() --> unsigned int");
 		cl.def("GetParcor", (double (tsa::LatticeView::*)(unsigned int)) &tsa::LatticeView::GetParcor, "index of the vector \n \n\n The Parcor parameter\n\nC++: tsa::LatticeView::GetParcor(unsigned int) --> double", pybind11::arg("j"));
 		cl.def("GetParcorF", (double (tsa::LatticeView::*)(unsigned int)) &tsa::LatticeView::GetParcorF, "index of the vector \n \n\n The Parcor parameter\n\nC++: tsa::LatticeView::GetParcorF(unsigned int) --> double", pybind11::arg("j"));
@@ -1148,8 +1056,6 @@ void bind_AlgoExceptions(std::function< pybind11::module &(std::string const &na
 #include <boost/numeric/ublas/storage.hpp>
 #include <boost/numeric/ublas/vector.hpp>
 #include <complex>
-#include <eternity/persist.hpp>
-#include <eternity/persist_xml.hpp>
 #include <functional>
 #include <iterator>
 #include <map>
@@ -1327,7 +1233,6 @@ void bind_Parcor2AR(std::function< pybind11::module &(std::string const &namespa
 		cl.def("Load", (void (tsa::ArBurgEstimator::*)(const char *, const char *)) &tsa::ArBurgEstimator::Load, "C++: tsa::ArBurgEstimator::Load(const char *, const char *) --> void", pybind11::arg("filename"), pybind11::arg("fmt"));
 		cl.def("Save", [](tsa::ArBurgEstimator &o, const char * a0) -> void { return o.Save(a0); }, "", pybind11::arg("filename"));
 		cl.def("Save", (void (tsa::ArBurgEstimator::*)(const char *, const char *)) &tsa::ArBurgEstimator::Save, "C++: tsa::ArBurgEstimator::Save(const char *, const char *) --> void", pybind11::arg("filename"), pybind11::arg("fmt"));
-		cl.def("xml_serialize", (void (tsa::ArBurgEstimator::*)(class eternity::xml_archive &, const char *)) &tsa::ArBurgEstimator::xml_serialize, "C++: tsa::ArBurgEstimator::xml_serialize(class eternity::xml_archive &, const char *) --> void", pybind11::arg("xml"), pybind11::arg("prefix"));
 		cl.def("__call__", (void (tsa::ArBurgEstimator::*)(class tsa::SeqView<double> &, class tsa::SeqView<double> &)) &tsa::ArBurgEstimator::operator(), "Implements the estimation of the AR paramenters using the Burg method.\n\n \n Input data time series\n \n\n Whitened time series\n\nC++: tsa::ArBurgEstimator::operator()(class tsa::SeqView<double> &, class tsa::SeqView<double> &) --> void", pybind11::arg("InputData"), pybind11::arg("WhitenedData"));
 		cl.def("Color", (void (tsa::ArBurgEstimator::*)(class tsa::SeqView<double> &, class tsa::SeqView<double> &)) &tsa::ArBurgEstimator::Color, "Implements the estimation of the AR paramenters using the Burg method.\n\n \n Input data time series\n \n\n Whitened time series\n\nC++: tsa::ArBurgEstimator::Color(class tsa::SeqView<double> &, class tsa::SeqView<double> &) --> void", pybind11::arg("WhitenedData"), pybind11::arg("ColoredData"));
 		cl.def("__call__", (void (tsa::ArBurgEstimator::*)(class tsa::SeqView<double> &)) &tsa::ArBurgEstimator::operator(), "Implements the estimation of the AR paramenters using the Burg method.\n\n \n Input data time series\n \n\n Parcor coefficients\n\nC++: tsa::ArBurgEstimator::operator()(class tsa::SeqView<double> &) --> void", pybind11::arg("InputData"));
@@ -1615,8 +1520,6 @@ void bind_BaseFFT(std::function< pybind11::module &(std::string const &namespace
 #include <boost/numeric/ublas/matrix.hpp>
 #include <boost/numeric/ublas/storage.hpp>
 #include <boost/numeric/ublas/vector.hpp>
-#include <eternity/persist.hpp>
-#include <eternity/persist_xml.hpp>
 #include <functional>
 #include <iterator>
 #include <map>
@@ -1937,7 +1840,6 @@ void bind_BLInterpolation(std::function< pybind11::module &(std::string const &n
 		cl.def("Load", (void (tsa::FifoBuffer::*)(const char *, const char *)) &tsa::FifoBuffer::Load, "C++: tsa::FifoBuffer::Load(const char *, const char *) --> void", pybind11::arg("filename"), pybind11::arg("fmt"));
 		cl.def("Save", [](tsa::FifoBuffer &o, const char * a0) -> void { return o.Save(a0); }, "", pybind11::arg("filename"));
 		cl.def("Save", (void (tsa::FifoBuffer::*)(const char *, const char *)) &tsa::FifoBuffer::Save, "C++: tsa::FifoBuffer::Save(const char *, const char *) --> void", pybind11::arg("filename"), pybind11::arg("fmt"));
-		cl.def("xml_serialize", (void (tsa::FifoBuffer::*)(class eternity::xml_archive &, const char *)) &tsa::FifoBuffer::xml_serialize, "C++: tsa::FifoBuffer::xml_serialize(class eternity::xml_archive &, const char *) --> void", pybind11::arg("xml"), pybind11::arg("prefix"));
 	}
 }
 
@@ -1961,8 +1863,6 @@ void bind_BLInterpolation(std::function< pybind11::module &(std::string const &n
 #include <boost/numeric/ublas/storage.hpp>
 #include <boost/numeric/ublas/vector.hpp>
 #include <complex>
-#include <eternity/persist.hpp>
-#include <eternity/persist_xml.hpp>
 #include <functional>
 #include <iterator>
 #include <map>
@@ -2089,7 +1989,6 @@ void bind_DoubleWhitening(std::function< pybind11::module &(std::string const &n
 		cl.def("Load", (void (tsa::DoubleWhitening::*)(const char *, const char *)) &tsa::DoubleWhitening::Load, "C++: tsa::DoubleWhitening::Load(const char *, const char *) --> void", pybind11::arg("filename"), pybind11::arg("fmt"));
 		cl.def("Save", [](tsa::DoubleWhitening &o, const char * a0) -> void { return o.Save(a0); }, "", pybind11::arg("filename"));
 		cl.def("Save", (void (tsa::DoubleWhitening::*)(const char *, const char *)) &tsa::DoubleWhitening::Save, "C++: tsa::DoubleWhitening::Save(const char *, const char *) --> void", pybind11::arg("filename"), pybind11::arg("fmt"));
-		cl.def("xml_serialize", (void (tsa::DoubleWhitening::*)(class eternity::xml_archive &, const char *)) &tsa::DoubleWhitening::xml_serialize, "C++: tsa::DoubleWhitening::xml_serialize(class eternity::xml_archive &, const char *) --> void", pybind11::arg("xml"), pybind11::arg("p"));
 		cl.def("GetDataNeeded", (int (tsa::DoubleWhitening::*)()) &tsa::DoubleWhitening::GetDataNeeded, "C++: tsa::DoubleWhitening::GetDataNeeded() --> int");
 		cl.def("SetOutputSize", (void (tsa::DoubleWhitening::*)(unsigned int, unsigned int)) &tsa::DoubleWhitening::SetOutputSize, "C++: tsa::DoubleWhitening::SetOutputSize(unsigned int, unsigned int) --> void", pybind11::arg("OutputSize"), pybind11::arg("ExtraSize"));
 		cl.def("assign", (class tsa::DoubleWhitening & (tsa::DoubleWhitening::*)(const class tsa::DoubleWhitening &)) &tsa::DoubleWhitening::operator=, "C++: tsa::DoubleWhitening::operator=(const class tsa::DoubleWhitening &) --> class tsa::DoubleWhitening &", pybind11::return_value_policy::automatic, pybind11::arg(""));
@@ -2209,7 +2108,6 @@ void bind_DoubleWhitening(std::function< pybind11::module &(std::string const &n
 		cl.def("Load", (void (tsa::LatticeFilter::*)(const char *, const char *)) &tsa::LatticeFilter::Load, "C++: tsa::LatticeFilter::Load(const char *, const char *) --> void", pybind11::arg("filename"), pybind11::arg("fmt"));
 		cl.def("Save", [](tsa::LatticeFilter &o, const char * a0) -> void { return o.Save(a0); }, "", pybind11::arg("filename"));
 		cl.def("Save", (void (tsa::LatticeFilter::*)(const char *, const char *)) &tsa::LatticeFilter::Save, "C++: tsa::LatticeFilter::Save(const char *, const char *) --> void", pybind11::arg("filename"), pybind11::arg("fmt"));
-		cl.def("xml_serialize", (void (tsa::LatticeFilter::*)(class eternity::xml_archive &, const char *)) &tsa::LatticeFilter::xml_serialize, "C++: tsa::LatticeFilter::xml_serialize(class eternity::xml_archive &, const char *) --> void", pybind11::arg("xml"), pybind11::arg("p"));
 		cl.def("__call__", (void (tsa::LatticeFilter::*)(class tsa::SeqView<double> &, class tsa::SeqView<double> &)) &tsa::LatticeFilter::operator(), "Declaration of execute operation\n\n \n Matrix containing Time Series\n \n\n Matrix containing the WhitenedData\n\nC++: tsa::LatticeFilter::operator()(class tsa::SeqView<double> &, class tsa::SeqView<double> &) --> void", pybind11::arg("InputData"), pybind11::arg("WhitenedData"));
 		cl.def("init", (void (tsa::LatticeFilter::*)(class tsa::LatticeView &)) &tsa::LatticeFilter::init, "Initialization function\n \n\n lattice view\n\nC++: tsa::LatticeFilter::init(class tsa::LatticeView &) --> void", pybind11::arg("LV"));
 		cl.def("assign", (class tsa::LatticeFilter & (tsa::LatticeFilter::*)(const class tsa::LatticeFilter &)) &tsa::LatticeFilter::operator=, "C++: tsa::LatticeFilter::operator=(const class tsa::LatticeFilter &) --> class tsa::LatticeFilter &", pybind11::return_value_policy::automatic, pybind11::arg(""));
@@ -2235,8 +2133,6 @@ void bind_DoubleWhitening(std::function< pybind11::module &(std::string const &n
 #include <boost/numeric/ublas/storage.hpp>
 #include <boost/numeric/ublas/vector.hpp>
 #include <complex>
-#include <eternity/persist.hpp>
-#include <eternity/persist_xml.hpp>
 #include <functional>
 #include <map>
 #include <memory>
@@ -2299,7 +2195,6 @@ void bind_LSLLearning(std::function< pybind11::module &(std::string const &names
 		cl.def("Load", (void (tsa::LSLLearning::*)(const char *, const char *)) &tsa::LSLLearning::Load, "C++: tsa::LSLLearning::Load(const char *, const char *) --> void", pybind11::arg("filename"), pybind11::arg("fmt"));
 		cl.def("Save", [](tsa::LSLLearning &o, const char * a0) -> void { return o.Save(a0); }, "", pybind11::arg("filename"));
 		cl.def("Save", (void (tsa::LSLLearning::*)(const char *, const char *)) &tsa::LSLLearning::Save, "C++: tsa::LSLLearning::Save(const char *, const char *) --> void", pybind11::arg("filename"), pybind11::arg("fmt"));
-		cl.def("xml_serialize", (void (tsa::LSLLearning::*)(class eternity::xml_archive &, const char *)) &tsa::LSLLearning::xml_serialize, "C++: tsa::LSLLearning::xml_serialize(class eternity::xml_archive &, const char *) --> void", pybind11::arg("xml"), pybind11::arg("p"));
 	}
 	{ // tsa::LeastSquaresLattice file:LeastSquaresLattice.hpp line:79
 		pybind11::class_<tsa::LeastSquaresLattice, std::shared_ptr<tsa::LeastSquaresLattice>, tsa::AlgoBase> cl(M("tsa"), "LeastSquaresLattice", "Estimate the parameters for the Least Squares Lattice filter and implement the adaptive whitening. \n\n     ");
@@ -2318,7 +2213,6 @@ void bind_LSLLearning(std::function< pybind11::module &(std::string const &names
 		cl.def("Load", (void (tsa::LSLfilter::*)(const char *, const char *)) &tsa::LSLfilter::Load, "C++: tsa::LSLfilter::Load(const char *, const char *) --> void", pybind11::arg("filename"), pybind11::arg("fmt"));
 		cl.def("Save", [](tsa::LSLfilter &o, const char * a0) -> void { return o.Save(a0); }, "", pybind11::arg("filename"));
 		cl.def("Save", (void (tsa::LSLfilter::*)(const char *, const char *)) &tsa::LSLfilter::Save, "C++: tsa::LSLfilter::Save(const char *, const char *) --> void", pybind11::arg("filename"), pybind11::arg("fmt"));
-		cl.def("xml_serialize", (void (tsa::LSLfilter::*)(class eternity::xml_archive &, const char *)) &tsa::LSLfilter::xml_serialize, "C++: tsa::LSLfilter::xml_serialize(class eternity::xml_archive &, const char *) --> void", pybind11::arg("xml"), pybind11::arg("p"));
 		cl.def("__lshift__", (void (tsa::LSLfilter::*)(class tsa::SeqView<double> &)) &tsa::LSLfilter::operator<<, "Declaration of execute operation\n\n \n Matrix containing Time Series\n \n\n Matrix containing the WhitenedData\n \n\n to be used only when data are contiguos (offline analysis)\n\nC++: tsa::LSLfilter::operator<<(class tsa::SeqView<double> &) --> void", pybind11::arg("Data"));
 		cl.def("__rshift__", (void (tsa::LSLfilter::*)(class tsa::SeqView<double> &)) &tsa::LSLfilter::operator>>, "C++: tsa::LSLfilter::operator>>(class tsa::SeqView<double> &) --> void", pybind11::arg("outdata"));
 		cl.def("__call__", (void (tsa::LSLfilter::*)(class tsa::SeqView<double> &, class tsa::SeqView<double> &)) &tsa::LSLfilter::operator(), "for online process\n\nC++: tsa::LSLfilter::operator()(class tsa::SeqView<double> &, class tsa::SeqView<double> &) --> void", pybind11::arg("Data"), pybind11::arg("outdata"));
@@ -2776,6 +2670,10 @@ void bind_WaveletThreshold(std::function< pybind11::module &(std::string const &
 			.value("BsplineC305", tsa::WaveletTransform::BsplineC305)
 			.value("BsplineC307", tsa::WaveletTransform::BsplineC307)
 			.value("BsplineC309", tsa::WaveletTransform::BsplineC309)
+			.value("Coif1", tsa::WaveletTransform::Coif1)
+			.value("Coif2", tsa::WaveletTransform::Coif2)
+			.value("Sym4", tsa::WaveletTransform::Sym4)
+			.value("Sym8", tsa::WaveletTransform::Sym8)
 			.export_values();
 
 		cl.def("assign", (class tsa::WaveletTransform & (tsa::WaveletTransform::*)(const class tsa::WaveletTransform &)) &tsa::WaveletTransform::operator=, "Assignement operator\n\n \n The instance to be assigned from\n\n \n a reference to a new object\n\nC++: tsa::WaveletTransform::operator=(const class tsa::WaveletTransform &) --> class tsa::WaveletTransform &", pybind11::return_value_policy::automatic, pybind11::arg("from"));
@@ -3588,8 +3486,6 @@ void bind_std_exception(std::function< pybind11::module &(std::string const &nam
 void bind_std_stl_vector(std::function< pybind11::module &(std::string const &namespace_) > &M);
 void bind_std_stl_map(std::function< pybind11::module &(std::string const &namespace_) > &M);
 void bind_std_stdexcept(std::function< pybind11::module &(std::string const &namespace_) > &M);
-void bind_eternity_persist(std::function< pybind11::module &(std::string const &namespace_) > &M);
-void bind_eternity_persist_xml(std::function< pybind11::module &(std::string const &namespace_) > &M);
 void bind_tsaTraits(std::function< pybind11::module &(std::string const &namespace_) > &M);
 void bind_tsaUtilityFunctions(std::function< pybind11::module &(std::string const &namespace_) > &M);
 void bind_LatticeView(std::function< pybind11::module &(std::string const &namespace_) > &M);
@@ -3630,7 +3526,6 @@ PYBIND11_MODULE(pytsa, root_module) {
 	);
 
 	std::vector< std::pair<std::string, std::string> > sub_modules {
-		{"", "eternity"},
 		{"", "std"},
 		{"", "tsa"},
 	};
@@ -3642,8 +3537,6 @@ PYBIND11_MODULE(pytsa, root_module) {
 	bind_std_stl_vector(M);
 	bind_std_stl_map(M);
 	bind_std_stdexcept(M);
-	bind_eternity_persist(M);
-	bind_eternity_persist_xml(M);
 	bind_tsaTraits(M);
 	bind_tsaUtilityFunctions(M);
 	bind_LatticeView(M);

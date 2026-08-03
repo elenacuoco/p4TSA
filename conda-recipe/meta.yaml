@@ -33,6 +33,7 @@ requirements:
     - fftw
     - framel
     - libboost-headers
+    - cereal
 
   run:
     - python

@@ -43,6 +43,7 @@
 #include <AlgoBase.hpp>
 #include <SeqView.hpp>
 #include <LatticeView.hpp>
+#include <CerealPersistence.hpp>
 //@}
 
 /**
@@ -205,56 +206,17 @@ namespace tsa {
 
         //@}
 
-        void Load(const char *filename, const char *fmt = "txt") {
-            eternity::xml_archive fa;
-            fa.open(filename, eternity::archive::load);
-            xml_serialize(fa, "");
-            fa.close();
+        void Load(const char *filename, const char *fmt = nullptr) {
+            tsa::LoadBinary(filename, *this);
         }
 
-        void Save(const char *filename, const char *fmt = "txt") {
-            eternity::xml_archive fa;
-            fa.open(filename, eternity::archive::store);
-            xml_serialize(fa, "");
-            fa.close();
+        void Save(const char *filename, const char *fmt = nullptr) {
+            tsa::SaveBinary(filename, *this);
         }
 
-        void xml_serialize(eternity::xml_archive& xml, const char* p) {
-            char buffer[1024];
-
-            if (xml.is_loading()) {
-
-                snprintf(buffer, 1024, "%s.mOrder", p);
-                xml.read(buffer, mOrder, 0);
-                snprintf(buffer, 1024, "%s.mKf", p);
-                DVECTOR_XML_SERIALIZE(mKf, xml, buffer);
-                snprintf(buffer, 1024, "%s.mKb", p);
-                DVECTOR_XML_SERIALIZE(mKb, xml, buffer);
-                snprintf(buffer, 1024, "%s.mEF", p);
-                DMATRIX_XML_SERIALIZE(mEF, xml, buffer);
-                snprintf(buffer, 1024, "%s.mEB", p);
-                DMATRIX_XML_SERIALIZE(mEB, xml, buffer);
-                snprintf(buffer, 1024, "%s.mF0", p);
-                xml.read(buffer, mF0, 0);
-
-            } else {
-
-                snprintf(buffer, 1024, "%s.mOrder", p);
-                xml.write(buffer, mOrder);
-                snprintf(buffer, 1024, "%s.mKf", p);
-                DVECTOR_XML_SERIALIZE(mKf, xml, buffer);
-                snprintf(buffer, 1024, "%s.mKb", p);
-                DVECTOR_XML_SERIALIZE(mKb, xml, buffer);
-                snprintf(buffer, 1024, "%s.mEF", p);
-                DMATRIX_XML_SERIALIZE(mEF, xml, buffer);
-                snprintf(buffer, 1024, "%s.mEB", p);
-                DMATRIX_XML_SERIALIZE(mEB, xml, buffer);
-                snprintf(buffer, 1024, "%s.mF0", p);
-                xml.write(buffer, mF0);
-
-
-
-            }
+        template<class Archive>
+        void serialize(Archive& ar) {
+            ar(mOrder, DvectorProxy(mKf), DvectorProxy(mKb), DmatrixProxy(mEF), DmatrixProxy(mEB), mF0);
         }
 
 

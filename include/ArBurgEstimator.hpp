@@ -40,7 +40,7 @@
  * @name Project includes
  */
 //@{
-#include <eternity.hpp>
+#include <CerealPersistence.hpp>
 #include <AlgoBase.hpp>
 #include <SeqView.hpp>
 #include <LatticeView.hpp>
@@ -88,38 +88,20 @@ namespace tsa {
          */
         virtual ~ArBurgEstimator();
 
-        void Load(const char *filename, const char *fmt = "txt") {
-            eternity::xml_archive fa;
-            fa.open(filename, eternity::archive::load);
-            xml_serialize(fa, "");
-            fa.close();
+        // `fmt` is vestigial (kept only for source compatibility with any
+        // existing 2-argument call sites) -- persistence is always Cereal
+        // binary now, see CerealPersistence.hpp.
+        void Load(const char *filename, const char *fmt = nullptr) {
+            tsa::LoadBinary(filename, *this);
         }
 
-        void Save(const char *filename, const char *fmt = "txt") {
-            eternity::xml_archive fa;
-            fa.open(filename, eternity::archive::store);
-            xml_serialize(fa, "");
-            fa.close();
+        void Save(const char *filename, const char *fmt = nullptr) {
+            tsa::SaveBinary(filename, *this);
         }
 
-        void xml_serialize(eternity::xml_archive& xml, const char* prefix) {
-            char buffer[1024];
-
-            if (xml.is_loading()) {
-
-                snprintf(buffer, 1024, "%s.mArOrder", prefix);
-                xml.read(buffer, mArOrder, 0);
-                snprintf(buffer, 1024, "%s.mAR", prefix);
-                DVECTOR_XML_SERIALIZE(mAR, xml, buffer);
-
-            } else {
-
-                snprintf(buffer, 1024, "%s.mArOrder", prefix);
-                xml.write(buffer, mArOrder);
-                snprintf(buffer, 1024, "%s.mAR", prefix);
-                DVECTOR_XML_SERIALIZE(mAR, xml, buffer);
-
-            }
+        template<class Archive>
+        void serialize(Archive& ar) {
+            ar(mArOrder, DvectorProxy(mAR));
         }
 
 

@@ -40,6 +40,7 @@
 ///
 //@{
 #include <BaseView.hpp>
+#include <CerealPersistence.hpp>
 
 //@}
 
@@ -119,107 +120,17 @@ namespace tsa {
         ~ARMAView() {
         }
 
-        void Load(const char *filename, const char *fmt = "txt") {
-            eternity::xml_archive fa;
-            fa.open(filename, eternity::archive::load);
-            xml_serialize(fa, "");
-            fa.close();
+        void Load(const char *filename, const char *fmt = nullptr) {
+            tsa::LoadBinary(filename, *this);
         }
 
-        void Save(const char *filename, const char *fmt = "txt") {
-            eternity::xml_archive fa;
-            fa.open(filename, eternity::archive::store);
-            xml_serialize(fa, "");
-            fa.close();
+        void Save(const char *filename, const char *fmt = nullptr) {
+            tsa::SaveBinary(filename, *this);
         }
 
-        void xml_serialize(eternity::xml_archive& xml, const char* prefix) {
-            char buffer[1024];
-
-            if (xml.is_loading()) {
-
-                snprintf(buffer, 1024, "%s.mChannels", prefix);
-                xml.read(buffer, mChannels, 0);
-                unsigned int sz;
-
-                snprintf(buffer, 1024, "%s.mARsize", prefix);
-                xml.read(buffer, sz, 0);
-                mAR.resize(sz);
-                for (unsigned int i = 0; i < sz; i++) {
-                    unsigned int sz1, sz2;
-
-                    snprintf(buffer, 1024, "%s.mAR.%d.sz1", prefix, i);
-                    xml.read(buffer, sz1, 0);
-                    snprintf(buffer, 1024, "%s.mAR.%d.sz2", prefix, i);
-                    xml.read(buffer, sz2, 0);
-                    mAR[i].resize(sz1, sz2);
-                    for (unsigned j = 0; j < sz1; j++) {
-                        for (unsigned k = 0; k < sz2; k++) {
-                            snprintf(buffer, 1024, "%s.mAR.%d.%d.%d", prefix, i, j, k);
-                            xml.read(buffer, mAR[i](j, k), 0);
-                        }
-                    }
-                }
-
-                snprintf(buffer, 1024, "%s.mMAsize", prefix);
-                xml.read(buffer, sz, 0);
-                mMA.resize(sz);
-                for (unsigned int i = 0; i < sz; i++) {
-                    unsigned int sz1, sz2;
-                    snprintf(buffer, 1024, "%s.mMA.%d.sz1", prefix, i);
-                    xml.read(buffer, sz1, 0);
-                    snprintf(buffer, 1024, "%s.mMA.%d.sz2", prefix, i);
-                    xml.read(buffer, sz2, 0);
-                    mMA[i].resize(sz1, sz2);
-                    for (unsigned j = 0; j < sz1; j++) {
-                        for (unsigned k = 0; k < sz2; k++) {
-                            snprintf(buffer, 1024, "%s.mMA.%d.%d.%d", prefix, i, j, k);
-                            xml.read(buffer, mMA[i](j, k), 0);
-                        }
-                    }
-                }
-
-
-            } else {
-
-                snprintf(buffer, 1024, "%s.mChannels", prefix);
-                xml.write(buffer, mChannels);
-                snprintf(buffer, 1024, "%s.mARsize", prefix);
-                xml.write(buffer, mAR.size());
-
-                for (unsigned int i = 0; i < mAR.size(); i++) {
-
-                    snprintf(buffer, 1024, "%s.mAR.%d.sz1", prefix, i);
-                    xml.write(buffer, mAR[i].size1());
-                    snprintf(buffer, 1024, "%s.mAR.%d.sz2", prefix, i);
-                    xml.write(buffer, mAR[i].size2());
-
-                    for (unsigned j = 0; j < mAR[i].size1(); j++) {
-                        for (unsigned k = 0; k < mAR[i].size2(); k++) {
-                            snprintf(buffer, 1024, "%s.mAR.%d.%d.%d", prefix, i, j, k);
-                            xml.write(buffer, mAR[i](j, k));
-                        }
-                    }
-                }
-
-                snprintf(buffer, 1024, "%s.mMAsize", prefix);
-                xml.write(buffer, mMA.size());
-
-                for (unsigned int i = 0; i < mMA.size(); i++) {
-
-                    snprintf(buffer, 1024, "%s.mMA.%d.sz1", prefix, i);
-                    xml.write(buffer, mMA[i].size1());
-                    snprintf(buffer, 1024, "%s.mMA.%d.sz2", prefix, i);
-                    xml.write(buffer, mMA[i].size2());
-
-                    for (unsigned j = 0; j < mMA[i].size1(); j++) {
-                        for (unsigned k = 0; k < mMA[i].size2(); k++) {
-                            snprintf(buffer, 1024, "%s.mMA.%d.%d.%d", prefix, i, j, k);
-                            xml.write(buffer, mMA[i](j, k));
-                        }
-                    }
-                }
-            }
+        template<class Archive>
+        void serialize(Archive& ar) {
+            ar(mChannels, VDmatrixProxy(mAR), VDmatrixProxy(mMA));
         }
 
 

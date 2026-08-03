@@ -1,1 +1,23 @@
 generate_rst.py
+
+# Build artifacts (CMake / scikit-build-core)
+build/
+python-wrapper/build/
+python-wrapper/tmp/
+*.so
+*.pyd
+*.o
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+
+# Docs (generated -- Doxyfile is templated from Doxyfile.in, _build is Sphinx output)
+docs/Doxyfile
+docs/_build/
+
+# Editors / OS
+.DS_Store
+*.swp

@@ -45,6 +45,7 @@
 #include <LatticeView.hpp>
 #include <FifoBuffer.hpp>
 #include <LSLLearning.hpp>
+#include <CerealPersistence.hpp>
 //@}
 
 /**
@@ -94,102 +95,19 @@ namespace tsa {
          */
         ~LSLfilter();
 
-        void Load(const char *filename, const char *fmt = "txt") {
-            eternity::xml_archive fa;
-            fa.open(filename, eternity::archive::load);
-            xml_serialize(fa, "");
-            fa.close();
+        void Load(const char *filename, const char *fmt = nullptr) {
+            tsa::LoadBinary(filename, *this);
         }
 
-        void Save(const char *filename, const char *fmt = "txt") {
-            eternity::xml_archive fa;
-            fa.open(filename, eternity::archive::store);
-            xml_serialize(fa, "");
-            fa.close();
+        void Save(const char *filename, const char *fmt = nullptr) {
+            tsa::SaveBinary(filename, *this);
         }
 
-        void xml_serialize(eternity::xml_archive& xml, const char *p) {
-            char buffer[1024];
-
-            snprintf(buffer, 1024, "%s.mBuffer", p);
-            mBuffer.xml_serialize(xml, buffer);
-
-            if (xml.is_loading()) {
-
-                snprintf(buffer, 1024, "%s.mWinSize", p);
-                xml.read(buffer, mWinSize, 0);
-                snprintf(buffer, 1024, "%s.mOrder", p);
-                xml.read(buffer, mOrder, 0);
-                snprintf(buffer, 1024, "%s.mLambda", p);
-                xml.read(buffer, mLambda, 0);
-                snprintf(buffer, 1024, "%s.mSigma", p);
-                DVECTOR_XML_SERIALIZE(mSigma, xml, buffer);
-                snprintf(buffer, 1024, "%s.mNorm", p);
-                BOOL_XML_SERIALIZE(mNorm, xml, buffer);
-                snprintf(buffer, 1024, "%s.mSigma0", p);
-                xml.read(buffer, mSigma0, 0);
-                snprintf(buffer, 1024, "%s.mStartTime", p);
-                xml.read(buffer, mStartTime, 0);
-                snprintf(buffer, 1024, "%s.mSampling", p);
-                xml.read(buffer, mSampling, 0);
-                snprintf(buffer, 1024, "%s.mFirstCall", p);
-                BOOL_XML_SERIALIZE(mFirstCall, xml, buffer);
-                snprintf(buffer, 1024, "%s.mEF", p);
-                DMATRIX_XML_SERIALIZE(mEF, xml, buffer);
-                snprintf(buffer, 1024, "%s.mEB", p);
-                DMATRIX_XML_SERIALIZE(mEB, xml, buffer);
-                snprintf(buffer, 1024, "%s.mEpf", p);
-                DMATRIX_XML_SERIALIZE(mEpf, xml, buffer);
-                snprintf(buffer, 1024, "%s.mEpb", p);
-                DMATRIX_XML_SERIALIZE(mEpb, xml, buffer);
-                snprintf(buffer, 1024, "%s.mKf", p);
-                DVECTOR_XML_SERIALIZE(mKf, xml, buffer);
-                snprintf(buffer, 1024, "%s.mKb", p);
-                DVECTOR_XML_SERIALIZE(mKb, xml, buffer);
-                snprintf(buffer, 1024, "%s.mNG", p);
-                DVECTOR_XML_SERIALIZE(mG, xml, buffer);
-                snprintf(buffer, 1024, "%s.mF0", p);
-                xml.read(buffer, mF0, 0);
-
-            } else {
-
-                snprintf(buffer, 1024, "%s.mWinSize", p);
-                xml.write(buffer, mWinSize);
-                snprintf(buffer, 1024, "%s.mOrder", p);
-                xml.write(buffer, mOrder);
-                snprintf(buffer, 1024, "%s.mLambda", p);
-                xml.write(buffer, mLambda);
-                snprintf(buffer, 1024, "%s.mSigma", p);
-                DVECTOR_XML_SERIALIZE(mSigma, xml, buffer);
-                snprintf(buffer, 1024, "%s.mNorm", p);
-                BOOL_XML_SERIALIZE(mNorm, xml, buffer);
-                snprintf(buffer, 1024, "%s.mSigma0", p);
-                xml.write(buffer, mSigma0);
-                snprintf(buffer, 1024, "%s.mStartTime", p);
-                xml.write(buffer, mStartTime);
-                snprintf(buffer, 1024, "%s.mSampling", p);
-                xml.write(buffer, mSampling);
-                snprintf(buffer, 1024, "%s.mFirstCall", p);
-                BOOL_XML_SERIALIZE(mFirstCall, xml, buffer);
-                snprintf(buffer, 1024, "%s.mEF", p);
-                DMATRIX_XML_SERIALIZE(mEF, xml, buffer);
-                snprintf(buffer, 1024, "%s.mEB", p);
-                DMATRIX_XML_SERIALIZE(mEB, xml, buffer);
-                snprintf(buffer, 1024, "%s.mEpf", p);
-                DMATRIX_XML_SERIALIZE(mEpf, xml, buffer);
-                snprintf(buffer, 1024, "%s.mEpb", p);
-                DMATRIX_XML_SERIALIZE(mEpb, xml, buffer);
-                snprintf(buffer, 1024, "%s.mKf", p);
-                DVECTOR_XML_SERIALIZE(mKf, xml, buffer);
-                snprintf(buffer, 1024, "%s.mKb", p);
-                DVECTOR_XML_SERIALIZE(mKb, xml, buffer);
-                snprintf(buffer, 1024, "%s.mNG", p);
-                DVECTOR_XML_SERIALIZE(mG, xml, buffer);
-                snprintf(buffer, 1024, "%s.mF0", p);
-                xml.write(buffer, mF0);
-
-
-            }
+        template<class Archive>
+        void serialize(Archive& ar) {
+            ar(mBuffer, mWinSize, mOrder, mLambda, DvectorProxy(mSigma), mNorm, mSigma0, mStartTime,
+               mSampling, mFirstCall, DmatrixProxy(mEF), DmatrixProxy(mEB), DmatrixProxy(mEpf),
+               DmatrixProxy(mEpb), DvectorProxy(mKf), DvectorProxy(mKb), DvectorProxy(mG), mF0);
         }
 
 

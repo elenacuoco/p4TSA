@@ -1,6 +1,6 @@
 # P4TSA (package for Time Series Analysis) #
 
-[![Foo](https://img.shields.io/badge/docs-latest-brightgreen.svg?style=flat)](http://p4tsa.readthedocs.io/en/latest/?badge=latest) [![Build Status](https://travis-ci.org/elenacuoco/p4TSA.png)](https://travis-ci.org/elenacuoco/p4TSA)
+[![Foo](https://img.shields.io/badge/docs-latest-brightgreen.svg?style=flat)](http://p4tsa.readthedocs.io/en/latest/?badge=latest) [![CI](https://github.com/elenacuoco/p4TSA/actions/workflows/ci.yml/badge.svg)](https://github.com/elenacuoco/p4TSA/actions/workflows/ci.yml)
 
  (info@elenacuoco.com) https://www.elenacuoco.com
 

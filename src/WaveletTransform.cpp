@@ -145,6 +145,18 @@ namespace tsa {
             case HaarC:
                 mW = gsl_wavelet_alloc(gsl_wavelet_haar_centered, 2);
                 break;
+            case Coif1:
+                mW = gsl_wavelet_alloc(tsa_wavelet_coiflet_centered, 1);
+                break;
+            case Coif2:
+                mW = gsl_wavelet_alloc(tsa_wavelet_coiflet_centered, 2);
+                break;
+            case Sym4:
+                mW = gsl_wavelet_alloc(tsa_wavelet_symlet_centered, 4);
+                break;
+            case Sym8:
+                mW = gsl_wavelet_alloc(tsa_wavelet_symlet_centered, 8);
+                break;
             default:
                 mW = gsl_wavelet_alloc(gsl_wavelet_haar, 2);
                 break;

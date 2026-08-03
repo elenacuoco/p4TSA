@@ -1,6 +1,7 @@
  # p4TSA — package for Time Series Analysis
 
 [![docs](https://img.shields.io/badge/docs-latest-brightgreen.svg?style=flat)](http://p4tsa.readthedocs.io/en/latest/?badge=latest)
+[![CI](https://github.com/elenacuoco/p4TSA/actions/workflows/ci.yml/badge.svg)](https://github.com/elenacuoco/p4TSA/actions/workflows/ci.yml)
 
 Contact: info@elenacuoco.com — https://www.elenacuoco.com
 
@@ -8,6 +9,17 @@ Contact: info@elenacuoco.com — https://www.elenacuoco.com
 written in C++ and is exposed to Python through a [pybind11](https://pybind11.readthedocs.io)
 binding. The Python interface is called **pyTSA** (you can pronounce it *pi'za*)
 and is imported as `pytsa`.
+
+> **`pip install pytsa` is NOT this package.** There is an unrelated project
+> also named `pytsa` on PyPI (a Python decorator library, nothing to do with
+> time series or gravitational waves). This `pytsa` — p4TSA's own compiled
+> extension module — is never published to PyPI; the only correct way to get
+> it is building from **this repository's source**, via one of the methods
+> below (conda recipe, `pip install .` from a checkout, or a wheel you built
+> yourself with `python -m build`). If `import pytsa` behaves unexpectedly,
+> check `pip show pytsa` / `python -c "import pytsa; print(pytsa.__file__)"`
+> first — a `.py` file instead of a compiled `.so`/`.pyd` means the wrong
+> package is installed.
 
 ## What is this for?
 
@@ -31,6 +43,7 @@ single Python extension module. It depends on a few native libraries:
 | FFTW3 (double, float, long-double) | FFTs | build **and** run |
 | FrameL / libframel | LIGO/Virgo frame I/O | build **and** run |
 | Boost (headers only — Boost.uBLAS) | matrix/vector templates | **build only** |
+| Cereal (headers only) | binary serialization (AR/lattice-filter persistence) | **build only** |
 
 All of these are available on **conda-forge**, which is why conda is the
 recommended way to install `p4TSA`. FrameL has no PyPI wheel, so a pure `pip`
@@ -95,7 +108,7 @@ The C++ sources are compiled with CMake into a Python extension module named
 `pytsa`. Build and install it for the currently active Python environment with:
 
 ```bash
-conda install -c conda-forge cmake make compilers pybind11 gsl fftw framel libboost-headers
+conda install -c conda-forge cmake make compilers pybind11 gsl fftw framel libboost-headers cereal
 
 cmake -S . -B build \
   -DCMAKE_BUILD_TYPE=Release \
@@ -126,7 +139,7 @@ Boost headers must already be present in the environment. The simplest way to
 provide them is a conda environment:
 
 ```bash
-conda install -c conda-forge gsl fftw framel libboost-headers
+conda install -c conda-forge gsl fftw framel libboost-headers cereal
 pip install .
 ```
 
@@ -140,9 +153,34 @@ python -m build --wheel        # -> dist/p4tsa-2.1.0-*.whl
 ## Running the tests
 
 ```bash
-cd test
-python test.py
+pip install pytest
+pytest python-wrapper/tests/ -v
 ```
+
+Runs on every push/PR via [GitHub Actions](.github/workflows/ci.yml) (Python 3.10-3.12).
+
+## Changelog
+
+### 2026-08-03
+
+- **WDF trigger SNR statistic fixed**: `EventFullFeatured::mSigma` now exposes the winning
+  wavelet basis's own per-window sigma across the C++/Python boundary (was previously
+  recomputed downstream from a separate, staler sigma convention). The candidate wavelet-basis
+  list dropped the 3 biorthogonal B-spline bases (not L2-energy-preserving, let them win basis
+  selection spuriously even on pure noise).
+- **Candidate wavelet-basis list redesigned and trimmed** (`WDF2Classify`/`WDF2Reconstruct`,
+  19 → 10 bases): dropped redundant plain/centered Daubechies duplicates (same filter taps, just
+  phase-shifted), added Coiflet (order 1, 2) and Symlet (order 4, 8) — genuinely new basis
+  shapes, plugged into GSL's own extensible `gsl_wavelet_type` mechanism (no new external
+  wavelet library, no GSL patching). See `include/ExtraWaveletFamilies.hpp`.
+- **`eternity` (1999-2003 vendored XML persistence) removed entirely**, replaced with
+  [Cereal](https://uscilab.github.io/cereal/) (header-only, actively maintained; new
+  `cereal` conda-forge dependency). See `include/CerealPersistence.hpp`.
+- **Legacy pre-packaging-build files removed**: `bind.sh`, `install_dependencies.sh`,
+  `install_full_dependencies.sh`, `python-wrapper/CMakeLists.txt` (an orphaned separate build
+  script from before this repo's CMake packaging build, unused by it).
+- **CI moved from Travis to GitHub Actions** (`.github/workflows/ci.yml`) — Travis's free tier
+  for open source was retired years ago, and its old config predated the current build system.
 
 ## Contributing
 

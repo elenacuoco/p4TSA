@@ -61,7 +61,6 @@
 #include <WindowFactory.hpp>
 // Interfaces
 #include <Util.hpp>
-#include <eternity.hpp>
 #include <fparser.hpp>
 #include <fpconfig.hpp>
 #include <fptypes.hpp>

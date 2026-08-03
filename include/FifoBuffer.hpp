@@ -42,9 +42,8 @@
  * @name Project includes
  */
 //@{
-#include <eternity.hpp>
 #include <tsaTypes.hpp>
-#include <tsaSerialize.hpp>
+#include <CerealPersistence.hpp>
 //@}
 
 /**
@@ -189,46 +188,42 @@ namespace tsa {
             return (*mBuffer[c])(r);
         }
 
-        void Load(const char *filename, const char *fmt = "txt") {
-            eternity::xml_archive fa;
-            fa.open(filename, eternity::archive::load);
-            xml_serialize(fa, "");
-            fa.close();
+        // mBuffer is a deque<Dvector*>, a manual object pool (see
+        // AddPoint()/DelPoints()) -- the save()/load() pair below
+        // dereferences each pointer explicitly and, on load, deliberately
+        // recycles existing buffer capacity through mRepository rather than
+        // reallocating (see FifoBuffer.cpp), same behavior as the
+        // eternity-based version this replaces.
+        void Load(const char *filename, const char *fmt = nullptr) {
+            tsa::LoadBinary(filename, *this);
         }
 
-        void Save(const char *filename, const char *fmt = "txt") {
-            eternity::xml_archive fa;
-            fa.open(filename, eternity::archive::store);
-            xml_serialize(fa, "");
-            fa.close();
+        void Save(const char *filename, const char *fmt = nullptr) {
+            tsa::SaveBinary(filename, *this);
         }
 
-        void xml_serialize(eternity::xml_archive& xml, const char* prefix) {
-            char buffer[1024];
+        // Asymmetric save/load member pair (cereal's own idiom for exactly
+        // this situation), not a single serialize() template -- needed so
+        // FifoBuffer can appear as a member inside another persistable
+        // class's serialize() (DoubleWhitening, LSLfilter) with the same
+        // pool-recycling behavior Save/Load above use directly.
+        template<class Archive>
+        void save(Archive& ar) const {
+            unsigned int sz = mBuffer.size();
+            ar(sz, mChannels);
+            for (unsigned int i = 0; i < sz; i++) {
+                DvectorProxy(const_cast<Dvector&>(*mBuffer[i])).save(ar);
+            }
+        }
 
-            if (xml.is_loading()) {
-                unsigned int sz = 0;
-                snprintf(buffer, 1024, "%s.sz", prefix);
-                xml.read(buffer, sz, 0);
-                snprintf(buffer, 1024, "%s.mChannels", prefix);
-                xml.read(buffer, mChannels, 0);
-                DelPoints(sz);
-                for (unsigned int i = 0; i < sz; i++) {
-                    snprintf(buffer, 1024, "%s.mBuffer.%d", prefix, i);
-                    AddPoint();
-                    DVECTOR_XML_SERIALIZE(*(mBuffer.back()), xml, buffer);
-                }
-
-            } else {
-                unsigned int sz = mBuffer.size();
-                snprintf(buffer, 1024, "%s.sz", prefix);
-                xml.write(buffer, sz);
-                snprintf(buffer, 1024, "%s.mChannels", prefix);
-                xml.write(buffer, mChannels);
-                for (unsigned int i = 0; i < sz; i++) {
-                    snprintf(buffer, 1024, "%s.mBuffer.%d", prefix, i);
-                    DVECTOR_XML_SERIALIZE(*mBuffer[i], xml, buffer);
-                }
+        template<class Archive>
+        void load(Archive& ar) {
+            unsigned int sz = 0;
+            ar(sz, mChannels);
+            DelPoints(sz);
+            for (unsigned int i = 0; i < sz; i++) {
+                AddPoint();
+                DvectorProxy(*(mBuffer.back())).load(ar);
             }
         }
 

@@ -45,6 +45,7 @@
 #include <LatticeView.hpp>
 #include <AlgoBase.hpp>
 #include <FifoBuffer.hpp>
+#include <CerealPersistence.hpp>
 //@}
 
 ///
@@ -203,92 +204,19 @@ namespace tsa {
        
 
 
-        void Load(const char *filename, const char *fmt = "txt") {
-            eternity::xml_archive fa;
-            fa.open(filename, eternity::archive::load);
-            xml_serialize(fa, "");
-            fa.close();
+        void Load(const char *filename, const char *fmt = nullptr) {
+            tsa::LoadBinary(filename, *this);
         }
 
-        void Save(const char *filename, const char *fmt = "txt") {
-            eternity::xml_archive fa;
-            fa.open(filename, eternity::archive::store);
-            xml_serialize(fa, "");
-            fa.close();
+        void Save(const char *filename, const char *fmt = nullptr) {
+            tsa::SaveBinary(filename, *this);
         }
 
-        void xml_serialize(eternity::xml_archive &xml, const char *p) {
-            char buffer[1024];
-
-            if (xml.is_loading()) {
-
-                snprintf(buffer, 1024, "%s.mBuffer", p);
-                mBuffer.xml_serialize(xml, buffer);
-                snprintf(buffer, 1024, "%s.mFirstCall", p);
-                BOOL_XML_SERIALIZE(mFirstCall, xml, buffer);
-                snprintf(buffer, 1024, "%s.mOutputSize", p);
-                xml.read(buffer, mOutputSize, 0);
-                snprintf(buffer, 1024, "%s.mTotSize", p);
-                xml.read(buffer, mTotSize, 0);
-                snprintf(buffer, 1024, "%s.mOrder", p);
-                xml.read(buffer, mOrder, 0);
-                snprintf(buffer, 1024, "%s.mStartTime", p);
-                xml.read(buffer, mStartTime, 0);
-                snprintf(buffer, 1024, "%s.mSampling", p);
-                xml.read(buffer, mSampling, 0);
-                snprintf(buffer, 1024, "%s.mParcorF", p);
-                DVECTOR_XML_SERIALIZE(mParcorF, xml, buffer);
-                snprintf(buffer, 1024, "%s.mParcorB", p);
-                DVECTOR_XML_SERIALIZE(mParcorB, xml, buffer);
-                snprintf(buffer, 1024, "%s.mErrF", p);
-                DMATRIX_XML_SERIALIZE(mErrF, xml, buffer);
-                snprintf(buffer, 1024, "%s.mErrB", p);
-                DMATRIX_XML_SERIALIZE(mErrB, xml, buffer);
-                snprintf(buffer, 1024, "%s.mStatus", p);
-                xml.read(buffer, mStatus, 0);
-                snprintf(buffer, 1024, "%s.mEf", p);
-                DMATRIX_XML_SERIALIZE(mEf, xml, buffer);
-                snprintf(buffer, 1024, "%s.mEb", p);
-                DMATRIX_XML_SERIALIZE(mEb, xml, buffer);
-                snprintf(buffer, 1024, "%s.mWhitened", p);
-                DMATRIX_XML_SERIALIZE(mWhitened, xml, buffer);
-
-
-            } else {
-
-                snprintf(buffer, 1024, "%s.mBuffer", p);
-                mBuffer.xml_serialize(xml, buffer);
-                snprintf(buffer, 1024, "%s.mFirstCall", p);
-                BOOL_XML_SERIALIZE(mFirstCall, xml, buffer);
-                snprintf(buffer, 1024, "%s.mOutputSize", p);
-                xml.write(buffer, mOutputSize);
-                snprintf(buffer, 1024, "%s.mTotSize", p);
-                xml.write(buffer, mTotSize);
-                snprintf(buffer, 1024, "%s.mOrder", p);
-                xml.write(buffer, mOrder);
-                snprintf(buffer, 1024, "%s.mStartTime", p);
-                xml.write(buffer, mStartTime);
-                snprintf(buffer, 1024, "%s.mSampling", p);
-                xml.write(buffer, mSampling);
-                snprintf(buffer, 1024, "%s.mParcorF", p);
-                DVECTOR_XML_SERIALIZE(mParcorF, xml, buffer);
-                snprintf(buffer, 1024, "%s.mParcorB", p);
-                DVECTOR_XML_SERIALIZE(mParcorB, xml, buffer);
-                snprintf(buffer, 1024, "%s.mErrF", p);
-                DMATRIX_XML_SERIALIZE(mErrF, xml, buffer);
-                snprintf(buffer, 1024, "%s.mErrB", p);
-                DMATRIX_XML_SERIALIZE(mErrB, xml, buffer);
-                snprintf(buffer, 1024, "%s.mStatus", p);
-                xml.write(buffer, mStatus);
-                snprintf(buffer, 1024, "%s.mEf", p);
-                DMATRIX_XML_SERIALIZE(mEf, xml, buffer);
-                snprintf(buffer, 1024, "%s.mEb", p);
-                DMATRIX_XML_SERIALIZE(mEb, xml, buffer);
-                snprintf(buffer, 1024, "%s.mWhitened", p);
-                DMATRIX_XML_SERIALIZE(mWhitened, xml, buffer);
-
-
-            }
+        template<class Archive>
+        void serialize(Archive& ar) {
+            ar(mBuffer, mFirstCall, mOutputSize, mTotSize, mOrder, mStartTime, mSampling,
+               DvectorProxy(mParcorF), DvectorProxy(mParcorB), DmatrixProxy(mErrF), DmatrixProxy(mErrB),
+               mStatus, DmatrixProxy(mEf), DmatrixProxy(mEb), DmatrixProxy(mWhitened));
         }
 
 

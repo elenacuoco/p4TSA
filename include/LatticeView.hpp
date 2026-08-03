@@ -34,7 +34,7 @@
 
 #include <boost/numeric/ublas/matrix.hpp>
 #include <boost/numeric/ublas/io.hpp>
-#include <eternity.hpp>
+#include <CerealPersistence.hpp>
 //@}
 
 ///
@@ -96,50 +96,19 @@ namespace tsa {
         ~LatticeView() {
         }
 
-        void Load(const char *filename, const char *fmt = "txt") {
-            eternity::xml_archive fa;
-            fa.open(filename, eternity::archive::load);
-            xml_serialize(fa, "");
-            fa.close();
+        void Load(const char *filename, const char *fmt = nullptr) {
+            tsa::LoadBinary(filename, *this);
         }
 
-        void Save(const char *filename, const char *fmt = "txt") {
-            eternity::xml_archive fa;
-            fa.open(filename, eternity::archive::store);
-            xml_serialize(fa, "");
-            fa.close();
+        void Save(const char *filename, const char *fmt = nullptr) {
+            tsa::SaveBinary(filename, *this);
         }
 
-        void xml_serialize(eternity::xml_archive& xml, const char* prefix) {
-            char buffer[1024];
-
-            if (xml.is_loading()) {
-
-                snprintf(buffer, 1024, "%s.mOrder", prefix);
-                xml.read(buffer, mOrder, 0);
-                snprintf(buffer, 1024, "%s.mErrorForward", prefix);
-                DMATRIX_XML_SERIALIZE(mErrorForward, xml, buffer);
-                snprintf(buffer, 1024, "%s.mErrorBackward", prefix);
-                DMATRIX_XML_SERIALIZE(mErrorBackward, xml, buffer);
-                snprintf(buffer, 1024, "%s.mParcorF", prefix);
-                DVECTOR_XML_SERIALIZE(mParcorF, xml, buffer);
-                snprintf(buffer, 1024, "%s.mParcorB", prefix);
-                DVECTOR_XML_SERIALIZE(mParcorB, xml, buffer);
-            } else {
-                snprintf(buffer, 1024, "%s.mOrder", prefix);
-                xml.write(buffer, mOrder);
-                snprintf(buffer, 1024, "%s.mErrorForward", prefix);
-                DMATRIX_XML_SERIALIZE(mErrorForward, xml, buffer);
-                snprintf(buffer, 1024, "%s.mErrorBackward", prefix);
-                DMATRIX_XML_SERIALIZE(mErrorBackward, xml, buffer);
-                snprintf(buffer, 1024, "%s.mParcorF", prefix);
-                DVECTOR_XML_SERIALIZE(mParcorF, xml, buffer);
-                snprintf(buffer, 1024, "%s.mParcorB", prefix);
-                DVECTOR_XML_SERIALIZE(mParcorB, xml, buffer);
-            }
+        template<class Archive>
+        void serialize(Archive& ar) {
+            ar(mOrder, DmatrixProxy(mErrorForward), DmatrixProxy(mErrorBackward),
+               DvectorProxy(mParcorF), DvectorProxy(mParcorB));
         }
-
-
 
         ///
         /// @name Getters
