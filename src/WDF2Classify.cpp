@@ -42,20 +42,7 @@ namespace tsa {
         //   not just a further Daubechies-family variant.
         // - Haar.
         //
-        // The biorthogonal B-spline family (Bspline*/BsplineC*) remains
-        // excluded: it does not preserve L2 energy (Parseval's theorem), so
-        // WaveletThreshold's pooled-median sigma estimate -- which assumes
-        // homoscedastic, orthonormal coefficients -- systematically
-        // misestimates its per-level noise floor and let it win basis
-        // selection spuriously, even on pure Gaussian noise. A plain
-        // (non-wavelet-packet) DCT was tried in this codebase's history and
-        // removed: DCT is a single global, non-multiresolution transform,
-        // structurally mismatched with the pyramidal-DWT-based downstream
-        // machinery (coeff_freq_bands/coeff_time_bounds assume a Mallat
-        // octave layout) and with WaveletThreshold's own per-level sigma
-        // assumptions -- reintroducing it needs a real cosine wavelet
-        // packet (tree-structured, like DWT), not a block DCT, plus its own
-        // downstream time-frequency mapping; not attempted here.
+        
         const std::pair<enum WaveletTransform::WaveletType, const char*> kCandidateBases[] = {
             {WaveletTransform::Haar, "Haar"},
             {WaveletTransform::DaubC4, "DaubC4"},
@@ -187,7 +174,7 @@ namespace tsa {
         double varmax = -1.0;
         Dvector cmax(mNCoeff);
         int level = 0;
-        double bestSigma = 0.0;
+        double bestSigma = 0.1;
         Cmax.resize(mNCoeff);
 
         if ((mWindow) > mBuffer.Size()) {
@@ -215,7 +202,7 @@ namespace tsa {
             for (unsigned int i = 0; i < mWindow; i++) {
                 varB += (mBuff(0, i) * mBuff(0, i));
             }
-            varB = (sigmaB > 0) ? (sqrt(varB / mWindow) / sigmaB) : 0.0;
+            varB = (sigmaB > 0) ? (sqrt(varB ) / sigmaB) : 0.0;
 
             if (varB >= varmax) {
                 varmax = varB;
