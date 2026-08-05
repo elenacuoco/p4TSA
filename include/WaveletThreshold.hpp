@@ -83,6 +83,19 @@ namespace tsa {
             cuoco
         };
 
+        ///
+        /// How a coefficient above the threshold is treated.
+        ///
+        /// @c hard leaves it unchanged, so its amplitude is unbiased and the
+        /// energy of the surviving set is the energy of the signal. @c soft
+        /// shrinks every survivor by the threshold: that minimises the mean
+        /// square error of a denoised reconstruction, but biases amplitudes
+        /// low by an amount that grows with the number of coefficients the
+        /// signal is spread over.
+        ///
+        /// A detection statistic and a parameter estimate are both read off
+        /// the amplitude, so @c hard is the default.
+        ///
         enum ThresholdingMode {
             hard,
             soft
@@ -115,8 +128,8 @@ namespace tsa {
         /// @return a returned value
         ///
         /// Declaration of execute operation
-        void operator()(SeqViewDouble& WT, enum WaveletThresholding t, enum ThresholdingMode m = soft);
-        void operator()(Dmatrix& WT, enum WaveletThresholding t, enum ThresholdingMode m = soft);
+        void operator()(SeqViewDouble& WT, enum WaveletThresholding t, enum ThresholdingMode m = hard);
+        void operator()(Dmatrix& WT, enum WaveletThresholding t, enum ThresholdingMode m = hard);
         //@}
 
         ///
