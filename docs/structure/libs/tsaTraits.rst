@@ -1,5 +1,5 @@
 tsaTraits
-========================================
+=========
 
-.. doxygenclass:: tsa::tsaTraits
-  :members:
+.. doxygenfile:: tsaTraits.hpp
+

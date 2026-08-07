@@ -1,5 +1,9 @@
 name: CI
 
+# Every pull request into master must pass this before it can be merged. The
+# branch-protection rule that enforces it names the jobs below as required
+# status checks -- see CONTRIBUTING.md.
+#
 # Replaces the old .travis.yml (2026-08-03): Travis CI's free tier for open
 # source was retired years ago, and that config no longer matched this
 # repo's actual build (it predated the scikit-build-core/CMake packaging
@@ -8,9 +12,9 @@ name: CI
 
 on:
   push:
-    branches: [main]
+    branches: [master]
   pull_request:
-    branches: [main]
+    branches: [master]
   workflow_dispatch:
 
 jobs:
@@ -83,14 +87,15 @@ jobs:
         shell: bash -el {0}
         run: pip install -r docs/requirements.txt
 
-      # Not -W: Breathe auto-generates one page per C++ symbol, most
-      # deliberately not added to a hand-curated toctree (an API reference,
-      # not a hard error) -- treating that as build-breaking would make CI
-      # fail on this project's normal, expected doc structure. Still catches
-      # real breakage (e.g. a Sphinx ConfigError, a bad directive) since
-      # those fail the build outright regardless of -W.
+      # docs/conf.py runs Doxygen itself on every build, which is why doxygen
+      # is in the environment above.
+      #
+      # Not -W: every `doxygenfile` page re-emits the declarations its header
+      # shares with the others, so Breathe warns once per page about a
+      # duplicate C++ declaration. That is the price of documenting headers
+      # that carry free functions and typedefs rather than a class, and it is
+      # not something a contributor can fix. Real breakage -- a ConfigError, a
+      # bad directive, a missing Doxygen -- still fails the build outright.
       - name: Build Sphinx docs (Doxygen + Breathe)
         shell: bash -el {0}
-        env:
-          READTHEDOCS: "True"
         run: sphinx-build -b html docs docs/_build/html

@@ -72,6 +72,23 @@
   master-document candidates, with Sphinx picking the stale one.
   `structure/installation.rst` still described the pre-packaging build.
 
+- **The C++ API reference was rendering empty and now has content.** Doxygen ran
+  only on Read the Docs, and `breathe_default_project` named a key that was
+  never added to `breathe_projects` anywhere else, so all 66 class pages came
+  out blank with one breathe warning each. Doxygen now runs on every build and
+  the project key is defined once; `.readthedocs.yaml` installs `doxygen`
+  through `apt_packages`, which it was never asked to do, so the published
+  pages had no Doxygen XML to render from either. Twelve pages asked
+  `doxygenclass` for a class their header does not declare (`tsaTypes`,
+  `WindowFactory`, `fparser`, ...) and now use `doxygenfile`; nine pages were
+  in no toctree; `armafit.rst` duplicated `ARMAfit.rst`. The build goes from 78
+  warnings to 9.
+
+- **Documentation points at `wdflow`, not the retired `wdf`.** `docs/index.rst`
+  linked the old project's repository and site, both being retired.
+  `README.rst`, an unreferenced duplicate of `README.md` predating the
+  PyPI-collision warning and the contact change, was removed.
+
 - **A `.gitignore` covering build artifacts, Python cache and generated docs**
   replaces the previous one-line file.
 

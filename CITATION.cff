@@ -1,0 +1,77 @@
+cff-version: 1.2.0
+title: "p4TSA: package for Time Series Analysis"
+message: >-
+  Use of this software in published work requires citation of the references
+  listed below: the method paper for the Wavelet Detection Filter, and the
+  papers describing the autoregressive time-domain whitening that the
+  conditioning stage implements.
+type: software
+authors:
+  - family-names: Cuoco
+    given-names: Elena
+    email: elena.cuoco@unibo.it
+    affiliation: "Alma Mater Studiorum -- Università di Bologna"
+license: GPL-3.0-or-later
+repository-code: "https://github.com/elenacuoco/p4TSA"
+
+preferred-citation:
+  type: conference-paper
+  title: "Wavelet-based classification of transient signals for gravitational wave detectors"
+  authors:
+    - family-names: Cuoco
+      given-names: Elena
+    - family-names: Razzano
+      given-names: Massimiliano
+    - family-names: Utina
+      given-names: Andrei
+  collection-title: "2018 26th European Signal Processing Conference (EUSIPCO)"
+  publisher:
+    name: EURASIP
+  year: 2018
+  start: 2666
+  end: 2670
+  doi: "10.23919/EUSIPCO.2018.8553584"
+
+references:
+  - type: article
+    title: >-
+      On-line power spectra identification and whitening for the noise in
+      interferometric gravitational wave detectors
+    authors:
+      - family-names: Cuoco
+        given-names: Elena
+      - family-names: Calamai
+        given-names: G.
+      - family-names: Fabbroni
+        given-names: L.
+      - family-names: Losurdo
+        given-names: G.
+      - family-names: Mazzoni
+        given-names: M.
+      - family-names: Stanga
+        given-names: R.
+      - family-names: Vetrano
+        given-names: F.
+    journal: "Classical and Quantum Gravity"
+    volume: 18
+    start: 1727
+    end: 1751
+    year: 2001
+    doi: "10.1088/0264-9381/18/9/309"
+
+  - type: article
+    title: >-
+      Noise parametric identification and whitening for LIGO 40-m
+      interferometer data
+    authors:
+      - family-names: Cuoco
+        given-names: Elena
+      - family-names: Curci
+        given-names: G.
+      - family-names: Beccaria
+        given-names: M.
+    journal: "Physical Review D"
+    volume: 64
+    start: 122002
+    year: 2001
+    doi: "10.1103/PhysRevD.64.122002"

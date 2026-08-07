@@ -1,5 +1,5 @@
 CreateDvector
-========================================
+=============
 
-.. doxygenclass:: tsa::CreateDvector
-  :members:
+.. doxygenfile:: CreateDvector.hpp
+

@@ -10,6 +10,10 @@ build:
   os: ubuntu-22.04
   tools:
     python: "3.11"
+  # docs/conf.py runs doxygen and feeds its XML to breathe; without it every
+  # C++ API page renders empty.
+  apt_packages:
+    - doxygen
     # You can also specify other tool versions:
     # nodejs: "19"
     # rust: "1.64"

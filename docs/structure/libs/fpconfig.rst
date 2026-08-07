@@ -1,5 +1,5 @@
 fpconfig
-========================================
+========
 
-.. doxygenclass:: tsa::fpconfig
-  :members:
+.. doxygenfile:: fpconfig.hpp
+

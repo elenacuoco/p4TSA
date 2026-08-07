@@ -62,3 +62,11 @@ Documentation
      libs/Util.rst
      libs/FrameIStream.rst
      libs/FrameIChannel.rst
+     libs/WindowFactory.rst
+     libs/fparser.rst
+     libs/fpconfig.rst
+     libs/fptypes.rst
+     libs/tsaLog.rst
+     libs/tsaTraits.rst
+     libs/tsaTypes.rst
+     libs/tsaUtilityFunctions.rst

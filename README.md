@@ -32,6 +32,45 @@ includes:
 - Wavelet decomposition
 - Wavelet Detection Filter
 
+## The pipeline that uses it
+
+`p4TSA` is the C++ core. The search pipeline that drives it —
+trigger generation and the downstream trigger analysis — is
+[**wdflow**](https://github.com/elenacuoco/wdflow), which imports this library
+through `pytsa`. `wdflow` supersedes the earlier `wdf` package.
+
+> The two share the top-level module name `wdf`, so **they cannot be installed
+> side by side**: whichever `wdf` sits directly in `site-packages` shadows the
+> other, including an editable install of `wdflow`. If `import wdf` resolves
+> somewhere unexpected, `pip uninstall wdf` removes the legacy package.
+
+## How to cite
+
+**Use of this code in published work requires citation of the following.** A
+further paper covering the calibration of the statistic and the parameter
+estimation is in preparation and will be added here.
+
+*The Wavelet Detection Filter:*
+
+- E. Cuoco, M. Razzano, A. Utina, *Wavelet-based classification of transient
+  signals for gravitational wave detectors*, 26th European Signal Processing
+  Conference (EUSIPCO), 2666–2670 (2018).
+  [10.23919/EUSIPCO.2018.8553584](https://doi.org/10.23919/EUSIPCO.2018.8553584)
+
+*Time-domain whitening, which this library implements:*
+
+- E. Cuoco *et al.*, *On-line power spectra identification and whitening for the
+  noise in interferometric gravitational wave detectors*, Class. Quantum Grav.
+  **18**, 1727 (2001).
+  [10.1088/0264-9381/18/9/309](https://doi.org/10.1088/0264-9381/18/9/309)
+- E. Cuoco, G. Curci, M. Beccaria, *Noise parametric identification and
+  whitening for LIGO 40-m interferometer data*, Phys. Rev. D **64**, 122002
+  (2001).
+  [10.1103/PhysRevD.64.122002](https://doi.org/10.1103/PhysRevD.64.122002)
+
+`CITATION.cff` in this repository carries the same list in machine-readable
+form; GitHub's *Cite this repository* button reads it.
+
 ## Requirements
 
 `p4TSA` is not a pure-Python package: building it compiles the C++ core into a
@@ -132,6 +171,32 @@ Verify the installation with:
 python -c "import pytsa; print(pytsa.__file__)"
 ```
 
+### Reinstalling after changing the C++ sources
+
+A rebuild does not by itself change what `import pytsa` loads. Repeat the build
+and install, and check that the module Python resolves is the one just built:
+
+```bash
+cmake --build build -j"$(nproc)"
+cmake --install build
+
+PYTHON_SITE=$(python -c "import sysconfig; print(sysconfig.get_paths()['platlib'])")
+mv "$CONDA_PREFIX"/pytsa*.so "$PYTHON_SITE"/
+
+md5sum build/pytsa*.so "$PYTHON_SITE"/pytsa*.so
+```
+
+The two checksums must match. If they differ, the interpreter is still loading
+the previous build and any change to the C++ will appear not to have taken
+effect -- a failure that looks like a bug in the code rather than in the
+install.
+
+A `.so` placed in `site-packages` this way takes precedence over an editable
+install (`pip install -e .`), which resolves the module through a `.pth` file
+instead. Having both means the copied file wins and rebuilds stop taking effect
+silently, so pick one: either move the file after each build, as above, or use
+the editable install and delete the copy in `site-packages`.
+
 ## Installation with pip
 
 `pip` builds the C++ extension from source, so the native libraries and the
@@ -194,9 +259,10 @@ Runs on every push/PR via [GitHub Actions](.github/workflows/ci.yml) (Python 3.1
 
 ## Contributing
 
-- Write tests
-- Code review
-- Follow the existing style of the C++ core and the pybind11 binding
+Changes reach `master` through pull requests only, and a pull request merges
+only once CI is green. See [`CONTRIBUTING.md`](CONTRIBUTING.md) for how to build
+and test locally, what CI checks, and the invariants a change to the detection
+filter must preserve.
 
 ## Who do I talk to?
 

@@ -1,5 +1,5 @@
 EventDescription
-========================================
+================
 
-.. doxygenclass:: tsa::EventDescription
-  :members:
+.. doxygenfile:: EventDescription.hpp
+

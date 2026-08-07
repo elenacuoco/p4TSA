@@ -1,5 +1,5 @@
 fparser
-========================================
+=======
 
-.. doxygenclass:: tsa::fparser
-  :members:
+.. doxygenfile:: fparser.hpp
+

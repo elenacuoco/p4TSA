@@ -1,5 +1,5 @@
 tsaLog
-========================================
+======
 
-.. doxygenclass:: tsa::tsaLog
-  :members:
+.. doxygenfile:: tsaLog.hpp
+

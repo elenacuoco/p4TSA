@@ -1,5 +1,5 @@
 fptypes
-========================================
+=======
 
-.. doxygenclass:: tsa::fptypes
-  :members:
+.. doxygenfile:: fptypes.hpp
+

@@ -1,5 +1,5 @@
 tsaTypes
-========================================
+========
 
-.. doxygenclass:: tsa::tsaTypes
-  :members:
+.. doxygenfile:: tsaTypes.hpp
+

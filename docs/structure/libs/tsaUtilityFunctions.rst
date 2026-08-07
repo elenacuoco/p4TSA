@@ -1,5 +1,5 @@
 tsaUtilityFunctions
-========================================
+===================
 
-.. doxygenclass:: tsa::tsaUtilityFunctions
-  :members:
+.. doxygenfile:: tsaUtilityFunctions.hpp
+

@@ -1,5 +1,5 @@
 WindowFactory
-========================================
+=============
 
-.. doxygenclass:: tsa::WindowFactory
-  :members:
+.. doxygenfile:: WindowFactory.hpp
+

@@ -1,5 +1,5 @@
 AlgoExceptions
-========================================
+==============
 
-.. doxygenclass:: tsa::AlgoExceptions
-  :members:
+.. doxygenfile:: AlgoExceptions.hpp
+
