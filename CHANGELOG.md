@@ -26,9 +26,65 @@
   under the convention that decided the trigger rather than a separately frozen
   one.
 
+- **The candidate basis list goes from 19 bases to 10.** Plain and centered
+  Daubechies of the same order are the same filter taps up to a phase shift, so
+  keeping both spent roughly half the list's compute on no real diversity; the
+  plain family and every other centered order were dropped. Coiflet (orders 1
+  and 2) and Symlet (orders 4 and 8) were added in their place as genuinely
+  different shapes -- Symlet only begins to differ from Daubechies at order 4,
+  and Coiflet has vanishing moments for the scaling function as well as for the
+  wavelet. The biorthogonal B-spline family stays excluded: it is not
+  orthonormal, so Parseval does not hold for it and `mSNR` would not be the
+  signal-to-noise ratio of the reconstruction.
+
+- **New `ExtraWaveletFamilies.hpp`.** Coiflet and Symlet are plugged into GSL's
+  own extensible `gsl_wavelet_type` mechanism rather than by patching GSL or
+  taking on another wavelet library. Filter coefficients were cross-checked
+  against PyWavelets for orthonormality and for tap order, which the two
+  libraries store in opposite conventions.
+
+### Removed
+
+- **`eternity` is gone, replaced by Cereal.** The vendored 1999--2003 XML
+  persistence layer was a real compiled dependency, not dead code. All eight
+  persistable classes (`ArBurgEstimator`, `LatticeView`, `ARMAView`,
+  `DoubleWhitening`, `FifoBuffer`, `LatticeFilter`, `LSLfilter`, `LSLLearning`)
+  now use Cereal through the new `CerealPersistence.hpp`, whose
+  `DvectorProxy`/`DmatrixProxy`/`VDmatrixProxy` types exist to sidestep a real
+  ambiguity: `boost::numeric::ublas` vectors and matrices already carry an
+  inherited Boost.Serialization `serialize()` member, which clashes with any
+  free save/load pair added for the same type. Save/load round-trips are
+  verified byte-exact against freshly estimated filter state. Cereal is a new
+  header-only dependency (conda-forge). The legacy ENV_ROOT-era build files,
+  unused by the CMake packaging build, were removed at the same time.
+
+### Infrastructure
+
+- **CI moved from Travis to GitHub Actions.** Travis's free tier for open
+  source was retired years ago and its configuration predated the current build
+  system entirely.
+
+- **The Sphinx documentation build was broken and now works.** `conf.py` used
+  an `intersphinx_mapping` shorthand that modern Sphinx rejects outright;
+  `docs/requirements.txt` was missing Sphinx itself and the theme; the
+  list-form `source_suffix` silently parsed `index.md` as reStructuredText with
+  no Markdown parser registered; and `index.md` and `index.rst` both existed as
+  master-document candidates, with Sphinx picking the stale one.
+  `structure/installation.rst` still described the pre-packaging build.
+
+- **A `.gitignore` covering build artifacts, Python cache and generated docs**
+  replaces the previous one-line file.
+
 ### Notes for downstream users
 
 Trigger values change. `mSNR` from a run before this release is not comparable
 with one after it: it is larger, having lost the window-length division, and no
 longer biased low by shrinkage. Thresholds tuned against the old scale must be
-re-tuned against a measured background.
+re-tuned against a measured background. Triggers also no longer report a
+biorthogonal winning basis, and the set of names that can appear in `mWave` is
+the ten listed above.
+
+`pytsa` on PyPI is an unrelated package (a Python decorator library). p4TSA's
+own `pytsa` module is never published there and is only ever built from this
+repository's source; install it with `pip install .` from a checkout, which
+builds the extension through scikit-build-core and CMake.
