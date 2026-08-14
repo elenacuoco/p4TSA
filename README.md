@@ -54,8 +54,8 @@ estimation is in preparation and will be added here.
 
 - E. Cuoco, M. Razzano, A. Utina, *Wavelet-based classification of transient
   signals for gravitational wave detectors*, 26th European Signal Processing
-  Conference (EUSIPCO), 2666–2670 (2018).
-  [10.23919/EUSIPCO.2018.8553584](https://doi.org/10.23919/EUSIPCO.2018.8553584)
+  Conference (EUSIPCO), 2648–2652 (2018).
+  [10.23919/EUSIPCO.2018.8553393](https://doi.org/10.23919/EUSIPCO.2018.8553393)
 
 *Time-domain whitening, which this library implements:*
 
@@ -63,7 +63,7 @@ estimation is in preparation and will be added here.
   noise in interferometric gravitational wave detectors*, Class. Quantum Grav.
   **18**, 1727 (2001).
   [10.1088/0264-9381/18/9/309](https://doi.org/10.1088/0264-9381/18/9/309)
-- E. Cuoco, G. Curci, M. Beccaria, *Noise parametric identification and
+- E. Cuoco *et al.*, *Noise parametric identification and
   whitening for LIGO 40-m interferometer data*, Phys. Rev. D **64**, 122002
   (2001).
   [10.1103/PhysRevD.64.122002](https://doi.org/10.1103/PhysRevD.64.122002)

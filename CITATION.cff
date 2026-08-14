@@ -28,9 +28,9 @@ preferred-citation:
   publisher:
     name: EURASIP
   year: 2018
-  start: 2666
-  end: 2670
-  doi: "10.23919/EUSIPCO.2018.8553584"
+  start: 2648
+  end: 2652
+  doi: "10.23919/EUSIPCO.2018.8553393"
 
 references:
   - type: article
@@ -66,10 +66,20 @@ references:
     authors:
       - family-names: Cuoco
         given-names: Elena
-      - family-names: Curci
+      - family-names: Losurdo
         given-names: G.
-      - family-names: Beccaria
+      - family-names: Calamai
+        given-names: G.
+      - family-names: Fabbroni
+        given-names: L.
+      - family-names: Mazzoni
         given-names: M.
+      - family-names: Stanga
+        given-names: R.
+      - family-names: Guidi
+        given-names: G.
+      - family-names: Vetrano
+        given-names: F.
     journal: "Physical Review D"
     volume: 64
     start: 122002
