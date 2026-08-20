@@ -9,10 +9,13 @@ type: software
 authors:
   - family-names: Cuoco
     given-names: Elena
+    orcid: "https://orcid.org/0000-0002-6528-3449"
     email: elena.cuoco@unibo.it
     affiliation: "Alma Mater Studiorum -- Università di Bologna"
 license: GPL-3.0-or-later
 repository-code: "https://github.com/elenacuoco/p4TSA"
+version: "3.0.1"
+date-released: "2026-08-20"
 
 preferred-citation:
   type: conference-paper

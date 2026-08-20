@@ -1,6 +1,20 @@
 # Changelog
 
-## 2.2.0
+## 3.0.1
+
+### Fixed
+
+- **The package declares the version it is tagged with.** `pyproject.toml`, the
+  conda recipe and the changelog heading still read 2.2.0 when 3.0.0 was tagged,
+  so an installed package reported a version its archive was not built from and
+  the changelog attributed the trigger-scale changes to a release that predates
+  them.
+
+- **`CITATION.cff` carries the author ORCID, the version and the release date.**
+  Zenodo builds the record for an archived release from that file; without those
+  fields the archived record names an author with no identifier behind it.
+
+## 3.0.0
 
 ### Changed
 
