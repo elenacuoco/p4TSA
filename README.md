@@ -2,6 +2,7 @@
 
 [![docs](https://img.shields.io/badge/docs-latest-brightgreen.svg?style=flat)](http://p4tsa.readthedocs.io/en/latest/?badge=latest)
 [![CI](https://github.com/elenacuoco/p4TSA/actions/workflows/ci.yml/badge.svg)](https://github.com/elenacuoco/p4TSA/actions/workflows/ci.yml)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22030083.svg)](https://doi.org/10.5281/zenodo.22030083)
 
 Contact: info@elenacuoco.com — https://www.elenacuoco.com
 
