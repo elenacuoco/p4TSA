@@ -1,5 +1,29 @@
 # Changelog
 
+## Unreleased
+
+### Changed
+
+- **The block rule is the default of `WDF2Classify`.** A classifier built
+  without a thresholding rule used `cuoco`, the universal threshold with the
+  sigma given from outside; it now uses `block`. Callers that pass the rule
+  explicitly are unaffected.
+
+### Added
+
+- **A block rule for the wavelet coefficients of a window.**
+  `WaveletThreshold::block` judges contiguous coefficients of one level
+  together (Cai 1999): a block of L is kept whole when its energy exceeds
+  lambda L sigma^2, and zeroed whole otherwise, with sigma read from the
+  window's median as for the universal threshold. A signal spread over
+  neighbouring coefficients, each below sqrt(2 ln N) sigma, survives as a
+  block where no single coefficient would; a lone noise excursion does not
+  carry its block over the line. `SetBlock(length, lambda)` sets the two
+  parameters, defaulting to ln N and 4.505. On the merger window of GW150914
+  in H1 the rule keeps 18 coefficients where the universal threshold keeps
+  five, twelve of them in 32-128 Hz, and fires on fewer windows of noise at
+  the same EnWDF threshold.
+
 ## 3.0.1
 
 ### Fixed
