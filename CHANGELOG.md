@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+### Changed
+
+- **The block rule is the default of `WDF2Classify`.** A classifier built
+  without a thresholding rule used `cuoco`, the universal threshold with the
+  sigma given from outside; it now uses `block`. Callers that pass the rule
+  explicitly are unaffected.
+
 ### Added
 
 - **A block rule for the wavelet coefficients of a window.**

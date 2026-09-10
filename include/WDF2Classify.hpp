@@ -92,7 +92,7 @@ namespace tsa {
         /// Constructor
         ///
         WDF2Classify(unsigned int window, unsigned int overlap, double thresh, double sigma,
-                     unsigned int ncoeff, enum WaveletThreshold::WaveletThresholding WTh = WaveletThreshold::cuoco);
+                     unsigned int ncoeff, enum WaveletThreshold::WaveletThresholding WTh = WaveletThreshold::block);
 
         ///
         /// Copy constructor. Explicit (not compiler-generated): mBases holds
