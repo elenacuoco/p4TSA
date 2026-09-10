@@ -2605,6 +2605,7 @@ void bind_WaveletThreshold(std::function< pybind11::module &(std::string const &
 			.value("highest", tsa::WaveletThreshold::highest)
 			.value("dohonojohnston", tsa::WaveletThreshold::dohonojohnston)
 			.value("cuoco", tsa::WaveletThreshold::cuoco)
+			.value("block", tsa::WaveletThreshold::block)
 			.export_values();
 
 
@@ -2615,6 +2616,9 @@ void bind_WaveletThreshold(std::function< pybind11::module &(std::string const &
 
 		cl.def("__call__", [](tsa::WaveletThreshold &o, class tsa::SeqView<double> & a0, enum tsa::WaveletThreshold::WaveletThresholding const & a1) -> void { return o.operator()(a0, a1); }, "", pybind11::arg("WT"), pybind11::arg("t"));
 		cl.def("__call__", (void (tsa::WaveletThreshold::*)(class tsa::SeqView<double> &, enum tsa::WaveletThreshold::WaveletThresholding, enum tsa::WaveletThreshold::ThresholdingMode)) &tsa::WaveletThreshold::operator(), "Brief documentation for the execute method.\n\n Start of the long documentation for execute method.\n\n \n A precondition\n \n\n A postcondition\n \n\n An exception\n\n \n parameter\n\n \n a returned value\n\n Declaration of execute operation\n\nC++: tsa::WaveletThreshold::operator()(class tsa::SeqView<double> &, enum tsa::WaveletThreshold::WaveletThresholding, enum tsa::WaveletThreshold::ThresholdingMode) --> void", pybind11::arg("WT"), pybind11::arg("t"), pybind11::arg("m"));
+		cl.def("SetBlock", (void (tsa::WaveletThreshold::*)(unsigned int, double)) &tsa::WaveletThreshold::SetBlock, "The block rule's parameters: block length (0 for ln N) and energy threshold in units of L sigma^2.\n\nC++: tsa::WaveletThreshold::SetBlock(unsigned int, double) --> void", pybind11::arg("length"), pybind11::arg("lambda"));
+		cl.def("GetBlockLength", (unsigned int (tsa::WaveletThreshold::*)()) &tsa::WaveletThreshold::GetBlockLength, "C++: tsa::WaveletThreshold::GetBlockLength() --> unsigned int");
+		cl.def("GetBlockLambda", (double (tsa::WaveletThreshold::*)()) &tsa::WaveletThreshold::GetBlockLambda, "C++: tsa::WaveletThreshold::GetBlockLambda() --> double");
 		cl.def("GetSigma", (double (tsa::WaveletThreshold::*)()) &tsa::WaveletThreshold::GetSigma, "C++: tsa::WaveletThreshold::GetSigma() --> double");
 		cl.def("GetLevel", (double (tsa::WaveletThreshold::*)()) &tsa::WaveletThreshold::GetLevel, "C++: tsa::WaveletThreshold::GetLevel() --> double");
 		cl.def("GetCm", (double (tsa::WaveletThreshold::*)()) &tsa::WaveletThreshold::GetCm, "C++: tsa::WaveletThreshold::GetCm() --> double");

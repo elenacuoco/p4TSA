@@ -64,6 +64,9 @@
 ///
 /// namespace
 ///
+#include <algorithm>
+#include <cmath>
+
 namespace tsa {
 
     ///
@@ -77,10 +80,28 @@ namespace tsa {
     class WaveletThreshold {
     public:
 
+        ///
+        /// How the coefficients of one window are selected.
+        ///
+        /// @c dohonojohnston keeps each coefficient on its own against the
+        /// universal threshold sqrt(2 ln N) sigma, with sigma read from the
+        /// median of the window's own coefficients; @c cuoco applies the same
+        /// threshold with the sigma given from outside; @c highest keeps the
+        /// largest coefficients by count.
+        ///
+        /// @c block judges contiguous coefficients of one level together
+        /// (Cai 1999): a block of L coefficients is kept whole when its
+        /// energy exceeds lambda L sigma^2, and zeroed whole otherwise. A
+        /// signal spread over neighbouring coefficients, each below the
+        /// universal threshold, survives as a block where no single
+        /// coefficient would; a lone noise excursion does not carry its
+        /// block over the line. sigma is read as for @c dohonojohnston.
+        ///
         enum WaveletThresholding {
             highest,
             dohonojohnston,
-            cuoco
+            cuoco,
+            block
         };
 
         ///
@@ -159,12 +180,69 @@ namespace tsa {
         void SetSigma(double sigma) {
             mSigma = sigma;
         }
+
+        ///
+        /// The block rule's parameters: the block length in coefficients,
+        /// 0 for the natural logarithm of N, Cai's choice, and the energy
+        /// threshold in units of L sigma^2, whose calibrated value for that
+        /// length is 4.505.
+        ///
+        void SetBlock(unsigned int length, double lambda) {
+            mBlockLength = length;
+            mBlockLambda = lambda;
+        }
+
+        unsigned int GetBlockLength() {
+            return mBlockLength > 0 ? mBlockLength : BlockLengthOf(mN);
+        }
+
+        double GetBlockLambda() {
+            return mBlockLambda;
+        }
         //@}
 
 
     protected:
 
     private:
+        static unsigned int BlockLengthOf(unsigned int N) {
+            unsigned int L = static_cast<unsigned int>(std::floor(std::log(static_cast<double>(N)) + 0.5));
+            return L > 0 ? L : 1;
+        }
+
+        ///
+        /// The block rule over one coefficient vector, whichever container
+        /// holds it: sigma from the median of |coefficient|, then every
+        /// level of the dyadic ladder -- index 0, index 1, then [2^k, 2^(k+1))
+        /// -- cut into blocks of L, each kept or zeroed on its energy.
+        ///
+        template <class Coefficients>
+        void BlockThreshold(Coefficients& WT) {
+            for (unsigned int i = 0; i < mN; i++)
+                mOrd[i] = fabs(WT(0, mP[i]));
+            mMedian = gsl_stats_median_from_sorted_data(mOrd, 1, mN);
+            mSigma = mMedian / 0.6745;
+            const unsigned int L = GetBlockLength();
+            const double energyPerCoefficient = mBlockLambda * mSigma * mSigma;
+            mThresh = energyPerCoefficient;
+            unsigned int levelStart = 0, levelSize = 1;
+            while (levelStart < mN) {
+                unsigned int levelEnd = std::min(levelStart + levelSize, mN);
+                for (unsigned int b = levelStart; b < levelEnd; b += L) {
+                    unsigned int e = std::min(b + L, levelEnd);
+                    double energy = 0.0;
+                    for (unsigned int i = b; i < e; i++)
+                        energy += WT(0, i) * WT(0, i);
+                    if (energy <= energyPerCoefficient * (e - b)) {
+                        for (unsigned int i = b; i < e; i++)
+                            WT(0, i) = 0.0;
+                    }
+                }
+                levelStart = levelEnd;
+                levelSize = (levelStart < 2) ? 1 : levelStart;
+            }
+        }
+
         double * mAbsCoeff;
         size_t * mP;
         size_t * mPAC;
@@ -176,6 +254,8 @@ namespace tsa {
         double mSigma;
         int mlevel;
         double mC;
+        unsigned int mBlockLength;
+        double mBlockLambda;
 
 
     };

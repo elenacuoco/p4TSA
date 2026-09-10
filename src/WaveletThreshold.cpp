@@ -23,7 +23,11 @@ namespace tsa {
             mMedian(0.0),
             mThresh(0.0),
             mNcoeff(ncoeff),
-            mSigma(sigma) {
+            mSigma(sigma),
+            mlevel(0),
+            mC(0.0),
+            mBlockLength(0),
+            mBlockLambda(4.505) {
         mAbsCoeff = new double[mN];
         mP = new size_t[mN];
         mPAC = new size_t[1];
@@ -104,6 +108,10 @@ namespace tsa {
 
                     }
                 }
+                break;
+
+                case block:
+                    BlockThreshold(WT);
                 break;
 
                 default:
@@ -190,6 +198,10 @@ namespace tsa {
 
                     }
                 }
+                break;
+
+                case block:
+                    BlockThreshold(WT);
                 break;
 
                 default:
