@@ -4,6 +4,16 @@
 
 ### Changed
 
+- **BREAKING: the Python module is now `py4tsa`, not `pytsa`.** Every
+  `import pytsa` / `from pytsa.tsa import ...` becomes `import py4tsa` /
+  `from py4tsa.tsa import ...`. The old name collides with an unrelated
+  project of the same name on PyPI (a Python decorator library), which owns
+  that import namespace and would shadow this extension for anyone who had
+  both installed — a collision that had to be resolved before p4TSA could
+  publish to PyPI at all. The C++ library keeps the name p4TSA; only the
+  Python-facing module and the distribution name change. This supersedes the
+  note under 3.0.0 below, which recorded the situation as it was before the
+  rename.
 - **The block rule is the default of `WDF2Classify`.** A classifier built
   without a thresholding rule used `cuoco`, the universal threshold with the
   sigma given from outside; it now uses `block`. Callers that pass the rule

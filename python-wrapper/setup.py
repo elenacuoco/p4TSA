@@ -30,8 +30,8 @@ class get_pybind_include(object):
 
 ext_modules = [
     Extension(
-        'pytsa',
-        ['pytsa.cpp'],
+        'py4tsa',
+        ['py4tsa.cpp'],
         include_dirs=['../include', ENV_INCLUDE, PYTHON_INCLUDE,
             # Path to pybind11 headers
             get_pybind_include(),
@@ -96,7 +96,7 @@ class BuildExt(build_ext):
         build_ext.build_extensions(self)
 
 setup(
-    name='pytsa',
+    name='py4tsa',
     version=__version__,
     author='Elena Cuoco',
     author_email='info@elenacuoco.com',

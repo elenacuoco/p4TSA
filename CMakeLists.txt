@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 3.15...3.29)
-project(pytsa LANGUAGES CXX)
+project(py4tsa LANGUAGES CXX)
 
 # ---------------------------------------------------------------------------
-# Packaging build for p4TSA / pyTSA
+# Packaging build for p4TSA / py4TSA
 #
 # Unlike the original build (which produced a separate libp4TSA.so and then
-# dynamically linked the pytsa extension against it), this build compiles all
-# core C++ sources DIRECTLY into the pytsa extension module. The result is a
+# dynamically linked the py4tsa extension against it), this build compiles all
+# core C++ sources DIRECTLY into the py4tsa extension module. The result is a
 # single self-contained .so that only needs the *external* shared libraries
 # (GSL, FFTW3, FrameL) at runtime -- no hunting for libp4TSA.so, no RPATH pain.
 # ---------------------------------------------------------------------------
@@ -61,19 +61,19 @@ endif()
 file(GLOB CORE_SOURCES CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp")
 
 # --- the single extension module -------------------------------------------
-pybind11_add_module(pytsa
-  ${CMAKE_CURRENT_SOURCE_DIR}/python-wrapper/pytsa.cpp
+pybind11_add_module(py4tsa
+  ${CMAKE_CURRENT_SOURCE_DIR}/python-wrapper/py4tsa.cpp
   ${CORE_SOURCES}
 )
 
-target_include_directories(pytsa PRIVATE
+target_include_directories(py4tsa PRIVATE
   ${CMAKE_CURRENT_SOURCE_DIR}/include
   ${FRAMEL_INCLUDE_DIR}
   ${BOOST_INCLUDE_DIR}
   ${CEREAL_INCLUDE_DIR}
 )
 
-target_link_libraries(pytsa PRIVATE
+target_link_libraries(py4tsa PRIVATE
   GSL::gsl
   GSL::gslcblas
   ${FFTW3_LIB}
@@ -81,8 +81,8 @@ target_link_libraries(pytsa PRIVATE
   ${FRAMEL_LIB}
 )
 if(FFTW3L_LIB)
-  target_link_libraries(pytsa PRIVATE ${FFTW3L_LIB})
+  target_link_libraries(py4tsa PRIVATE ${FFTW3L_LIB})
 endif()
 
 # scikit-build-core installs into the wheel root; conda into site-packages.
-install(TARGETS pytsa LIBRARY DESTINATION .)
+install(TARGETS py4tsa LIBRARY DESTINATION .)

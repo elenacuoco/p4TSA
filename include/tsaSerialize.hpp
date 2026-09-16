@@ -42,7 +42,7 @@
 /// tsa namespace
 ///
 /// `Tag()` is a small XML-tag-name formatting helper, kept (and still bound
-/// to Python, see pytsa.cpp) even though its original caller -- the
+/// to Python, see py4tsa.cpp) even though its original caller -- the
 /// DVECTOR_XML_SERIALIZE/DMATRIX_XML_SERIALIZE/BOOL_XML_SERIALIZE macros
 /// this file used to also define, wrapping the now-removed `eternity` XML
 /// persistence framework -- is gone (see CerealPersistence.hpp for the

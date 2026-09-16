@@ -1,4 +1,4 @@
-{% set name = "p4tsa" %}
+{% set name = "py4tsa" %}
 {% set version = "3.0.1" %}
 
 package:
@@ -45,13 +45,13 @@ requirements:
     
 test:
   imports:
-    - pytsa
+    - py4tsa
 
 about:
   home: https://github.com/elenacuoco/p4TSA
   license: GPL-3.0-or-later
   license_file: LICENSE
-  summary: p4TSA - package for Time Series Analysis (Python interface pyTSA)
+  summary: p4TSA - package for Time Series Analysis (Python interface py4TSA)
   dev_url: https://github.com/elenacuoco/p4TSA
 
 extra:

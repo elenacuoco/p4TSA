@@ -6,12 +6,12 @@ produced only clusterized triggers.  it is tuned for ML classifiers
 '''
 
 from scipy.io import wavfile
-import pytsa
+import py4tsa
 import time
 import numpy as np
 import configparser,os
 import gc
-from pytsa.tsa import SeqView_double_t as SV
+from py4tsa.tsa import SeqView_double_t as SV
 Config = configparser.ConfigParser()
 
 
@@ -38,9 +38,9 @@ for i in range(n_est):
     learn.FillPoint( 0, i, float(snd[i]))
 
 ARorder=Config.getint("Whitening",'ARoder')
-ADE = pytsa.tsa.ArBurgEstimator(ARorder)
-LV = pytsa.tsa.LatticeView(ARorder)
-LF = pytsa.tsa.LatticeFilter(LV)
+ADE = py4tsa.tsa.ArBurgEstimator(ARorder)
+LV = py4tsa.tsa.LatticeView(ARorder)
+LF = py4tsa.tsa.LatticeFilter(LV)
 LVfile = "./LVparam-%s.txt" %fn
 ARfile = "./ARparam-%s.txt" %fn
 estimation=Config.getboolean('Whitening',"estimation")

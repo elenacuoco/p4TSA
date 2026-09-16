@@ -3508,8 +3508,8 @@ void bind_FrameIStream(std::function< pybind11::module &(std::string const &name
 void bind_FrameIChannel(std::function< pybind11::module &(std::string const &namespace_) > &M);
 
 
-PYBIND11_MODULE(pytsa, root_module) {
-	root_module.doc() = "pytsa module";
+PYBIND11_MODULE(py4tsa, root_module) {
+	root_module.doc() = "py4tsa module";
 
 	std::map <std::string, pybind11::module> modules;
 	ModuleGetter M = [&](std::string const &namespace_) -> pybind11::module & {
@@ -3560,8 +3560,8 @@ PYBIND11_MODULE(pytsa, root_module) {
 
 }
 
-// Source list file: ./python-wrapper//pytsa.sources
-// pytsa.cpp
+// Source list file: ./python-wrapper//py4tsa.sources
+// py4tsa.cpp
 // std/exception.cpp
 // std/stl_vector.cpp
 // std/stl_map.cpp
@@ -3585,5 +3585,5 @@ PYBIND11_MODULE(pytsa, root_module) {
 // FrameIStream.cpp
 // FrameIChannel.cpp
 
-// Modules list file: ./python-wrapper//pytsa.modules
+// Modules list file: ./python-wrapper//py4tsa.modules
 // eternity std tsa 

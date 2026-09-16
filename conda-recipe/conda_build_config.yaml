@@ -1,6 +1,6 @@
 # No hard Python pin: the build follows the Python you pass with --python,
 # which the instructions derive from the currently active environment. This
-# keeps p4tsa aligned with whatever Python you are using.
+# keeps py4tsa aligned with whatever Python you are using.
 #
 # If instead you want to build several fixed variants at once, uncomment and
 # list them here (conda-build will produce one package per version):

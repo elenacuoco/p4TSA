@@ -8,14 +8,14 @@ import unittest
 
 import numpy as np
 
-import pytsa
-from pytsa.tsa import ArBurgEstimator, LatticeView
+import py4tsa
+from py4tsa.tsa import ArBurgEstimator, LatticeView
 
 
 def _seqview(n, seed, fs=256.0, t0=0.0):
     rng = np.random.default_rng(seed)
     x = rng.normal(0.0, 1.0, n)
-    sv = pytsa.tsa.SeqView_double_t(t0, 1.0 / fs, n)
+    sv = py4tsa.tsa.SeqView_double_t(t0, 1.0 / fs, n)
     for i, v in enumerate(x):
         sv.FillPoint(0, i, v)
     return sv

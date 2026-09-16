@@ -60,7 +60,7 @@ jobs:
 
       - name: Import smoke test
         shell: bash -el {0}
-        run: python -c "import pytsa; print('pytsa OK:', pytsa.__file__)"
+        run: python -c "import py4tsa; print('py4tsa OK:', py4tsa.__file__)"
 
       - name: Run tests
         shell: bash -el {0}

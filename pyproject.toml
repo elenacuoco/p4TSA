@@ -3,9 +3,9 @@ requires = ["scikit-build-core>=0.10", "pybind11>=2.12"]
 build-backend = "scikit_build_core.build"
 
 [project]
-name = "p4tsa"
+name = "py4tsa"
 version = "3.0.1"
-description = "p4TSA - package for Time Series Analysis (Python interface: pyTSA / import pytsa)"
+description = "p4TSA - package for Time Series Analysis (Python interface: py4TSA / import py4tsa)"
 readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "GPL-3.0-or-later" }
