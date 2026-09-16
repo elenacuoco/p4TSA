@@ -123,11 +123,15 @@ install(TARGETS py4tsa LIBRARY DESTINATION .)
 
 if(FRAMEL_VENDORED)
   # A FrameL built here is on no loader path, so it ships beside the extension
-  # and is found through a relative RPATH -- which is also what auditwheel
-  # needs in order to pull it into the wheel. Only the install RPATH is set:
+  # and is found through a relative RPATH; auditwheel, finding it already in
+  # the wheel, keeps that RPATH and leaves it be. Only the install RPATH is set:
   # in the build tree CMake already points at the framel target's own output
   # directory. The system case needs neither, its libframel being where the
   # loader looks already (or where conda's compiler wrappers say it is).
   set_target_properties(py4tsa PROPERTIES INSTALL_RPATH "$ORIGIN")
-  install(TARGETS framel LIBRARY DESTINATION .)
+  # Only the file the loader asks for, under its SONAME. A wheel is a zip and
+  # keeps no symlinks, so installing the target would ship three full copies.
+  install(FILES $<TARGET_FILE:framel>
+          DESTINATION .
+          RENAME $<TARGET_SONAME_FILE_NAME:framel>)
 endif()
