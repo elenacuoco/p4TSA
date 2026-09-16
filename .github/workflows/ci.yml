@@ -41,7 +41,7 @@ jobs:
             python=${{ matrix.python-version }}
             pip
             cxx-compiler
-            cmake>=3.15
+            cmake>=3.28
             make
             scikit-build-core>=0.10
             pybind11>=2.12
