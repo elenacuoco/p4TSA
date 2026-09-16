@@ -18,24 +18,38 @@ version: "3.1.0"
 date-released: "2026-09-16"
 
 preferred-citation:
-  type: conference-paper
-  title: "Wavelet-based classification of transient signals for gravitational wave detectors"
+  type: article
+  status: preprint
+  title: >-
+    The Wavelet Detection Filter: A Real Time Unmodeled Pipeline for
+    Gravitational Wave Transients, Ranking Coincidences with a Graph
+    Neural Network
   authors:
     - family-names: Cuoco
       given-names: Elena
-    - family-names: Razzano
-      given-names: Massimiliano
-    - family-names: Utina
-      given-names: Andrei
-  collection-title: "2018 26th European Signal Processing Conference (EUSIPCO)"
-  publisher:
-    name: EURASIP
-  year: 2018
-  start: 2648
-  end: 2652
-  doi: "10.23919/EUSIPCO.2018.8553393"
+      orcid: "https://orcid.org/0000-0002-6528-3449"
+  year: 2026
+  month: 9
+  doi: "10.48550/arXiv.2609.12797"
+  url: "https://arxiv.org/html/2609.12797v1"
 
 references:
+  - type: conference-paper
+    title: "Wavelet-based classification of transient signals for gravitational wave detectors"
+    authors:
+      - family-names: Cuoco
+        given-names: Elena
+      - family-names: Razzano
+        given-names: Massimiliano
+      - family-names: Utina
+        given-names: Andrei
+    collection-title: "2018 26th European Signal Processing Conference (EUSIPCO)"
+    publisher:
+      name: EURASIP
+    year: 2018
+    start: 2648
+    end: 2652
+    doi: "10.23919/EUSIPCO.2018.8553393"
   - type: article
     title: >-
       On-line power spectra identification and whitening for the noise in
