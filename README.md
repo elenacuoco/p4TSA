@@ -43,12 +43,15 @@ through `py4tsa`. `wdflow` supersedes the earlier `wdf` package.
 
 ## How to cite
 
-**Use of this code in published work requires citation of the following.** A
-further paper covering the calibration of the statistic and the parameter
-estimation is in preparation and will be added here.
+**Use of this code in published work requires citation of the following.**
 
 *The Wavelet Detection Filter:*
 
+- E. Cuoco, *The Wavelet Detection Filter: A Real Time Unmodeled Pipeline for
+  Gravitational Wave Transients, Ranking Coincidences with a Graph Neural
+  Network*, arXiv:2609.12797 (2026).
+  [arxiv.org/html/2609.12797v1](https://arxiv.org/html/2609.12797v1),
+  [10.48550/arXiv.2609.12797](https://doi.org/10.48550/arXiv.2609.12797)
 - E. Cuoco, M. Razzano, A. Utina, *Wavelet-based classification of transient
   signals for gravitational wave detectors*, 26th European Signal Processing
   Conference (EUSIPCO), 2648–2652 (2018).
