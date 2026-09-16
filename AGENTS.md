@@ -1,9 +1,9 @@
 # AGENTS instructions for p4TSA
 
 ## Project snapshot
-- p4TSA is a C++ time-series analysis library with a Python interface exposed as the pytsa module through pybind11.
+- p4TSA is a C++ time-series analysis library with a Python interface exposed as the py4tsa module through pybind11.
 - The core implementation lives in the C++ headers under [include](include) and the corresponding sources under [src](src).
-- The Python-facing binding entry point is [python-wrapper/pytsa.cpp](python-wrapper/pytsa.cpp), and regression tests live under [python-wrapper/tests](python-wrapper/tests).
+- The Python-facing binding entry point is [python-wrapper/py4tsa.cpp](python-wrapper/py4tsa.cpp), and regression tests live under [python-wrapper/tests](python-wrapper/tests).
 - The packaging/build flow is defined by [CMakeLists.txt](CMakeLists.txt), [pyproject.toml](pyproject.toml), and the installation guidance in [README.md](README.md).
 
 ## Working conventions
@@ -20,7 +20,7 @@
 - Run the Python regression tests:
   - `pytest python-wrapper/tests/ -v`
 - Smoke-test the installed module:
-  - `python -c "import pytsa; print(pytsa.__file__)"`
+  - `python -c "import py4tsa; print(py4tsa.__file__)"`
 
 ## Review priorities
 - For review-oriented work, focus on correctness, build impact, test coverage, and API stability rather than style-only changes.

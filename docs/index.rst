@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to p4TSA and pyTSA documentation
+Welcome to p4TSA and py4TSA documentation
 ==========================================
 
 This library is a 'spin-off' of the C++ Noise Analysis Package (NAP). It is specific to data
@@ -12,7 +12,7 @@ format the gravitational-wave detectors write.
 
 The core library is written in C++ and should be compiled before using the python interface.
 
-The Python interface to the library is pyTSA (you can call it pi'za)
+The Python interface to the library is py4TSA (you can call it pi'za)
 
 Features
 --------

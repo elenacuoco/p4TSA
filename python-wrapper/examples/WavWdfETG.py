@@ -6,12 +6,12 @@ produced only clusterized triggers.  it is tuned for ML classifiers
 '''
 
 from scipy.io import wavfile
-import pytsa
+import py4tsa
 import time
 import numpy as np
 import configparser,os
 import gc
-from pytsa.tsa import SeqView_double_t as SV
+from py4tsa.tsa import SeqView_double_t as SV
 Config = configparser.ConfigParser()
 Config.read("WDFConfig.ini")
 
@@ -36,9 +36,9 @@ for i in range(n_est):
     learn.FillPoint( 0, i, float(snd[i]))
 
 ARorder=Config.getint("Whitening",'ARoder')
-ADE = pytsa.tsa.ArBurgEstimator(ARorder)
-LV = pytsa.tsa.LatticeView(ARorder)
-LF = pytsa.tsa.LatticeFilter(LV)
+ADE = py4tsa.tsa.ArBurgEstimator(ARorder)
+LV = py4tsa.tsa.LatticeView(ARorder)
+LF = py4tsa.tsa.LatticeFilter(LV)
 LVfile = "./LVparam-%s.txt" %fn
 ARfile = "./ARparam-%s.txt" %fn
 estimation=Config.getboolean('Whitening',"estimation")
@@ -68,10 +68,10 @@ Ncoeff = window
 sigma = ADE.GetAR(0)
 print ('Estimated sigma= %s' % sigma)
 # event class
-evP = pytsa.tsa.EventFullFeatured(Ncoeff)
-evN = pytsa.tsa.EventFullFeatured(Ncoeff)
-ev = pytsa.tsa.EventFullFeatured(Ncoeff)
-Cev = pytsa.tsa.ClusterizedEventFullFeatured(Ncoeff)
+evP = py4tsa.tsa.EventFullFeatured(Ncoeff)
+evN = py4tsa.tsa.EventFullFeatured(Ncoeff)
+ev = py4tsa.tsa.EventFullFeatured(Ncoeff)
+Cev = py4tsa.tsa.ClusterizedEventFullFeatured(Ncoeff)
 outdir=Config.get('FileData','outdir')
 outfile = outdir + 'WDFTrigger-%s-Win%s-Over%s.csv' % (fn,window,overlap)
 
@@ -83,9 +83,9 @@ for i in range(Ncoeff):
 stringa += '\n'
 f.write(stringa)
 
-#DetectD = pytsa.tsa.WDF2Classify(window, overlap, thresh, sigma, Ncoeff,pytsa.tsa.WaveletThreshold.dohonojohnston)
+#DetectD = py4tsa.tsa.WDF2Classify(window, overlap, thresh, sigma, Ncoeff,py4tsa.tsa.WaveletThreshold.dohonojohnston)
 
-DetectD = pytsa.tsa.WDF2Classify(window, overlap, thresh, sigma, Ncoeff,pytsa.tsa.WaveletThreshold.cuoco)
+DetectD = py4tsa.tsa.WDF2Classify(window, overlap, thresh, sigma, Ncoeff,py4tsa.tsa.WaveletThreshold.cuoco)
 ###Start detection loop
 print ("Starting detection loop")
 start_time = time.time()
@@ -145,7 +145,7 @@ while slice < (snd.shape[0]-chunck):
                 f.flush()
                 ClusterizedEvents += 1
                 del Cev
-                Cev = pytsa.tsa.ClusterizedEventFullFeatured(Ncoeff)
+                Cev = py4tsa.tsa.ClusterizedEventFullFeatured(Ncoeff)
                 evP.EVcopy(ev)
                 evN.EVcopy(ev)
                 ##new values to identify next peak

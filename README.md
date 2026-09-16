@@ -8,19 +8,15 @@ Contact: info@elenacuoco.com — https://www.elenacuoco.com
 
 `p4TSA` is a spin-off of the C++ *Noise Analysis Package* (NAP). The core is
 written in C++ and is exposed to Python through a [pybind11](https://pybind11.readthedocs.io)
-binding. The Python interface is called **pyTSA** (you can pronounce it *pi'za*)
-and is imported as `pytsa`.
+binding. The Python interface is called **py4TSA** (you can still pronounce it
+*pi'za*) and is imported as `py4tsa`.
 
-> **`pip install pytsa` is NOT this package.** There is an unrelated project
-> also named `pytsa` on PyPI (a Python decorator library, nothing to do with
-> time series or gravitational waves). This `pytsa` — p4TSA's own compiled
-> extension module — is never published to PyPI; the only correct way to get
-> it is building from **this repository's source**, via one of the methods
-> below (conda recipe, `pip install .` from a checkout, or a wheel you built
-> yourself with `python -m build`). If `import pytsa` behaves unexpectedly,
-> check `pip show pytsa` / `python -c "import pytsa; print(pytsa.__file__)"`
-> first — a `.py` file instead of a compiled `.so`/`.pyd` means the wrong
-> package is installed.
+> **The module used to be called `pytsa`, and was renamed to `py4tsa`.** The
+> name `pytsa` on PyPI belongs to an unrelated project (a Python decorator
+> library, nothing to do with time series or gravitational waves), so it would
+> have collided with this one at import time for anyone who had both. The `4`
+> of `p4TSA` moved into the Python name to keep it unambiguous. If you have
+> code that does `import pytsa`, change it to `import py4tsa`.
 
 ## What is this for?
 
@@ -38,7 +34,7 @@ includes:
 `p4TSA` is the C++ core. The search pipeline that drives it —
 trigger generation and the downstream trigger analysis — is
 [**wdflow**](https://github.com/elenacuoco/wdflow), which imports this library
-through `pytsa`. `wdflow` supersedes the earlier `wdf` package.
+through `py4tsa`. `wdflow` supersedes the earlier `wdf` package.
 
 > The two share the top-level module name `wdf`, so **they cannot be installed
 > side by side**: whichever `wdf` sits directly in `site-packages` shadows the
@@ -98,13 +94,13 @@ If a built package has been published to a conda channel, install it directly
 (replace `<channel>` with the channel it was uploaded to):
 
 ```bash
-conda install -c conda-forge -c <channel> p4tsa
+conda install -c conda-forge -c <channel> py4tsa
 ```
 
-The importable module is `pytsa`:
+The importable module is `py4tsa`:
 
 ```bash
-python -c "import pytsa; print('pyTSA ready')"
+python -c "import py4tsa; print('py4TSA ready')"
 ```
 
 ### Option B — build from source with conda-build
@@ -114,7 +110,7 @@ dependencies live on **conda-forge**, which must be enabled with strict channel
 priority, otherwise conda resolves against `defaults` (where `framel`,
 `libframel` and `libboost-headers` do not exist).
 
-The build follows the Python of the environment you activate, so `p4tsa` always
+The build follows the Python of the environment you activate, so `py4tsa` always
 matches the interpreter you use — no fixed pin, no version mismatch at install
 time.
 
@@ -126,14 +122,14 @@ conda install -n base conda-build
 conda config --add channels conda-forge
 conda config --set channel_priority strict
 
-# 3. activate the environment you want to use p4tsa in (or create it),
+# 3. activate the environment you want to use py4tsa in (or create it),
 #    then build FOR that environment's Python:
 conda activate <your-env>
 PYVER=$(python -c "import sys; print(f'{sys.version_info.major}.{sys.version_info.minor}')")
 conda build conda-recipe/ -c conda-forge --python=$PYVER
 
 # 4. install into the same environment
-conda install -c conda-forge --use-local p4tsa
+conda install -c conda-forge --use-local py4tsa
 ```
 
 > `--python=$PYVER` compiles the package exactly for the active environment's
@@ -142,10 +138,10 @@ conda install -c conda-forge --use-local p4tsa
 > stable Python.
 
 
-## Build and install the `pytsa` Python module
+## Build and install the `py4tsa` Python module
 
 The C++ sources are compiled with CMake into a Python extension module named
-`pytsa`. Build and install it for the currently active Python environment with:
+`py4tsa`. Build and install it for the currently active Python environment with:
 
 ```bash
 conda install -c conda-forge cmake make compilers pybind11 gsl fftw framel libboost-headers cereal
@@ -163,18 +159,18 @@ the active Python `site-packages` directory if necessary:
 
 ```bash
 PYTHON_SITE=$(python -c "import sysconfig; print(sysconfig.get_paths()['platlib'])")
-mv "$CONDA_PREFIX"/pytsa*.so "$PYTHON_SITE"/
+mv "$CONDA_PREFIX"/py4tsa*.so "$PYTHON_SITE"/
 ```
 
 Verify the installation with:
 
 ```bash
-python -c "import pytsa; print(pytsa.__file__)"
+python -c "import py4tsa; print(py4tsa.__file__)"
 ```
 
 ### Reinstalling after changing the C++ sources
 
-A rebuild does not by itself change what `import pytsa` loads. Repeat the build
+A rebuild does not by itself change what `import py4tsa` loads. Repeat the build
 and install, and check that the module Python resolves is the one just built:
 
 ```bash
@@ -182,9 +178,9 @@ cmake --build build -j"$(nproc)"
 cmake --install build
 
 PYTHON_SITE=$(python -c "import sysconfig; print(sysconfig.get_paths()['platlib'])")
-mv "$CONDA_PREFIX"/pytsa*.so "$PYTHON_SITE"/
+mv "$CONDA_PREFIX"/py4tsa*.so "$PYTHON_SITE"/
 
-md5sum build/pytsa*.so "$PYTHON_SITE"/pytsa*.so
+md5sum build/py4tsa*.so "$PYTHON_SITE"/py4tsa*.so
 ```
 
 The two checksums must match. If they differ, the interpreter is still loading
@@ -213,7 +209,7 @@ To build a wheel instead of installing in place:
 
 ```bash
 pip install build
-python -m build --wheel        # -> dist/p4tsa-2.2.0-*.whl
+python -m build --wheel        # -> dist/py4tsa-3.0.1-*.whl
 ```
 
 ## Running the tests
@@ -237,7 +233,7 @@ Runs on every push/PR via [GitHub Actions](.github/workflows/ci.yml) (Python 3.1
 - **CI Node.js 20 deprecation cleared**: `actions/checkout` v4→v5, `mamba-org/setup-micromamba`
   v1→v3 (both now Node 24-native).
 - **`test_02_persistence.py` no longer depends on `wdf`**: builds its `SeqView` fixture with
-  pytsa's own `SeqView_double_t`/`FillPoint` instead of `wdf.structures.array2SeqView`, which
+  py4tsa's own `SeqView_double_t`/`FillPoint` instead of `wdf.structures.array2SeqView`, which
   isn't installed in this repo's CI.
 - **WDF trigger SNR statistic fixed**: `EventFullFeatured::mSigma` now exposes the winning
   wavelet basis's own per-window sigma across the C++/Python boundary (was previously

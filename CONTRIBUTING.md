@@ -29,7 +29,7 @@ Every pull request runs, and all of it must pass:
 
 | Job | What it does |
 |-----|--------------|
-| `Build + test (Python 3.10 / 3.11 / 3.12)` | Builds the C++ core and the `pytsa` binding on each supported Python, imports it, and runs the test suite. |
+| `Build + test (Python 3.10 / 3.11 / 3.12)` | Builds the C++ core and the `py4tsa` binding on each supported Python, imports it, and runs the test suite. |
 | `Docs build check` | Runs Doxygen and builds the Sphinx documentation, so a broken directive or a missing symbol page fails. |
 
 ## What to keep in mind
