@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.15...3.29)
+cmake_minimum_required(VERSION 3.28...3.31)
 project(py4tsa LANGUAGES CXX)
 
 # ---------------------------------------------------------------------------
@@ -31,10 +31,44 @@ find_library(FFTW3F_LIB fftw3f REQUIRED)   # single precision
 find_library(FFTW3L_LIB fftw3l)            # long double (optional)
 
 # --- FrameL / libframel (conda-forge: framel / libframel) ------------------
+# Frame I/O is not optional: FrameIStream and FrameIChannel are how the
+# pipeline reads strain, and a build without them cannot search for triggers.
+# A copy already on the system is preferred, which keeps the conda-forge build
+# exactly as it was; when there is none -- a bare manylinux image, say -- the
+# library is built from its own source instead, so that `pip install .` works
+# somewhere conda does not reach.
 find_path(FRAMEL_INCLUDE_DIR NAMES FrameL.h)
-find_library(FRAMEL_LIB NAMES framel frame REQUIRED)
-if(NOT FRAMEL_INCLUDE_DIR)
-  message(FATAL_ERROR "FrameL.h not found. Install framel (conda install -c conda-forge framel).")
+find_library(FRAMEL_LIB NAMES framel frame)
+
+if(FRAMEL_INCLUDE_DIR AND FRAMEL_LIB)
+  message(STATUS "FrameL: using ${FRAMEL_LIB}")
+  set(FRAMEL_VENDORED FALSE)
+else()
+  message(STATUS "FrameL: not found on the system, building it from source")
+  include(FetchContent)
+
+  # FrameL's own CMakeLists builds Matlab and Python bindings, Debian and RPM
+  # packaging, and its example programs, none of which belong in this wheel.
+  # They are all guarded by cache variables, so setting them first is enough.
+  set(ENABLE_C ON CACHE BOOL "" FORCE)
+  set(ENABLE_MATLAB OFF CACHE BOOL "" FORCE)
+  set(ENABLE_PYTHON OFF CACHE BOOL "" FORCE)
+  set(ENABLE_PACKAGING OFF CACHE BOOL "" FORCE)
+  set(BUILD_TESTING OFF CACHE BOOL "" FORCE)
+
+  FetchContent_Declare(framel
+    GIT_REPOSITORY https://git.ligo.org/virgo/virgoapp/Fr.git
+    GIT_TAG        8.50.2
+    GIT_SHALLOW    TRUE
+    EXCLUDE_FROM_ALL              # its install() rules stay out of the wheel
+  )
+  FetchContent_MakeAvailable(framel)
+
+  # framel declares its include directory PRIVATE, so linking the target does
+  # not carry the header along: point at the source tree explicitly.
+  set(FRAMEL_INCLUDE_DIR "${framel_SOURCE_DIR}/src")
+  set(FRAMEL_LIB framel)
+  set(FRAMEL_VENDORED TRUE)
 endif()
 
 # --- Boost (HEADER-ONLY: only Boost.uBLAS + boost/config.hpp are used) ------
@@ -86,3 +120,14 @@ endif()
 
 # scikit-build-core installs into the wheel root; conda into site-packages.
 install(TARGETS py4tsa LIBRARY DESTINATION .)
+
+if(FRAMEL_VENDORED)
+  # A FrameL built here is on no loader path, so it ships beside the extension
+  # and is found through a relative RPATH -- which is also what auditwheel
+  # needs in order to pull it into the wheel. Only the install RPATH is set:
+  # in the build tree CMake already points at the framel target's own output
+  # directory. The system case needs neither, its libframel being where the
+  # loader looks already (or where conda's compiler wrappers say it is).
+  set_target_properties(py4tsa PROPERTIES INSTALL_RPATH "$ORIGIN")
+  install(TARGETS framel LIBRARY DESTINATION .)
+endif()
