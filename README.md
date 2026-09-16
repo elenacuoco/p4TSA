@@ -209,7 +209,7 @@ To build a wheel instead of installing in place:
 
 ```bash
 pip install build
-python -m build --wheel        # -> dist/py4tsa-3.0.1-*.whl
+python -m build --wheel        # -> dist/py4tsa-3.1.0-*.whl
 ```
 
 ## Running the tests
