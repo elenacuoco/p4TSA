@@ -5,22 +5,12 @@
 ### Added
 
 - **`pip install py4tsa`.** Wheels for CPython 3.10 to 3.13,
-  `manylinux_2_28_x86_64`, carrying GSL, FFTW3 and FrameL inside them, so
-  nothing has to be installed first and conda is no longer the only way in.
-  FrameL is why this was not possible before: it has no wheel of its own, so
-  the build now compiles it from its own source
-  (git.ligo.org/virgo/virgoapp/Fr, 8.50.2) whenever the system has none, and
-  ships it beside the extension. A build that finds FrameL installed -- conda,
-  or a distribution's package -- behaves exactly as it did.
-  This supersedes the note under 3.0.0 below, which recorded that the module
-  is "never published" to an index: that described the situation before this
-  release. The unrelated project that holds the name `pytsa` there is still
-  unrelated; this one is `py4tsa`.
-- **A test that reads a frame.** `FrameIStream` and `FrameIChannel` were the
-  only part of the library nothing in the suite exercised, so a build with a
-  broken or mislinked FrameL passed everything -- which is exactly the build a
-  wheel would ship. `test_04_frame_io.py` reads a committed 8 kB fixture whose
-  channel carries a ramp, and asserts every sample it gets back.
+  `manylinux_2_28_x86_64`, with GSL, FFTW3 and FrameL inside them, so nothing
+  has to be installed first. The build takes FrameL from the system when it is
+  there, and otherwise compiles it from its own source
+  (git.ligo.org/virgo/virgoapp/Fr, 8.50.2).
+- `test_04_frame_io.py`, which reads a frame through `FrameIChannel` and
+  checks the samples against an 8 kB fixture.
 
 ### Changed
 
@@ -36,14 +26,10 @@
 
 - **BREAKING: the Python module is now `py4tsa`, not `pytsa`.** Every
   `import pytsa` / `from pytsa.tsa import ...` becomes `import py4tsa` /
-  `from py4tsa.tsa import ...`. The old name collides with an unrelated
-  project of the same name on PyPI (a Python decorator library), which owns
-  that import namespace and would shadow this extension for anyone who had
-  both installed — a collision that had to be resolved before p4TSA could
-  publish to PyPI at all. The C++ library keeps the name p4TSA; only the
-  Python-facing module and the distribution name change. This supersedes the
-  note under 3.0.0 below, which recorded the situation as it was before the
-  rename.
+  `from py4tsa.tsa import ...`. The old name on PyPI belongs to an unrelated
+  project, which would shadow this extension for anyone holding both. The C++
+  library keeps the name p4TSA; the Python module and the distribution name
+  change.
 - **The block rule is the default of `WDF2Classify`.** A classifier built
   without a thresholding rule used `cuoco`, the universal threshold with the
   sigma given from outside; it now uses `block`. Callers that pass the rule

@@ -1,14 +1,8 @@
 name: wheels
 
-# Builds the manylinux wheels that put py4tsa on PyPI. FrameL has no wheel of
-# its own, so CMakeLists.txt compiles it from source when the image has none,
-# and auditwheel then carries it -- with GSL and FFTW3 -- inside the wheel.
-# What to build and how to test it is in pyproject.toml, [tool.cibuildwheel],
-# so a local `cibuildwheel` run does the same thing.
-#
-# Not on every push: this compiles FrameL and the whole C++ core once per
-# Python, minutes of runner time that say nothing a green ci.yml has not.
-# Tags, releases, and a button.
+# Builds the manylinux wheels for PyPI. What to build and how to test it is in
+# pyproject.toml, [tool.cibuildwheel], so a local `cibuildwheel` run does the
+# same thing. Not on every push: it compiles the C++ core once per Python.
 
 on:
   push:
@@ -45,10 +39,8 @@ jobs:
           name: sdist
           path: dist/*.tar.gz
 
-  # A wheel that has only run inside the image that built it has not been
-  # tested where it will be installed. This is a plain runner: no conda, no
-  # manylinux container, and no FrameL anywhere on the system -- so if the
-  # frame test passes here, the FrameL it used came out of the wheel.
+  # The wheel installed where it will be used: a plain runner, with none of
+  # the libraries it needs present on the system.
   verify:
     name: Install the wheel on a plain runner
     needs: build
@@ -76,15 +68,13 @@ jobs:
           ldd "$so"
           ! ldd "$so" | grep -q "not found"
 
-      # Run from outside the checkout, so `import py4tsa` cannot pick up
-      # anything but the installed wheel.
+      # From outside the checkout, so only the installed wheel is importable.
       - name: Run the tests against it
         working-directory: /tmp
         run: pytest "$GITHUB_WORKSPACE/python-wrapper/tests" -q
 
-  # Publishing is irreversible: a version, once uploaded, can be yanked but
-  # never replaced. The `pypi` environment holds it for a human, whatever
-  # triggered the run.
+  # An upload cannot be taken back, so the `pypi` environment holds the run
+  # for a human whatever triggered it.
   publish:
     name: Publish to PyPI
     needs: [build, sdist, verify]

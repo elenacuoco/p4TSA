@@ -11,12 +11,8 @@ written in C++ and is exposed to Python through a [pybind11](https://pybind11.re
 binding. The Python interface is called **py4TSA** (you can still pronounce it
 *pi'za*) and is imported as `py4tsa`.
 
-> **The module used to be called `pytsa`, and was renamed to `py4tsa`.** The
-> name `pytsa` on PyPI belongs to an unrelated project (a Python decorator
-> library, nothing to do with time series or gravitational waves), so it would
-> have collided with this one at import time for anyone who had both. The `4`
-> of `p4TSA` moved into the Python name to keep it unambiguous. If you have
-> code that does `import pytsa`, change it to `import py4tsa`.
+> **The module used to be called `pytsa`.** That name on PyPI belongs to an
+> unrelated project, so change any `import pytsa` to `import py4tsa`.
 
 ## What is this for?
 
@@ -84,9 +80,8 @@ single Python extension module. It depends on a few native libraries:
 | Boost (headers only — Boost.uBLAS) | matrix/vector templates | **build only** |
 | Cereal (headers only) | binary serialization (AR/lattice-filter persistence) | **build only** |
 
-None of this is your problem on Linux: the wheels on PyPI carry GSL, FFTW3 and
-FrameL inside them. It is your problem when building from source, and all of
-these are on **conda-forge**.
+The wheels on PyPI carry GSL, FFTW3 and FrameL inside them, so this table
+matters only when building from source. All of it is on **conda-forge**.
 
 ## Installation with pip (Linux)
 
@@ -95,15 +90,11 @@ pip install py4tsa
 python -c "import py4tsa; print(py4tsa.__file__)"
 ```
 
-The wheels are `manylinux_2_28_x86_64`, for CPython 3.10 to 3.13. They bundle
-GSL, FFTW3 and FrameL, so nothing else has to be installed first — FrameL in
-particular has no wheel of its own, and is compiled from source
-([git.ligo.org/virgo/virgoapp/Fr](https://git.ligo.org/virgo/virgoapp/Fr)) when
-the build cannot find one, which is what lets a wheel exist at all.
+The wheels are `manylinux_2_28_x86_64`, for CPython 3.10 to 3.13.
 
-On anything else -- macOS, Windows, another architecture -- pip falls back to
-the source distribution, which compiles the C++ core and so needs the
-libraries in the table above. Use conda there.
+Elsewhere — macOS, Windows, another architecture — pip falls back to the
+source distribution, which compiles the C++ core and needs the libraries
+above; use conda there.
 
 ## Installation with conda
 

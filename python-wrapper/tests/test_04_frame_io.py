@@ -1,12 +1,7 @@
-"""Frame I/O: the one part of the library that needs FrameL.
+"""Reading a frame: FrameIChannel over data/test_ramp.gwf.
 
-Everything else here runs on GSL and FFTW3, so a build whose FrameL is
-missing, mislinked or built against different headers passes the rest of the
-suite untouched -- and that is precisely the build a wheel would ship. The
-fixture carries a ramp, so a read that returns the wrong offset, the wrong
-channel or zeros fails on the values rather than merely on an exception.
-
-See data/make_fixture.c for how test_ramp.gwf was written.
+The channel carries a ramp, so every sample read back has a known value.
+See data/make_fixture.c for how the fixture was written.
 """
 import os
 import unittest

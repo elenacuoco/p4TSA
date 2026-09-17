@@ -1,13 +1,5 @@
-/* Writes test_ramp.gwf, the fixture test_04_frame_io.py reads.
- *
- * FrameIChannel is the only part of this library that needs FrameL, and the
- * rest of the suite never touches it, so without a frame to read a build with
- * a broken or mislinked FrameL passes everything. The channel carries a ramp,
- * i = 0, 1, 2, ..., rather than noise: a test that knows every sample it
- * should get back catches a frame read that silently returns the wrong
- * offset, the wrong channel or zeros, which one comparing statistics does not.
- *
- * The fixture is committed, so this program is only run to regenerate it:
+/* Writes test_ramp.gwf, the fixture test_04_frame_io.py reads: one channel
+ * named RAMP carrying i = 0, 1, 2, ... so a test can assert every sample.
  *
  *   cc make_fixture.c -o make_fixture -lframel -lm && ./make_fixture
  */

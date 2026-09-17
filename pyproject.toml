@@ -7,8 +7,7 @@ name = "py4tsa"
 version = "3.2.0"
 description = "Time-domain whitening, wavelets and the Wavelet Detection Filter for gravitational-wave data: the Python interface to the C++ p4TSA"
 readme = "README.md"
-# The wheels are built for these; 3.9 was never tested and would be left to
-# build the C++ core from the sdist, which needs FrameL, GSL and FFTW3.
+# The range the wheels are built for.
 requires-python = ">=3.10"
 license = { text = "GPL-3.0-or-later" }
 authors = [{ name = "Elena Cuoco", email = "info@elenacuoco.com" }]
@@ -43,25 +42,19 @@ build-dir = "build/{wheel_tag}"
 wheel.expand-macos-universal-tags = true
 
 [tool.cibuildwheel]
-# Linux x86_64 only. macOS and Windows would each need their own FrameL build
-# and their own repair tool, and nothing asks for them yet.
+# Linux x86_64 only.
 build = "cp310-manylinux_x86_64 cp311-manylinux_x86_64 cp312-manylinux_x86_64 cp313-manylinux_x86_64"
 manylinux-x86_64-image = "manylinux_2_28"
 build-verbosity = 1
-# The suite runs against the repaired wheel, not the build tree, so what is
-# tested is what would be published -- test_04_frame_io.py included.
+# Run against the repaired wheel rather than the build tree.
 test-requires = ["pytest", "numpy"]
 test-command = "pytest {project}/python-wrapper/tests -q"
 
 [tool.cibuildwheel.linux]
-# GSL and FFTW3 come from the image and auditwheel carries them into the wheel;
-# FrameL cannot, so CMakeLists.txt builds it and puts it there itself. Boost
-# and Cereal are headers only, needed at build time alone. cereal-devel lives
-# in EPEL; the rest in the image's own repositories.
+# Build dependencies of the C++ core. cereal-devel comes from EPEL.
 before-all = [
   "dnf install -y epel-release",
   "dnf install -y gsl-devel fftw-devel boost-devel cereal-devel",
 ]
-# --strip: CMake's own strip only reaches targets it installs, and FrameL goes
-# in as a plain file, so its symbols would otherwise triple its size.
+# --strip: CMake's own strip does not reach the libraries installed as files.
 repair-wheel-command = "auditwheel repair --strip -w {dest_dir} {wheel}"
