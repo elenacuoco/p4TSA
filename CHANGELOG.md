@@ -1,5 +1,35 @@
 # Changelog
 
+## 3.2.0
+
+### Added
+
+- **`pip install py4tsa`.** Wheels for CPython 3.10 to 3.13,
+  `manylinux_2_28_x86_64`, carrying GSL, FFTW3 and FrameL inside them, so
+  nothing has to be installed first and conda is no longer the only way in.
+  FrameL is why this was not possible before: it has no wheel of its own, so
+  the build now compiles it from its own source
+  (git.ligo.org/virgo/virgoapp/Fr, 8.50.2) whenever the system has none, and
+  ships it beside the extension. A build that finds FrameL installed -- conda,
+  or a distribution's package -- behaves exactly as it did.
+  This supersedes the note under 3.0.0 below, which recorded that the module
+  is "never published" to an index: that described the situation before this
+  release. The unrelated project that holds the name `pytsa` there is still
+  unrelated; this one is `py4tsa`.
+- **A test that reads a frame.** `FrameIStream` and `FrameIChannel` were the
+  only part of the library nothing in the suite exercised, so a build with a
+  broken or mislinked FrameL passed everything -- which is exactly the build a
+  wheel would ship. `test_04_frame_io.py` reads a committed 8 kB fixture whose
+  channel carries a ramp, and asserts every sample it gets back.
+
+### Changed
+
+- CMake 3.28 is now the minimum, for `FetchContent`'s `EXCLUDE_FROM_ALL`.
+- Wheels are built and tested by a separate workflow, on tags and releases and
+  by hand, rather than on every push. Publishing waits for a person.
+- Metadata for the index: classifiers, `Source`, `Issues` and `Changelog`
+  links, and `requires-python >= 3.10`, the range the wheels are built for.
+
 ## 3.1.0
 
 ### Changed

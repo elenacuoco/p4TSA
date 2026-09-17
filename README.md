@@ -84,12 +84,28 @@ single Python extension module. It depends on a few native libraries:
 | Boost (headers only — Boost.uBLAS) | matrix/vector templates | **build only** |
 | Cereal (headers only) | binary serialization (AR/lattice-filter persistence) | **build only** |
 
-All of these are available on **conda-forge**, which is why conda is the
-recommended way to install `p4TSA`. FrameL has no PyPI wheel, so a pure `pip`
-install from PyPI is not available; `pip` works when the native libraries are
-already provided by the environment (see below).
+None of this is your problem on Linux: the wheels on PyPI carry GSL, FFTW3 and
+FrameL inside them. It is your problem when building from source, and all of
+these are on **conda-forge**.
 
-## Installation with conda (recommended)
+## Installation with pip (Linux)
+
+```bash
+pip install py4tsa
+python -c "import py4tsa; print(py4tsa.__file__)"
+```
+
+The wheels are `manylinux_2_28_x86_64`, for CPython 3.10 to 3.13. They bundle
+GSL, FFTW3 and FrameL, so nothing else has to be installed first — FrameL in
+particular has no wheel of its own, and is compiled from source
+([git.ligo.org/virgo/virgoapp/Fr](https://git.ligo.org/virgo/virgoapp/Fr)) when
+the build cannot find one, which is what lets a wheel exist at all.
+
+On anything else -- macOS, Windows, another architecture -- pip falls back to
+the source distribution, which compiles the C++ core and so needs the
+libraries in the table above. Use conda there.
+
+## Installation with conda
 
 ### Option A — install a pre-built package
 
@@ -212,7 +228,7 @@ To build a wheel instead of installing in place:
 
 ```bash
 pip install build
-python -m build --wheel        # -> dist/py4tsa-3.1.0-*.whl
+python -m build --wheel        # -> dist/py4tsa-3.2.0-*.whl
 ```
 
 ## Running the tests
@@ -222,7 +238,7 @@ pip install pytest
 pytest python-wrapper/tests/ -v
 ```
 
-Runs on every push/PR via [GitHub Actions](.github/workflows/ci.yml) (Python 3.10-3.12).
+Runs on every push/PR via [GitHub Actions](https://github.com/elenacuoco/p4TSA/blob/master/.github/workflows/ci.yml) (Python 3.10-3.12).
 
 ## Changelog
 
@@ -260,7 +276,7 @@ Runs on every push/PR via [GitHub Actions](.github/workflows/ci.yml) (Python 3.1
 ## Contributing
 
 Changes reach `master` through pull requests only, and a pull request merges
-only once CI is green. See [`CONTRIBUTING.md`](CONTRIBUTING.md) for how to build
+only once CI is green. See [`CONTRIBUTING.md`](https://github.com/elenacuoco/p4TSA/blob/master/CONTRIBUTING.md) for how to build
 and test locally, what CI checks, and the invariants a change to the detection
 filter must preserve.
 
@@ -272,4 +288,4 @@ filter must preserve.
 
 ## License
 
-GPL-3.0-or-later. See [`LICENSE`](LICENSE).
+GPL-3.0-or-later. See [`LICENSE`](https://github.com/elenacuoco/p4TSA/blob/master/LICENSE).

@@ -4,18 +4,36 @@ build-backend = "scikit_build_core.build"
 
 [project]
 name = "py4tsa"
-version = "3.1.0"
-description = "p4TSA - package for Time Series Analysis (Python interface: py4TSA / import py4tsa)"
+version = "3.2.0"
+description = "Time-domain whitening, wavelets and the Wavelet Detection Filter for gravitational-wave data: the Python interface to the C++ p4TSA"
 readme = "README.md"
-requires-python = ">=3.9"
+# The wheels are built for these; 3.9 was never tested and would be left to
+# build the C++ core from the sdist, which needs FrameL, GSL and FFTW3.
+requires-python = ">=3.10"
 license = { text = "GPL-3.0-or-later" }
 authors = [{ name = "Elena Cuoco", email = "info@elenacuoco.com" }]
 keywords = ["gravitational-waves", "time-series", "whitening", "wavelet", "virgo"]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: C++",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Scientific/Engineering :: Astronomy",
+  "Topic :: Scientific/Engineering :: Physics",
+]
 dependencies = ["numpy", "scipy"]
 
 [project.urls]
 Homepage = "https://github.com/elenacuoco/p4TSA"
 Documentation = "https://p4tsa.readthedocs.io"
+Source = "https://github.com/elenacuoco/p4TSA"
+Issues = "https://github.com/elenacuoco/p4TSA/issues"
+Changelog = "https://github.com/elenacuoco/p4TSA/blob/master/CHANGELOG.md"
 
 [tool.scikit-build]
 # scikit-build-core reads ./CMakeLists.txt (use the packaging one as the root).
