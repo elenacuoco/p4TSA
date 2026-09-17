@@ -31,12 +31,7 @@ find_library(FFTW3F_LIB fftw3f REQUIRED)   # single precision
 find_library(FFTW3L_LIB fftw3l)            # long double (optional)
 
 # --- FrameL / libframel (conda-forge: framel / libframel) ------------------
-# Frame I/O is not optional: FrameIStream and FrameIChannel are how the
-# pipeline reads strain, and a build without them cannot search for triggers.
-# A copy already on the system is preferred, which keeps the conda-forge build
-# exactly as it was; when there is none -- a bare manylinux image, say -- the
-# library is built from its own source instead, so that `pip install .` works
-# somewhere conda does not reach.
+# Used when installed; built from source otherwise.
 find_path(FRAMEL_INCLUDE_DIR NAMES FrameL.h)
 find_library(FRAMEL_LIB NAMES framel frame)
 
@@ -47,9 +42,8 @@ else()
   message(STATUS "FrameL: not found on the system, building it from source")
   include(FetchContent)
 
-  # FrameL's own CMakeLists builds Matlab and Python bindings, Debian and RPM
-  # packaging, and its example programs, none of which belong in this wheel.
-  # They are all guarded by cache variables, so setting them first is enough.
+  # Only the shared library: FrameL also builds bindings, packaging and
+  # examples, each guarded by one of these.
   set(ENABLE_C ON CACHE BOOL "" FORCE)
   set(ENABLE_MATLAB OFF CACHE BOOL "" FORCE)
   set(ENABLE_PYTHON OFF CACHE BOOL "" FORCE)
@@ -64,8 +58,7 @@ else()
   )
   FetchContent_MakeAvailable(framel)
 
-  # framel declares its include directory PRIVATE, so linking the target does
-  # not carry the header along: point at the source tree explicitly.
+  # framel keeps its include directory PRIVATE, so name it here.
   set(FRAMEL_INCLUDE_DIR "${framel_SOURCE_DIR}/src")
   set(FRAMEL_LIB framel)
   set(FRAMEL_VENDORED TRUE)
@@ -123,14 +116,9 @@ install(TARGETS py4tsa LIBRARY DESTINATION .)
 
 if(FRAMEL_VENDORED)
   # A FrameL built here is on no loader path, so it ships beside the extension
-  # and is found through a relative RPATH; auditwheel, finding it already in
-  # the wheel, keeps that RPATH and leaves it be. Only the install RPATH is set:
-  # in the build tree CMake already points at the framel target's own output
-  # directory. The system case needs neither, its libframel being where the
-  # loader looks already (or where conda's compiler wrappers say it is).
+  # and is found relative to it.
   set_target_properties(py4tsa PROPERTIES INSTALL_RPATH "$ORIGIN")
-  # Only the file the loader asks for, under its SONAME. A wheel is a zip and
-  # keeps no symlinks, so installing the target would ship three full copies.
+  # The SONAME file alone: a wheel is a zip and keeps no symlinks.
   install(FILES $<TARGET_FILE:framel>
           DESTINATION .
           RENAME $<TARGET_SONAME_FILE_NAME:framel>)

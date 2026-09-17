@@ -1,19 +1,35 @@
 # Changelog
 
+## 3.2.0
+
+### Added
+
+- **`pip install py4tsa`.** Wheels for CPython 3.10 to 3.13,
+  `manylinux_2_28_x86_64`, with GSL, FFTW3 and FrameL inside them, so nothing
+  has to be installed first. The build takes FrameL from the system when it is
+  there, and otherwise compiles it from its own source
+  (git.ligo.org/virgo/virgoapp/Fr, 8.50.2).
+- `test_04_frame_io.py`, which reads a frame through `FrameIChannel` and
+  checks the samples against an 8 kB fixture.
+
+### Changed
+
+- CMake 3.28 is now the minimum, for `FetchContent`'s `EXCLUDE_FROM_ALL`.
+- Wheels are built and tested by a separate workflow, on tags and releases and
+  by hand, rather than on every push. Publishing waits for a person.
+- Metadata for the index: classifiers, `Source`, `Issues` and `Changelog`
+  links, and `requires-python >= 3.10`, the range the wheels are built for.
+
 ## 3.1.0
 
 ### Changed
 
 - **BREAKING: the Python module is now `py4tsa`, not `pytsa`.** Every
   `import pytsa` / `from pytsa.tsa import ...` becomes `import py4tsa` /
-  `from py4tsa.tsa import ...`. The old name collides with an unrelated
-  project of the same name on PyPI (a Python decorator library), which owns
-  that import namespace and would shadow this extension for anyone who had
-  both installed — a collision that had to be resolved before p4TSA could
-  publish to PyPI at all. The C++ library keeps the name p4TSA; only the
-  Python-facing module and the distribution name change. This supersedes the
-  note under 3.0.0 below, which recorded the situation as it was before the
-  rename.
+  `from py4tsa.tsa import ...`. The old name on PyPI belongs to an unrelated
+  project, which would shadow this extension for anyone holding both. The C++
+  library keeps the name p4TSA; the Python module and the distribution name
+  change.
 - **The block rule is the default of `WDF2Classify`.** A classifier built
   without a thresholding rule used `cuoco`, the universal threshold with the
   sigma given from outside; it now uses `block`. Callers that pass the rule

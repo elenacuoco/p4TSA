@@ -3,10 +3,8 @@ Installation
 
 .. note::
 
-   The module used to be called ``pytsa``, and was renamed to ``py4tsa``.
-   The name ``pytsa`` on PyPI belongs to an unrelated project (a Python
-   decorator library), so it would have collided with this one at import
-   time. Change any ``import pytsa`` in your own code to ``import py4tsa``.
+   The module used to be called ``pytsa``. That name on PyPI belongs to an
+   unrelated project, so change any ``import pytsa`` to ``import py4tsa``.
 
 Dependencies
 ------------
@@ -19,15 +17,24 @@ single Python extension module (``py4tsa``). It depends on:
 - FrameL / libframel (LIGO/Virgo frame I/O) -- build **and** run
 - Boost headers only (Boost.uBLAS) -- **build only**
 - Cereal headers only (binary serialization) -- **build only**
-- CMake >= 3.15, a C++ compiler, pybind11 >= 2.12 -- **build only**
+- CMake >= 3.28, a C++ compiler, pybind11 >= 2.12 -- **build only**
 
-All of these are available on `conda-forge <https://conda-forge.org>`_, which
-is why conda is the recommended way to install p4TSA -- FrameL has no PyPI
-wheel, so a plain ``pip`` install from PyPI is not possible; ``pip`` works
-once the native libraries above are already provided by the environment.
+The wheels on PyPI carry GSL, FFTW3 and FrameL inside them, so the list above
+matters only when building from source. All of it is on
+`conda-forge <https://conda-forge.org>`_.
 
-Installation with conda (recommended)
---------------------------------------
+Installation with pip (Linux)
+------------------------------
+
+::
+
+    pip install py4tsa
+
+Wheels are ``manylinux_2_28_x86_64``, for CPython 3.10 to 3.13. Elsewhere pip
+builds from the source distribution, which needs the libraries above.
+
+Installation with conda
+------------------------
 
 The repository ships a conda recipe under ``conda-recipe/``. From an
 activated environment with conda-forge enabled at strict channel priority::

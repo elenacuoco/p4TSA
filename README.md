@@ -11,12 +11,8 @@ written in C++ and is exposed to Python through a [pybind11](https://pybind11.re
 binding. The Python interface is called **py4TSA** (you can still pronounce it
 *pi'za*) and is imported as `py4tsa`.
 
-> **The module used to be called `pytsa`, and was renamed to `py4tsa`.** The
-> name `pytsa` on PyPI belongs to an unrelated project (a Python decorator
-> library, nothing to do with time series or gravitational waves), so it would
-> have collided with this one at import time for anyone who had both. The `4`
-> of `p4TSA` moved into the Python name to keep it unambiguous. If you have
-> code that does `import pytsa`, change it to `import py4tsa`.
+> **The module used to be called `pytsa`.** That name on PyPI belongs to an
+> unrelated project, so change any `import pytsa` to `import py4tsa`.
 
 ## What is this for?
 
@@ -84,12 +80,23 @@ single Python extension module. It depends on a few native libraries:
 | Boost (headers only — Boost.uBLAS) | matrix/vector templates | **build only** |
 | Cereal (headers only) | binary serialization (AR/lattice-filter persistence) | **build only** |
 
-All of these are available on **conda-forge**, which is why conda is the
-recommended way to install `p4TSA`. FrameL has no PyPI wheel, so a pure `pip`
-install from PyPI is not available; `pip` works when the native libraries are
-already provided by the environment (see below).
+The wheels on PyPI carry GSL, FFTW3 and FrameL inside them, so this table
+matters only when building from source. All of it is on **conda-forge**.
 
-## Installation with conda (recommended)
+## Installation with pip (Linux)
+
+```bash
+pip install py4tsa
+python -c "import py4tsa; print(py4tsa.__file__)"
+```
+
+The wheels are `manylinux_2_28_x86_64`, for CPython 3.10 to 3.13.
+
+Elsewhere — macOS, Windows, another architecture — pip falls back to the
+source distribution, which compiles the C++ core and needs the libraries
+above; use conda there.
+
+## Installation with conda
 
 ### Option A — install a pre-built package
 
@@ -212,7 +219,7 @@ To build a wheel instead of installing in place:
 
 ```bash
 pip install build
-python -m build --wheel        # -> dist/py4tsa-3.1.0-*.whl
+python -m build --wheel        # -> dist/py4tsa-3.2.0-*.whl
 ```
 
 ## Running the tests
@@ -222,7 +229,7 @@ pip install pytest
 pytest python-wrapper/tests/ -v
 ```
 
-Runs on every push/PR via [GitHub Actions](.github/workflows/ci.yml) (Python 3.10-3.12).
+Runs on every push/PR via [GitHub Actions](https://github.com/elenacuoco/p4TSA/blob/master/.github/workflows/ci.yml) (Python 3.10-3.12).
 
 ## Changelog
 
@@ -260,7 +267,7 @@ Runs on every push/PR via [GitHub Actions](.github/workflows/ci.yml) (Python 3.1
 ## Contributing
 
 Changes reach `master` through pull requests only, and a pull request merges
-only once CI is green. See [`CONTRIBUTING.md`](CONTRIBUTING.md) for how to build
+only once CI is green. See [`CONTRIBUTING.md`](https://github.com/elenacuoco/p4TSA/blob/master/CONTRIBUTING.md) for how to build
 and test locally, what CI checks, and the invariants a change to the detection
 filter must preserve.
 
@@ -272,4 +279,4 @@ filter must preserve.
 
 ## License
 
-GPL-3.0-or-later. See [`LICENSE`](LICENSE).
+GPL-3.0-or-later. See [`LICENSE`](https://github.com/elenacuoco/p4TSA/blob/master/LICENSE).
