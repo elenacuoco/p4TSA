@@ -18,9 +18,14 @@ on:
   workflow_dispatch:
     inputs:
       publish:
-        description: "Publish to PyPI when the wheels pass"
+        description: "Publish the wheels when they pass"
         type: boolean
         default: false
+      index:
+        description: "Which index to publish to"
+        type: choice
+        options: [testpypi, pypi]
+        default: testpypi
 
 jobs:
   build:
@@ -86,7 +91,7 @@ jobs:
   # never replaced. The `pypi` environment holds it for a human, whatever
   # triggered the run.
   publish:
-    name: Publish to PyPI
+    name: Publish
     needs: [build, sdist, verify]
     if: github.event_name == 'release' || (github.event_name == 'workflow_dispatch' && inputs.publish)
     runs-on: ubuntu-latest
@@ -98,4 +103,16 @@ jobs:
         with:
           path: dist
           merge-multiple: true
-      - uses: pypa/gh-action-pypi-publish@release/v1
+
+      # TestPyPI is where the trusted-publisher setup and the metadata get
+      # tried, since a version number on PyPI proper is spent the moment it is
+      # uploaded: it can be yanked, never replaced. Releases go to PyPI.
+      - name: To TestPyPI
+        if: inputs.index == 'testpypi'
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          repository-url: https://test.pypi.org/legacy/
+
+      - name: To PyPI
+        if: github.event_name == 'release' || inputs.index == 'pypi'
+        uses: pypa/gh-action-pypi-publish@release/v1
