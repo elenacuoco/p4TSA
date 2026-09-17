@@ -1,0 +1,101 @@
+name: wheels
+
+# Builds the manylinux wheels that put py4tsa on PyPI. FrameL has no wheel of
+# its own, so CMakeLists.txt compiles it from source when the image has none,
+# and auditwheel then carries it -- with GSL and FFTW3 -- inside the wheel.
+# What to build and how to test it is in pyproject.toml, [tool.cibuildwheel],
+# so a local `cibuildwheel` run does the same thing.
+#
+# Not on every push: this compiles FrameL and the whole C++ core once per
+# Python, minutes of runner time that say nothing a green ci.yml has not.
+# Tags, releases, and a button.
+
+on:
+  push:
+    tags: ["v*"]
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: "Publish to PyPI when the wheels pass"
+        type: boolean
+        default: false
+
+jobs:
+  build:
+    name: Build wheels (manylinux x86_64)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: pypa/cibuildwheel@v4.2.1
+      - uses: actions/upload-artifact@v4
+        with:
+          name: wheels
+          path: wheelhouse/*.whl
+
+  sdist:
+    name: Build sdist
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - run: pipx run build --sdist
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sdist
+          path: dist/*.tar.gz
+
+  # A wheel that has only run inside the image that built it has not been
+  # tested where it will be installed. This is a plain runner: no conda, no
+  # manylinux container, and no FrameL anywhere on the system -- so if the
+  # frame test passes here, the FrameL it used came out of the wheel.
+  verify:
+    name: Install the wheel on a plain runner
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/download-artifact@v4
+        with:
+          name: wheels
+          path: wheelhouse
+
+      # --no-index: the wheel just built, never one already on PyPI.
+      - name: Install it
+        run: |
+          pip install pytest numpy scipy
+          pip install --no-index --find-links wheelhouse py4tsa
+
+      - name: Show what it links against
+        run: |
+          so=$(python -c "import py4tsa; print(py4tsa.__file__)")
+          echo "$so"
+          ldd "$so"
+          ! ldd "$so" | grep -q "not found"
+
+      # Run from outside the checkout, so `import py4tsa` cannot pick up
+      # anything but the installed wheel.
+      - name: Run the tests against it
+        working-directory: /tmp
+        run: pytest "$GITHUB_WORKSPACE/python-wrapper/tests" -q
+
+  # Publishing is irreversible: a version, once uploaded, can be yanked but
+  # never replaced. The `pypi` environment holds it for a human, whatever
+  # triggered the run.
+  publish:
+    name: Publish to PyPI
+    needs: [build, sdist, verify]
+    if: github.event_name == 'release' || (github.event_name == 'workflow_dispatch' && inputs.publish)
+    runs-on: ubuntu-latest
+    environment: pypi
+    permissions:
+      id-token: write          # trusted publishing; no token is stored here
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: dist
+          merge-multiple: true
+      - uses: pypa/gh-action-pypi-publish@release/v1
