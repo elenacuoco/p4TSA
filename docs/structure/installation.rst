@@ -30,7 +30,7 @@ Installation with pip (Linux)
 
     pip install py4tsa
 
-Wheels are ``manylinux_2_28_x86_64``, for CPython 3.10 to 3.13. Elsewhere pip
+Wheels are ``manylinux_2_28_x86_64``, for CPython 3.10 to 3.14. Elsewhere pip
 builds from the source distribution, which needs the libraries above.
 
 Installation with conda

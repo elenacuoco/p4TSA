@@ -90,7 +90,7 @@ pip install py4tsa
 python -c "import py4tsa; print(py4tsa.__file__)"
 ```
 
-The wheels are `manylinux_2_28_x86_64`, for CPython 3.10 to 3.13.
+The wheels are `manylinux_2_28_x86_64`, for CPython 3.10 to 3.14.
 
 Elsewhere — macOS, Windows, another architecture — pip falls back to the
 source distribution, which compiles the C++ core and needs the libraries
@@ -219,7 +219,7 @@ To build a wheel instead of installing in place:
 
 ```bash
 pip install build
-python -m build --wheel        # -> dist/py4tsa-3.2.0-*.whl
+python -m build --wheel        # -> dist/py4tsa-3.3.0-*.whl
 ```
 
 ## Running the tests

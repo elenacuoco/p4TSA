@@ -1,5 +1,5 @@
 {% set name = "py4tsa" %}
-{% set version = "3.2.0" %}
+{% set version = "3.3.0" %}
 
 package:
   name: {{ name|lower }}

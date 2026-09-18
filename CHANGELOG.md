@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.3.0
+
+### Added
+
+- Wheels for CPython 3.14.
+
 ## 3.2.0
 
 ### Added
