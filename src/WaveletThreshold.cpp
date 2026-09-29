@@ -31,7 +31,8 @@ namespace tsa {
             mlevel(0),
             mC(0.0),
             mBlockLength(0),
-            mBlockLambda(4.505) {
+            mBlockLambda(4.505),
+            mDepth(0) {
     }
     ///
     /// Destructor

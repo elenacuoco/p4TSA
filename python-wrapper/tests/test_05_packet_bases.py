@@ -95,11 +95,75 @@ def test_set_bases_rejects(names):
         classifier().SetBases(names)
 
 
-def test_block_rule_refuses_packet_bases():
+def test_block_rule_caps_the_packet_depth():
+    # L = round(ln 512) = 6: a band of 512 / 2^D holds a full block up to D = 6.
     c = classifier(tsa.WaveletThreshold.block)
-    c.SetBases("Haar,Coif1")
+    c.SetBases(",".join("Coif1P%d" % d for d in range(1, 7)))
+    for depth in (7, 8, 9):
+        with pytest.raises(ValueError):
+            c.SetBases("Haar,Coif1P%d" % depth)
+    classifier().SetBases("Haar,Coif1P7,Coif1P9")
+
+
+def block_rule(c, depth, length=6, lam=4.505):
+    """The block rule on the runs of a layout: the pyramid's dyadic ladder
+    for depth 0, the 2^depth equal bands otherwise."""
+    n = len(c)
+    if depth == 0:
+        edges = [0, 1] + [2 ** k for k in range(1, int(np.log2(n)) + 1)]
+    else:
+        edges = list(range(0, n + 1, n >> depth))
+    sigma = np.median(np.abs(c)) / 0.6745
+    kept = c.copy()
+    for start, end in zip(edges[:-1], edges[1:]):
+        for b in range(start, end, length):
+            e = min(b + length, end)
+            if np.sum(c[b:e] ** 2) <= lam * sigma ** 2 * (e - b):
+                kept[b:e] = 0.0
+    return kept, sigma
+
+
+@pytest.mark.parametrize("name, mother, depth", [("Coif1P6", "Coif1", 6),
+                                                 ("DaubC8P3", "DaubC8", 3),
+                                                 ("Coif1", "Coif1", 0)])
+def test_block_rule_follows_the_packet_bands(name, mother, depth):
+    rng = np.random.default_rng(2)
+    x = rng.normal(size=N)
+    t = np.arange(N) / FS
+    x[200:330] += 1.5 * np.sin(2 * np.pi * 200.0 * t[200:330])
+    c = classifier(tsa.WaveletThreshold.block)
+    c.SetBases(name)
+    c(view_of(x), 1.0)
+    event = tsa.EventFullFeatured(N)
+    assert c(event) == 1
+    kept, sigma = block_rule(forward(x, mother, depth or None), depth)
+    assert kept.any()
+    coefficients = np.array([event.GetCoeff(i) for i in range(N)])
+    assert np.array_equal(coefficients, kept)
+    assert event.mSigma == pytest.approx(sigma, rel=1e-12)
+    assert event.mSNR == pytest.approx(np.sqrt(np.sum(kept ** 2)) / sigma, rel=1e-12)
+
+
+def test_threshold_layout():
+    # At depth 2 a band edge falls at 384, inside the pyramid's block
+    # [380, 386) of its level [256, 512): four coefficients at 3 sigma
+    # straddling it fill one pyramid block, kept whole, but split over two
+    # band blocks, judged apart.
+    c = np.random.default_rng(3).normal(size=N)
+    c[382:386] = 3.0
+    results = {}
+    for depth in (0, 2):
+        rule = tsa.WaveletThreshold(N)
+        rule.SetLayout(depth)
+        assert rule.GetLayout() == depth
+        v = view_of(c)
+        rule(v, tsa.WaveletThreshold.block)
+        results[depth] = values(v, N)
+        assert np.array_equal(results[depth], block_rule(c, depth)[0])
+    assert results[0][382:386].all() and not results[2][382:386].all()
+    rule.SetLayout(9)
     with pytest.raises(ValueError):
-        c.SetBases("Haar,Coif1P6")
+        rule.SetLayout(10)
 
 
 def statistic(c):

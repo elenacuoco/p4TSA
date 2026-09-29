@@ -249,11 +249,17 @@ namespace tsa {
         /// trigger records the winner's name, which is what a reader needs to
         /// place and invert its coefficients.
         ///
+        /// Under the block rule the blocks of a packet basis are cut band by
+        /// band (see WaveletThreshold::SetLayout), so a packet depth D is
+        /// accepted only while each band of window / 2^D coefficients holds
+        /// one full block of L = round(ln window): for a window of 512, L = 6
+        /// and D is at most 6.
+        ///
         /// @param names comma-separated candidate names
         /// @exception std::invalid_argument on an unknown or repeated name,
         ///            a packet depth above log2 of the window, an empty list,
-        ///            or a packet basis under the block rule, whose blocks
-        ///            follow the dyadic ladder of the pyramid.
+        ///            or, under the block rule, a packet band shorter than
+        ///            one block.
         void SetBases(const std::string& names);
 
 

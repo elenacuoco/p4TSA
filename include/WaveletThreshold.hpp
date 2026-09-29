@@ -66,6 +66,7 @@
 ///
 #include <algorithm>
 #include <cmath>
+#include <stdexcept>
 #include <vector>
 
 namespace tsa {
@@ -207,6 +208,28 @@ namespace tsa {
         double GetBlockLambda() {
             return mBlockLambda;
         }
+
+        ///
+        /// The coefficient layout the block rule cuts into blocks: 0 for the
+        /// pyramid, whose levels are index 0, index 1 and [2^k, 2^(k+1)), or
+        /// the depth D of a uniform wavelet-packet level, whose 2^D bands are
+        /// [f N / 2^D, (f+1) N / 2^D) (see WaveletTransform's packet
+        /// constructor). Either way each run is cut into blocks of L from its
+        /// first index, so a block never crosses a level or band edge. The
+        /// other rules judge coefficients one by one and ignore the layout.
+        ///
+        /// @exception std::invalid_argument when 2^D exceeds N
+        ///
+        void SetLayout(unsigned int packetDepth) {
+            if (packetDepth >= 8 * sizeof(unsigned int) || (1u << packetDepth) > mN) {
+                throw std::invalid_argument("WaveletThreshold: the packet level exceeds log2 of the window length");
+            }
+            mDepth = packetDepth;
+        }
+
+        unsigned int GetLayout() const {
+            return mDepth;
+        }
         //@}
 
 
@@ -220,8 +243,9 @@ namespace tsa {
 
         ///
         /// The block rule over one coefficient vector, whichever container
-        /// holds it: sigma from the median of |coefficient|, then every
-        /// level of the dyadic ladder -- index 0, index 1, then [2^k, 2^(k+1))
+        /// holds it: sigma from the median of |coefficient|, then every run
+        /// of the layout (see SetLayout) -- for the pyramid index 0, index 1,
+        /// then [2^k, 2^(k+1)); for packet depth D the 2^D bands of N / 2^D
         /// -- cut into blocks of L, each kept or zeroed on its energy.
         ///
         template <class Coefficients>
@@ -233,7 +257,7 @@ namespace tsa {
             const unsigned int L = GetBlockLength();
             const double energyPerCoefficient = mBlockLambda * mSigma * mSigma;
             mThresh = energyPerCoefficient;
-            unsigned int levelStart = 0, levelSize = 1;
+            unsigned int levelStart = 0, levelSize = (mDepth > 0) ? (mN >> mDepth) : 1;
             while (levelStart < mN) {
                 unsigned int levelEnd = std::min(levelStart + levelSize, mN);
                 for (unsigned int b = levelStart; b < levelEnd; b += L) {
@@ -247,7 +271,9 @@ namespace tsa {
                     }
                 }
                 levelStart = levelEnd;
-                levelSize = (levelStart < 2) ? 1 : levelStart;
+                if (mDepth == 0) {
+                    levelSize = (levelStart < 2) ? 1 : levelStart;
+                }
             }
         }
 
@@ -264,6 +290,7 @@ namespace tsa {
         double mC;
         unsigned int mBlockLength;
         double mBlockLambda;
+        unsigned int mDepth; ///< layout of the block rule, 0 for the pyramid
 
 
     };

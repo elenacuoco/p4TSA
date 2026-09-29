@@ -198,9 +198,12 @@ namespace tsa {
                     }
                 }
                 specs.push_back(ParseBasis(name, mWindow));
-                if (specs.back().depth > 0 && mT == WaveletThreshold::block) {
-                    throw std::invalid_argument("WDF2Classify: the block rule reads the dyadic ladder "
-                                                "of the pyramid and cannot judge packet basis " + name);
+                // Under the block rule every band must hold at least one full
+                // block of L, the length lambda = 4.505 is calibrated for.
+                if (specs.back().depth > 0 && mT == WaveletThreshold::block &&
+                    (mWindow >> specs.back().depth) < mWavThres.GetBlockLength()) {
+                    throw std::invalid_argument("WDF2Classify: the bands of packet basis " + name +
+                                                " are shorter than one block of the block rule");
                 }
             }
             start = end + 1;
@@ -279,6 +282,7 @@ namespace tsa {
             }
 
             mBases[b]->Forward(mBuff);
+            mWavThres.SetLayout(mBases[b]->GetPacketDepth());
             mWavThres(mBuff, mT);
 
             double sigmaB = mWavThres.GetSigma();
