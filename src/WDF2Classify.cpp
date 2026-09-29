@@ -164,9 +164,8 @@ namespace tsa {
         return *this;
     }
 
-    // Each candidate owns its transform: WaveletTransform's copy constructor
-    // does not copy its GSL handles, so candidates are rebuilt from their
-    // names, never copied.
+    // Each candidate owns its transform, built from its specification, so a
+    // copy of the classifier rebuilds its candidates rather than sharing them.
     void WDF2Classify::Build() {
         mBases.clear();
         mBaseNames.clear();

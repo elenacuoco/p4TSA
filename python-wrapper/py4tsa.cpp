@@ -2632,6 +2632,8 @@ void bind_WaveletThreshold(std::function< pybind11::module &(std::string const &
 		cl.def( pybind11::init<unsigned int, enum tsa::WaveletTransform::WaveletType>(), pybind11::arg("N"), pybind11::arg("wt") );
 		cl.def( pybind11::init<unsigned int, enum tsa::WaveletTransform::WaveletType, unsigned int>(), "One uniform level of the wavelet-packet tree, bands in frequency order; packetDepth 0 is the pyramid.", pybind11::arg("N"), pybind11::arg("wt"), pybind11::arg("packetDepth") );
 		cl.def("GetPacketDepth", &tsa::WaveletTransform::GetPacketDepth, "The packet level of the transform, 0 for the pyramid.");
+		cl.def("GetLength", &tsa::WaveletTransform::GetLength, "The window length the transform works on.");
+		cl.def("WaveletWaveform", [](tsa::WaveletTransform &o) { tsa::Dvector v(o.GetLength()); o.WaveletWaveform(v); pybind11::list out; for (std::size_t i = 0; i < v.size(); i++) out.append(v(i)); return out; }, "The waveform of coefficient 22: the inverse transform, pyramidal or packet, of a unit coefficient at index 22.");
 
 		cl.def( pybind11::init( [](tsa::WaveletTransform const &o){ return new tsa::WaveletTransform(o); } ) );
 

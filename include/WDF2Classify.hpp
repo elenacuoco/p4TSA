@@ -286,11 +286,10 @@ namespace tsa {
 
         // Candidate wavelet bases of the competition, one transform per
         // entry of mSpecs (see SetBases).
-        // unique_ptr, not WaveletTransform by value: WaveletTransform's
-        // copy constructor is a no-op that leaves its GSL handles
-        // uninitialized (see WaveletTransform.cpp) -- storing by value in a
-        // vector would silently corrupt every element on the first
-        // push_back. A vector of pointers only ever moves the pointer.
+        // unique_ptr, not WaveletTransform by value: a WaveletTransform owns
+        // GSL handles and has no move, so a vector of values would reallocate
+        // every one of them as it grows. A vector of pointers only ever moves
+        // the pointer.
         std::vector<std::unique_ptr<WaveletTransform>> mBases;
         std::vector<std::string> mBaseNames;
         enum WaveletThreshold::WaveletThresholding mT;

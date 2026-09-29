@@ -170,7 +170,8 @@ namespace tsa {
         WaveletTransform(unsigned int N, enum WaveletType wt, unsigned int packetDepth);
 
         ///
-        /// Copy constructor
+        /// Copy constructor: a transform of the same length, mother and
+        /// packet level, with GSL handles of its own.
         ///
         /// @param from The instance that must be copied
         WaveletTransform(const WaveletTransform& from);
@@ -219,7 +220,21 @@ namespace tsa {
         ///
         //@{
         void WaveletPrint();
+
+        ///
+        /// The waveform of coefficient 22: the inverse transform, pyramidal
+        /// or packet as the transform is, of a unit coefficient at index 22.
+        ///
+        /// @param V filled with the mN samples of the waveform
+        ///
         void WaveletWaveform(Dvector& V);
+
+        ///
+        /// The window length the transform works on.
+        ///
+        unsigned int GetLength() const {
+            return mN;
+        }
 
         ///
         /// The packet level of the transform, 0 for the pyramid.
@@ -249,6 +264,7 @@ namespace tsa {
         gsl_wavelet_workspace *mWork;
         unsigned int mN; ///< Lenght of input data. It must be a power of 2
         unsigned int mDepth; ///< packet level, 0 for the pyramidal transform
+        enum WaveletType mType; ///< mother, from which a copy is rebuilt
         std::vector<double> mScratch; ///< one band of the packet step
         std::vector<double> mOrder; ///< the tree in natural order
     };

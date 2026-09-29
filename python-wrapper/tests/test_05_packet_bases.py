@@ -203,3 +203,24 @@ def test_copy_keeps_the_candidates():
     c = classifier()
     c.SetBases("Haar,Coif1P6")
     assert tsa.WDF2Classify(c).GetBases() == "Haar,Coif1P6"
+
+
+@pytest.mark.parametrize("depth", [0, 6])
+def test_waveform_follows_the_packet_level(depth):
+    unit = np.zeros(N)
+    unit[22] = 1.0
+    waveform = np.array(W(N, W.Coif1, depth).WaveletWaveform())
+    assert np.array_equal(waveform, inverse(unit, "Coif1", depth))
+
+
+def test_a_transform_copy_is_its_own(noise):
+    original = W(N, W.Sym8, 5)
+    copy = W(original)
+    assert copy.GetPacketDepth() == 5 and copy.GetLength() == N
+    assigned = W(64, W.Haar)
+    assigned.assign(original)
+    del original
+    for transform in (copy, assigned):
+        v = view_of(noise)
+        transform.Forward(v)
+        assert np.array_equal(values(v, N), forward(noise, "Sym8", 5))

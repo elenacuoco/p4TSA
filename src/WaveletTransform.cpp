@@ -14,13 +14,15 @@
 
 #include <WaveletTransform.hpp>
 #include <stdexcept>
+#include <utility>
 
 namespace tsa {
 
     WaveletTransform::WaveletTransform(unsigned int N, enum WaveletType wt)
     :
     mN(N),
-    mDepth(0) {
+    mDepth(0),
+    mType(wt) {
         mWork = gsl_wavelet_workspace_alloc(mN);
         switch (wt) {
             case Daub4:
@@ -368,7 +370,14 @@ namespace tsa {
     ///
     /// @param from The instance that must be copied
 
-    WaveletTransform::WaveletTransform(const WaveletTransform& from) {
+    // The GSL handles are owned, so a copy allocates its own for the same
+    // mother, length and packet level rather than sharing the original's.
+    WaveletTransform::WaveletTransform(const WaveletTransform& from)
+    :
+    WaveletTransform(from.mN, from.mType) {
+        mDepth = from.mDepth;
+        mScratch = from.mScratch;
+        mOrder = from.mOrder;
     }
 
 
@@ -381,6 +390,16 @@ namespace tsa {
     /// @return a reference to a new object
 
     WaveletTransform& WaveletTransform::operator=(const WaveletTransform& from) {
+        if (this != &from) {
+            WaveletTransform copy(from);
+            std::swap(mW, copy.mW);
+            std::swap(mWork, copy.mWork);
+            std::swap(mN, copy.mN);
+            std::swap(mDepth, copy.mDepth);
+            std::swap(mType, copy.mType);
+            std::swap(mScratch, copy.mScratch);
+            std::swap(mOrder, copy.mOrder);
+        }
         return * this;
     }
     ///Getters
@@ -416,11 +435,15 @@ namespace tsa {
         }
 
         data[ 22 ] = 1.0;
-        gsl_wavelet_transform_inverse(mW, data, 1, mN, mWork);
+        if (mDepth == 0) {
+            gsl_wavelet_transform_inverse(mW, data, 1, mN, mWork);
+        } else {
+            PacketInverse(data);
+        }
         for (unsigned int i = 0; i < mN; i++) {
             V(i) = data[ i ];
         }
-        delete data;
+        delete[] data;
     }
 
 }
