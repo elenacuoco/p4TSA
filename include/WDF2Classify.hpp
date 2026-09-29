@@ -88,6 +88,14 @@ namespace tsa {
     class WDF2Classify : public AlgoBase {
     public:
 
+        /// One candidate of the basis competition: its name, its mother and
+        /// its packet depth, 0 for the pyramidal transform.
+        struct Basis {
+            std::string name;
+            enum WaveletTransform::WaveletType type;
+            unsigned int depth;
+        };
+
         ///
         /// Constructor
         ///
@@ -215,6 +223,9 @@ namespace tsa {
          */
         int GetDataNeeded();
 
+        /// The candidate bases, comma-separated, in the order they compete.
+        std::string GetBases() const;
+
         //@}
 
         ///
@@ -224,6 +235,26 @@ namespace tsa {
 
 
         void SetData(Dmatrix& Data, double scale);
+
+        /// Replace the candidate bases of the competition.
+        ///
+        /// Every window is transformed in each candidate and the one whose
+        /// thresholded coefficients have the largest norm on their own noise
+        /// scale wins; on a tie the later candidate wins, so the order is part
+        /// of the definition. A name is an orthonormal mother (Haar, DaubC4 to
+        /// DaubC20, Sym4, Sym8, Coif1, Coif2) for its pyramidal transform, or
+        /// a mother followed by "P" and a depth D, as "Coif1P6", for the
+        /// uniform level D of its wavelet-packet tree, whose coefficient
+        /// layout is described at WaveletTransform's packet constructor. The
+        /// trigger records the winner's name, which is what a reader needs to
+        /// place and invert its coefficients.
+        ///
+        /// @param names comma-separated candidate names
+        /// @exception std::invalid_argument on an unknown or repeated name,
+        ///            a packet depth above log2 of the window, an empty list,
+        ///            or a packet basis under the block rule, whose blocks
+        ///            follow the dyadic ladder of the pyramid.
+        void SetBases(const std::string& names);
 
 
 
@@ -247,11 +278,8 @@ namespace tsa {
         Dmatrix mBuff;
         EventFullFeatured mEvFF;
 
-        // Candidate wavelet bases for per-window basis selection: the full
-        // orthonormal GSL family (Haar + Daubechies/Daubechies-centered,
-        // every order it supports). The biorthogonal B-spline family is
-        // deliberately excluded -- see GetDataVector's implementation
-        // comment for why.
+        // Candidate wavelet bases of the competition, one transform per
+        // entry of mSpecs (see SetBases).
         // unique_ptr, not WaveletTransform by value: WaveletTransform's
         // copy constructor is a no-op that leaves its GSL handles
         // uninitialized (see WaveletTransform.cpp) -- storing by value in a
@@ -264,6 +292,9 @@ namespace tsa {
        // DCT mDct;
         //Dmatrix mBuffDct;
         Cs2HammingWindow mWindowing;
+        std::vector<Basis> mSpecs;
+
+        void Build();
 
     };
 

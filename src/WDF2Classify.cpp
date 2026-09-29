@@ -13,15 +13,18 @@
 //
 
 #include <WDF2Classify.hpp>
+#include <stdexcept>
 
 
 
 namespace tsa {
 
     namespace {
-        // Candidate wavelet bases for per-window basis selection in
-        // WDF2Classify/WDF2Reconstruct. All orthonormal (required -- see
-        // below), 10 total (2026-08-03, down from 19):
+        // The default candidate set of the per-window basis competition, the
+        // one a WDF2Classify is built with until SetBases replaces it. All
+        // orthonormal (required: each candidate's statistic is read on its
+        // own noise scale, which a non-orthonormal basis does not preserve),
+        // 10 total (2026-08-03, down from 19):
         //
         // - Daub4/8/12/16/20, centered only. Plain and centered Daubechies
         //   of the same order are the same filter taps, just phase-shifted;
@@ -43,19 +46,56 @@ namespace tsa {
         // - Haar.
         //
         
-        const std::pair<enum WaveletTransform::WaveletType, const char*> kCandidateBases[] = {
-            {WaveletTransform::Haar, "Haar"},
-            {WaveletTransform::DaubC4, "DaubC4"},
-            {WaveletTransform::DaubC8, "DaubC8"},
-            {WaveletTransform::DaubC12, "DaubC12"},
-            {WaveletTransform::DaubC16, "DaubC16"},
-            {WaveletTransform::DaubC20, "DaubC20"},
-            {WaveletTransform::Sym4, "Sym4"},
-            {WaveletTransform::Sym8, "Sym8"},
-            {WaveletTransform::Coif1, "Coif1"},
-            {WaveletTransform::Coif2, "Coif2"},
+        const char* const kCandidateBases[] = {
+            "Haar", "DaubC4", "DaubC8", "DaubC12", "DaubC16", "DaubC20",
+            "Sym4", "Sym8", "Coif1", "Coif2",
         };
-        const std::size_t kNumCandidateBases = sizeof(kCandidateBases) / sizeof(kCandidateBases[0]);
+
+        // Every mother a candidate name may use. A name is a mother alone,
+        // the pyramidal transform, or a mother followed by "P" and a depth,
+        // the uniform level of that depth of its wavelet-packet tree (see
+        // WaveletTransform's packet constructor).
+        const std::pair<const char*, enum WaveletTransform::WaveletType> kMothers[] = {
+            {"Haar", WaveletTransform::Haar},
+            {"DaubC4", WaveletTransform::DaubC4},
+            {"DaubC6", WaveletTransform::DaubC6},
+            {"DaubC8", WaveletTransform::DaubC8},
+            {"DaubC10", WaveletTransform::DaubC10},
+            {"DaubC12", WaveletTransform::DaubC12},
+            {"DaubC14", WaveletTransform::DaubC14},
+            {"DaubC16", WaveletTransform::DaubC16},
+            {"DaubC18", WaveletTransform::DaubC18},
+            {"DaubC20", WaveletTransform::DaubC20},
+            {"Sym4", WaveletTransform::Sym4},
+            {"Sym8", WaveletTransform::Sym8},
+            {"Coif1", WaveletTransform::Coif1},
+            {"Coif2", WaveletTransform::Coif2},
+        };
+
+        WDF2Classify::Basis ParseBasis(const std::string& name, unsigned int window) {
+            std::string mother = name;
+            unsigned int depth = 0;
+            const std::size_t p = name.rfind('P');
+            if (p != std::string::npos && p + 1 < name.size() && p > 0 &&
+                name.find_first_not_of("0123456789", p + 1) == std::string::npos) {
+                mother = name.substr(0, p);
+                depth = static_cast<unsigned int>(std::stoul(name.substr(p + 1)));
+                if (depth == 0) {
+                    throw std::invalid_argument("WDF2Classify: packet depth 0 in basis " + name);
+                }
+            }
+            for (const auto& m : kMothers) {
+                if (mother == m.first) {
+                    if ((static_cast<std::size_t>(1) << depth) > window) {
+                        throw std::invalid_argument("WDF2Classify: packet depth of " + name +
+                                                    " exceeds log2 of the window");
+                    }
+                    return WDF2Classify::Basis{name, m.second, depth};
+                }
+            }
+            throw std::invalid_argument("WDF2Classify: unknown basis " + name +
+                                        " (only orthonormal mothers are candidates)");
+        }
     }
 
     WDF2Classify::WDF2Classify(unsigned int window, unsigned int overlap, double thresh, double sigma, unsigned int ncoeff, enum WaveletThreshold::WaveletThresholding WTh)
@@ -73,13 +113,10 @@ namespace tsa {
             mWavThres(mWindow, mWindow, sigma),
             mWindowing(mWindow),
             mEvFF(mNCoeff) {
-        mBases.reserve(kNumCandidateBases);
-        mBaseNames.reserve(kNumCandidateBases);
-        for (std::size_t i = 0; i < kNumCandidateBases; ++i) {
-            mBases.push_back(std::unique_ptr<WaveletTransform>(
-                new WaveletTransform(mWindow, kCandidateBases[i].first)));
-            mBaseNames.push_back(kCandidateBases[i].second);
+        for (const char* name : kCandidateBases) {
+            mSpecs.push_back(ParseBasis(name, mWindow));
         }
+        Build();
     }
 
     WDF2Classify::WDF2Classify(const WDF2Classify& from)
@@ -98,13 +135,9 @@ namespace tsa {
             mEvFF(from.mEvFF),
             mT(from.mT),
             mWavThres(from.mWavThres),
-            mWindowing(from.mWindowing) {
-        mBases.reserve(kNumCandidateBases);
-        mBaseNames = from.mBaseNames;
-        for (std::size_t i = 0; i < kNumCandidateBases; ++i) {
-            mBases.push_back(std::unique_ptr<WaveletTransform>(
-                new WaveletTransform(mWindow, kCandidateBases[i].first)));
-        }
+            mWindowing(from.mWindowing),
+            mSpecs(from.mSpecs) {
+        Build();
     }
 
     WDF2Classify& WDF2Classify::operator=(const WDF2Classify& from) {
@@ -126,15 +159,68 @@ namespace tsa {
         mT = from.mT;
         mWavThres = from.mWavThres;
         mWindowing = from.mWindowing;
-
-        mBaseNames = from.mBaseNames;
-        mBases.clear();
-        mBases.reserve(kNumCandidateBases);
-        for (std::size_t i = 0; i < kNumCandidateBases; ++i) {
-            mBases.push_back(std::unique_ptr<WaveletTransform>(
-                new WaveletTransform(mWindow, kCandidateBases[i].first)));
-        }
+        mSpecs = from.mSpecs;
+        Build();
         return *this;
+    }
+
+    // Each candidate owns its transform: WaveletTransform's copy constructor
+    // does not copy its GSL handles, so candidates are rebuilt from their
+    // names, never copied.
+    void WDF2Classify::Build() {
+        mBases.clear();
+        mBaseNames.clear();
+        mBases.reserve(mSpecs.size());
+        mBaseNames.reserve(mSpecs.size());
+        for (const auto& spec : mSpecs) {
+            mBases.push_back(std::unique_ptr<WaveletTransform>(
+                new WaveletTransform(mWindow, spec.type, spec.depth)));
+            mBaseNames.push_back(spec.name);
+        }
+    }
+
+    void WDF2Classify::SetBases(const std::string& names) {
+        std::vector<Basis> specs;
+        std::size_t start = 0;
+        while (start <= names.size()) {
+            std::size_t end = names.find(',', start);
+            if (end == std::string::npos) {
+                end = names.size();
+            }
+            std::string name = names.substr(start, end - start);
+            const std::size_t first = name.find_first_not_of(" \t");
+            const std::size_t last = name.find_last_not_of(" \t");
+            name = (first == std::string::npos) ? std::string() : name.substr(first, last - first + 1);
+            if (!name.empty()) {
+                for (const auto& s : specs) {
+                    if (s.name == name) {
+                        throw std::invalid_argument("WDF2Classify: basis " + name + " named twice");
+                    }
+                }
+                specs.push_back(ParseBasis(name, mWindow));
+                if (specs.back().depth > 0 && mT == WaveletThreshold::block) {
+                    throw std::invalid_argument("WDF2Classify: the block rule reads the dyadic ladder "
+                                                "of the pyramid and cannot judge packet basis " + name);
+                }
+            }
+            start = end + 1;
+        }
+        if (specs.empty()) {
+            throw std::invalid_argument("WDF2Classify: no candidate basis");
+        }
+        mSpecs = specs;
+        Build();
+    }
+
+    std::string WDF2Classify::GetBases() const {
+        std::string out;
+        for (std::size_t i = 0; i < mSpecs.size(); ++i) {
+            if (i > 0) {
+                out += ",";
+            }
+            out += mSpecs[i].name;
+        }
+        return out;
     }
 
 
