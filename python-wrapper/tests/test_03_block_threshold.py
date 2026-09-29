@@ -69,6 +69,16 @@ class BlockThreshold(unittest.TestCase):
         # blocks of three from index 16: 22-24 and 25-27 are all signal
         self.assertTrue(kept(view)[22:28].all())
 
+    def test_a_copy_owns_its_buffers(self):
+        rule = py4tsa.tsa.WaveletThreshold(N)
+        rule.SetBlock(3, 3.0)
+        copy = py4tsa.tsa.WaveletThreshold(rule)
+        del rule
+        view = coefficients(self.signal)
+        copy(view, py4tsa.tsa.WaveletThreshold.block)
+        self.assertEqual(copy.GetBlockLength(), 3)
+        self.assertTrue(kept(view)[22:28].all())
+
     def test_the_classifier_accepts_the_mode(self):
         py4tsa.tsa.WDF2Classify(N, 32, 5.0, 1.0, N, py4tsa.tsa.WaveletThreshold.block)
 

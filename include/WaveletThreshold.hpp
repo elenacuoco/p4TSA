@@ -66,6 +66,7 @@
 ///
 #include <algorithm>
 #include <cmath>
+#include <vector>
 
 namespace tsa {
 
@@ -129,6 +130,13 @@ namespace tsa {
         /// Destructor
         ///
         ~WaveletThreshold();
+
+        ///
+        /// Copy constructor and assignment: the work buffers are owned by
+        /// value, so a copy has its own and shares nothing with the original.
+        ///
+        WaveletThreshold(const WaveletThreshold&) = default;
+        WaveletThreshold& operator=(const WaveletThreshold&) = default;
 
         ///
         /// @name Operations
@@ -220,7 +228,7 @@ namespace tsa {
         void BlockThreshold(Coefficients& WT) {
             for (unsigned int i = 0; i < mN; i++)
                 mOrd[i] = fabs(WT(0, mP[i]));
-            mMedian = gsl_stats_median_from_sorted_data(mOrd, 1, mN);
+            mMedian = gsl_stats_median_from_sorted_data(mOrd.data(), 1, mN);
             mSigma = mMedian / 0.6745;
             const unsigned int L = GetBlockLength();
             const double energyPerCoefficient = mBlockLambda * mSigma * mSigma;
@@ -243,10 +251,10 @@ namespace tsa {
             }
         }
 
-        double * mAbsCoeff;
-        size_t * mP;
-        size_t * mPAC;
-        double * mOrd;
+        std::vector<double> mAbsCoeff;
+        std::vector<size_t> mP;
+        std::vector<size_t> mPAC;
+        std::vector<double> mOrd;
         unsigned int mN;
         double mMedian;
         double mThresh;
