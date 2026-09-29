@@ -79,9 +79,12 @@ namespace tsa {
     ///
     /// @brief Time domain detection of transients based on wavelet transform
     ///
-    ///
-    ///
-    ///
+    /// Pyramid only: the candidate bases are the ten pyramidal (Mallat)
+    /// transforms of the default competition of WDF2Classify, fixed, and
+    /// WDF2Classify::SetBases does not reach them. A trigger won by a
+    /// wavelet-packet basis is reconstructed outside this class, as wdflow's
+    /// inverse_transform does: the winner's name gives the mother and the
+    /// depth, and WaveletTransform's packet level inverts the coefficients.
     ///
 
     class WDF2Reconstruct : public AlgoBase {
