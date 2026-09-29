@@ -33,6 +33,8 @@
 //@{
 #include <gsl/gsl_wavelet.h>
 #include <gsl/gsl_errno.h>
+#include <cstddef>
+#include <vector>
 //@}
 
 ///
@@ -132,9 +134,40 @@ namespace tsa {
         };
 
         ///
-        /// Constructor
+        /// Constructor: the pyramidal (Mallat) transform, GSL's packed layout.
         ///
         WaveletTransform(unsigned int N, enum WaveletType wt);
+
+        ///
+        /// Constructor: one level of the wavelet-packet tree.
+        ///
+        /// With `packetDepth` zero the transform is the pyramidal one of the
+        /// constructor above. With `packetDepth` equal to D > 0 every band is
+        /// split, not only the lowpass one, D times with the same periodized
+        /// filter step GSL applies in its pyramid, so the output is the uniform
+        /// level D of the wavelet-packet tree: 2^D bands of equal width
+        /// fs / 2^(D+1), each carrying N / 2^D coefficients that tile the
+        /// window in steps of 2^D samples. The bands are written in frequency
+        /// order, band f occupying indices [f N / 2^D, (f+1) N / 2^D), so the
+        /// index of a coefficient places it in the plane without knowledge of
+        /// the tree: the highpass branch of a split reverses the spectrum of
+        /// what it decimates, the natural order of the tree is therefore the
+        /// Gray code of the frequency order, and the permutation undoes it.
+        ///
+        /// Every step is an orthonormal periodized two-channel filter bank and
+        /// a permutation is orthonormal, so the level is an orthonormal basis:
+        /// Inverse(Forward(x)) is x and the coefficient energy is the energy of
+        /// x. The cost is D N nc multiply-adds, linear in N, with a data
+        /// independent sequence of operations and a fixed latency.
+        ///
+        /// @param N window length, a power of 2
+        /// @param wt mother wavelet
+        /// @param packetDepth 0 for the pyramid, else the packet level, at
+        ///        most log2(N)
+        /// @exception std::invalid_argument when N is not a power of 2 or
+        ///            packetDepth exceeds log2(N)
+        ///
+        WaveletTransform(unsigned int N, enum WaveletType wt, unsigned int packetDepth);
 
         ///
         /// Copy constructor
@@ -188,6 +221,13 @@ namespace tsa {
         void WaveletPrint();
         void WaveletWaveform(Dvector& V);
 
+        ///
+        /// The packet level of the transform, 0 for the pyramid.
+        ///
+        unsigned int GetPacketDepth() const {
+            return mDepth;
+        }
+
         //@}
 
         ///
@@ -201,9 +241,16 @@ namespace tsa {
     protected:
 
     private:
+        void PacketForward(double* data);
+        void PacketInverse(double* data);
+        void Step(double* a, std::size_t n, bool forward);
+
         gsl_wavelet *mW;
         gsl_wavelet_workspace *mWork;
         unsigned int mN; ///< Lenght of input data. It must be a power of 2
+        unsigned int mDepth; ///< packet level, 0 for the pyramidal transform
+        std::vector<double> mScratch; ///< one band of the packet step
+        std::vector<double> mOrder; ///< the tree in natural order
     };
 
     ///

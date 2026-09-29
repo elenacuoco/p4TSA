@@ -13,12 +13,14 @@
 //
 
 #include <WaveletTransform.hpp>
+#include <stdexcept>
 
 namespace tsa {
 
     WaveletTransform::WaveletTransform(unsigned int N, enum WaveletType wt)
     :
-    mN(N) {
+    mN(N),
+    mDepth(0) {
         mWork = gsl_wavelet_workspace_alloc(mN);
         switch (wt) {
             case Daub4:
@@ -163,6 +165,31 @@ namespace tsa {
         }
 
     }
+
+    namespace {
+        // Checked before anything is allocated: GSL's handler aborts rather
+        // than returning on a length it cannot transform.
+        unsigned int PacketLength(unsigned int N, unsigned int packetDepth) {
+            if (N < 2 || (N & (N - 1)) != 0) {
+                throw std::invalid_argument("WaveletTransform: the window length must be a power of 2");
+            }
+            if (packetDepth >= 8 * sizeof(std::size_t) ||
+                (static_cast<std::size_t>(1) << packetDepth) > N) {
+                throw std::invalid_argument("WaveletTransform: the packet level exceeds log2 of the window length");
+            }
+            return N;
+        }
+    }
+
+    // The packet level shares the mother's filters with the pyramid, so it is
+    // built by the pyramid's constructor and only its depth and buffers added.
+    WaveletTransform::WaveletTransform(unsigned int N, enum WaveletType wt, unsigned int packetDepth)
+    :
+    WaveletTransform(PacketLength(N, packetDepth), wt) {
+        mDepth = packetDepth;
+        mScratch.assign(mN, 0.0);
+        mOrder.assign(mN, 0.0);
+    }
     ///
     /// Destructor
     ///
@@ -190,13 +217,24 @@ namespace tsa {
             mN = In.size2();
             LogWarning("WaveletTransform: the size of input data is different from the size of the working space. Resizing it");
             mWork = gsl_wavelet_workspace_alloc(In.size2());
+            if (mDepth > 0) {
+                if ((static_cast<std::size_t>(1) << mDepth) > mN) {
+                    throw std::invalid_argument("WaveletTransform: the packet level exceeds log2 of the window length");
+                }
+                mScratch.assign(mN, 0.0);
+                mOrder.assign(mN, 0.0);
+            }
         }
         double *data = new double[ mN ];
         for (unsigned int i = 0; i < mN; i++) {
             data[ i ] = In(0, i);
         }
 
-        gsl_wavelet_transform_forward(mW, data, 1, mN, mWork);
+        if (mDepth == 0) {
+            gsl_wavelet_transform_forward(mW, data, 1, mN, mWork);
+        } else {
+            PacketForward(data);
+        }
         for (unsigned int i = 0; i < mN; i++) {
             In(0, i) = data[ i ];
         }
@@ -212,17 +250,117 @@ namespace tsa {
             mN = In.size2();
             LogWarning("WaveletTransform: the size of input data is different from the size of the working space. Resizing it");
             mWork = gsl_wavelet_workspace_alloc(In.size2());
+            if (mDepth > 0) {
+                if ((static_cast<std::size_t>(1) << mDepth) > mN) {
+                    throw std::invalid_argument("WaveletTransform: the packet level exceeds log2 of the window length");
+                }
+                mScratch.assign(mN, 0.0);
+                mOrder.assign(mN, 0.0);
+            }
         }
         double* data = new double[ mN ];
         for (unsigned int i = 0; i < mN; i++) {
             data[ i ] = In(0, i);
         }
 
-        gsl_wavelet_transform_inverse(mW, data, 1, mN, mWork);
+        if (mDepth == 0) {
+            gsl_wavelet_transform_inverse(mW, data, 1, mN, mWork);
+        } else {
+            PacketInverse(data);
+        }
         for (unsigned int i = 0; i < mN; i++) {
             In(0, i) = data[ i ];
         }
         delete[] data;
+    }
+
+    // One periodized two-channel step on n samples, the operation GSL's
+    // pyramid applies at each of its levels (gsl/wavelet/dwt.c, dwt_step),
+    // written out because GSL keeps it static. The same filters, offset and
+    // wrap are used, so a packet level of depth one is the finest step of the
+    // pyramid, coefficient for coefficient. n is a power of 2, so masking with
+    // n - 1 is the reduction modulo n that periodizes the filters, which keeps
+    // the step orthonormal for any n, filters longer than the band included.
+    void WaveletTransform::Step(double* a, std::size_t n, bool forward) {
+        const std::size_t nc = mW->nc;
+        const std::size_t n1 = n - 1;
+        const std::size_t nh = n >> 1;
+        const std::size_t nmod = nc * n - mW->offset;
+        for (std::size_t i = 0; i < n; i++) {
+            mScratch[i] = 0.0;
+        }
+        if (forward) {
+            for (std::size_t ii = 0, i = 0; i < n; i += 2, ii++) {
+                double h = 0.0, g = 0.0;
+                const std::size_t ni = i + nmod;
+                for (std::size_t k = 0; k < nc; k++) {
+                    const std::size_t jf = n1 & (ni + k);
+                    h += mW->h1[k] * a[jf];
+                    g += mW->g1[k] * a[jf];
+                }
+                mScratch[ii] += h;
+                mScratch[ii + nh] += g;
+            }
+        } else {
+            for (std::size_t ii = 0, i = 0; i < n; i += 2, ii++) {
+                const double ai = a[ii];
+                const double ai1 = a[ii + nh];
+                const std::size_t ni = i + nmod;
+                for (std::size_t k = 0; k < nc; k++) {
+                    const std::size_t jf = n1 & (ni + k);
+                    mScratch[jf] += mW->h2[k] * ai + mW->g2[k] * ai1;
+                }
+            }
+        }
+        for (std::size_t i = 0; i < n; i++) {
+            a[i] = mScratch[i];
+        }
+    }
+
+    // Level l splits each of its 2^l bands of N / 2^l samples in two, lowpass
+    // half first, which leaves the tree in natural (Paley) order. The band of
+    // frequency rank f sits at natural position f ^ (f >> 1), its Gray code,
+    // because each highpass branch reverses the order of what lies below it.
+    void WaveletTransform::PacketForward(double* data) {
+        const std::size_t N = mN;
+        for (unsigned int l = 0; l < mDepth; l++) {
+            const std::size_t n = N >> l;
+            for (std::size_t start = 0; start < N; start += n) {
+                Step(data + start, n, true);
+            }
+        }
+        const std::size_t bands = static_cast<std::size_t>(1) << mDepth;
+        const std::size_t len = N >> mDepth;
+        for (std::size_t f = 0; f < bands; f++) {
+            const std::size_t natural = f ^ (f >> 1);
+            for (std::size_t k = 0; k < len; k++) {
+                mOrder[f * len + k] = data[natural * len + k];
+            }
+        }
+        for (std::size_t i = 0; i < N; i++) {
+            data[i] = mOrder[i];
+        }
+    }
+
+    void WaveletTransform::PacketInverse(double* data) {
+        const std::size_t N = mN;
+        const std::size_t bands = static_cast<std::size_t>(1) << mDepth;
+        const std::size_t len = N >> mDepth;
+        for (std::size_t f = 0; f < bands; f++) {
+            const std::size_t natural = f ^ (f >> 1);
+            for (std::size_t k = 0; k < len; k++) {
+                mOrder[natural * len + k] = data[f * len + k];
+            }
+        }
+        for (std::size_t i = 0; i < N; i++) {
+            data[i] = mOrder[i];
+        }
+        for (unsigned int l = mDepth; l-- > 0;) {
+            const std::size_t n = N >> l;
+            for (std::size_t start = 0; start < N; start += n) {
+                Step(data + start, n, false);
+            }
+        }
     }
 
     ///

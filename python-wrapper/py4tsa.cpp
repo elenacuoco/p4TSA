@@ -2628,6 +2628,8 @@ void bind_WaveletThreshold(std::function< pybind11::module &(std::string const &
 	{ // tsa::WaveletTransform file:WaveletTransform.hpp line:75
 		pybind11::class_<tsa::WaveletTransform, std::shared_ptr<tsa::WaveletTransform>> cl(M("tsa"), "WaveletTransform", "Compute the wavelet transform");
 		cl.def( pybind11::init<unsigned int, enum tsa::WaveletTransform::WaveletType>(), pybind11::arg("N"), pybind11::arg("wt") );
+		cl.def( pybind11::init<unsigned int, enum tsa::WaveletTransform::WaveletType, unsigned int>(), "One uniform level of the wavelet-packet tree, bands in frequency order; packetDepth 0 is the pyramid.", pybind11::arg("N"), pybind11::arg("wt"), pybind11::arg("packetDepth") );
+		cl.def("GetPacketDepth", &tsa::WaveletTransform::GetPacketDepth, "The packet level of the transform, 0 for the pyramid.");
 
 		cl.def( pybind11::init( [](tsa::WaveletTransform const &o){ return new tsa::WaveletTransform(o); } ) );
 
