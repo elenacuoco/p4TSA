@@ -86,7 +86,7 @@ def classifier(rule=tsa.WaveletThreshold.dohonojohnston, threshold=-1.0):
 
 # The default competition, spelled out: the one test to update when
 # kCandidateBases (src/WDF2Classify.cpp) changes. Ordered by filter length.
-DEFAULT_BASES = "Haar,DaubC4,Coif2,DaubC16,DaubC20,Sym10,DaubC24,Coif5,DaubC32,DaubC40"
+DEFAULT_BASES = "Haar,DaubC4,DaubC8,Sym4,DaubC16,Sym8,Coif3,DaubC24,Sym12,Coif5"
 
 
 def test_default_candidates_are_the_ten():

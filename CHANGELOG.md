@@ -6,15 +6,17 @@
 
 - **The default basis competition of `WDF2Classify` changes.** The ten
   candidates a `WDF2Classify` is built with are now, ordered by filter length,
-  shortest first: `Haar`, `DaubC4`, `Coif2`, `DaubC16`, `DaubC20`, `Sym10`,
-  `DaubC24`, `Coif5`, `DaubC32`, `DaubC40`. Kept from 3.0.0-3.4.0: `Haar`,
-  `DaubC4`, `Coif2`, `DaubC16`, `DaubC20`; added: `DaubC24`, `DaubC32`,
-  `DaubC40` (db12, db16, db20), `Coif5`, `Sym10`; removed from the default:
-  `DaubC8`, `DaubC12`, `Sym4`, `Sym8`, `Coif1`, which stay available through
-  `SetBases`. The order is part of the definition: a tie of the window
-  statistic still goes to the later candidate, now the longer filter. With
-  the default, trigger values (`mWave`, `mSNR`, the coefficients) change:
-  the old competition is `SetBases("Haar,DaubC4,DaubC8,DaubC12,DaubC16,DaubC20,Sym4,Sym8,Coif1,Coif2")`.
+  shortest first (at equal length in the order shown): `Haar`, `DaubC4`,
+  `DaubC8`, `Sym4`, `DaubC16`, `Sym8`, `Coif3`, `DaubC24`, `Sym12`, `Coif5`
+  (PyWavelets' haar, db2, db4, sym4, db8, sym8, coif3, db12, sym12, coif5).
+  Kept from 3.0.0-3.4.0: `Haar`, `DaubC4`, `DaubC8`, `Sym4`, `DaubC16`,
+  `Sym8`; added: `Coif3`, `DaubC24`, `Sym12`, `Coif5`; removed from the
+  default: `DaubC12`, `DaubC20`, `Coif1`, `Coif2`, which stay available through
+  `SetBases`, as do all the long mothers. The order is part of the
+  definition: a tie of the window statistic still goes to the later
+  candidate, now the longer filter. With the default, trigger values
+  (`mWave`, `mSNR`, the coefficients) change: the old competition is
+  `SetBases("Haar,DaubC4,DaubC8,DaubC12,DaubC16,DaubC20,Sym4,Sym8,Coif1,Coif2")`.
   The list is defined in one place, `kCandidateBases` in
   `src/WDF2Classify.cpp`. `WDF2Reconstruct` keeps the 3.0.0 list.
 

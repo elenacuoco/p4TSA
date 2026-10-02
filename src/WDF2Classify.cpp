@@ -27,29 +27,32 @@ namespace tsa {
         // non-orthonormal basis does not preserve), all pyramids, 10 total.
         //
         // Ordered by filter length, shortest first (Haar 2 taps, DaubC4 4,
-        // Coif2 12, DaubC16 16, DaubC20 and Sym10 20 -- equal length, by
-        // name --, DaubC24 24, Coif5 30, DaubC32 32, DaubC40 40). The order is
-        // part of the definition: on a tie of the window statistic the later
-        // candidate wins (GetDataVector keeps a basis whose statistic is >=
-        // the best so far), so a tie goes to the longer filter.
+        // DaubC8 and Sym4 8, DaubC16 and Sym8 16, Coif3 18, DaubC24 and
+        // Sym12 24, Coif5 30; at equal length Daubechies before Symlet). The
+        // order is part of the definition: on a tie of the window statistic
+        // the later candidate wins (GetDataVector keeps a basis whose
+        // statistic is >= the best so far), so a tie goes to the longer
+        // filter, and at equal length to the Symlet.
         //
         // History: 3.0.0-3.4.0 used Haar, DaubC4/8/12/16/20, Sym4, Sym8,
         // Coif1, Coif2 (2026-08-03, down from 19; see WDF2Reconstruct, which
-        // keeps that list). The long mothers replace DaubC8, DaubC12, Sym4,
-        // Sym8 and Coif1, which stay available through SetBases.
+        // keeps that list). This list drops DaubC12, DaubC20, Coif1 and
+        // Coif2 for Coif3, DaubC24, Sym12 and Coif5; every mother stays
+        // available through SetBases.
         //
         // - Daubechies, centered only: plain and centered Daubechies of the
         //   same order are the same filter taps, just phase-shifted; their
         //   post-threshold RMS/sigma ratio agrees to 4-6% on real+injected
-        //   data (verified 2026-08-03). DaubC24/32/40 are db12/16/20.
-        // - Sym10 (symlet) and Coif2/Coif5 (coiflet), centered -- see
-        //   ExtraWaveletFamilies.hpp. Coiflets have vanishing moments for the
-        //   scaling function too, not just the wavelet.
+        //   data (verified 2026-08-03). DaubC4/8/16/24 are db2/4/8/12.
+        // - Sym4/Sym8/Sym12 (symlet) and Coif3/Coif5 (coiflet), centered --
+        //   see ExtraWaveletFamilies.hpp. Coiflets have vanishing moments for
+        //   the scaling function too, not just the wavelet. PyWavelets' sym12
+        //   taps, kept bit for bit, are orthonormal to 4.4e-14.
         // - Haar.
         //
         const char* const kCandidateBases[] = {
-            "Haar", "DaubC4", "Coif2", "DaubC16", "DaubC20", "Sym10",
-            "DaubC24", "Coif5", "DaubC32", "DaubC40",
+            "Haar", "DaubC4", "DaubC8", "Sym4", "DaubC16", "Sym8",
+            "Coif3", "DaubC24", "Sym12", "Coif5",
         };
 
         // Every mother a candidate name may use. A name is a mother alone,
@@ -71,7 +74,7 @@ namespace tsa {
             {"Sym8", WaveletTransform::Sym8},
             {"Coif1", WaveletTransform::Coif1},
             {"Coif2", WaveletTransform::Coif2},
-            // The long mothers (five of them are in the default list).
+            // The long mothers (Coif3, DaubC24, Sym12, Coif5 are in the default list).
             {"Sym10", WaveletTransform::Sym10},
             {"Sym12", WaveletTransform::Sym12},
             {"Sym16", WaveletTransform::Sym16},
