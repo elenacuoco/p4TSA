@@ -35,6 +35,14 @@
 ///         low-pass one: g[i] = (-1)^i * h[nc-1-i] -- verified against GSL's
 ///         own h_4/g_4 daubechies tables before being applied here.
 ///
+///         The long mothers (Coif3-5, Sym10-20, DaubC24/32/40 = db12/16/20)
+///         are generated, not typed: tools/generate_long_wavelet_tables.py
+///         writes src/ExtraWaveletLongTables.inc from PyWavelets (MIT
+///         licence) with the same convention, h = rec_lo and g = rec_hi,
+///         exact to the last bit. PyWavelets' sym16 and sym20 taps are
+///         orthonormal only to 1.8e-12 and 1.4e-11 (max |sum h[k]h[k+2m] -
+///         delta_m|) and are kept as they are.
+///
 #ifndef __EXTRAWAVELETFAMILIES_HPP
 #define __EXTRAWAVELETFAMILIES_HPP
 
@@ -44,6 +52,9 @@ namespace tsa {
 
     extern const gsl_wavelet_type *tsa_wavelet_coiflet_centered;
     extern const gsl_wavelet_type *tsa_wavelet_symlet_centered;
+    /// Centered Daubechies of 24, 32 and 40 taps (db12, db16, db20), the
+    /// lengths past GSL's own 20; `member` is the tap count, as in GSL.
+    extern const gsl_wavelet_type *tsa_wavelet_daubechies_long_centered;
 
 } // namespace tsa
 

@@ -2684,6 +2684,16 @@ void bind_WaveletThreshold(std::function< pybind11::module &(std::string const &
 			.value("Coif2", tsa::WaveletTransform::Coif2)
 			.value("Sym4", tsa::WaveletTransform::Sym4)
 			.value("Sym8", tsa::WaveletTransform::Sym8)
+			.value("Sym10", tsa::WaveletTransform::Sym10)
+			.value("Sym12", tsa::WaveletTransform::Sym12)
+			.value("Sym16", tsa::WaveletTransform::Sym16)
+			.value("Sym20", tsa::WaveletTransform::Sym20)
+			.value("Coif3", tsa::WaveletTransform::Coif3)
+			.value("Coif4", tsa::WaveletTransform::Coif4)
+			.value("Coif5", tsa::WaveletTransform::Coif5)
+			.value("DaubC24", tsa::WaveletTransform::DaubC24)
+			.value("DaubC32", tsa::WaveletTransform::DaubC32)
+			.value("DaubC40", tsa::WaveletTransform::DaubC40)
 			.export_values();
 
 		cl.def("assign", (class tsa::WaveletTransform & (tsa::WaveletTransform::*)(const class tsa::WaveletTransform &)) &tsa::WaveletTransform::operator=, "Assignement operator\n\n \n The instance to be assigned from\n\n \n a reference to a new object\n\nC++: tsa::WaveletTransform::operator=(const class tsa::WaveletTransform &) --> class tsa::WaveletTransform &", pybind11::return_value_policy::automatic, pybind11::arg("from"));
@@ -2709,7 +2719,7 @@ void bind_WaveletThreshold(std::function< pybind11::module &(std::string const &
 		cl.def("__call__", (void (tsa::WDF2Classify::*)(class tsa::SeqView<double> &, double)) &tsa::WDF2Classify::operator(), "C++: tsa::WDF2Classify::operator()(class tsa::SeqView<double> &, double) --> void", pybind11::arg("Data"), pybind11::arg("sigma"));
 		cl.def("__call__", (int (tsa::WDF2Classify::*)(class tsa::EventFullFeatured &)) &tsa::WDF2Classify::operator(), "C++: tsa::WDF2Classify::operator()(class tsa::EventFullFeatured &) --> int", pybind11::arg("Ev"));
 		cl.def("GetEvent", (void (tsa::WDF2Classify::*)(class tsa::EventFullFeatured &)) &tsa::WDF2Classify::GetEvent, "C++: tsa::WDF2Classify::GetEvent(class tsa::EventFullFeatured &) --> void", pybind11::arg("Ev"));
-		cl.def("SetBases", &tsa::WDF2Classify::SetBases, "Replace the candidate bases of the competition: comma-separated names, a mother (Haar, DaubC4..DaubC20, Sym4, Sym8, Coif1, Coif2) for its pyramid or a mother followed by P and a depth for that uniform wavelet-packet level. Raises ValueError on an unknown or repeated name, a depth above log2 of the window, an empty list, or, under the block rule, a packet band shorter than one block.", pybind11::arg("names"));
+		cl.def("SetBases", &tsa::WDF2Classify::SetBases, "Replace the candidate bases of the competition: comma-separated names, a mother (Haar, DaubC4..DaubC20, DaubC24, DaubC32, DaubC40, Sym4, Sym8, Sym10, Sym12, Sym16, Sym20, Coif1..Coif5) for its pyramid or a mother followed by P and a depth for that uniform wavelet-packet level. Raises ValueError on an unknown or repeated name, a depth above log2 of the window, an empty list, or, under the block rule, a packet band shorter than one block.", pybind11::arg("names"));
 		cl.def("GetBases", &tsa::WDF2Classify::GetBases, "The candidate bases, comma-separated, in the order they compete.");
 		cl.def("GetDataNeeded", (int (tsa::WDF2Classify::*)()) &tsa::WDF2Classify::GetDataNeeded, "Get the number of data needed in order to be able to \n call GetData successfully. If the returned value is less or \n equal than zero no data are needed.\n\n \n the needed data\n\nC++: tsa::WDF2Classify::GetDataNeeded() --> int");
 		cl.def("assign", (class tsa::WDF2Classify & (tsa::WDF2Classify::*)(const class tsa::WDF2Classify &)) &tsa::WDF2Classify::operator=, "C++: tsa::WDF2Classify::operator=(const class tsa::WDF2Classify &) --> class tsa::WDF2Classify &", pybind11::return_value_policy::automatic, pybind11::arg(""));

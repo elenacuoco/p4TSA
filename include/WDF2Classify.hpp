@@ -242,7 +242,9 @@ namespace tsa {
         /// thresholded coefficients have the largest norm on their own noise
         /// scale wins; on a tie the later candidate wins, so the order is part
         /// of the definition. A name is an orthonormal mother (Haar, DaubC4 to
-        /// DaubC20, Sym4, Sym8, Coif1, Coif2) for its pyramidal transform, or
+        /// DaubC20, Sym4, Sym8, Coif1, Coif2, or a long one: DaubC24, DaubC32,
+        /// DaubC40, Sym10, Sym12, Sym16, Sym20, Coif3, Coif4, Coif5) for its
+        /// pyramidal transform, or
         /// a mother followed by "P" and a depth D, as "Coif1P6", for the
         /// uniform level D of its wavelet-packet tree, whose coefficient
         /// layout is described at WaveletTransform's packet constructor. The

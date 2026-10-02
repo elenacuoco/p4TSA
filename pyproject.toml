@@ -48,7 +48,7 @@ build = "cp310-manylinux_x86_64 cp311-manylinux_x86_64 cp312-manylinux_x86_64 cp
 manylinux-x86_64-image = "manylinux_2_28"
 build-verbosity = 1
 # Run against the repaired wheel rather than the build tree.
-test-requires = ["pytest", "numpy"]
+test-requires = ["pytest", "numpy", "PyWavelets"]
 test-command = "pytest {project}/python-wrapper/tests -q"
 
 [tool.cibuildwheel.linux]

@@ -161,6 +161,36 @@ namespace tsa {
             case Sym8:
                 mW = gsl_wavelet_alloc(tsa_wavelet_symlet_centered, 8);
                 break;
+            case Sym10:
+                mW = gsl_wavelet_alloc(tsa_wavelet_symlet_centered, 10);
+                break;
+            case Sym12:
+                mW = gsl_wavelet_alloc(tsa_wavelet_symlet_centered, 12);
+                break;
+            case Sym16:
+                mW = gsl_wavelet_alloc(tsa_wavelet_symlet_centered, 16);
+                break;
+            case Sym20:
+                mW = gsl_wavelet_alloc(tsa_wavelet_symlet_centered, 20);
+                break;
+            case Coif3:
+                mW = gsl_wavelet_alloc(tsa_wavelet_coiflet_centered, 3);
+                break;
+            case Coif4:
+                mW = gsl_wavelet_alloc(tsa_wavelet_coiflet_centered, 4);
+                break;
+            case Coif5:
+                mW = gsl_wavelet_alloc(tsa_wavelet_coiflet_centered, 5);
+                break;
+            case DaubC24:
+                mW = gsl_wavelet_alloc(tsa_wavelet_daubechies_long_centered, 24);
+                break;
+            case DaubC32:
+                mW = gsl_wavelet_alloc(tsa_wavelet_daubechies_long_centered, 32);
+                break;
+            case DaubC40:
+                mW = gsl_wavelet_alloc(tsa_wavelet_daubechies_long_centered, 40);
+                break;
             default:
                 mW = gsl_wavelet_alloc(gsl_wavelet_haar, 2);
                 break;

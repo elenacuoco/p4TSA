@@ -19,10 +19,11 @@
 namespace tsa {
 
     namespace {
-        // Same candidate basis set as WDF2Classify (see that file's
-        // GetDataVector for the rationale on excluding biorthogonal
+        // WDF2Classify's default candidate set of 3.0.0-3.4.0 (see that
+        // file's kCandidateBases for the rationale on excluding biorthogonal
         // B-spline bases, dropping plain/centered Daubechies duplicates,
-        // and the Coiflet/Symlet additions).
+        // and the Coiflet/Symlet additions). WDF2Classify's default has since
+        // moved to the long mothers; this list is unchanged.
         const std::pair<enum WaveletTransform::WaveletType, const char*> kCandidateBases[] = {
             {WaveletTransform::Haar, "Haar"},
             {WaveletTransform::DaubC4, "DaubC4"},

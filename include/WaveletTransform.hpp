@@ -130,7 +130,21 @@ namespace tsa {
             Coif1,
             Coif2,
             Sym4,
-            Sym8
+            Sym8,
+            // The long mothers, appended so the values above keep their
+            // numbers: Symlets 10-20, Coiflets 3-5 and the centered
+            // Daubechies of 24, 32 and 40 taps (db12, db16, db20), all
+            // centered as DaubC*, Sym* and Coif* are.
+            Sym10,
+            Sym12,
+            Sym16,
+            Sym20,
+            Coif3,
+            Coif4,
+            Coif5,
+            DaubC24,
+            DaubC32,
+            DaubC40
         };
 
         ///

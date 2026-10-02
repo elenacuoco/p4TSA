@@ -21,34 +21,35 @@ namespace tsa {
 
     namespace {
         // The default candidate set of the per-window basis competition, the
-        // one a WDF2Classify is built with until SetBases replaces it. All
-        // orthonormal (required: each candidate's statistic is read on its
-        // own noise scale, which a non-orthonormal basis does not preserve),
-        // 10 total (2026-08-03, down from 19):
+        // one a WDF2Classify is built with until SetBases replaces it, and the
+        // only place it is defined. All orthonormal (required: each
+        // candidate's statistic is read on its own noise scale, which a
+        // non-orthonormal basis does not preserve), all pyramids, 10 total.
         //
-        // - Daub4/8/12/16/20, centered only. Plain and centered Daubechies
-        //   of the same order are the same filter taps, just phase-shifted;
-        //   empirically their post-threshold RMS/sigma ratio agrees to
-        //   4-6% on real+injected data (verified 2026-08-03), so keeping
-        //   both wastes ~half this list's compute for no real diversity.
-        //   Centered kept over plain for its symmetric time support (more
-        //   consistent gpsPeak estimates). Every-other order (not all 9)
-        //   trims further while still spanning short- to long-support.
-        // - Sym4/Sym8 (symlet, centered -- see ExtraWaveletFamilies.hpp).
-        //   Sym2/Sym3 are excluded because they are numerically identical
-        //   to Daub4/Daub6 (verified against PyWavelets 2026-08-03) --
-        //   Symlets only start differing from Daubechies at order 4.
-        // - Coif1/Coif2 (coiflet, centered -- see ExtraWaveletFamilies.hpp):
-        //   unlike Daubechies/Symlet, has vanishing moments for the scaling
-        //   function too, not just the wavelet -- genuinely different
-        //   coefficient behavior on smooth/slowly-varying signal content,
-        //   not just a further Daubechies-family variant.
+        // Ordered by filter length, shortest first (Haar 2 taps, DaubC4 4,
+        // Coif2 12, DaubC16 16, DaubC20 and Sym10 20 -- equal length, by
+        // name --, DaubC24 24, Coif5 30, DaubC32 32, DaubC40 40). The order is
+        // part of the definition: on a tie of the window statistic the later
+        // candidate wins (GetDataVector keeps a basis whose statistic is >=
+        // the best so far), so a tie goes to the longer filter.
+        //
+        // History: 3.0.0-3.4.0 used Haar, DaubC4/8/12/16/20, Sym4, Sym8,
+        // Coif1, Coif2 (2026-08-03, down from 19; see WDF2Reconstruct, which
+        // keeps that list). The long mothers replace DaubC8, DaubC12, Sym4,
+        // Sym8 and Coif1, which stay available through SetBases.
+        //
+        // - Daubechies, centered only: plain and centered Daubechies of the
+        //   same order are the same filter taps, just phase-shifted; their
+        //   post-threshold RMS/sigma ratio agrees to 4-6% on real+injected
+        //   data (verified 2026-08-03). DaubC24/32/40 are db12/16/20.
+        // - Sym10 (symlet) and Coif2/Coif5 (coiflet), centered -- see
+        //   ExtraWaveletFamilies.hpp. Coiflets have vanishing moments for the
+        //   scaling function too, not just the wavelet.
         // - Haar.
         //
-        
         const char* const kCandidateBases[] = {
-            "Haar", "DaubC4", "DaubC8", "DaubC12", "DaubC16", "DaubC20",
-            "Sym4", "Sym8", "Coif1", "Coif2",
+            "Haar", "DaubC4", "Coif2", "DaubC16", "DaubC20", "Sym10",
+            "DaubC24", "Coif5", "DaubC32", "DaubC40",
         };
 
         // Every mother a candidate name may use. A name is a mother alone,
@@ -70,6 +71,17 @@ namespace tsa {
             {"Sym8", WaveletTransform::Sym8},
             {"Coif1", WaveletTransform::Coif1},
             {"Coif2", WaveletTransform::Coif2},
+            // The long mothers (five of them are in the default list).
+            {"Sym10", WaveletTransform::Sym10},
+            {"Sym12", WaveletTransform::Sym12},
+            {"Sym16", WaveletTransform::Sym16},
+            {"Sym20", WaveletTransform::Sym20},
+            {"Coif3", WaveletTransform::Coif3},
+            {"Coif4", WaveletTransform::Coif4},
+            {"Coif5", WaveletTransform::Coif5},
+            {"DaubC24", WaveletTransform::DaubC24},
+            {"DaubC32", WaveletTransform::DaubC32},
+            {"DaubC40", WaveletTransform::DaubC40},
         };
 
         WDF2Classify::Basis ParseBasis(const std::string& name, unsigned int window) {

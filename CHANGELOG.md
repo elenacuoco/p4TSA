@@ -1,5 +1,92 @@
 # Changelog
 
+## Unreleased
+
+### Changed (behaviour)
+
+- **The default basis competition of `WDF2Classify` changes.** The ten
+  candidates a `WDF2Classify` is built with are now, ordered by filter length,
+  shortest first: `Haar`, `DaubC4`, `Coif2`, `DaubC16`, `DaubC20`, `Sym10`,
+  `DaubC24`, `Coif5`, `DaubC32`, `DaubC40`. Kept from 3.0.0-3.4.0: `Haar`,
+  `DaubC4`, `Coif2`, `DaubC16`, `DaubC20`; added: `DaubC24`, `DaubC32`,
+  `DaubC40` (db12, db16, db20), `Coif5`, `Sym10`; removed from the default:
+  `DaubC8`, `DaubC12`, `Sym4`, `Sym8`, `Coif1`, which stay available through
+  `SetBases`. The order is part of the definition: a tie of the window
+  statistic still goes to the later candidate, now the longer filter. With
+  the default, trigger values (`mWave`, `mSNR`, the coefficients) change:
+  the old competition is `SetBases("Haar,DaubC4,DaubC8,DaubC12,DaubC16,DaubC20,Sym4,Sym8,Coif1,Coif2")`.
+  The list is defined in one place, `kCandidateBases` in
+  `src/WDF2Classify.cpp`. `WDF2Reconstruct` keeps the 3.0.0 list.
+
+### Added
+
+- **Long mothers.** `WaveletType` gains `Sym10`, `Sym12`, `Sym16`, `Sym20`,
+  `Coif3`, `Coif4`, `Coif5` and `DaubC24`, `DaubC32`, `DaubC40` (PyWavelets'
+  db12, db16, db20; GSL's own centred Daubechies stop at 20 taps), 18 to 40
+  taps, centred as `DaubC*`, `Sym*` and `Coif*` are (GSL's offset nc / 2).
+  The values are appended after `Sym8`, so the existing ones keep their
+  numbers. Every one is a `SetBases` name, as a pyramid or with `P<depth>` as
+  a packet level. The taps are PyWavelets' (MIT licence), written at full
+  precision by `tools/generate_long_wavelet_tables.py` into
+  `src/ExtraWaveletLongTables.inc`; the transform agrees with PyWavelets'
+  periodized `dwt` applied after a one-sample circular shift at every split
+  to 4e-15, pyramid and packets. PyWavelets' Symlet taps are orthonormal
+  only to 2.2e-14 (sym10), 4.4e-14 (sym12), 1.8e-12 (sym16) and 1.4e-11
+  (sym20) and are kept as they are; reconstruction is exact to that accuracy
+  (worst over N 512-2048 and packet depths up to 7: 6.7e-13, 1.4e-12,
+  5.5e-11, 4.3e-10), the Daubechies and Coiflets to 4e-15.
+
+### Added
+
+- **Wavelet-packet bases.** `WaveletTransform(N, wt, packetDepth)` transforms
+  a window at the uniform level D of the mother's wavelet-packet tree: 2^D
+  bands of width fs / 2^(D+1), N / 2^D coefficients each, written in frequency
+  order, band f at indices [f N / 2^D, (f+1) N / 2^D). Every split is GSL's own
+  periodized step, so depth 1 is the pyramid's finest step coefficient for
+  coefficient, and the level is orthonormal: the inverse reconstructs the
+  window and the coefficient energy is its energy. Depth 0 is the pyramid.
+  `GetPacketDepth()` and `GetLength()` report the level and the window.
+- **`WDF2Classify::SetBases(names)` and `GetBases()`.** The candidates of the
+  basis competition are a comma-separated list, in the order they compete (a
+  tie goes to the later one): a mother (`Haar`, `DaubC4` to `DaubC20`, `Sym4`,
+  `Sym8`, `Coif1`, `Coif2`) for its pyramid, or a mother followed by `P` and a
+  depth, as `Coif1P6`, for that packet level. An unknown or repeated name, an
+  empty list or a depth above log2 of the window raises `ValueError`. The
+  default is the ten pyramid bases of 3.0.0. The winner's name is the trigger's
+  `mWave`.
+- **The block rule follows the packet layout.**
+  `WaveletThreshold::SetLayout(packetDepth)` tells the rule where the runs of
+  coefficients lie: at depth 0 the pyramid's levels, index 0, index 1 and
+  [2^k, 2^(k+1)), exactly as before; at depth D the 2^D bands. Each run is cut
+  into blocks of L from its first index, so no block crosses a band edge.
+  `WDF2Classify` sets the layout of each candidate before thresholding it.
+  Under the block rule `SetBases` refuses a packet depth whose bands are
+  shorter than one block, N / 2^D < L, where the 4.505 calibration of lambda
+  does not hold: for a window of 512, L = 6 and depths 1 to 6 are accepted,
+  7 to 9 refused. The other rules accept every depth.
+
+### Fixed
+
+- **A copy of `WaveletThreshold` owns its work buffers.** They were raw arrays
+  with the compiler's shallow copy, so copying a `WDF2Classify` (its copy
+  constructor or `assign`) left two objects freeing the same memory, and the
+  process aborted with a double free. They are now `std::vector`s.
+- **`WaveletTransform` copies.** The copy constructor and assignment did
+  nothing, leaving the GSL handles uninitialized; a copy is now a transform of
+  the same length, mother and packet level with handles of its own.
+- **`WaveletTransform::WaveletWaveform` inverts at the transform's packet
+  level**, rather than always through the pyramid, and frees its buffer with
+  `delete[]`. It is now bound in Python and returns the waveform.
+
+### Notes for downstream users
+
+Trigger values do not move: with the default bases every candidate is a
+pyramid, whose block ladder is unchanged bit for bit. Once `SetBases` admits
+packet bases, `mWave` can carry names such as `Coif1P6`, which a reader must
+invert with `WaveletTransform(N, mother, depth)`; a reader that looks the name
+up as a `WaveletType` fails on them. `WDF2Reconstruct` keeps its fixed pyramid
+candidates.
+
 ## 3.3.0
 
 ### Added
