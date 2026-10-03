@@ -87,7 +87,34 @@ namespace tsa {
             {"DaubC40", WaveletTransform::DaubC40},
         };
 
+        // "LocalCos" followed by a segment length M, a power of 2 from 2 to
+        // the window: the orthonormal local cosine basis of segment M
+        // (WaveletTransform's LocalCos, Coifman-Meyer bell of half-width
+        // M / 2, periodic edges), laid out as the packet level of depth
+        // log2 M. The name does not end in P<digits>, so it never reads as a
+        // packet level.
+        const char kLocalCos[] = "LocalCos";
+
         WDF2Classify::Basis ParseBasis(const std::string& name, unsigned int window) {
+            const std::size_t prefix = sizeof(kLocalCos) - 1;
+            if (name.compare(0, prefix, kLocalCos) == 0) {
+                const std::string digits = name.substr(prefix);
+                if (digits.empty() || digits.size() > 9 || digits[0] == '0' ||
+                    digits.find_first_not_of("0123456789") != std::string::npos) {
+                    throw std::invalid_argument("WDF2Classify: unknown basis " + name +
+                                                " (LocalCos takes a segment length, as LocalCos128)");
+                }
+                const unsigned long M = std::stoul(digits);
+                if (M < 2 || (M & (M - 1)) != 0 || M > window) {
+                    throw std::invalid_argument("WDF2Classify: the segment length of " + name +
+                                                " must be a power of 2 from 2 to the window");
+                }
+                unsigned int depth = 0;
+                while ((1ul << depth) < M) {
+                    ++depth;
+                }
+                return WDF2Classify::Basis{name, WaveletTransform::LocalCos, depth};
+            }
             std::string mother = name;
             unsigned int depth = 0;
             const std::size_t p = name.rfind('P');
@@ -212,11 +239,15 @@ namespace tsa {
                     }
                 }
                 specs.push_back(ParseBasis(name, mWindow));
-                // Under the block rule every band must hold at least one full
-                // block of L, the length lambda = 4.505 is calibrated for.
+                // Under the block rule every band (a packet level's) or row
+                // (a local cosine's: one DCT-IV bin over the N / M segments)
+                // must hold at least one full block of L, the length
+                // lambda = 4.505 is calibrated for: N / 2^D >= L. For
+                // LocalCos M this is M <= N / L: at N 1024 (L 7) M <= 128,
+                // at N 512 (L 6) M <= 64, at N 2048 (L 8) M <= 256.
                 if (specs.back().depth > 0 && mT == WaveletThreshold::block &&
                     (mWindow >> specs.back().depth) < mWavThres.GetBlockLength()) {
-                    throw std::invalid_argument("WDF2Classify: the bands of packet basis " + name +
+                    throw std::invalid_argument("WDF2Classify: the bands (rows) of basis " + name +
                                                 " are shorter than one block of the block rule");
                 }
             }

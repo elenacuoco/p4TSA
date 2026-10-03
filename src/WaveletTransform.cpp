@@ -20,6 +20,14 @@ namespace tsa {
 
     WaveletTransform::WaveletTransform(unsigned int N, enum WaveletType wt)
     :
+    WaveletTransform(N, wt, Unchecked()) {
+        if (wt == LocalCos) {
+            throw std::invalid_argument("WaveletTransform: LocalCos needs a segment length, WaveletTransform(N, LocalCos, log2 M)");
+        }
+    }
+
+    WaveletTransform::WaveletTransform(unsigned int N, enum WaveletType wt, Unchecked)
+    :
     mN(N),
     mDepth(0),
     mType(wt) {
@@ -217,10 +225,40 @@ namespace tsa {
     // built by the pyramid's constructor and only its depth and buffers added.
     WaveletTransform::WaveletTransform(unsigned int N, enum WaveletType wt, unsigned int packetDepth)
     :
-    WaveletTransform(PacketLength(N, packetDepth), wt) {
+    WaveletTransform(PacketLength(N, packetDepth), wt, Unchecked()) {
         mDepth = packetDepth;
-        mScratch.assign(mN, 0.0);
-        mOrder.assign(mN, 0.0);
+        if (wt == LocalCos) {
+            if (packetDepth == 0) {
+                throw std::invalid_argument("WaveletTransform: LocalCos needs a segment length 2^packetDepth of at least 2");
+            }
+            mCos.reset(new LocalCosineTransform(mN, 1u << packetDepth));
+        } else {
+            mScratch.assign(mN, 0.0);
+            mOrder.assign(mN, 0.0);
+        }
+    }
+
+    // A window of another length: the GSL workspace, the packet buffers and
+    // the local cosine basis follow it; the level must still fit.
+    void WaveletTransform::Resize(unsigned int N) {
+        LogWarning("WaveletTransform: the size of input data is different from the size of the working space. Resizing it");
+        if ((static_cast<std::size_t>(1) << mDepth) > N) {
+            throw std::invalid_argument("WaveletTransform: the packet level exceeds log2 of the window length");
+        }
+        std::unique_ptr<LocalCosineTransform> cosine;
+        if (mCos) {
+            cosine.reset(new LocalCosineTransform(N, mCos->GetSegment()));
+        }
+        gsl_wavelet_workspace* work = gsl_wavelet_workspace_alloc(N);
+        gsl_wavelet_workspace_free(mWork);
+        mWork = work;
+        mN = N;
+        if (mCos) {
+            mCos = std::move(cosine);
+        } else if (mDepth > 0) {
+            mScratch.assign(mN, 0.0);
+            mOrder.assign(mN, 0.0);
+        }
     }
     ///
     /// Destructor
@@ -246,23 +284,16 @@ namespace tsa {
             LogWarning("WaveletTransform: multichannel yet not implemented. Working on first channel");
         }
         if (In.size2() != mN) {
-            mN = In.size2();
-            LogWarning("WaveletTransform: the size of input data is different from the size of the working space. Resizing it");
-            mWork = gsl_wavelet_workspace_alloc(In.size2());
-            if (mDepth > 0) {
-                if ((static_cast<std::size_t>(1) << mDepth) > mN) {
-                    throw std::invalid_argument("WaveletTransform: the packet level exceeds log2 of the window length");
-                }
-                mScratch.assign(mN, 0.0);
-                mOrder.assign(mN, 0.0);
-            }
+            Resize(static_cast<unsigned int>(In.size2()));
         }
         double *data = new double[ mN ];
         for (unsigned int i = 0; i < mN; i++) {
             data[ i ] = In(0, i);
         }
 
-        if (mDepth == 0) {
+        if (mCos) {
+            mCos->Forward(data);
+        } else if (mDepth == 0) {
             gsl_wavelet_transform_forward(mW, data, 1, mN, mWork);
         } else {
             PacketForward(data);
@@ -279,23 +310,16 @@ namespace tsa {
             LogWarning("WaveletTransform: multichannel yet not implemented. Working on first channel");
         }
         if (In.size2() != mN) {
-            mN = In.size2();
-            LogWarning("WaveletTransform: the size of input data is different from the size of the working space. Resizing it");
-            mWork = gsl_wavelet_workspace_alloc(In.size2());
-            if (mDepth > 0) {
-                if ((static_cast<std::size_t>(1) << mDepth) > mN) {
-                    throw std::invalid_argument("WaveletTransform: the packet level exceeds log2 of the window length");
-                }
-                mScratch.assign(mN, 0.0);
-                mOrder.assign(mN, 0.0);
-            }
+            Resize(static_cast<unsigned int>(In.size2()));
         }
         double* data = new double[ mN ];
         for (unsigned int i = 0; i < mN; i++) {
             data[ i ] = In(0, i);
         }
 
-        if (mDepth == 0) {
+        if (mCos) {
+            mCos->Inverse(data);
+        } else if (mDepth == 0) {
             gsl_wavelet_transform_inverse(mW, data, 1, mN, mWork);
         } else {
             PacketInverse(data);
@@ -404,10 +428,13 @@ namespace tsa {
     // mother, length and packet level rather than sharing the original's.
     WaveletTransform::WaveletTransform(const WaveletTransform& from)
     :
-    WaveletTransform(from.mN, from.mType) {
+    WaveletTransform(from.mN, from.mType, Unchecked()) {
         mDepth = from.mDepth;
         mScratch = from.mScratch;
         mOrder = from.mOrder;
+        if (from.mCos) {
+            mCos.reset(new LocalCosineTransform(*from.mCos));
+        }
     }
 
 
@@ -429,6 +456,7 @@ namespace tsa {
             std::swap(mType, copy.mType);
             std::swap(mScratch, copy.mScratch);
             std::swap(mOrder, copy.mOrder);
+            std::swap(mCos, copy.mCos);
         }
         return * this;
     }
@@ -436,6 +464,11 @@ namespace tsa {
     ///
 
     void WaveletTransform::WaveletPrint() {
+        if (mCos) {
+            printf("Local cosine: segment %u, bell half-width %u, periodic edges, DCT-IV\n",
+                   mCos->GetSegment(), mCos->GetOverlap());
+            return;
+        }
         size_t n = mW->nc;
         size_t i;
 
@@ -465,7 +498,9 @@ namespace tsa {
         }
 
         data[ 22 ] = 1.0;
-        if (mDepth == 0) {
+        if (mCos) {
+            mCos->Inverse(data);
+        } else if (mDepth == 0) {
             gsl_wavelet_transform_inverse(mW, data, 1, mN, mWork);
         } else {
             PacketInverse(data);

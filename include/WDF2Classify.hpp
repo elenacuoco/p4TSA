@@ -251,11 +251,22 @@ namespace tsa {
         /// trigger records the winner's name, which is what a reader needs to
         /// place and invert its coefficients.
         ///
+        /// "LocalCos" followed by a segment length M, a power of 2 (as
+        /// "LocalCos128"), is the orthonormal local cosine basis of segment M
+        /// (WaveletTransform's LocalCos: Coifman-Meyer bell of half-width
+        /// M / 2, periodic window edges, DCT-IV per segment), written
+        /// frequency-major so that it has the layout of the packet level of
+        /// depth log2 M: row k is DCT-IV bin k, centre (k + 1/2) fs / (2M),
+        /// over the N / M segments in time order. No LocalCos is in the
+        /// default list.
+        ///
         /// Under the block rule the blocks of a packet basis are cut band by
         /// band (see WaveletThreshold::SetLayout), so a packet depth D is
         /// accepted only while each band of window / 2^D coefficients holds
         /// one full block of L = round(ln window): for a window of 512, L = 6
-        /// and D is at most 6.
+        /// and D is at most 6. The same holds for the rows of LocalCos M,
+        /// D = log2 M: M <= 64 at a window of 512, M <= 128 at 1024 (L = 7),
+        /// M <= 256 at 2048 (L = 8).
         ///
         /// @param names comma-separated candidate names
         /// @exception std::invalid_argument on an unknown or repeated name,

@@ -34,6 +34,7 @@
 #include <gsl/gsl_wavelet.h>
 #include <gsl/gsl_errno.h>
 #include <cstddef>
+#include <memory>
 #include <vector>
 //@}
 
@@ -42,6 +43,7 @@
 ///
 //@{
 #include <ExtraWaveletFamilies.hpp>
+#include <LocalCosine.hpp>
 //@}
 
 ///
@@ -144,11 +146,18 @@ namespace tsa {
             Coif5,
             DaubC24,
             DaubC32,
-            DaubC40
+            DaubC40,
+            // Not a wavelet: the orthonormal local cosine basis of segment
+            // length M = 2^packetDepth (see the packet constructor), appended
+            // so the values above keep their numbers.
+            LocalCos
         };
 
         ///
         /// Constructor: the pyramidal (Mallat) transform, GSL's packed layout.
+        ///
+        /// @exception std::invalid_argument for LocalCos, which needs a
+        ///            segment length (the packet constructor)
         ///
         WaveletTransform(unsigned int N, enum WaveletType wt);
 
@@ -174,12 +183,23 @@ namespace tsa {
         /// x. The cost is D N nc multiply-adds, linear in N, with a data
         /// independent sequence of operations and a fixed latency.
         ///
+        /// With `wt` equal to LocalCos the transform is not a wavelet one but
+        /// the local cosine basis of segment length M = 2^packetDepth (see
+        /// LocalCosineTransform: Coifman-Meyer bell of half-width M / 2,
+        /// periodic window edges, orthonormal DCT-IV per segment), its
+        /// coefficients written frequency-major: row k, indices
+        /// [k N / M, (k+1) N / M), is DCT-IV bin k, of centre
+        /// (k + 1/2) fs / (2M), over the N / M segments in time order. That is
+        /// the layout of the packet level of the same depth, 2^D rows of
+        /// N / 2^D, so GetPacketDepth() gives the threshold its layout as it
+        /// does for a packet level. packetDepth must be at least 1.
+        ///
         /// @param N window length, a power of 2
-        /// @param wt mother wavelet
+        /// @param wt mother wavelet, or LocalCos
         /// @param packetDepth 0 for the pyramid, else the packet level, at
-        ///        most log2(N)
-        /// @exception std::invalid_argument when N is not a power of 2 or
-        ///            packetDepth exceeds log2(N)
+        ///        most log2(N); for LocalCos log2 of the segment length
+        /// @exception std::invalid_argument when N is not a power of 2,
+        ///            packetDepth exceeds log2(N), or is 0 for LocalCos
         ///
         WaveletTransform(unsigned int N, enum WaveletType wt, unsigned int packetDepth);
 
@@ -257,6 +277,21 @@ namespace tsa {
             return mDepth;
         }
 
+        ///
+        /// True for the local cosine basis (wt LocalCos).
+        ///
+        bool IsLocalCosine() const {
+            return static_cast<bool>(mCos);
+        }
+
+        ///
+        /// The local cosine segment length 2^GetPacketDepth(), 0 for a
+        /// wavelet transform.
+        ///
+        unsigned int GetCosineSegment() const {
+            return mCos ? mCos->GetSegment() : 0u;
+        }
+
         //@}
 
         ///
@@ -270,6 +305,11 @@ namespace tsa {
     protected:
 
     private:
+        struct Unchecked {};
+        // Allocates the GSL handles of a mother (Haar's for LocalCos, which
+        // has none and never uses them) without validating anything.
+        WaveletTransform(unsigned int N, enum WaveletType wt, Unchecked);
+        void Resize(unsigned int N);
         void PacketForward(double* data);
         void PacketInverse(double* data);
         void Step(double* a, std::size_t n, bool forward);
@@ -281,6 +321,7 @@ namespace tsa {
         enum WaveletType mType; ///< mother, from which a copy is rebuilt
         std::vector<double> mScratch; ///< one band of the packet step
         std::vector<double> mOrder; ///< the tree in natural order
+        std::unique_ptr<LocalCosineTransform> mCos; ///< set for LocalCos only
     };
 
     ///

@@ -22,6 +22,74 @@
 
 ### Added
 
+- **Local cosine bases and cosine packets** (`include/LocalCosine.hpp`).
+  - `LocalCosineTransform(N, M, overlap=M/2, edge=periodic, bell=coifmanMeyer)`
+    is the orthonormal local cosine basis of segment length M, a power of 2
+    that divides N. At every segment edge the 2 eps samples about the edge
+    are folded with the cut-off r(t) = sin(pi/4 (1 + beta(t))), sampled at
+    t = (j + 1/2)/eps. The Coifman-Meyer bell takes beta to be
+    sin(pi t / 2) iterated three times; the `sine` bell takes beta(t) = t
+    (the MDCT window). eps <= M/2.
+  - Each segment then gets its DCT-IV: FFTW_REDFT11 scaled by 1/sqrt(2M),
+    that is sqrt(2/M) sum y_n cos(pi/M (n + 1/2)(k + 1/2)). It is
+    orthonormal and its own inverse.
+  - Window edges. `periodic` also folds at 0 = N, wrapping round, as the
+    periodized DWT treats the window as a circle. `free` puts no bell at 0
+    and N (the classic basis of an interval). Both are orthonormal.
+  - Layout. `Forward`/`Inverse` are frequency-major: index k N/M + j is
+    bin k of segment j, the layout of a packet level of depth log2 M.
+    `ForwardSegments`/`InverseSegments` are segment-major.
+  - These are the conventions of the catalogue's `scripts/bases_windows.py`
+    (`bell`, `local_cosine`): bell, fold signs, half-width M/2 and
+    bin-major layout. The two agree to 1.8e-15 for M 32-512 at N 512-2048.
+    `free`, and eps < M/2 for the `sine` bell, are additions.
+  - `CosinePackets(N, minSegment, maxSegment=N, overlap=minSegment/2, ...)`
+    holds the dyadic segmentation tree of the window, segments maxSegment
+    down to minSegment. Every edge has the same bell half-width, so any
+    segmentation made of tree nodes is an orthonormal basis.
+  - `BestBasis(x, cost, sigma)` is Coifman-Wickerhauser's bottom-up search
+    for the minimum of an additive cost; a node splits only when its
+    children cost strictly less. The costs:
+    - `l1`: sum |c|;
+    - `entropy`: -sum p ln p, p = c^2/|x|^2;
+    - `wdfUniversal`: WDF's statistic as a negative gain,
+      -sum (c/sigma)^2 over |c| > sqrt(2 ln N) sigma;
+    - `wdfBlock`: -kept energy/sigma^2 of the block rule run along each
+      segment's bins, L = round(ln N), lambda 4.505.
+
+    sigma <= 0 takes median |c|/0.6745 of the finest level. With segments
+    1024 down to 64 and eps 32, the WDF costs reproduce the segmentation of
+    the catalogue's `cospkt_best` (`scripts/single_chirp_optimal.py`,
+    sigma "mad") for every window tested.
+  - Results: `GetSegmentation()` (lengths in time order) and
+    `GetCoefficients()` (segment by segment, bins in frequency order).
+    `Analyse`/`Inverse` work for any segmentation, and the node and best
+    costs can be read.
+- **`LocalCos<M>` candidates in the basis competition.**
+  - `WaveletType` gains `LocalCos`, appended so the other values keep their
+    numbers. `WaveletTransform(N, LocalCos, D)` is the local cosine basis of
+    segment 2^D: Coifman-Meyer, eps = M/2, periodic, frequency-major.
+  - `GetPacketDepth()` = D gives the threshold the packet layout it needs,
+    so every rule, sigma and EnWDF work unchanged.
+  - `SetBases` accepts `LocalCos64`, `LocalCos128`, ...: a power of 2 from 2
+    to the window. The name never ends in `P<digits>`. None is in the
+    default list.
+  - Under the block rule each row of N/M coefficients must hold one block of
+    L = round(ln N), so M <= N/L: 64 at N 512, 128 at N 1024, 256 at N 2048.
+- **Why the 2006 DCT failed as a candidate** (`DCT.hpp`, removed from
+  `WDF2Classify` in adfaffa).
+  - It was a global DCT-II (FFTW_REDFT10) over the whole window. It had no
+    time localisation: every coefficient spans the window.
+  - It was not orthonormal. The window was first tapered by
+    `Cs2HammingWindow`. FFTW's unnormalised REDFT10 (2 sum ...) was then
+    rescaled by sqrt(2/N), with an extra sqrt(1/2) on the DC bin: twice the
+    orthonormal scale. `DCT::operator()` sets the scale to Sampling/Size.
+  - So sigma and EnWDF were not on the wavelets' noise scale, and the
+    competition was not fair.
+  - It had no bells and no folding. The local cosine above is what that
+    candidate should have been: windowed without losing orthonormality, and
+    local in time.
+
 - **Long mothers.** `WaveletType` gains `Sym10`, `Sym12`, `Sym16`, `Sym20`,
   `Coif3`, `Coif4`, `Coif5` and `DaubC24`, `DaubC32`, `DaubC40` (PyWavelets'
   db12, db16, db20; GSL's own centred Daubechies stop at 20 taps), 18 to 40
@@ -37,6 +105,63 @@
   (sym20) and are kept as they are; reconstruction is exact to that accuracy
   (worst over N 512-2048 and packet depths up to 7: 6.7e-13, 1.4e-12,
   5.5e-11, 4.3e-10), the Daubechies and Coiflets to 4e-15.
+
+### Caveat for wdflow (not changed here)
+
+- wdflow reads a trigger's layout only from `mWave`, through
+  `wdf/analysis/wavelets.py packet_depth` (wdflow-packets). Today it reads
+  `LocalCos128` as a pyramid: every tile is placed silently on the pyramid's
+  geometry.
+- `reconstruction.py` does `getattr(WaveletTransform, "LocalCos128")`, which
+  raises.
+- Before a `LocalCos<M>` trigger reaches wdflow, two changes are needed:
+  - `packet_depth` must return log2 M for `LocalCos<M>`; the tile layout is
+    then the depth-D packet one, with the nominal supports ignoring the
+    +-M/2 bell overlap;
+  - reconstruction must use `WaveletTransform(n, LocalCos, log2 M)`.
+
+### Not implemented: adaptive cosine packets in the competition
+
+A best-basis segmentation chosen per window gives rows of different lengths
+(segment m has m bins), which a single depth cannot describe. It would need
+the following.
+
+- **`WaveletThreshold`.** The layout becomes an explicit list of runs
+  (start, length) rather than a depth, e.g. `SetLayout(std::vector<run>)`.
+  - `BlockThreshold` already loops over runs from a generator, so only the
+    generator changes.
+  - A run is either one segment's bins (blocks along frequency, as the
+    catalogue's `cospkt` and `CosinePackets::wdfBlock` do), or one bin
+    across consecutive segments of equal length. That has to be decided.
+  - sigma (median over all N) and the universal rule are unaffected.
+- **`WDF2Classify`.**
+  - A candidate kind holding a `CosinePackets` whose forward step chooses the
+    segmentation (`BestBasis` with the cost of the rule in force) and returns
+    its runs. `GetDataVector` calls `SetLayout(runs)` for it instead of
+    `SetLayout(GetPacketDepth())`.
+  - Since `Forward`/`Inverse` are not virtual, `mBases` would need a variant
+    or a small interface over `WaveletTransform`.
+  - The block-length check moves to minSegment: each run must hold a block.
+  - The choice is a second search inside a candidate, so the EnWDF it
+    competes with is a maximum over segmentations. Its noise distribution
+    differs from that of a fixed basis, and the threshold would need
+    recalibrating.
+- **Trigger schema.**
+  - `mWave` is today the whole layout contract; `mlevel` is the index of the
+    largest coefficient and carries no layout.
+  - The segmentation (lengths in time order) must travel with the event:
+    either a new `EventFullFeatured` field (vector of lengths, bound in
+    py4tsa and mirrored in wdflow's `eventPE` and its Arrow schema), or
+    encoded in the name (`CosPkt64:256/64/64/128/512`).
+- **wdflow geometry.**
+  - `coeff_levels`, `coeff_freq_bands` and `coeff_time_bounds` (wavelets.py)
+    assume rows of `n >> depth`. They need a segmentation branch: segment
+    start a and length m, bin k gives [a, a+m)/fs x [k, k+1) fs/(2m).
+  - The integer-depth group and cache keys in `detector_graph.py` and
+    `scale.py` become the segmentation, or the `wave` string.
+  - Reconstruction calls `CosinePackets.Inverse(c, segmentation)`.
+  - Everything downstream of the tile edges (`ladder_rows`, ridge,
+    pixel graph, wavegram match) is already layout-agnostic.
 
 ### Added
 
