@@ -32,7 +32,9 @@ namespace tsa {
             mC(0.0),
             mBlockLength(0),
             mBlockLambda(4.505),
-            mDepth(0) {
+            mDepth(0),
+            mMinFrequency(0.0),
+            mFs(0.0) {
     }
     ///
     /// Destructor
@@ -42,6 +44,11 @@ namespace tsa {
     }
 
     void WaveletThreshold::operator()(SeqViewDouble &WT, enum WaveletThresholding t, enum ThresholdingMode m) {
+        if (mMinFrequency > 0.0) {
+            // the low-frequency cut (SetMinFrequency); off, the code below runs unchanged
+            CutThreshold(WT, t, m);
+            return;
+        }
         for (unsigned int i = 0; i < mN; i++) {
             mAbsCoeff[i] = fabs(WT(0, i));
         }
@@ -123,6 +130,11 @@ namespace tsa {
     }
 
     void WaveletThreshold::operator()(Dmatrix &WT, enum WaveletThresholding t, enum ThresholdingMode m) {
+        if (mMinFrequency > 0.0) {
+            // the low-frequency cut (SetMinFrequency); off, the code below runs unchanged
+            CutThreshold(WT, t, m);
+            return;
+        }
         for (unsigned int i = 0; i < mN; i++) {
             mAbsCoeff[i] = fabs(WT(0, i));
         }

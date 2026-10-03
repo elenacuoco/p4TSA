@@ -230,6 +230,63 @@ namespace tsa {
         unsigned int GetLayout() const {
             return mDepth;
         }
+
+        ///
+        /// Leave out the coefficients whose tile lies at or below fHz.
+        ///
+        /// A coefficient is dropped when the upper frequency edge of its run
+        /// in the layout (see SetLayout) is <= fHz. That edge is
+        /// (fs / 2) e / N, with e the index just past the run: for the
+        /// pyramid index 0 reaches fs / 2N, index 1 fs / N and the level
+        /// [2^k, 2^(k+1)) reaches 2^k fs / N; for packet depth D (and the
+        /// local cosine of segment M = 2^D, whose rows have the same
+        /// layout) band f reaches (f + 1) fs / 2^(D+1). At N 1024, fs 2048
+        /// and fHz 16 this drops pyramid indices 0-15, packet depth 6 band 0
+        /// (16 Hz wide) and LocalCos128 rows 0-1 (8 Hz wide).
+        ///
+        /// A dropped coefficient is zeroed before thresholding, so it is out
+        /// of sigma (the median of |coefficient| is taken over the kept
+        /// ones), out of the block rule, out of the largest coefficient
+        /// (GetLevel, GetCm) and out of any energy read afterwards (WDF's
+        /// EnWDF). The universal threshold of dohonojohnston and cuoco
+        /// counts the kept coefficients, sqrt(2 ln n_kept).
+        ///
+        /// fHz <= 0 switches the cut off (the default): the coefficients go
+        /// through the original code path, bit for bit.
+        ///
+        /// @exception std::invalid_argument when fs <= 0 with fHz > 0, or
+        ///            when fHz is at or above fs / 2 (nothing would be kept)
+        ///
+        void SetMinFrequency(double fHz, double fs) {
+            if (fHz > 0.0) {
+                if (!(fs > 0.0)) {
+                    throw std::invalid_argument("WaveletThreshold: the sampling rate must be positive");
+                }
+                if (fHz >= 0.5 * fs) {
+                    throw std::invalid_argument("WaveletThreshold: the minimum frequency must be below fs / 2");
+                }
+                mMinFrequency = fHz;
+                mFs = fs;
+            } else {
+                mMinFrequency = 0.0;
+                mFs = 0.0;
+            }
+        }
+
+        double GetMinFrequency() const {
+            return mMinFrequency;
+        }
+
+        ///
+        /// Whether coefficient i is kept under the current layout and
+        /// minimum frequency (always true with the cut off).
+        ///
+        bool IsKept(unsigned int i) const {
+            if (mMinFrequency <= 0.0) {
+                return true;
+            }
+            return 0.5 * mFs * static_cast<double>(RunEnd(i)) / static_cast<double>(mN) > mMinFrequency + 1e-9;
+        }
         //@}
 
 
@@ -254,6 +311,16 @@ namespace tsa {
                 mOrd[i] = fabs(WT(0, mP[i]));
             mMedian = gsl_stats_median_from_sorted_data(mOrd.data(), 1, mN);
             mSigma = mMedian / 0.6745;
+            BlockRuns(WT);
+        }
+
+        ///
+        /// The block loop of the block rule, on the sigma already set: every
+        /// run of the layout cut into blocks of L, each kept or zeroed on its
+        /// energy against lambda L sigma^2.
+        ///
+        template <class Coefficients>
+        void BlockRuns(Coefficients& WT) {
             const unsigned int L = GetBlockLength();
             const double energyPerCoefficient = mBlockLambda * mSigma * mSigma;
             mThresh = energyPerCoefficient;
@@ -277,6 +344,90 @@ namespace tsa {
             }
         }
 
+        ///
+        /// The index just past the run (pyramid level or packet band) that
+        /// holds coefficient i.
+        ///
+        unsigned int RunEnd(unsigned int i) const {
+            if (mDepth > 0) {
+                const unsigned int band = mN >> mDepth;
+                return (i / band + 1) * band;
+            }
+            if (i < 2) {
+                return i + 1;
+            }
+            unsigned int e = 2;
+            while (e <= i) {
+                e <<= 1;
+            }
+            return e;
+        }
+
+        ///
+        /// Every rule with the minimum frequency on (see SetMinFrequency):
+        /// the dropped coefficients are zeroed first, then sigma, the
+        /// largest coefficient and the thresholds are read on the kept ones.
+        ///
+        template <class Coefficients>
+        void CutThreshold(Coefficients& WT, enum WaveletThresholding t, enum ThresholdingMode m) {
+            unsigned int nk = 0;
+            for (unsigned int i = 0; i < mN; i++) {
+                if (IsKept(i)) {
+                    mOrd[nk++] = fabs(WT(0, i));
+                } else {
+                    WT(0, i) = 0.0;
+                }
+            }
+            mlevel = 0;
+            mC = 0.0;
+            for (unsigned int i = 0; i < mN; i++) {
+                if (fabs(WT(0, i)) > mC) {
+                    mC = fabs(WT(0, i));
+                    mlevel = static_cast<int>(i);
+                }
+            }
+            if (nk == 0) {
+                mSigma = 0.0;
+                return;
+            }
+            if (t == dohonojohnston || t == block) {
+                std::sort(mOrd.begin(), mOrd.begin() + nk);
+                mMedian = gsl_stats_median_from_sorted_data(mOrd.data(), 1, nk);
+                mSigma = mMedian / 0.6745;
+            }
+            switch (t) {
+                case dohonojohnston:
+                case cuoco: {
+                    mThresh = sqrt(2 * log(static_cast<double>(nk))) * mSigma;
+                    for (unsigned int i = 0; i < mN; i++) {
+                        const double a = fabs(WT(0, i));
+                        if (m == hard) {
+                            if (a <= mThresh)
+                                WT(0, i) = 0.0;
+                        } else if (a < mThresh) {
+                            WT(0, i) = 0.0;
+                        } else {
+                            WT(0, i) += (WT(0, i) > 0) ? -mThresh : mThresh;
+                        }
+                    }
+                    break;
+                }
+                case block:
+                    BlockRuns(WT);
+                    break;
+                default: {
+                    // highest: zero the mNcoeff smallest kept coefficients
+                    for (unsigned int i = 0; i < mN; i++)
+                        mAbsCoeff[i] = IsKept(i) ? fabs(WT(0, i)) : -1.0;
+                    gsl_sort_index(mP.data(), mAbsCoeff.data(), 1, mN);
+                    const unsigned int skip = mN - nk;
+                    for (unsigned int i = 0; i < mNcoeff && skip + i < mN; i++)
+                        WT(0, mP[skip + i]) = 0.0;
+                    break;
+                }
+            }
+        }
+
         std::vector<double> mAbsCoeff;
         std::vector<size_t> mP;
         std::vector<size_t> mPAC;
@@ -291,6 +442,8 @@ namespace tsa {
         unsigned int mBlockLength;
         double mBlockLambda;
         unsigned int mDepth; ///< layout of the block rule, 0 for the pyramid
+        double mMinFrequency; ///< coefficients at or below it are dropped, 0 for none
+        double mFs;           ///< sampling rate the minimum frequency is read with
 
 
     };

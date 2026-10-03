@@ -22,6 +22,35 @@
 
 ### Added
 
+- **A low-frequency cut in the threshold: `WaveletThreshold::SetMinFrequency(fHz, fs)`
+  and `WDF2Classify::SetMinFrequency(fHz, fs)`** (bound in py4tsa, with
+  `GetMinFrequency` and `WaveletThreshold.IsKept(i)`).
+  - A coefficient is dropped when the upper frequency edge of its run in the
+    layout is <= fHz. The edge is (fs / 2) e / N, with e the index just past
+    the run: pyramid levels {0}, {1}, [2^k, 2^(k+1)); packet bands of depth D;
+    LocalCos M rows (depth log2 M, row width fs / 2M). At N 1024, fs 2048 and
+    16 Hz it drops pyramid indices 0-15, packet depth 6 band 0 and LocalCos128
+    rows 0-1.
+  - Dropped coefficients are zeroed before thresholding: out of sigma (median
+    of |c| over the kept ones / 0.6745), out of the block rule, out of the
+    largest coefficient (`GetLevel`, `GetCm`) and out of WDF's window
+    statistic (EnWDF); the trigger holds zeros there. The universal threshold
+    (`dohonojohnston`, `cuoco`) counts the kept coefficients,
+    sqrt(2 ln n_kept).
+  - Why: on real O4/O2/O1 data the 0-16 Hz levels of a full-band whitened
+    stream carry seismic residuals that fire windows by themselves. Cutting
+    them halved the H1-L1 time-slide pair rate on three events at no loss on
+    GW150914 (catalogue study of 3 Oct 2026, done with a numpy port; this is
+    that port in C++).
+  - Off by default (fHz <= 0): the code path is the original one, and the
+    triggers equal those of acedc0d bit for bit (checked on 6400 real
+    whitened windows of GW150914 and GW170817, H1 and L1, with the default
+    list and with the default list plus LocalCos128). With 16 Hz on the same
+    windows, winner and EnWDF equal the catalogue port to 3.6e-15.
+  - Tests: `python-wrapper/tests/test_08_min_frequency.py` (the kept mask per
+    layout, the threshold and the competition against a numpy reference for
+    both rules, the off switch bit for bit, copies, invalid arguments).
+
 - **Local cosine bases and cosine packets** (`include/LocalCosine.hpp`).
   - `LocalCosineTransform(N, M, overlap=M/2, edge=periodic, bell=coifmanMeyer)`
     is the orthonormal local cosine basis of segment length M, a power of 2

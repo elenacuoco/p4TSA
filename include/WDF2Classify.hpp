@@ -275,6 +275,30 @@ namespace tsa {
         ///            one block.
         void SetBases(const std::string& names);
 
+        /// Leave the coefficients at or below fHz out of the competition.
+        ///
+        /// Every candidate drops the coefficients whose tile's upper
+        /// frequency edge is <= fHz, read on its own layout (pyramid levels,
+        /// packet bands, LocalCos rows; see WaveletThreshold::SetMinFrequency):
+        /// they are out of the window's sigma, out of the block rule and out
+        /// of EnWDF, and the trigger's coefficients hold zero there. At
+        /// window 1024 and fs 2048, fHz 16 drops pyramid indices 0-15 and
+        /// LocalCos128 rows 0-1. fHz <= 0, the default, keeps every
+        /// coefficient and leaves the classifier bit for bit as without it.
+        ///
+        /// @param fHz minimum frequency in Hz, <= 0 for none
+        /// @param fs  sampling rate of the searched stream in Hz
+        /// @exception std::invalid_argument when fs <= 0 with fHz > 0, or
+        ///            fHz >= fs / 2
+        void SetMinFrequency(double fHz, double fs) {
+            mWavThres.SetMinFrequency(fHz, fs);
+        }
+
+        /// The minimum frequency in Hz, 0 when every coefficient is kept.
+        double GetMinFrequency() const {
+            return mWavThres.GetMinFrequency();
+        }
+
 
 
         //@}
