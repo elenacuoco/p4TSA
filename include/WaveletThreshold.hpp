@@ -48,6 +48,7 @@
 /// @name Local includes
 ///
 //@{
+#include <gsl/gsl_cdf.h>
 #include <gsl/gsl_sort.h>
 #include <gsl/gsl_statistics.h>
 
@@ -67,6 +68,7 @@
 #include <algorithm>
 #include <cmath>
 #include <stdexcept>
+#include <string>
 #include <vector>
 
 namespace tsa {
@@ -122,6 +124,35 @@ namespace tsa {
         enum ThresholdingMode {
             hard,
             soft
+        };
+
+        ///
+        /// How the block rule judges a block shorter than L: the remainder
+        /// of 1 ... L-1 coefficients at the end of a run, or a whole run
+        /// shorter than L (the pyramid's coarse levels of 1, 1, 2 and 4).
+        ///
+        /// @c legacy (the default) judges it like a full block, against
+        /// lambda n sigma^2 for its n coefficients. Its false-alarm
+        /// probability grows as n falls: a single coefficient survives at
+        /// |c| > sqrt(lambda) sigma, P(chi2_1 > 4.505) = 3.4 % in noise,
+        /// against P(chi2_7 > 31.5) = 4e-5 for a full block of 7.
+        ///
+        /// @c merge joins a remainder to the block before it in the same
+        /// run, so the run ends on one block of L + r (7 + 1 = 8), judged
+        /// against lambda (L + r) sigma^2. A run shorter than L has no block
+        /// before it and stays one short block, judged as in legacy.
+        ///
+        /// @c scaled keeps the partition of legacy but judges every block of
+        /// n < L coefficients at the false-alarm probability of a full block:
+        /// with p = Q_{chi2_L}(lambda L), the upper tail of a chi-square of L
+        /// degrees of freedom at lambda L, the block is kept when its energy
+        /// exceeds Qinv_{chi2_n}(p) sigma^2 (gsl_cdf_chisq_Q and
+        /// gsl_cdf_chisq_Qinv). Blocks of L are judged as in legacy.
+        ///
+        enum BlockRemainder {
+            legacy,
+            merge,
+            scaled
         };
         ///
         /// Constructor
@@ -207,6 +238,48 @@ namespace tsa {
 
         double GetBlockLambda() {
             return mBlockLambda;
+        }
+
+        ///
+        /// How a block shorter than L is judged (see BlockRemainder);
+        /// legacy, the default, is the rule as it was, bit for bit. The
+        /// string form takes "legacy", "merge" or "scaled".
+        ///
+        /// @exception std::invalid_argument on an unknown name
+        ///
+        void SetBlockRemainder(enum BlockRemainder mode) {
+            mRemainder = mode;
+        }
+
+        void SetBlockRemainder(const std::string& mode) {
+            if (mode == "legacy") {
+                mRemainder = legacy;
+            } else if (mode == "merge") {
+                mRemainder = merge;
+            } else if (mode == "scaled") {
+                mRemainder = scaled;
+            } else {
+                throw std::invalid_argument("WaveletThreshold: block remainder mode must be legacy, merge or scaled, not " + mode);
+            }
+        }
+
+        enum BlockRemainder GetBlockRemainder() const {
+            return mRemainder;
+        }
+
+        ///
+        /// The energy, in units of sigma^2, above which a block of n
+        /// coefficients is kept under the current length, lambda and
+        /// remainder mode: lambda n, except under scaled for n < L, where it
+        /// is Qinv_{chi2_n}(Q_{chi2_L}(lambda L)). It does not depend on the
+        /// layout: under merge a block of L + r is simply asked for n = L + r.
+        ///
+        double GetBlockEnergyThreshold(unsigned int n) {
+            const unsigned int L = GetBlockLength();
+            if (mRemainder == scaled && n > 0 && n < L) {
+                return ScaledThreshold(L, n);
+            }
+            return mBlockLambda * static_cast<double>(n);
         }
 
         ///
@@ -319,6 +392,11 @@ namespace tsa {
         /// run of the layout cut into blocks of L, each kept or zeroed on its
         /// energy against lambda L sigma^2.
         ///
+        /// Under @c merge a remainder shorter than L is joined to the block
+        /// before it; under @c scaled a block of n < L is judged against
+        /// Qinv_{chi2_n}(Q_{chi2_L}(lambda L)) sigma^2 (see BlockRemainder).
+        /// Under @c legacy the loop is the original one, bit for bit.
+        ///
         template <class Coefficients>
         void BlockRuns(Coefficients& WT) {
             const unsigned int L = GetBlockLength();
@@ -327,21 +405,44 @@ namespace tsa {
             unsigned int levelStart = 0, levelSize = (mDepth > 0) ? (mN >> mDepth) : 1;
             while (levelStart < mN) {
                 unsigned int levelEnd = std::min(levelStart + levelSize, mN);
-                for (unsigned int b = levelStart; b < levelEnd; b += L) {
+                for (unsigned int b = levelStart; b < levelEnd;) {
                     unsigned int e = std::min(b + L, levelEnd);
+                    if (mRemainder == merge && e < levelEnd && levelEnd - e < L) {
+                        e = levelEnd;   // the remainder joins this block
+                    }
                     double energy = 0.0;
                     for (unsigned int i = b; i < e; i++)
                         energy += WT(0, i) * WT(0, i);
-                    if (energy <= energyPerCoefficient * (e - b)) {
+                    const double limit = (mRemainder == scaled && e - b < L)
+                                         ? ScaledThreshold(L, e - b) * mSigma * mSigma
+                                         : energyPerCoefficient * (e - b);
+                    if (energy <= limit) {
                         for (unsigned int i = b; i < e; i++)
                             WT(0, i) = 0.0;
                     }
+                    b = e;
                 }
                 levelStart = levelEnd;
                 if (mDepth == 0) {
                     levelSize = (levelStart < 2) ? 1 : levelStart;
                 }
             }
+        }
+
+        ///
+        /// Qinv_{chi2_n}(Q_{chi2_L}(lambda L)) for 1 <= n < L, cached for the
+        /// current L and lambda.
+        ///
+        double ScaledThreshold(unsigned int L, unsigned int n) {
+            if (mScaledL != L || mScaledLambda != mBlockLambda) {
+                const double p = gsl_cdf_chisq_Q(mBlockLambda * static_cast<double>(L), static_cast<double>(L));
+                mScaledThr.assign(L, 0.0);
+                for (unsigned int k = 1; k < L; k++)
+                    mScaledThr[k] = gsl_cdf_chisq_Qinv(p, static_cast<double>(k));
+                mScaledL = L;
+                mScaledLambda = mBlockLambda;
+            }
+            return mScaledThr[n];
         }
 
         ///
@@ -444,6 +545,10 @@ namespace tsa {
         unsigned int mDepth; ///< layout of the block rule, 0 for the pyramid
         double mMinFrequency; ///< coefficients at or below it are dropped, 0 for none
         double mFs;           ///< sampling rate the minimum frequency is read with
+        enum BlockRemainder mRemainder; ///< how blocks shorter than L are judged
+        std::vector<double> mScaledThr; ///< scaled thresholds by length, in sigma^2
+        unsigned int mScaledL;          ///< L the cache was built for, 0 for none
+        double mScaledLambda;           ///< lambda the cache was built for
 
 
     };

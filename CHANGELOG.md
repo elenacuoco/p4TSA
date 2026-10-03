@@ -22,6 +22,35 @@
 
 ### Added
 
+- **A remainder option for the block rule: `WaveletThreshold::SetBlockRemainder(mode)`
+  and `WDF2Classify::SetBlockRemainder(mode)`** (bound in py4tsa with
+  `GetBlockRemainder`, `WaveletThreshold.GetBlockEnergyThreshold(n)` and the
+  enum `WaveletThreshold.BlockRemainder`; the setter takes the enum or the
+  name). Off by default.
+  - The defect: each run (pyramid level, packet band, LocalCos row) is cut into
+    blocks of L = round(ln N), and a remainder of n = 1 ... L-1 coefficients,
+    like a whole run shorter than L (pyramid levels of 1, 1, 2, 4), was judged
+    against the same lambda n sigma^2 as a full block. Its false-alarm
+    probability P(chi2_n > lambda n) rises as n falls: 3.4 % for a single
+    coefficient (|c| > 2.12 sigma) against 5e-5 for a full block of 7. LocalCos128
+    at N 1024 has rows of 8 = 7 + 1, so 128 such single coefficients per window.
+  - `legacy` (default): the rule as it was, bit for bit (triggers equal
+    d335d33's on white noise and on whitened O1/O2/O4 windows).
+  - `merge`: a remainder shorter than L joins the block before it in the same
+    run (7 + 1 -> one block of 8, judged against lambda 8 sigma^2). A run
+    shorter than L has no block before it and stays one short block.
+  - `scaled`: the partition of legacy, but a block of n < L is kept when its
+    energy exceeds Qinv_{chi2_n}(Q_{chi2_L}(lambda L)) sigma^2, the chi-square
+    quantile at the full block's false-alarm probability (L 7, lambda 4.505:
+    p = 4.95e-5, a single coefficient needs |c| > 4.06 sigma).
+  - Per-window firing rate at threshold 5, N 1024, white noise, 50 176 windows:
+    D0 (default ten bases) 0.061 legacy, 0.054 merge, 0.056 scaled;
+    D0 + LocalCos128 0.557 legacy, 0.057 merge, 0.065 scaled.
+  - With sigma read from the window's MAD, at lambda 4.505 the full block
+    fires at 7.1e-5 and a scaled single coefficient at 5.4e-5 (3.84 M blocks
+    each); the chi-square match is exact for a known sigma, and the MAD
+    scatter inflates the full block's steeper tail more.
+
 - **A low-frequency cut in the threshold: `WaveletThreshold::SetMinFrequency(fHz, fs)`
   and `WDF2Classify::SetMinFrequency(fHz, fs)`** (bound in py4tsa, with
   `GetMinFrequency` and `WaveletThreshold.IsKept(i)`).

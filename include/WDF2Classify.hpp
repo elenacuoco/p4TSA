@@ -299,6 +299,27 @@ namespace tsa {
             return mWavThres.GetMinFrequency();
         }
 
+        /// How the block rule judges a block shorter than L = round(ln
+        /// window), in every candidate (see WaveletThreshold::BlockRemainder):
+        /// "legacy" (the default, bit for bit as before) like a full block
+        /// against lambda n sigma^2; "merge" joins the remainder of a run to
+        /// the block before it (7 + 1 = one block of 8); "scaled" judges a
+        /// block of n < L at a full block's false-alarm probability,
+        /// Qinv_{chi2_n}(Q_{chi2_L}(lambda L)) sigma^2. Other rules ignore it.
+        ///
+        /// @exception std::invalid_argument on an unknown name
+        void SetBlockRemainder(const std::string& mode) {
+            mWavThres.SetBlockRemainder(mode);
+        }
+
+        void SetBlockRemainder(enum WaveletThreshold::BlockRemainder mode) {
+            mWavThres.SetBlockRemainder(mode);
+        }
+
+        enum WaveletThreshold::BlockRemainder GetBlockRemainder() const {
+            return mWavThres.GetBlockRemainder();
+        }
+
 
 
         //@}

@@ -34,7 +34,10 @@ namespace tsa {
             mBlockLambda(4.505),
             mDepth(0),
             mMinFrequency(0.0),
-            mFs(0.0) {
+            mFs(0.0),
+            mRemainder(legacy),
+            mScaledL(0),
+            mScaledLambda(0.0) {
     }
     ///
     /// Destructor
