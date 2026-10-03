@@ -22,6 +22,14 @@
 
 ### Added
 
+- **`WDF2Classify::SetBlock(length, lambda)`**, with `GetBlockLength` and
+  `GetBlockLambda`: the block rule's length L (0, the default, for
+  round(ln window)) and lambda (default 4.505) in every candidate, forwarded
+  to the classifier's own `WaveletThreshold`, which a search could not reach.
+  The defaults are bit for bit as before. Under the block rule it refuses an L
+  longer than a current candidate's bands, the check `SetBases` makes, and a
+  non-positive lambda. Bound in py4tsa; tested in `test_10_block_setter.py`.
+
 - **A remainder option for the block rule: `WaveletThreshold::SetBlockRemainder(mode)`
   and `WDF2Classify::SetBlockRemainder(mode)`** (bound in py4tsa with
   `GetBlockRemainder`, `WaveletThreshold.GetBlockEnergyThreshold(n)` and the

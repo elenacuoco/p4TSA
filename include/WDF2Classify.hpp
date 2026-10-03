@@ -320,6 +320,44 @@ namespace tsa {
             return mWavThres.GetBlockRemainder();
         }
 
+        /// The block rule's parameters in every candidate (see
+        /// WaveletThreshold::SetBlock): the block length L in coefficients,
+        /// 0 for round(ln window), Cai's choice and the default, and the
+        /// energy threshold lambda in units of L sigma^2, 4.505 by default
+        /// (calibrated for L of about 7). Under the block rule every band
+        /// (row) of the current candidates must still hold one full block of
+        /// the new length, the check SetBases makes.
+        ///
+        /// @exception std::invalid_argument if lambda is not positive, or a
+        /// candidate's bands are shorter than the new block length
+        void SetBlock(unsigned int length, double lambda) {
+            if (!(lambda > 0.0)) {
+                throw std::invalid_argument("WDF2Classify: the block lambda must be positive");
+            }
+            WaveletThreshold trial(mWindow);
+            trial.SetBlock(length, lambda);
+            const unsigned int L = trial.GetBlockLength();
+            if (mT == WaveletThreshold::block) {
+                for (const auto& spec : mSpecs) {
+                    if (spec.depth > 0 && (mWindow >> spec.depth) < L) {
+                        throw std::invalid_argument("WDF2Classify: the bands (rows) of basis " + spec.name +
+                                                    " are shorter than one block of the block rule");
+                    }
+                }
+            }
+            mWavThres.SetBlock(length, lambda);
+        }
+
+        /// The block length L in force, in coefficients.
+        unsigned int GetBlockLength() {
+            return mWavThres.GetBlockLength();
+        }
+
+        /// The block rule's lambda in force.
+        double GetBlockLambda() {
+            return mWavThres.GetBlockLambda();
+        }
+
 
 
         //@}
