@@ -12,8 +12,8 @@
 /// @date   2026
 ///
 /// @brief  The candidate bases of the WDF basis competition: their names,
-///         the default list and the list parser shared by WDF2Classify and
-///         WDF2Reconstruct.
+///         the default list, the default threshold rule and the list parser
+///         shared by WDF2Classify and WDF2Reconstruct.
 ///
 /// A candidate name is one of:
 ///
@@ -35,6 +35,7 @@
 #define __WAVELETBASES_HPP
 
 #include <WaveletTransform.hpp>
+#include <WaveletThreshold.hpp>
 
 #include <memory>
 #include <string>
@@ -60,6 +61,17 @@ namespace tsa {
     /// length. A tie of the window statistic goes to the later candidate.
     ///
     const char* DefaultWaveletBases();
+
+    ///
+    /// The default threshold rule of WDF2Classify and WDF2Reconstruct, the
+    /// one place it is defined: WaveletThreshold::block. The other rules
+    /// stay selectable through the constructors' WTh argument;
+    /// WaveletThreshold::cuoco was WDF2Reconstruct's default up to release
+    /// 3.3.0.
+    ///
+    constexpr enum WaveletThreshold::WaveletThresholding DefaultWaveletThresholding() {
+        return WaveletThreshold::block;
+    }
 
     ///
     /// The default candidate list of releases 3.0.0 to 3.3.0: Haar, DaubC4,

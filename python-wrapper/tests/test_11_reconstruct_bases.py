@@ -1,11 +1,12 @@
 """WDF2Reconstruct follows WDF2Classify's basis competition.
 
-Both classes take the default list DefaultWaveletBases() and the same names
-through SetBases; with the same list, rule and parameters they pick the same
-winner with the same coefficients in every window. Reconstruct inverts a
-trigger exactly with the transform its mWave names. SetBases(LegacyWaveletBases())
-reproduces the output of release 3.3.0, recorded in
-data/wdf2reconstruct_3.3.0.json by record_reference() below.
+Both classes take the default list DefaultWaveletBases(), the default rule
+DefaultWaveletThresholding() and the same names through SetBases; with the
+same list, rule and parameters they pick the same winner with the same
+coefficients in every window. Reconstruct inverts a trigger exactly with the
+transform its mWave names. SetBases(LegacyWaveletBases()) with the rule
+passed explicitly (cuoco, the 3.3.0 default) reproduces the output of release
+3.3.0, recorded in data/wdf2reconstruct_3.3.0.json by record_reference().
 """
 import json
 import os
@@ -68,7 +69,7 @@ def record_reference():
     def plain(r):
         return [{k: (v.tolist() if k == "coeff" else v) for k, v in e.items() if k != "event"}
                 for e in events(r, stream(), 32)]
-    ref = {"cuoco": plain(reconstructor(256, 32)), "block": plain(reconstructor(256, 32, "block"))}
+    ref = {"cuoco": plain(reconstructor(256, 32, "cuoco")), "block": plain(reconstructor(256, 32, "block"))}
     with open(REFERENCE, "w") as f:
         json.dump(ref, f, indent=0)
 
@@ -76,9 +77,26 @@ def record_reference():
 def test_default_is_the_shared_list():
     assert tsa.DefaultWaveletBases() == NEW
     assert tsa.LegacyWaveletBases() == OLD
+    assert tsa.DefaultWaveletThresholding() == tsa.WaveletThreshold.block
     c = tsa.WDF2Classify(1024, 0, 5.0, 1.0, 1024)
     r = tsa.WDF2Reconstruct(1024, 0, 5.0, 1.0, 1024)
     assert r.GetBases() == c.GetBases() == NEW
+
+
+def test_default_settings_match_the_classifier():
+    """Both built with every default: same winner, coefficients, sigma and
+    level in every window, the reconstructor's statistic half the classifier's."""
+    n = 256
+    x = stream(n)
+    ec = events(tsa.WDF2Classify(n, 0, -1.0, 1.0, n), x, n)
+    er = events(tsa.WDF2Reconstruct(n, 0, -1.0, 1.0, n), x, n)
+    explicit = events(tsa.WDF2Classify(n, 0, -1.0, 1.0, n, tsa.WaveletThreshold.block), x, n)
+    assert len(ec) == len(er) == 24
+    for a, b, e in zip(ec, er, explicit):
+        assert a["wave"] == b["wave"] == e["wave"]
+        assert a["sigma"] == b["sigma"] and a["level"] == b["level"]
+        assert np.array_equal(a["coeff"], b["coeff"]) and np.array_equal(a["coeff"], e["coeff"])
+        assert b["snr"] == pytest.approx(a["snr"] / 2, rel=1e-14)
 
 
 @pytest.mark.parametrize("rule", ["block", "cuoco"])
@@ -102,7 +120,7 @@ def test_same_winner_and_coefficients_as_the_classifier(rule, bases):
 
 def test_packet_and_local_cosine_winners_occur():
     n = 256
-    r = reconstructor(n, n, "cuoco", "Sym8P4,LocalCos32")
+    r = reconstructor(n, n, None, "Sym8P4,LocalCos32")
     waves = {e["wave"] for e in events(r, stream(n), n)}
     assert waves == {"Sym8P4", "LocalCos32"}
 
@@ -111,7 +129,7 @@ def test_packet_and_local_cosine_winners_occur():
 def test_reconstruct_inverts_exactly(bases):
     n = 256
     x = stream(n)
-    r = reconstructor(n, n, "cuoco", bases)
+    r = reconstructor(n, n, None, bases)
     seen = set()
     for e in events(r, x, n):
         seen.add(e["wave"])
@@ -139,7 +157,7 @@ def test_reconstruct_inverts_exactly(bases):
 def test_reconstruct_of_unthresholded_coefficients_is_the_window(bases):
     n = 256
     x = np.random.default_rng(5).normal(size=n)
-    r = reconstructor(n, n, "cuoco", bases)
+    r = reconstructor(n, n, None, bases)
     ev = tsa.EventFullFeatured(n)
     ev.mWave = bases
     name = bases
@@ -188,7 +206,8 @@ def test_copies_keep_the_list():
 def test_legacy_list_reproduces_release_3_3_0(rule):
     with open(REFERENCE) as f:
         reference = json.load(f)[rule]
-    got = events(reconstructor(256, 32, None if rule == "cuoco" else rule, OLD), stream(), 32)
+    # The 3.3.0 configuration: the legacy list and the rule, both explicit.
+    got = events(reconstructor(256, 32, rule, tsa.LegacyWaveletBases()), stream(), 32)
     assert len(got) == len(reference)
     for a, b in zip(got, reference):
         assert a["wave"] == b["wave"] and a["level"] == b["level"]
@@ -197,7 +216,7 @@ def test_legacy_list_reproduces_release_3_3_0(rule):
         assert np.allclose(a["coeff"], b["coeff"], rtol=1e-12, atol=1e-12)
 
 
-def test_new_default_differs_from_release_3_3_0():
+def test_new_defaults_differ_from_release_3_3_0():
     with open(REFERENCE) as f:
         reference = json.load(f)["cuoco"]
     got = events(reconstructor(256, 32), stream(), 32)

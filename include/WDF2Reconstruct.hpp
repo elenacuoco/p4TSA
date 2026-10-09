@@ -82,8 +82,10 @@ namespace tsa {
     ///
     /// The basis competition of WDF2Classify, with its statistic halved
     /// (sqrt(E) / (2 sigma)), and the inversion of a trigger to the time
-    /// domain. The candidates are those of WDF2Classify: the same default
-    /// (DefaultWaveletBases()) and the same names through SetBases, pyramids,
+    /// domain. The candidates and the threshold rule are those of
+    /// WDF2Classify: the same default list (DefaultWaveletBases()), the same
+    /// default rule (DefaultWaveletThresholding()) and the same names through
+    /// SetBases, pyramids,
     /// packet levels (a mother, "P" and a depth, as "Sym8P6") and local
     /// cosine bases ("LocalCos" and a segment length, as "LocalCos128").
     /// Every candidate is orthonormal, so Reconstruct inverts any trigger
@@ -96,10 +98,13 @@ namespace tsa {
     public:
 
         ///
-        /// Constructor
+        /// Constructor. The threshold rule WTh defaults to
+        /// DefaultWaveletThresholding(), WaveletThreshold::block, as for
+        /// WDF2Classify; WaveletThreshold::cuoco, the default up to release
+        /// 3.3.0, is selected explicitly.
         ///
         WDF2Reconstruct(unsigned int window, unsigned int overlap, double thresh, double sigma,
-                     unsigned int ncoeff, enum WaveletThreshold::WaveletThresholding WTh = WaveletThreshold::cuoco);
+                     unsigned int ncoeff, enum WaveletThreshold::WaveletThresholding WTh = DefaultWaveletThresholding());
 
         ///
         /// Copy constructor. Explicit (not compiler-generated): mBases holds

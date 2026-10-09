@@ -90,8 +90,10 @@ namespace tsa {
         /// @c dohonojohnston keeps each coefficient on its own against the
         /// universal threshold sqrt(2 ln N) sigma, with sigma read from the
         /// median of the window's own coefficients; @c cuoco applies the same
-        /// threshold with the sigma given from outside; @c highest keeps the
-        /// largest coefficients by count.
+        /// threshold with the sigma given from outside (WDF2Reconstruct's
+        /// default up to release 3.3.0, and the fixed rule of
+        /// WavReconstruction); @c highest keeps the largest coefficients by
+        /// count.
         ///
         /// @c block judges contiguous coefficients of one level together
         /// (Cai 1999): a block of L coefficients is kept whole when its

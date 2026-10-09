@@ -75,13 +75,14 @@ wdf.SetBlock(0, 4.505)             # block length (0: round(ln n)) and lambda
   3.0.0 to 3.3.0.
 
 `WDF2Reconstruct` runs the same competition: the same default list, the same
-names through `SetBases`, and, with the same threshold rule, the same winner
-and coefficients in every window. `Reconstruct(ev)` returns a trigger's
+default threshold rule (`tsa.DefaultWaveletThresholding()`, the block rule),
+the same names through `SetBases`, and the same winner and coefficients in
+every window. `Reconstruct(ev)` returns a trigger's
 window in the time domain, its coefficients inverted with the transform its
 `mWave` names:
 
 ```python
-rec = tsa.WDF2Reconstruct(n, 0, 5.0, 1.0, n, tsa.WaveletThreshold.block)
+rec = tsa.WDF2Reconstruct(n, 0, 5.0, 1.0, n)   # block rule, default list
 rec.SetBases(wdf.GetBases())
 # ... rec << data; while rec.GetDataNeeded() >= 0: if rec(ev): ...
 waveform = rec.Reconstruct(ev)     # numpy array of n samples

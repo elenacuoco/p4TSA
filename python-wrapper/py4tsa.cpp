@@ -2722,6 +2722,7 @@ void bind_WaveletThreshold(std::function< pybind11::module &(std::string const &
 	}
 	{ // candidate lists of the basis competition, file:WaveletBases.hpp
 		M("tsa").def("DefaultWaveletBases", []() { return std::string(tsa::DefaultWaveletBases()); }, "The default candidate list of WDF2Classify and WDF2Reconstruct, comma-separated in competition order: ten pyramids ordered by filter length.");
+		M("tsa").def("DefaultWaveletThresholding", []() { return tsa::DefaultWaveletThresholding(); }, "The default threshold rule of WDF2Classify and WDF2Reconstruct, WaveletThreshold.block.");
 		M("tsa").def("LegacyWaveletBases", []() { return std::string(tsa::LegacyWaveletBases()); }, "The default candidate list of releases 3.0.0 to 3.3.0; SetBases(LegacyWaveletBases()) restores that competition.");
 	}
 	{ // tsa::LocalCosineTransform and tsa::CosinePackets file:LocalCosine.hpp

@@ -22,10 +22,14 @@
   checked by the same code. With the same list, threshold rule and
   parameters, its winner and coefficients equal `WDF2Classify`'s in every
   window (its statistic is half the classifier's, as before). Its trigger
-  values change with the default;
-  `SetBases(LegacyWaveletBases())` reproduces the output of 3.3.0. Its
-  default threshold rule is unchanged (`cuoco`, against `block` for the
-  classifier).
+  values change with the default.
+- **`WDF2Reconstruct`'s default threshold rule follows the classifier's:**
+  `block`, defined once as `DefaultWaveletThresholding()`, instead of
+  `cuoco`. `cuoco` and the universal rule `dohonojohnston` stay selectable
+  through the constructor. With every default, the reconstructor's winner
+  and coefficients equal the classifier's in every window. The output of
+  3.3.0 is `WDF2Reconstruct(window, overlap, thresh, sigma, ncoeff,
+  WaveletThreshold.cuoco)` followed by `SetBases(LegacyWaveletBases())`.
 
 ### Added
 
@@ -88,9 +92,11 @@
   Qinv_chi2_n(Q_chi2_L(lambda L)) sigma^2, the false-alarm probability of a
   full block.
 - **`WaveletBases.hpp`**: `DefaultWaveletBases()`, `LegacyWaveletBases()`,
+  `DefaultWaveletThresholding()`,
   the candidate-name parser `ParseWaveletBasis`/`ParseWaveletBases` and
   `MakeWaveletTransform`, shared by both classes and bound in py4tsa
-  (`tsa.DefaultWaveletBases()`, `tsa.LegacyWaveletBases()`).
+  (`tsa.DefaultWaveletBases()`, `tsa.LegacyWaveletBases()`,
+  `tsa.DefaultWaveletThresholding()`).
 - **`WDF2Reconstruct::SetBases(names)`, `GetBases()` and
   `Reconstruct(Ev)`**: the time-domain window of a trigger, its coefficients
   inverted with the transform its `mWave` names; exact for every candidate,
@@ -114,9 +120,11 @@
 ### Compatibility
 
 - Existing `WaveletType` values keep their numbers; all new API is additive.
-- With every new option at its default, the only change in trigger values of
-  `WDF2Classify` and `WDF2Reconstruct` is the default basis competition
-  above; `SetBases(LegacyWaveletBases())` restores the previous output.
+- With every new option at its default, the only changes in trigger values
+  are the default basis competition of both classes and the default rule of
+  `WDF2Reconstruct`, above. `SetBases(LegacyWaveletBases())` restores the
+  previous output of `WDF2Classify`; for `WDF2Reconstruct` pass
+  `WaveletThreshold.cuoco` to the constructor as well.
 - A reader of `mWave` must handle packet names (`<mother>P<depth>`) and
   `LocalCos<M>` when `SetBases` admits them.
 
