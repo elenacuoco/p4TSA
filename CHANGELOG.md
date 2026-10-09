@@ -1,5 +1,20 @@
 # Changelog
 
+## 3.4.1
+
+### Fixed
+
+- **The wheels build.** The tests that read `scipy.stats` now find `scipy` in
+  the wheel test environment (`[tool.cibuildwheel] test-requires`), so the
+  wheels are built, tested and published. 3.4.0 was tagged but never reached
+  PyPI; 3.4.1 carries the same library.
+- **The block-remainder regression test is independent of the build.** The
+  legacy rule is checked in two ways: within one build, `legacy` gives exactly
+  the triggers of no option; against the record, the winning basis is equal
+  and EnWDF and sigma agree to a relative 1e-9. The record
+  (`block_remainder_legacy_triggers.json`) replaces the sha256 digests, which
+  depended on the last bits of the FFT and GSL arithmetic of the build.
+
 ## 3.4.0
 
 ### Changed
