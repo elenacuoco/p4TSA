@@ -4,7 +4,7 @@ build-backend = "scikit_build_core.build"
 
 [project]
 name = "py4tsa"
-version = "3.4.0"
+version = "3.4.1"
 description = "Time-domain whitening, wavelets and the Wavelet Detection Filter for gravitational-wave data: the Python interface to the C++ p4TSA"
 readme = "README.md"
 # The range the wheels are built for.
@@ -48,7 +48,7 @@ build = "cp310-manylinux_x86_64 cp311-manylinux_x86_64 cp312-manylinux_x86_64 cp
 manylinux-x86_64-image = "manylinux_2_28"
 build-verbosity = 1
 # Run against the repaired wheel rather than the build tree.
-test-requires = ["pytest", "numpy", "PyWavelets"]
+test-requires = ["pytest", "numpy", "scipy", "PyWavelets"]
 test-command = "pytest {project}/python-wrapper/tests -q"
 
 [tool.cibuildwheel.linux]
