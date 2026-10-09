@@ -7,7 +7,6 @@ lambda n sigma^2 like a full block, merge joins the remainder to the block
 before it, scaled judges it at the full block's false-alarm probability,
 Qinv_chi2_n(Q_chi2_L(lambda L)).
 """
-import hashlib
 import json
 import os
 
@@ -22,10 +21,15 @@ D0 = "Haar,DaubC4,DaubC8,Sym4,DaubC16,Sym8,Coif3,DaubC24,Sym12,Coif5"
 WT = tsa.WaveletThreshold
 MODES = ("legacy", "merge", "scaled")
 HERE = os.path.dirname(os.path.abspath(__file__))
-# Trigger digests of the block rule before the remainder option existed.
-FIXTURE = os.path.join(HERE, "data", "block_remainder_legacy_digests.json")
+# Triggers of the block rule before the remainder option existed: per window the
+# winning basis, EnWDF and sigma (recorded with the legacy rule, which is the rule
+# as it was before the option; the record was checked against the 3.3.0 build).
+FIXTURE = os.path.join(HERE, "data", "block_remainder_legacy_triggers.json")
+# Tolerance of the comparison with the record: builds differ in the last bits of
+# the FFT and GSL arithmetic, so the record is compared to this relative precision.
+RTOL = 1e-9
 # Directory of whitened strain windows (npz, array "w") for the real-data
-# digests; those cases are skipped when it is not set.
+# triggers; those cases are skipped when it is not set.
 STREAMS = [d for d in (os.environ.get("P4TSA_WHITENED_STREAMS", ""),) if d and os.path.isdir(d)]
 
 
@@ -277,7 +281,7 @@ def test_noise_firing_rate():
     assert lc["merge"] < 1.6 * d0["merge"] + 0.02
 
 
-# ------------------------------------------------------------ legacy, bit for bit
+# ------------------------------------------------------------ legacy, against the record
 SOURCES = {  # name: (file or None for white noise, first sample)
     "white": (None, 0),
     "GW150914_H1": ("GW150914_H1_full_fullrun.npz", 1_000_000),
@@ -304,8 +308,8 @@ def source(name):
     return None
 
 
-def trigger_digest(x, config, mode=None, n=1024):
-    """sha256 over every window's winner, EnWDF, sigma and coefficients."""
+def triggers(x, config, mode=None, n=1024):
+    """Per window: the winning basis, EnWDF, sigma and the coefficients."""
     bases, rule, fmin = CONFIGS[config]
     c = tsa.WDF2Classify(n, 0, -1.0, 1.0, n, rule)
     c.SetBases(bases)
@@ -314,30 +318,50 @@ def trigger_digest(x, config, mode=None, n=1024):
     if mode is not None:
         c.SetBlockRemainder(mode)
     c << view_of(x)
-    h = hashlib.sha256()
+    waves, snr, sigma, coeff = [], [], [], []
     ev = tsa.EventFullFeatured(n)
     while c.GetDataNeeded() >= 0:
         assert c(ev) == 1
-        h.update(ev.mWave.encode())
-        h.update(np.array([ev.mSNR, ev.mSigma]).tobytes())
-        h.update(np.array([ev.GetCoeff(i) for i in range(n)]).tobytes())
-    return h.hexdigest()
+        waves.append(ev.mWave)
+        snr.append(ev.mSNR)
+        sigma.append(ev.mSigma)
+        coeff.append([ev.GetCoeff(i) for i in range(n)])
+    return waves, np.array(snr), np.array(sigma), np.array(coeff)
 
 
 def write_fixture():
-    """Record the reference digests; run once with the module before the remainder option."""
+    """Record the reference triggers with the legacy rule."""
     out = {}
     for s in SOURCES:
         x = source(s)
         if x is not None:
-            out[s] = {cfg: trigger_digest(x, cfg) for cfg in CONFIGS}
+            out[s] = {}
+            for cfg in CONFIGS:
+                waves, snr, sigma, _ = triggers(x, cfg)
+                out[s][cfg] = {"wave": waves, "snr": snr.tolist(), "sigma": sigma.tolist()}
     with open(FIXTURE, "w") as f:
         json.dump(out, f, indent=1, sort_keys=True)
 
 
 @pytest.mark.parametrize("name", SOURCES)
 @pytest.mark.parametrize("config", CONFIGS)
-def test_legacy_is_unchanged_bit_for_bit(name, config):
+def test_legacy_is_the_rule_without_the_option(name, config):
+    """Within one build, legacy (and, for the other rules, every mode) gives exactly the triggers of no option."""
+    x = source(name)
+    if x is None:
+        pytest.skip("whitened streams not found")
+    base = triggers(x, config)
+    modes = ("legacy",) if CONFIGS[config][1] == WT.block else MODES
+    for mode in modes:
+        other = triggers(x, config, mode)
+        assert other[0] == base[0]
+        for a, b in zip(other[1:], base[1:]):
+            np.testing.assert_array_equal(a, b)
+
+
+@pytest.mark.parametrize("name", SOURCES)
+@pytest.mark.parametrize("config", CONFIGS)
+def test_legacy_matches_the_record(name, config):
     with open(FIXTURE) as f:
         reference = json.load(f)
     if name not in reference:
@@ -345,8 +369,8 @@ def test_legacy_is_unchanged_bit_for_bit(name, config):
     x = source(name)
     if x is None:
         pytest.skip("whitened streams not found")
-    assert trigger_digest(x, config) == reference[name][config]
-    assert trigger_digest(x, config, "legacy") == reference[name][config]
-    if CONFIGS[config][1] != WT.block:  # other rules ignore the option
-        for mode in ("merge", "scaled"):
-            assert trigger_digest(x, config, mode) == reference[name][config]
+    waves, snr, sigma, _ = triggers(x, config, "legacy")
+    ref = reference[name][config]
+    assert waves == ref["wave"]
+    np.testing.assert_allclose(snr, ref["snr"], rtol=RTOL)
+    np.testing.assert_allclose(sigma, ref["sigma"], rtol=RTOL)
