@@ -2,283 +2,104 @@
 
 ## Unreleased
 
-### Changed (behaviour)
+### Changed
 
-- **The default basis competition of `WDF2Classify` changes.** The ten
-  candidates a `WDF2Classify` is built with are now, ordered by filter length,
-  shortest first (at equal length in the order shown): `Haar`, `DaubC4`,
-  `DaubC8`, `Sym4`, `DaubC16`, `Sym8`, `Coif3`, `DaubC24`, `Sym12`, `Coif5`
-  (PyWavelets' haar, db2, db4, sym4, db8, sym8, coif3, db12, sym12, coif5).
-  Kept from 3.0.0-3.4.0: `Haar`, `DaubC4`, `DaubC8`, `Sym4`, `DaubC16`,
-  `Sym8`; added: `Coif3`, `DaubC24`, `Sym12`, `Coif5`; removed from the
-  default: `DaubC12`, `DaubC20`, `Coif1`, `Coif2`, which stay available through
-  `SetBases`, as do all the long mothers. The order is part of the
-  definition: a tie of the window statistic still goes to the later
-  candidate, now the longer filter. With the default, trigger values
-  (`mWave`, `mSNR`, the coefficients) change: the old competition is
+- **The default basis competition of `WDF2Classify`.** A classifier is built
+  with ten pyramidal candidates ordered by filter length, shortest first:
+  `Haar`, `DaubC4`, `DaubC8`, `Sym4`, `DaubC16`, `Sym8`, `Coif3`, `DaubC24`,
+  `Sym12`, `Coif5` (PyWavelets' haar, db2, db4, sym4, db8, sym8, coif3, db12,
+  sym12, coif5). `DaubC12`, `DaubC20`, `Coif1` and `Coif2` leave the default
+  and remain available through `SetBases`. A tie of the window statistic goes
+  to the later candidate, so the order is part of the definition. Trigger
+  values (`mWave`, `mSNR`, the coefficients) change with the default; the
+  previous competition is
   `SetBases("Haar,DaubC4,DaubC8,DaubC12,DaubC16,DaubC20,Sym4,Sym8,Coif1,Coif2")`.
-  The list is defined in one place, `kCandidateBases` in
-  `src/WDF2Classify.cpp`. `WDF2Reconstruct` keeps the 3.0.0 list.
+  The list is defined once, in `kCandidateBases` (`src/WDF2Classify.cpp`).
+  `WDF2Reconstruct` keeps the previous list.
 
 ### Added
 
-- **`WDF2Classify::SetBlock(length, lambda)`**, with `GetBlockLength` and
-  `GetBlockLambda`: the block rule's length L (0, the default, for
-  round(ln window)) and lambda (default 4.505) in every candidate, forwarded
-  to the classifier's own `WaveletThreshold`, which a search could not reach.
-  The defaults are bit for bit as before. Under the block rule it refuses an L
-  longer than a current candidate's bands, the check `SetBases` makes, and a
-  non-positive lambda. Bound in py4tsa; tested in `test_10_block_setter.py`.
-
-- **A remainder option for the block rule: `WaveletThreshold::SetBlockRemainder(mode)`
-  and `WDF2Classify::SetBlockRemainder(mode)`** (bound in py4tsa with
-  `GetBlockRemainder`, `WaveletThreshold.GetBlockEnergyThreshold(n)` and the
-  enum `WaveletThreshold.BlockRemainder`; the setter takes the enum or the
-  name). Off by default.
-  - The defect: each run (pyramid level, packet band, LocalCos row) is cut into
-    blocks of L = round(ln N), and a remainder of n = 1 ... L-1 coefficients,
-    like a whole run shorter than L (pyramid levels of 1, 1, 2, 4), was judged
-    against the same lambda n sigma^2 as a full block. Its false-alarm
-    probability P(chi2_n > lambda n) rises as n falls: 3.4 % for a single
-    coefficient (|c| > 2.12 sigma) against 5e-5 for a full block of 7. LocalCos128
-    at N 1024 has rows of 8 = 7 + 1, so 128 such single coefficients per window.
-  - `legacy` (default): the rule as it was, bit for bit (triggers equal
-    d335d33's on white noise and on whitened O1/O2/O4 windows).
-  - `merge`: a remainder shorter than L joins the block before it in the same
-    run (7 + 1 -> one block of 8, judged against lambda 8 sigma^2). A run
-    shorter than L has no block before it and stays one short block.
-  - `scaled`: the partition of legacy, but a block of n < L is kept when its
-    energy exceeds Qinv_{chi2_n}(Q_{chi2_L}(lambda L)) sigma^2, the chi-square
-    quantile at the full block's false-alarm probability (L 7, lambda 4.505:
-    p = 4.95e-5, a single coefficient needs |c| > 4.06 sigma).
-  - Per-window firing rate at threshold 5, N 1024, white noise, 50 176 windows:
-    D0 (default ten bases) 0.061 legacy, 0.054 merge, 0.056 scaled;
-    D0 + LocalCos128 0.557 legacy, 0.057 merge, 0.065 scaled.
-  - With sigma read from the window's MAD, at lambda 4.505 the full block
-    fires at 7.1e-5 and a scaled single coefficient at 5.4e-5 (3.84 M blocks
-    each); the chi-square match is exact for a known sigma, and the MAD
-    scatter inflates the full block's steeper tail more.
-
-- **A low-frequency cut in the threshold: `WaveletThreshold::SetMinFrequency(fHz, fs)`
-  and `WDF2Classify::SetMinFrequency(fHz, fs)`** (bound in py4tsa, with
-  `GetMinFrequency` and `WaveletThreshold.IsKept(i)`).
-  - A coefficient is dropped when the upper frequency edge of its run in the
-    layout is <= fHz. The edge is (fs / 2) e / N, with e the index just past
-    the run: pyramid levels {0}, {1}, [2^k, 2^(k+1)); packet bands of depth D;
-    LocalCos M rows (depth log2 M, row width fs / 2M). At N 1024, fs 2048 and
-    16 Hz it drops pyramid indices 0-15, packet depth 6 band 0 and LocalCos128
-    rows 0-1.
-  - Dropped coefficients are zeroed before thresholding: out of sigma (median
-    of |c| over the kept ones / 0.6745), out of the block rule, out of the
-    largest coefficient (`GetLevel`, `GetCm`) and out of WDF's window
-    statistic (EnWDF); the trigger holds zeros there. The universal threshold
-    (`dohonojohnston`, `cuoco`) counts the kept coefficients,
-    sqrt(2 ln n_kept).
-  - Why: on real O4/O2/O1 data the 0-16 Hz levels of a full-band whitened
-    stream carry seismic residuals that fire windows by themselves. Cutting
-    them halved the H1-L1 time-slide pair rate on three events at no loss on
-    GW150914 (catalogue study of 3 Oct 2026, done with a numpy port; this is
-    that port in C++).
-  - Off by default (fHz <= 0): the code path is the original one, and the
-    triggers equal those of acedc0d bit for bit (checked on 6400 real
-    whitened windows of GW150914 and GW170817, H1 and L1, with the default
-    list and with the default list plus LocalCos128). With 16 Hz on the same
-    windows, winner and EnWDF equal the catalogue port to 3.6e-15.
-  - Tests: `python-wrapper/tests/test_08_min_frequency.py` (the kept mask per
-    layout, the threshold and the competition against a numpy reference for
-    both rules, the off switch bit for bit, copies, invalid arguments).
-
-- **Local cosine bases and cosine packets** (`include/LocalCosine.hpp`).
-  - `LocalCosineTransform(N, M, overlap=M/2, edge=periodic, bell=coifmanMeyer)`
-    is the orthonormal local cosine basis of segment length M, a power of 2
-    that divides N. At every segment edge the 2 eps samples about the edge
-    are folded with the cut-off r(t) = sin(pi/4 (1 + beta(t))), sampled at
-    t = (j + 1/2)/eps. The Coifman-Meyer bell takes beta to be
-    sin(pi t / 2) iterated three times; the `sine` bell takes beta(t) = t
-    (the MDCT window). eps <= M/2.
-  - Each segment then gets its DCT-IV: FFTW_REDFT11 scaled by 1/sqrt(2M),
-    that is sqrt(2/M) sum y_n cos(pi/M (n + 1/2)(k + 1/2)). It is
-    orthonormal and its own inverse.
-  - Window edges. `periodic` also folds at 0 = N, wrapping round, as the
-    periodized DWT treats the window as a circle. `free` puts no bell at 0
-    and N (the classic basis of an interval). Both are orthonormal.
-  - Layout. `Forward`/`Inverse` are frequency-major: index k N/M + j is
-    bin k of segment j, the layout of a packet level of depth log2 M.
-    `ForwardSegments`/`InverseSegments` are segment-major.
-  - These are the conventions of the catalogue's `scripts/bases_windows.py`
-    (`bell`, `local_cosine`): bell, fold signs, half-width M/2 and
-    bin-major layout. The two agree to 1.8e-15 for M 32-512 at N 512-2048.
-    `free`, and eps < M/2 for the `sine` bell, are additions.
-  - `CosinePackets(N, minSegment, maxSegment=N, overlap=minSegment/2, ...)`
-    holds the dyadic segmentation tree of the window, segments maxSegment
-    down to minSegment. Every edge has the same bell half-width, so any
-    segmentation made of tree nodes is an orthonormal basis.
-  - `BestBasis(x, cost, sigma)` is Coifman-Wickerhauser's bottom-up search
-    for the minimum of an additive cost; a node splits only when its
-    children cost strictly less. The costs:
-    - `l1`: sum |c|;
-    - `entropy`: -sum p ln p, p = c^2/|x|^2;
-    - `wdfUniversal`: WDF's statistic as a negative gain,
-      -sum (c/sigma)^2 over |c| > sqrt(2 ln N) sigma;
-    - `wdfBlock`: -kept energy/sigma^2 of the block rule run along each
-      segment's bins, L = round(ln N), lambda 4.505.
-
-    sigma <= 0 takes median |c|/0.6745 of the finest level. With segments
-    1024 down to 64 and eps 32, the WDF costs reproduce the segmentation of
-    the catalogue's `cospkt_best` (`scripts/single_chirp_optimal.py`,
-    sigma "mad") for every window tested.
-  - Results: `GetSegmentation()` (lengths in time order) and
-    `GetCoefficients()` (segment by segment, bins in frequency order).
-    `Analyse`/`Inverse` work for any segmentation, and the node and best
-    costs can be read.
-- **`LocalCos<M>` candidates in the basis competition.**
-  - `WaveletType` gains `LocalCos`, appended so the other values keep their
-    numbers. `WaveletTransform(N, LocalCos, D)` is the local cosine basis of
-    segment 2^D: Coifman-Meyer, eps = M/2, periodic, frequency-major.
-  - `GetPacketDepth()` = D gives the threshold the packet layout it needs,
-    so every rule, sigma and EnWDF work unchanged.
-  - `SetBases` accepts `LocalCos64`, `LocalCos128`, ...: a power of 2 from 2
-    to the window. The name never ends in `P<digits>`. None is in the
-    default list.
-  - Under the block rule each row of N/M coefficients must hold one block of
-    L = round(ln N), so M <= N/L: 64 at N 512, 128 at N 1024, 256 at N 2048.
-- **Why the 2006 DCT failed as a candidate** (`DCT.hpp`, removed from
-  `WDF2Classify` in adfaffa).
-  - It was a global DCT-II (FFTW_REDFT10) over the whole window. It had no
-    time localisation: every coefficient spans the window.
-  - It was not orthonormal. The window was first tapered by
-    `Cs2HammingWindow`. FFTW's unnormalised REDFT10 (2 sum ...) was then
-    rescaled by sqrt(2/N), with an extra sqrt(1/2) on the DC bin: twice the
-    orthonormal scale. `DCT::operator()` sets the scale to Sampling/Size.
-  - So sigma and EnWDF were not on the wavelets' noise scale, and the
-    competition was not fair.
-  - It had no bells and no folding. The local cosine above is what that
-    candidate should have been: windowed without losing orthonormality, and
-    local in time.
-
-- **Long mothers.** `WaveletType` gains `Sym10`, `Sym12`, `Sym16`, `Sym20`,
-  `Coif3`, `Coif4`, `Coif5` and `DaubC24`, `DaubC32`, `DaubC40` (PyWavelets'
-  db12, db16, db20; GSL's own centred Daubechies stop at 20 taps), 18 to 40
-  taps, centred as `DaubC*`, `Sym*` and `Coif*` are (GSL's offset nc / 2).
-  The values are appended after `Sym8`, so the existing ones keep their
-  numbers. Every one is a `SetBases` name, as a pyramid or with `P<depth>` as
-  a packet level. The taps are PyWavelets' (MIT licence), written at full
-  precision by `tools/generate_long_wavelet_tables.py` into
-  `src/ExtraWaveletLongTables.inc`; the transform agrees with PyWavelets'
-  periodized `dwt` applied after a one-sample circular shift at every split
-  to 4e-15, pyramid and packets. PyWavelets' Symlet taps are orthonormal
-  only to 2.2e-14 (sym10), 4.4e-14 (sym12), 1.8e-12 (sym16) and 1.4e-11
-  (sym20) and are kept as they are; reconstruction is exact to that accuracy
-  (worst over N 512-2048 and packet depths up to 7: 6.7e-13, 1.4e-12,
-  5.5e-11, 4.3e-10), the Daubechies and Coiflets to 4e-15.
-
-### Caveat for wdflow (not changed here)
-
-- wdflow reads a trigger's layout only from `mWave`, through
-  `wdf/analysis/wavelets.py packet_depth` (wdflow-packets). Today it reads
-  `LocalCos128` as a pyramid: every tile is placed silently on the pyramid's
-  geometry.
-- `reconstruction.py` does `getattr(WaveletTransform, "LocalCos128")`, which
-  raises.
-- Before a `LocalCos<M>` trigger reaches wdflow, two changes are needed:
-  - `packet_depth` must return log2 M for `LocalCos<M>`; the tile layout is
-    then the depth-D packet one, with the nominal supports ignoring the
-    +-M/2 bell overlap;
-  - reconstruction must use `WaveletTransform(n, LocalCos, log2 M)`.
-
-### Not implemented: adaptive cosine packets in the competition
-
-A best-basis segmentation chosen per window gives rows of different lengths
-(segment m has m bins), which a single depth cannot describe. It would need
-the following.
-
-- **`WaveletThreshold`.** The layout becomes an explicit list of runs
-  (start, length) rather than a depth, e.g. `SetLayout(std::vector<run>)`.
-  - `BlockThreshold` already loops over runs from a generator, so only the
-    generator changes.
-  - A run is either one segment's bins (blocks along frequency, as the
-    catalogue's `cospkt` and `CosinePackets::wdfBlock` do), or one bin
-    across consecutive segments of equal length. That has to be decided.
-  - sigma (median over all N) and the universal rule are unaffected.
-- **`WDF2Classify`.**
-  - A candidate kind holding a `CosinePackets` whose forward step chooses the
-    segmentation (`BestBasis` with the cost of the rule in force) and returns
-    its runs. `GetDataVector` calls `SetLayout(runs)` for it instead of
-    `SetLayout(GetPacketDepth())`.
-  - Since `Forward`/`Inverse` are not virtual, `mBases` would need a variant
-    or a small interface over `WaveletTransform`.
-  - The block-length check moves to minSegment: each run must hold a block.
-  - The choice is a second search inside a candidate, so the EnWDF it
-    competes with is a maximum over segmentations. Its noise distribution
-    differs from that of a fixed basis, and the threshold would need
-    recalibrating.
-- **Trigger schema.**
-  - `mWave` is today the whole layout contract; `mlevel` is the index of the
-    largest coefficient and carries no layout.
-  - The segmentation (lengths in time order) must travel with the event:
-    either a new `EventFullFeatured` field (vector of lengths, bound in
-    py4tsa and mirrored in wdflow's `eventPE` and its Arrow schema), or
-    encoded in the name (`CosPkt64:256/64/64/128/512`).
-- **wdflow geometry.**
-  - `coeff_levels`, `coeff_freq_bands` and `coeff_time_bounds` (wavelets.py)
-    assume rows of `n >> depth`. They need a segmentation branch: segment
-    start a and length m, bin k gives [a, a+m)/fs x [k, k+1) fs/(2m).
-  - The integer-depth group and cache keys in `detector_graph.py` and
-    `scale.py` become the segmentation, or the `wave` string.
-  - Reconstruction calls `CosinePackets.Inverse(c, segmentation)`.
-  - Everything downstream of the tile edges (`ladder_rows`, ridge,
-    pixel graph, wavegram match) is already layout-agnostic.
-
-### Added
-
-- **Wavelet-packet bases.** `WaveletTransform(N, wt, packetDepth)` transforms
+- **Wavelet-packet levels.** `WaveletTransform(N, wt, packetDepth)` transforms
   a window at the uniform level D of the mother's wavelet-packet tree: 2^D
-  bands of width fs / 2^(D+1), N / 2^D coefficients each, written in frequency
-  order, band f at indices [f N / 2^D, (f+1) N / 2^D). Every split is GSL's own
-  periodized step, so depth 1 is the pyramid's finest step coefficient for
-  coefficient, and the level is orthonormal: the inverse reconstructs the
-  window and the coefficient energy is its energy. Depth 0 is the pyramid.
+  bands of width fs / 2^(D+1), N / 2^D coefficients each, written in
+  frequency order, band f at indices [f N / 2^D, (f+1) N / 2^D). Each split
+  is GSL's periodized filter step, so depth 1 equals the pyramid's finest
+  step and the level is orthonormal. Depth 0 is the pyramid.
   `GetPacketDepth()` and `GetLength()` report the level and the window.
+- **Long mothers.** `WaveletType` gains `Sym10`, `Sym12`, `Sym16`, `Sym20`,
+  `Coif3`, `Coif4`, `Coif5`, `DaubC24`, `DaubC32` and `DaubC40` (PyWavelets'
+  db12, db16, db20), centred as the existing `DaubC*`, `Sym*` and `Coif*`.
+  The values are appended after `Sym8`, so existing values keep their
+  numbers. The taps are PyWavelets' (MIT licence), written at full precision
+  into `src/ExtraWaveletLongTables.inc` by
+  `tools/generate_long_wavelet_tables.py`.
+- **Local cosine bases and cosine packets** (`include/LocalCosine.hpp`).
+  - `LocalCosineTransform(N, M, overlap=M/2, edge=periodic, bell=coifmanMeyer)`:
+    the orthonormal local cosine basis of segment length M. The samples about
+    every segment edge are folded with a Coifman-Meyer or sine bell, then
+    each segment gets an orthonormal DCT-IV. `periodic` window edges fold at
+    0 = N, `free` edges do not. `Forward`/`Inverse` are frequency-major (the
+    layout of packet depth log2 M); `ForwardSegments`/`InverseSegments` are
+    segment-major.
+  - `CosinePackets(N, minSegment, maxSegment=N, overlap=minSegment/2, ...)`:
+    the dyadic segmentation tree with one bell half-width at every edge, so
+    every segmentation made of tree nodes is orthonormal. `BestBasis(x, cost,
+    sigma)` is the Coifman-Wickerhauser search for the costs `l1`, `entropy`,
+    `wdfUniversal` and `wdfBlock`; `GetSegmentation()` and
+    `GetCoefficients()` return the result; `Analyse` and `Inverse` work on
+    any segmentation; `SetBlock(length, lambda)` sets the block cost's
+    parameters.
+  - `WaveletType::LocalCos`: `WaveletTransform(N, LocalCos, D)` is the local
+    cosine basis of segment 2^D (Coifman-Meyer, half-width 2^(D-1),
+    periodic), with the layout of packet depth D.
 - **`WDF2Classify::SetBases(names)` and `GetBases()`.** The candidates of the
-  basis competition are a comma-separated list, in the order they compete (a
-  tie goes to the later one): a mother (`Haar`, `DaubC4` to `DaubC20`, `Sym4`,
-  `Sym8`, `Coif1`, `Coif2`) for its pyramid, or a mother followed by `P` and a
-  depth, as `Coif1P6`, for that packet level. An unknown or repeated name, an
-  empty list or a depth above log2 of the window raises `ValueError`. The
-  default is the ten pyramid bases of 3.0.0. The winner's name is the trigger's
-  `mWave`.
-- **The block rule follows the packet layout.**
-  `WaveletThreshold::SetLayout(packetDepth)` tells the rule where the runs of
-  coefficients lie: at depth 0 the pyramid's levels, index 0, index 1 and
-  [2^k, 2^(k+1)), exactly as before; at depth D the 2^D bands. Each run is cut
-  into blocks of L from its first index, so no block crosses a band edge.
-  `WDF2Classify` sets the layout of each candidate before thresholding it.
-  Under the block rule `SetBases` refuses a packet depth whose bands are
-  shorter than one block, N / 2^D < L, where the 4.505 calibration of lambda
-  does not hold: for a window of 512, L = 6 and depths 1 to 6 are accepted,
-  7 to 9 refused. The other rules accept every depth.
+  competition as a comma-separated list, in the order they compete: a
+  mother for its pyramid, a mother followed by `P<depth>` (as `Sym8P6`) for a
+  packet level, or `LocalCos<M>` (as `LocalCos128`) for a local cosine basis.
+  An unknown or repeated name, an empty list or a depth above log2 of the
+  window raises `ValueError`; under the block rule so does a band shorter
+  than one block (N / 2^D < L).
+- **The block rule follows the layout.** `WaveletThreshold::SetLayout(depth)`
+  makes the block rule cut each packet band (or local cosine row) into blocks
+  separately, as it cuts each pyramid level; `WDF2Classify` sets the layout
+  of each candidate.
+- **`SetMinFrequency(fHz, fs)`** on `WaveletThreshold` and `WDF2Classify`,
+  with `GetMinFrequency`, and `WaveletThreshold::IsKept(i)`: a coefficient
+  whose run (pyramid level, packet band, local cosine row) has its upper
+  frequency edge at or below fHz is zeroed and left out of sigma, of the
+  threshold, of the largest coefficient and of EnWDF; the universal threshold
+  counts the kept coefficients. Off by default.
+- **`SetBlockRemainder(mode)`** on `WaveletThreshold` and `WDF2Classify`,
+  with `GetBlockRemainder`, `WaveletThreshold::GetBlockEnergyThreshold(n)`
+  and the enum `WaveletThreshold::BlockRemainder`: how the block rule judges a
+  block of n < L coefficients. `legacy` (default) judges it against
+  lambda n sigma^2 as a full block; `merge` joins a run's remainder to the
+  block before it; `scaled` keeps it when its energy exceeds
+  Qinv_chi2_n(Q_chi2_L(lambda L)) sigma^2, the false-alarm probability of a
+  full block.
+- **`WDF2Classify::SetBlock(length, lambda)`**, with `GetBlockLength` and
+  `GetBlockLambda`: the block rule's length (0 for round(ln window)) and
+  lambda in every candidate.
+- Python bindings for all of the above, `WaveletTransform.WaveletWaveform`
+  among them.
 
 ### Fixed
 
-- **A copy of `WaveletThreshold` owns its work buffers.** They were raw arrays
-  with the compiler's shallow copy, so copying a `WDF2Classify` (its copy
-  constructor or `assign`) left two objects freeing the same memory, and the
-  process aborted with a double free. They are now `std::vector`s.
-- **`WaveletTransform` copies.** The copy constructor and assignment did
-  nothing, leaving the GSL handles uninitialized; a copy is now a transform of
-  the same length, mother and packet level with handles of its own.
-- **`WaveletTransform::WaveletWaveform` inverts at the transform's packet
-  level**, rather than always through the pyramid, and frees its buffer with
-  `delete[]`. It is now bound in Python and returns the waveform.
+- **Copying a `WaveletThreshold`** no longer shares its work buffers; copying
+  a `WDF2Classify` (copy constructor or `assign`) ended in a double free.
+- **Copying a `WaveletTransform`** gives a transform of the same length,
+  mother and level with its own GSL handles; the copy was left uninitialized.
+- **`WaveletTransform` resizing** frees the previous GSL workspace.
+- **`WaveletTransform::WaveletWaveform`** inverts at the transform's own level
+  and frees its buffer with `delete[]`.
 
-### Notes for downstream users
+### Compatibility
 
-Trigger values do not move: with the default bases every candidate is a
-pyramid, whose block ladder is unchanged bit for bit. Once `SetBases` admits
-packet bases, `mWave` can carry names such as `Coif1P6`, which a reader must
-invert with `WaveletTransform(N, mother, depth)`; a reader that looks the name
-up as a `WaveletType` fails on them. `WDF2Reconstruct` keeps its fixed pyramid
-candidates.
+- Existing `WaveletType` values keep their numbers; all new API is additive.
+- With every new option at its default, the only change in trigger values is
+  the default basis competition above.
+- A reader of `mWave` must handle packet names (`<mother>P<depth>`) and
+  `LocalCos<M>` when `SetBases` admits them.
 
 ## 3.3.0
 
