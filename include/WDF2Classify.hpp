@@ -57,6 +57,7 @@
 #include <EventFullFeatured.hpp>
 #include <WaveletTransform.hpp>
 #include <WaveletThreshold.hpp>
+#include <WaveletBases.hpp>
 //#include <DCT.hpp>
 #include <Cs2HammingWindow.hpp>
 #include <BaseView.hpp>
@@ -92,7 +93,7 @@ namespace tsa {
         /// Constructor
         ///
         WDF2Classify(unsigned int window, unsigned int overlap, double thresh, double sigma,
-                     unsigned int ncoeff, enum WaveletThreshold::WaveletThresholding WTh = WaveletThreshold::block);
+                     unsigned int ncoeff, enum WaveletThreshold::WaveletThresholding WTh = DefaultWaveletThresholding());
 
         ///
         /// Copy constructor. Explicit (not compiler-generated): mBases holds
@@ -215,6 +216,9 @@ namespace tsa {
          */
         int GetDataNeeded();
 
+        /// The candidate bases, comma-separated, in the order they compete.
+        std::string GetBases() const;
+
         //@}
 
         ///
@@ -224,6 +228,133 @@ namespace tsa {
 
 
         void SetData(Dmatrix& Data, double scale);
+
+        /// Replace the candidate bases of the competition.
+        ///
+        /// Every window is transformed in each candidate and the one whose
+        /// thresholded coefficients have the largest norm on their own noise
+        /// scale wins; on a tie the later candidate wins, so the order is part
+        /// of the definition. A name is an orthonormal mother (Haar, DaubC4 to
+        /// DaubC20, Sym4, Sym8, Coif1, Coif2, or a long one: DaubC24, DaubC32,
+        /// DaubC40, Sym10, Sym12, Sym16, Sym20, Coif3, Coif4, Coif5) for its
+        /// pyramidal transform, or
+        /// a mother followed by "P" and a depth D, as "Coif1P6", for the
+        /// uniform level D of its wavelet-packet tree, whose coefficient
+        /// layout is described at WaveletTransform's packet constructor. The
+        /// trigger records the winner's name, which is what a reader needs to
+        /// place and invert its coefficients.
+        ///
+        /// "LocalCos" followed by a segment length M, a power of 2 (as
+        /// "LocalCos128"), is the orthonormal local cosine basis of segment M
+        /// (WaveletTransform's LocalCos: Coifman-Meyer bell of half-width
+        /// M / 2, periodic window edges, DCT-IV per segment), written
+        /// frequency-major so that it has the layout of the packet level of
+        /// depth log2 M: row k is DCT-IV bin k, centre (k + 1/2) fs / (2M),
+        /// over the N / M segments in time order. No LocalCos is in the
+        /// default list.
+        ///
+        /// Under the block rule the blocks of a packet basis are cut band by
+        /// band (see WaveletThreshold::SetLayout), so a packet depth D is
+        /// accepted only while each band of window / 2^D coefficients holds
+        /// one full block of L = round(ln window): for a window of 512, L = 6
+        /// and D is at most 6. The same holds for the rows of LocalCos M,
+        /// D = log2 M: M <= 64 at a window of 512, M <= 128 at 1024 (L = 7),
+        /// M <= 256 at 2048 (L = 8).
+        ///
+        /// The default list is DefaultWaveletBases();
+        /// SetBases(LegacyWaveletBases()) restores the competition of
+        /// releases 3.0.0 to 3.3.0 (see WaveletBases.hpp). WDF2Reconstruct
+        /// takes the same names and the same default.
+        ///
+        /// @param names comma-separated candidate names
+        /// @exception std::invalid_argument on an unknown or repeated name,
+        ///            a packet depth above log2 of the window, an empty list,
+        ///            or, under the block rule, a packet band shorter than
+        ///            one block.
+        void SetBases(const std::string& names);
+
+        /// Leave the coefficients at or below fHz out of the competition.
+        ///
+        /// Every candidate drops the coefficients whose tile's upper
+        /// frequency edge is <= fHz, read on its own layout (pyramid levels,
+        /// packet bands, LocalCos rows; see WaveletThreshold::SetMinFrequency):
+        /// they are out of the window's sigma, out of the block rule and out
+        /// of EnWDF, and the trigger's coefficients hold zero there. At
+        /// window 1024 and fs 2048, fHz 16 drops pyramid indices 0-15 and
+        /// LocalCos128 rows 0-1. fHz <= 0, the default, keeps every
+        /// coefficient and leaves the classifier bit for bit as without it.
+        ///
+        /// @param fHz minimum frequency in Hz, <= 0 for none
+        /// @param fs  sampling rate of the searched stream in Hz
+        /// @exception std::invalid_argument when fs <= 0 with fHz > 0, or
+        ///            fHz >= fs / 2
+        void SetMinFrequency(double fHz, double fs) {
+            mWavThres.SetMinFrequency(fHz, fs);
+        }
+
+        /// The minimum frequency in Hz, 0 when every coefficient is kept.
+        double GetMinFrequency() const {
+            return mWavThres.GetMinFrequency();
+        }
+
+        /// How the block rule judges a block shorter than L = round(ln
+        /// window), in every candidate (see WaveletThreshold::BlockRemainder):
+        /// "legacy" (the default, bit for bit as before) like a full block
+        /// against lambda n sigma^2; "merge" joins the remainder of a run to
+        /// the block before it (7 + 1 = one block of 8); "scaled" judges a
+        /// block of n < L at a full block's false-alarm probability,
+        /// Qinv_{chi2_n}(Q_{chi2_L}(lambda L)) sigma^2. Other rules ignore it.
+        ///
+        /// @exception std::invalid_argument on an unknown name
+        void SetBlockRemainder(const std::string& mode) {
+            mWavThres.SetBlockRemainder(mode);
+        }
+
+        /// The same, by enum value.
+        void SetBlockRemainder(enum WaveletThreshold::BlockRemainder mode) {
+            mWavThres.SetBlockRemainder(mode);
+        }
+
+        /// The block remainder mode in force.
+        enum WaveletThreshold::BlockRemainder GetBlockRemainder() const {
+            return mWavThres.GetBlockRemainder();
+        }
+
+        /// The block rule's parameters in every candidate (see
+        /// WaveletThreshold::SetBlock): the block length L in coefficients,
+        /// 0 for round(ln window), Cai's choice and the default, and the
+        /// energy threshold lambda in units of L sigma^2, 4.505 by default
+        /// (calibrated for L of about 7). Under the block rule every band
+        /// (row) of the current candidates must still hold one full block of
+        /// the new length, the check SetBases makes.
+        ///
+        /// @exception std::invalid_argument if lambda is not positive, or a
+        /// candidate's bands are shorter than the new block length
+        void SetBlock(unsigned int length, double lambda) {
+            if (!(lambda > 0.0)) {
+                throw std::invalid_argument("WDF2Classify: the block lambda must be positive");
+            }
+            if (mT == WaveletThreshold::block) {
+                WaveletThreshold probe(mWindow);
+                probe.SetBlock(length, lambda);
+                try {
+                    CheckWaveletBlocks(mSpecs, mWindow, probe.GetBlockLength());
+                } catch (const std::invalid_argument& e) {
+                    throw std::invalid_argument(std::string("WDF2Classify: ") + e.what());
+                }
+            }
+            mWavThres.SetBlock(length, lambda);
+        }
+
+        /// The block length L in force, in coefficients.
+        unsigned int GetBlockLength() {
+            return mWavThres.GetBlockLength();
+        }
+
+        /// The block rule's lambda in force.
+        double GetBlockLambda() {
+            return mWavThres.GetBlockLambda();
+        }
 
 
 
@@ -247,16 +378,12 @@ namespace tsa {
         Dmatrix mBuff;
         EventFullFeatured mEvFF;
 
-        // Candidate wavelet bases for per-window basis selection: the full
-        // orthonormal GSL family (Haar + Daubechies/Daubechies-centered,
-        // every order it supports). The biorthogonal B-spline family is
-        // deliberately excluded -- see GetDataVector's implementation
-        // comment for why.
-        // unique_ptr, not WaveletTransform by value: WaveletTransform's
-        // copy constructor is a no-op that leaves its GSL handles
-        // uninitialized (see WaveletTransform.cpp) -- storing by value in a
-        // vector would silently corrupt every element on the first
-        // push_back. A vector of pointers only ever moves the pointer.
+        // Candidate wavelet bases of the competition, one transform per
+        // entry of mSpecs (see SetBases).
+        // unique_ptr, not WaveletTransform by value: a WaveletTransform owns
+        // GSL handles and has no move, so a vector of values would reallocate
+        // every one of them as it grows. A vector of pointers only ever moves
+        // the pointer.
         std::vector<std::unique_ptr<WaveletTransform>> mBases;
         std::vector<std::string> mBaseNames;
         enum WaveletThreshold::WaveletThresholding mT;
@@ -264,6 +391,9 @@ namespace tsa {
        // DCT mDct;
         //Dmatrix mBuffDct;
         Cs2HammingWindow mWindowing;
+        std::vector<WaveletBasis> mSpecs;
+
+        void Build();
 
     };
 

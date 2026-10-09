@@ -33,6 +33,9 @@
 //@{
 #include <gsl/gsl_wavelet.h>
 #include <gsl/gsl_errno.h>
+#include <cstddef>
+#include <memory>
+#include <vector>
 //@}
 
 ///
@@ -40,6 +43,7 @@
 ///
 //@{
 #include <ExtraWaveletFamilies.hpp>
+#include <LocalCosine.hpp>
 //@}
 
 ///
@@ -128,16 +132,80 @@ namespace tsa {
             Coif1,
             Coif2,
             Sym4,
-            Sym8
+            Sym8,
+            // The long mothers, appended so the values above keep their
+            // numbers: Symlets 10-20, Coiflets 3-5 and the centered
+            // Daubechies of 24, 32 and 40 taps (db12, db16, db20), all
+            // centered as DaubC*, Sym* and Coif* are.
+            Sym10,
+            Sym12,
+            Sym16,
+            Sym20,
+            Coif3,
+            Coif4,
+            Coif5,
+            DaubC24,
+            DaubC32,
+            DaubC40,
+            // Not a wavelet: the orthonormal local cosine basis of segment
+            // length M = 2^packetDepth (see the packet constructor), appended
+            // so the values above keep their numbers.
+            LocalCos
         };
 
         ///
-        /// Constructor
+        /// Constructor: the pyramidal (Mallat) transform, GSL's packed layout.
+        ///
+        /// @exception std::invalid_argument for LocalCos, which needs a
+        ///            segment length (the packet constructor)
         ///
         WaveletTransform(unsigned int N, enum WaveletType wt);
 
         ///
-        /// Copy constructor
+        /// Constructor: one level of the wavelet-packet tree.
+        ///
+        /// With `packetDepth` zero the transform is the pyramidal one of the
+        /// constructor above. With `packetDepth` equal to D > 0 every band is
+        /// split, not only the lowpass one, D times with the same periodized
+        /// filter step GSL applies in its pyramid, so the output is the uniform
+        /// level D of the wavelet-packet tree: 2^D bands of equal width
+        /// fs / 2^(D+1), each carrying N / 2^D coefficients that tile the
+        /// window in steps of 2^D samples. The bands are written in frequency
+        /// order, band f occupying indices [f N / 2^D, (f+1) N / 2^D), so the
+        /// index of a coefficient places it in the plane without knowledge of
+        /// the tree: the highpass branch of a split reverses the spectrum of
+        /// what it decimates, the natural order of the tree is therefore the
+        /// Gray code of the frequency order, and the permutation undoes it.
+        ///
+        /// Every step is an orthonormal periodized two-channel filter bank and
+        /// a permutation is orthonormal, so the level is an orthonormal basis:
+        /// Inverse(Forward(x)) is x and the coefficient energy is the energy of
+        /// x. The cost is D N nc multiply-adds, linear in N, with a data
+        /// independent sequence of operations and a fixed latency.
+        ///
+        /// With `wt` equal to LocalCos the transform is not a wavelet one but
+        /// the local cosine basis of segment length M = 2^packetDepth (see
+        /// LocalCosineTransform: Coifman-Meyer bell of half-width M / 2,
+        /// periodic window edges, orthonormal DCT-IV per segment), its
+        /// coefficients written frequency-major: row k, indices
+        /// [k N / M, (k+1) N / M), is DCT-IV bin k, of centre
+        /// (k + 1/2) fs / (2M), over the N / M segments in time order. That is
+        /// the layout of the packet level of the same depth, 2^D rows of
+        /// N / 2^D, so GetPacketDepth() gives the threshold its layout as it
+        /// does for a packet level. packetDepth must be at least 1.
+        ///
+        /// @param N window length, a power of 2
+        /// @param wt mother wavelet, or LocalCos
+        /// @param packetDepth 0 for the pyramid, else the packet level, at
+        ///        most log2(N); for LocalCos log2 of the segment length
+        /// @exception std::invalid_argument when N is not a power of 2,
+        ///            packetDepth exceeds log2(N), or is 0 for LocalCos
+        ///
+        WaveletTransform(unsigned int N, enum WaveletType wt, unsigned int packetDepth);
+
+        ///
+        /// Copy constructor: a transform of the same length, mother and
+        /// packet level, with GSL handles of its own.
         ///
         /// @param from The instance that must be copied
         WaveletTransform(const WaveletTransform& from);
@@ -186,7 +254,43 @@ namespace tsa {
         ///
         //@{
         void WaveletPrint();
+
+        ///
+        /// The waveform of coefficient 22: the inverse transform, pyramidal
+        /// or packet as the transform is, of a unit coefficient at index 22.
+        ///
+        /// @param V filled with the mN samples of the waveform
+        ///
         void WaveletWaveform(Dvector& V);
+
+        ///
+        /// The window length the transform works on.
+        ///
+        unsigned int GetLength() const {
+            return mN;
+        }
+
+        ///
+        /// The packet level of the transform, 0 for the pyramid.
+        ///
+        unsigned int GetPacketDepth() const {
+            return mDepth;
+        }
+
+        ///
+        /// True for the local cosine basis (wt LocalCos).
+        ///
+        bool IsLocalCosine() const {
+            return static_cast<bool>(mCos);
+        }
+
+        ///
+        /// The local cosine segment length 2^GetPacketDepth(), 0 for a
+        /// wavelet transform.
+        ///
+        unsigned int GetCosineSegment() const {
+            return mCos ? mCos->GetSegment() : 0u;
+        }
 
         //@}
 
@@ -201,9 +305,23 @@ namespace tsa {
     protected:
 
     private:
+        struct Unchecked {};
+        // Allocates the GSL handles of a mother (Haar's for LocalCos, which
+        // has none and never uses them) without validating anything.
+        WaveletTransform(unsigned int N, enum WaveletType wt, Unchecked);
+        void Resize(unsigned int N);
+        void PacketForward(double* data);
+        void PacketInverse(double* data);
+        void Step(double* a, std::size_t n, bool forward);
+
         gsl_wavelet *mW;
         gsl_wavelet_workspace *mWork;
         unsigned int mN; ///< Lenght of input data. It must be a power of 2
+        unsigned int mDepth; ///< packet level, 0 for the pyramidal transform
+        enum WaveletType mType; ///< mother, from which a copy is rebuilt
+        std::vector<double> mScratch; ///< one band of the packet step
+        std::vector<double> mOrder; ///< the tree in natural order
+        std::unique_ptr<LocalCosineTransform> mCos; ///< set for LocalCos only
     };
 
     ///

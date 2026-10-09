@@ -22,8 +22,10 @@ series. It contains
 - Modern Spectral Analysis Estimators
 - Whitening in Time domain
 - Double Whitening in Time domain
-- Wavelet Decomposition
-- Wavelet Detection Filter (WDF)
+- Wavelet Decomposition: pyramidal transforms, uniform wavelet-packet levels
+  and orthonormal local cosine bases
+- Cosine packets with the Coifman-Wickerhauser best-basis search
+- Wavelet Detection Filter (WDF), with a configurable basis competition
 
 The pipeline
 ------------

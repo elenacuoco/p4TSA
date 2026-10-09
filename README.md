@@ -23,8 +23,88 @@ includes:
 - Whitening in the time domain
 - Double whitening (equivalent to dividing by the Power Spectral Density) in the
   time domain
-- Wavelet decomposition
+- Wavelet decomposition: pyramidal transforms, uniform wavelet-packet levels
+  and orthonormal local cosine bases
+- Cosine packets with the Coifman-Wickerhauser best-basis search
 - Wavelet Detection Filter
+
+## The WDF basis competition
+
+`WDF2Classify` transforms every window in each candidate basis, thresholds
+the coefficients on the window's own noise scale and keeps the candidate with
+the largest thresholded energy; the winner's name is the trigger's `mWave`.
+
+```python
+from py4tsa import tsa
+
+fs, n = 2048.0, 1024
+wdf = tsa.WDF2Classify(n, 0, 5.0, 1.0, n, tsa.WaveletThreshold.block)
+wdf.GetBases()      # 'Haar,DaubC4,DaubC8,Sym4,DaubC16,Sym8,Coif3,DaubC24,Sym12,Coif5'
+wdf.SetBases(wdf.GetBases() + ",Sym8P6,LocalCos128")
+wdf.SetMinFrequency(16.0, fs)      # coefficients at or below 16 Hz leave the statistic
+wdf.SetBlockRemainder("merge")     # how blocks shorter than L are judged
+wdf.SetBlock(0, 4.505)             # block length (0: round(ln n)) and lambda
+```
+
+- **Candidate names** (`SetBases`, comma-separated, in the order they
+  compete; a tie goes to the later one):
+  - a mother for its pyramidal transform: `Haar`, `DaubC4` to `DaubC20`,
+    `DaubC24`, `DaubC32`, `DaubC40`, `Sym4`, `Sym8`, `Sym10`, `Sym12`,
+    `Sym16`, `Sym20`, `Coif1` to `Coif5`;
+  - a mother followed by `P` and a depth D, as `Sym8P6`, for the uniform level
+    D of its wavelet-packet tree: 2^D bands of width fs / 2^(D+1), written in
+    frequency order;
+  - `LocalCos` followed by a segment length M, a power of 2, as `LocalCos128`,
+    for the orthonormal local cosine basis of segment M (Coifman-Meyer bell of
+    half-width M / 2, periodic window edges), written with the layout of the
+    packet level of depth log2 M.
+
+  Under the block rule a packet band, or a local cosine row, must hold one
+  full block of L = round(ln n) coefficients: n / 2^D >= L.
+- **`SetMinFrequency(fHz, fs)`** drops every coefficient whose band lies at or
+  below fHz from sigma, from the threshold and from the statistic; 0 (the
+  default) keeps every coefficient.
+- **`SetBlockRemainder(mode)`** sets how the block rule judges a block of n < L
+  coefficients at the end of a run: `"legacy"` (default) against lambda n
+  sigma^2 as a full block, `"merge"` joined to the block before it, `"scaled"`
+  at the false-alarm probability of a full block.
+- **`SetBlock(length, lambda)`** sets the block length L (0 for round(ln n))
+  and lambda (default 4.505) in every candidate.
+- The default list is `tsa.DefaultWaveletBases()`.
+  `SetBases(tsa.LegacyWaveletBases())` restores the competition of releases
+  3.0.0 to 3.3.0.
+
+`WDF2Reconstruct` runs the same competition: the same default list, the same
+default threshold rule (`tsa.DefaultWaveletThresholding()`, the block rule),
+the same names through `SetBases`, and the same winner and coefficients in
+every window. `Reconstruct(ev)` returns a trigger's
+window in the time domain, its coefficients inverted with the transform its
+`mWave` names:
+
+```python
+rec = tsa.WDF2Reconstruct(n, 0, 5.0, 1.0, n)   # block rule, default list
+rec.SetBases(wdf.GetBases())
+# ... rec << data; while rec.GetDataNeeded() >= 0: if rec(ev): ...
+waveform = rec.Reconstruct(ev)     # numpy array of n samples
+```
+
+The transforms are also available on their own:
+
+```python
+import numpy as np
+
+x = np.random.default_rng(1).normal(size=n)
+
+lc = tsa.LocalCosineTransform(n, 128)        # segment 128, bell half-width 64
+c = lc.Forward(x)                            # frequency-major coefficients
+x_back = lc.Inverse(c)
+
+cp = tsa.CosinePackets(n, 64)                # segments n down to 64
+cp.BestBasis(x, tsa.CosinePackets.wdfBlock)  # or l1, entropy, wdfUniversal
+seg = cp.GetSegmentation()                   # segment lengths in time order
+c = cp.GetCoefficients()
+x_back = cp.Inverse(c, seg)                  # Analyse(x, seg) gives c back
+```
 
 ## The pipeline that uses it
 
@@ -229,6 +309,11 @@ python -m build --wheel        # -> dist/py4tsa-3.3.0-*.whl
 pip install pytest
 pytest python-wrapper/tests/ -v
 ```
+
+The cross-checks of the long mothers against PyWavelets run when `PyWavelets`
+is installed. The real-data regression digests of the block rule run when
+`P4TSA_WHITENED_STREAMS` names a directory of whitened strain windows, and are
+skipped otherwise.
 
 Runs on every push/PR via [GitHub Actions](https://github.com/elenacuoco/p4TSA/blob/master/.github/workflows/ci.yml) (Python 3.10-3.12).
 

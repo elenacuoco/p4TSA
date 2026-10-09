@@ -2497,6 +2497,9 @@ void bind_TF2Psd(std::function< pybind11::module &(std::string const &namespace_
 #include <WavReconstruction.hpp>
 #include <WaveletThreshold.hpp>
 #include <WaveletTransform.hpp>
+#include <LocalCosine.hpp>
+#include <WaveletBases.hpp>
+#include <pybind11/numpy.h>
 #include <WelchWindow.hpp>
 #include <WindowFactory.hpp>
 #include <boost/numeric/ublas/functional.hpp>
@@ -2614,9 +2617,24 @@ void bind_WaveletThreshold(std::function< pybind11::module &(std::string const &
 			.value("soft", tsa::WaveletThreshold::soft)
 			.export_values();
 
+		pybind11::enum_<tsa::WaveletThreshold::BlockRemainder>(cl, "BlockRemainder", pybind11::arithmetic(), "How the block rule judges a block shorter than L: legacy (default) like a full block, merge joins a run's remainder to the block before it, scaled judges n < L at the full block's false-alarm probability.")
+			.value("legacy", tsa::WaveletThreshold::legacy)
+			.value("merge", tsa::WaveletThreshold::merge)
+			.value("scaled", tsa::WaveletThreshold::scaled)
+			.export_values();
+
 		cl.def("__call__", [](tsa::WaveletThreshold &o, class tsa::SeqView<double> & a0, enum tsa::WaveletThreshold::WaveletThresholding const & a1) -> void { return o.operator()(a0, a1); }, "", pybind11::arg("WT"), pybind11::arg("t"));
 		cl.def("__call__", (void (tsa::WaveletThreshold::*)(class tsa::SeqView<double> &, enum tsa::WaveletThreshold::WaveletThresholding, enum tsa::WaveletThreshold::ThresholdingMode)) &tsa::WaveletThreshold::operator(), "Brief documentation for the execute method.\n\n Start of the long documentation for execute method.\n\n \n A precondition\n \n\n A postcondition\n \n\n An exception\n\n \n parameter\n\n \n a returned value\n\n Declaration of execute operation\n\nC++: tsa::WaveletThreshold::operator()(class tsa::SeqView<double> &, enum tsa::WaveletThreshold::WaveletThresholding, enum tsa::WaveletThreshold::ThresholdingMode) --> void", pybind11::arg("WT"), pybind11::arg("t"), pybind11::arg("m"));
 		cl.def("SetBlock", (void (tsa::WaveletThreshold::*)(unsigned int, double)) &tsa::WaveletThreshold::SetBlock, "The block rule's parameters: block length (0 for ln N) and energy threshold in units of L sigma^2.\n\nC++: tsa::WaveletThreshold::SetBlock(unsigned int, double) --> void", pybind11::arg("length"), pybind11::arg("lambda"));
+		cl.def("SetMinFrequency", &tsa::WaveletThreshold::SetMinFrequency, "Drop the coefficients whose run's upper frequency edge (fs / 2) e / N, e the index past the run of the layout, is <= fHz: zeroed, out of sigma, of the block rule and of the largest coefficient; sqrt(2 ln n_kept) for the universal threshold. fHz <= 0 switches it off (default, bit for bit). Raises ValueError when fs <= 0 with fHz > 0, or fHz >= fs / 2.", pybind11::arg("fHz"), pybind11::arg("fs"));
+		cl.def("GetMinFrequency", &tsa::WaveletThreshold::GetMinFrequency, "The minimum frequency in Hz, 0 when every coefficient is kept.");
+		cl.def("IsKept", &tsa::WaveletThreshold::IsKept, "Whether coefficient i is kept under the current layout and minimum frequency.", pybind11::arg("i"));
+		cl.def("SetLayout", &tsa::WaveletThreshold::SetLayout, "The coefficient layout the block rule cuts into blocks: 0 for the pyramid, else the depth D of a uniform wavelet-packet level, whose 2^D bands of N / 2^D are cut separately. Raises ValueError when 2^D exceeds N.", pybind11::arg("packetDepth"));
+		cl.def("GetLayout", &tsa::WaveletThreshold::GetLayout, "The packet depth of the block layout, 0 for the pyramid.");
+		cl.def("SetBlockRemainder", (void (tsa::WaveletThreshold::*)(const std::string&)) &tsa::WaveletThreshold::SetBlockRemainder, "How the block rule judges a block shorter than L = round(ln N): 'legacy' (default, bit for bit as before) against lambda n sigma^2 like a full block; 'merge' joins a run's remainder of 1..L-1 to the block before it (7 + 1 = one block of 8; a run shorter than L stays one block); 'scaled' keeps the partition and judges a block of n < L against Qinv_chi2_n(Q_chi2_L(lambda L)) sigma^2, a full block's false-alarm probability. Takes the name or a BlockRemainder value; raises ValueError on an unknown name.", pybind11::arg("mode"));
+		cl.def("SetBlockRemainder", (void (tsa::WaveletThreshold::*)(enum tsa::WaveletThreshold::BlockRemainder)) &tsa::WaveletThreshold::SetBlockRemainder, "How the block rule judges a block shorter than L = round(ln N): 'legacy' (default, bit for bit as before) against lambda n sigma^2 like a full block; 'merge' joins a run's remainder of 1..L-1 to the block before it (7 + 1 = one block of 8; a run shorter than L stays one block); 'scaled' keeps the partition and judges a block of n < L against Qinv_chi2_n(Q_chi2_L(lambda L)) sigma^2, a full block's false-alarm probability. Takes the name or a BlockRemainder value; raises ValueError on an unknown name.", pybind11::arg("mode"));
+		cl.def("GetBlockRemainder", &tsa::WaveletThreshold::GetBlockRemainder, "The block remainder mode (BlockRemainder).");
+		cl.def("GetBlockEnergyThreshold", &tsa::WaveletThreshold::GetBlockEnergyThreshold, "Energy in units of sigma^2 above which a block of n coefficients is kept: lambda n, or under 'scaled' for n < L Qinv_chi2_n(Q_chi2_L(lambda L)).", pybind11::arg("n"));
 		cl.def("GetBlockLength", (unsigned int (tsa::WaveletThreshold::*)()) &tsa::WaveletThreshold::GetBlockLength, "C++: tsa::WaveletThreshold::GetBlockLength() --> unsigned int");
 		cl.def("GetBlockLambda", (double (tsa::WaveletThreshold::*)()) &tsa::WaveletThreshold::GetBlockLambda, "C++: tsa::WaveletThreshold::GetBlockLambda() --> double");
 		cl.def("GetSigma", (double (tsa::WaveletThreshold::*)()) &tsa::WaveletThreshold::GetSigma, "C++: tsa::WaveletThreshold::GetSigma() --> double");
@@ -2628,6 +2646,12 @@ void bind_WaveletThreshold(std::function< pybind11::module &(std::string const &
 	{ // tsa::WaveletTransform file:WaveletTransform.hpp line:75
 		pybind11::class_<tsa::WaveletTransform, std::shared_ptr<tsa::WaveletTransform>> cl(M("tsa"), "WaveletTransform", "Compute the wavelet transform");
 		cl.def( pybind11::init<unsigned int, enum tsa::WaveletTransform::WaveletType>(), pybind11::arg("N"), pybind11::arg("wt") );
+		cl.def( pybind11::init<unsigned int, enum tsa::WaveletTransform::WaveletType, unsigned int>(), "One uniform level of the wavelet-packet tree, bands in frequency order; packetDepth 0 is the pyramid.", pybind11::arg("N"), pybind11::arg("wt"), pybind11::arg("packetDepth") );
+		cl.def("GetPacketDepth", &tsa::WaveletTransform::GetPacketDepth, "The packet level of the transform, 0 for the pyramid.");
+		cl.def("GetLength", &tsa::WaveletTransform::GetLength, "The window length the transform works on.");
+		cl.def("IsLocalCosine", &tsa::WaveletTransform::IsLocalCosine, "True for the local cosine basis, WaveletTransform(N, LocalCos, log2 M).");
+		cl.def("GetCosineSegment", &tsa::WaveletTransform::GetCosineSegment, "The local cosine segment length M, 0 for a wavelet transform.");
+		cl.def("WaveletWaveform", [](tsa::WaveletTransform &o) { tsa::Dvector v(o.GetLength()); o.WaveletWaveform(v); pybind11::list out; for (std::size_t i = 0; i < v.size(); i++) out.append(v(i)); return out; }, "The waveform of coefficient 22: the inverse transform, pyramidal or packet, of a unit coefficient at index 22.");
 
 		cl.def( pybind11::init( [](tsa::WaveletTransform const &o){ return new tsa::WaveletTransform(o); } ) );
 
@@ -2678,12 +2702,112 @@ void bind_WaveletThreshold(std::function< pybind11::module &(std::string const &
 			.value("Coif2", tsa::WaveletTransform::Coif2)
 			.value("Sym4", tsa::WaveletTransform::Sym4)
 			.value("Sym8", tsa::WaveletTransform::Sym8)
+			.value("Sym10", tsa::WaveletTransform::Sym10)
+			.value("Sym12", tsa::WaveletTransform::Sym12)
+			.value("Sym16", tsa::WaveletTransform::Sym16)
+			.value("Sym20", tsa::WaveletTransform::Sym20)
+			.value("Coif3", tsa::WaveletTransform::Coif3)
+			.value("Coif4", tsa::WaveletTransform::Coif4)
+			.value("Coif5", tsa::WaveletTransform::Coif5)
+			.value("DaubC24", tsa::WaveletTransform::DaubC24)
+			.value("DaubC32", tsa::WaveletTransform::DaubC32)
+			.value("DaubC40", tsa::WaveletTransform::DaubC40)
+			.value("LocalCos", tsa::WaveletTransform::LocalCos)
 			.export_values();
 
 		cl.def("assign", (class tsa::WaveletTransform & (tsa::WaveletTransform::*)(const class tsa::WaveletTransform &)) &tsa::WaveletTransform::operator=, "Assignement operator\n\n \n The instance to be assigned from\n\n \n a reference to a new object\n\nC++: tsa::WaveletTransform::operator=(const class tsa::WaveletTransform &) --> class tsa::WaveletTransform &", pybind11::return_value_policy::automatic, pybind11::arg("from"));
-		cl.def("Forward", (void (tsa::WaveletTransform::*)(class tsa::SeqView<double> &)) &tsa::WaveletTransform::Forward, "Brief documentation for the execute method.\n\n Start of the long documentation for execute method.\n\n \n A precondition\n \n\n A postcondition\n \n\n An exception\n\n \n parameter\n\n \n a returned value\n\n Declaration of execute operation\n\nC++: tsa::WaveletTransform::Forward(class tsa::SeqView<double> &) --> void", pybind11::arg("In"));
-		cl.def("Inverse", (void (tsa::WaveletTransform::*)(class tsa::SeqView<double> &)) &tsa::WaveletTransform::Inverse, "C++: tsa::WaveletTransform::Inverse(class tsa::SeqView<double> &) --> void", pybind11::arg("In"));
+		cl.def("Forward", (void (tsa::WaveletTransform::*)(class tsa::SeqView<double> &)) &tsa::WaveletTransform::Forward, "Transform the first channel of In in place: the pyramid (GSL packed layout), the uniform wavelet-packet level of the transform's packet depth (bands in frequency order), or the local cosine basis (frequency-major rows).\n\nC++: tsa::WaveletTransform::Forward(class tsa::SeqView<double> &) --> void", pybind11::arg("In"));
+		cl.def("Inverse", (void (tsa::WaveletTransform::*)(class tsa::SeqView<double> &)) &tsa::WaveletTransform::Inverse, "Invert Forward in place, in the same layout.\n\nC++: tsa::WaveletTransform::Inverse(class tsa::SeqView<double> &) --> void", pybind11::arg("In"));
 		cl.def("WaveletPrint", (void (tsa::WaveletTransform::*)()) &tsa::WaveletTransform::WaveletPrint, "C++: tsa::WaveletTransform::WaveletPrint() --> void");
+	}
+	{ // candidate lists of the basis competition, file:WaveletBases.hpp
+		M("tsa").def("DefaultWaveletBases", []() { return std::string(tsa::DefaultWaveletBases()); }, "The default candidate list of WDF2Classify and WDF2Reconstruct, comma-separated in competition order: ten pyramids ordered by filter length.");
+		M("tsa").def("DefaultWaveletThresholding", []() { return tsa::DefaultWaveletThresholding(); }, "The default threshold rule of WDF2Classify and WDF2Reconstruct, WaveletThreshold.block.");
+		M("tsa").def("LegacyWaveletBases", []() { return std::string(tsa::LegacyWaveletBases()); }, "The default candidate list of releases 3.0.0 to 3.3.0; SetBases(LegacyWaveletBases()) restores that competition.");
+	}
+	{ // tsa::LocalCosineTransform and tsa::CosinePackets file:LocalCosine.hpp
+		typedef pybind11::array_t<double, pybind11::array::c_style | pybind11::array::forcecast> Array;
+		// A 1-D array of n values, copied; the transforms work in place on the copy.
+		auto values = [](Array a, std::size_t n, const char* what) {
+			if (a.ndim() != 1 || static_cast<std::size_t>(a.shape(0)) != n) {
+				throw std::invalid_argument(std::string(what) + ": expected a 1-D array of " + std::to_string(n) + " values");
+			}
+			return std::vector<double>(a.data(), a.data() + n);
+		};
+		auto array = [](const std::vector<double>& v) {
+			Array out(v.size());
+			std::copy(v.begin(), v.end(), out.mutable_data());
+			return out;
+		};
+		auto segmentation = [](pybind11::iterable lengths) {
+			std::vector<unsigned int> out;
+			for (auto m : lengths) {
+				out.push_back(m.cast<unsigned int>());
+			}
+			return out;
+		};
+
+		pybind11::class_<tsa::LocalCosineTransform, std::shared_ptr<tsa::LocalCosineTransform>> cl(M("tsa"), "LocalCosineTransform",
+			"Orthonormal local cosine basis of segment length M on a window of N: a bell of half-width overlap folds the samples about every segment edge, then an orthonormal DCT-IV per segment. Forward/Inverse are frequency-major (index k N/M + j: bin k of segment j, the layout of packet depth log2 M); ForwardSegments/InverseSegments are segment-major (index j M + k).");
+		pybind11::enum_<tsa::LocalCosineTransform::Edge>(cl, "Edge", pybind11::arithmetic(), "Window edges: periodic (bells wrap round) or free (no bell at 0 and N).")
+			.value("periodic", tsa::LocalCosineTransform::periodic)
+			.value("free", tsa::LocalCosineTransform::free)
+			.export_values();
+		pybind11::enum_<tsa::LocalCosineTransform::Bell>(cl, "Bell", pybind11::arithmetic(), "Cut-off r = sin(pi/4 (1 + beta(t))): coifmanMeyer, beta the three-fold iterated sin(pi t / 2); sine, beta(t) = t.")
+			.value("coifmanMeyer", tsa::LocalCosineTransform::coifmanMeyer)
+			.value("sine", tsa::LocalCosineTransform::sine)
+			.export_values();
+		cl.def(pybind11::init<unsigned int, unsigned int, int, enum tsa::LocalCosineTransform::Edge, enum tsa::LocalCosineTransform::Bell>(),
+			"N a multiple of M, M a power of 2, overlap the bell half-width (at most M/2; negative for M/2).",
+			pybind11::arg("N"), pybind11::arg("M"), pybind11::arg("overlap") = -1,
+			pybind11::arg("edge") = tsa::LocalCosineTransform::periodic, pybind11::arg("bell") = tsa::LocalCosineTransform::coifmanMeyer);
+		cl.def(pybind11::init([](tsa::LocalCosineTransform const &o){ return new tsa::LocalCosineTransform(o); }));
+		cl.def("Forward", [values, array](tsa::LocalCosineTransform &o, Array x) { auto v = values(x, o.GetLength(), "Forward"); o.Forward(v.data()); return array(v); }, "Coefficients of x, frequency-major.", pybind11::arg("x"));
+		cl.def("Inverse", [values, array](tsa::LocalCosineTransform &o, Array c) { auto v = values(c, o.GetLength(), "Inverse"); o.Inverse(v.data()); return array(v); }, "The window from frequency-major coefficients.", pybind11::arg("c"));
+		cl.def("ForwardSegments", [values, array](tsa::LocalCosineTransform &o, Array x) { auto v = values(x, o.GetLength(), "ForwardSegments"); o.ForwardSegments(v.data()); return array(v); }, "Coefficients of x, segment-major.", pybind11::arg("x"));
+		cl.def("InverseSegments", [values, array](tsa::LocalCosineTransform &o, Array c) { auto v = values(c, o.GetLength(), "InverseSegments"); o.InverseSegments(v.data()); return array(v); }, "The window from segment-major coefficients.", pybind11::arg("c"));
+		cl.def("GetLength", &tsa::LocalCosineTransform::GetLength, "The window length N.");
+		cl.def("GetSegment", &tsa::LocalCosineTransform::GetSegment, "The segment length M.");
+		cl.def("GetOverlap", &tsa::LocalCosineTransform::GetOverlap, "The bell half-width eps.");
+		cl.def("GetEdge", &tsa::LocalCosineTransform::GetEdge, "The treatment of the window edges (Edge).");
+		cl.def("GetBell", &tsa::LocalCosineTransform::GetBell, "The shape of the cut-off (Bell).");
+		cl.def_static("Ramp", [array](unsigned int eps, enum tsa::LocalCosineTransform::Bell bell) { return array(tsa::LocalCosineTransform::Ramp(eps, bell)); },
+			"The cut-off r at t = (j + 1/2)/eps, j = -eps .. eps-1.", pybind11::arg("eps"), pybind11::arg("bell") = tsa::LocalCosineTransform::coifmanMeyer);
+
+		pybind11::class_<tsa::CosinePackets, std::shared_ptr<tsa::CosinePackets>> cp(M("tsa"), "CosinePackets",
+			"Cosine packets: local cosine bases of the dyadic segmentations of the window (segments maxSegment .. minSegment, one bell half-width at every edge), and the Coifman-Wickerhauser best basis for an additive cost. A segmentation is the list of segment lengths in time order; its coefficients are segment by segment, bins in frequency order.");
+		pybind11::enum_<tsa::CosinePackets::Cost>(cp, "Cost", pybind11::arithmetic(), "Additive cost, minimised: l1 sum|c|; entropy -sum p ln p, p = c^2/|x|^2; wdfUniversal -sum (c/sigma)^2 over |c| > sqrt(2 ln N) sigma; wdfBlock -kept energy/sigma^2 of the block rule along each segment's bins (L and lambda from SetBlock; default round(ln N) and 4.505).")
+			.value("l1", tsa::CosinePackets::l1)
+			.value("entropy", tsa::CosinePackets::entropy)
+			.value("wdfUniversal", tsa::CosinePackets::wdfUniversal)
+			.value("wdfBlock", tsa::CosinePackets::wdfBlock)
+			.export_values();
+		cp.def(pybind11::init<unsigned int, unsigned int, unsigned int, int, enum tsa::LocalCosineTransform::Edge, enum tsa::LocalCosineTransform::Bell>(),
+			"N a power of 2; minSegment <= maxSegment <= N powers of 2 (maxSegment 0 for N); overlap at most minSegment/2, negative for minSegment/2.",
+			pybind11::arg("N"), pybind11::arg("minSegment"), pybind11::arg("maxSegment") = 0, pybind11::arg("overlap") = -1,
+			pybind11::arg("edge") = tsa::LocalCosineTransform::periodic, pybind11::arg("bell") = tsa::LocalCosineTransform::coifmanMeyer);
+		cp.def("BestBasis", [values](tsa::CosinePackets &o, Array x, enum tsa::CosinePackets::Cost cost, double sigma) { auto v = values(x, o.GetLength(), "BestBasis"); return o.BestBasis(v.data(), cost, sigma); },
+			"Best basis of x for the cost; returns its cost. sigma (WDF costs): <= 0 for median|c|/0.6745 of the finest level.",
+			pybind11::arg("x"), pybind11::arg("cost") = tsa::CosinePackets::entropy, pybind11::arg("sigma") = 0.0);
+		cp.def("GetSegmentation", [](tsa::CosinePackets &o) { pybind11::list out; for (unsigned int m : o.GetSegmentation()) out.append(m); return out; }, "Segment lengths of the best basis, in time order.");
+		cp.def("GetCoefficients", [array](tsa::CosinePackets &o) { return array(o.GetCoefficients()); }, "Coefficients of the best basis, segment by segment.");
+		cp.def("GetSigma", &tsa::CosinePackets::GetSigma, "The sigma the last BestBasis used (0 for l1 and entropy).");
+		cp.def("GetNodeCost", &tsa::CosinePackets::GetNodeCost, "Cost of node (level, index) from the last BestBasis. Raises IndexError outside the tree or before the first BestBasis.", pybind11::arg("level"), pybind11::arg("index"));
+		cp.def("GetBestCost", &tsa::CosinePackets::GetBestCost, "Best cost of the subtree under node (level, index) from the last BestBasis. Raises IndexError outside the tree or before the first BestBasis.", pybind11::arg("level"), pybind11::arg("index"));
+		cp.def("SegmentationCost", [segmentation](tsa::CosinePackets &o, pybind11::iterable seg) { return o.SegmentationCost(segmentation(seg)); }, "Sum of the node costs of a segmentation (segment lengths in time order), from the last BestBasis. Raises ValueError on a segmentation that is not made of tree nodes covering the window.", pybind11::arg("segmentation"));
+		cp.def("Analyse", [values, array, segmentation](tsa::CosinePackets &o, Array x, pybind11::iterable seg) {
+				auto v = values(x, o.GetLength(), "Analyse"); std::vector<double> out(v.size()); o.Analyse(v.data(), segmentation(seg), out.data()); return array(out); },
+			"Coefficients of x on a segmentation (segment lengths in time order), segment by segment, bins in frequency order. Raises ValueError on a segmentation that is not made of tree nodes covering the window.", pybind11::arg("x"), pybind11::arg("segmentation"));
+		cp.def("Inverse", [values, array, segmentation](tsa::CosinePackets &o, Array c, pybind11::iterable seg) {
+				auto v = values(c, o.GetLength(), "Inverse"); std::vector<double> out(v.size()); o.Inverse(v.data(), segmentation(seg), out.data()); return array(out); },
+			"The window from its coefficients on a segmentation (exact inverse of Analyse and of the best basis).", pybind11::arg("c"), pybind11::arg("segmentation"));
+		cp.def("SetBlock", &tsa::CosinePackets::SetBlock, "Parameters of the wdfBlock cost: block length L in coefficients (0, the default, for round(ln N)) and lambda, the energy threshold in units of L sigma^2 (default 4.505).", pybind11::arg("length"), pybind11::arg("lambda"));
+		cp.def("GetBlockLength", &tsa::CosinePackets::GetBlockLength, "The block length L in force.");
+		cp.def("GetBlockLambda", &tsa::CosinePackets::GetBlockLambda, "The block threshold lambda in force.");
+		cp.def("GetLength", &tsa::CosinePackets::GetLength, "The window length N.");
+		cp.def("GetLevels", &tsa::CosinePackets::GetLevels, "Number of levels of the segmentation tree, log2(maxSegment / minSegment) + 1.");
+		cp.def("GetSegmentLength", &tsa::CosinePackets::GetSegmentLength, "Segment length of a level, maxSegment / 2^level. Raises IndexError outside the tree.", pybind11::arg("level"));
+		cp.def("GetOverlap", &tsa::CosinePackets::GetOverlap, "The bell half-width eps shared by every edge.");
 	}
 	{ // tsa::WavReconstruction file:WavReconstruction.hpp line:78
 		pybind11::class_<tsa::WavReconstruction, std::shared_ptr<tsa::WavReconstruction>, tsa::AlgoBase> cl(M("tsa"), "WavReconstruction", "A more detailed description of WavReconstruction\n\n Reconstructed the wavelet transformed signal");
@@ -2703,6 +2827,16 @@ void bind_WaveletThreshold(std::function< pybind11::module &(std::string const &
 		cl.def("__call__", (void (tsa::WDF2Classify::*)(class tsa::SeqView<double> &, double)) &tsa::WDF2Classify::operator(), "C++: tsa::WDF2Classify::operator()(class tsa::SeqView<double> &, double) --> void", pybind11::arg("Data"), pybind11::arg("sigma"));
 		cl.def("__call__", (int (tsa::WDF2Classify::*)(class tsa::EventFullFeatured &)) &tsa::WDF2Classify::operator(), "C++: tsa::WDF2Classify::operator()(class tsa::EventFullFeatured &) --> int", pybind11::arg("Ev"));
 		cl.def("GetEvent", (void (tsa::WDF2Classify::*)(class tsa::EventFullFeatured &)) &tsa::WDF2Classify::GetEvent, "C++: tsa::WDF2Classify::GetEvent(class tsa::EventFullFeatured &) --> void", pybind11::arg("Ev"));
+		cl.def("SetBases", &tsa::WDF2Classify::SetBases, "Replace the candidate bases of the competition: comma-separated names, a mother (Haar, DaubC4..DaubC20, DaubC24, DaubC32, DaubC40, Sym4, Sym8, Sym10, Sym12, Sym16, Sym20, Coif1..Coif5) for its pyramid or a mother followed by P and a depth for that uniform wavelet-packet level, or LocalCos and a segment length M (LocalCos128) for the local cosine basis laid out as packet depth log2 M. Raises ValueError on an unknown or repeated name, a depth above log2 of the window, an empty list, or, under the block rule, a packet band shorter than one block.", pybind11::arg("names"));
+		cl.def("GetBases", &tsa::WDF2Classify::GetBases, "The candidate bases, comma-separated, in the order they compete.");
+		cl.def("SetMinFrequency", &tsa::WDF2Classify::SetMinFrequency, "Leave the coefficients whose tile's upper frequency edge is <= fHz out of sigma, the block rule and EnWDF, read on each candidate's layout (pyramid levels, packet bands, LocalCos rows). fHz <= 0 (the default) keeps every coefficient, bit for bit as without it. Raises ValueError when fs <= 0 with fHz > 0, or fHz >= fs / 2.", pybind11::arg("fHz"), pybind11::arg("fs"));
+		cl.def("GetMinFrequency", &tsa::WDF2Classify::GetMinFrequency, "The minimum frequency in Hz, 0 when every coefficient is kept.");
+		cl.def("SetBlockRemainder", (void (tsa::WDF2Classify::*)(const std::string&)) &tsa::WDF2Classify::SetBlockRemainder, "Block remainder mode of every candidate's block rule. How the block rule judges a block shorter than L = round(ln N): 'legacy' (default, bit for bit as before) against lambda n sigma^2 like a full block; 'merge' joins a run's remainder of 1..L-1 to the block before it (7 + 1 = one block of 8; a run shorter than L stays one block); 'scaled' keeps the partition and judges a block of n < L against Qinv_chi2_n(Q_chi2_L(lambda L)) sigma^2, a full block's false-alarm probability. Takes the name or a BlockRemainder value; raises ValueError on an unknown name.", pybind11::arg("mode"));
+		cl.def("SetBlockRemainder", (void (tsa::WDF2Classify::*)(enum tsa::WaveletThreshold::BlockRemainder)) &tsa::WDF2Classify::SetBlockRemainder, "Block remainder mode of every candidate's block rule. How the block rule judges a block shorter than L = round(ln N): 'legacy' (default, bit for bit as before) against lambda n sigma^2 like a full block; 'merge' joins a run's remainder of 1..L-1 to the block before it (7 + 1 = one block of 8; a run shorter than L stays one block); 'scaled' keeps the partition and judges a block of n < L against Qinv_chi2_n(Q_chi2_L(lambda L)) sigma^2, a full block's false-alarm probability. Takes the name or a BlockRemainder value; raises ValueError on an unknown name.", pybind11::arg("mode"));
+		cl.def("GetBlockRemainder", &tsa::WDF2Classify::GetBlockRemainder, "The block remainder mode (WaveletThreshold.BlockRemainder).");
+		cl.def("SetBlock", &tsa::WDF2Classify::SetBlock, "The block rule's parameters in every candidate: the block length L in coefficients (0, the default, for round(ln window)) and lambda, the energy threshold in units of L sigma^2 (default 4.505). Raises ValueError when lambda <= 0 or, under the block rule, when a current candidate's bands (rows) are shorter than the new L.", pybind11::arg("length"), pybind11::arg("lambda"));
+		cl.def("GetBlockLength", &tsa::WDF2Classify::GetBlockLength, "The block length L in force, in coefficients.");
+		cl.def("GetBlockLambda", &tsa::WDF2Classify::GetBlockLambda, "The block rule's lambda in force.");
 		cl.def("GetDataNeeded", (int (tsa::WDF2Classify::*)()) &tsa::WDF2Classify::GetDataNeeded, "Get the number of data needed in order to be able to \n call GetData successfully. If the returned value is less or \n equal than zero no data are needed.\n\n \n the needed data\n\nC++: tsa::WDF2Classify::GetDataNeeded() --> int");
 		cl.def("assign", (class tsa::WDF2Classify & (tsa::WDF2Classify::*)(const class tsa::WDF2Classify &)) &tsa::WDF2Classify::operator=, "C++: tsa::WDF2Classify::operator=(const class tsa::WDF2Classify &) --> class tsa::WDF2Classify &", pybind11::return_value_policy::automatic, pybind11::arg(""));
 	}
@@ -2716,6 +2850,9 @@ void bind_WaveletThreshold(std::function< pybind11::module &(std::string const &
 		cl.def("__call__", (void (tsa::WDF2Reconstruct::*)(class tsa::SeqView<double> &, double)) &tsa::WDF2Reconstruct::operator(), "C++: tsa::WDF2Reconstruct::operator()(class tsa::SeqView<double> &, double) --> void", pybind11::arg("Data"), pybind11::arg("sigma"));
 		cl.def("__call__", (int (tsa::WDF2Reconstruct::*)(class tsa::EventFullFeatured &)) &tsa::WDF2Reconstruct::operator(), "C++: tsa::WDF2Reconstruct::operator()(class tsa::EventFullFeatured &) --> int", pybind11::arg("Ev"));
 		cl.def("GetEvent", (void (tsa::WDF2Reconstruct::*)(class tsa::EventFullFeatured &)) &tsa::WDF2Reconstruct::GetEvent, "C++: tsa::WDF2Reconstruct::GetEvent(class tsa::EventFullFeatured &) --> void", pybind11::arg("Ev"));
+		cl.def("SetBases", &tsa::WDF2Reconstruct::SetBases, "Replace the candidate bases of the competition, with the names, order and checks of WDF2Classify.SetBases (pyramids, <mother>P<depth> packet levels, LocalCos<M>). The default is DefaultWaveletBases(); SetBases(LegacyWaveletBases()) restores the candidates of releases 3.0.0 to 3.3.0. Raises ValueError on an unknown or repeated name, a depth above log2 of the window, an empty list, or, under the block rule, a band shorter than one block.", pybind11::arg("names"));
+		cl.def("GetBases", &tsa::WDF2Reconstruct::GetBases, "The candidate bases, comma-separated, in the order they compete.");
+		cl.def("Reconstruct", [](tsa::WDF2Reconstruct &o, tsa::EventFullFeatured const &ev) { tsa::Dvector v; o.Reconstruct(ev, v); pybind11::array_t<double> out(v.size()); std::copy(v.begin(), v.end(), out.mutable_data()); return out; }, "The time-domain window of a trigger: its coefficients (zero past ncoeff) inverted with the transform named by its mWave. Raises ValueError when mWave is not a valid candidate name for this window.", pybind11::arg("Ev"));
 		cl.def("GetDataNeeded", (int (tsa::WDF2Reconstruct::*)()) &tsa::WDF2Reconstruct::GetDataNeeded, "Get the number of data needed in order to be able to \n call GetData successfully. If the returned value is less or \n equal than zero no data are needed.\n\n \n the needed data\n\nC++: tsa::WDF2Reconstruct::GetDataNeeded() --> int");
 		cl.def("assign", (class tsa::WDF2Reconstruct & (tsa::WDF2Reconstruct::*)(const class tsa::WDF2Reconstruct &)) &tsa::WDF2Reconstruct::operator=, "C++: tsa::WDF2Reconstruct::operator=(const class tsa::WDF2Reconstruct &) --> class tsa::WDF2Reconstruct &", pybind11::return_value_policy::automatic, pybind11::arg(""));
 	}

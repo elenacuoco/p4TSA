@@ -53,6 +53,7 @@ jobs:
             libboost-headers
             cereal
             pytest
+            pywavelets
 
       - name: Build and install p4TSA (editable, no build isolation)
         shell: bash -el {0}

@@ -13,29 +13,22 @@
 //
 
 #include <WDF2Reconstruct.hpp>
+#include <algorithm>
+#include <stdexcept>
 
 
 
 namespace tsa {
 
     namespace {
-        // Same candidate basis set as WDF2Classify (see that file's
-        // GetDataVector for the rationale on excluding biorthogonal
-        // B-spline bases, dropping plain/centered Daubechies duplicates,
-        // and the Coiflet/Symlet additions).
-        const std::pair<enum WaveletTransform::WaveletType, const char*> kCandidateBases[] = {
-            {WaveletTransform::Haar, "Haar"},
-            {WaveletTransform::DaubC4, "DaubC4"},
-            {WaveletTransform::DaubC8, "DaubC8"},
-            {WaveletTransform::DaubC12, "DaubC12"},
-            {WaveletTransform::DaubC16, "DaubC16"},
-            {WaveletTransform::DaubC20, "DaubC20"},
-            {WaveletTransform::Sym4, "Sym4"},
-            {WaveletTransform::Sym8, "Sym8"},
-            {WaveletTransform::Coif1, "Coif1"},
-            {WaveletTransform::Coif2, "Coif2"},
-        };
-        const std::size_t kNumCandidateBases = sizeof(kCandidateBases) / sizeof(kCandidateBases[0]);
+        // Prefix the shared parser's message with the class name.
+        std::vector<WaveletBasis> Parse(const std::string& names, unsigned int window, unsigned int blockLength) {
+            try {
+                return ParseWaveletBases(names, window, blockLength);
+            } catch (const std::invalid_argument& e) {
+                throw std::invalid_argument(std::string("WDF2Reconstruct: ") + e.what());
+            }
+        }
     }
 
     WDF2Reconstruct::WDF2Reconstruct(unsigned int window, unsigned int overlap, double thresh, double sigma, unsigned int ncoeff, enum WaveletThreshold::WaveletThresholding WTh)
@@ -52,13 +45,8 @@ namespace tsa {
             mWavThres(mWindow, mWindow, sigma),
             mWindowing(mWindow),
             mEvFF(mNCoeff) {
-        mBases.reserve(kNumCandidateBases);
-        mBaseNames.reserve(kNumCandidateBases);
-        for (std::size_t i = 0; i < kNumCandidateBases; ++i) {
-            mBases.push_back(std::unique_ptr<WaveletTransform>(
-                new WaveletTransform(mWindow, kCandidateBases[i].first)));
-            mBaseNames.push_back(kCandidateBases[i].second);
-        }
+        mSpecs = Parse(DefaultWaveletBases(), mWindow, 0);
+        Build();
     }
 
     WDF2Reconstruct::WDF2Reconstruct(const WDF2Reconstruct& from)
@@ -76,13 +64,9 @@ namespace tsa {
             mEvFF(from.mEvFF),
             mT(from.mT),
             mWavThres(from.mWavThres),
-            mWindowing(from.mWindowing) {
-        mBases.reserve(kNumCandidateBases);
-        mBaseNames = from.mBaseNames;
-        for (std::size_t i = 0; i < kNumCandidateBases; ++i) {
-            mBases.push_back(std::unique_ptr<WaveletTransform>(
-                new WaveletTransform(mWindow, kCandidateBases[i].first)));
-        }
+            mWindowing(from.mWindowing),
+            mSpecs(from.mSpecs) {
+        Build();
     }
 
     WDF2Reconstruct& WDF2Reconstruct::operator=(const WDF2Reconstruct& from) {
@@ -103,15 +87,53 @@ namespace tsa {
         mT = from.mT;
         mWavThres = from.mWavThres;
         mWindowing = from.mWindowing;
-
-        mBaseNames = from.mBaseNames;
-        mBases.clear();
-        mBases.reserve(kNumCandidateBases);
-        for (std::size_t i = 0; i < kNumCandidateBases; ++i) {
-            mBases.push_back(std::unique_ptr<WaveletTransform>(
-                new WaveletTransform(mWindow, kCandidateBases[i].first)));
-        }
+        mSpecs = from.mSpecs;
+        Build();
         return *this;
+    }
+
+    // Each candidate owns its transform, built from its specification, so a
+    // copy rebuilds its candidates rather than sharing them.
+    void WDF2Reconstruct::Build() {
+        mBases.clear();
+        mBaseNames.clear();
+        mBases.reserve(mSpecs.size());
+        mBaseNames.reserve(mSpecs.size());
+        for (const auto& spec : mSpecs) {
+            mBases.push_back(MakeWaveletTransform(spec, mWindow));
+            mBaseNames.push_back(spec.name);
+        }
+    }
+
+    // Under the block rule every packet band or local cosine row must hold
+    // one full block (see CheckWaveletBlocks).
+    void WDF2Reconstruct::SetBases(const std::string& names) {
+        mSpecs = Parse(names, mWindow, mT == WaveletThreshold::block ? mWavThres.GetBlockLength() : 0);
+        Build();
+    }
+
+    std::string WDF2Reconstruct::GetBases() const {
+        return JoinWaveletBases(mSpecs);
+    }
+
+    void WDF2Reconstruct::Reconstruct(const EventFullFeatured& Ev, Dvector& out) const {
+        WaveletBasis basis;
+        try {
+            basis = ParseWaveletBasis(Ev.mWave, mWindow);
+        } catch (const std::invalid_argument& e) {
+            throw std::invalid_argument(std::string("WDF2Reconstruct: ") + e.what());
+        }
+        std::unique_ptr<WaveletTransform> transform = MakeWaveletTransform(basis, mWindow);
+        Dmatrix c(1, mWindow);
+        const std::size_t n = std::min<std::size_t>(Ev.mCoeff.size(), mWindow);
+        for (unsigned int i = 0; i < mWindow; i++) {
+            c(0, i) = (i < n) ? Ev.mCoeff[i] : 0.0;
+        }
+        transform->Inverse(c);
+        out.resize(mWindow);
+        for (unsigned int i = 0; i < mWindow; i++) {
+            out(i) = c(0, i);
+        }
     }
 
 
@@ -168,6 +190,7 @@ namespace tsa {
             }
 
             mBases[b]->Forward(mBuff);
+            mWavThres.SetLayout(mBases[b]->GetPacketDepth());
             mWavThres(mBuff, mT);
 
             double sigmaB = mWavThres.GetSigma();

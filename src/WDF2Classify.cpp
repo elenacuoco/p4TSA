@@ -13,49 +13,21 @@
 //
 
 #include <WDF2Classify.hpp>
+#include <stdexcept>
 
 
 
 namespace tsa {
 
     namespace {
-        // Candidate wavelet bases for per-window basis selection in
-        // WDF2Classify/WDF2Reconstruct. All orthonormal (required -- see
-        // below), 10 total (2026-08-03, down from 19):
-        //
-        // - Daub4/8/12/16/20, centered only. Plain and centered Daubechies
-        //   of the same order are the same filter taps, just phase-shifted;
-        //   empirically their post-threshold RMS/sigma ratio agrees to
-        //   4-6% on real+injected data (verified 2026-08-03), so keeping
-        //   both wastes ~half this list's compute for no real diversity.
-        //   Centered kept over plain for its symmetric time support (more
-        //   consistent gpsPeak estimates). Every-other order (not all 9)
-        //   trims further while still spanning short- to long-support.
-        // - Sym4/Sym8 (symlet, centered -- see ExtraWaveletFamilies.hpp).
-        //   Sym2/Sym3 are excluded because they are numerically identical
-        //   to Daub4/Daub6 (verified against PyWavelets 2026-08-03) --
-        //   Symlets only start differing from Daubechies at order 4.
-        // - Coif1/Coif2 (coiflet, centered -- see ExtraWaveletFamilies.hpp):
-        //   unlike Daubechies/Symlet, has vanishing moments for the scaling
-        //   function too, not just the wavelet -- genuinely different
-        //   coefficient behavior on smooth/slowly-varying signal content,
-        //   not just a further Daubechies-family variant.
-        // - Haar.
-        //
-        
-        const std::pair<enum WaveletTransform::WaveletType, const char*> kCandidateBases[] = {
-            {WaveletTransform::Haar, "Haar"},
-            {WaveletTransform::DaubC4, "DaubC4"},
-            {WaveletTransform::DaubC8, "DaubC8"},
-            {WaveletTransform::DaubC12, "DaubC12"},
-            {WaveletTransform::DaubC16, "DaubC16"},
-            {WaveletTransform::DaubC20, "DaubC20"},
-            {WaveletTransform::Sym4, "Sym4"},
-            {WaveletTransform::Sym8, "Sym8"},
-            {WaveletTransform::Coif1, "Coif1"},
-            {WaveletTransform::Coif2, "Coif2"},
-        };
-        const std::size_t kNumCandidateBases = sizeof(kCandidateBases) / sizeof(kCandidateBases[0]);
+        // Prefix the shared parser's message with the class name.
+        std::vector<WaveletBasis> Parse(const std::string& names, unsigned int window, unsigned int blockLength) {
+            try {
+                return ParseWaveletBases(names, window, blockLength);
+            } catch (const std::invalid_argument& e) {
+                throw std::invalid_argument(std::string("WDF2Classify: ") + e.what());
+            }
+        }
     }
 
     WDF2Classify::WDF2Classify(unsigned int window, unsigned int overlap, double thresh, double sigma, unsigned int ncoeff, enum WaveletThreshold::WaveletThresholding WTh)
@@ -73,13 +45,8 @@ namespace tsa {
             mWavThres(mWindow, mWindow, sigma),
             mWindowing(mWindow),
             mEvFF(mNCoeff) {
-        mBases.reserve(kNumCandidateBases);
-        mBaseNames.reserve(kNumCandidateBases);
-        for (std::size_t i = 0; i < kNumCandidateBases; ++i) {
-            mBases.push_back(std::unique_ptr<WaveletTransform>(
-                new WaveletTransform(mWindow, kCandidateBases[i].first)));
-            mBaseNames.push_back(kCandidateBases[i].second);
-        }
+        mSpecs = Parse(DefaultWaveletBases(), mWindow, 0);
+        Build();
     }
 
     WDF2Classify::WDF2Classify(const WDF2Classify& from)
@@ -98,13 +65,9 @@ namespace tsa {
             mEvFF(from.mEvFF),
             mT(from.mT),
             mWavThres(from.mWavThres),
-            mWindowing(from.mWindowing) {
-        mBases.reserve(kNumCandidateBases);
-        mBaseNames = from.mBaseNames;
-        for (std::size_t i = 0; i < kNumCandidateBases; ++i) {
-            mBases.push_back(std::unique_ptr<WaveletTransform>(
-                new WaveletTransform(mWindow, kCandidateBases[i].first)));
-        }
+            mWindowing(from.mWindowing),
+            mSpecs(from.mSpecs) {
+        Build();
     }
 
     WDF2Classify& WDF2Classify::operator=(const WDF2Classify& from) {
@@ -126,15 +89,33 @@ namespace tsa {
         mT = from.mT;
         mWavThres = from.mWavThres;
         mWindowing = from.mWindowing;
-
-        mBaseNames = from.mBaseNames;
-        mBases.clear();
-        mBases.reserve(kNumCandidateBases);
-        for (std::size_t i = 0; i < kNumCandidateBases; ++i) {
-            mBases.push_back(std::unique_ptr<WaveletTransform>(
-                new WaveletTransform(mWindow, kCandidateBases[i].first)));
-        }
+        mSpecs = from.mSpecs;
+        Build();
         return *this;
+    }
+
+    // Each candidate owns its transform, built from its specification, so a
+    // copy of the classifier rebuilds its candidates rather than sharing them.
+    void WDF2Classify::Build() {
+        mBases.clear();
+        mBaseNames.clear();
+        mBases.reserve(mSpecs.size());
+        mBaseNames.reserve(mSpecs.size());
+        for (const auto& spec : mSpecs) {
+            mBases.push_back(MakeWaveletTransform(spec, mWindow));
+            mBaseNames.push_back(spec.name);
+        }
+    }
+
+    // Under the block rule every packet band or local cosine row must hold
+    // one full block (see CheckWaveletBlocks).
+    void WDF2Classify::SetBases(const std::string& names) {
+        mSpecs = Parse(names, mWindow, mT == WaveletThreshold::block ? mWavThres.GetBlockLength() : 0);
+        Build();
+    }
+
+    std::string WDF2Classify::GetBases() const {
+        return JoinWaveletBases(mSpecs);
     }
 
 
@@ -186,13 +167,15 @@ namespace tsa {
         // whichever produces the largest post-threshold RMS relative to its
         // own noise floor (both computed from that basis's own
         // coefficients, so the comparison is basis-fair -- see
-        // kCandidateBases above for why biorthogonal bases are excluded).
+        // kDefaultBases in WaveletBases.cpp for why every candidate is
+        // orthonormal).
         for (std::size_t b = 0; b < mBases.size(); ++b) {
             for (unsigned int i = 0; i < mWindow; i++) {
                 mBuff(0, i) = mBuffer(0, i);
             }
 
             mBases[b]->Forward(mBuff);
+            mWavThres.SetLayout(mBases[b]->GetPacketDepth());
             mWavThres(mBuff, mT);
 
             double sigmaB = mWavThres.GetSigma();

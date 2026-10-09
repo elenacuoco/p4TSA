@@ -1,5 +1,133 @@
 # Changelog
 
+## Unreleased
+
+### Changed
+
+- **The default basis competition of `WDF2Classify`.** A classifier is built
+  with ten pyramidal candidates ordered by filter length, shortest first:
+  `Haar`, `DaubC4`, `DaubC8`, `Sym4`, `DaubC16`, `Sym8`, `Coif3`, `DaubC24`,
+  `Sym12`, `Coif5` (PyWavelets' haar, db2, db4, sym4, db8, sym8, coif3, db12,
+  sym12, coif5). `DaubC12`, `DaubC20`, `Coif1` and `Coif2` leave the default
+  and remain available through `SetBases`. A tie of the window statistic goes
+  to the later candidate, so the order is part of the definition. Trigger
+  values (`mWave`, `mSNR`, the coefficients) change with the default; the
+  previous competition is `SetBases(LegacyWaveletBases())`, that is
+  `SetBases("Haar,DaubC4,DaubC8,DaubC12,DaubC16,DaubC20,Sym4,Sym8,Coif1,Coif2")`.
+  The list is defined once, `DefaultWaveletBases()` in
+  `src/WaveletBases.cpp`.
+- **`WDF2Reconstruct` follows the classifier's competition.** It is built
+  with the same default list and takes the same names through `SetBases`
+  (pyramids, `<mother>P<depth>` packet levels, `LocalCos<M>`), parsed and
+  checked by the same code. With the same list, threshold rule and
+  parameters, its winner and coefficients equal `WDF2Classify`'s in every
+  window (its statistic is half the classifier's, as before). Its trigger
+  values change with the default.
+- **`WDF2Reconstruct`'s default threshold rule follows the classifier's:**
+  `block`, defined once as `DefaultWaveletThresholding()`, instead of
+  `cuoco`. `cuoco` and the universal rule `dohonojohnston` stay selectable
+  through the constructor. With every default, the reconstructor's winner
+  and coefficients equal the classifier's in every window. The output of
+  3.3.0 is `WDF2Reconstruct(window, overlap, thresh, sigma, ncoeff,
+  WaveletThreshold.cuoco)` followed by `SetBases(LegacyWaveletBases())`.
+
+### Added
+
+- **Wavelet-packet levels.** `WaveletTransform(N, wt, packetDepth)` transforms
+  a window at the uniform level D of the mother's wavelet-packet tree: 2^D
+  bands of width fs / 2^(D+1), N / 2^D coefficients each, written in
+  frequency order, band f at indices [f N / 2^D, (f+1) N / 2^D). Each split
+  is GSL's periodized filter step, so depth 1 equals the pyramid's finest
+  step and the level is orthonormal. Depth 0 is the pyramid.
+  `GetPacketDepth()` and `GetLength()` report the level and the window.
+- **Long mothers.** `WaveletType` gains `Sym10`, `Sym12`, `Sym16`, `Sym20`,
+  `Coif3`, `Coif4`, `Coif5`, `DaubC24`, `DaubC32` and `DaubC40` (PyWavelets'
+  db12, db16, db20), centred as the existing `DaubC*`, `Sym*` and `Coif*`.
+  The values are appended after `Sym8`, so existing values keep their
+  numbers. The taps are PyWavelets' (MIT licence), written at full precision
+  into `src/ExtraWaveletLongTables.inc` by
+  `tools/generate_long_wavelet_tables.py`.
+- **Local cosine bases and cosine packets** (`include/LocalCosine.hpp`).
+  - `LocalCosineTransform(N, M, overlap=M/2, edge=periodic, bell=coifmanMeyer)`:
+    the orthonormal local cosine basis of segment length M. The samples about
+    every segment edge are folded with a Coifman-Meyer or sine bell, then
+    each segment gets an orthonormal DCT-IV. `periodic` window edges fold at
+    0 = N, `free` edges do not. `Forward`/`Inverse` are frequency-major (the
+    layout of packet depth log2 M); `ForwardSegments`/`InverseSegments` are
+    segment-major.
+  - `CosinePackets(N, minSegment, maxSegment=N, overlap=minSegment/2, ...)`:
+    the dyadic segmentation tree with one bell half-width at every edge, so
+    every segmentation made of tree nodes is orthonormal. `BestBasis(x, cost,
+    sigma)` is the Coifman-Wickerhauser search for the costs `l1`, `entropy`,
+    `wdfUniversal` and `wdfBlock`; `GetSegmentation()` and
+    `GetCoefficients()` return the result; `Analyse` and `Inverse` work on
+    any segmentation; `SetBlock(length, lambda)` sets the block cost's
+    parameters.
+  - `WaveletType::LocalCos`: `WaveletTransform(N, LocalCos, D)` is the local
+    cosine basis of segment 2^D (Coifman-Meyer, half-width 2^(D-1),
+    periodic), with the layout of packet depth D.
+- **`WDF2Classify::SetBases(names)` and `GetBases()`.** The candidates of the
+  competition as a comma-separated list, in the order they compete: a
+  mother for its pyramid, a mother followed by `P<depth>` (as `Sym8P6`) for a
+  packet level, or `LocalCos<M>` (as `LocalCos128`) for a local cosine basis.
+  An unknown or repeated name, an empty list or a depth above log2 of the
+  window raises `ValueError`; under the block rule so does a band shorter
+  than one block (N / 2^D < L).
+- **The block rule follows the layout.** `WaveletThreshold::SetLayout(depth)`
+  makes the block rule cut each packet band (or local cosine row) into blocks
+  separately, as it cuts each pyramid level; `WDF2Classify` sets the layout
+  of each candidate.
+- **`SetMinFrequency(fHz, fs)`** on `WaveletThreshold` and `WDF2Classify`,
+  with `GetMinFrequency`, and `WaveletThreshold::IsKept(i)`: a coefficient
+  whose run (pyramid level, packet band, local cosine row) has its upper
+  frequency edge at or below fHz is zeroed and left out of sigma, of the
+  threshold, of the largest coefficient and of EnWDF; the universal threshold
+  counts the kept coefficients. Off by default.
+- **`SetBlockRemainder(mode)`** on `WaveletThreshold` and `WDF2Classify`,
+  with `GetBlockRemainder`, `WaveletThreshold::GetBlockEnergyThreshold(n)`
+  and the enum `WaveletThreshold::BlockRemainder`: how the block rule judges a
+  block of n < L coefficients. `legacy` (default) judges it against
+  lambda n sigma^2 as a full block; `merge` joins a run's remainder to the
+  block before it; `scaled` keeps it when its energy exceeds
+  Qinv_chi2_n(Q_chi2_L(lambda L)) sigma^2, the false-alarm probability of a
+  full block.
+- **`WaveletBases.hpp`**: `DefaultWaveletBases()`, `LegacyWaveletBases()`,
+  `DefaultWaveletThresholding()`,
+  the candidate-name parser `ParseWaveletBasis`/`ParseWaveletBases` and
+  `MakeWaveletTransform`, shared by both classes and bound in py4tsa
+  (`tsa.DefaultWaveletBases()`, `tsa.LegacyWaveletBases()`,
+  `tsa.DefaultWaveletThresholding()`).
+- **`WDF2Reconstruct::SetBases(names)`, `GetBases()` and
+  `Reconstruct(Ev)`**: the time-domain window of a trigger, its coefficients
+  inverted with the transform its `mWave` names; exact for every candidate,
+  all of which are orthonormal.
+- **`WDF2Classify::SetBlock(length, lambda)`**, with `GetBlockLength` and
+  `GetBlockLambda`: the block rule's length (0 for round(ln window)) and
+  lambda in every candidate.
+- Python bindings for all of the above, `WaveletTransform.WaveletWaveform`
+  among them.
+
+### Fixed
+
+- **Copying a `WaveletThreshold`** no longer shares its work buffers; copying
+  a `WDF2Classify` (copy constructor or `assign`) ended in a double free.
+- **Copying a `WaveletTransform`** gives a transform of the same length,
+  mother and level with its own GSL handles; the copy was left uninitialized.
+- **`WaveletTransform` resizing** frees the previous GSL workspace.
+- **`WaveletTransform::WaveletWaveform`** inverts at the transform's own level
+  and frees its buffer with `delete[]`.
+
+### Compatibility
+
+- Existing `WaveletType` values keep their numbers; all new API is additive.
+- With every new option at its default, the only changes in trigger values
+  are the default basis competition of both classes and the default rule of
+  `WDF2Reconstruct`, above. `SetBases(LegacyWaveletBases())` restores the
+  previous output of `WDF2Classify`; for `WDF2Reconstruct` pass
+  `WaveletThreshold.cuoco` to the constructor as well.
+- A reader of `mWave` must handle packet names (`<mother>P<depth>`) and
+  `LocalCos<M>` when `SetBases` admits them.
+
 ## 3.3.0
 
 ### Added
