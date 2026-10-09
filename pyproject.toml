@@ -4,7 +4,7 @@ build-backend = "scikit_build_core.build"
 
 [project]
 name = "py4tsa"
-version = "3.3.0"
+version = "3.4.0"
 description = "Time-domain whitening, wavelets and the Wavelet Detection Filter for gravitational-wave data: the Python interface to the C++ p4TSA"
 readme = "README.md"
 # The range the wheels are built for.
