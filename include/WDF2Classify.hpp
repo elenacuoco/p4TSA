@@ -312,10 +312,12 @@ namespace tsa {
             mWavThres.SetBlockRemainder(mode);
         }
 
+        /// The same, by enum value.
         void SetBlockRemainder(enum WaveletThreshold::BlockRemainder mode) {
             mWavThres.SetBlockRemainder(mode);
         }
 
+        /// The block remainder mode in force.
         enum WaveletThreshold::BlockRemainder GetBlockRemainder() const {
             return mWavThres.GetBlockRemainder();
         }

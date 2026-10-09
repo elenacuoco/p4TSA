@@ -458,7 +458,7 @@ namespace tsa {
         }
     }
 
-    void CosinePackets::Synthesise(const double* coeff, const std::vector<unsigned int>& segmentation, double* x) {
+    void CosinePackets::Inverse(const double* coeff, const std::vector<unsigned int>& segmentation, double* x) {
         Check(segmentation);
         std::copy(coeff, coeff + mN, x);
         unsigned int a = 0;

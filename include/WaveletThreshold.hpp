@@ -135,7 +135,7 @@ namespace tsa {
         /// lambda n sigma^2 for its n coefficients. Its false-alarm
         /// probability grows as n falls: a single coefficient survives at
         /// |c| > sqrt(lambda) sigma, P(chi2_1 > 4.505) = 3.4 % in noise,
-        /// against P(chi2_7 > 31.5) = 4e-5 for a full block of 7.
+        /// against P(chi2_7 > 31.5) = 5e-5 for a full block of 7.
         ///
         /// @c merge joins a remainder to the block before it in the same
         /// run, so the run ends on one block of L + r (7 + 1 = 8), judged
@@ -251,6 +251,7 @@ namespace tsa {
             mRemainder = mode;
         }
 
+        /// The same, by name: "legacy", "merge" or "scaled".
         void SetBlockRemainder(const std::string& mode) {
             if (mode == "legacy") {
                 mRemainder = legacy;
@@ -263,6 +264,7 @@ namespace tsa {
             }
         }
 
+        /// The block remainder mode in force.
         enum BlockRemainder GetBlockRemainder() const {
             return mRemainder;
         }
@@ -300,6 +302,7 @@ namespace tsa {
             mDepth = packetDepth;
         }
 
+        /// The packet depth of the layout, 0 for the pyramid.
         unsigned int GetLayout() const {
             return mDepth;
         }
@@ -346,6 +349,7 @@ namespace tsa {
             }
         }
 
+        /// The minimum frequency in Hz, 0 when every coefficient is kept.
         double GetMinFrequency() const {
             return mMinFrequency;
         }

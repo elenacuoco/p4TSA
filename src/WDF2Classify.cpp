@@ -34,16 +34,13 @@ namespace tsa {
         // statistic is >= the best so far), so a tie goes to the longer
         // filter, and at equal length to the Symlet.
         //
-        // History: 3.0.0-3.4.0 used Haar, DaubC4/8/12/16/20, Sym4, Sym8,
-        // Coif1, Coif2 (2026-08-03, down from 19; see WDF2Reconstruct, which
-        // keeps that list). This list drops DaubC12, DaubC20, Coif1 and
-        // Coif2 for Coif3, DaubC24, Sym12 and Coif5; every mother stays
-        // available through SetBases.
+        // Every mother of kMothers stays available through SetBases.
+        // WDF2Reconstruct keeps the list of releases 3.0.0 to 3.3.0.
         //
         // - Daubechies, centered only: plain and centered Daubechies of the
-        //   same order are the same filter taps, just phase-shifted; their
-        //   post-threshold RMS/sigma ratio agrees to 4-6% on real+injected
-        //   data (verified 2026-08-03). DaubC4/8/16/24 are db2/4/8/12.
+        //   same order have the same filter taps, phase-shifted, and the
+        //   centered ones have a symmetric time support. DaubC4/8/16/24 are
+        //   db2/4/8/12.
         // - Sym4/Sym8/Sym12 (symlet) and Coif3/Coif5 (coiflet), centered --
         //   see ExtraWaveletFamilies.hpp. Coiflets have vanishing moments for
         //   the scaling function too, not just the wavelet. PyWavelets' sym12
