@@ -57,6 +57,7 @@
 #include <EventFullFeatured.hpp>
 #include <WaveletTransform.hpp>
 #include <WaveletThreshold.hpp>
+#include <WaveletBases.hpp>
 #include <Cs2HammingWindow.hpp>
 #include <BaseView.hpp>
 #include <math.h>
@@ -79,14 +80,16 @@ namespace tsa {
     ///
     /// @brief Time domain detection of transients based on wavelet transform
     ///
-    /// Pyramid only: the candidate bases are ten fixed pyramidal (Mallat)
-    /// transforms, Haar, DaubC4, DaubC8, DaubC12, DaubC16, DaubC20, Sym4,
-    /// Sym8, Coif1 and Coif2 (the default competition of WDF2Classify up to
-    /// release 3.3.0); WDF2Classify::SetBases does not reach them. A trigger
-    /// won by a wavelet-packet or local cosine basis is reconstructed with
-    /// WaveletTransform: the winner's name (mWave) gives the mother and the
-    /// depth, and WaveletTransform(N, mother, depth).Inverse inverts the
-    /// coefficients.
+    /// The basis competition of WDF2Classify, with its statistic halved
+    /// (sqrt(E) / (2 sigma)), and the inversion of a trigger to the time
+    /// domain. The candidates are those of WDF2Classify: the same default
+    /// (DefaultWaveletBases()) and the same names through SetBases, pyramids,
+    /// packet levels (a mother, "P" and a depth, as "Sym8P6") and local
+    /// cosine bases ("LocalCos" and a segment length, as "LocalCos128").
+    /// Every candidate is orthonormal, so Reconstruct inverts any trigger
+    /// exactly; no candidate is refused for want of an inverse. With the same
+    /// list, threshold rule and parameters, the winner and the coefficients
+    /// of every window equal WDF2Classify's.
     ///
 
     class WDF2Reconstruct : public AlgoBase {
@@ -219,7 +222,35 @@ namespace tsa {
 
         void SetData(Dmatrix& Data, double scale);
 
+        ///
+        /// Replace the candidate bases of the competition, with the names,
+        /// order and checks of WDF2Classify::SetBases. The default is
+        /// DefaultWaveletBases(); SetBases(LegacyWaveletBases()) restores the
+        /// candidates of releases 3.0.0 to 3.3.0.
+        ///
+        /// @param names comma-separated candidate names
+        /// @exception std::invalid_argument on an unknown or repeated name,
+        ///            a packet depth above log2 of the window, an empty list,
+        ///            or, under the block rule, a band shorter than one block
+        ///
+        void SetBases(const std::string& names);
 
+        /// The candidate bases, comma-separated, in the order they compete.
+        std::string GetBases() const;
+
+        ///
+        /// The time-domain waveform of a trigger: its coefficients (mCoeff,
+        /// the first ncoeff of the winner's layout, zero beyond) inverted with
+        /// the transform named by mWave, which may be any valid candidate
+        /// name for this window. With ncoeff equal to the window this is the
+        /// thresholded window itself.
+        ///
+        /// @param Ev the trigger
+        /// @param out filled with the window's samples
+        /// @exception std::invalid_argument when mWave is not a valid
+        ///            candidate name for this window
+        ///
+        void Reconstruct(const EventFullFeatured& Ev, Dvector& out) const;
 
         //@}
 
@@ -240,15 +271,18 @@ namespace tsa {
         Dmatrix mBuff;
         EventFullFeatured mEvFF;
 
-        // Same candidate wavelet basis set as WDF2Classify -- see that
-        // class's GetDataVector for why the biorthogonal B-spline family is
-        // excluded. unique_ptr, not WaveletTransform by value: see the same
-        // member in WDF2Classify.hpp for why.
+        // Candidate bases of the competition, one transform per entry of
+        // mSpecs (see SetBases). unique_ptr, not WaveletTransform by value:
+        // see the same member in WDF2Classify.hpp for why.
         std::vector<std::unique_ptr<WaveletTransform>> mBases;
         std::vector<std::string> mBaseNames;
         enum WaveletThreshold::WaveletThresholding mT;
         WaveletThreshold mWavThres;
         Cs2HammingWindow mWindowing;
+        std::vector<WaveletBasis> mSpecs; ///< the candidates, in competition order
+
+        /// Builds one transform per candidate of mSpecs.
+        void Build();
 
     };
 

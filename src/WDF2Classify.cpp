@@ -20,120 +20,13 @@
 namespace tsa {
 
     namespace {
-        // The default candidate set of the per-window basis competition, the
-        // one a WDF2Classify is built with until SetBases replaces it, and the
-        // only place it is defined. All orthonormal (required: each
-        // candidate's statistic is read on its own noise scale, which a
-        // non-orthonormal basis does not preserve), all pyramids, 10 total.
-        //
-        // Ordered by filter length, shortest first (Haar 2 taps, DaubC4 4,
-        // DaubC8 and Sym4 8, DaubC16 and Sym8 16, Coif3 18, DaubC24 and
-        // Sym12 24, Coif5 30; at equal length Daubechies before Symlet). The
-        // order is part of the definition: on a tie of the window statistic
-        // the later candidate wins (GetDataVector keeps a basis whose
-        // statistic is >= the best so far), so a tie goes to the longer
-        // filter, and at equal length to the Symlet.
-        //
-        // Every mother of kMothers stays available through SetBases.
-        // WDF2Reconstruct keeps the list of releases 3.0.0 to 3.3.0.
-        //
-        // - Daubechies, centered only: plain and centered Daubechies of the
-        //   same order have the same filter taps, phase-shifted, and the
-        //   centered ones have a symmetric time support. DaubC4/8/16/24 are
-        //   db2/4/8/12.
-        // - Sym4/Sym8/Sym12 (symlet) and Coif3/Coif5 (coiflet), centered --
-        //   see ExtraWaveletFamilies.hpp. Coiflets have vanishing moments for
-        //   the scaling function too, not just the wavelet. PyWavelets' sym12
-        //   taps, kept bit for bit, are orthonormal to 4.4e-14.
-        // - Haar.
-        //
-        const char* const kCandidateBases[] = {
-            "Haar", "DaubC4", "DaubC8", "Sym4", "DaubC16", "Sym8",
-            "Coif3", "DaubC24", "Sym12", "Coif5",
-        };
-
-        // Every mother a candidate name may use. A name is a mother alone,
-        // the pyramidal transform, or a mother followed by "P" and a depth,
-        // the uniform level of that depth of its wavelet-packet tree (see
-        // WaveletTransform's packet constructor).
-        const std::pair<const char*, enum WaveletTransform::WaveletType> kMothers[] = {
-            {"Haar", WaveletTransform::Haar},
-            {"DaubC4", WaveletTransform::DaubC4},
-            {"DaubC6", WaveletTransform::DaubC6},
-            {"DaubC8", WaveletTransform::DaubC8},
-            {"DaubC10", WaveletTransform::DaubC10},
-            {"DaubC12", WaveletTransform::DaubC12},
-            {"DaubC14", WaveletTransform::DaubC14},
-            {"DaubC16", WaveletTransform::DaubC16},
-            {"DaubC18", WaveletTransform::DaubC18},
-            {"DaubC20", WaveletTransform::DaubC20},
-            {"Sym4", WaveletTransform::Sym4},
-            {"Sym8", WaveletTransform::Sym8},
-            {"Coif1", WaveletTransform::Coif1},
-            {"Coif2", WaveletTransform::Coif2},
-            // The long mothers (Coif3, DaubC24, Sym12, Coif5 are in the default list).
-            {"Sym10", WaveletTransform::Sym10},
-            {"Sym12", WaveletTransform::Sym12},
-            {"Sym16", WaveletTransform::Sym16},
-            {"Sym20", WaveletTransform::Sym20},
-            {"Coif3", WaveletTransform::Coif3},
-            {"Coif4", WaveletTransform::Coif4},
-            {"Coif5", WaveletTransform::Coif5},
-            {"DaubC24", WaveletTransform::DaubC24},
-            {"DaubC32", WaveletTransform::DaubC32},
-            {"DaubC40", WaveletTransform::DaubC40},
-        };
-
-        // "LocalCos" followed by a segment length M, a power of 2 from 2 to
-        // the window: the orthonormal local cosine basis of segment M
-        // (WaveletTransform's LocalCos, Coifman-Meyer bell of half-width
-        // M / 2, periodic edges), laid out as the packet level of depth
-        // log2 M. The name does not end in P<digits>, so it never reads as a
-        // packet level.
-        const char kLocalCos[] = "LocalCos";
-
-        WDF2Classify::Basis ParseBasis(const std::string& name, unsigned int window) {
-            const std::size_t prefix = sizeof(kLocalCos) - 1;
-            if (name.compare(0, prefix, kLocalCos) == 0) {
-                const std::string digits = name.substr(prefix);
-                if (digits.empty() || digits.size() > 9 || digits[0] == '0' ||
-                    digits.find_first_not_of("0123456789") != std::string::npos) {
-                    throw std::invalid_argument("WDF2Classify: unknown basis " + name +
-                                                " (LocalCos takes a segment length, as LocalCos128)");
-                }
-                const unsigned long M = std::stoul(digits);
-                if (M < 2 || (M & (M - 1)) != 0 || M > window) {
-                    throw std::invalid_argument("WDF2Classify: the segment length of " + name +
-                                                " must be a power of 2 from 2 to the window");
-                }
-                unsigned int depth = 0;
-                while ((1ul << depth) < M) {
-                    ++depth;
-                }
-                return WDF2Classify::Basis{name, WaveletTransform::LocalCos, depth};
+        // Prefix the shared parser's message with the class name.
+        std::vector<WaveletBasis> Parse(const std::string& names, unsigned int window, unsigned int blockLength) {
+            try {
+                return ParseWaveletBases(names, window, blockLength);
+            } catch (const std::invalid_argument& e) {
+                throw std::invalid_argument(std::string("WDF2Classify: ") + e.what());
             }
-            std::string mother = name;
-            unsigned int depth = 0;
-            const std::size_t p = name.rfind('P');
-            if (p != std::string::npos && p + 1 < name.size() && p > 0 &&
-                name.find_first_not_of("0123456789", p + 1) == std::string::npos) {
-                mother = name.substr(0, p);
-                depth = static_cast<unsigned int>(std::stoul(name.substr(p + 1)));
-                if (depth == 0) {
-                    throw std::invalid_argument("WDF2Classify: packet depth 0 in basis " + name);
-                }
-            }
-            for (const auto& m : kMothers) {
-                if (mother == m.first) {
-                    if ((static_cast<std::size_t>(1) << depth) > window) {
-                        throw std::invalid_argument("WDF2Classify: packet depth of " + name +
-                                                    " exceeds log2 of the window");
-                    }
-                    return WDF2Classify::Basis{name, m.second, depth};
-                }
-            }
-            throw std::invalid_argument("WDF2Classify: unknown basis " + name +
-                                        " (only orthonormal mothers are candidates)");
         }
     }
 
@@ -152,9 +45,7 @@ namespace tsa {
             mWavThres(mWindow, mWindow, sigma),
             mWindowing(mWindow),
             mEvFF(mNCoeff) {
-        for (const char* name : kCandidateBases) {
-            mSpecs.push_back(ParseBasis(name, mWindow));
-        }
+        mSpecs = Parse(DefaultWaveletBases(), mWindow, 0);
         Build();
     }
 
@@ -211,61 +102,20 @@ namespace tsa {
         mBases.reserve(mSpecs.size());
         mBaseNames.reserve(mSpecs.size());
         for (const auto& spec : mSpecs) {
-            mBases.push_back(std::unique_ptr<WaveletTransform>(
-                new WaveletTransform(mWindow, spec.type, spec.depth)));
+            mBases.push_back(MakeWaveletTransform(spec, mWindow));
             mBaseNames.push_back(spec.name);
         }
     }
 
+    // Under the block rule every packet band or local cosine row must hold
+    // one full block (see CheckWaveletBlocks).
     void WDF2Classify::SetBases(const std::string& names) {
-        std::vector<Basis> specs;
-        std::size_t start = 0;
-        while (start <= names.size()) {
-            std::size_t end = names.find(',', start);
-            if (end == std::string::npos) {
-                end = names.size();
-            }
-            std::string name = names.substr(start, end - start);
-            const std::size_t first = name.find_first_not_of(" \t");
-            const std::size_t last = name.find_last_not_of(" \t");
-            name = (first == std::string::npos) ? std::string() : name.substr(first, last - first + 1);
-            if (!name.empty()) {
-                for (const auto& s : specs) {
-                    if (s.name == name) {
-                        throw std::invalid_argument("WDF2Classify: basis " + name + " named twice");
-                    }
-                }
-                specs.push_back(ParseBasis(name, mWindow));
-                // Under the block rule every band (a packet level's) or row
-                // (a local cosine's: one DCT-IV bin over the N / M segments)
-                // must hold at least one full block of L, the length
-                // lambda = 4.505 is calibrated for: N / 2^D >= L. For
-                // LocalCos M this is M <= N / L: at N 1024 (L 7) M <= 128,
-                // at N 512 (L 6) M <= 64, at N 2048 (L 8) M <= 256.
-                if (specs.back().depth > 0 && mT == WaveletThreshold::block &&
-                    (mWindow >> specs.back().depth) < mWavThres.GetBlockLength()) {
-                    throw std::invalid_argument("WDF2Classify: the bands (rows) of basis " + name +
-                                                " are shorter than one block of the block rule");
-                }
-            }
-            start = end + 1;
-        }
-        if (specs.empty()) {
-            throw std::invalid_argument("WDF2Classify: no candidate basis");
-        }
-        mSpecs = specs;
+        mSpecs = Parse(names, mWindow, mT == WaveletThreshold::block ? mWavThres.GetBlockLength() : 0);
         Build();
     }
 
     std::string WDF2Classify::GetBases() const {
-        std::string out;
-        for (std::size_t i = 0; i < mSpecs.size(); ++i) {
-            if (i > 0) {
-                out += ",";
-            }
-            out += mSpecs[i].name;
-        }
-        return out;
+        return JoinWaveletBases(mSpecs);
     }
 
 
@@ -317,7 +167,8 @@ namespace tsa {
         // whichever produces the largest post-threshold RMS relative to its
         // own noise floor (both computed from that basis's own
         // coefficients, so the comparison is basis-fair -- see
-        // kCandidateBases above for why biorthogonal bases are excluded).
+        // kDefaultBases in WaveletBases.cpp for why every candidate is
+        // orthonormal).
         for (std::size_t b = 0; b < mBases.size(); ++b) {
             for (unsigned int i = 0; i < mWindow; i++) {
                 mBuff(0, i) = mBuffer(0, i);

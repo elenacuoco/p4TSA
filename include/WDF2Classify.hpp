@@ -57,6 +57,7 @@
 #include <EventFullFeatured.hpp>
 #include <WaveletTransform.hpp>
 #include <WaveletThreshold.hpp>
+#include <WaveletBases.hpp>
 //#include <DCT.hpp>
 #include <Cs2HammingWindow.hpp>
 #include <BaseView.hpp>
@@ -87,14 +88,6 @@ namespace tsa {
 
     class WDF2Classify : public AlgoBase {
     public:
-
-        /// One candidate of the basis competition: its name, its mother and
-        /// its packet depth, 0 for the pyramidal transform.
-        struct Basis {
-            std::string name;
-            enum WaveletTransform::WaveletType type;
-            unsigned int depth;
-        };
 
         ///
         /// Constructor
@@ -268,6 +261,11 @@ namespace tsa {
         /// D = log2 M: M <= 64 at a window of 512, M <= 128 at 1024 (L = 7),
         /// M <= 256 at 2048 (L = 8).
         ///
+        /// The default list is DefaultWaveletBases();
+        /// SetBases(LegacyWaveletBases()) restores the competition of
+        /// releases 3.0.0 to 3.3.0 (see WaveletBases.hpp). WDF2Reconstruct
+        /// takes the same names and the same default.
+        ///
         /// @param names comma-separated candidate names
         /// @exception std::invalid_argument on an unknown or repeated name,
         ///            a packet depth above log2 of the window, an empty list,
@@ -336,15 +334,13 @@ namespace tsa {
             if (!(lambda > 0.0)) {
                 throw std::invalid_argument("WDF2Classify: the block lambda must be positive");
             }
-            WaveletThreshold trial(mWindow);
-            trial.SetBlock(length, lambda);
-            const unsigned int L = trial.GetBlockLength();
             if (mT == WaveletThreshold::block) {
-                for (const auto& spec : mSpecs) {
-                    if (spec.depth > 0 && (mWindow >> spec.depth) < L) {
-                        throw std::invalid_argument("WDF2Classify: the bands (rows) of basis " + spec.name +
-                                                    " are shorter than one block of the block rule");
-                    }
+                WaveletThreshold probe(mWindow);
+                probe.SetBlock(length, lambda);
+                try {
+                    CheckWaveletBlocks(mSpecs, mWindow, probe.GetBlockLength());
+                } catch (const std::invalid_argument& e) {
+                    throw std::invalid_argument(std::string("WDF2Classify: ") + e.what());
                 }
             }
             mWavThres.SetBlock(length, lambda);
@@ -395,7 +391,7 @@ namespace tsa {
        // DCT mDct;
         //Dmatrix mBuffDct;
         Cs2HammingWindow mWindowing;
-        std::vector<Basis> mSpecs;
+        std::vector<WaveletBasis> mSpecs;
 
         void Build();
 

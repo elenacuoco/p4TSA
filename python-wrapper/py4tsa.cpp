@@ -2498,6 +2498,7 @@ void bind_TF2Psd(std::function< pybind11::module &(std::string const &namespace_
 #include <WaveletThreshold.hpp>
 #include <WaveletTransform.hpp>
 #include <LocalCosine.hpp>
+#include <WaveletBases.hpp>
 #include <pybind11/numpy.h>
 #include <WelchWindow.hpp>
 #include <WindowFactory.hpp>
@@ -2719,6 +2720,10 @@ void bind_WaveletThreshold(std::function< pybind11::module &(std::string const &
 		cl.def("Inverse", (void (tsa::WaveletTransform::*)(class tsa::SeqView<double> &)) &tsa::WaveletTransform::Inverse, "Invert Forward in place, in the same layout.\n\nC++: tsa::WaveletTransform::Inverse(class tsa::SeqView<double> &) --> void", pybind11::arg("In"));
 		cl.def("WaveletPrint", (void (tsa::WaveletTransform::*)()) &tsa::WaveletTransform::WaveletPrint, "C++: tsa::WaveletTransform::WaveletPrint() --> void");
 	}
+	{ // candidate lists of the basis competition, file:WaveletBases.hpp
+		M("tsa").def("DefaultWaveletBases", []() { return std::string(tsa::DefaultWaveletBases()); }, "The default candidate list of WDF2Classify and WDF2Reconstruct, comma-separated in competition order: ten pyramids ordered by filter length.");
+		M("tsa").def("LegacyWaveletBases", []() { return std::string(tsa::LegacyWaveletBases()); }, "The default candidate list of releases 3.0.0 to 3.3.0; SetBases(LegacyWaveletBases()) restores that competition.");
+	}
 	{ // tsa::LocalCosineTransform and tsa::CosinePackets file:LocalCosine.hpp
 		typedef pybind11::array_t<double, pybind11::array::c_style | pybind11::array::forcecast> Array;
 		// A 1-D array of n values, copied; the transforms work in place on the copy.
@@ -2844,6 +2849,9 @@ void bind_WaveletThreshold(std::function< pybind11::module &(std::string const &
 		cl.def("__call__", (void (tsa::WDF2Reconstruct::*)(class tsa::SeqView<double> &, double)) &tsa::WDF2Reconstruct::operator(), "C++: tsa::WDF2Reconstruct::operator()(class tsa::SeqView<double> &, double) --> void", pybind11::arg("Data"), pybind11::arg("sigma"));
 		cl.def("__call__", (int (tsa::WDF2Reconstruct::*)(class tsa::EventFullFeatured &)) &tsa::WDF2Reconstruct::operator(), "C++: tsa::WDF2Reconstruct::operator()(class tsa::EventFullFeatured &) --> int", pybind11::arg("Ev"));
 		cl.def("GetEvent", (void (tsa::WDF2Reconstruct::*)(class tsa::EventFullFeatured &)) &tsa::WDF2Reconstruct::GetEvent, "C++: tsa::WDF2Reconstruct::GetEvent(class tsa::EventFullFeatured &) --> void", pybind11::arg("Ev"));
+		cl.def("SetBases", &tsa::WDF2Reconstruct::SetBases, "Replace the candidate bases of the competition, with the names, order and checks of WDF2Classify.SetBases (pyramids, <mother>P<depth> packet levels, LocalCos<M>). The default is DefaultWaveletBases(); SetBases(LegacyWaveletBases()) restores the candidates of releases 3.0.0 to 3.3.0. Raises ValueError on an unknown or repeated name, a depth above log2 of the window, an empty list, or, under the block rule, a band shorter than one block.", pybind11::arg("names"));
+		cl.def("GetBases", &tsa::WDF2Reconstruct::GetBases, "The candidate bases, comma-separated, in the order they compete.");
+		cl.def("Reconstruct", [](tsa::WDF2Reconstruct &o, tsa::EventFullFeatured const &ev) { tsa::Dvector v; o.Reconstruct(ev, v); pybind11::array_t<double> out(v.size()); std::copy(v.begin(), v.end(), out.mutable_data()); return out; }, "The time-domain window of a trigger: its coefficients (zero past ncoeff) inverted with the transform named by its mWave. Raises ValueError when mWave is not a valid candidate name for this window.", pybind11::arg("Ev"));
 		cl.def("GetDataNeeded", (int (tsa::WDF2Reconstruct::*)()) &tsa::WDF2Reconstruct::GetDataNeeded, "Get the number of data needed in order to be able to \n call GetData successfully. If the returned value is less or \n equal than zero no data are needed.\n\n \n the needed data\n\nC++: tsa::WDF2Reconstruct::GetDataNeeded() --> int");
 		cl.def("assign", (class tsa::WDF2Reconstruct & (tsa::WDF2Reconstruct::*)(const class tsa::WDF2Reconstruct &)) &tsa::WDF2Reconstruct::operator=, "C++: tsa::WDF2Reconstruct::operator=(const class tsa::WDF2Reconstruct &) --> class tsa::WDF2Reconstruct &", pybind11::return_value_policy::automatic, pybind11::arg(""));
 	}

@@ -56,6 +56,7 @@ Documentation
      libs/WaveletTransform.rst
      libs/ExtraWaveletFamilies.rst
      libs/LocalCosine.rst
+     libs/WaveletBases.rst
      libs/WavReconstruction.rst
      libs/WDF2Classify.rst
      libs/WDF2Reconstruct.rst

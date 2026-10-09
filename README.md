@@ -70,10 +70,22 @@ wdf.SetBlock(0, 4.505)             # block length (0: round(ln n)) and lambda
   at the false-alarm probability of a full block.
 - **`SetBlock(length, lambda)`** sets the block length L (0 for round(ln n))
   and lambda (default 4.505) in every candidate.
+- The default list is `tsa.DefaultWaveletBases()`.
+  `SetBases(tsa.LegacyWaveletBases())` restores the competition of releases
+  3.0.0 to 3.3.0.
 
-A trigger won by a packet or local cosine basis is inverted with
-`WaveletTransform(n, mother, depth)`, or `WaveletTransform(n, LocalCos, log2 M)`,
-and its `Inverse`.
+`WDF2Reconstruct` runs the same competition: the same default list, the same
+names through `SetBases`, and, with the same threshold rule, the same winner
+and coefficients in every window. `Reconstruct(ev)` returns a trigger's
+window in the time domain, its coefficients inverted with the transform its
+`mWave` names:
+
+```python
+rec = tsa.WDF2Reconstruct(n, 0, 5.0, 1.0, n, tsa.WaveletThreshold.block)
+rec.SetBases(wdf.GetBases())
+# ... rec << data; while rec.GetDataNeeded() >= 0: if rec(ev): ...
+waveform = rec.Reconstruct(ev)     # numpy array of n samples
+```
 
 The transforms are also available on their own:
 

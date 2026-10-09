@@ -12,10 +12,20 @@
   and remain available through `SetBases`. A tie of the window statistic goes
   to the later candidate, so the order is part of the definition. Trigger
   values (`mWave`, `mSNR`, the coefficients) change with the default; the
-  previous competition is
+  previous competition is `SetBases(LegacyWaveletBases())`, that is
   `SetBases("Haar,DaubC4,DaubC8,DaubC12,DaubC16,DaubC20,Sym4,Sym8,Coif1,Coif2")`.
-  The list is defined once, in `kCandidateBases` (`src/WDF2Classify.cpp`).
-  `WDF2Reconstruct` keeps the previous list.
+  The list is defined once, `DefaultWaveletBases()` in
+  `src/WaveletBases.cpp`.
+- **`WDF2Reconstruct` follows the classifier's competition.** It is built
+  with the same default list and takes the same names through `SetBases`
+  (pyramids, `<mother>P<depth>` packet levels, `LocalCos<M>`), parsed and
+  checked by the same code. With the same list, threshold rule and
+  parameters, its winner and coefficients equal `WDF2Classify`'s in every
+  window (its statistic is half the classifier's, as before). Its trigger
+  values change with the default;
+  `SetBases(LegacyWaveletBases())` reproduces the output of 3.3.0. Its
+  default threshold rule is unchanged (`cuoco`, against `block` for the
+  classifier).
 
 ### Added
 
@@ -77,6 +87,14 @@
   block before it; `scaled` keeps it when its energy exceeds
   Qinv_chi2_n(Q_chi2_L(lambda L)) sigma^2, the false-alarm probability of a
   full block.
+- **`WaveletBases.hpp`**: `DefaultWaveletBases()`, `LegacyWaveletBases()`,
+  the candidate-name parser `ParseWaveletBasis`/`ParseWaveletBases` and
+  `MakeWaveletTransform`, shared by both classes and bound in py4tsa
+  (`tsa.DefaultWaveletBases()`, `tsa.LegacyWaveletBases()`).
+- **`WDF2Reconstruct::SetBases(names)`, `GetBases()` and
+  `Reconstruct(Ev)`**: the time-domain window of a trigger, its coefficients
+  inverted with the transform its `mWave` names; exact for every candidate,
+  all of which are orthonormal.
 - **`WDF2Classify::SetBlock(length, lambda)`**, with `GetBlockLength` and
   `GetBlockLambda`: the block rule's length (0 for round(ln window)) and
   lambda in every candidate.
@@ -96,8 +114,9 @@
 ### Compatibility
 
 - Existing `WaveletType` values keep their numbers; all new API is additive.
-- With every new option at its default, the only change in trigger values is
-  the default basis competition above.
+- With every new option at its default, the only change in trigger values of
+  `WDF2Classify` and `WDF2Reconstruct` is the default basis competition
+  above; `SetBases(LegacyWaveletBases())` restores the previous output.
 - A reader of `mWave` must handle packet names (`<mother>P<depth>`) and
   `LocalCos<M>` when `SetBases` admits them.
 
