@@ -25,8 +25,8 @@ def ref_keep(n, depth, fs, fmin):
 
 
 def ref_rule_cut(c, depth, rule, keep):
-    """(EnWDF, kept, sigma) with the dropped coefficients out, as the catalogue's port
-    (wdf-catalogue scripts/band_choice.py cut_noise_scale / cut_rule_stat)."""
+    """(EnWDF, kept, sigma) with the dropped coefficients out, written out in
+    numpy: sigma from the kept coefficients, then the rule on them."""
     n = len(c)
     sigma = np.median(np.abs(c[keep])) / 0.6745
     a = np.where(keep, c, 0.0)

@@ -22,9 +22,11 @@ D0 = "Haar,DaubC4,DaubC8,Sym4,DaubC16,Sym8,Coif3,DaubC24,Sym12,Coif5"
 WT = tsa.WaveletThreshold
 MODES = ("legacy", "merge", "scaled")
 HERE = os.path.dirname(os.path.abspath(__file__))
-FIXTURE = os.path.join(HERE, "data", "block_remainder_d335d33.json")
-STREAMS = [d for d in (os.environ.get("WDF_M4_STREAMS", ""),
-                       "/home/elena/data/wdf/known_events_m4_streams") if d and os.path.isdir(d)]
+# Trigger digests of the block rule before the remainder option existed.
+FIXTURE = os.path.join(HERE, "data", "block_remainder_legacy_digests.json")
+# Directory of whitened strain windows (npz, array "w") for the real-data
+# digests; those cases are skipped when it is not set.
+STREAMS = [d for d in (os.environ.get("P4TSA_WHITENED_STREAMS", ""),) if d and os.path.isdir(d)]
 
 
 def view_of(x):
@@ -323,7 +325,7 @@ def trigger_digest(x, config, mode=None, n=1024):
 
 
 def write_fixture():
-    """Run once with the d335d33 module on the path to record the reference."""
+    """Record the reference digests; run once with the module before the remainder option."""
     out = {}
     for s in SOURCES:
         x = source(s)
@@ -335,7 +337,7 @@ def write_fixture():
 
 @pytest.mark.parametrize("name", SOURCES)
 @pytest.mark.parametrize("config", CONFIGS)
-def test_legacy_is_d335d33_bit_for_bit(name, config):
+def test_legacy_is_unchanged_bit_for_bit(name, config):
     with open(FIXTURE) as f:
         reference = json.load(f)
     if name not in reference:

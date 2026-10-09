@@ -1,8 +1,6 @@
 """Local cosine bases (Coifman-Meyer), cosine packets (Coifman-Wickerhauser
 best basis) and the fixed-segment local cosine as a competition candidate."""
 import itertools
-import os
-import sys
 
 import numpy as np
 import pytest
@@ -15,12 +13,11 @@ CP = tsa.CosinePackets
 FS = 2048.0
 TOL = 1e-12
 EDGES = {"periodic": LCT.periodic, "free": LCT.free}
-CATALOGUE = os.environ.get("WDF_CATALOGUE_SCRIPTS", "/home/elena/workspace/wdf-catalogue/scripts")
 
 
 # ------------------------------------------------- numpy reference
-# The catalogue's local cosine (wdf-catalogue scripts/bases_windows.py, bell and
-# local_cosine), copied, with the `free` edge added: no fold at 0 and N.
+# The local cosine written out in numpy (bell, fold, DCT-IV by its matrix),
+# with both window edges: periodic, and free (no fold at 0 and N).
 def ref_bell(m, overlap, kind="cm"):
     t = (np.arange(-overlap, overlap) + 0.5) / overlap
     theta = t
@@ -136,23 +133,6 @@ def test_matches_the_numpy_reference(n, m, edge):
         assert np.max(np.abs(c - ref_local_cosine(x, m, overlap, edge=edge))) < TOL
     c = LCT(n, m, -1, EDGES[edge], LCT.sine).Forward(x)
     assert np.max(np.abs(c - ref_local_cosine(x, m, kind="sine", edge=edge))) < TOL
-
-
-def test_matches_the_catalogue_itself():
-    # bases_windows.local_cosine of the catalogue, when it is on this machine.
-    if not os.path.isfile(os.path.join(CATALOGUE, "bases_windows.py")):
-        pytest.skip("wdf-catalogue scripts not found")
-    sys.path.insert(0, CATALOGUE)
-    try:
-        bw = pytest.importorskip("bases_windows")
-    finally:
-        sys.path.remove(CATALOGUE)
-    for n, m in SIZES:
-        x = np.random.default_rng(n * m).normal(size=(3, n))
-        mine = np.array([LCT(n, m).Forward(row) for row in x])
-        assert np.max(np.abs(mine - bw.local_cosine(x, m))) < TOL
-        for kind, bell in (("cm", LCT.coifmanMeyer), ("sine", LCT.sine)):
-            assert np.max(np.abs(LCT.Ramp(m // 2, bell) - bw.bell(m, m // 2, kind))) < 1e-15
 
 
 def test_bell_is_a_partition_of_energy():
@@ -360,9 +340,9 @@ def test_wdf_cost_sigma():
 
 
 def ref_cospkt_best(x, n, rule, levels=(64, 128, 256, 512, 1024), eps=32):
-    """The catalogue's cospkt_best (scripts/single_chirp_optimal.py), sigma
-    'mad', kappa 1, one window: WDF's kept energy as the gain, sigma from the
-    finest level, split when the children gain strictly more."""
+    """The WDF best basis written out in numpy, one window: WDF's kept energy
+    as the gain, sigma from the median of the finest level, a node split when
+    its children gain strictly more."""
     coef = {m: ref_local_cosine(x, m, eps, segments=True).reshape(n // m, m) for m in levels}
     sigma = np.median(np.abs(coef[levels[0]])) / 0.6745
     L, lam = int(np.floor(np.log(n) + 0.5)), 4.505
@@ -395,7 +375,7 @@ def ref_cospkt_best(x, n, rule, levels=(64, 128, 256, 512, 1024), eps=32):
 
 
 @pytest.mark.parametrize("rule, cost", [("univ", CP.wdfUniversal), ("block", CP.wdfBlock)])
-def test_wdf_best_basis_matches_the_catalogue(rule, cost):
+def test_wdf_best_basis_matches_the_numpy_reference(rule, cost):
     n = 1024
     t = np.arange(n) / FS
     rng = np.random.default_rng(17)

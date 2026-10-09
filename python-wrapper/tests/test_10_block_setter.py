@@ -1,7 +1,5 @@
-"""WDF2Classify.SetBlock: the block rule's length L and lambda from the search.
-
-The classifier owns its WaveletThreshold, whose SetBlock(length, lambda) was
-unreachable from a search; the forwarder sets them in every candidate.
+"""WDF2Classify.SetBlock: the block rule's length L and lambda, forwarded to
+the classifier's own WaveletThreshold and applied to every candidate.
 """
 import numpy as np
 import pytest
